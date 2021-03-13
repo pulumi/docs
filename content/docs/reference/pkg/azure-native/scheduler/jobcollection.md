@@ -44,9 +44,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -54,9 +52,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -64,9 +60,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -74,10 +68,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -103,9 +94,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -113,9 +102,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -123,9 +110,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -133,9 +118,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -143,18 +126,13 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -162,9 +140,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -172,9 +148,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -182,10 +156,7 @@ $ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,9 +171,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -210,8 +179,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobcollectionname_csharp">
 <a href="#jobcollectionname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Collection<wbr>Name</a>
@@ -219,8 +187,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job collection name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job collection name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -228,8 +195,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -237,8 +203,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -246,8 +211,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -255,14 +219,11 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -270,8 +231,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobcollectionname_go">
 <a href="#jobcollectionname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Collection<wbr>Name</a>
@@ -279,8 +239,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job collection name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job collection name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -288,8 +247,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -297,8 +255,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -306,8 +263,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionproperties">Job<wbr>Collection<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -315,14 +271,11 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -330,8 +283,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobcollectionname_nodejs">
 <a href="#jobcollectionname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Collection<wbr>Name</a>
@@ -339,8 +291,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job collection name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job collection name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -348,8 +299,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -357,8 +307,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -366,8 +315,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionproperties">Job<wbr>Collection<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -375,14 +323,11 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -390,8 +335,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_collection_name_python">
 <a href="#job_collection_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>collection_<wbr>name</a>
@@ -399,8 +343,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The job collection name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job collection name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -408,8 +351,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the storage account location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -417,8 +359,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -426,8 +367,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionproperties">Job<wbr>Collection<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -435,8 +375,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -447,9 +386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -457,8 +394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -466,14 +402,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -481,8 +414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -490,14 +422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -505,8 +434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -514,14 +442,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -529,8 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -538,8 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the job collection resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -555,9 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="jobcollectionproperties">Job<wbr>Collection<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_csharp">
 <a href="#quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
@@ -565,8 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquota">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -574,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -583,14 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Job<wbr>Collection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_go">
 <a href="#quota_go" style="color: inherit; text-decoration: inherit;">Quota</a>
@@ -598,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -607,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -616,14 +530,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionstate">Job<wbr>Collection<wbr>State<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_nodejs">
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
@@ -631,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -640,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -649,14 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionstate">Job<wbr>Collection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_python">
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
@@ -664,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -673,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -682,16 +586,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionstate">Job<wbr>Collection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobcollectionpropertiesresponse">Job<wbr>Collection<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_csharp">
 <a href="#quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
@@ -699,8 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquotaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -708,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -717,14 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_go">
 <a href="#quota_go" style="color: inherit; text-decoration: inherit;">Quota</a>
@@ -732,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -741,8 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -750,14 +644,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_nodejs">
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
@@ -765,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -774,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -783,14 +672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="quota_python">
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
@@ -798,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -807,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -816,16 +700,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobcollectionquota">Job<wbr>Collection<wbr>Quota</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxjobcount_csharp">
 <a href="#maxjobcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Count</a>
@@ -833,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxjoboccurrence_csharp">
 <a href="#maxjoboccurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Occurrence</a>
@@ -842,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrecurrence_csharp">
 <a href="#maxrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
@@ -851,14 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxjobcount_go">
 <a href="#maxjobcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Count</a>
@@ -866,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxjoboccurrence_go">
 <a href="#maxjoboccurrence_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Occurrence</a>
@@ -875,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrecurrence_go">
 <a href="#maxrecurrence_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
@@ -884,14 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxjobcount_nodejs">
 <a href="#maxjobcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Job<wbr>Count</a>
@@ -899,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxjoboccurrence_nodejs">
 <a href="#maxjoboccurrence_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Job<wbr>Occurrence</a>
@@ -908,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrecurrence_nodejs">
 <a href="#maxrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Recurrence</a>
@@ -917,14 +786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_job_count_python">
 <a href="#max_job_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>count</a>
@@ -932,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_job_occurrence_python">
 <a href="#max_job_occurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>occurrence</a>
@@ -941,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_recurrence_python">
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
@@ -950,16 +814,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxjobcount_csharp">
 <a href="#maxjobcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Count</a>
@@ -967,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxjoboccurrence_csharp">
 <a href="#maxjoboccurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Occurrence</a>
@@ -976,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrecurrence_csharp">
 <a href="#maxrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
@@ -985,14 +844,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxjobcount_go">
 <a href="#maxjobcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Count</a>
@@ -1000,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxjoboccurrence_go">
 <a href="#maxjoboccurrence_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Occurrence</a>
@@ -1009,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrecurrence_go">
 <a href="#maxrecurrence_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
@@ -1018,14 +872,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxjobcount_nodejs">
 <a href="#maxjobcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Job<wbr>Count</a>
@@ -1033,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxjoboccurrence_nodejs">
 <a href="#maxjoboccurrence_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Job<wbr>Occurrence</a>
@@ -1042,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrecurrence_nodejs">
 <a href="#maxrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Recurrence</a>
@@ -1051,14 +900,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_job_count_python">
 <a href="#max_job_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>count</a>
@@ -1066,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or set the maximum job count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_job_occurrence_python">
 <a href="#max_job_occurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>occurrence</a>
@@ -1075,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the maximum job occurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_recurrence_python">
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
@@ -1084,70 +928,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobcollectionstate">Job<wbr>Collection<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Suspended</dt>
-    <dd>Suspended</dd>
-    <dt>Deleted</dt>
-    <dd>Deleted</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Suspended</dt>
+    <dd>Suspended</dd><dt>Deleted</dt>
+    <dd>Deleted</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Job<wbr>Collection<wbr>State<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Job<wbr>Collection<wbr>State<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Job<wbr>Collection<wbr>State<wbr>Suspended</dt>
-    <dd>Suspended</dd>
-    <dt>Job<wbr>Collection<wbr>State<wbr>Deleted</dt>
-    <dd>Deleted</dd>
-</dl>
+<dl class="tabular"><dt>Job<wbr>Collection<wbr>State<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Job<wbr>Collection<wbr>State<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Job<wbr>Collection<wbr>State<wbr>Suspended</dt>
+    <dd>Suspended</dd><dt>Job<wbr>Collection<wbr>State<wbr>Deleted</dt>
+    <dd>Deleted</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Suspended</dt>
-    <dd>Suspended</dd>
-    <dt>Deleted</dt>
-    <dd>Deleted</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Suspended</dt>
+    <dd>Suspended</dd><dt>Deleted</dt>
+    <dd>Deleted</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>SUSPENDED</dt>
-    <dd>Suspended</dd>
-    <dt>DELETED</dt>
-    <dd>Deleted</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>SUSPENDED</dt>
+    <dd>Suspended</dd><dt>DELETED</dt>
+    <dd>Deleted</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1155,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Recurrence<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1164,14 +984,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1179,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1188,14 +1004,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1203,8 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1212,14 +1024,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1227,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1236,16 +1044,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1253,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1262,14 +1066,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1277,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1286,14 +1086,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1301,8 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1310,14 +1106,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1325,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1334,78 +1126,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the interval between retries.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recurrencefrequency">Recurrence<wbr>Frequency</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Minute</dt>
-    <dd>Minute</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>Minute</dt>
+    <dd>Minute</dd><dt>Hour</dt>
+    <dd>Hour</dd><dt>Day</dt>
+    <dd>Day</dd><dt>Week</dt>
+    <dd>Week</dd><dt>Month</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Recurrence<wbr>Frequency<wbr>Minute</dt>
-    <dd>Minute</dd>
-    <dt>Recurrence<wbr>Frequency<wbr>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Recurrence<wbr>Frequency<wbr>Day</dt>
-    <dd>Day</dd>
-    <dt>Recurrence<wbr>Frequency<wbr>Week</dt>
-    <dd>Week</dd>
-    <dt>Recurrence<wbr>Frequency<wbr>Month</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>Recurrence<wbr>Frequency<wbr>Minute</dt>
+    <dd>Minute</dd><dt>Recurrence<wbr>Frequency<wbr>Hour</dt>
+    <dd>Hour</dd><dt>Recurrence<wbr>Frequency<wbr>Day</dt>
+    <dd>Day</dd><dt>Recurrence<wbr>Frequency<wbr>Week</dt>
+    <dd>Week</dd><dt>Recurrence<wbr>Frequency<wbr>Month</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Minute</dt>
-    <dd>Minute</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>Minute</dt>
+    <dd>Minute</dd><dt>Hour</dt>
+    <dd>Hour</dd><dt>Day</dt>
+    <dd>Day</dd><dt>Week</dt>
+    <dd>Week</dd><dt>Month</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MINUTE</dt>
-    <dd>Minute</dd>
-    <dt>HOUR</dt>
-    <dd>Hour</dd>
-    <dt>DAY</dt>
-    <dd>Day</dd>
-    <dt>WEEK</dt>
-    <dd>Week</dd>
-    <dt>MONTH</dt>
-    <dd>Month</dd>
-</dl>
+<dl class="tabular"><dt>MINUTE</dt>
+    <dd>Minute</dd><dt>HOUR</dt>
+    <dd>Hour</dd><dt>DAY</dt>
+    <dd>Day</dd><dt>WEEK</dt>
+    <dd>Week</dd><dt>MONTH</dt>
+    <dd>Month</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1413,14 +1178,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Sku<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1428,14 +1190,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudefinition">Sku<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1443,14 +1202,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudefinition">Sku<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1458,70 +1214,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skudefinition">Sku<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skudefinition">Sku<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Free</dt>
-    <dd>Free</dd>
-    <dt>P10Premium</dt>
-    <dd>P10Premium</dd>
-    <dt>P20Premium</dt>
-    <dd>P20Premium</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Free</dt>
+    <dd>Free</dd><dt>P10Premium</dt>
+    <dd>P10Premium</dd><dt>P20Premium</dt>
+    <dd>P20Premium</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Definition<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Sku<wbr>Definition<wbr>Free</dt>
-    <dd>Free</dd>
-    <dt>Sku<wbr>Definition<wbr>P10Premium</dt>
-    <dd>P10Premium</dd>
-    <dt>Sku<wbr>Definition<wbr>P20Premium</dt>
-    <dd>P20Premium</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Definition<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Sku<wbr>Definition<wbr>Free</dt>
+    <dd>Free</dd><dt>Sku<wbr>Definition<wbr>P10Premium</dt>
+    <dd>P10Premium</dd><dt>Sku<wbr>Definition<wbr>P20Premium</dt>
+    <dd>P20Premium</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Free</dt>
-    <dd>Free</dd>
-    <dt>P10Premium</dt>
-    <dd>P10Premium</dd>
-    <dt>P20Premium</dt>
-    <dd>P20Premium</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Free</dt>
+    <dd>Free</dd><dt>P10Premium</dt>
+    <dd>P10Premium</dd><dt>P20Premium</dt>
+    <dd>P20Premium</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>FREE</dt>
-    <dd>Free</dd>
-    <dt>P10_PREMIUM</dt>
-    <dd>P10Premium</dd>
-    <dt>P20_PREMIUM</dt>
-    <dd>P20Premium</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>FREE</dt>
+    <dd>Free</dd><dt>P10_PREMIUM</dt>
+    <dd>P10Premium</dd><dt>P20_PREMIUM</dt>
+    <dd>P20Premium</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1529,14 +1262,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1544,14 +1274,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1559,14 +1286,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1574,8 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

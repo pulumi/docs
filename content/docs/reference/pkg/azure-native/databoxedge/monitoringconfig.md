@@ -14,11 +14,17 @@ The metric setting details for the role
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### PutMonitoringConfig
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -61,9 +67,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -105,9 +114,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -130,9 +142,12 @@ monitoring_config = azure_native.databoxedge.MonitoringConfig("monitoringConfig"
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -156,9 +171,16 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a MonitoringConfig Resource {#create}
@@ -183,9 +205,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +213,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +221,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,10 +229,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -242,9 +255,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -252,9 +263,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +271,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +279,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,18 +287,13 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +301,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +309,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,10 +317,7 @@ const monitoringConfig = new azure_native.databoxedge.MonitoringConfig("monitori
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -339,9 +332,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -349,8 +340,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricconfigurations_csharp">
 <a href="#metricconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Configurations</a>
@@ -358,8 +348,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -367,8 +356,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -376,14 +364,11 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -391,8 +376,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricconfigurations_go">
 <a href="#metricconfigurations_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Configurations</a>
@@ -400,8 +384,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricconfiguration">[]Metric<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -409,8 +392,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -418,14 +400,11 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -433,8 +412,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricconfigurations_nodejs">
 <a href="#metricconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Configurations</a>
@@ -442,8 +420,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricconfiguration">Metric<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -451,8 +428,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -460,14 +436,11 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -475,8 +448,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_configurations_python">
 <a href="#metric_configurations_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>configurations</a>
@@ -484,8 +456,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricconfiguration">Sequence[Metric<wbr>Configuration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -493,8 +464,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -502,8 +472,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,9 +483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -524,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -533,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -542,14 +507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -557,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -566,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -575,14 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -590,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -599,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -608,14 +563,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -623,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -632,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -641,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -658,9 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="metricconfiguration">Metric<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countersets_csharp">
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
@@ -668,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -677,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdmaccount_csharp">
 <a href="#mdmaccount_csharp" style="color: inherit; text-decoration: inherit;">Mdm<wbr>Account</a>
@@ -686,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name<wbr>Space</a>
@@ -695,14 +639,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countersets_go">
 <a href="#countersets_go" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
@@ -710,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterset">[]Metric<wbr>Counter<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -719,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdmaccount_go">
 <a href="#mdmaccount_go" style="color: inherit; text-decoration: inherit;">Mdm<wbr>Account</a>
@@ -728,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name<wbr>Space</a>
@@ -737,14 +675,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countersets_nodejs">
 <a href="#countersets_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Sets</a>
@@ -752,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterset">Metric<wbr>Counter<wbr>Set[]</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -761,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdmaccount_nodejs">
 <a href="#mdmaccount_nodejs" style="color: inherit; text-decoration: inherit;">mdm<wbr>Account</a>
@@ -770,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name<wbr>Space</a>
@@ -779,14 +711,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counter_sets_python">
 <a href="#counter_sets_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>sets</a>
@@ -794,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterset">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -803,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdm_account_python">
 <a href="#mdm_account_python" style="color: inherit; text-decoration: inherit;">mdm_<wbr>account</a>
@@ -812,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_name_space_python">
 <a href="#metric_name_space_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name_<wbr>space</a>
@@ -821,16 +747,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricconfigurationresponse">Metric<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countersets_csharp">
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
@@ -838,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -847,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdmaccount_csharp">
 <a href="#mdmaccount_csharp" style="color: inherit; text-decoration: inherit;">Mdm<wbr>Account</a>
@@ -856,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name<wbr>Space</a>
@@ -865,14 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countersets_go">
 <a href="#countersets_go" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
@@ -880,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccountersetresponse">[]Metric<wbr>Counter<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -889,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdmaccount_go">
 <a href="#mdmaccount_go" style="color: inherit; text-decoration: inherit;">Mdm<wbr>Account</a>
@@ -898,8 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name<wbr>Space</a>
@@ -907,14 +821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countersets_nodejs">
 <a href="#countersets_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Sets</a>
@@ -922,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccountersetresponse">Metric<wbr>Counter<wbr>Set<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -931,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdmaccount_nodejs">
 <a href="#mdmaccount_nodejs" style="color: inherit; text-decoration: inherit;">mdm<wbr>Account</a>
@@ -940,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name<wbr>Space</a>
@@ -949,14 +857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counter_sets_python">
 <a href="#counter_sets_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>sets</a>
@@ -964,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccountersetresponse">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -973,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Resource ID on which the metrics should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdm_account_python">
 <a href="#mdm_account_python" style="color: inherit; text-decoration: inherit;">mdm_<wbr>account</a>
@@ -982,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDM account to which the counters should be pushed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_name_space_python">
 <a href="#metric_name_space_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name_<wbr>space</a>
@@ -991,16 +893,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metriccounter">Metric<wbr>Counter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1008,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldimensions_csharp">
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
@@ -1017,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensionfilter_csharp">
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
@@ -1026,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1035,14 +931,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1050,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldimensions_go">
 <a href="#additionaldimensions_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
@@ -1059,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">[]Metric<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensionfilter_go">
 <a href="#dimensionfilter_go" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
@@ -1068,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">[]Metric<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1077,14 +967,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1092,8 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldimensions_nodejs">
 <a href="#additionaldimensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Dimensions</a>
@@ -1101,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensionfilter_nodejs">
 <a href="#dimensionfilter_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Filter</a>
@@ -1110,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1119,14 +1003,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1134,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_dimensions_python">
 <a href="#additional_dimensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>dimensions</a>
@@ -1143,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimension_filter_python">
 <a href="#dimension_filter_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>filter</a>
@@ -1152,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1161,16 +1039,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metriccounterresponse">Metric<wbr>Counter<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1178,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldimensions_csharp">
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
@@ -1187,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensionfilter_csharp">
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
@@ -1196,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1205,14 +1077,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1220,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldimensions_go">
 <a href="#additionaldimensions_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
@@ -1229,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">[]Metric<wbr>Dimension<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensionfilter_go">
 <a href="#dimensionfilter_go" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
@@ -1238,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">[]Metric<wbr>Dimension<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1247,14 +1113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1262,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaldimensions_nodejs">
 <a href="#additionaldimensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Dimensions</a>
@@ -1271,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensionfilter_nodejs">
 <a href="#dimensionfilter_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Filter</a>
@@ -1280,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1289,14 +1149,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1304,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The counter name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The counter name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_dimensions_python">
 <a href="#additional_dimensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>dimensions</a>
@@ -1313,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimension_filter_python">
 <a href="#dimension_filter_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>filter</a>
@@ -1322,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1331,16 +1185,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The instance from which counter should be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metriccounterset">Metric<wbr>Counter<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_csharp">
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
@@ -1348,14 +1199,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_go">
 <a href="#counters_go" style="color: inherit; text-decoration: inherit;">Counters</a>
@@ -1363,14 +1211,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounter">[]Metric<wbr>Counter</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_nodejs">
 <a href="#counters_nodejs" style="color: inherit; text-decoration: inherit;">counters</a>
@@ -1378,14 +1223,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounter">Metric<wbr>Counter[]</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_python">
 <a href="#counters_python" style="color: inherit; text-decoration: inherit;">counters</a>
@@ -1393,16 +1235,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounter">Sequence[Metric<wbr>Counter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metriccountersetresponse">Metric<wbr>Counter<wbr>Set<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_csharp">
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
@@ -1410,14 +1249,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_go">
 <a href="#counters_go" style="color: inherit; text-decoration: inherit;">Counters</a>
@@ -1425,14 +1261,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterresponse">[]Metric<wbr>Counter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_nodejs">
 <a href="#counters_nodejs" style="color: inherit; text-decoration: inherit;">counters</a>
@@ -1440,14 +1273,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterresponse">Metric<wbr>Counter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="counters_python">
 <a href="#counters_python" style="color: inherit; text-decoration: inherit;">counters</a>
@@ -1455,16 +1285,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metriccounterresponse">Sequence[Metric<wbr>Counter<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricdimension">Metric<wbr>Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcename_csharp">
 <a href="#sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1472,8 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1481,14 +1307,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcename_go">
 <a href="#sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1496,8 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1505,14 +1327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcename_nodejs">
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -1520,8 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
@@ -1529,14 +1347,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_name_python">
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -1544,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_type_python">
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
@@ -1553,16 +1367,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricdimensionresponse">Metric<wbr>Dimension<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcename_csharp">
 <a href="#sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1570,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1579,14 +1389,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcename_go">
 <a href="#sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1594,8 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1603,14 +1409,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcename_nodejs">
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -1618,8 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
@@ -1627,14 +1429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_name_python">
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -1642,8 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dimension value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dimension value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_type_python">
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
@@ -1651,8 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dimension type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dimension type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

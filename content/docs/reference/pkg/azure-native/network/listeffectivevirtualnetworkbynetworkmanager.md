@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkmanagername_csharp">
 <a href="#networkmanagername_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionalmembers_csharp">
 <a href="#conditionalmembers_csharp" style="color: inherit; text-decoration: inherit;">Conditional<wbr>Members</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_csharp">
 <a href="#skiptoken_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_csharp">
 <a href="#top_csharp" style="color: inherit; text-decoration: inherit;">Top</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkmanagername_go">
 <a href="#networkmanagername_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Manager<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionalmembers_go">
 <a href="#conditionalmembers_go" style="color: inherit; text-decoration: inherit;">Conditional<wbr>Members</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_go">
 <a href="#skiptoken_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_go">
 <a href="#top_go" style="color: inherit; text-decoration: inherit;">Top</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkmanagername_nodejs">
 <a href="#networkmanagername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Manager<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionalmembers_nodejs">
 <a href="#conditionalmembers_nodejs" style="color: inherit; text-decoration: inherit;">conditional<wbr>Members</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_nodejs">
 <a href="#skiptoken_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Token</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_nodejs">
 <a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_manager_name_python">
 <a href="#network_manager_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>manager_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditional_members_python">
 <a href="#conditional_members_python" style="color: inherit; text-decoration: inherit;">conditional_<wbr>members</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Conditional Members.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_token_python">
 <a href="#skip_token_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>token</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_python">
 <a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="firstindex_csharp">
 <a href="#firstindex_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Index</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pagesize_csharp">
 <a href="#pagesize_csharp" style="color: inherit; text-decoration: inherit;">Page<wbr>Size</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalrecords_csharp">
 <a href="#totalrecords_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Records</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#effectivevirtualnetworkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Effective<wbr>Virtual<wbr>Network<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="firstindex_go">
 <a href="#firstindex_go" style="color: inherit; text-decoration: inherit;">First<wbr>Index</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pagesize_go">
 <a href="#pagesize_go" style="color: inherit; text-decoration: inherit;">Page<wbr>Size</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalrecords_go">
 <a href="#totalrecords_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Records</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#effectivevirtualnetworkresponse">[]Effective<wbr>Virtual<wbr>Network<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="firstindex_nodejs">
 <a href="#firstindex_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Index</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pagesize_nodejs">
 <a href="#pagesize_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Size</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalrecords_nodejs">
 <a href="#totalrecords_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Records</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -412,14 +364,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#effectivevirtualnetworkresponse">Effective<wbr>Virtual<wbr>Network<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="first_index_python">
 <a href="#first_index_python" style="color: inherit; text-decoration: inherit;">first_<wbr>index</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}First Index.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}First Index.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next set of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="page_size_python">
 <a href="#page_size_python" style="color: inherit; text-decoration: inherit;">page_<wbr>size</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Page Size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Page Size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="total_records_python">
 <a href="#total_records_python" style="color: inherit; text-decoration: inherit;">total_<wbr>records</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total Records.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total Records.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#effectivevirtualnetworkresponse">Sequence[Effective<wbr>Virtual<wbr>Network<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of EffectiveVirtualNetwork{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membershiptype_csharp">
 <a href="#membershiptype_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Type</a>
@@ -506,14 +446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Membership Type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Membership Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -521,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membershiptype_go">
 <a href="#membershiptype_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Type</a>
@@ -539,14 +474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Membership Type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Membership Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membershiptype_nodejs">
 <a href="#membershiptype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
@@ -572,14 +502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Membership Type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Membership Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -587,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Effective vnet Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membership_type_python">
 <a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Membership Type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Membership Type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

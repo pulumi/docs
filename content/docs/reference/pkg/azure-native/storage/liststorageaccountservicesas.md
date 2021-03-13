@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="canonicalizedresource_csharp">
 <a href="#canonicalizedresource_csharp" style="color: inherit; text-decoration: inherit;">Canonicalized<wbr>Resource</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachecontrol_csharp">
 <a href="#cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_csharp">
 <a href="#contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_csharp">
 <a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_csharp">
 <a href="#contentlanguage_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -115,8 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -124,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddressorrange_csharp">
 <a href="#ipaddressorrange_csharp" style="color: inherit; text-decoration: inherit;">IPAddress<wbr>Or<wbr>Range</a>
@@ -133,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_csharp">
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -142,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytosign_csharp">
 <a href="#keytosign_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Sign</a>
@@ -151,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyend_csharp">
 <a href="#partitionkeyend_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>End</a>
@@ -160,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeystart_csharp">
 <a href="#partitionkeystart_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Start</a>
@@ -169,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -178,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#permissions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -187,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -196,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#signedresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Signed<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowkeyend_csharp">
 <a href="#rowkeyend_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Key<wbr>End</a>
@@ -205,8 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowkeystart_csharp">
 <a href="#rowkeystart_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Key<wbr>Start</a>
@@ -214,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessexpirytime_csharp">
 <a href="#sharedaccessexpirytime_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Expiry<wbr>Time</a>
@@ -223,8 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessstarttime_csharp">
 <a href="#sharedaccessstarttime_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Start<wbr>Time</a>
@@ -232,14 +211,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -247,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="canonicalizedresource_go">
 <a href="#canonicalizedresource_go" style="color: inherit; text-decoration: inherit;">Canonicalized<wbr>Resource</a>
@@ -256,8 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -265,8 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachecontrol_go">
 <a href="#cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -274,8 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_go">
 <a href="#contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -283,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_go">
 <a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -292,8 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_go">
 <a href="#contentlanguage_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -301,8 +271,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -310,8 +279,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddressorrange_go">
 <a href="#ipaddressorrange_go" style="color: inherit; text-decoration: inherit;">IPAddress<wbr>Or<wbr>Range</a>
@@ -319,8 +287,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_go">
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -328,8 +295,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytosign_go">
 <a href="#keytosign_go" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Sign</a>
@@ -337,8 +303,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyend_go">
 <a href="#partitionkeyend_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>End</a>
@@ -346,8 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeystart_go">
 <a href="#partitionkeystart_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Start</a>
@@ -355,8 +319,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -364,8 +327,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#permissions">Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -373,8 +335,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -382,8 +343,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#signedresource">Signed<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowkeyend_go">
 <a href="#rowkeyend_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Key<wbr>End</a>
@@ -391,8 +351,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowkeystart_go">
 <a href="#rowkeystart_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Key<wbr>Start</a>
@@ -400,8 +359,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessexpirytime_go">
 <a href="#sharedaccessexpirytime_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Expiry<wbr>Time</a>
@@ -409,8 +367,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessstarttime_go">
 <a href="#sharedaccessstarttime_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Start<wbr>Time</a>
@@ -418,14 +375,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -433,8 +387,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="canonicalizedresource_nodejs">
 <a href="#canonicalizedresource_nodejs" style="color: inherit; text-decoration: inherit;">canonicalized<wbr>Resource</a>
@@ -442,8 +395,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -451,8 +403,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachecontrol_nodejs">
 <a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
@@ -460,8 +411,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_nodejs">
 <a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
@@ -469,8 +419,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_nodejs">
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
@@ -478,8 +427,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_nodejs">
 <a href="#contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
@@ -487,8 +435,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -496,8 +443,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddressorrange_nodejs">
 <a href="#ipaddressorrange_nodejs" style="color: inherit; text-decoration: inherit;">i<wbr>PAddress<wbr>Or<wbr>Range</a>
@@ -505,8 +451,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_nodejs">
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -514,8 +459,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytosign_nodejs">
 <a href="#keytosign_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Sign</a>
@@ -523,8 +467,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyend_nodejs">
 <a href="#partitionkeyend_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>End</a>
@@ -532,8 +475,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeystart_nodejs">
 <a href="#partitionkeystart_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Start</a>
@@ -541,8 +483,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -550,8 +491,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#permissions">Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -559,8 +499,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -568,8 +507,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#signedresource">Signed<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowkeyend_nodejs">
 <a href="#rowkeyend_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Key<wbr>End</a>
@@ -577,8 +515,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowkeystart_nodejs">
 <a href="#rowkeystart_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Key<wbr>Start</a>
@@ -586,8 +523,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessexpirytime_nodejs">
 <a href="#sharedaccessexpirytime_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Expiry<wbr>Time</a>
@@ -595,8 +531,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedaccessstarttime_nodejs">
 <a href="#sharedaccessstarttime_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Start<wbr>Time</a>
@@ -604,14 +539,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -619,8 +551,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="canonicalized_resource_python">
 <a href="#canonicalized_resource_python" style="color: inherit; text-decoration: inherit;">canonicalized_<wbr>resource</a>
@@ -628,8 +559,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The canonical path to the signed resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -637,8 +567,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_control_python">
 <a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
@@ -646,8 +575,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for cache control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_disposition_python">
 <a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
@@ -655,8 +583,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content disposition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_encoding_python">
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
@@ -664,8 +591,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_language_python">
 <a href="#content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
@@ -673,8 +599,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content language.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -682,8 +607,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The response header override for content type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="i_p_address_or_range_python">
 <a href="#i_p_address_or_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>p_<wbr>address_<wbr>or_<wbr>range</a>
@@ -691,8 +615,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address or a range of IP addresses from which to accept requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_python">
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -700,8 +623,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_to_sign_python">
 <a href="#key_to_sign_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>sign</a>
@@ -709,8 +631,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key to sign the account SAS token with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_key_end_python">
 <a href="#partition_key_end_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>end</a>
@@ -718,8 +639,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_key_start_python">
 <a href="#partition_key_start_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>start</a>
@@ -727,8 +647,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of partition key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -736,8 +655,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#permissions">Permissions</a></span>
     </dt>
-    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -745,8 +663,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -754,8 +671,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#signedresource">Signed<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_key_end_python">
 <a href="#row_key_end_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key_<wbr>end</a>
@@ -763,8 +679,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_key_start_python">
 <a href="#row_key_start_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key_<wbr>start</a>
@@ -772,8 +687,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start of row key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start of row key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_access_expiry_time_python">
 <a href="#shared_access_expiry_time_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>expiry_<wbr>time</a>
@@ -781,8 +695,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the shared access signature becomes invalid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_access_start_time_python">
 <a href="#shared_access_start_time_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>start_<wbr>time</a>
@@ -790,8 +703,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time at which the SAS becomes valid.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -804,9 +716,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="servicesastoken_csharp">
 <a href="#servicesastoken_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Sas<wbr>Token</a>
@@ -814,14 +724,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="servicesastoken_go">
 <a href="#servicesastoken_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Sas<wbr>Token</a>
@@ -829,14 +736,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="servicesastoken_nodejs">
 <a href="#servicesastoken_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Sas<wbr>Token</a>
@@ -844,14 +748,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="service_sas_token_python">
 <a href="#service_sas_token_python" style="color: inherit; text-decoration: inherit;">service_<wbr>sas_<wbr>token</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List service SAS credentials of specific resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

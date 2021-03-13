@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterableproperties_csharp">
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersubscriptiondetails_csharp">
 <a href="#customersubscriptiondetails_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Subscription<wbr>Details</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptiondetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_csharp">
 <a href="#skiptoken_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterableproperties_go">
 <a href="#filterableproperties_go" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Filterable<wbr>Property</span>
     </dt>
-    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersubscriptiondetails_go">
 <a href="#customersubscriptiondetails_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Subscription<wbr>Details</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_go">
 <a href="#skiptoken_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterableproperties_nodejs">
 <a href="#filterableproperties_nodejs" style="color: inherit; text-decoration: inherit;">filterable<wbr>Properties</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Filterable<wbr>Property}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersubscriptiondetails_nodejs">
 <a href="#customersubscriptiondetails_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Subscription<wbr>Details</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_nodejs">
 <a href="#skiptoken_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Token</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterable_properties_python">
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Filterable<wbr>Property<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of filterable properties on product family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_subscription_details_python">
 <a href="#customer_subscription_details_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>subscription_<wbr>details</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}$expand is supported on configurations parameter for product, which provides details on the configurations for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_token_python">
 <a href="#skip_token_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>token</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}$skipToken is supported on list of product families, which provides the next page in the list of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productfamilyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>Product<wbr>Family<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of product families.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of product families.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productfamilyresponse">[]Product<wbr>Family<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of product families.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of product families.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productfamilyresponse">Product<wbr>Family<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of product families.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of product families.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -295,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productfamilyresponse">Sequence[Product<wbr>Family<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of product families.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of product families.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for the next set of product families.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -334,9 +294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilitystage_csharp">
 <a href="#availabilitystage_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Stage</a>
@@ -344,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabledreason_csharp">
 <a href="#disabledreason_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Reason</a>
@@ -353,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabledreasonmessage_csharp">
 <a href="#disabledreasonmessage_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Reason<wbr>Message</a>
@@ -362,14 +318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilitystage_go">
 <a href="#availabilitystage_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Stage</a>
@@ -377,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabledreason_go">
 <a href="#disabledreason_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Reason</a>
@@ -386,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabledreasonmessage_go">
 <a href="#disabledreasonmessage_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Reason<wbr>Message</a>
@@ -395,14 +346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilitystage_nodejs">
 <a href="#availabilitystage_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Stage</a>
@@ -410,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabledreason_nodejs">
 <a href="#disabledreason_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Reason</a>
@@ -419,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabledreasonmessage_nodejs">
 <a href="#disabledreasonmessage_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Reason<wbr>Message</a>
@@ -428,14 +374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_stage_python">
 <a href="#availability_stage_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>stage</a>
@@ -443,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current availability stage of the product. Availability stage{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabled_reason_python">
 <a href="#disabled_reason_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>reason</a>
@@ -452,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason why the product is disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disabled_reason_message_python">
 <a href="#disabled_reason_message_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>reason_<wbr>message</a>
@@ -461,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Message for why the product is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="billingmodelresponse">Billing<wbr>Model<wbr>Response</h4>
@@ -470,9 +410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="model_csharp">
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
@@ -480,14 +418,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="model_go">
 <a href="#model_go" style="color: inherit; text-decoration: inherit;">Model</a>
@@ -495,14 +430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="model_nodejs">
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
@@ -510,14 +442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="model_python">
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
@@ -525,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}String to represent the billing model{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationresponse">Configuration<wbr>Response</h4>
@@ -534,9 +462,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_csharp">
 <a href="#availabilityinformation_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -544,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_csharp">
 <a href="#costinformation_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -553,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -562,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -571,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_csharp">
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -580,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_csharp">
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -589,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_csharp">
 <a href="#imageinformation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -598,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifications_csharp">
 <a href="#specifications_csharp" style="color: inherit; text-decoration: inherit;">Specifications</a>
@@ -607,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#specificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_go">
 <a href="#availabilityinformation_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -622,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_go">
 <a href="#costinformation_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -631,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -640,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -649,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_go">
 <a href="#filterableproperties_go" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -658,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">[]Filterable<wbr>Property<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_go">
 <a href="#hierarchyinformation_go" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -667,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_go">
 <a href="#imageinformation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -676,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">[]Image<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifications_go">
 <a href="#specifications_go" style="color: inherit; text-decoration: inherit;">Specifications</a>
@@ -685,14 +594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#specificationresponse">[]Specification<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_nodejs">
 <a href="#availabilityinformation_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Information</a>
@@ -700,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_nodejs">
 <a href="#costinformation_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Information</a>
@@ -709,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -718,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -727,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_nodejs">
 <a href="#filterableproperties_nodejs" style="color: inherit; text-decoration: inherit;">filterable<wbr>Properties</a>
@@ -736,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Filterable<wbr>Property<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_nodejs">
 <a href="#hierarchyinformation_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Information</a>
@@ -745,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_nodejs">
 <a href="#imageinformation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Information</a>
@@ -754,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Image<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifications_nodejs">
 <a href="#specifications_nodejs" style="color: inherit; text-decoration: inherit;">specifications</a>
@@ -763,14 +662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#specificationresponse">Specification<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_information_python">
 <a href="#availability_information_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>information</a>
@@ -778,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cost_information_python">
 <a href="#cost_information_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>information</a>
@@ -787,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -796,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -805,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterable_properties_python">
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
@@ -814,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Sequence[Filterable<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchy_information_python">
 <a href="#hierarchy_information_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>information</a>
@@ -823,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_information_python">
 <a href="#image_information_python" style="color: inherit; text-decoration: inherit;">image_<wbr>information</a>
@@ -832,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Sequence[Image<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specifications_python">
 <a href="#specifications_python" style="color: inherit; text-decoration: inherit;">specifications</a>
@@ -841,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#specificationresponse">Sequence[Specification<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifications of the configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="costinformationresponse">Cost<wbr>Information<wbr>Response</h4>
@@ -850,9 +738,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meterdetails_csharp">
 <a href="#meterdetails_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
@@ -860,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#meterdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Meter<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarymetertype_csharp">
 <a href="#primarymetertype_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Meter<wbr>Type</a>
@@ -869,14 +754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meterdetails_go">
 <a href="#meterdetails_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Details</a>
@@ -884,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#meterdetailsresponse">[]Meter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarymetertype_go">
 <a href="#primarymetertype_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Meter<wbr>Type</a>
@@ -893,14 +774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meterdetails_nodejs">
 <a href="#meterdetails_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Details</a>
@@ -908,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#meterdetailsresponse">Meter<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarymetertype_nodejs">
 <a href="#primarymetertype_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Meter<wbr>Type</a>
@@ -917,14 +794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meter_details_python">
 <a href="#meter_details_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>details</a>
@@ -932,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#meterdetailsresponse">Sequence[Meter<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Details on the various billing aspects for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primary_meter_type_python">
 <a href="#primary_meter_type_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>meter_<wbr>type</a>
@@ -941,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Primary meter i.e. basic billing type for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customersubscriptiondetails">Customer<wbr>Subscription<wbr>Details</h4>
@@ -950,9 +822,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="quotaid_csharp">
 <a href="#quotaid_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Id</a>
@@ -960,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationplacementid_csharp">
 <a href="#locationplacementid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Placement<wbr>Id</a>
@@ -969,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredfeatures_csharp">
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
@@ -978,14 +846,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptionregisteredfeatures">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Customer<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="quotaid_go">
 <a href="#quotaid_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Id</a>
@@ -993,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationplacementid_go">
 <a href="#locationplacementid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Placement<wbr>Id</a>
@@ -1002,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredfeatures_go">
 <a href="#registeredfeatures_go" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
@@ -1011,14 +874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptionregisteredfeatures">[]Customer<wbr>Subscription<wbr>Registered<wbr>Features</a></span>
     </dt>
-    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="quotaid_nodejs">
 <a href="#quotaid_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Id</a>
@@ -1026,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationplacementid_nodejs">
 <a href="#locationplacementid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Placement<wbr>Id</a>
@@ -1035,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredfeatures_nodejs">
 <a href="#registeredfeatures_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>Features</a>
@@ -1044,14 +902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptionregisteredfeatures">Customer<wbr>Subscription<wbr>Registered<wbr>Features[]</a></span>
     </dt>
-    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="quota_id_python">
 <a href="#quota_id_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>id</a>
@@ -1059,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Quota ID of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_placement_id_python">
 <a href="#location_placement_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>placement_<wbr>id</a>
@@ -1068,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location placement Id of a subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registered_features_python">
 <a href="#registered_features_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>features</a>
@@ -1077,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersubscriptionregisteredfeatures">Sequence[Customer<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of registered feature flags for subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customersubscriptionregisteredfeatures">Customer<wbr>Subscription<wbr>Registered<wbr>Features</h4>
@@ -1086,9 +938,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1096,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1105,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1120,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1129,14 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1144,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1153,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1168,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of subscription registered feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1177,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of subscription registered feature{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="descriptionresponse">Description<wbr>Response</h4>
@@ -1186,9 +1022,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1196,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="descriptiontype_csharp">
 <a href="#descriptiontype_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Type</a>
@@ -1205,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of description.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keywords_csharp">
 <a href="#keywords_csharp" style="color: inherit; text-decoration: inherit;">Keywords</a>
@@ -1214,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="links_csharp">
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -1223,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="longdescription_csharp">
 <a href="#longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -1232,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -1241,14 +1070,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1256,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="descriptiontype_go">
 <a href="#descriptiontype_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Type</a>
@@ -1265,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of description.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keywords_go">
 <a href="#keywords_go" style="color: inherit; text-decoration: inherit;">Keywords</a>
@@ -1274,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="links_go">
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -1283,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkresponse">[]Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="longdescription_go">
 <a href="#longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -1292,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -1301,14 +1122,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1316,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="descriptiontype_nodejs">
 <a href="#descriptiontype_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Type</a>
@@ -1325,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of description.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keywords_nodejs">
 <a href="#keywords_nodejs" style="color: inherit; text-decoration: inherit;">keywords</a>
@@ -1334,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="links_nodejs">
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
@@ -1343,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkresponse">Link<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="longdescription_nodejs">
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
@@ -1352,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
@@ -1361,14 +1174,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1376,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Attributes for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_type_python">
 <a href="#description_type_python" style="color: inherit; text-decoration: inherit;">description_<wbr>type</a>
@@ -1385,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of description.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keywords_python">
 <a href="#keywords_python" style="color: inherit; text-decoration: inherit;">keywords</a>
@@ -1394,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Keywords for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="links_python">
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
@@ -1403,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkresponse">Sequence[Link<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Links for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="long_description_python">
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
@@ -1412,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Long description of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
@@ -1421,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short description of the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filterableproperty">Filterable<wbr>Property</h4>
@@ -1430,9 +1234,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1440,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedfiltertypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedvalues_csharp">
 <a href="#supportedvalues_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
@@ -1449,14 +1250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1464,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedfiltertypes">Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedvalues_go">
 <a href="#supportedvalues_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
@@ -1473,14 +1270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1488,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#supportedfiltertypes">Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedvalues_nodejs">
 <a href="#supportedvalues_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Values</a>
@@ -1497,14 +1290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1512,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#supportedfiltertypes">Supported<wbr>Filter<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_values_python">
 <a href="#supported_values_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>values</a>
@@ -1521,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filterablepropertyresponse">Filterable<wbr>Property<wbr>Response</h4>
@@ -1530,9 +1318,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1540,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedvalues_csharp">
 <a href="#supportedvalues_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
@@ -1549,14 +1334,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1564,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedvalues_go">
 <a href="#supportedvalues_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Values</a>
@@ -1573,14 +1354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1588,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedvalues_nodejs">
 <a href="#supportedvalues_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Values</a>
@@ -1597,14 +1374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1612,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of product filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_values_python">
 <a href="#supported_values_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>values</a>
@@ -1621,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Values to be filtered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</h4>
@@ -1630,9 +1402,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationname_csharp">
 <a href="#configurationname_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Name</a>
@@ -1640,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productfamilyname_csharp">
 <a href="#productfamilyname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Family<wbr>Name</a>
@@ -1649,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productlinename_csharp">
 <a href="#productlinename_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Line<wbr>Name</a>
@@ -1658,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -1667,14 +1434,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationname_go">
 <a href="#configurationname_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Name</a>
@@ -1682,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productfamilyname_go">
 <a href="#productfamilyname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Family<wbr>Name</a>
@@ -1691,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productlinename_go">
 <a href="#productlinename_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Line<wbr>Name</a>
@@ -1700,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -1709,14 +1470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationname_nodejs">
 <a href="#configurationname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Name</a>
@@ -1724,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productfamilyname_nodejs">
 <a href="#productfamilyname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Family<wbr>Name</a>
@@ -1733,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productlinename_nodejs">
 <a href="#productlinename_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Line<wbr>Name</a>
@@ -1742,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
@@ -1751,14 +1506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_name_python">
 <a href="#configuration_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>name</a>
@@ -1766,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents configuration name that uniquely identifies configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_family_name_python">
 <a href="#product_family_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>family_<wbr>name</a>
@@ -1775,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product family name that uniquely identifies product family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_line_name_python">
 <a href="#product_line_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>line_<wbr>name</a>
@@ -1784,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents product line name that uniquely identifies product line{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
@@ -1793,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imageinformationresponse">Image<wbr>Information<wbr>Response</h4>
@@ -1802,9 +1550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imagetype_csharp">
 <a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
@@ -1812,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageurl_csharp">
 <a href="#imageurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -1821,14 +1566,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the image{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the image{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imagetype_go">
 <a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
@@ -1836,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageurl_go">
 <a href="#imageurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -1845,14 +1586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the image{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the image{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imagetype_nodejs">
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
@@ -1860,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageurl_nodejs">
 <a href="#imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
@@ -1869,14 +1606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the image{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the image{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_type_python">
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
@@ -1884,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_url_python">
 <a href="#image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
@@ -1893,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url of the image{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the image{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linkresponse">Link<wbr>Response</h4>
@@ -1902,9 +1634,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linktype_csharp">
 <a href="#linktype_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
@@ -1912,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of link{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of link{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkurl_csharp">
 <a href="#linkurl_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Url</a>
@@ -1921,14 +1650,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the link{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the link{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linktype_go">
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
@@ -1936,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of link{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of link{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkurl_go">
 <a href="#linkurl_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Url</a>
@@ -1945,14 +1670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the link{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the link{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linktype_nodejs">
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
@@ -1960,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of link{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of link{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkurl_nodejs">
 <a href="#linkurl_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Url</a>
@@ -1969,14 +1690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the link{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the link{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="link_type_python">
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
@@ -1984,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of link{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of link{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="link_url_python">
 <a href="#link_url_python" style="color: inherit; text-decoration: inherit;">link_<wbr>url</a>
@@ -1993,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url of the link{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url of the link{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="meterdetailsresponse">Meter<wbr>Details<wbr>Response</h4>
@@ -2002,9 +1718,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingmodel_csharp">
 <a href="#billingmodel_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
@@ -2012,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#billingmodelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Billing<wbr>Model<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meterid_csharp">
 <a href="#meterid_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Id</a>
@@ -2021,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metertype_csharp">
 <a href="#metertype_csharp" style="color: inherit; text-decoration: inherit;">Meter<wbr>Type</a>
@@ -2030,14 +1742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingmodel_go">
 <a href="#billingmodel_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
@@ -2045,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#billingmodelresponse">Billing<wbr>Model<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meterid_go">
 <a href="#meterid_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Id</a>
@@ -2054,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metertype_go">
 <a href="#metertype_go" style="color: inherit; text-decoration: inherit;">Meter<wbr>Type</a>
@@ -2063,14 +1770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingmodel_nodejs">
 <a href="#billingmodel_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Model</a>
@@ -2078,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#billingmodelresponse">Billing<wbr>Model<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meterid_nodejs">
 <a href="#meterid_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Id</a>
@@ -2087,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metertype_nodejs">
 <a href="#metertype_nodejs" style="color: inherit; text-decoration: inherit;">meter<wbr>Type</a>
@@ -2096,14 +1798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_model_python">
 <a href="#billing_model_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>model</a>
@@ -2111,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#billingmodelresponse">Billing<wbr>Model<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Billing model to represent billing cycle, i.e. Monthly, biweekly, daily, hourly etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meter_id_python">
 <a href="#meter_id_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>id</a>
@@ -2120,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}MeterId/ Billing Guid against which the product system will be charged{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="meter_type_python">
 <a href="#meter_type_python" style="color: inherit; text-decoration: inherit;">meter_<wbr>type</a>
@@ -2129,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Category of the billing meter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productfamilyresponse">Product<wbr>Family<wbr>Response</h4>
@@ -2138,9 +1834,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_csharp">
 <a href="#availabilityinformation_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -2148,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_csharp">
 <a href="#costinformation_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -2157,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2166,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2175,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_csharp">
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -2184,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_csharp">
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -2193,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_csharp">
 <a href="#imageinformation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -2202,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="productlines_csharp">
 <a href="#productlines_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Lines</a>
@@ -2211,14 +1898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Product<wbr>Line<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_go">
 <a href="#availabilityinformation_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -2226,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_go">
 <a href="#costinformation_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -2235,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2244,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2253,8 +1934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_go">
 <a href="#filterableproperties_go" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -2262,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">[]Filterable<wbr>Property<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_go">
 <a href="#hierarchyinformation_go" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -2271,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_go">
 <a href="#imageinformation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -2280,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">[]Image<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="productlines_go">
 <a href="#productlines_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Lines</a>
@@ -2289,14 +1966,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">[]Product<wbr>Line<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_nodejs">
 <a href="#availabilityinformation_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Information</a>
@@ -2304,8 +1978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_nodejs">
 <a href="#costinformation_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Information</a>
@@ -2313,8 +1986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2322,8 +1994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2331,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_nodejs">
 <a href="#filterableproperties_nodejs" style="color: inherit; text-decoration: inherit;">filterable<wbr>Properties</a>
@@ -2340,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Filterable<wbr>Property<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_nodejs">
 <a href="#hierarchyinformation_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Information</a>
@@ -2349,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_nodejs">
 <a href="#imageinformation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Information</a>
@@ -2358,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Image<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="productlines_nodejs">
 <a href="#productlines_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Lines</a>
@@ -2367,14 +2034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">Product<wbr>Line<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_information_python">
 <a href="#availability_information_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>information</a>
@@ -2382,8 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cost_information_python">
 <a href="#cost_information_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>information</a>
@@ -2391,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2400,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2409,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterable_properties_python">
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
@@ -2418,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Sequence[Filterable<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchy_information_python">
 <a href="#hierarchy_information_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>information</a>
@@ -2427,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_information_python">
 <a href="#image_information_python" style="color: inherit; text-decoration: inherit;">image_<wbr>information</a>
@@ -2436,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Sequence[Image<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_lines_python">
 <a href="#product_lines_python" style="color: inherit; text-decoration: inherit;">product_<wbr>lines</a>
@@ -2445,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlineresponse">Sequence[Product<wbr>Line<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of product lines supported in the product family{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productlineresponse">Product<wbr>Line<wbr>Response</h4>
@@ -2454,9 +2110,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_csharp">
 <a href="#availabilityinformation_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -2464,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_csharp">
 <a href="#costinformation_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -2473,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2482,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2491,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_csharp">
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -2500,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_csharp">
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -2509,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_csharp">
 <a href="#imageinformation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -2518,8 +2166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_csharp">
 <a href="#products_csharp" style="color: inherit; text-decoration: inherit;">Products</a>
@@ -2527,14 +2174,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Product<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_go">
 <a href="#availabilityinformation_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -2542,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_go">
 <a href="#costinformation_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -2551,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2560,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2569,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_go">
 <a href="#filterableproperties_go" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -2578,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">[]Filterable<wbr>Property<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_go">
 <a href="#hierarchyinformation_go" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -2587,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_go">
 <a href="#imageinformation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -2596,8 +2234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">[]Image<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_go">
 <a href="#products_go" style="color: inherit; text-decoration: inherit;">Products</a>
@@ -2605,14 +2242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">[]Product<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_nodejs">
 <a href="#availabilityinformation_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Information</a>
@@ -2620,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_nodejs">
 <a href="#costinformation_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Information</a>
@@ -2629,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2638,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2647,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_nodejs">
 <a href="#filterableproperties_nodejs" style="color: inherit; text-decoration: inherit;">filterable<wbr>Properties</a>
@@ -2656,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Filterable<wbr>Property<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_nodejs">
 <a href="#hierarchyinformation_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Information</a>
@@ -2665,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_nodejs">
 <a href="#imageinformation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Information</a>
@@ -2674,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Image<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_nodejs">
 <a href="#products_nodejs" style="color: inherit; text-decoration: inherit;">products</a>
@@ -2683,14 +2310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">Product<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_information_python">
 <a href="#availability_information_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>information</a>
@@ -2698,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cost_information_python">
 <a href="#cost_information_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>information</a>
@@ -2707,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2716,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2725,8 +2346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterable_properties_python">
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
@@ -2734,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Sequence[Filterable<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchy_information_python">
 <a href="#hierarchy_information_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>information</a>
@@ -2743,8 +2362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_information_python">
 <a href="#image_information_python" style="color: inherit; text-decoration: inherit;">image_<wbr>information</a>
@@ -2752,8 +2370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Sequence[Image<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_python">
 <a href="#products_python" style="color: inherit; text-decoration: inherit;">products</a>
@@ -2761,8 +2378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">Sequence[Product<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products in the product line{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productresponse">Product<wbr>Response</h4>
@@ -2770,9 +2386,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_csharp">
 <a href="#availabilityinformation_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -2780,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configurations_csharp">
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
@@ -2789,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_csharp">
 <a href="#costinformation_csharp" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -2798,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2807,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2816,8 +2426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_csharp">
 <a href="#filterableproperties_csharp" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -2825,8 +2434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Filterable<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_csharp">
 <a href="#hierarchyinformation_csharp" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -2834,8 +2442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_csharp">
 <a href="#imageinformation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -2843,14 +2450,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Image<wbr>Information<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_go">
 <a href="#availabilityinformation_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Information</a>
@@ -2858,8 +2462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configurations_go">
 <a href="#configurations_go" style="color: inherit; text-decoration: inherit;">Configurations</a>
@@ -2867,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationresponse">[]Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_go">
 <a href="#costinformation_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Information</a>
@@ -2876,8 +2478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2885,8 +2486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2894,8 +2494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_go">
 <a href="#filterableproperties_go" style="color: inherit; text-decoration: inherit;">Filterable<wbr>Properties</a>
@@ -2903,8 +2502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">[]Filterable<wbr>Property<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_go">
 <a href="#hierarchyinformation_go" style="color: inherit; text-decoration: inherit;">Hierarchy<wbr>Information</a>
@@ -2912,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_go">
 <a href="#imageinformation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Information</a>
@@ -2921,14 +2518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">[]Image<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availabilityinformation_nodejs">
 <a href="#availabilityinformation_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Information</a>
@@ -2936,8 +2530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configurations_nodejs">
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
@@ -2945,8 +2538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationresponse">Configuration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="costinformation_nodejs">
 <a href="#costinformation_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Information</a>
@@ -2954,8 +2546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2963,8 +2554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2972,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterableproperties_nodejs">
 <a href="#filterableproperties_nodejs" style="color: inherit; text-decoration: inherit;">filterable<wbr>Properties</a>
@@ -2981,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Filterable<wbr>Property<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchyinformation_nodejs">
 <a href="#hierarchyinformation_nodejs" style="color: inherit; text-decoration: inherit;">hierarchy<wbr>Information</a>
@@ -2990,8 +2578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imageinformation_nodejs">
 <a href="#imageinformation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Information</a>
@@ -2999,14 +2586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Image<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="availability_information_python">
 <a href="#availability_information_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>information</a>
@@ -3014,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#availabilityinformationresponse">Availability<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Availability information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configurations_python">
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
@@ -3023,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationresponse">Sequence[Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of configurations for the product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cost_information_python">
 <a href="#cost_information_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>information</a>
@@ -3032,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#costinformationresponse">Cost<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cost information for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3041,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#descriptionresponse">Description<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description related to the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -3050,8 +2630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display Name for the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterable_properties_python">
 <a href="#filterable_properties_python" style="color: inherit; text-decoration: inherit;">filterable_<wbr>properties</a>
@@ -3059,8 +2638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterablepropertyresponse">Sequence[Filterable<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}list of filters supported for a product{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hierarchy_information_python">
 <a href="#hierarchy_information_python" style="color: inherit; text-decoration: inherit;">hierarchy_<wbr>information</a>
@@ -3068,8 +2646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Hierarchy information of the product system.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_information_python">
 <a href="#image_information_python" style="color: inherit; text-decoration: inherit;">image_<wbr>information</a>
@@ -3077,8 +2654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageinformationresponse">Sequence[Image<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image information for the product system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="specificationresponse">Specification<wbr>Response</h4>
@@ -3086,9 +2662,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3096,8 +2670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the specification{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the specification{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3105,14 +2678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the specification{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the specification{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3120,8 +2690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the specification{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the specification{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3129,14 +2698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the specification{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the specification{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3144,8 +2710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the specification{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the specification{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3153,14 +2718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the specification{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the specification{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3168,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the specification{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the specification{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3177,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the specification{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the specification{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="supportedfiltertypes">Supported<wbr>Filter<wbr>Types</h4>

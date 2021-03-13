@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientprotocol_csharp">
 <a href="#clientprotocol_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteringpolicy_csharp">
 <a href="#clusteringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Clustering<wbr>Policy</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evictionpolicy_csharp">
 <a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modules_csharp">
 <a href="#modules_csharp" style="color: inherit; text-decoration: inherit;">Modules</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#moduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Outputs.<wbr>Module<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistence_csharp">
 <a href="#persistence_csharp" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Outputs.<wbr>Persistence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientprotocol_go">
 <a href="#clientprotocol_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteringpolicy_go">
 <a href="#clusteringpolicy_go" style="color: inherit; text-decoration: inherit;">Clustering<wbr>Policy</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evictionpolicy_go">
 <a href="#evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modules_go">
 <a href="#modules_go" style="color: inherit; text-decoration: inherit;">Modules</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#moduleresponse">[]Module<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistence_go">
 <a href="#persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistenceresponse">Persistence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientprotocol_nodejs">
 <a href="#clientprotocol_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Protocol</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteringpolicy_nodejs">
 <a href="#clusteringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">clustering<wbr>Policy</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="evictionpolicy_nodejs">
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modules_nodejs">
 <a href="#modules_nodejs" style="color: inherit; text-decoration: inherit;">modules</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#moduleresponse">Module<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistence_nodejs">
 <a href="#persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistenceresponse">Persistence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -502,14 +444,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_protocol_python">
 <a href="#client_protocol_python" style="color: inherit; text-decoration: inherit;">client_<wbr>protocol</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustering_policy_python">
 <a href="#clustering_policy_python" style="color: inherit; text-decoration: inherit;">clustering_<wbr>policy</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eviction_policy_python">
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modules_python">
 <a href="#modules_python" style="color: inherit; text-decoration: inherit;">modules</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#moduleresponse">Sequence[Module<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="persistence_python">
 <a href="#persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistenceresponse">Persistence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -641,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -650,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -683,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -716,14 +630,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -731,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="persistenceresponse">Persistence<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_csharp">
 <a href="#aofenabled_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Enabled</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_csharp">
 <a href="#aoffrequency_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Frequency</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_csharp">
 <a href="#rdbenabled_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Enabled</a>
@@ -786,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_csharp">
 <a href="#rdbfrequency_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Frequency</a>
@@ -795,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_go">
 <a href="#aofenabled_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Enabled</a>
@@ -810,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_go">
 <a href="#aoffrequency_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Frequency</a>
@@ -819,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_go">
 <a href="#rdbenabled_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Enabled</a>
@@ -828,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_go">
 <a href="#rdbfrequency_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Frequency</a>
@@ -837,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_nodejs">
 <a href="#aofenabled_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Enabled</a>
@@ -852,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_nodejs">
 <a href="#aoffrequency_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Frequency</a>
@@ -861,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_nodejs">
 <a href="#rdbenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Enabled</a>
@@ -870,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_nodejs">
 <a href="#rdbfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Frequency</a>
@@ -879,14 +770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aof_enabled_python">
 <a href="#aof_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>enabled</a>
@@ -894,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_frequency_python">
 <a href="#aof_frequency_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>frequency</a>
@@ -903,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_enabled_python">
 <a href="#rdb_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>enabled</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_frequency_python">
 <a href="#rdb_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>frequency</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

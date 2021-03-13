@@ -14,11 +14,17 @@ The Live Output.
 API Version: 2020-05-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a LiveOutput
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -48,9 +54,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -84,9 +93,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -107,9 +119,12 @@ live_output = azure_native.media.LiveOutput("liveOutput",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -131,9 +146,16 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LiveOutput Resource {#create}
@@ -158,9 +180,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -168,9 +188,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -178,9 +196,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -188,10 +204,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -217,9 +230,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -227,9 +238,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +246,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +254,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,18 +262,13 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -276,9 +276,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -286,9 +284,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -296,10 +292,7 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -314,9 +307,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -324,8 +315,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archivewindowlength_csharp">
 <a href="#archivewindowlength_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Window<wbr>Length</a>
@@ -333,8 +323,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -342,8 +331,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liveeventname_csharp">
 <a href="#liveeventname_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Event<wbr>Name</a>
@@ -351,8 +339,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -360,8 +347,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -369,8 +355,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_csharp">
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -378,8 +363,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hls">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Hls<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveoutputname_csharp">
 <a href="#liveoutputname_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Output<wbr>Name</a>
@@ -387,8 +371,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestname_csharp">
 <a href="#manifestname_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Name</a>
@@ -396,8 +379,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputsnaptime_csharp">
 <a href="#outputsnaptime_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Snap<wbr>Time</a>
@@ -405,14 +387,11 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -420,8 +399,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archivewindowlength_go">
 <a href="#archivewindowlength_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Window<wbr>Length</a>
@@ -429,8 +407,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -438,8 +415,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liveeventname_go">
 <a href="#liveeventname_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Event<wbr>Name</a>
@@ -447,8 +423,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -456,8 +431,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -465,8 +439,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_go">
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
@@ -474,8 +447,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hls">Hls</a></span>
     </dt>
-    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveoutputname_go">
 <a href="#liveoutputname_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Output<wbr>Name</a>
@@ -483,8 +455,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestname_go">
 <a href="#manifestname_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Name</a>
@@ -492,8 +463,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputsnaptime_go">
 <a href="#outputsnaptime_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Snap<wbr>Time</a>
@@ -501,14 +471,11 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -516,8 +483,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archivewindowlength_nodejs">
 <a href="#archivewindowlength_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Window<wbr>Length</a>
@@ -525,8 +491,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -534,8 +499,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liveeventname_nodejs">
 <a href="#liveeventname_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Event<wbr>Name</a>
@@ -543,8 +507,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -552,8 +515,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -561,8 +523,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_nodejs">
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -570,8 +531,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hls">Hls</a></span>
     </dt>
-    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveoutputname_nodejs">
 <a href="#liveoutputname_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Output<wbr>Name</a>
@@ -579,8 +539,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestname_nodejs">
 <a href="#manifestname_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Name</a>
@@ -588,8 +547,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputsnaptime_nodejs">
 <a href="#outputsnaptime_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Snap<wbr>Time</a>
@@ -597,14 +555,11 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -612,8 +567,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archive_window_length_python">
 <a href="#archive_window_length_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>window_<wbr>length</a>
@@ -621,8 +575,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -630,8 +583,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="live_event_name_python">
 <a href="#live_event_name_python" style="color: inherit; text-decoration: inherit;">live_<wbr>event_<wbr>name</a>
@@ -639,8 +591,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -648,8 +599,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -657,8 +607,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hls_python">
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
@@ -666,8 +615,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hls">Hls<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="live_output_name_python">
 <a href="#live_output_name_python" style="color: inherit; text-decoration: inherit;">live_<wbr>output_<wbr>name</a>
@@ -675,8 +623,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_name_python">
 <a href="#manifest_name_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>name</a>
@@ -684,8 +631,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_snap_time_python">
 <a href="#output_snap_time_python" style="color: inherit; text-decoration: inherit;">output_<wbr>snap_<wbr>time</a>
@@ -693,8 +639,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -705,9 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -715,8 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -724,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -733,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -742,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -751,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -760,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -769,14 +706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -784,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -793,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -802,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -811,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -820,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -829,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -838,14 +766,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -853,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -862,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -871,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -880,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -889,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
@@ -898,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -907,14 +826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -922,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -931,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -940,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the live output was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -949,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -958,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
@@ -967,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource state of the live output.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -976,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -993,9 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="hls">Hls</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragmentspertssegment_csharp">
 <a href="#fragmentspertssegment_csharp" style="color: inherit; text-decoration: inherit;">Fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
@@ -1003,14 +910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragmentspertssegment_go">
 <a href="#fragmentspertssegment_go" style="color: inherit; text-decoration: inherit;">Fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
@@ -1018,14 +922,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragmentspertssegment_nodejs">
 <a href="#fragmentspertssegment_nodejs" style="color: inherit; text-decoration: inherit;">fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
@@ -1033,14 +934,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragments_per_ts_segment_python">
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
@@ -1048,16 +946,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hlsresponse">Hls<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragmentspertssegment_csharp">
 <a href="#fragmentspertssegment_csharp" style="color: inherit; text-decoration: inherit;">Fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
@@ -1065,14 +960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragmentspertssegment_go">
 <a href="#fragmentspertssegment_go" style="color: inherit; text-decoration: inherit;">Fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
@@ -1080,14 +972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragmentspertssegment_nodejs">
 <a href="#fragmentspertssegment_nodejs" style="color: inherit; text-decoration: inherit;">fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
@@ -1095,14 +984,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fragments_per_ts_segment_python">
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
@@ -1110,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ Represents a Watchlist item in Azure Security Insights.
 API Version: 2019-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creates or updates a watchlist item.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -51,9 +57,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -90,9 +99,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -116,9 +128,12 @@ watchlist_item = azure_native.securityinsights.WatchlistItem("watchlistItem",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -143,9 +158,16 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a WatchlistItem Resource {#create}
@@ -170,9 +192,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -180,9 +200,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -190,9 +208,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -200,10 +216,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -229,9 +242,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -239,9 +250,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -249,9 +258,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -259,9 +266,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -269,18 +274,13 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -288,9 +288,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -298,9 +296,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -308,10 +304,7 @@ const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlist
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -326,9 +319,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="itemskeyvalue_csharp">
 <a href="#itemskeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Key<wbr>Value</a>
@@ -336,8 +327,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -345,8 +335,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -354,8 +343,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistalias_csharp">
 <a href="#watchlistalias_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
@@ -363,8 +351,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -372,8 +359,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -381,8 +367,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -390,8 +375,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitymapping_csharp">
 <a href="#entitymapping_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
@@ -399,8 +383,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -408,8 +391,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdeleted_csharp">
 <a href="#isdeleted_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deleted</a>
@@ -417,8 +399,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -426,8 +407,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -435,8 +415,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -444,8 +423,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlistitemid_csharp">
 <a href="#watchlistitemid_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Id</a>
@@ -453,8 +431,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlistitemtype_csharp">
 <a href="#watchlistitemtype_csharp" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Type</a>
@@ -462,14 +439,11 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="itemskeyvalue_go">
 <a href="#itemskeyvalue_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Key<wbr>Value</a>
@@ -477,8 +451,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -486,8 +459,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -495,8 +467,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistalias_go">
 <a href="#watchlistalias_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Alias</a>
@@ -504,8 +475,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -513,8 +483,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -522,8 +491,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -531,8 +499,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitymapping_go">
 <a href="#entitymapping_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Mapping</a>
@@ -540,8 +507,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -549,8 +515,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdeleted_go">
 <a href="#isdeleted_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deleted</a>
@@ -558,8 +523,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -567,8 +531,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -576,8 +539,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -585,8 +547,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlistitemid_go">
 <a href="#watchlistitemid_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Id</a>
@@ -594,8 +555,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlistitemtype_go">
 <a href="#watchlistitemtype_go" style="color: inherit; text-decoration: inherit;">Watchlist<wbr>Item<wbr>Type</a>
@@ -603,14 +563,11 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="itemskeyvalue_nodejs">
 <a href="#itemskeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Key<wbr>Value</a>
@@ -618,8 +575,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -627,8 +583,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -636,8 +591,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlistalias_nodejs">
 <a href="#watchlistalias_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Alias</a>
@@ -645,8 +599,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -654,8 +607,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -663,8 +615,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -672,8 +623,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitymapping_nodejs">
 <a href="#entitymapping_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Mapping</a>
@@ -681,8 +631,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -690,8 +639,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdeleted_nodejs">
 <a href="#isdeleted_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deleted</a>
@@ -699,8 +647,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -708,8 +655,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -717,8 +663,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -726,8 +671,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlistitemid_nodejs">
 <a href="#watchlistitemid_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Id</a>
@@ -735,8 +679,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlistitemtype_nodejs">
 <a href="#watchlistitemtype_nodejs" style="color: inherit; text-decoration: inherit;">watchlist<wbr>Item<wbr>Type</a>
@@ -744,14 +687,11 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="items_key_value_python">
 <a href="#items_key_value_python" style="color: inherit; text-decoration: inherit;">items_<wbr>key_<wbr>value</a>
@@ -759,8 +699,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}key-value pairs for a watchlist item{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
@@ -768,8 +707,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -777,8 +715,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="watchlist_alias_python">
 <a href="#watchlist_alias_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>alias</a>
@@ -786,8 +723,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Watchlist Alias{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -795,8 +731,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -804,8 +739,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the watchlist item was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -813,8 +747,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_mapping_python">
 <a href="#entity_mapping_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>mapping</a>
@@ -822,8 +755,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}key-value pairs for a watchlist item entity mapping{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -831,8 +763,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_deleted_python">
 <a href="#is_deleted_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deleted</a>
@@ -840,8 +771,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A flag that indicates if the watchlist item is deleted or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -849,8 +779,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenantId to which the watchlist item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -858,8 +787,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last time the watchlist item was updated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -867,8 +795,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlist_item_id_python">
 <a href="#watchlist_item_id_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>item_<wbr>id</a>
@@ -876,8 +803,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id (a Guid) of the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watchlist_item_type_python">
 <a href="#watchlist_item_type_python" style="color: inherit; text-decoration: inherit;">watchlist_<wbr>item_<wbr>type</a>
@@ -885,8 +811,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the watchlist item{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -897,9 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -907,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -916,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -925,14 +846,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -940,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -949,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -958,14 +874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -973,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -982,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -991,14 +902,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1006,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1015,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1024,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1041,9 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="userinfo">User<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1051,14 +954,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1066,14 +966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1081,14 +978,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1096,16 +990,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1113,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1122,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1131,14 +1020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1146,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1155,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1164,14 +1048,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1179,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1188,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1197,14 +1076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1212,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1221,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1230,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="githubaccesscode_csharp">
 <a href="#githubaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Access<wbr>Code</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="githubaccesstokenbaseurl_csharp">
 <a href="#githubaccesstokenbaseurl_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Access<wbr>Token<wbr>Base<wbr>Url</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubclientid_csharp">
 <a href="#githubclientid_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Id</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="githubaccesscode_go">
 <a href="#githubaccesscode_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Access<wbr>Code</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="githubaccesstokenbaseurl_go">
 <a href="#githubaccesstokenbaseurl_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Access<wbr>Token<wbr>Base<wbr>Url</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubclientid_go">
 <a href="#githubclientid_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Id</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="githubaccesscode_nodejs">
 <a href="#githubaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Access<wbr>Code</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="githubaccesstokenbaseurl_nodejs">
 <a href="#githubaccesstokenbaseurl_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Access<wbr>Token<wbr>Base<wbr>Url</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubclientid_nodejs">
 <a href="#githubclientid_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Id</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="git_hub_access_code_python">
 <a href="#git_hub_access_code_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>access_<wbr>code</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="git_hub_access_token_base_url_python">
 <a href="#git_hub_access_token_base_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>access_<wbr>token_<wbr>base_<wbr>url</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}GitHub access token base URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="git_hub_client_id_python">
 <a href="#git_hub_client_id_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>id</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub application client ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="githubaccesstoken_csharp">
 <a href="#githubaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Access<wbr>Token</a>
@@ -274,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="githubaccesstoken_go">
 <a href="#githubaccesstoken_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Access<wbr>Token</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="githubaccesstoken_nodejs">
 <a href="#githubaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Access<wbr>Token</a>
@@ -304,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="git_hub_access_token_python">
 <a href="#git_hub_access_token_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>access_<wbr>token</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}GitHub access token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

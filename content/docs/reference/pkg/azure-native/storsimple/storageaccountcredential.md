@@ -14,11 +14,17 @@ The storage account credential.
 API Version: 2017-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### StorageAccountCredentialsCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -47,9 +53,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -82,9 +91,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -104,9 +116,12 @@ storage_account_credential = azure_native.storsimple.StorageAccountCredential("s
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -127,9 +142,16 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a StorageAccountCredential Resource {#create}
@@ -154,9 +176,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +184,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +192,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +200,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -213,9 +226,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -223,9 +234,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +242,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +250,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,18 +258,13 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +272,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +280,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,10 +288,7 @@ const storageAccountCredential = new azure_native.storsimple.StorageAccountCrede
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -310,9 +303,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Point</a>
@@ -320,8 +311,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -329,8 +319,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -338,8 +327,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslstatus_csharp">
 <a href="#sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -347,8 +335,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Ssl<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -356,8 +343,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -365,8 +351,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountcredentialname_csharp">
 <a href="#storageaccountcredentialname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Credential<wbr>Name</a>
@@ -374,14 +359,11 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">End<wbr>Point</a>
@@ -389,8 +371,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -398,8 +379,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -407,8 +387,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslstatus_go">
 <a href="#sslstatus_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -416,8 +395,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslstatus">Ssl<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -425,8 +403,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
-    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -434,8 +411,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountcredentialname_go">
 <a href="#storageaccountcredentialname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Credential<wbr>Name</a>
@@ -443,14 +419,11 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Point</a>
@@ -458,8 +431,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -467,8 +439,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -476,8 +447,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslstatus_nodejs">
 <a href="#sslstatus_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Status</a>
@@ -485,8 +455,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslstatus">Ssl<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -494,8 +463,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
-    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -503,8 +471,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountcredentialname_nodejs">
 <a href="#storageaccountcredentialname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Credential<wbr>Name</a>
@@ -512,14 +479,11 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_point_python">
 <a href="#end_point_python" style="color: inherit; text-decoration: inherit;">end_<wbr>point</a>
@@ -527,8 +491,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -536,8 +499,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -545,8 +507,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_status_python">
 <a href="#ssl_status_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>status</a>
@@ -554,8 +515,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslstatus">Ssl<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signifies whether SSL needs to be enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -563,8 +523,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The details of the storage account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -572,8 +531,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_credential_name_python">
 <a href="#storage_account_credential_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>name</a>
@@ -581,8 +539,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account credential name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -593,9 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -603,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -612,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -621,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumescount_csharp">
 <a href="#volumescount_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Count</a>
@@ -630,14 +582,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -645,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -654,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -663,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumescount_go">
 <a href="#volumescount_go" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Count</a>
@@ -672,14 +618,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -687,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -696,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -705,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumescount_nodejs">
 <a href="#volumescount_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Count</a>
@@ -714,14 +654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -729,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -738,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -747,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumes_count_python">
 <a href="#volumes_count_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>count</a>
@@ -756,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes using this storage account credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -773,9 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_csharp">
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -783,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Encryption<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -792,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_csharp">
 <a href="#encryptioncertthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -801,14 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_go">
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -816,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -825,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_go">
 <a href="#encryptioncertthumbprint_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -834,14 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_nodejs">
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -849,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -858,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_nodejs">
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -867,14 +786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryption_algorithm_python">
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -882,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -891,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_cert_thumbprint_python">
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
@@ -900,16 +814,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_csharp">
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -917,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -926,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_csharp">
 <a href="#encryptioncertthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -935,14 +844,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_go">
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -950,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -959,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_go">
 <a href="#encryptioncertthumbprint_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -968,14 +872,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_nodejs">
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -983,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -992,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_nodejs">
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -1001,14 +900,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryption_algorithm_python">
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -1016,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1025,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_cert_thumbprint_python">
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
@@ -1034,122 +928,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionalgorithm">Encryption<wbr>Algorithm</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>AES256</dt>
-    <dd>AES256</dd>
-    <dt>RSAES_PKCS1_<wbr>v_1_5</dt>
-    <dd>RSAES_PKCS1_v_1_5</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>AES256</dt>
+    <dd>AES256</dd><dt>RSAES_PKCS1_<wbr>v_1_5</dt>
+    <dd>RSAES_PKCS1_v_1_5</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Encryption<wbr>Algorithm<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Encryption<wbr>Algorithm<wbr>AES256</dt>
-    <dd>AES256</dd>
-    <dt>Encryption<wbr>Algorithm_RSAES_PKCS1_<wbr>v_1_5</dt>
-    <dd>RSAES_PKCS1_v_1_5</dd>
-</dl>
+<dl class="tabular"><dt>Encryption<wbr>Algorithm<wbr>None</dt>
+    <dd>None</dd><dt>Encryption<wbr>Algorithm<wbr>AES256</dt>
+    <dd>AES256</dd><dt>Encryption<wbr>Algorithm_RSAES_PKCS1_<wbr>v_1_5</dt>
+    <dd>RSAES_PKCS1_v_1_5</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>AES256</dt>
-    <dd>AES256</dd>
-    <dt>RSAES_PKCS1_<wbr>v_1_5</dt>
-    <dd>RSAES_PKCS1_v_1_5</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>AES256</dt>
+    <dd>AES256</dd><dt>RSAES_PKCS1_<wbr>v_1_5</dt>
+    <dd>RSAES_PKCS1_v_1_5</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>AES256</dt>
-    <dd>AES256</dd>
-    <dt>RSAE_S_PKCS1_V_1_5</dt>
-    <dd>RSAES_PKCS1_v_1_5</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>AES256</dt>
+    <dd>AES256</dd><dt>RSAE_S_PKCS1_V_1_5</dt>
+    <dd>RSAES_PKCS1_v_1_5</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SERIES8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>SERIES8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslstatus">Ssl<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Ssl<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Ssl<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Ssl<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Ssl<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 ## Import
 

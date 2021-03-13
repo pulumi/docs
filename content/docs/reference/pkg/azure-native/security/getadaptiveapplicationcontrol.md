@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asclocation_csharp">
 <a href="#asclocation_csharp" style="color: inherit; text-decoration: inherit;">Asc<wbr>Location</a>
@@ -60,8 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -69,14 +66,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asclocation_go">
 <a href="#asclocation_go" style="color: inherit; text-decoration: inherit;">Asc<wbr>Location</a>
@@ -84,8 +78,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -93,14 +86,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asclocation_nodejs">
 <a href="#asclocation_nodejs" style="color: inherit; text-decoration: inherit;">asc<wbr>Location</a>
@@ -108,8 +98,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -117,14 +106,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asc_location_python">
 <a href="#asc_location_python" style="color: inherit; text-decoration: inherit;">asc_<wbr>location</a>
@@ -132,8 +118,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -141,8 +126,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -155,9 +139,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configurationstatus_csharp">
 <a href="#configurationstatus_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Status</a>
@@ -165,8 +147,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -174,8 +155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issues_csharp">
 <a href="#issues_csharp" style="color: inherit; text-decoration: inherit;">Issues</a>
@@ -183,8 +163,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -192,8 +171,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -201,8 +179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recommendationstatus_csharp">
 <a href="#recommendationstatus_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Status</a>
@@ -210,8 +187,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesystem_csharp">
 <a href="#sourcesystem_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>System</a>
@@ -219,8 +195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -228,8 +203,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enforcementmode_csharp">
 <a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -237,8 +211,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pathrecommendations_csharp">
 <a href="#pathrecommendations_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Recommendations</a>
@@ -246,8 +219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pathrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Path<wbr>Recommendation<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectionmode_csharp">
 <a href="#protectionmode_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Mode</a>
@@ -255,8 +227,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protectionmoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Protection<wbr>Mode<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmrecommendations_csharp">
 <a href="#vmrecommendations_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Recommendations</a>
@@ -264,14 +235,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Vm<wbr>Recommendation<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configurationstatus_go">
 <a href="#configurationstatus_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Status</a>
@@ -279,8 +247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -288,8 +255,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issues_go">
 <a href="#issues_go" style="color: inherit; text-decoration: inherit;">Issues</a>
@@ -297,8 +263,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">[]Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -306,8 +271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -315,8 +279,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recommendationstatus_go">
 <a href="#recommendationstatus_go" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Status</a>
@@ -324,8 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesystem_go">
 <a href="#sourcesystem_go" style="color: inherit; text-decoration: inherit;">Source<wbr>System</a>
@@ -333,8 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -342,8 +303,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enforcementmode_go">
 <a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -351,8 +311,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pathrecommendations_go">
 <a href="#pathrecommendations_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Recommendations</a>
@@ -360,8 +319,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pathrecommendationresponse">[]Path<wbr>Recommendation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectionmode_go">
 <a href="#protectionmode_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Mode</a>
@@ -369,8 +327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protectionmoderesponse">Protection<wbr>Mode<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmrecommendations_go">
 <a href="#vmrecommendations_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Recommendations</a>
@@ -378,14 +335,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmrecommendationresponse">[]Vm<wbr>Recommendation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configurationstatus_nodejs">
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
@@ -393,8 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -402,8 +355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issues_nodejs">
 <a href="#issues_nodejs" style="color: inherit; text-decoration: inherit;">issues</a>
@@ -411,8 +363,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -420,8 +371,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -429,8 +379,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recommendationstatus_nodejs">
 <a href="#recommendationstatus_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Status</a>
@@ -438,8 +387,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesystem_nodejs">
 <a href="#sourcesystem_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>System</a>
@@ -447,8 +395,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -456,8 +403,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enforcementmode_nodejs">
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
@@ -465,8 +411,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pathrecommendations_nodejs">
 <a href="#pathrecommendations_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Recommendations</a>
@@ -474,8 +419,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pathrecommendationresponse">Path<wbr>Recommendation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectionmode_nodejs">
 <a href="#protectionmode_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Mode</a>
@@ -483,8 +427,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protectionmoderesponse">Protection<wbr>Mode<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmrecommendations_nodejs">
 <a href="#vmrecommendations_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Recommendations</a>
@@ -492,14 +435,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmrecommendationresponse">Vm<wbr>Recommendation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configuration_status_python">
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
@@ -507,8 +447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -516,8 +455,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issues_python">
 <a href="#issues_python" style="color: inherit; text-decoration: inherit;">issues</a>
@@ -525,8 +463,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#adaptiveapplicationcontrolissuesummaryresponse">Sequence[Adaptive<wbr>Application<wbr>Control<wbr>Issue<wbr>Summary<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -534,8 +471,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -543,8 +479,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recommendation_status_python">
 <a href="#recommendation_status_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>status</a>
@@ -552,8 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The initial recommendation status of the machine group or machine{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_system_python">
 <a href="#source_system_python" style="color: inherit; text-decoration: inherit;">source_<wbr>system</a>
@@ -561,8 +495,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source type of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -570,8 +503,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enforcement_mode_python">
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
@@ -579,8 +511,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_recommendations_python">
 <a href="#path_recommendations_python" style="color: inherit; text-decoration: inherit;">path_<wbr>recommendations</a>
@@ -588,8 +519,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pathrecommendationresponse">Sequence[Path<wbr>Recommendation<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protection_mode_python">
 <a href="#protection_mode_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>mode</a>
@@ -597,8 +527,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protectionmoderesponse">Protection<wbr>Mode<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_recommendations_python">
 <a href="#vm_recommendations_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>recommendations</a>
@@ -606,8 +535,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmrecommendationresponse">Sequence[Vm<wbr>Recommendation<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -621,9 +549,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issue_csharp">
 <a href="#issue_csharp" style="color: inherit; text-decoration: inherit;">Issue</a>
@@ -631,8 +557,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofvms_csharp">
 <a href="#numberofvms_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Vms</a>
@@ -640,14 +565,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issue_go">
 <a href="#issue_go" style="color: inherit; text-decoration: inherit;">Issue</a>
@@ -655,8 +577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofvms_go">
 <a href="#numberofvms_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Vms</a>
@@ -664,14 +585,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issue_nodejs">
 <a href="#issue_nodejs" style="color: inherit; text-decoration: inherit;">issue</a>
@@ -679,8 +597,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofvms_nodejs">
 <a href="#numberofvms_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Vms</a>
@@ -688,14 +605,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issue_python">
 <a href="#issue_python" style="color: inherit; text-decoration: inherit;">issue</a>
@@ -703,8 +617,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_vms_python">
 <a href="#number_of_vms_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>vms</a>
@@ -712,8 +625,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pathrecommendationresponse">Path<wbr>Recommendation<wbr>Response</h4>
@@ -721,9 +633,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -731,8 +641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_csharp">
 <a href="#common_csharp" style="color: inherit; text-decoration: inherit;">Common</a>
@@ -740,8 +649,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationstatus_csharp">
 <a href="#configurationstatus_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Status</a>
@@ -749,8 +657,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filetype_csharp">
 <a href="#filetype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
@@ -758,8 +665,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -767,8 +673,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherinfo_csharp">
 <a href="#publisherinfo_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Info</a>
@@ -776,8 +681,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publisherinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -785,8 +689,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersids_csharp">
 <a href="#usersids_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Sids</a>
@@ -794,8 +697,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernames_csharp">
 <a href="#usernames_csharp" style="color: inherit; text-decoration: inherit;">Usernames</a>
@@ -803,14 +705,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Recommendation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -818,8 +717,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_go">
 <a href="#common_go" style="color: inherit; text-decoration: inherit;">Common</a>
@@ -827,8 +725,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationstatus_go">
 <a href="#configurationstatus_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Status</a>
@@ -836,8 +733,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filetype_go">
 <a href="#filetype_go" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
@@ -845,8 +741,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -854,8 +749,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherinfo_go">
 <a href="#publisherinfo_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Info</a>
@@ -863,8 +757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -872,8 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersids_go">
 <a href="#usersids_go" style="color: inherit; text-decoration: inherit;">User<wbr>Sids</a>
@@ -881,8 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernames_go">
 <a href="#usernames_go" style="color: inherit; text-decoration: inherit;">Usernames</a>
@@ -890,14 +781,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userrecommendationresponse">[]User<wbr>Recommendation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -905,8 +793,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_nodejs">
 <a href="#common_nodejs" style="color: inherit; text-decoration: inherit;">common</a>
@@ -914,8 +801,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationstatus_nodejs">
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
@@ -923,8 +809,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filetype_nodejs">
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
@@ -932,8 +817,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -941,8 +825,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherinfo_nodejs">
 <a href="#publisherinfo_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
@@ -950,8 +833,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -959,8 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersids_nodejs">
 <a href="#usersids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Sids</a>
@@ -968,8 +849,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernames_nodejs">
 <a href="#usernames_nodejs" style="color: inherit; text-decoration: inherit;">usernames</a>
@@ -977,14 +857,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userrecommendationresponse">User<wbr>Recommendation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -992,8 +869,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_python">
 <a href="#common_python" style="color: inherit; text-decoration: inherit;">common</a>
@@ -1001,8 +877,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_status_python">
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
@@ -1010,8 +885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_type_python">
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
@@ -1019,8 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1028,8 +901,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_info_python">
 <a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
@@ -1037,8 +909,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1046,8 +917,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_sids_python">
 <a href="#user_sids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>sids</a>
@@ -1055,8 +925,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernames_python">
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
@@ -1064,8 +933,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userrecommendationresponse">Sequence[User<wbr>Recommendation<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="protectionmoderesponse">Protection<wbr>Mode<wbr>Response</h4>
@@ -1073,9 +941,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exe_csharp">
 <a href="#exe_csharp" style="color: inherit; text-decoration: inherit;">Exe</a>
@@ -1083,8 +949,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_csharp">
 <a href="#executable_csharp" style="color: inherit; text-decoration: inherit;">Executable</a>
@@ -1092,8 +957,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_csharp">
 <a href="#msi_csharp" style="color: inherit; text-decoration: inherit;">Msi</a>
@@ -1101,8 +965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1110,14 +973,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exe_go">
 <a href="#exe_go" style="color: inherit; text-decoration: inherit;">Exe</a>
@@ -1125,8 +985,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_go">
 <a href="#executable_go" style="color: inherit; text-decoration: inherit;">Executable</a>
@@ -1134,8 +993,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_go">
 <a href="#msi_go" style="color: inherit; text-decoration: inherit;">Msi</a>
@@ -1143,8 +1001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1152,14 +1009,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exe_nodejs">
 <a href="#exe_nodejs" style="color: inherit; text-decoration: inherit;">exe</a>
@@ -1167,8 +1021,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_nodejs">
 <a href="#executable_nodejs" style="color: inherit; text-decoration: inherit;">executable</a>
@@ -1176,8 +1029,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_nodejs">
 <a href="#msi_nodejs" style="color: inherit; text-decoration: inherit;">msi</a>
@@ -1185,8 +1037,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -1194,14 +1045,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exe_python">
 <a href="#exe_python" style="color: inherit; text-decoration: inherit;">exe</a>
@@ -1209,8 +1057,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executable_python">
 <a href="#executable_python" style="color: inherit; text-decoration: inherit;">executable</a>
@@ -1218,8 +1065,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="msi_python">
 <a href="#msi_python" style="color: inherit; text-decoration: inherit;">msi</a>
@@ -1227,8 +1073,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -1236,8 +1081,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publisherinforesponse">Publisher<wbr>Info<wbr>Response</h4>
@@ -1245,9 +1089,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binaryname_csharp">
 <a href="#binaryname_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Name</a>
@@ -1255,8 +1097,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -1264,8 +1105,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishername_csharp">
 <a href="#publishername_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Name</a>
@@ -1273,8 +1113,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1282,14 +1121,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binaryname_go">
 <a href="#binaryname_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Name</a>
@@ -1297,8 +1133,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -1306,8 +1141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishername_go">
 <a href="#publishername_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Name</a>
@@ -1315,8 +1149,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1324,14 +1157,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binaryname_nodejs">
 <a href="#binaryname_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Name</a>
@@ -1339,8 +1169,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
@@ -1348,8 +1177,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishername_nodejs">
 <a href="#publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
@@ -1357,8 +1185,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1366,14 +1193,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binary_name_python">
 <a href="#binary_name_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>name</a>
@@ -1381,8 +1205,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
@@ -1390,8 +1213,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_name_python">
 <a href="#publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
@@ -1399,8 +1221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1408,8 +1229,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userrecommendationresponse">User<wbr>Recommendation<wbr>Response</h4>
@@ -1417,9 +1237,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recommendationaction_csharp">
 <a href="#recommendationaction_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Action</a>
@@ -1427,8 +1245,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1436,14 +1253,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recommendationaction_go">
 <a href="#recommendationaction_go" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Action</a>
@@ -1451,8 +1265,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1460,14 +1273,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recommendationaction_nodejs">
 <a href="#recommendationaction_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
@@ -1475,8 +1285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1484,14 +1293,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recommendation_action_python">
 <a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
@@ -1499,8 +1305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1508,8 +1313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmrecommendationresponse">Vm<wbr>Recommendation<wbr>Response</h4>
@@ -1517,9 +1321,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationstatus_csharp">
 <a href="#configurationstatus_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Status</a>
@@ -1527,8 +1329,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcementsupport_csharp">
 <a href="#enforcementsupport_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Support</a>
@@ -1536,8 +1337,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationaction_csharp">
 <a href="#recommendationaction_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Action</a>
@@ -1545,8 +1345,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1554,14 +1353,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationstatus_go">
 <a href="#configurationstatus_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Status</a>
@@ -1569,8 +1365,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcementsupport_go">
 <a href="#enforcementsupport_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Support</a>
@@ -1578,8 +1373,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationaction_go">
 <a href="#recommendationaction_go" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Action</a>
@@ -1587,8 +1381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1596,14 +1389,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configurationstatus_nodejs">
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
@@ -1611,8 +1401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcementsupport_nodejs">
 <a href="#enforcementsupport_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Support</a>
@@ -1620,8 +1409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationaction_nodejs">
 <a href="#recommendationaction_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
@@ -1629,8 +1417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1638,14 +1425,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_status_python">
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
@@ -1653,8 +1437,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcement_support_python">
 <a href="#enforcement_support_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>support</a>
@@ -1662,8 +1445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendation_action_python">
 <a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
@@ -1671,8 +1453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1680,8 +1461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

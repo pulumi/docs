@@ -14,11 +14,17 @@ A DDoS custom policy in a resource group.
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create DDoS custom policy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -79,9 +88,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -97,9 +109,12 @@ ddos_custom_policy = azure_native.network.DdosCustomPolicy("ddosCustomPolicy",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -116,9 +131,16 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DdosCustomPolicy Resource {#create}
@@ -143,9 +165,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +173,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +181,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +189,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -202,9 +215,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -212,9 +223,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -222,9 +231,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -232,9 +239,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,18 +247,13 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -261,9 +261,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -271,9 +269,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -281,10 +277,7 @@ const ddosCustomPolicy = new azure_native.network.DdosCustomPolicy("ddosCustomPo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -299,9 +292,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -309,8 +300,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ddoscustompolicyname_csharp">
 <a href="#ddoscustompolicyname_csharp" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Custom<wbr>Policy<wbr>Name</a>
@@ -318,8 +308,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -327,8 +316,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -336,8 +324,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolcustomsettings_csharp">
 <a href="#protocolcustomsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Custom<wbr>Settings</a>
@@ -345,8 +332,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolcustomsettingsformat">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -354,14 +340,11 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -369,8 +352,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ddoscustompolicyname_go">
 <a href="#ddoscustompolicyname_go" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Custom<wbr>Policy<wbr>Name</a>
@@ -378,8 +360,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -387,8 +368,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -396,8 +376,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolcustomsettings_go">
 <a href="#protocolcustomsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Custom<wbr>Settings</a>
@@ -405,8 +384,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolcustomsettingsformat">[]Protocol<wbr>Custom<wbr>Settings<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -414,14 +392,11 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -429,8 +404,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ddoscustompolicyname_nodejs">
 <a href="#ddoscustompolicyname_nodejs" style="color: inherit; text-decoration: inherit;">ddos<wbr>Custom<wbr>Policy<wbr>Name</a>
@@ -438,8 +412,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -447,8 +420,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -456,8 +428,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolcustomsettings_nodejs">
 <a href="#protocolcustomsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Custom<wbr>Settings</a>
@@ -465,8 +436,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolcustomsettingsformat">Protocol<wbr>Custom<wbr>Settings<wbr>Format[]</a></span>
     </dt>
-    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -474,14 +444,11 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -489,8 +456,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ddos_custom_policy_name_python">
 <a href="#ddos_custom_policy_name_python" style="color: inherit; text-decoration: inherit;">ddos_<wbr>custom_<wbr>policy_<wbr>name</a>
@@ -498,8 +464,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the DDoS custom policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -507,8 +472,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -516,8 +480,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_custom_settings_python">
 <a href="#protocol_custom_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>custom_<wbr>settings</a>
@@ -525,8 +488,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolcustomsettingsformat">Sequence[Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -534,8 +496,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -546,9 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -556,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,8 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -574,8 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -583,8 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddresses</a>
@@ -592,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_csharp">
 <a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -601,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -610,14 +563,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -625,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -643,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -652,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddresses_go">
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddresses</a>
@@ -661,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_go">
 <a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -670,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -679,14 +623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -694,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -703,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -712,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -721,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddresses</a>
@@ -730,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_nodejs">
 <a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
@@ -739,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -748,14 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -763,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -772,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -781,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -790,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the DDoS custom policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_addresses_python">
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
@@ -799,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of public IPs associated with the DDoS custom policy resource. This list is read-only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_guid_python">
 <a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
@@ -808,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -817,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -834,109 +759,71 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="ddoscustompolicyprotocol">Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Tcp</dt>
-    <dd>Tcp</dd>
-    <dt>Udp</dt>
-    <dd>Udp</dd>
-    <dt>Syn</dt>
-    <dd>Syn</dd>
-</dl>
+<dl class="tabular"><dt>Tcp</dt>
+    <dd>Tcp</dd><dt>Udp</dt>
+    <dd>Udp</dd><dt>Syn</dt>
+    <dd>Syn</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol<wbr>Tcp</dt>
-    <dd>Tcp</dd>
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol<wbr>Udp</dt>
-    <dd>Udp</dd>
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol<wbr>Syn</dt>
-    <dd>Syn</dd>
-</dl>
+<dl class="tabular"><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol<wbr>Tcp</dt>
+    <dd>Tcp</dd><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol<wbr>Udp</dt>
+    <dd>Udp</dd><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol<wbr>Syn</dt>
+    <dd>Syn</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Tcp</dt>
-    <dd>Tcp</dd>
-    <dt>Udp</dt>
-    <dd>Udp</dd>
-    <dt>Syn</dt>
-    <dd>Syn</dd>
-</dl>
+<dl class="tabular"><dt>Tcp</dt>
+    <dd>Tcp</dd><dt>Udp</dt>
+    <dd>Udp</dd><dt>Syn</dt>
+    <dd>Syn</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TCP</dt>
-    <dd>Tcp</dd>
-    <dt>UDP</dt>
-    <dd>Udp</dd>
-    <dt>SYN</dt>
-    <dd>Syn</dd>
-</dl>
+<dl class="tabular"><dt>TCP</dt>
+    <dd>Tcp</dd><dt>UDP</dt>
+    <dd>Udp</dd><dt>SYN</dt>
+    <dd>Syn</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ddoscustompolicytriggersensitivityoverride">Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Relaxed</dt>
-    <dd>Relaxed</dd>
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Default</dt>
-    <dd>Default</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Relaxed</dt>
+    <dd>Relaxed</dd><dt>Low</dt>
+    <dd>Low</dd><dt>Default</dt>
+    <dd>Default</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>Relaxed</dt>
-    <dd>Relaxed</dd>
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>Low</dt>
-    <dd>Low</dd>
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>Default</dt>
-    <dd>Default</dd>
-    <dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>Relaxed</dt>
+    <dd>Relaxed</dd><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>Low</dt>
+    <dd>Low</dd><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>Default</dt>
+    <dd>Default</dd><dt>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override<wbr>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Relaxed</dt>
-    <dd>Relaxed</dd>
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Default</dt>
-    <dd>Default</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>Relaxed</dt>
+    <dd>Relaxed</dd><dt>Low</dt>
+    <dd>Low</dd><dt>Default</dt>
+    <dd>Default</dd><dt>High</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>RELAXED</dt>
-    <dd>Relaxed</dd>
-    <dt>LOW</dt>
-    <dd>Low</dd>
-    <dt>DEFAULT</dt>
-    <dd>Default</dd>
-    <dt>HIGH</dt>
-    <dd>High</dd>
-</dl>
+<dl class="tabular"><dt>RELAXED</dt>
+    <dd>Relaxed</dd><dt>LOW</dt>
+    <dd>Low</dd><dt>DEFAULT</dt>
+    <dd>Default</dd><dt>HIGH</dt>
+    <dd>High</dd></dl>
 {{% /choosable %}}
 
 <h4 id="protocolcustomsettingsformat">Protocol<wbr>Custom<wbr>Settings<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -944,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ddoscustompolicyprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerateoverride_csharp">
 <a href="#sourcerateoverride_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Rate<wbr>Override</a>
@@ -953,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerrateoverride_csharp">
 <a href="#triggerrateoverride_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Rate<wbr>Override</a>
@@ -962,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggersensitivityoverride_csharp">
 <a href="#triggersensitivityoverride_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
@@ -971,14 +855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ddoscustompolicytriggersensitivityoverride">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -986,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ddoscustompolicyprotocol">Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerateoverride_go">
 <a href="#sourcerateoverride_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Rate<wbr>Override</a>
@@ -995,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerrateoverride_go">
 <a href="#triggerrateoverride_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Rate<wbr>Override</a>
@@ -1004,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggersensitivityoverride_go">
 <a href="#triggersensitivityoverride_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
@@ -1013,14 +891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ddoscustompolicytriggersensitivityoverride">Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1028,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ddoscustompolicyprotocol">Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerateoverride_nodejs">
 <a href="#sourcerateoverride_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Rate<wbr>Override</a>
@@ -1037,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerrateoverride_nodejs">
 <a href="#triggerrateoverride_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Rate<wbr>Override</a>
@@ -1046,8 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggersensitivityoverride_nodejs">
 <a href="#triggersensitivityoverride_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Sensitivity<wbr>Override</a>
@@ -1055,14 +927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#ddoscustompolicytriggersensitivityoverride">Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1070,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#ddoscustompolicyprotocol">Ddos<wbr>Custom<wbr>Policy<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_rate_override_python">
 <a href="#source_rate_override_python" style="color: inherit; text-decoration: inherit;">source_<wbr>rate_<wbr>override</a>
@@ -1079,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_rate_override_python">
 <a href="#trigger_rate_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>rate_<wbr>override</a>
@@ -1088,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_sensitivity_override_python">
 <a href="#trigger_sensitivity_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>sensitivity_<wbr>override</a>
@@ -1097,16 +963,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#ddoscustompolicytriggersensitivityoverride">Ddos<wbr>Custom<wbr>Policy<wbr>Trigger<wbr>Sensitivity<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="protocolcustomsettingsformatresponse">Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1114,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerateoverride_csharp">
 <a href="#sourcerateoverride_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Rate<wbr>Override</a>
@@ -1123,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerrateoverride_csharp">
 <a href="#triggerrateoverride_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Rate<wbr>Override</a>
@@ -1132,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggersensitivityoverride_csharp">
 <a href="#triggersensitivityoverride_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
@@ -1141,14 +1001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1156,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerateoverride_go">
 <a href="#sourcerateoverride_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Rate<wbr>Override</a>
@@ -1165,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerrateoverride_go">
 <a href="#triggerrateoverride_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Rate<wbr>Override</a>
@@ -1174,8 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggersensitivityoverride_go">
 <a href="#triggersensitivityoverride_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Sensitivity<wbr>Override</a>
@@ -1183,14 +1037,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1198,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerateoverride_nodejs">
 <a href="#sourcerateoverride_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Rate<wbr>Override</a>
@@ -1207,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerrateoverride_nodejs">
 <a href="#triggerrateoverride_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Rate<wbr>Override</a>
@@ -1216,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggersensitivityoverride_nodejs">
 <a href="#triggersensitivityoverride_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Sensitivity<wbr>Override</a>
@@ -1225,14 +1073,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1240,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol for which the DDoS protection policy is being customized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_rate_override_python">
 <a href="#source_rate_override_python" style="color: inherit; text-decoration: inherit;">source_<wbr>rate_<wbr>override</a>
@@ -1249,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection source rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_rate_override_python">
 <a href="#trigger_rate_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>rate_<wbr>override</a>
@@ -1258,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The customized DDoS protection trigger rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_sensitivity_override_python">
 <a href="#trigger_sensitivity_override_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>sensitivity_<wbr>override</a>
@@ -1267,16 +1109,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1284,14 +1123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1299,14 +1135,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1314,14 +1147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1329,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

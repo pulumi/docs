@@ -14,11 +14,17 @@ Specifies information about the gallery image version that you want to create or
 API Version: 2020-09-30.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a simple Gallery Image Version (Managed Image as source).
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -85,9 +91,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -148,9 +157,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -198,9 +210,12 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -249,10 +264,17 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a simple Gallery Image Version using snapshots as a source.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -330,9 +352,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -401,9 +426,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -455,9 +483,12 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -510,10 +541,17 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a simple Gallery Image Version using vhd as a source.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -576,9 +614,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -636,9 +677,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -681,9 +725,12 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -727,9 +774,16 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GalleryImageVersion Resource {#create}
@@ -754,9 +808,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -764,9 +816,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -774,9 +824,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -784,10 +832,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -813,9 +858,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -823,9 +866,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -833,9 +874,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -843,9 +882,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -853,18 +890,13 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -872,9 +904,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -882,9 +912,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -892,10 +920,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -910,9 +935,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimagename_csharp">
 <a href="#galleryimagename_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Name</a>
@@ -920,8 +943,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="galleryname_csharp">
 <a href="#galleryname_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Name</a>
@@ -929,8 +951,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -938,8 +959,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageprofile_csharp">
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -947,8 +967,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionstorageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageversionname_csharp">
 <a href="#galleryimageversionname_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Version<wbr>Name</a>
@@ -956,8 +975,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -965,8 +983,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishingprofile_csharp">
 <a href="#publishingprofile_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
@@ -974,8 +991,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionpublishingprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -983,14 +999,11 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimagename_go">
 <a href="#galleryimagename_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Name</a>
@@ -998,8 +1011,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="galleryname_go">
 <a href="#galleryname_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Name</a>
@@ -1007,8 +1019,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1016,8 +1027,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageprofile_go">
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -1025,8 +1035,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageversionname_go">
 <a href="#galleryimageversionname_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Version<wbr>Name</a>
@@ -1034,8 +1043,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1043,8 +1051,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishingprofile_go">
 <a href="#publishingprofile_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
@@ -1052,8 +1059,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1061,14 +1067,11 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimagename_nodejs">
 <a href="#galleryimagename_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Name</a>
@@ -1076,8 +1079,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="galleryname_nodejs">
 <a href="#galleryname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Name</a>
@@ -1085,8 +1087,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1094,8 +1095,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageprofile_nodejs">
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
@@ -1103,8 +1103,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageversionname_nodejs">
 <a href="#galleryimageversionname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Version<wbr>Name</a>
@@ -1112,8 +1111,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1121,8 +1119,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishingprofile_nodejs">
 <a href="#publishingprofile_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Profile</a>
@@ -1130,8 +1127,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1139,14 +1135,11 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gallery_image_name_python">
 <a href="#gallery_image_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>name</a>
@@ -1154,8 +1147,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gallery_name_python">
 <a href="#gallery_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>name</a>
@@ -1163,8 +1155,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1172,8 +1163,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_profile_python">
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
@@ -1181,8 +1171,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gallery_image_version_name_python">
 <a href="#gallery_image_version_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>version_<wbr>name</a>
@@ -1190,8 +1179,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1199,8 +1187,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishing_profile_python">
 <a href="#publishing_profile_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>profile</a>
@@ -1208,8 +1195,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1217,8 +1203,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1229,9 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1239,8 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1248,8 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1257,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationstatus_csharp">
 <a href="#replicationstatus_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Status</a>
@@ -1266,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Replication<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1275,14 +1254,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1290,8 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1299,8 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1308,8 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationstatus_go">
 <a href="#replicationstatus_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Status</a>
@@ -1317,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationstatusresponse">Replication<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1326,14 +1298,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1341,8 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1350,8 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1359,8 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replicationstatus_nodejs">
 <a href="#replicationstatus_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Status</a>
@@ -1368,8 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationstatusresponse">Replication<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1377,14 +1342,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1392,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1401,8 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1410,8 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="replication_status_python">
 <a href="#replication_status_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>status</a>
@@ -1419,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#replicationstatusresponse">Replication<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the replication status of the gallery image version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1428,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1445,9 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1455,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1464,14 +1418,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1479,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1488,14 +1438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1503,8 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1512,14 +1458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1527,8 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -1536,16 +1478,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1553,8 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1562,14 +1500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1577,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1586,14 +1520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1601,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1610,14 +1540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1625,8 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -1634,16 +1560,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionimages">Encryption<wbr>Images</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_csharp">
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -1651,8 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_csharp">
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -1660,14 +1582,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_go">
 <a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -1675,8 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryption">[]Data<wbr>Disk<wbr>Image<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_go">
 <a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -1684,14 +1602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_nodejs">
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
@@ -1699,8 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_nodejs">
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
@@ -1708,14 +1622,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disk_images_python">
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
@@ -1723,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryption">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_image_python">
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
@@ -1732,16 +1642,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_csharp">
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -1749,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_csharp">
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -1758,14 +1664,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_go">
 <a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -1773,8 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryptionresponse">[]Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_go">
 <a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -1782,14 +1684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_nodejs">
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
@@ -1797,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_nodejs">
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
@@ -1806,14 +1704,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disk_images_python">
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
@@ -1821,8 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_image_python">
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
@@ -1830,16 +1724,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1847,8 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1856,14 +1746,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1871,8 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1880,14 +1766,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1895,8 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1904,14 +1786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1919,8 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1928,16 +1806,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1945,8 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1954,14 +1828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1969,8 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1978,14 +1848,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1993,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2002,14 +1868,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2017,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2026,16 +1888,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2043,8 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -2052,8 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2061,14 +1918,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2076,8 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -2085,8 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2094,14 +1946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2109,8 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
@@ -2118,8 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2127,14 +1974,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2142,8 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
@@ -2151,8 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2160,16 +2002,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2177,8 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeingb_csharp">
 <a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -2186,8 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -2195,8 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2204,14 +2040,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2219,8 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeingb_go">
 <a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -2228,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -2237,8 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2246,14 +2076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2261,8 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizeingb_nodejs">
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
@@ -2270,8 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
@@ -2279,8 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2288,14 +2112,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2303,8 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_in_gb_python">
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
@@ -2312,8 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
@@ -2321,8 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2330,16 +2148,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endoflifedate_csharp">
 <a href="#endoflifedate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Of<wbr>Life<wbr>Date</a>
@@ -2347,8 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_csharp">
 <a href="#excludefromlatest_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -2356,8 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicacount_csharp">
 <a href="#replicacount_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Count</a>
@@ -2365,8 +2178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2374,8 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetregions_csharp">
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
@@ -2383,14 +2194,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endoflifedate_go">
 <a href="#endoflifedate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Of<wbr>Life<wbr>Date</a>
@@ -2398,8 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_go">
 <a href="#excludefromlatest_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -2407,8 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicacount_go">
 <a href="#replicacount_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Count</a>
@@ -2416,8 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2425,8 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetregions_go">
 <a href="#targetregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
@@ -2434,14 +2238,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregion">[]Target<wbr>Region</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endoflifedate_nodejs">
 <a href="#endoflifedate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Of<wbr>Life<wbr>Date</a>
@@ -2449,8 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_nodejs">
 <a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
@@ -2458,8 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicacount_nodejs">
 <a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
@@ -2467,8 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -2476,8 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetregions_nodejs">
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
@@ -2485,14 +2282,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregion">Target<wbr>Region[]</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_of_life_date_python">
 <a href="#end_of_life_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>of_<wbr>life_<wbr>date</a>
@@ -2500,8 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_from_latest_python">
 <a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
@@ -2509,8 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_count_python">
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
@@ -2518,8 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -2527,8 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_regions_python">
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
@@ -2536,16 +2326,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregion">Sequence[Target<wbr>Region<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryimageversionpublishingprofileresponse">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisheddate_csharp">
 <a href="#publisheddate_csharp" style="color: inherit; text-decoration: inherit;">Published<wbr>Date</a>
@@ -2553,8 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endoflifedate_csharp">
 <a href="#endoflifedate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Of<wbr>Life<wbr>Date</a>
@@ -2562,8 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_csharp">
 <a href="#excludefromlatest_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -2571,8 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicacount_csharp">
 <a href="#replicacount_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Count</a>
@@ -2580,8 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2589,8 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetregions_csharp">
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
@@ -2598,14 +2380,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisheddate_go">
 <a href="#publisheddate_go" style="color: inherit; text-decoration: inherit;">Published<wbr>Date</a>
@@ -2613,8 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endoflifedate_go">
 <a href="#endoflifedate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Of<wbr>Life<wbr>Date</a>
@@ -2622,8 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_go">
 <a href="#excludefromlatest_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -2631,8 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicacount_go">
 <a href="#replicacount_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Count</a>
@@ -2640,8 +2416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2649,8 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetregions_go">
 <a href="#targetregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
@@ -2658,14 +2432,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregionresponse">[]Target<wbr>Region<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisheddate_nodejs">
 <a href="#publisheddate_nodejs" style="color: inherit; text-decoration: inherit;">published<wbr>Date</a>
@@ -2673,8 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endoflifedate_nodejs">
 <a href="#endoflifedate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Of<wbr>Life<wbr>Date</a>
@@ -2682,8 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_nodejs">
 <a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
@@ -2691,8 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicacount_nodejs">
 <a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
@@ -2700,8 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -2709,8 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetregions_nodejs">
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
@@ -2718,14 +2484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="published_date_python">
 <a href="#published_date_python" style="color: inherit; text-decoration: inherit;">published_<wbr>date</a>
@@ -2733,8 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_of_life_date_python">
 <a href="#end_of_life_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>of_<wbr>life_<wbr>date</a>
@@ -2742,8 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_from_latest_python">
 <a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
@@ -2751,8 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_count_python">
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
@@ -2760,8 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -2769,8 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_regions_python">
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
@@ -2778,16 +2536,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_csharp">
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -2795,8 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_csharp">
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -2804,8 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2813,14 +2566,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_go">
 <a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -2828,8 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimage">[]Gallery<wbr>Data<wbr>Disk<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_go">
 <a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -2837,8 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2846,14 +2594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_nodejs">
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
@@ -2861,8 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_nodejs">
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
@@ -2870,8 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2879,14 +2622,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disk_images_python">
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
@@ -2894,8 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimage">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_image_python">
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
@@ -2903,8 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2912,16 +2650,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryimageversionstorageprofileresponse">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_csharp">
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -2929,8 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_csharp">
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -2938,8 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2947,14 +2680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_go">
 <a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
@@ -2962,8 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimageresponse">[]Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_go">
 <a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
@@ -2971,8 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2980,14 +2708,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadiskimages_nodejs">
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
@@ -2995,8 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdiskimage_nodejs">
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
@@ -3004,8 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3013,14 +2736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disk_images_python">
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
@@ -3028,8 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gallerydatadiskimageresponse">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_image_python">
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
@@ -3037,8 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3046,16 +2764,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -3063,8 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3072,14 +2786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -3087,8 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3096,14 +2806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
@@ -3111,8 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3120,14 +2826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
@@ -3135,8 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3144,16 +2846,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sizeingb_csharp">
 <a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -3161,8 +2860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -3170,8 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3179,14 +2876,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sizeingb_go">
 <a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -3194,8 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -3203,8 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -3212,14 +2904,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sizeingb_nodejs">
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
@@ -3227,8 +2916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
@@ -3236,8 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3245,14 +2932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_in_gb_python">
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
@@ -3260,8 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
@@ -3269,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -3278,62 +2960,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hostcaching">Host<wbr>Caching</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Host<wbr>Caching<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Host<wbr>Caching<wbr>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Host<wbr>Caching<wbr>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>Host<wbr>Caching<wbr>None</dt>
+    <dd>None</dd><dt>Host<wbr>Caching<wbr>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Host<wbr>Caching<wbr>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>READ_ONLY</dt>
-    <dd>ReadOnly</dd>
-    <dt>READ_WRITE</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>READ_ONLY</dt>
+    <dd>ReadOnly</dd><dt>READ_WRITE</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -3341,14 +3004,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -3356,14 +3016,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -3371,14 +3028,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -3386,16 +3040,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -3403,14 +3054,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -3418,14 +3066,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -3433,14 +3078,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -3448,16 +3090,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -3465,8 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_csharp">
 <a href="#progress_csharp" style="color: inherit; text-decoration: inherit;">Progress</a>
@@ -3474,8 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3483,8 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3492,14 +3128,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -3507,8 +3140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_go">
 <a href="#progress_go" style="color: inherit; text-decoration: inherit;">Progress</a>
@@ -3516,8 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3525,8 +3156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3534,14 +3164,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -3549,8 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_nodejs">
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
@@ -3558,8 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3567,8 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3576,14 +3200,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -3591,8 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_python">
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
@@ -3600,8 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3609,8 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3618,16 +3236,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="replicationstatusresponse">Replication<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregatedstate_csharp">
 <a href="#aggregatedstate_csharp" style="color: inherit; text-decoration: inherit;">Aggregated<wbr>State</a>
@@ -3635,8 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_csharp">
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
@@ -3644,14 +3258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregatedstate_go">
 <a href="#aggregatedstate_go" style="color: inherit; text-decoration: inherit;">Aggregated<wbr>State</a>
@@ -3659,8 +3270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_go">
 <a href="#summary_go" style="color: inherit; text-decoration: inherit;">Summary</a>
@@ -3668,14 +3278,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalreplicationstatusresponse">[]Regional<wbr>Replication<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregatedstate_nodejs">
 <a href="#aggregatedstate_nodejs" style="color: inherit; text-decoration: inherit;">aggregated<wbr>State</a>
@@ -3683,8 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_nodejs">
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
@@ -3692,14 +3298,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregated_state_python">
 <a href="#aggregated_state_python" style="color: inherit; text-decoration: inherit;">aggregated_<wbr>state</a>
@@ -3707,8 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="summary_python">
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
@@ -3716,62 +3318,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccounttype">Storage<wbr>Account<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Standard_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-    <dt>Premium_LRS</dt>
-    <dd>Premium_LRS</dd>
-</dl>
+<dl class="tabular"><dt>Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Standard_ZRS</dt>
+    <dd>Standard_ZRS</dd><dt>Premium_LRS</dt>
+    <dd>Premium_LRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Account<wbr>Type_Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Storage<wbr>Account<wbr>Type_Standard_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-    <dt>Storage<wbr>Account<wbr>Type_Premium_LRS</dt>
-    <dd>Premium_LRS</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Account<wbr>Type_Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Storage<wbr>Account<wbr>Type_Standard_ZRS</dt>
+    <dd>Standard_ZRS</dd><dt>Storage<wbr>Account<wbr>Type_Premium_LRS</dt>
+    <dd>Premium_LRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Standard_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-    <dt>Premium_LRS</dt>
-    <dd>Premium_LRS</dd>
-</dl>
+<dl class="tabular"><dt>Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Standard_ZRS</dt>
+    <dd>Standard_ZRS</dd><dt>Premium_LRS</dt>
+    <dd>Premium_LRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>STANDARD_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-    <dt>PREMIUM_LRS</dt>
-    <dd>Premium_LRS</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD_LRS</dt>
+    <dd>Standard_LRS</dd><dt>STANDARD_ZRS</dt>
+    <dd>Standard_ZRS</dd><dt>PREMIUM_LRS</dt>
+    <dd>Premium_LRS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetregion">Target<wbr>Region</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3779,8 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -3788,8 +3370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalreplicacount_csharp">
 <a href="#regionalreplicacount_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Replica<wbr>Count</a>
@@ -3797,8 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3806,14 +3386,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3821,8 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -3830,8 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalreplicacount_go">
 <a href="#regionalreplicacount_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Replica<wbr>Count</a>
@@ -3839,8 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3848,14 +3422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3863,8 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -3872,8 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalreplicacount_nodejs">
 <a href="#regionalreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
@@ -3881,8 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -3890,14 +3458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3905,8 +3470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -3914,8 +3478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regional_replica_count_python">
 <a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
@@ -3923,8 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -3932,16 +3494,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targetregionresponse">Target<wbr>Region<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3949,8 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -3958,8 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalreplicacount_csharp">
 <a href="#regionalreplicacount_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Replica<wbr>Count</a>
@@ -3967,8 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3976,14 +3532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3991,8 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -4000,8 +3552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalreplicacount_go">
 <a href="#regionalreplicacount_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Replica<wbr>Count</a>
@@ -4009,8 +3560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -4018,14 +3568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4033,8 +3580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -4042,8 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalreplicacount_nodejs">
 <a href="#regionalreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
@@ -4051,8 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -4060,14 +3604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4075,8 +3616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -4084,8 +3624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regional_replica_count_python">
 <a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
@@ -4093,8 +3632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -4102,8 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

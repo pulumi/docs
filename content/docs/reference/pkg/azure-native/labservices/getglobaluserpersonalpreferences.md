@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addremove_csharp">
 <a href="#addremove_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Remove</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addremove">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Add<wbr>Remove</a></span>
     </dt>
-    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labaccountresourceid_csharp">
 <a href="#labaccountresourceid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labresourceid_csharp">
 <a href="#labresourceid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Resource<wbr>Id</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addremove_go">
 <a href="#addremove_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Remove</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addremove">Add<wbr>Remove</a></span>
     </dt>
-    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labaccountresourceid_go">
 <a href="#labaccountresourceid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labresourceid_go">
 <a href="#labresourceid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Resource<wbr>Id</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addremove_nodejs">
 <a href="#addremove_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Remove</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addremove">Add<wbr>Remove</a></span>
     </dt>
-    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labaccountresourceid_nodejs">
 <a href="#labaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labresourceid_nodejs">
 <a href="#labresourceid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Resource<wbr>Id</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_remove_python">
 <a href="#add_remove_python" style="color: inherit; text-decoration: inherit;">add_<wbr>remove</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#addremove">Add<wbr>Remove</a></span>
     </dt>
-    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if user is adding or removing a favorite lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lab_account_resource_id_python">
 <a href="#lab_account_resource_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>account_<wbr>resource_<wbr>id</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the lab account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lab_resource_id_python">
 <a href="#lab_resource_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>resource_<wbr>id</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the lab to add/remove from the favorites list{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favoritelabresourceids_csharp">
 <a href="#favoritelabresourceids_csharp" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Lab<wbr>Resource<wbr>Ids</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favoritelabresourceids_go">
 <a href="#favoritelabresourceids_go" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Lab<wbr>Resource<wbr>Ids</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favoritelabresourceids_nodejs">
 <a href="#favoritelabresourceids_nodejs" style="color: inherit; text-decoration: inherit;">favorite<wbr>Lab<wbr>Resource<wbr>Ids</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -295,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favorite_lab_resource_ids_python">
 <a href="#favorite_lab_resource_ids_python" style="color: inherit; text-decoration: inherit;">favorite_<wbr>lab_<wbr>resource_<wbr>ids</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of favorite lab resource ids{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id to be used by the cache orchestrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

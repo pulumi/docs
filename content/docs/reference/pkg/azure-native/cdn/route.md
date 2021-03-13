@@ -14,11 +14,17 @@ Friendly Routes name mapping to the any Routes or secret related information.
 API Version: 2020-09-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Routes_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -81,13 +87,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -127,9 +139,12 @@ route = azure_native.cdn.Route("route",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -170,9 +185,16 @@ const route = new azure_native.cdn.Route("route", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Route Resource {#create}
@@ -197,9 +219,7 @@ const route = new azure_native.cdn.Route("route", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -207,9 +227,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -217,9 +235,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -227,10 +243,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -256,9 +269,7 @@ const route = new azure_native.cdn.Route("route", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -266,9 +277,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -276,9 +285,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -286,9 +293,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -296,18 +301,13 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -315,9 +315,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -325,9 +323,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -335,10 +331,7 @@ const route = new azure_native.cdn.Route("route", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -353,9 +346,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_csharp">
 <a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -363,8 +354,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origingroup_csharp">
 <a href="#origingroup_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Group</a>
@@ -372,8 +362,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -381,8 +370,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -390,8 +378,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionsettings_csharp">
 <a href="#compressionsettings_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Settings</a>
@@ -399,8 +386,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compressionsettings">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Compression<wbr>Settings<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}compression settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomains_csharp">
 <a href="#customdomains_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
@@ -408,8 +394,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledstate_csharp">
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
@@ -417,8 +402,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enabledstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Enabled<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_csharp">
 <a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
@@ -426,8 +410,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#forwardingprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_csharp">
 <a href="#httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -435,8 +418,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#httpsredirect">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Https<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktodefaultdomain_csharp">
 <a href="#linktodefaultdomain_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>To<wbr>Default<wbr>Domain</a>
@@ -444,8 +426,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linktodefaultdomain">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Link<wbr>To<wbr>Default<wbr>Domain</a></span>
     </dt>
-    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_csharp">
 <a href="#originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -453,8 +434,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patternstomatch_csharp">
 <a href="#patternstomatch_csharp" style="color: inherit; text-decoration: inherit;">Patterns<wbr>To<wbr>Match</a>
@@ -462,8 +442,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachingbehavior_csharp">
 <a href="#querystringcachingbehavior_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Caching<wbr>Behavior</a>
@@ -471,8 +450,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#afdquerystringcachingbehavior">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routename_csharp">
 <a href="#routename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Name</a>
@@ -480,8 +458,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_csharp">
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -489,8 +466,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedprotocols_csharp">
 <a href="#supportedprotocols_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Protocols</a>
@@ -498,14 +474,11 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>AFDEndpoint<wbr>Protocols&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_go">
 <a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -513,8 +486,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origingroup_go">
 <a href="#origingroup_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Group</a>
@@ -522,8 +494,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -531,8 +502,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -540,8 +510,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionsettings_go">
 <a href="#compressionsettings_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Settings</a>
@@ -549,8 +518,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compressionsettings">[]Compression<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}compression settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomains_go">
 <a href="#customdomains_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
@@ -558,8 +526,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">[]Resource<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledstate_go">
 <a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
@@ -567,8 +534,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_go">
 <a href="#forwardingprotocol_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
@@ -576,8 +542,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#forwardingprotocol">Forwarding<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_go">
 <a href="#httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -585,8 +550,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#httpsredirect">Https<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktodefaultdomain_go">
 <a href="#linktodefaultdomain_go" style="color: inherit; text-decoration: inherit;">Link<wbr>To<wbr>Default<wbr>Domain</a>
@@ -594,8 +558,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linktodefaultdomain">Link<wbr>To<wbr>Default<wbr>Domain</a></span>
     </dt>
-    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_go">
 <a href="#originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -603,8 +566,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patternstomatch_go">
 <a href="#patternstomatch_go" style="color: inherit; text-decoration: inherit;">Patterns<wbr>To<wbr>Match</a>
@@ -612,8 +574,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachingbehavior_go">
 <a href="#querystringcachingbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Caching<wbr>Behavior</a>
@@ -621,8 +582,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routename_go">
 <a href="#routename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Name</a>
@@ -630,8 +590,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_go">
 <a href="#rulesets_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -639,8 +598,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">[]Resource<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedprotocols_go">
 <a href="#supportedprotocols_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Protocols</a>
@@ -648,14 +606,11 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_nodejs">
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
@@ -663,8 +618,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origingroup_nodejs">
 <a href="#origingroup_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Group</a>
@@ -672,8 +626,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -681,8 +634,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -690,8 +642,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressionsettings_nodejs">
 <a href="#compressionsettings_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Settings</a>
@@ -699,8 +650,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compressionsettings">Compression<wbr>Settings[]</a></span>
     </dt>
-    <dd>{{% md %}}compression settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomains_nodejs">
 <a href="#customdomains_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domains</a>
@@ -708,8 +658,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledstate_nodejs">
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
@@ -717,8 +666,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_nodejs">
 <a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
@@ -726,8 +674,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#forwardingprotocol">Forwarding<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_nodejs">
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
@@ -735,8 +682,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#httpsredirect">Https<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linktodefaultdomain_nodejs">
 <a href="#linktodefaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>To<wbr>Default<wbr>Domain</a>
@@ -744,8 +690,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linktodefaultdomain">Link<wbr>To<wbr>Default<wbr>Domain</a></span>
     </dt>
-    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_nodejs">
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
@@ -753,8 +698,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patternstomatch_nodejs">
 <a href="#patternstomatch_nodejs" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Match</a>
@@ -762,8 +706,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachingbehavior_nodejs">
 <a href="#querystringcachingbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Caching<wbr>Behavior</a>
@@ -771,8 +714,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routename_nodejs">
 <a href="#routename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Name</a>
@@ -780,8 +722,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_nodejs">
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
@@ -789,8 +730,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedprotocols_nodejs">
 <a href="#supportedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Protocols</a>
@@ -798,14 +738,11 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | AFDEndpoint<wbr>Protocols[]</span>
     </dt>
-    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_name_python">
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
@@ -813,8 +750,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_group_python">
 <a href="#origin_group_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>group</a>
@@ -822,8 +758,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -831,8 +766,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -840,8 +774,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_settings_python">
 <a href="#compression_settings_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>settings</a>
@@ -849,8 +782,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compressionsettings">Sequence[Compression<wbr>Settings<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}compression settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_domains_python">
 <a href="#custom_domains_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domains</a>
@@ -858,8 +790,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_state_python">
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
@@ -867,8 +798,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enabledstate">Enabled<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarding_protocol_python">
 <a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
@@ -876,8 +806,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#forwardingprotocol">Forwarding<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_redirect_python">
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
@@ -885,8 +814,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#httpsredirect">Https<wbr>Redirect</a></span>
     </dt>
-    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_to_default_domain_python">
 <a href="#link_to_default_domain_python" style="color: inherit; text-decoration: inherit;">link_<wbr>to_<wbr>default_<wbr>domain</a>
@@ -894,8 +822,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#linktodefaultdomain">Link<wbr>To<wbr>Default<wbr>Domain</a></span>
     </dt>
-    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_path_python">
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
@@ -903,8 +830,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterns_to_match_python">
 <a href="#patterns_to_match_python" style="color: inherit; text-decoration: inherit;">patterns_<wbr>to_<wbr>match</a>
@@ -912,8 +838,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The route patterns of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_caching_behavior_python">
 <a href="#query_string_caching_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>caching_<wbr>behavior</a>
@@ -921,8 +846,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
-    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_name_python">
 <a href="#route_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>name</a>
@@ -930,8 +854,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the routing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_sets_python">
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
@@ -939,8 +862,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_protocols_python">
 <a href="#supported_protocols_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>protocols</a>
@@ -948,8 +870,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, AFDEndpoint<wbr>Protocols]]</span>
     </dt>
-    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of supported protocols for this route.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -960,9 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentstatus_csharp">
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
@@ -970,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -979,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -988,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -997,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1006,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1015,14 +929,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentstatus_go">
 <a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
@@ -1030,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1039,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1048,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1057,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1066,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1075,14 +981,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentstatus_nodejs">
 <a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
@@ -1090,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1099,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1108,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1117,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1126,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1135,14 +1033,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deployment_status_python">
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
@@ -1150,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1159,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1168,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1177,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1186,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1195,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1212,93 +1101,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="afdendpointprotocols">AFDEndpoint<wbr>Protocols</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Http</dt>
-    <dd>Http</dd>
-    <dt>Https</dt>
-    <dd>Https</dd>
-</dl>
+<dl class="tabular"><dt>Http</dt>
+    <dd>Http</dd><dt>Https</dt>
+    <dd>Https</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>AFDEndpoint<wbr>Protocols<wbr>Http</dt>
-    <dd>Http</dd>
-    <dt>AFDEndpoint<wbr>Protocols<wbr>Https</dt>
-    <dd>Https</dd>
-</dl>
+<dl class="tabular"><dt>AFDEndpoint<wbr>Protocols<wbr>Http</dt>
+    <dd>Http</dd><dt>AFDEndpoint<wbr>Protocols<wbr>Https</dt>
+    <dd>Https</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Http</dt>
-    <dd>Http</dd>
-    <dt>Https</dt>
-    <dd>Https</dd>
-</dl>
+<dl class="tabular"><dt>Http</dt>
+    <dd>Http</dd><dt>Https</dt>
+    <dd>Https</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HTTP</dt>
-    <dd>Http</dd>
-    <dt>HTTPS</dt>
-    <dd>Https</dd>
-</dl>
+<dl class="tabular"><dt>HTTP</dt>
+    <dd>Http</dd><dt>HTTPS</dt>
+    <dd>Https</dd></dl>
 {{% /choosable %}}
 
 <h4 id="afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Ignore<wbr>Query<wbr>String</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>Use<wbr>Query<wbr>String</dt>
-    <dd>UseQueryString</dd>
-    <dt>Not<wbr>Set</dt>
-    <dd>NotSet</dd>
-</dl>
+<dl class="tabular"><dt>Ignore<wbr>Query<wbr>String</dt>
+    <dd>IgnoreQueryString</dd><dt>Use<wbr>Query<wbr>String</dt>
+    <dd>UseQueryString</dd><dt>Not<wbr>Set</dt>
+    <dd>NotSet</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Ignore<wbr>Query<wbr>String</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Use<wbr>Query<wbr>String</dt>
-    <dd>UseQueryString</dd>
-    <dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Not<wbr>Set</dt>
-    <dd>NotSet</dd>
-</dl>
+<dl class="tabular"><dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Ignore<wbr>Query<wbr>String</dt>
+    <dd>IgnoreQueryString</dd><dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Use<wbr>Query<wbr>String</dt>
+    <dd>UseQueryString</dd><dt>Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior<wbr>Not<wbr>Set</dt>
+    <dd>NotSet</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Ignore<wbr>Query<wbr>String</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>Use<wbr>Query<wbr>String</dt>
-    <dd>UseQueryString</dd>
-    <dt>Not<wbr>Set</dt>
-    <dd>NotSet</dd>
-</dl>
+<dl class="tabular"><dt>Ignore<wbr>Query<wbr>String</dt>
+    <dd>IgnoreQueryString</dd><dt>Use<wbr>Query<wbr>String</dt>
+    <dd>UseQueryString</dd><dt>Not<wbr>Set</dt>
+    <dd>NotSet</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>IGNORE_QUERY_STRING</dt>
-    <dd>IgnoreQueryString</dd>
-    <dt>USE_QUERY_STRING</dt>
-    <dd>UseQueryString</dd>
-    <dt>NOT_SET</dt>
-    <dd>NotSet</dd>
-</dl>
+<dl class="tabular"><dt>IGNORE_QUERY_STRING</dt>
+    <dd>IgnoreQueryString</dd><dt>USE_QUERY_STRING</dt>
+    <dd>UseQueryString</dd><dt>NOT_SET</dt>
+    <dd>NotSet</dd></dl>
 {{% /choosable %}}
 
 <h4 id="compressionsettings">Compression<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompress_csharp">
 <a href="#contenttypestocompress_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compress</a>
@@ -1306,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_csharp">
 <a href="#iscompressionenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -1315,14 +1173,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompress_go">
 <a href="#contenttypestocompress_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compress</a>
@@ -1330,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_go">
 <a href="#iscompressionenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -1339,14 +1193,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompress_nodejs">
 <a href="#contenttypestocompress_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compress</a>
@@ -1354,8 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_nodejs">
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
@@ -1363,14 +1213,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_types_to_compress_python">
 <a href="#content_types_to_compress_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compress</a>
@@ -1378,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_compression_enabled_python">
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
@@ -1387,16 +1233,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="compressionsettingsresponse">Compression<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompress_csharp">
 <a href="#contenttypestocompress_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compress</a>
@@ -1404,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_csharp">
 <a href="#iscompressionenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -1413,14 +1255,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompress_go">
 <a href="#contenttypestocompress_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compress</a>
@@ -1428,8 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_go">
 <a href="#iscompressionenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -1437,14 +1275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompress_nodejs">
 <a href="#contenttypestocompress_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compress</a>
@@ -1452,8 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_nodejs">
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
@@ -1461,14 +1295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_types_to_compress_python">
 <a href="#content_types_to_compress_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compress</a>
@@ -1476,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_compression_enabled_python">
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
@@ -1485,176 +1315,121 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enabledstate">Enabled<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Enabled<wbr>State<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Enabled<wbr>State<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled<wbr>State<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Enabled<wbr>State<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="forwardingprotocol">Forwarding<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Http<wbr>Only</dt>
-    <dd>HttpOnly</dd>
-    <dt>Https<wbr>Only</dt>
-    <dd>HttpsOnly</dd>
-    <dt>Match<wbr>Request</dt>
-    <dd>MatchRequest</dd>
-</dl>
+<dl class="tabular"><dt>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd><dt>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd><dt>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Forwarding<wbr>Protocol<wbr>Http<wbr>Only</dt>
-    <dd>HttpOnly</dd>
-    <dt>Forwarding<wbr>Protocol<wbr>Https<wbr>Only</dt>
-    <dd>HttpsOnly</dd>
-    <dt>Forwarding<wbr>Protocol<wbr>Match<wbr>Request</dt>
-    <dd>MatchRequest</dd>
-</dl>
+<dl class="tabular"><dt>Forwarding<wbr>Protocol<wbr>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd><dt>Forwarding<wbr>Protocol<wbr>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd><dt>Forwarding<wbr>Protocol<wbr>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Http<wbr>Only</dt>
-    <dd>HttpOnly</dd>
-    <dt>Https<wbr>Only</dt>
-    <dd>HttpsOnly</dd>
-    <dt>Match<wbr>Request</dt>
-    <dd>MatchRequest</dd>
-</dl>
+<dl class="tabular"><dt>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd><dt>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd><dt>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HTTP_ONLY</dt>
-    <dd>HttpOnly</dd>
-    <dt>HTTPS_ONLY</dt>
-    <dd>HttpsOnly</dd>
-    <dt>MATCH_REQUEST</dt>
-    <dd>MatchRequest</dd>
-</dl>
+<dl class="tabular"><dt>HTTP_ONLY</dt>
+    <dd>HttpOnly</dd><dt>HTTPS_ONLY</dt>
+    <dd>HttpsOnly</dd><dt>MATCH_REQUEST</dt>
+    <dd>MatchRequest</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpsredirect">Https<wbr>Redirect</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Https<wbr>Redirect<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Https<wbr>Redirect<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Https<wbr>Redirect<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Https<wbr>Redirect<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linktodefaultdomain">Link<wbr>To<wbr>Default<wbr>Domain</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Link<wbr>To<wbr>Default<wbr>Domain<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Link<wbr>To<wbr>Default<wbr>Domain<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Link<wbr>To<wbr>Default<wbr>Domain<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Link<wbr>To<wbr>Default<wbr>Domain<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcereference">Resource<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1662,14 +1437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1677,14 +1449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1692,14 +1461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1707,16 +1473,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1724,14 +1487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1739,14 +1499,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1754,14 +1511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1769,16 +1523,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1786,8 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1795,8 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1804,8 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1813,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1822,8 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1831,14 +1577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1846,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1855,8 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1864,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1873,8 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1882,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1891,14 +1629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1906,8 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1915,8 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1924,8 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1933,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1942,8 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1951,14 +1681,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1966,8 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1975,8 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1984,8 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1993,8 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2002,8 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2011,8 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

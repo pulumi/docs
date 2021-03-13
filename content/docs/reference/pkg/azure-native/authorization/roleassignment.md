@@ -14,11 +14,17 @@ Role Assignments
 API Version: 2020-04-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create role assignment
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -45,9 +51,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -79,9 +88,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -100,9 +112,12 @@ role_assignment = azure_native.authorization.RoleAssignment("roleAssignment",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -122,9 +137,16 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RoleAssignment Resource {#create}
@@ -149,9 +171,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -159,9 +179,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -169,9 +187,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -179,10 +195,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -208,9 +221,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -218,9 +229,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -228,9 +237,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -238,9 +245,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -248,18 +253,13 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,9 +267,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -277,9 +275,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -287,10 +283,7 @@ const roleAssignment = new azure_native.authorization.RoleAssignment("roleAssign
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -305,9 +298,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -315,8 +306,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -324,8 +314,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -333,8 +322,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="candelegate_csharp">
 <a href="#candelegate_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Delegate</a>
@@ -342,8 +330,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -351,8 +338,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionversion_csharp">
 <a href="#conditionversion_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -360,8 +346,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -369,8 +354,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -378,8 +362,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#principaltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Principal<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleassignmentname_csharp">
 <a href="#roleassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignment<wbr>Name</a>
@@ -387,14 +370,11 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -402,8 +382,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -411,8 +390,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -420,8 +398,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="candelegate_go">
 <a href="#candelegate_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Delegate</a>
@@ -429,8 +406,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -438,8 +414,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionversion_go">
 <a href="#conditionversion_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -447,8 +422,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -456,8 +430,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -465,8 +438,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#principaltype">Principal<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleassignmentname_go">
 <a href="#roleassignmentname_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignment<wbr>Name</a>
@@ -474,14 +446,11 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -489,8 +458,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -498,8 +466,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -507,8 +474,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="candelegate_nodejs">
 <a href="#candelegate_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Delegate</a>
@@ -516,8 +482,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -525,8 +490,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionversion_nodejs">
 <a href="#conditionversion_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Version</a>
@@ -534,8 +498,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -543,8 +506,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
@@ -552,8 +514,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#principaltype">Principal<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleassignmentname_nodejs">
 <a href="#roleassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Assignment<wbr>Name</a>
@@ -561,14 +522,11 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -576,8 +534,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID assigned to the role. This maps to the ID inside the Active Directory. It can point to a user, service principal, or security group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -585,8 +542,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role definition ID used in the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -594,8 +550,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the role assignment to create. The scope can be any REST resource instance. For example, use '/subscriptions/{subscription-id}/' for a subscription, '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_delegate_python">
 <a href="#can_delegate_python" style="color: inherit; text-decoration: inherit;">can_<wbr>delegate</a>
@@ -603,8 +558,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The delegation flag used for creating a role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -612,8 +566,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_version_python">
 <a href="#condition_version_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>version</a>
@@ -621,8 +574,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -630,8 +582,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
@@ -639,8 +590,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#principaltype">Principal<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_assignment_name_python">
 <a href="#role_assignment_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>assignment_<wbr>name</a>
@@ -648,8 +598,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the role assignment to create. It can be any valid GUID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -660,9 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -670,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -679,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -688,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -697,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -706,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegatedmanagedidentityresourceid_csharp">
 <a href="#delegatedmanagedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -715,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -724,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_csharp">
 <a href="#updatedon_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -733,14 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -748,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -757,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -766,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -775,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -784,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegatedmanagedidentityresourceid_go">
 <a href="#delegatedmanagedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -793,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -802,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_go">
 <a href="#updatedon_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -811,14 +741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -835,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -844,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -853,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -862,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegatedmanagedidentityresourceid_nodejs">
 <a href="#delegatedmanagedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -871,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -880,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_nodejs">
 <a href="#updatedon_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>On</a>
@@ -889,14 +809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -904,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -913,8 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -922,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -931,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -940,8 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegated_managed_identity_resource_id_python">
 <a href="#delegated_managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>managed_<wbr>identity_<wbr>resource_<wbr>id</a>
@@ -949,8 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -958,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_on_python">
 <a href="#updated_on_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>on</a>
@@ -967,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -984,103 +893,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="principaltype">Principal<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>User</dt>
-    <dd>User</dd>
-    <dt>Group</dt>
-    <dd>Group</dd>
-    <dt>Service<wbr>Principal</dt>
-    <dd>ServicePrincipal</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Directory<wbr>Role<wbr>Template</dt>
-    <dd>DirectoryRoleTemplate</dd>
-    <dt>Foreign<wbr>Group</dt>
-    <dd>ForeignGroup</dd>
-    <dt>Application</dt>
-    <dd>Application</dd>
-    <dt>MSI</dt>
-    <dd>MSI</dd>
-    <dt>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
-    <dd>DirectoryObjectOrGroup</dd>
-    <dt>Everyone</dt>
-    <dd>Everyone</dd>
-</dl>
+<dl class="tabular"><dt>User</dt>
+    <dd>User</dd><dt>Group</dt>
+    <dd>Group</dd><dt>Service<wbr>Principal</dt>
+    <dd>ServicePrincipal</dd><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Directory<wbr>Role<wbr>Template</dt>
+    <dd>DirectoryRoleTemplate</dd><dt>Foreign<wbr>Group</dt>
+    <dd>ForeignGroup</dd><dt>Application</dt>
+    <dd>Application</dd><dt>MSI</dt>
+    <dd>MSI</dd><dt>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
+    <dd>DirectoryObjectOrGroup</dd><dt>Everyone</dt>
+    <dd>Everyone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Principal<wbr>Type<wbr>User</dt>
-    <dd>User</dd>
-    <dt>Principal<wbr>Type<wbr>Group</dt>
-    <dd>Group</dd>
-    <dt>Principal<wbr>Type<wbr>Service<wbr>Principal</dt>
-    <dd>ServicePrincipal</dd>
-    <dt>Principal<wbr>Type<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Principal<wbr>Type<wbr>Directory<wbr>Role<wbr>Template</dt>
-    <dd>DirectoryRoleTemplate</dd>
-    <dt>Principal<wbr>Type<wbr>Foreign<wbr>Group</dt>
-    <dd>ForeignGroup</dd>
-    <dt>Principal<wbr>Type<wbr>Application</dt>
-    <dd>Application</dd>
-    <dt>Principal<wbr>Type<wbr>MSI</dt>
-    <dd>MSI</dd>
-    <dt>Principal<wbr>Type<wbr>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
-    <dd>DirectoryObjectOrGroup</dd>
-    <dt>Principal<wbr>Type<wbr>Everyone</dt>
-    <dd>Everyone</dd>
-</dl>
+<dl class="tabular"><dt>Principal<wbr>Type<wbr>User</dt>
+    <dd>User</dd><dt>Principal<wbr>Type<wbr>Group</dt>
+    <dd>Group</dd><dt>Principal<wbr>Type<wbr>Service<wbr>Principal</dt>
+    <dd>ServicePrincipal</dd><dt>Principal<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Principal<wbr>Type<wbr>Directory<wbr>Role<wbr>Template</dt>
+    <dd>DirectoryRoleTemplate</dd><dt>Principal<wbr>Type<wbr>Foreign<wbr>Group</dt>
+    <dd>ForeignGroup</dd><dt>Principal<wbr>Type<wbr>Application</dt>
+    <dd>Application</dd><dt>Principal<wbr>Type<wbr>MSI</dt>
+    <dd>MSI</dd><dt>Principal<wbr>Type<wbr>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
+    <dd>DirectoryObjectOrGroup</dd><dt>Principal<wbr>Type<wbr>Everyone</dt>
+    <dd>Everyone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>User</dt>
-    <dd>User</dd>
-    <dt>Group</dt>
-    <dd>Group</dd>
-    <dt>Service<wbr>Principal</dt>
-    <dd>ServicePrincipal</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Directory<wbr>Role<wbr>Template</dt>
-    <dd>DirectoryRoleTemplate</dd>
-    <dt>Foreign<wbr>Group</dt>
-    <dd>ForeignGroup</dd>
-    <dt>Application</dt>
-    <dd>Application</dd>
-    <dt>MSI</dt>
-    <dd>MSI</dd>
-    <dt>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
-    <dd>DirectoryObjectOrGroup</dd>
-    <dt>Everyone</dt>
-    <dd>Everyone</dd>
-</dl>
+<dl class="tabular"><dt>User</dt>
+    <dd>User</dd><dt>Group</dt>
+    <dd>Group</dd><dt>Service<wbr>Principal</dt>
+    <dd>ServicePrincipal</dd><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Directory<wbr>Role<wbr>Template</dt>
+    <dd>DirectoryRoleTemplate</dd><dt>Foreign<wbr>Group</dt>
+    <dd>ForeignGroup</dd><dt>Application</dt>
+    <dd>Application</dd><dt>MSI</dt>
+    <dd>MSI</dd><dt>Directory<wbr>Object<wbr>Or<wbr>Group</dt>
+    <dd>DirectoryObjectOrGroup</dd><dt>Everyone</dt>
+    <dd>Everyone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>USER</dt>
-    <dd>User</dd>
-    <dt>GROUP</dt>
-    <dd>Group</dd>
-    <dt>SERVICE_PRINCIPAL</dt>
-    <dd>ServicePrincipal</dd>
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>DIRECTORY_ROLE_TEMPLATE</dt>
-    <dd>DirectoryRoleTemplate</dd>
-    <dt>FOREIGN_GROUP</dt>
-    <dd>ForeignGroup</dd>
-    <dt>APPLICATION</dt>
-    <dd>Application</dd>
-    <dt>MSI</dt>
-    <dd>MSI</dd>
-    <dt>DIRECTORY_OBJECT_OR_GROUP</dt>
-    <dd>DirectoryObjectOrGroup</dd>
-    <dt>EVERYONE</dt>
-    <dd>Everyone</dd>
-</dl>
+<dl class="tabular"><dt>USER</dt>
+    <dd>User</dd><dt>GROUP</dt>
+    <dd>Group</dd><dt>SERVICE_PRINCIPAL</dt>
+    <dd>ServicePrincipal</dd><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>DIRECTORY_ROLE_TEMPLATE</dt>
+    <dd>DirectoryRoleTemplate</dd><dt>FOREIGN_GROUP</dt>
+    <dd>ForeignGroup</dd><dt>APPLICATION</dt>
+    <dd>Application</dd><dt>MSI</dt>
+    <dd>MSI</dd><dt>DIRECTORY_OBJECT_OR_GROUP</dt>
+    <dd>DirectoryObjectOrGroup</dd><dt>EVERYONE</dt>
+    <dd>Everyone</dd></dl>
 {{% /choosable %}}
 ## Import
 

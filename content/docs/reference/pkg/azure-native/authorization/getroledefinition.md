@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assignablescopes_csharp">
 <a href="#assignablescopes_csharp" style="color: inherit; text-decoration: inherit;">Assignable<wbr>Scopes</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Permission<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roletype_csharp">
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -229,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assignablescopes_go">
 <a href="#assignablescopes_go" style="color: inherit; text-decoration: inherit;">Assignable<wbr>Scopes</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">[]Permission<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roletype_go">
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assignablescopes_nodejs">
 <a href="#assignablescopes_nodejs" style="color: inherit; text-decoration: inherit;">assignable<wbr>Scopes</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">Permission<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roletype_nodejs">
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -385,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="assignable_scopes_python">
 <a href="#assignable_scopes_python" style="color: inherit; text-decoration: inherit;">assignable_<wbr>scopes</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">Sequence[Permission<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_type_python">
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The role type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_csharp">
 <a href="#dataactions_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_csharp">
 <a href="#notactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_csharp">
 <a href="#notdataactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -515,14 +454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_go">
 <a href="#dataactions_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -539,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_go">
 <a href="#notactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -548,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_go">
 <a href="#notdataactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -557,14 +490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -572,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_nodejs">
 <a href="#dataactions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
@@ -581,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_nodejs">
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_nodejs">
 <a href="#notdataactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
@@ -599,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -614,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_actions_python">
 <a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_actions_python">
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_data_actions_python">
 <a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

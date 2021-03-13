@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kpiname_csharp">
 <a href="#kpiname_csharp" style="color: inherit; text-decoration: inherit;">Kpi<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kpiname_go">
 <a href="#kpiname_go" style="color: inherit; text-decoration: inherit;">Kpi<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kpiname_nodejs">
 <a href="#kpiname_nodejs" style="color: inherit; text-decoration: inherit;">kpi<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kpi_name_python">
 <a href="#kpi_name_python" style="color: inherit; text-decoration: inherit;">kpi_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="calculationwindow_csharp">
 <a href="#calculationwindow_csharp" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The calculation window.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitytype_csharp">
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitytypename_csharp">
 <a href="#entitytypename_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type<wbr>Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupbymetadata_csharp">
 <a href="#groupbymetadata_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Metadata</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpigroupbymetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpiname_csharp">
 <a href="#kpiname_csharp" style="color: inherit; text-decoration: inherit;">Kpi<wbr>Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The KPI name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="participantprofilesmetadata_csharp">
 <a href="#participantprofilesmetadata_csharp" style="color: inherit; text-decoration: inherit;">Participant<wbr>Profiles<wbr>Metadata</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpialiasresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Alias<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The aliases.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="calculationwindowfieldname_csharp">
 <a href="#calculationwindowfieldname_csharp" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window<wbr>Field<wbr>Name</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extracts_csharp">
 <a href="#extracts_csharp" style="color: inherit; text-decoration: inherit;">Extracts</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiextractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Extract<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupby_csharp">
 <a href="#groupby_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thresholds_csharp">
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thres<wbr>Holds</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpithresholdsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Kpi<wbr>Thresholds<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="calculationwindow_go">
 <a href="#calculationwindow_go" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The calculation window.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitytype_go">
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitytypename_go">
 <a href="#entitytypename_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type<wbr>Name</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupbymetadata_go">
 <a href="#groupbymetadata_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Metadata</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpigroupbymetadataresponse">[]Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpiname_go">
 <a href="#kpiname_go" style="color: inherit; text-decoration: inherit;">Kpi<wbr>Name</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The KPI name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="participantprofilesmetadata_go">
 <a href="#participantprofilesmetadata_go" style="color: inherit; text-decoration: inherit;">Participant<wbr>Profiles<wbr>Metadata</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">[]Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpialiasresponse">[]Kpi<wbr>Alias<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The aliases.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="calculationwindowfieldname_go">
 <a href="#calculationwindowfieldname_go" style="color: inherit; text-decoration: inherit;">Calculation<wbr>Window<wbr>Field<wbr>Name</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extracts_go">
 <a href="#extracts_go" style="color: inherit; text-decoration: inherit;">Extracts</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiextractresponse">[]Kpi<wbr>Extract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupby_go">
 <a href="#groupby_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thresholds_go">
 <a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thres<wbr>Holds</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpithresholdsresponse">Kpi<wbr>Thresholds<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -595,14 +528,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="calculationwindow_nodejs">
 <a href="#calculationwindow_nodejs" style="color: inherit; text-decoration: inherit;">calculation<wbr>Window</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The calculation window.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitytype_nodejs">
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitytypename_nodejs">
 <a href="#entitytypename_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type<wbr>Name</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupbymetadata_nodejs">
 <a href="#groupbymetadata_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Metadata</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpigroupbymetadataresponse">Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpiname_nodejs">
 <a href="#kpiname_nodejs" style="color: inherit; text-decoration: inherit;">kpi<wbr>Name</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The KPI name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="participantprofilesmetadata_nodejs">
 <a href="#participantprofilesmetadata_nodejs" style="color: inherit; text-decoration: inherit;">participant<wbr>Profiles<wbr>Metadata</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpialiasresponse">Kpi<wbr>Alias<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The aliases.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="calculationwindowfieldname_nodejs">
 <a href="#calculationwindowfieldname_nodejs" style="color: inherit; text-decoration: inherit;">calculation<wbr>Window<wbr>Field<wbr>Name</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extracts_nodejs">
 <a href="#extracts_nodejs" style="color: inherit; text-decoration: inherit;">extracts</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiextractresponse">Kpi<wbr>Extract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupby_nodejs">
 <a href="#groupby_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thresholds_nodejs">
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thres<wbr>Holds</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpithresholdsresponse">Kpi<wbr>Thresholds<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -799,14 +708,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="calculation_window_python">
 <a href="#calculation_window_python" style="color: inherit; text-decoration: inherit;">calculation_<wbr>window</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The calculation window.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The calculation window.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_type_python">
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_type_name_python">
 <a href="#entity_type_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type_<wbr>name</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="group_by_metadata_python">
 <a href="#group_by_metadata_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>metadata</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpigroupbymetadataresponse">Sequence[Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI GroupByMetadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpi_name_python">
 <a href="#kpi_name_python" style="color: inherit; text-decoration: inherit;">kpi_<wbr>name</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The KPI name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="participant_profiles_metadata_python">
 <a href="#participant_profiles_metadata_python" style="color: inherit; text-decoration: inherit;">participant_<wbr>profiles_<wbr>metadata</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiparticipantprofilesmetadataresponse">Sequence[Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The participant profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpialiasresponse">Sequence[Kpi<wbr>Alias<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The aliases.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="calculation_window_field_name_python">
 <a href="#calculation_window_field_name_python" style="color: inherit; text-decoration: inherit;">calculation_<wbr>window_<wbr>field_<wbr>name</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extracts_python">
 <a href="#extracts_python" style="color: inherit; text-decoration: inherit;">extracts</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpiextractresponse">Sequence[Kpi<wbr>Extract<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="group_by_python">
 <a href="#group_by_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thres_holds_python">
 <a href="#thres_holds_python" style="color: inherit; text-decoration: inherit;">thres_<wbr>holds</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpithresholdsresponse">Kpi<wbr>Thresholds<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1018,9 +902,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aliasname_csharp">
 <a href="#aliasname_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
@@ -1028,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1037,14 +918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aliasname_go">
 <a href="#aliasname_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Name</a>
@@ -1052,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1061,14 +938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aliasname_nodejs">
 <a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
@@ -1076,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1085,14 +958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_name_python">
 <a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
@@ -1100,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1109,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kpiextractresponse">Kpi<wbr>Extract<wbr>Response</h4>
@@ -1118,9 +986,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1128,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extractname_csharp">
 <a href="#extractname_csharp" style="color: inherit; text-decoration: inherit;">Extract<wbr>Name</a>
@@ -1137,14 +1002,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1152,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extractname_go">
 <a href="#extractname_go" style="color: inherit; text-decoration: inherit;">Extract<wbr>Name</a>
@@ -1161,14 +1022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1176,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extractname_nodejs">
 <a href="#extractname_nodejs" style="color: inherit; text-decoration: inherit;">extract<wbr>Name</a>
@@ -1185,14 +1042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1200,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extract_name_python">
 <a href="#extract_name_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>name</a>
@@ -1209,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kpigroupbymetadataresponse">Kpi<wbr>Group<wbr>By<wbr>Metadata<wbr>Response</h4>
@@ -1218,9 +1070,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1228,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -1237,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldtype_csharp">
 <a href="#fieldtype_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
@@ -1246,14 +1094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the field.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1261,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -1270,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldtype_go">
 <a href="#fieldtype_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
@@ -1279,14 +1122,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the field.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1294,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
@@ -1303,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldtype_nodejs">
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
@@ -1312,14 +1150,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the field.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1327,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_name_python">
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
@@ -1336,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_type_python">
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
@@ -1345,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the field.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kpiparticipantprofilesmetadataresponse">Kpi<wbr>Participant<wbr>Profiles<wbr>Metadata<wbr>Response</h4>
@@ -1354,9 +1186,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="typename_csharp">
 <a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1364,14 +1194,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="typename_go">
 <a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1379,14 +1206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="typename_nodejs">
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
@@ -1394,14 +1218,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_name_python">
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
@@ -1409,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kpithresholdsresponse">Kpi<wbr>Thresholds<wbr>Response</h4>
@@ -1418,9 +1238,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="increasingkpi_csharp">
 <a href="#increasingkpi_csharp" style="color: inherit; text-decoration: inherit;">Increasing<wbr>Kpi</a>
@@ -1428,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lowerlimit_csharp">
 <a href="#lowerlimit_csharp" style="color: inherit; text-decoration: inherit;">Lower<wbr>Limit</a>
@@ -1437,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upperlimit_csharp">
 <a href="#upperlimit_csharp" style="color: inherit; text-decoration: inherit;">Upper<wbr>Limit</a>
@@ -1446,14 +1262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="increasingkpi_go">
 <a href="#increasingkpi_go" style="color: inherit; text-decoration: inherit;">Increasing<wbr>Kpi</a>
@@ -1461,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lowerlimit_go">
 <a href="#lowerlimit_go" style="color: inherit; text-decoration: inherit;">Lower<wbr>Limit</a>
@@ -1470,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upperlimit_go">
 <a href="#upperlimit_go" style="color: inherit; text-decoration: inherit;">Upper<wbr>Limit</a>
@@ -1479,14 +1290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="increasingkpi_nodejs">
 <a href="#increasingkpi_nodejs" style="color: inherit; text-decoration: inherit;">increasing<wbr>Kpi</a>
@@ -1494,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lowerlimit_nodejs">
 <a href="#lowerlimit_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Limit</a>
@@ -1503,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upperlimit_nodejs">
 <a href="#upperlimit_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Limit</a>
@@ -1512,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="increasing_kpi_python">
 <a href="#increasing_kpi_python" style="color: inherit; text-decoration: inherit;">increasing_<wbr>kpi</a>
@@ -1527,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lower_limit_python">
 <a href="#lower_limit_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>limit</a>
@@ -1536,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upper_limit_python">
 <a href="#upper_limit_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>limit</a>
@@ -1545,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -14,11 +14,17 @@ An Application Insights component billing features
 API Version: 2015-05-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ComponentCurrentBillingFeaturesUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -48,9 +54,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -83,9 +92,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -105,9 +117,12 @@ component_current_billing_feature = azure_native.insights.ComponentCurrentBillin
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ComponentCurrentBillingFeature Resource {#create}
@@ -155,9 +177,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +304,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -321,8 +312,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -330,8 +320,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentbillingfeatures_csharp">
 <a href="#currentbillingfeatures_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Billing<wbr>Features</a>
@@ -339,8 +328,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datavolumecap_csharp">
 <a href="#datavolumecap_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
@@ -348,14 +336,11 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -363,8 +348,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -372,8 +356,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentbillingfeatures_go">
 <a href="#currentbillingfeatures_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Billing<wbr>Features</a>
@@ -381,8 +364,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datavolumecap_go">
 <a href="#datavolumecap_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
@@ -390,14 +372,11 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</a></span>
     </dt>
-    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -405,8 +384,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -414,8 +392,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="currentbillingfeatures_nodejs">
 <a href="#currentbillingfeatures_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Billing<wbr>Features</a>
@@ -423,8 +400,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datavolumecap_nodejs">
 <a href="#datavolumecap_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Volume<wbr>Cap</a>
@@ -432,14 +408,11 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</a></span>
     </dt>
-    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -447,8 +420,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -456,8 +428,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="current_billing_features_python">
 <a href="#current_billing_features_python" style="color: inherit; text-decoration: inherit;">current_<wbr>billing_<wbr>features</a>
@@ -465,8 +436,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_volume_cap_python">
 <a href="#data_volume_cap_python" style="color: inherit; text-decoration: inherit;">data_<wbr>volume_<wbr>cap</a>
@@ -474,8 +444,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -486,9 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -496,14 +463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -511,14 +475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -526,14 +487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -541,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -558,9 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cap_csharp">
 <a href="#cap_csharp" style="color: inherit; text-decoration: inherit;">Cap</a>
@@ -568,8 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_csharp">
 <a href="#stopsendnotificationwhenhitcap_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
@@ -577,8 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_csharp">
 <a href="#stopsendnotificationwhenhitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
@@ -586,8 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_csharp">
 <a href="#warningthreshold_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
@@ -595,14 +547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cap_go">
 <a href="#cap_go" style="color: inherit; text-decoration: inherit;">Cap</a>
@@ -610,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_go">
 <a href="#stopsendnotificationwhenhitcap_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
@@ -619,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_go">
 <a href="#stopsendnotificationwhenhitthreshold_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
@@ -628,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_go">
 <a href="#warningthreshold_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
@@ -637,14 +583,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cap_nodejs">
 <a href="#cap_nodejs" style="color: inherit; text-decoration: inherit;">cap</a>
@@ -652,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_nodejs">
 <a href="#stopsendnotificationwhenhitcap_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
@@ -661,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_nodejs">
 <a href="#stopsendnotificationwhenhitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
@@ -670,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_nodejs">
 <a href="#warningthreshold_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Threshold</a>
@@ -679,14 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cap_python">
 <a href="#cap_python" style="color: inherit; text-decoration: inherit;">cap</a>
@@ -694,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_cap_python">
 <a href="#stop_send_notification_when_hit_cap_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>cap</a>
@@ -703,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_threshold_python">
 <a href="#stop_send_notification_when_hit_threshold_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>threshold</a>
@@ -712,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_threshold_python">
 <a href="#warning_threshold_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>threshold</a>
@@ -721,16 +655,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationinsightscomponentdatavolumecapresponse">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxhistorycap_csharp">
 <a href="#maxhistorycap_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>History<wbr>Cap</a>
@@ -738,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resettime_csharp">
 <a href="#resettime_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Time</a>
@@ -747,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cap_csharp">
 <a href="#cap_csharp" style="color: inherit; text-decoration: inherit;">Cap</a>
@@ -756,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_csharp">
 <a href="#stopsendnotificationwhenhitcap_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
@@ -765,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_csharp">
 <a href="#stopsendnotificationwhenhitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
@@ -774,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_csharp">
 <a href="#warningthreshold_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
@@ -783,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxhistorycap_go">
 <a href="#maxhistorycap_go" style="color: inherit; text-decoration: inherit;">Max<wbr>History<wbr>Cap</a>
@@ -798,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resettime_go">
 <a href="#resettime_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Time</a>
@@ -807,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cap_go">
 <a href="#cap_go" style="color: inherit; text-decoration: inherit;">Cap</a>
@@ -816,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_go">
 <a href="#stopsendnotificationwhenhitcap_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
@@ -825,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_go">
 <a href="#stopsendnotificationwhenhitthreshold_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
@@ -834,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_go">
 <a href="#warningthreshold_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
@@ -843,14 +761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxhistorycap_nodejs">
 <a href="#maxhistorycap_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>History<wbr>Cap</a>
@@ -858,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resettime_nodejs">
 <a href="#resettime_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Time</a>
@@ -867,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cap_nodejs">
 <a href="#cap_nodejs" style="color: inherit; text-decoration: inherit;">cap</a>
@@ -876,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_nodejs">
 <a href="#stopsendnotificationwhenhitcap_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
@@ -885,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_nodejs">
 <a href="#stopsendnotificationwhenhitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
@@ -894,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_nodejs">
 <a href="#warningthreshold_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Threshold</a>
@@ -903,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_history_cap_python">
 <a href="#max_history_cap_python" style="color: inherit; text-decoration: inherit;">max_<wbr>history_<wbr>cap</a>
@@ -918,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reset_time_python">
 <a href="#reset_time_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>time</a>
@@ -927,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cap_python">
 <a href="#cap_python" style="color: inherit; text-decoration: inherit;">cap</a>
@@ -936,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_cap_python">
 <a href="#stop_send_notification_when_hit_cap_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>cap</a>
@@ -945,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_threshold_python">
 <a href="#stop_send_notification_when_hit_threshold_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>threshold</a>
@@ -954,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_threshold_python">
 <a href="#warning_threshold_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>threshold</a>
@@ -963,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

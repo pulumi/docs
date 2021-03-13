@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computename_csharp">
 <a href="#computename_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computename_go">
 <a href="#computename_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computename_nodejs">
 <a href="#computename_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_name_python">
 <a href="#compute_name_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputenodeinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputenodeinformationresponse">[]Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -259,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputenodeinformationresponse">Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -274,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputenodeinformationresponse">Sequence[Aml<wbr>Compute<wbr>Node<wbr>Information<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of returned AmlCompute nodes details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -298,9 +262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestate_csharp">
 <a href="#nodestate_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>State</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -326,8 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -335,8 +294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -344,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runid_csharp">
 <a href="#runid_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Id</a>
@@ -353,14 +310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -368,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestate_go">
 <a href="#nodestate_go" style="color: inherit; text-decoration: inherit;">Node<wbr>State</a>
@@ -377,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -386,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -395,8 +346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -404,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runid_go">
 <a href="#runid_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Id</a>
@@ -413,14 +362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -428,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestate_nodejs">
 <a href="#nodestate_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>State</a>
@@ -437,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -446,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -455,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -464,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runid_nodejs">
 <a href="#runid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Id</a>
@@ -473,14 +414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -488,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_state_python">
 <a href="#node_state_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state</a>
@@ -497,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the compute node. Values are idle, running, preparing, unusable, leaving and preempted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -506,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SSH port number of the node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -515,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -524,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address of the compute node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_id_python">
 <a href="#run_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>id</a>
@@ -533,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Experiment running on the node, if any else null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

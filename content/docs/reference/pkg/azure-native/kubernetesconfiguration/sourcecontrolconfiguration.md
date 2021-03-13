@@ -14,11 +14,17 @@ The SourceControl Configuration object returned in Get & Put response.
 API Version: 2021-03-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create Source Control Configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -58,9 +64,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -103,9 +112,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -135,9 +147,12 @@ source_control_configuration = azure_native.kubernetesconfiguration.SourceContro
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -168,9 +183,16 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SourceControlConfiguration Resource {#create}
@@ -195,9 +217,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +225,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +233,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,10 +241,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -254,9 +267,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -264,9 +275,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +283,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +291,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,18 +299,13 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -313,9 +313,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -323,9 +321,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -333,10 +329,7 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -351,9 +344,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -361,8 +352,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourcename_csharp">
 <a href="#clusterresourcename_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Name</a>
@@ -370,8 +360,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterrp_csharp">
 <a href="#clusterrp_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Rp</a>
@@ -379,8 +368,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -388,8 +376,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprotectedsettings_csharp">
 <a href="#configurationprotectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Settings</a>
@@ -397,8 +384,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehelmoperator_csharp">
 <a href="#enablehelmoperator_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Helm<wbr>Operator</a>
@@ -406,8 +392,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="helmoperatorproperties_csharp">
 <a href="#helmoperatorproperties_csharp" style="color: inherit; text-decoration: inherit;">Helm<wbr>Operator<wbr>Properties</a>
@@ -415,8 +400,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#helmoperatorproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Helm<wbr>Operator<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorinstancename_csharp">
 <a href="#operatorinstancename_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Instance<wbr>Name</a>
@@ -424,8 +408,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatornamespace_csharp">
 <a href="#operatornamespace_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Namespace</a>
@@ -433,8 +416,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorparams_csharp">
 <a href="#operatorparams_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Params</a>
@@ -442,8 +424,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorscope_csharp">
 <a href="#operatorscope_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Scope</a>
@@ -451,8 +432,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatorscopetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatortype_csharp">
 <a href="#operatortype_csharp" style="color: inherit; text-decoration: inherit;">Operator<wbr>Type</a>
@@ -460,8 +440,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Operator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryurl_csharp">
 <a href="#repositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -469,8 +448,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolconfigurationname_csharp">
 <a href="#sourcecontrolconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Configuration<wbr>Name</a>
@@ -478,8 +456,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshknownhostscontents_csharp">
 <a href="#sshknownhostscontents_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
@@ -487,14 +464,11 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -502,8 +476,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourcename_go">
 <a href="#clusterresourcename_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Name</a>
@@ -511,8 +484,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterrp_go">
 <a href="#clusterrp_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Rp</a>
@@ -520,8 +492,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -529,8 +500,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprotectedsettings_go">
 <a href="#configurationprotectedsettings_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Protected<wbr>Settings</a>
@@ -538,8 +508,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehelmoperator_go">
 <a href="#enablehelmoperator_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Helm<wbr>Operator</a>
@@ -547,8 +516,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="helmoperatorproperties_go">
 <a href="#helmoperatorproperties_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Operator<wbr>Properties</a>
@@ -556,8 +524,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorinstancename_go">
 <a href="#operatorinstancename_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Instance<wbr>Name</a>
@@ -565,8 +532,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatornamespace_go">
 <a href="#operatornamespace_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Namespace</a>
@@ -574,8 +540,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorparams_go">
 <a href="#operatorparams_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Params</a>
@@ -583,8 +548,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorscope_go">
 <a href="#operatorscope_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Scope</a>
@@ -592,8 +556,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatorscopetype">Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatortype_go">
 <a href="#operatortype_go" style="color: inherit; text-decoration: inherit;">Operator<wbr>Type</a>
@@ -601,8 +564,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryurl_go">
 <a href="#repositoryurl_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -610,8 +572,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolconfigurationname_go">
 <a href="#sourcecontrolconfigurationname_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Configuration<wbr>Name</a>
@@ -619,8 +580,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshknownhostscontents_go">
 <a href="#sshknownhostscontents_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
@@ -628,14 +588,11 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -643,8 +600,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourcename_nodejs">
 <a href="#clusterresourcename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Name</a>
@@ -652,8 +608,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterrp_nodejs">
 <a href="#clusterrp_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Rp</a>
@@ -661,8 +616,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -670,8 +624,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationprotectedsettings_nodejs">
 <a href="#configurationprotectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Protected<wbr>Settings</a>
@@ -679,8 +632,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehelmoperator_nodejs">
 <a href="#enablehelmoperator_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Helm<wbr>Operator</a>
@@ -688,8 +640,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="helmoperatorproperties_nodejs">
 <a href="#helmoperatorproperties_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Operator<wbr>Properties</a>
@@ -697,8 +648,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorinstancename_nodejs">
 <a href="#operatorinstancename_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Instance<wbr>Name</a>
@@ -706,8 +656,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatornamespace_nodejs">
 <a href="#operatornamespace_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Namespace</a>
@@ -715,8 +664,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorparams_nodejs">
 <a href="#operatorparams_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Params</a>
@@ -724,8 +672,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatorscope_nodejs">
 <a href="#operatorscope_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Scope</a>
@@ -733,8 +680,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatorscopetype">Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatortype_nodejs">
 <a href="#operatortype_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Type</a>
@@ -742,8 +688,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryurl_nodejs">
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
@@ -751,8 +696,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolconfigurationname_nodejs">
 <a href="#sourcecontrolconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Configuration<wbr>Name</a>
@@ -760,8 +704,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshknownhostscontents_nodejs">
 <a href="#sshknownhostscontents_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
@@ -769,14 +712,11 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -784,8 +724,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_resource_name_python">
 <a href="#cluster_resource_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>name</a>
@@ -793,8 +732,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_rp_python">
 <a href="#cluster_rp_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>rp</a>
@@ -802,8 +740,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -811,8 +748,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_protected_settings_python">
 <a href="#configuration_protected_settings_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>protected_<wbr>settings</a>
@@ -820,8 +756,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_helm_operator_python">
 <a href="#enable_helm_operator_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>helm_<wbr>operator</a>
@@ -829,8 +764,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="helm_operator_properties_python">
 <a href="#helm_operator_properties_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>operator_<wbr>properties</a>
@@ -838,8 +772,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_instance_name_python">
 <a href="#operator_instance_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>instance_<wbr>name</a>
@@ -847,8 +780,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_namespace_python">
 <a href="#operator_namespace_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>namespace</a>
@@ -856,8 +788,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_params_python">
 <a href="#operator_params_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>params</a>
@@ -865,8 +796,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_scope_python">
 <a href="#operator_scope_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>scope</a>
@@ -874,8 +804,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#operatorscopetype">Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_type_python">
 <a href="#operator_type_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>type</a>
@@ -883,8 +812,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the operator{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_url_python">
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
@@ -892,8 +820,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_control_configuration_name_python">
 <a href="#source_control_configuration_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>configuration_<wbr>name</a>
@@ -901,8 +828,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_known_hosts_contents_python">
 <a href="#ssh_known_hosts_contents_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts_<wbr>contents</a>
@@ -910,8 +836,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -922,9 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="compliancestatus_csharp">
 <a href="#compliancestatus_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -932,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compliancestatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -941,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -950,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -959,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repositorypublickey_csharp">
 <a href="#repositorypublickey_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Public<wbr>Key</a>
@@ -968,8 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -977,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -986,14 +903,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="compliancestatus_go">
 <a href="#compliancestatus_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Status</a>
@@ -1001,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compliancestatusresponse">Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1010,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1019,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1028,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repositorypublickey_go">
 <a href="#repositorypublickey_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Public<wbr>Key</a>
@@ -1037,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1046,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1055,14 +963,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="compliancestatus_nodejs">
 <a href="#compliancestatus_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Status</a>
@@ -1070,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compliancestatusresponse">Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1088,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1097,8 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repositorypublickey_nodejs">
 <a href="#repositorypublickey_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Public<wbr>Key</a>
@@ -1106,8 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1115,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1124,14 +1023,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="compliance_status_python">
 <a href="#compliance_status_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>status</a>
@@ -1139,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compliancestatusresponse">Compliance<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compliance Status of the Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1148,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1157,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1166,8 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repository_public_key_python">
 <a href="#repository_public_key_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>public_<wbr>key</a>
@@ -1175,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1184,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1193,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1210,9 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="compliancestatusresponse">Compliance<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestate_csharp">
 <a href="#compliancestate_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>State</a>
@@ -1220,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastconfigapplied_csharp">
 <a href="#lastconfigapplied_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Applied</a>
@@ -1229,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1238,8 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagelevel_csharp">
 <a href="#messagelevel_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Level</a>
@@ -1247,14 +1131,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of the message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestate_go">
 <a href="#compliancestate_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>State</a>
@@ -1262,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastconfigapplied_go">
 <a href="#lastconfigapplied_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Config<wbr>Applied</a>
@@ -1271,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1280,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagelevel_go">
 <a href="#messagelevel_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Level</a>
@@ -1289,14 +1167,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of the message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliancestate_nodejs">
 <a href="#compliancestate_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>State</a>
@@ -1304,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastconfigapplied_nodejs">
 <a href="#lastconfigapplied_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Applied</a>
@@ -1313,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1322,8 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagelevel_nodejs">
 <a href="#messagelevel_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Level</a>
@@ -1331,14 +1203,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of the message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compliance_state_python">
 <a href="#compliance_state_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>state</a>
@@ -1346,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_config_applied_python">
 <a href="#last_config_applied_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>applied</a>
@@ -1355,8 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1364,8 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_level_python">
 <a href="#message_level_python" style="color: inherit; text-decoration: inherit;">message_<wbr>level</a>
@@ -1373,16 +1239,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Level of the message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="helmoperatorproperties">Helm<wbr>Operator<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartvalues_csharp">
 <a href="#chartvalues_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Values</a>
@@ -1390,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartversion_csharp">
 <a href="#chartversion_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Version</a>
@@ -1399,14 +1261,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartvalues_go">
 <a href="#chartvalues_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Values</a>
@@ -1414,8 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartversion_go">
 <a href="#chartversion_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Version</a>
@@ -1423,14 +1281,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartvalues_nodejs">
 <a href="#chartvalues_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Values</a>
@@ -1438,8 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartversion_nodejs">
 <a href="#chartversion_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Version</a>
@@ -1447,14 +1301,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chart_values_python">
 <a href="#chart_values_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>values</a>
@@ -1462,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chart_version_python">
 <a href="#chart_version_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>version</a>
@@ -1471,16 +1321,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="helmoperatorpropertiesresponse">Helm<wbr>Operator<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartvalues_csharp">
 <a href="#chartvalues_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Values</a>
@@ -1488,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartversion_csharp">
 <a href="#chartversion_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Version</a>
@@ -1497,14 +1343,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartvalues_go">
 <a href="#chartvalues_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Values</a>
@@ -1512,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartversion_go">
 <a href="#chartversion_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Version</a>
@@ -1521,14 +1363,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartvalues_nodejs">
 <a href="#chartvalues_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Values</a>
@@ -1536,8 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartversion_nodejs">
 <a href="#chartversion_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Version</a>
@@ -1545,14 +1383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chart_values_python">
 <a href="#chart_values_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>values</a>
@@ -1560,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chart_version_python">
 <a href="#chart_version_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>version</a>
@@ -1569,84 +1403,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatorscopetype">Operator<wbr>Scope<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Cluster</dt>
-    <dd>cluster</dd>
-    <dt>@Namespace</dt>
-    <dd>namespace</dd>
-</dl>
+<dl class="tabular"><dt>Cluster</dt>
+    <dd>cluster</dd><dt>@Namespace</dt>
+    <dd>namespace</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operator<wbr>Scope<wbr>Type<wbr>Cluster</dt>
-    <dd>cluster</dd>
-    <dt>Operator<wbr>Scope<wbr>Type<wbr>Namespace</dt>
-    <dd>namespace</dd>
-</dl>
+<dl class="tabular"><dt>Operator<wbr>Scope<wbr>Type<wbr>Cluster</dt>
+    <dd>cluster</dd><dt>Operator<wbr>Scope<wbr>Type<wbr>Namespace</dt>
+    <dd>namespace</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Cluster</dt>
-    <dd>cluster</dd>
-    <dt>Namespace</dt>
-    <dd>namespace</dd>
-</dl>
+<dl class="tabular"><dt>Cluster</dt>
+    <dd>cluster</dd><dt>Namespace</dt>
+    <dd>namespace</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CLUSTER</dt>
-    <dd>cluster</dd>
-    <dt>NAMESPACE</dt>
-    <dd>namespace</dd>
-</dl>
+<dl class="tabular"><dt>CLUSTER</dt>
+    <dd>cluster</dd><dt>NAMESPACE</dt>
+    <dd>namespace</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatortype">Operator<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Flux</dt>
-    <dd>Flux</dd>
-</dl>
+<dl class="tabular"><dt>Flux</dt>
+    <dd>Flux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operator<wbr>Type<wbr>Flux</dt>
-    <dd>Flux</dd>
-</dl>
+<dl class="tabular"><dt>Operator<wbr>Type<wbr>Flux</dt>
+    <dd>Flux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Flux</dt>
-    <dd>Flux</dd>
-</dl>
+<dl class="tabular"><dt>Flux</dt>
+    <dd>Flux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FLUX</dt>
-    <dd>Flux</dd>
-</dl>
+<dl class="tabular"><dt>FLUX</dt>
+    <dd>Flux</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1654,8 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1663,8 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1672,8 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1681,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1690,8 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1699,14 +1505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1714,8 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1723,8 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1732,8 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1741,8 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1750,8 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1759,14 +1557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1774,8 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1783,8 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1792,8 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1801,8 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1810,8 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1819,14 +1609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1834,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1843,8 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1852,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1861,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1870,8 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -1879,8 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

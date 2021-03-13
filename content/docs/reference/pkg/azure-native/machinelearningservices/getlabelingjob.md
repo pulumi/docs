@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labelingjobid_csharp">
 <a href="#labelingjobid_csharp" style="color: inherit; text-decoration: inherit;">Labeling<wbr>Job<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includejobinstructions_csharp">
 <a href="#includejobinstructions_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Job<wbr>Instructions</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includelabelcategories_csharp">
 <a href="#includelabelcategories_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Label<wbr>Categories</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labelingjobid_go">
 <a href="#labelingjobid_go" style="color: inherit; text-decoration: inherit;">Labeling<wbr>Job<wbr>Id</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includejobinstructions_go">
 <a href="#includejobinstructions_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Job<wbr>Instructions</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includelabelcategories_go">
 <a href="#includelabelcategories_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Label<wbr>Categories</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labelingjobid_nodejs">
 <a href="#labelingjobid_nodejs" style="color: inherit; text-decoration: inherit;">labeling<wbr>Job<wbr>Id</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includejobinstructions_nodejs">
 <a href="#includejobinstructions_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Job<wbr>Instructions</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includelabelcategories_nodejs">
 <a href="#includelabelcategories_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Label<wbr>Categories</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labeling_job_id_python">
 <a href="#labeling_job_id_python" style="color: inherit; text-decoration: inherit;">labeling_<wbr>job_<wbr>id</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name and identifier for LabelingJob.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_job_instructions_python">
 <a href="#include_job_instructions_python" style="color: inherit; text-decoration: inherit;">include_<wbr>job_<wbr>instructions</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean value to indicate whether to include JobInstructions in response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_label_categories_python">
 <a href="#include_label_categories_python" style="color: inherit; text-decoration: inherit;">include_<wbr>label_<wbr>categories</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Boolean value to indicate whether to include LabelCategories in response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Labeling<wbr>Job<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobpropertiesresponse">Labeling<wbr>Job<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobpropertiesresponse">Labeling<wbr>Job<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -412,14 +364,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource URL of the entity (not URL encoded).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobpropertiesresponse">Labeling<wbr>Job<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Definition of a labeling job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource provider and type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="computeid_csharp">
 <a href="#computeid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -497,14 +438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="computeid_go">
 <a href="#computeid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="computeid_nodejs">
 <a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -545,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="compute_id_python">
 <a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
@@ -560,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of the compute resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelcategoryresponse">Label<wbr>Category<wbr>Response</h4>
@@ -578,9 +506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="classes_csharp">
 <a href="#classes_csharp" style="color: inherit; text-decoration: inherit;">Classes</a>
@@ -588,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Class<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmultiselect_csharp">
 <a href="#allowmultiselect_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Multi<wbr>Select</a>
@@ -597,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -606,14 +530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="classes_go">
 <a href="#classes_go" style="color: inherit; text-decoration: inherit;">Classes</a>
@@ -621,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Label<wbr>Class<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmultiselect_go">
 <a href="#allowmultiselect_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Multi<wbr>Select</a>
@@ -630,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -639,14 +558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="classes_nodejs">
 <a href="#classes_nodejs" style="color: inherit; text-decoration: inherit;">classes</a>
@@ -654,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Label<wbr>Class<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmultiselect_nodejs">
 <a href="#allowmultiselect_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Multi<wbr>Select</a>
@@ -663,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -672,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="classes_python">
 <a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
@@ -687,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_multi_select_python">
 <a href="#allow_multi_select_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>multi_<wbr>select</a>
@@ -696,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether it is allowed to select multiple classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -705,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Display name of the label category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelclassresponse">Label<wbr>Class<wbr>Response</h4>
@@ -714,9 +622,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -724,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subclasses_csharp">
 <a href="#subclasses_csharp" style="color: inherit; text-decoration: inherit;">Subclasses</a>
@@ -733,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Class<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -748,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subclasses_go">
 <a href="#subclasses_go" style="color: inherit; text-decoration: inherit;">Subclasses</a>
@@ -757,14 +658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Label<wbr>Class<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -772,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subclasses_nodejs">
 <a href="#subclasses_nodejs" style="color: inherit; text-decoration: inherit;">subclasses</a>
@@ -781,14 +678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Label<wbr>Class<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -796,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the label class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subclasses_python">
 <a href="#subclasses_python" style="color: inherit; text-decoration: inherit;">subclasses</a>
@@ -805,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</h4>
@@ -814,9 +706,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -824,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetversion_csharp">
 <a href="#datasetversion_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Version</a>
@@ -833,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableincrementaldatasetrefresh_csharp">
 <a href="#enableincrementaldatasetrefresh_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Incremental<wbr>Dataset<wbr>Refresh</a>
@@ -842,14 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -857,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetversion_go">
 <a href="#datasetversion_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Version</a>
@@ -866,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableincrementaldatasetrefresh_go">
 <a href="#enableincrementaldatasetrefresh_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Incremental<wbr>Dataset<wbr>Refresh</a>
@@ -875,14 +758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -890,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetversion_nodejs">
 <a href="#datasetversion_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Version</a>
@@ -899,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableincrementaldatasetrefresh_nodejs">
 <a href="#enableincrementaldatasetrefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Incremental<wbr>Dataset<wbr>Refresh</a>
@@ -908,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -923,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the data asset to perform labeling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_version_python">
 <a href="#dataset_version_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>version</a>
@@ -932,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_incremental_dataset_refresh_python">
 <a href="#enable_incremental_dataset_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>incremental_<wbr>dataset_<wbr>refresh</a>
@@ -941,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to enable incremental dataset refresh.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response</h4>
@@ -950,9 +822,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediatype_csharp">
 <a href="#mediatype_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Type</a>
@@ -960,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotationtype_csharp">
 <a href="#annotationtype_csharp" style="color: inherit; text-decoration: inherit;">Annotation<wbr>Type</a>
@@ -969,14 +838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediatype_go">
 <a href="#mediatype_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Type</a>
@@ -984,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotationtype_go">
 <a href="#annotationtype_go" style="color: inherit; text-decoration: inherit;">Annotation<wbr>Type</a>
@@ -993,14 +858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediatype_nodejs">
 <a href="#mediatype_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Type</a>
@@ -1008,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotationtype_nodejs">
 <a href="#annotationtype_nodejs" style="color: inherit; text-decoration: inherit;">annotation<wbr>Type</a>
@@ -1017,14 +878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="media_type_python">
 <a href="#media_type_python" style="color: inherit; text-decoration: inherit;">media_<wbr>type</a>
@@ -1032,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Media type of data asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotation_type_python">
 <a href="#annotation_type_python" style="color: inherit; text-decoration: inherit;">annotation_<wbr>type</a>
@@ -1041,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Annotation type of image labeling tasks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response</h4>
@@ -1050,9 +906,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1060,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1075,14 +926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1090,14 +938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1105,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The link to a page with detailed labeling instructions for labelers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labelingjobpropertiesresponse">Labeling<wbr>Job<wbr>Properties<wbr>Response</h4>
@@ -1114,9 +958,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimeutc_csharp">
 <a href="#createdtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
@@ -1124,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetconfiguration_csharp">
 <a href="#datasetconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Configuration</a>
@@ -1133,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobinstructions_csharp">
 <a href="#jobinstructions_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Instructions</a>
@@ -1142,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobinstructionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelcategories_csharp">
 <a href="#labelcategories_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Categories</a>
@@ -1151,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Category<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelingjobmediaproperties_csharp">
 <a href="#labelingjobmediaproperties_csharp" style="color: inherit; text-decoration: inherit;">Labeling<wbr>Job<wbr>Media<wbr>Properties</a>
@@ -1160,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progressmetrics_csharp">
 <a href="#progressmetrics_csharp" style="color: inherit; text-decoration: inherit;">Progress<wbr>Metrics</a>
@@ -1169,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#progressmetricsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Progress<wbr>Metrics<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1178,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1187,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessages_csharp">
 <a href="#statusmessages_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Messages</a>
@@ -1196,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusmessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Status<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlassistconfiguration_csharp">
 <a href="#mlassistconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Assist<wbr>Configuration</a>
@@ -1205,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mlassistconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>MLAssist<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1214,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1223,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimeutc_go">
 <a href="#createdtimeutc_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
@@ -1238,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetconfiguration_go">
 <a href="#datasetconfiguration_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Configuration</a>
@@ -1247,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobinstructions_go">
 <a href="#jobinstructions_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Instructions</a>
@@ -1256,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelcategories_go">
 <a href="#labelcategories_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Categories</a>
@@ -1265,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Label<wbr>Category<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelingjobmediaproperties_go">
 <a href="#labelingjobmediaproperties_go" style="color: inherit; text-decoration: inherit;">Labeling<wbr>Job<wbr>Media<wbr>Properties</a>
@@ -1274,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progressmetrics_go">
 <a href="#progressmetrics_go" style="color: inherit; text-decoration: inherit;">Progress<wbr>Metrics</a>
@@ -1283,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1292,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1301,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessages_go">
 <a href="#statusmessages_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Messages</a>
@@ -1310,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusmessageresponse">[]Status<wbr>Message<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlassistconfiguration_go">
 <a href="#mlassistconfiguration_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Assist<wbr>Configuration</a>
@@ -1319,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1328,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1337,14 +1154,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtimeutc_nodejs">
 <a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
@@ -1352,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetconfiguration_nodejs">
 <a href="#datasetconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Configuration</a>
@@ -1361,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobinstructions_nodejs">
 <a href="#jobinstructions_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Instructions</a>
@@ -1370,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelcategories_nodejs">
 <a href="#labelcategories_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Categories</a>
@@ -1379,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Label<wbr>Category<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labelingjobmediaproperties_nodejs">
 <a href="#labelingjobmediaproperties_nodejs" style="color: inherit; text-decoration: inherit;">labeling<wbr>Job<wbr>Media<wbr>Properties</a>
@@ -1388,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progressmetrics_nodejs">
 <a href="#progressmetrics_nodejs" style="color: inherit; text-decoration: inherit;">progress<wbr>Metrics</a>
@@ -1397,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1406,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1415,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessages_nodejs">
 <a href="#statusmessages_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Messages</a>
@@ -1424,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusmessageresponse">Status<wbr>Message<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlassistconfiguration_nodejs">
 <a href="#mlassistconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Assist<wbr>Configuration</a>
@@ -1433,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1442,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1451,14 +1254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_time_utc_python">
 <a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
@@ -1466,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created time of the job in UTC timezone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_configuration_python">
 <a href="#dataset_configuration_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>configuration</a>
@@ -1475,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_instructions_python">
 <a href="#job_instructions_python" style="color: inherit; text-decoration: inherit;">job_<wbr>instructions</a>
@@ -1484,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_categories_python">
 <a href="#label_categories_python" style="color: inherit; text-decoration: inherit;">label_<wbr>categories</a>
@@ -1493,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Label<wbr>Category<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labeling_job_media_properties_python">
 <a href="#labeling_job_media_properties_python" style="color: inherit; text-decoration: inherit;">labeling_<wbr>job_<wbr>media_<wbr>properties</a>
@@ -1502,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_metrics_python">
 <a href="#progress_metrics_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>metrics</a>
@@ -1511,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1520,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Internal id of the job(Previously called project).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1529,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_messages_python">
 <a href="#status_messages_python" style="color: inherit; text-decoration: inherit;">status_<wbr>messages</a>
@@ -1538,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusmessageresponse">Sequence[Status<wbr>Message<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ml_assist_configuration_python">
 <a href="#ml_assist_configuration_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>configuration</a>
@@ -1547,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1556,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job property dictionary. Properties can be added, but not removed or altered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1565,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The job tag dictionary. Tags can be added, removed, and updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response</h4>
@@ -1574,9 +1362,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inferencingcomputebinding_csharp">
 <a href="#inferencingcomputebinding_csharp" style="color: inherit; text-decoration: inherit;">Inferencing<wbr>Compute<wbr>Binding</a>
@@ -1584,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modelnameprefix_csharp">
 <a href="#modelnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Name<wbr>Prefix</a>
@@ -1593,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trainingcomputebinding_csharp">
 <a href="#trainingcomputebinding_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Compute<wbr>Binding</a>
@@ -1602,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlassistenabled_csharp">
 <a href="#mlassistenabled_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Assist<wbr>Enabled</a>
@@ -1611,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prelabelaccuracythreshold_csharp">
 <a href="#prelabelaccuracythreshold_csharp" style="color: inherit; text-decoration: inherit;">Prelabel<wbr>Accuracy<wbr>Threshold</a>
@@ -1620,14 +1402,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inferencingcomputebinding_go">
 <a href="#inferencingcomputebinding_go" style="color: inherit; text-decoration: inherit;">Inferencing<wbr>Compute<wbr>Binding</a>
@@ -1635,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modelnameprefix_go">
 <a href="#modelnameprefix_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Name<wbr>Prefix</a>
@@ -1644,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trainingcomputebinding_go">
 <a href="#trainingcomputebinding_go" style="color: inherit; text-decoration: inherit;">Training<wbr>Compute<wbr>Binding</a>
@@ -1653,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlassistenabled_go">
 <a href="#mlassistenabled_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Assist<wbr>Enabled</a>
@@ -1662,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prelabelaccuracythreshold_go">
 <a href="#prelabelaccuracythreshold_go" style="color: inherit; text-decoration: inherit;">Prelabel<wbr>Accuracy<wbr>Threshold</a>
@@ -1671,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inferencingcomputebinding_nodejs">
 <a href="#inferencingcomputebinding_nodejs" style="color: inherit; text-decoration: inherit;">inferencing<wbr>Compute<wbr>Binding</a>
@@ -1686,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modelnameprefix_nodejs">
 <a href="#modelnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Name<wbr>Prefix</a>
@@ -1695,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trainingcomputebinding_nodejs">
 <a href="#trainingcomputebinding_nodejs" style="color: inherit; text-decoration: inherit;">training<wbr>Compute<wbr>Binding</a>
@@ -1704,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mlassistenabled_nodejs">
 <a href="#mlassistenabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Assist<wbr>Enabled</a>
@@ -1713,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prelabelaccuracythreshold_nodejs">
 <a href="#prelabelaccuracythreshold_nodejs" style="color: inherit; text-decoration: inherit;">prelabel<wbr>Accuracy<wbr>Threshold</a>
@@ -1722,14 +1490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="inferencing_compute_binding_python">
 <a href="#inferencing_compute_binding_python" style="color: inherit; text-decoration: inherit;">inferencing_<wbr>compute_<wbr>binding</a>
@@ -1737,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="model_name_prefix_python">
 <a href="#model_name_prefix_python" style="color: inherit; text-decoration: inherit;">model_<wbr>name_<wbr>prefix</a>
@@ -1746,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="training_compute_binding_python">
 <a href="#training_compute_binding_python" style="color: inherit; text-decoration: inherit;">training_<wbr>compute_<wbr>binding</a>
@@ -1755,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ml_assist_enabled_python">
 <a href="#ml_assist_enabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>enabled</a>
@@ -1764,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether MLAssist feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prelabel_accuracy_threshold_python">
 <a href="#prelabel_accuracy_threshold_python" style="color: inherit; text-decoration: inherit;">prelabel_<wbr>accuracy_<wbr>threshold</a>
@@ -1773,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Prelabel accuracy threshold used in MLAssist feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="progressmetricsresponse">Progress<wbr>Metrics<wbr>Response</h4>
@@ -1782,9 +1542,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="completeddatapointcount_csharp">
 <a href="#completeddatapointcount_csharp" style="color: inherit; text-decoration: inherit;">Completed<wbr>Datapoint<wbr>Count</a>
@@ -1792,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="incrementaldatasetlastrefreshtime_csharp">
 <a href="#incrementaldatasetlastrefreshtime_csharp" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Dataset<wbr>Last<wbr>Refresh<wbr>Time</a>
@@ -1801,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skippeddatapointcount_csharp">
 <a href="#skippeddatapointcount_csharp" style="color: inherit; text-decoration: inherit;">Skipped<wbr>Datapoint<wbr>Count</a>
@@ -1810,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaldatapointcount_csharp">
 <a href="#totaldatapointcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Datapoint<wbr>Count</a>
@@ -1819,14 +1574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="completeddatapointcount_go">
 <a href="#completeddatapointcount_go" style="color: inherit; text-decoration: inherit;">Completed<wbr>Datapoint<wbr>Count</a>
@@ -1834,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="incrementaldatasetlastrefreshtime_go">
 <a href="#incrementaldatasetlastrefreshtime_go" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Dataset<wbr>Last<wbr>Refresh<wbr>Time</a>
@@ -1843,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skippeddatapointcount_go">
 <a href="#skippeddatapointcount_go" style="color: inherit; text-decoration: inherit;">Skipped<wbr>Datapoint<wbr>Count</a>
@@ -1852,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaldatapointcount_go">
 <a href="#totaldatapointcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Datapoint<wbr>Count</a>
@@ -1861,14 +1610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="completeddatapointcount_nodejs">
 <a href="#completeddatapointcount_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>Datapoint<wbr>Count</a>
@@ -1876,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="incrementaldatasetlastrefreshtime_nodejs">
 <a href="#incrementaldatasetlastrefreshtime_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Dataset<wbr>Last<wbr>Refresh<wbr>Time</a>
@@ -1885,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skippeddatapointcount_nodejs">
 <a href="#skippeddatapointcount_nodejs" style="color: inherit; text-decoration: inherit;">skipped<wbr>Datapoint<wbr>Count</a>
@@ -1894,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaldatapointcount_nodejs">
 <a href="#totaldatapointcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Datapoint<wbr>Count</a>
@@ -1903,14 +1646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="completed_datapoint_count_python">
 <a href="#completed_datapoint_count_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>datapoint_<wbr>count</a>
@@ -1918,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The completed datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="incremental_dataset_last_refresh_time_python">
 <a href="#incremental_dataset_last_refresh_time_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>dataset_<wbr>last_<wbr>refresh_<wbr>time</a>
@@ -1927,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of last successful incremental dataset refresh in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skipped_datapoint_count_python">
 <a href="#skipped_datapoint_count_python" style="color: inherit; text-decoration: inherit;">skipped_<wbr>datapoint_<wbr>count</a>
@@ -1936,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The skipped datapoint count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_datapoint_count_python">
 <a href="#total_datapoint_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>datapoint_<wbr>count</a>
@@ -1945,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The total datapoint count.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="statusmessageresponse">Status<wbr>Message<wbr>Response</h4>
@@ -1954,9 +1690,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1964,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdtimeutc_csharp">
 <a href="#createdtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
@@ -1973,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1982,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1991,14 +1722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2006,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdtimeutc_go">
 <a href="#createdtimeutc_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
@@ -2015,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -2024,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2033,14 +1758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2048,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdtimeutc_nodejs">
 <a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
@@ -2057,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -2066,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2075,14 +1794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2090,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service-defined message code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_time_utc_python">
 <a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
@@ -2099,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Time in UTC at which the message was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -2108,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity level of the status message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2117,8 +1830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the message code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -2126,9 +1838,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2136,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2145,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2154,8 +1862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2163,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2172,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2181,14 +1886,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2196,8 +1898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2205,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2214,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2223,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2232,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2241,14 +1938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2256,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2265,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2274,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2283,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2292,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2301,14 +1990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2316,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2325,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2334,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2343,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2352,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2361,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

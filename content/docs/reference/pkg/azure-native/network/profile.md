@@ -14,11 +14,17 @@ Class representing a Traffic Manager profile.
 API Version: 2018-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Profile-PUT-NoEndpoints
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -52,9 +58,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -91,9 +100,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -117,9 +129,12 @@ profile = azure_native.network.Profile("profile",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -144,10 +159,17 @@ const profile = new azure_native.network.Profile("profile", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Profile-PUT-WithCustomHeaders
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -230,9 +252,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -308,9 +333,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -369,9 +397,12 @@ profile = azure_native.network.Profile("profile",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -431,10 +462,17 @@ const profile = new azure_native.network.Profile("profile", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Profile-PUT-WithEndpoints
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -482,9 +520,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -533,9 +574,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -569,9 +613,12 @@ profile = azure_native.network.Profile("profile",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -606,9 +653,16 @@ const profile = new azure_native.network.Profile("profile", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Profile Resource {#create}
@@ -633,9 +687,7 @@ const profile = new azure_native.network.Profile("profile", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -643,9 +695,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -653,9 +703,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -663,10 +711,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -692,9 +737,7 @@ const profile = new azure_native.network.Profile("profile", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -702,9 +745,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -712,9 +753,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -722,9 +761,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -732,18 +769,13 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -751,9 +783,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -761,9 +791,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -771,10 +799,7 @@ const profile = new azure_native.network.Profile("profile", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -789,9 +814,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -799,8 +822,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_csharp">
 <a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
@@ -808,8 +830,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -817,8 +838,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -826,8 +846,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -835,8 +854,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreturn_csharp">
 <a href="#maxreturn_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
@@ -844,8 +862,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorconfig_csharp">
 <a href="#monitorconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
@@ -853,8 +870,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -862,8 +878,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -871,8 +886,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilestatus_csharp">
 <a href="#profilestatus_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Status</a>
@@ -880,8 +894,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#profilestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Profile<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -889,8 +902,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficroutingmethod_csharp">
 <a href="#trafficroutingmethod_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Method</a>
@@ -898,8 +910,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trafficroutingmethod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficviewenrollmentstatus_csharp">
 <a href="#trafficviewenrollmentstatus_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a>
@@ -907,8 +918,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trafficviewenrollmentstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -916,14 +926,11 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -931,8 +938,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_go">
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
@@ -940,8 +946,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -949,8 +954,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">[]Endpoint<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -958,8 +962,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -967,8 +970,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreturn_go">
 <a href="#maxreturn_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
@@ -976,8 +978,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorconfig_go">
 <a href="#monitorconfig_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
@@ -985,8 +986,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -994,8 +994,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1003,8 +1002,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilestatus_go">
 <a href="#profilestatus_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Status</a>
@@ -1012,8 +1010,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#profilestatus">Profile<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1021,8 +1018,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficroutingmethod_go">
 <a href="#trafficroutingmethod_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Method</a>
@@ -1030,8 +1026,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trafficroutingmethod">Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficviewenrollmentstatus_go">
 <a href="#trafficviewenrollmentstatus_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a>
@@ -1039,8 +1034,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trafficviewenrollmentstatus">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1048,14 +1042,11 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1063,8 +1054,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsconfig_nodejs">
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
@@ -1072,8 +1062,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1081,8 +1070,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">Endpoint[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1090,8 +1078,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1099,8 +1086,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxreturn_nodejs">
 <a href="#maxreturn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Return</a>
@@ -1108,8 +1094,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorconfig_nodejs">
 <a href="#monitorconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Config</a>
@@ -1117,8 +1102,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1126,8 +1110,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -1135,8 +1118,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilestatus_nodejs">
 <a href="#profilestatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Status</a>
@@ -1144,8 +1126,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#profilestatus">Profile<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1153,8 +1134,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficroutingmethod_nodejs">
 <a href="#trafficroutingmethod_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Method</a>
@@ -1162,8 +1142,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trafficroutingmethod">Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficviewenrollmentstatus_nodejs">
 <a href="#trafficviewenrollmentstatus_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>View<wbr>Enrollment<wbr>Status</a>
@@ -1171,8 +1150,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trafficviewenrollmentstatus">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1180,14 +1158,11 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1195,8 +1170,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_config_python">
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
@@ -1204,8 +1178,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1213,8 +1186,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">Sequence[Endpoint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1222,8 +1194,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1231,8 +1202,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_return_python">
 <a href="#max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
@@ -1240,8 +1210,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of endpoints to be returned for MultiValue routing type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_config_python">
 <a href="#monitor_config_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>config</a>
@@ -1249,8 +1218,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1258,8 +1226,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -1267,8 +1234,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_status_python">
 <a href="#profile_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>status</a>
@@ -1276,8 +1242,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#profilestatus">Profile<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1285,8 +1250,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_routing_method_python">
 <a href="#traffic_routing_method_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>method</a>
@@ -1294,8 +1258,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#trafficroutingmethod">Traffic<wbr>Routing<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The traffic routing method of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_view_enrollment_status_python">
 <a href="#traffic_view_enrollment_status_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>view_<wbr>enrollment_<wbr>status</a>
@@ -1303,8 +1266,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#trafficviewenrollmentstatus">Traffic<wbr>View<wbr>Enrollment<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1312,8 +1274,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1324,9 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1334,14 +1293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1349,14 +1305,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1364,14 +1317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1379,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1396,9 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="dnsconfig">Dns<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="relativename_csharp">
 <a href="#relativename_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Name</a>
@@ -1406,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1415,14 +1361,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="relativename_go">
 <a href="#relativename_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Name</a>
@@ -1430,8 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1439,14 +1381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="relativename_nodejs">
 <a href="#relativename_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Name</a>
@@ -1454,8 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1463,14 +1401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="relative_name_python">
 <a href="#relative_name_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>name</a>
@@ -1478,8 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1487,16 +1421,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dnsconfigresponse">Dns<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1504,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativename_csharp">
 <a href="#relativename_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Name</a>
@@ -1513,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1522,14 +1451,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1537,8 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativename_go">
 <a href="#relativename_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Name</a>
@@ -1546,8 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1555,14 +1479,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1570,8 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativename_nodejs">
 <a href="#relativename_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Name</a>
@@ -1579,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1588,14 +1507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1603,8 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_name_python">
 <a href="#relative_name_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>name</a>
@@ -1612,8 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1621,16 +1535,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpoint">Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -1638,8 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_csharp">
 <a href="#endpointlocation_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -1647,8 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointmonitorstatus_csharp">
 <a href="#endpointmonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -1656,8 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#endpointmonitorstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_csharp">
 <a href="#endpointstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -1665,8 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#endpointstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Endpoint<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomapping_csharp">
 <a href="#geomapping_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mapping</a>
@@ -1674,8 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1683,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_csharp">
 <a href="#minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -1692,8 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1701,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1710,8 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1719,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1728,8 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -1737,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1746,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1755,14 +1653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -1770,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiescustomheaders">[]Endpoint<wbr>Properties<wbr>Custom<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_go">
 <a href="#endpointlocation_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -1779,8 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointmonitorstatus_go">
 <a href="#endpointmonitorstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -1788,8 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_go">
 <a href="#endpointstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -1797,8 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomapping_go">
 <a href="#geomapping_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mapping</a>
@@ -1806,8 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1815,8 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_go">
 <a href="#minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -1824,8 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1833,8 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1842,8 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1851,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiessubnets">[]Endpoint<wbr>Properties<wbr>Subnets</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1860,8 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -1869,8 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1878,8 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1887,14 +1769,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -1902,8 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_nodejs">
 <a href="#endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
@@ -1911,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointmonitorstatus_nodejs">
 <a href="#endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
@@ -1920,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_nodejs">
 <a href="#endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
@@ -1929,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomapping_nodejs">
 <a href="#geomapping_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mapping</a>
@@ -1938,8 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1947,8 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_nodejs">
 <a href="#minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
@@ -1956,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1965,8 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1974,8 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1983,8 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1992,8 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -2001,8 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2010,8 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2019,14 +1885,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -2034,8 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_location_python">
 <a href="#endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
@@ -2043,8 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_monitor_status_python">
 <a href="#endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
@@ -2052,8 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_status_python">
 <a href="#endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
@@ -2061,8 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_mapping_python">
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
@@ -2070,8 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2079,8 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_child_endpoints_python">
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
@@ -2088,8 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2097,8 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2106,8 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2115,8 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2124,8 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -2133,8 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2142,8 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2151,86 +2001,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Checking<wbr>Endpoint</dt>
-    <dd>CheckingEndpoint</dd>
-    <dt>Online</dt>
-    <dd>Online</dd>
-    <dt>Degraded</dt>
-    <dd>Degraded</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Inactive</dt>
-    <dd>Inactive</dd>
-    <dt>Stopped</dt>
-    <dd>Stopped</dd>
-</dl>
+<dl class="tabular"><dt>Checking<wbr>Endpoint</dt>
+    <dd>CheckingEndpoint</dd><dt>Online</dt>
+    <dd>Online</dd><dt>Degraded</dt>
+    <dd>Degraded</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Inactive</dt>
+    <dd>Inactive</dd><dt>Stopped</dt>
+    <dd>Stopped</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Checking<wbr>Endpoint</dt>
-    <dd>CheckingEndpoint</dd>
-    <dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Online</dt>
-    <dd>Online</dd>
-    <dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Degraded</dt>
-    <dd>Degraded</dd>
-    <dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Inactive</dt>
-    <dd>Inactive</dd>
-    <dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Stopped</dt>
-    <dd>Stopped</dd>
-</dl>
+<dl class="tabular"><dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Checking<wbr>Endpoint</dt>
+    <dd>CheckingEndpoint</dd><dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Online</dt>
+    <dd>Online</dd><dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Degraded</dt>
+    <dd>Degraded</dd><dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Inactive</dt>
+    <dd>Inactive</dd><dt>Endpoint<wbr>Monitor<wbr>Status<wbr>Stopped</dt>
+    <dd>Stopped</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Checking<wbr>Endpoint</dt>
-    <dd>CheckingEndpoint</dd>
-    <dt>Online</dt>
-    <dd>Online</dd>
-    <dt>Degraded</dt>
-    <dd>Degraded</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Inactive</dt>
-    <dd>Inactive</dd>
-    <dt>Stopped</dt>
-    <dd>Stopped</dd>
-</dl>
+<dl class="tabular"><dt>Checking<wbr>Endpoint</dt>
+    <dd>CheckingEndpoint</dd><dt>Online</dt>
+    <dd>Online</dd><dt>Degraded</dt>
+    <dd>Degraded</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Inactive</dt>
+    <dd>Inactive</dd><dt>Stopped</dt>
+    <dd>Stopped</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CHECKING_ENDPOINT</dt>
-    <dd>CheckingEndpoint</dd>
-    <dt>ONLINE</dt>
-    <dd>Online</dd>
-    <dt>DEGRADED</dt>
-    <dd>Degraded</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>INACTIVE</dt>
-    <dd>Inactive</dd>
-    <dt>STOPPED</dt>
-    <dd>Stopped</dd>
-</dl>
+<dl class="tabular"><dt>CHECKING_ENDPOINT</dt>
+    <dd>CheckingEndpoint</dd><dt>ONLINE</dt>
+    <dd>Online</dd><dt>DEGRADED</dt>
+    <dd>Degraded</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>INACTIVE</dt>
+    <dd>Inactive</dd><dt>STOPPED</dt>
+    <dd>Stopped</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2238,8 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2247,14 +2065,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2262,8 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2271,14 +2085,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2286,8 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2295,14 +2105,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2310,8 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2319,16 +2125,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2336,8 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2345,14 +2147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2360,8 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2369,14 +2167,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2384,8 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2393,14 +2187,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2408,8 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2417,16 +2207,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_csharp">
 <a href="#first_csharp" style="color: inherit; text-decoration: inherit;">First</a>
@@ -2434,8 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_csharp">
 <a href="#last_csharp" style="color: inherit; text-decoration: inherit;">Last</a>
@@ -2443,8 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2452,14 +2237,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_go">
 <a href="#first_go" style="color: inherit; text-decoration: inherit;">First</a>
@@ -2467,8 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_go">
 <a href="#last_go" style="color: inherit; text-decoration: inherit;">Last</a>
@@ -2476,8 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2485,14 +2265,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_nodejs">
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
@@ -2500,8 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_nodejs">
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
@@ -2509,8 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2518,14 +2293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_python">
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
@@ -2533,8 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_python">
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
@@ -2542,8 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2551,16 +2321,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_csharp">
 <a href="#first_csharp" style="color: inherit; text-decoration: inherit;">First</a>
@@ -2568,8 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_csharp">
 <a href="#last_csharp" style="color: inherit; text-decoration: inherit;">Last</a>
@@ -2577,8 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2586,14 +2351,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_go">
 <a href="#first_go" style="color: inherit; text-decoration: inherit;">First</a>
@@ -2601,8 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_go">
 <a href="#last_go" style="color: inherit; text-decoration: inherit;">Last</a>
@@ -2610,8 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2619,14 +2379,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_nodejs">
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
@@ -2634,8 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_nodejs">
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
@@ -2643,8 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2652,14 +2407,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="first_python">
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
@@ -2667,8 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_python">
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
@@ -2676,8 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2685,16 +2435,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointresponse">Endpoint<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -2702,8 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_csharp">
 <a href="#endpointlocation_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -2711,8 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointmonitorstatus_csharp">
 <a href="#endpointmonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -2720,8 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_csharp">
 <a href="#endpointstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -2729,8 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomapping_csharp">
 <a href="#geomapping_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mapping</a>
@@ -2738,8 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2747,8 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_csharp">
 <a href="#minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -2756,8 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2765,8 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2774,8 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2783,8 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2792,8 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -2801,8 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2810,8 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -2819,14 +2553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -2834,8 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">[]Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_go">
 <a href="#endpointlocation_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -2843,8 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointmonitorstatus_go">
 <a href="#endpointmonitorstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -2852,8 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_go">
 <a href="#endpointstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -2861,8 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomapping_go">
 <a href="#geomapping_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mapping</a>
@@ -2870,8 +2597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2879,8 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_go">
 <a href="#minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -2888,8 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2897,8 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2906,8 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2915,8 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsesubnets">[]Endpoint<wbr>Properties<wbr>Response<wbr>Subnets</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2924,8 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -2933,8 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2942,8 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -2951,14 +2669,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -2966,8 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_nodejs">
 <a href="#endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
@@ -2975,8 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointmonitorstatus_nodejs">
 <a href="#endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
@@ -2984,8 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_nodejs">
 <a href="#endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
@@ -2993,8 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomapping_nodejs">
 <a href="#geomapping_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mapping</a>
@@ -3002,8 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3011,8 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_nodejs">
 <a href="#minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
@@ -3020,8 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3029,8 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -3038,8 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -3047,8 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3056,8 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -3065,8 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3074,8 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -3083,14 +2785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -3098,8 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_location_python">
 <a href="#endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
@@ -3107,8 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_monitor_status_python">
 <a href="#endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
@@ -3116,8 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_status_python">
 <a href="#endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
@@ -3125,8 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_mapping_python">
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
@@ -3134,8 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3143,8 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_child_endpoints_python">
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
@@ -3152,8 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3161,8 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -3170,8 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -3179,8 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -3188,8 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -3197,8 +2885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3206,8 +2893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -3215,54 +2901,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointstatus">Endpoint<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Endpoint<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Endpoint<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Endpoint<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Endpoint<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorconfig">Monitor<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -3270,8 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigcustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedstatuscoderanges_csharp">
 <a href="#expectedstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -3279,8 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_csharp">
 <a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -3288,8 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3297,8 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3306,8 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemonitorstatus_csharp">
 <a href="#profilemonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Monitor<wbr>Status</a>
@@ -3315,8 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#profilemonitorstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3324,8 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitorprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Monitor<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_csharp">
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -3333,8 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="toleratednumberoffailures_csharp">
 <a href="#toleratednumberoffailures_csharp" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
@@ -3342,14 +3005,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -3357,8 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigcustomheaders">[]Monitor<wbr>Config<wbr>Custom<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedstatuscoderanges_go">
 <a href="#expectedstatuscoderanges_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -3366,8 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">[]Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_go">
 <a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -3375,8 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3384,8 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3393,8 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemonitorstatus_go">
 <a href="#profilemonitorstatus_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Monitor<wbr>Status</a>
@@ -3402,8 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#profilemonitorstatus">Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3411,8 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitorprotocol">Monitor<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_go">
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -3420,8 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="toleratednumberoffailures_go">
 <a href="#toleratednumberoffailures_go" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
@@ -3429,14 +3081,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -3444,8 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedstatuscoderanges_nodejs">
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -3453,8 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_nodejs">
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
@@ -3462,8 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3471,8 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3480,8 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemonitorstatus_nodejs">
 <a href="#profilemonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Monitor<wbr>Status</a>
@@ -3489,8 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#profilemonitorstatus">Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -3498,8 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitorprotocol">Monitor<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_nodejs">
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
@@ -3507,8 +3149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="toleratednumberoffailures_nodejs">
 <a href="#toleratednumberoffailures_nodejs" style="color: inherit; text-decoration: inherit;">tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
@@ -3516,14 +3157,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -3531,8 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigcustomheaders">Sequence[Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_status_code_ranges_python">
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
@@ -3540,8 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_in_seconds_python">
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
@@ -3549,8 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3558,8 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3567,8 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_monitor_status_python">
 <a href="#profile_monitor_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>monitor_<wbr>status</a>
@@ -3576,8 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#profilemonitorstatus">Profile<wbr>Monitor<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -3585,8 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#monitorprotocol">Monitor<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_seconds_python">
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
@@ -3594,8 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerated_number_of_failures_python">
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
@@ -3603,16 +3233,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3620,8 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3629,14 +3255,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3644,8 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3653,14 +3275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3668,8 +3287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3677,14 +3295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3692,8 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3701,16 +3315,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -3718,8 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -3727,14 +3337,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -3742,8 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -3751,14 +3357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -3766,8 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -3775,14 +3377,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -3790,8 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -3799,16 +3397,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorconfigresponse">Monitor<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -3816,8 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedstatuscoderanges_csharp">
 <a href="#expectedstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -3825,8 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_csharp">
 <a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -3834,8 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3843,8 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3852,8 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemonitorstatus_csharp">
 <a href="#profilemonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Monitor<wbr>Status</a>
@@ -3861,8 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3870,8 +3459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_csharp">
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -3879,8 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="toleratednumberoffailures_csharp">
 <a href="#toleratednumberoffailures_csharp" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
@@ -3888,14 +3475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -3903,8 +3487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponsecustomheaders">[]Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedstatuscoderanges_go">
 <a href="#expectedstatuscoderanges_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -3912,8 +3495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">[]Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_go">
 <a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -3921,8 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3930,8 +3511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3939,8 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemonitorstatus_go">
 <a href="#profilemonitorstatus_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Monitor<wbr>Status</a>
@@ -3948,8 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3957,8 +3535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_go">
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -3966,8 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="toleratednumberoffailures_go">
 <a href="#toleratednumberoffailures_go" style="color: inherit; text-decoration: inherit;">Tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
@@ -3975,14 +3551,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -3990,8 +3563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedstatuscoderanges_nodejs">
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -3999,8 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_nodejs">
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
@@ -4008,8 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4017,8 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4026,8 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilemonitorstatus_nodejs">
 <a href="#profilemonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Monitor<wbr>Status</a>
@@ -4035,8 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -4044,8 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_nodejs">
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
@@ -4053,8 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="toleratednumberoffailures_nodejs">
 <a href="#toleratednumberoffailures_nodejs" style="color: inherit; text-decoration: inherit;">tolerated<wbr>Number<wbr>Of<wbr>Failures</a>
@@ -4062,14 +3627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -4077,8 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_status_code_ranges_python">
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
@@ -4086,8 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_in_seconds_python">
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
@@ -4095,8 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4104,8 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path relative to the endpoint domain name used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4113,8 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The TCP port used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_monitor_status_python">
 <a href="#profile_monitor_status_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>monitor_<wbr>status</a>
@@ -4122,8 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The profile-level monitoring status of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -4131,8 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_seconds_python">
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
@@ -4140,8 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tolerated_number_of_failures_python">
 <a href="#tolerated_number_of_failures_python" style="color: inherit; text-decoration: inherit;">tolerated_<wbr>number_<wbr>of_<wbr>failures</a>
@@ -4149,16 +3703,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4166,8 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4175,14 +3725,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4190,8 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4199,14 +3745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4214,8 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4223,14 +3765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4238,8 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4247,16 +3785,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Header value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4264,8 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4273,14 +3807,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4288,8 +3819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4297,14 +3827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4312,8 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4321,14 +3847,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4336,8 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4345,262 +3867,169 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min status code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Min status code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorprotocol">Monitor<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>HTTP</dt>
-    <dd>HTTP</dd>
-    <dt>HTTPS</dt>
-    <dd>HTTPS</dd>
-    <dt>TCP</dt>
-    <dd>TCP</dd>
-</dl>
+<dl class="tabular"><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTPS</dt>
+    <dd>HTTPS</dd><dt>TCP</dt>
+    <dd>TCP</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Monitor<wbr>Protocol<wbr>HTTP</dt>
-    <dd>HTTP</dd>
-    <dt>Monitor<wbr>Protocol<wbr>HTTPS</dt>
-    <dd>HTTPS</dd>
-    <dt>Monitor<wbr>Protocol<wbr>TCP</dt>
-    <dd>TCP</dd>
-</dl>
+<dl class="tabular"><dt>Monitor<wbr>Protocol<wbr>HTTP</dt>
+    <dd>HTTP</dd><dt>Monitor<wbr>Protocol<wbr>HTTPS</dt>
+    <dd>HTTPS</dd><dt>Monitor<wbr>Protocol<wbr>TCP</dt>
+    <dd>TCP</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>HTTP</dt>
-    <dd>HTTP</dd>
-    <dt>HTTPS</dt>
-    <dd>HTTPS</dd>
-    <dt>TCP</dt>
-    <dd>TCP</dd>
-</dl>
+<dl class="tabular"><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTPS</dt>
+    <dd>HTTPS</dd><dt>TCP</dt>
+    <dd>TCP</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HTTP</dt>
-    <dd>HTTP</dd>
-    <dt>HTTPS</dt>
-    <dd>HTTPS</dd>
-    <dt>TCP</dt>
-    <dd>TCP</dd>
-</dl>
+<dl class="tabular"><dt>HTTP</dt>
+    <dd>HTTP</dd><dt>HTTPS</dt>
+    <dd>HTTPS</dd><dt>TCP</dt>
+    <dd>TCP</dd></dl>
 {{% /choosable %}}
 
 <h4 id="profilemonitorstatus">Profile<wbr>Monitor<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Checking<wbr>Endpoints</dt>
-    <dd>CheckingEndpoints</dd>
-    <dt>Online</dt>
-    <dd>Online</dd>
-    <dt>Degraded</dt>
-    <dd>Degraded</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Inactive</dt>
-    <dd>Inactive</dd>
-</dl>
+<dl class="tabular"><dt>Checking<wbr>Endpoints</dt>
+    <dd>CheckingEndpoints</dd><dt>Online</dt>
+    <dd>Online</dd><dt>Degraded</dt>
+    <dd>Degraded</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Inactive</dt>
+    <dd>Inactive</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Profile<wbr>Monitor<wbr>Status<wbr>Checking<wbr>Endpoints</dt>
-    <dd>CheckingEndpoints</dd>
-    <dt>Profile<wbr>Monitor<wbr>Status<wbr>Online</dt>
-    <dd>Online</dd>
-    <dt>Profile<wbr>Monitor<wbr>Status<wbr>Degraded</dt>
-    <dd>Degraded</dd>
-    <dt>Profile<wbr>Monitor<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Profile<wbr>Monitor<wbr>Status<wbr>Inactive</dt>
-    <dd>Inactive</dd>
-</dl>
+<dl class="tabular"><dt>Profile<wbr>Monitor<wbr>Status<wbr>Checking<wbr>Endpoints</dt>
+    <dd>CheckingEndpoints</dd><dt>Profile<wbr>Monitor<wbr>Status<wbr>Online</dt>
+    <dd>Online</dd><dt>Profile<wbr>Monitor<wbr>Status<wbr>Degraded</dt>
+    <dd>Degraded</dd><dt>Profile<wbr>Monitor<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Profile<wbr>Monitor<wbr>Status<wbr>Inactive</dt>
+    <dd>Inactive</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Checking<wbr>Endpoints</dt>
-    <dd>CheckingEndpoints</dd>
-    <dt>Online</dt>
-    <dd>Online</dd>
-    <dt>Degraded</dt>
-    <dd>Degraded</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Inactive</dt>
-    <dd>Inactive</dd>
-</dl>
+<dl class="tabular"><dt>Checking<wbr>Endpoints</dt>
+    <dd>CheckingEndpoints</dd><dt>Online</dt>
+    <dd>Online</dd><dt>Degraded</dt>
+    <dd>Degraded</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Inactive</dt>
+    <dd>Inactive</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CHECKING_ENDPOINTS</dt>
-    <dd>CheckingEndpoints</dd>
-    <dt>ONLINE</dt>
-    <dd>Online</dd>
-    <dt>DEGRADED</dt>
-    <dd>Degraded</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>INACTIVE</dt>
-    <dd>Inactive</dd>
-</dl>
+<dl class="tabular"><dt>CHECKING_ENDPOINTS</dt>
+    <dd>CheckingEndpoints</dd><dt>ONLINE</dt>
+    <dd>Online</dd><dt>DEGRADED</dt>
+    <dd>Degraded</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>INACTIVE</dt>
+    <dd>Inactive</dd></dl>
 {{% /choosable %}}
 
 <h4 id="profilestatus">Profile<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Profile<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Profile<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Profile<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Profile<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficroutingmethod">Traffic<wbr>Routing<wbr>Method</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Performance</dt>
-    <dd>Performance</dd>
-    <dt>Priority</dt>
-    <dd>Priority</dd>
-    <dt>Weighted</dt>
-    <dd>Weighted</dd>
-    <dt>Geographic</dt>
-    <dd>Geographic</dd>
-    <dt>Multi<wbr>Value</dt>
-    <dd>MultiValue</dd>
-    <dt>Subnet</dt>
-    <dd>Subnet</dd>
-</dl>
+<dl class="tabular"><dt>Performance</dt>
+    <dd>Performance</dd><dt>Priority</dt>
+    <dd>Priority</dd><dt>Weighted</dt>
+    <dd>Weighted</dd><dt>Geographic</dt>
+    <dd>Geographic</dd><dt>Multi<wbr>Value</dt>
+    <dd>MultiValue</dd><dt>Subnet</dt>
+    <dd>Subnet</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Traffic<wbr>Routing<wbr>Method<wbr>Performance</dt>
-    <dd>Performance</dd>
-    <dt>Traffic<wbr>Routing<wbr>Method<wbr>Priority</dt>
-    <dd>Priority</dd>
-    <dt>Traffic<wbr>Routing<wbr>Method<wbr>Weighted</dt>
-    <dd>Weighted</dd>
-    <dt>Traffic<wbr>Routing<wbr>Method<wbr>Geographic</dt>
-    <dd>Geographic</dd>
-    <dt>Traffic<wbr>Routing<wbr>Method<wbr>Multi<wbr>Value</dt>
-    <dd>MultiValue</dd>
-    <dt>Traffic<wbr>Routing<wbr>Method<wbr>Subnet</dt>
-    <dd>Subnet</dd>
-</dl>
+<dl class="tabular"><dt>Traffic<wbr>Routing<wbr>Method<wbr>Performance</dt>
+    <dd>Performance</dd><dt>Traffic<wbr>Routing<wbr>Method<wbr>Priority</dt>
+    <dd>Priority</dd><dt>Traffic<wbr>Routing<wbr>Method<wbr>Weighted</dt>
+    <dd>Weighted</dd><dt>Traffic<wbr>Routing<wbr>Method<wbr>Geographic</dt>
+    <dd>Geographic</dd><dt>Traffic<wbr>Routing<wbr>Method<wbr>Multi<wbr>Value</dt>
+    <dd>MultiValue</dd><dt>Traffic<wbr>Routing<wbr>Method<wbr>Subnet</dt>
+    <dd>Subnet</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Performance</dt>
-    <dd>Performance</dd>
-    <dt>Priority</dt>
-    <dd>Priority</dd>
-    <dt>Weighted</dt>
-    <dd>Weighted</dd>
-    <dt>Geographic</dt>
-    <dd>Geographic</dd>
-    <dt>Multi<wbr>Value</dt>
-    <dd>MultiValue</dd>
-    <dt>Subnet</dt>
-    <dd>Subnet</dd>
-</dl>
+<dl class="tabular"><dt>Performance</dt>
+    <dd>Performance</dd><dt>Priority</dt>
+    <dd>Priority</dd><dt>Weighted</dt>
+    <dd>Weighted</dd><dt>Geographic</dt>
+    <dd>Geographic</dd><dt>Multi<wbr>Value</dt>
+    <dd>MultiValue</dd><dt>Subnet</dt>
+    <dd>Subnet</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PERFORMANCE</dt>
-    <dd>Performance</dd>
-    <dt>PRIORITY</dt>
-    <dd>Priority</dd>
-    <dt>WEIGHTED</dt>
-    <dd>Weighted</dd>
-    <dt>GEOGRAPHIC</dt>
-    <dd>Geographic</dd>
-    <dt>MULTI_VALUE</dt>
-    <dd>MultiValue</dd>
-    <dt>SUBNET</dt>
-    <dd>Subnet</dd>
-</dl>
+<dl class="tabular"><dt>PERFORMANCE</dt>
+    <dd>Performance</dd><dt>PRIORITY</dt>
+    <dd>Priority</dd><dt>WEIGHTED</dt>
+    <dd>Weighted</dd><dt>GEOGRAPHIC</dt>
+    <dd>Geographic</dd><dt>MULTI_VALUE</dt>
+    <dd>MultiValue</dd><dt>SUBNET</dt>
+    <dd>Subnet</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficviewenrollmentstatus">Traffic<wbr>View<wbr>Enrollment<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Traffic<wbr>View<wbr>Enrollment<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Traffic<wbr>View<wbr>Enrollment<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Traffic<wbr>View<wbr>Enrollment<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Traffic<wbr>View<wbr>Enrollment<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 ## Import
 

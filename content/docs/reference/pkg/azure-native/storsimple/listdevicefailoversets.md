@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoversetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Failover<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -217,14 +192,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoversetresponse">[]Failover<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -232,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoversetresponse">Failover<wbr>Set<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoversetresponse">Sequence[Failover<wbr>Set<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of failover sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iseligibleforfailover_csharp">
 <a href="#iseligibleforfailover_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Eligible<wbr>For<wbr>Failover</a>
@@ -281,14 +246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -296,8 +258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iseligibleforfailover_go">
 <a href="#iseligibleforfailover_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Eligible<wbr>For<wbr>Failover</a>
@@ -305,14 +266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -320,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iseligibleforfailover_nodejs">
 <a href="#iseligibleforfailover_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Eligible<wbr>For<wbr>Failover</a>
@@ -329,14 +286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -344,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error message, if the failover set is not eligible for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_eligible_for_failover_python">
 <a href="#is_eligible_for_failover_python" style="color: inherit; text-decoration: inherit;">is_<wbr>eligible_<wbr>for_<wbr>failover</a>
@@ -353,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents if this failover set is eligible for failover or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="failoversetresponse">Failover<wbr>Set<wbr>Response</h4>
@@ -362,9 +314,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibilityresult_csharp">
 <a href="#eligibilityresult_csharp" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
@@ -372,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoverseteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumecontainers_csharp">
 <a href="#volumecontainers_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Containers</a>
@@ -381,14 +330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibilityresult_go">
 <a href="#eligibilityresult_go" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
@@ -396,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoverseteligibilityresultresponse">Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumecontainers_go">
 <a href="#volumecontainers_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Containers</a>
@@ -405,14 +350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">[]Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibilityresult_nodejs">
 <a href="#eligibilityresult_nodejs" style="color: inherit; text-decoration: inherit;">eligibility<wbr>Result</a>
@@ -420,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoverseteligibilityresultresponse">Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumecontainers_nodejs">
 <a href="#volumecontainers_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Containers</a>
@@ -429,14 +370,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibility_result_python">
 <a href="#eligibility_result_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>result</a>
@@ -444,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failoverseteligibilityresultresponse">Failover<wbr>Set<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the failover set, for failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_containers_python">
 <a href="#volume_containers_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>containers</a>
@@ -453,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumecontainerfailovermetadataresponse">Sequence[Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of meta data of volume containers, which are part of the failover set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumecontainerfailovermetadataresponse">Volume<wbr>Container<wbr>Failover<wbr>Metadata<wbr>Response</h4>
@@ -462,9 +398,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="volumecontainerid_csharp">
 <a href="#volumecontainerid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Id</a>
@@ -472,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -481,14 +414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumefailovermetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="volumecontainerid_go">
 <a href="#volumecontainerid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Id</a>
@@ -496,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_go">
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -505,14 +434,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumefailovermetadataresponse">[]Volume<wbr>Failover<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="volumecontainerid_nodejs">
 <a href="#volumecontainerid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Container<wbr>Id</a>
@@ -520,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -529,14 +454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumefailovermetadataresponse">Volume<wbr>Failover<wbr>Metadata<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="volume_container_id_python">
 <a href="#volume_container_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>container_<wbr>id</a>
@@ -544,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -553,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumefailovermetadataresponse">Sequence[Volume<wbr>Failover<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumefailovermetadataresponse">Volume<wbr>Failover<wbr>Metadata<wbr>Response</h4>
@@ -562,9 +482,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupcreateddate_csharp">
 <a href="#backupcreateddate_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Created<wbr>Date</a>
@@ -572,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupelementid_csharp">
 <a href="#backupelementid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Element<wbr>Id</a>
@@ -581,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupid_csharp">
 <a href="#backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
@@ -590,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_csharp">
 <a href="#backuppolicyid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
@@ -599,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeinbytes_csharp">
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -608,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -617,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -626,14 +538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupcreateddate_go">
 <a href="#backupcreateddate_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Created<wbr>Date</a>
@@ -641,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupelementid_go">
 <a href="#backupelementid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Element<wbr>Id</a>
@@ -650,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupid_go">
 <a href="#backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
@@ -659,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_go">
 <a href="#backuppolicyid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Id</a>
@@ -668,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeinbytes_go">
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -677,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -686,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -695,14 +598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupcreateddate_nodejs">
 <a href="#backupcreateddate_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Created<wbr>Date</a>
@@ -710,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupelementid_nodejs">
 <a href="#backupelementid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Element<wbr>Id</a>
@@ -719,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupid_nodejs">
 <a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
@@ -728,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuppolicyid_nodejs">
 <a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
@@ -737,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeinbytes_nodejs">
 <a href="#sizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Bytes</a>
@@ -746,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -755,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -764,14 +658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backup_created_date_python">
 <a href="#backup_created_date_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>created_<wbr>date</a>
@@ -779,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The date at which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_element_id_python">
 <a href="#backup_element_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>element_<wbr>id</a>
@@ -788,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup-element for this volume, inside the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_id_python">
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
@@ -797,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_policy_id_python">
 <a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
@@ -806,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the backup policy using which the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_in_bytes_python">
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
@@ -815,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the volume in bytes at the time the snapshot was taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -824,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -833,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

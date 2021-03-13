@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_csharp">
 <a href="#datamanagername_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_csharp">
 <a href="#datastorename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_go">
 <a href="#datamanagername_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_go">
 <a href="#datastorename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_nodejs">
 <a href="#datamanagername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manager<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_nodejs">
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_manager_name_python">
 <a href="#data_manager_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manager_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_store_name_python">
 <a href="#data_store_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data store/repository name queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datastoretypeid_csharp">
 <a href="#datastoretypeid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type<wbr>Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customersecrets_csharp">
 <a href="#customersecrets_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Outputs.<wbr>Customer<wbr>Secret<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extendedproperties_csharp">
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repositoryid_csharp">
 <a href="#repositoryid_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -265,14 +236,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datastoretypeid_go">
 <a href="#datastoretypeid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type<wbr>Id</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customersecrets_go">
 <a href="#customersecrets_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">[]Customer<wbr>Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extendedproperties_go">
 <a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repositoryid_go">
 <a href="#repositoryid_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datastoretypeid_nodejs">
 <a href="#datastoretypeid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type<wbr>Id</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customersecrets_nodejs">
 <a href="#customersecrets_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Secrets</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">Customer<wbr>Secret<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extendedproperties_nodejs">
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repositoryid_nodejs">
 <a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
@@ -421,14 +372,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_store_type_id_python">
 <a href="#data_store_type_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type_<wbr>id</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_secrets_python">
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">Sequence[Customer<wbr>Secret<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extended_properties_python">
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repository_id_python">
 <a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,9 +454,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -542,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -557,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -575,14 +506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -599,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -608,14 +534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

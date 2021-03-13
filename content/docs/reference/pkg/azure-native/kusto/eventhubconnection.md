@@ -14,11 +14,17 @@ Class representing an event hub connection.
 API Version: 2018-09-07-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### KustoEventHubConnectionsCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -43,9 +49,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -75,9 +84,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -94,9 +106,12 @@ event_hub_connection = azure_native.kusto.EventHubConnection("eventHubConnection
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -114,9 +129,16 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EventHubConnection Resource {#create}
@@ -141,9 +163,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -151,9 +171,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -161,9 +179,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -171,10 +187,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,9 +213,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -210,9 +221,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -220,9 +229,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -230,9 +237,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -240,18 +245,13 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -259,9 +259,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -269,9 +267,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -279,10 +275,7 @@ const eventHubConnection = new azure_native.kusto.EventHubConnection("eventHubCo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -297,9 +290,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -307,8 +298,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="consumergroup_csharp">
 <a href="#consumergroup_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group</a>
@@ -316,8 +306,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -325,8 +314,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubresourceid_csharp">
 <a href="#eventhubresourceid_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -334,8 +322,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -343,8 +330,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataformat_csharp">
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
@@ -352,8 +338,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubconnectionname_csharp">
 <a href="#eventhubconnectionname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Connection<wbr>Name</a>
@@ -361,8 +346,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -370,8 +354,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappingrulename_csharp">
 <a href="#mappingrulename_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Rule<wbr>Name</a>
@@ -379,8 +362,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -388,14 +370,11 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -403,8 +382,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="consumergroup_go">
 <a href="#consumergroup_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group</a>
@@ -412,8 +390,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -421,8 +398,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubresourceid_go">
 <a href="#eventhubresourceid_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -430,8 +406,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -439,8 +414,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataformat_go">
 <a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
@@ -448,8 +422,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataformat">Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubconnectionname_go">
 <a href="#eventhubconnectionname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Connection<wbr>Name</a>
@@ -457,8 +430,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -466,8 +438,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappingrulename_go">
 <a href="#mappingrulename_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Rule<wbr>Name</a>
@@ -475,8 +446,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -484,14 +454,11 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -499,8 +466,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="consumergroup_nodejs">
 <a href="#consumergroup_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group</a>
@@ -508,8 +474,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -517,8 +482,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubresourceid_nodejs">
 <a href="#eventhubresourceid_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -526,8 +490,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -535,8 +498,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataformat_nodejs">
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
@@ -544,8 +506,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataformat">Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubconnectionname_nodejs">
 <a href="#eventhubconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Connection<wbr>Name</a>
@@ -553,8 +514,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -562,8 +522,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappingrulename_nodejs">
 <a href="#mappingrulename_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Rule<wbr>Name</a>
@@ -571,8 +530,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -580,14 +538,11 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -595,8 +550,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="consumer_group_python">
 <a href="#consumer_group_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group</a>
@@ -604,8 +558,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The event hub consumer group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -613,8 +566,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database in the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="event_hub_resource_id_python">
 <a href="#event_hub_resource_id_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>resource_<wbr>id</a>
@@ -622,8 +574,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the event hub to be used to create a data connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -631,8 +582,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_format_python">
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
@@ -640,8 +590,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#dataformat">Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data format of the message. Optionally the data format can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_connection_name_python">
 <a href="#event_hub_connection_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>connection_<wbr>name</a>
@@ -649,8 +598,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the event hub connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -658,8 +606,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapping_rule_name_python">
 <a href="#mapping_rule_name_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>rule_<wbr>name</a>
@@ -667,8 +614,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -676,8 +622,7 @@ The EventHubConnection resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The table where the data should be ingested. Optionally the table information can be added to each message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -688,9 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -698,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -707,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -716,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -731,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -740,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -749,14 +685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -764,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -773,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -782,14 +713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -797,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -806,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -815,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -832,47 +757,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="dataformat">Data<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>MULTIJSON</dt>
-    <dd>MULTIJSON</dd>
-    <dt>JSON</dt>
-    <dd>JSON</dd>
-    <dt>CSV</dt>
-    <dd>CSV</dd>
-</dl>
+<dl class="tabular"><dt>MULTIJSON</dt>
+    <dd>MULTIJSON</dd><dt>JSON</dt>
+    <dd>JSON</dd><dt>CSV</dt>
+    <dd>CSV</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Data<wbr>Format<wbr>MULTIJSON</dt>
-    <dd>MULTIJSON</dd>
-    <dt>Data<wbr>Format<wbr>JSON</dt>
-    <dd>JSON</dd>
-    <dt>Data<wbr>Format<wbr>CSV</dt>
-    <dd>CSV</dd>
-</dl>
+<dl class="tabular"><dt>Data<wbr>Format<wbr>MULTIJSON</dt>
+    <dd>MULTIJSON</dd><dt>Data<wbr>Format<wbr>JSON</dt>
+    <dd>JSON</dd><dt>Data<wbr>Format<wbr>CSV</dt>
+    <dd>CSV</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>MULTIJSON</dt>
-    <dd>MULTIJSON</dd>
-    <dt>JSON</dt>
-    <dd>JSON</dd>
-    <dt>CSV</dt>
-    <dd>CSV</dd>
-</dl>
+<dl class="tabular"><dt>MULTIJSON</dt>
+    <dd>MULTIJSON</dd><dt>JSON</dt>
+    <dd>JSON</dd><dt>CSV</dt>
+    <dd>CSV</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MULTIJSON</dt>
-    <dd>MULTIJSON</dd>
-    <dt>JSON</dt>
-    <dd>JSON</dd>
-    <dt>CSV</dt>
-    <dd>CSV</dd>
-</dl>
+<dl class="tabular"><dt>MULTIJSON</dt>
+    <dd>MULTIJSON</dd><dt>JSON</dt>
+    <dd>JSON</dd><dt>CSV</dt>
+    <dd>CSV</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ Contains the job information.
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create export job
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -71,9 +77,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -126,9 +135,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -166,9 +178,12 @@ job = azure_native.importexport.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -207,10 +222,17 @@ const job = new azure_native.importexport.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create import job
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -267,9 +289,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -326,9 +351,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -370,9 +398,12 @@ job = azure_native.importexport.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -415,9 +446,16 @@ const job = new azure_native.importexport.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Job Resource {#create}
@@ -442,9 +480,7 @@ const job = new azure_native.importexport.Job("job", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -452,9 +488,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -462,9 +496,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -472,10 +504,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -501,9 +530,7 @@ const job = new azure_native.importexport.Job("job", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -511,9 +538,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -521,9 +546,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -531,9 +554,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -541,18 +562,13 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -560,9 +576,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -570,9 +584,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -580,10 +592,7 @@ const job = new azure_native.importexport.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -598,9 +607,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -608,8 +615,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -617,8 +623,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -626,8 +631,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -635,8 +639,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -644,14 +647,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -659,8 +659,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -668,8 +667,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -677,8 +675,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -686,8 +683,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdetails">Job<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -695,14 +691,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -710,8 +703,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
@@ -719,8 +711,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -728,8 +719,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -737,8 +727,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdetails">Job<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -746,14 +735,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -761,8 +747,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name uniquely identifies the resource group within the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
@@ -770,8 +755,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the import/export job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -779,8 +763,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the supported Azure location where the job should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -788,8 +771,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdetails">Job<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -797,8 +779,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the tags that will be assigned to the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,9 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -828,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -837,8 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -846,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -855,14 +830,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Outputs.<wbr>Identity<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -870,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -879,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -888,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -897,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -906,14 +874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitydetailsresponse">Identity<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -921,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -930,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -939,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -948,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -957,14 +918,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitydetailsresponse">Identity<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -972,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -981,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -990,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SystemData of ImportExport Jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -999,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the job resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1008,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitydetailsresponse">Identity<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the job identity details{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1025,9 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="deliverypackageinformation">Delivery<wbr>Package<wbr>Information</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -1035,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_csharp">
 <a href="#trackingnumber_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -1044,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivecount_csharp">
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -1053,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipdate_csharp">
 <a href="#shipdate_csharp" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -1062,14 +1010,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -1077,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_go">
 <a href="#trackingnumber_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -1086,8 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivecount_go">
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -1095,8 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipdate_go">
 <a href="#shipdate_go" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -1104,14 +1046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -1119,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_nodejs">
 <a href="#trackingnumber_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Number</a>
@@ -1128,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivecount_nodejs">
 <a href="#drivecount_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Count</a>
@@ -1137,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipdate_nodejs">
 <a href="#shipdate_nodejs" style="color: inherit; text-decoration: inherit;">ship<wbr>Date</a>
@@ -1146,14 +1082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -1161,8 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_number_python">
 <a href="#tracking_number_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>number</a>
@@ -1170,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_count_python">
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
@@ -1179,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ship_date_python">
 <a href="#ship_date_python" style="color: inherit; text-decoration: inherit;">ship_<wbr>date</a>
@@ -1188,16 +1118,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -1205,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_csharp">
 <a href="#trackingnumber_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -1214,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivecount_csharp">
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -1223,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipdate_csharp">
 <a href="#shipdate_csharp" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -1232,14 +1156,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -1247,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_go">
 <a href="#trackingnumber_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -1256,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivecount_go">
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -1265,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipdate_go">
 <a href="#shipdate_go" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -1274,14 +1192,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -1289,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_nodejs">
 <a href="#trackingnumber_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Number</a>
@@ -1298,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivecount_nodejs">
 <a href="#drivecount_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Count</a>
@@ -1307,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipdate_nodejs">
 <a href="#shipdate_nodejs" style="color: inherit; text-decoration: inherit;">ship<wbr>Date</a>
@@ -1316,14 +1228,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -1331,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_number_python">
 <a href="#tracking_number_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>number</a>
@@ -1340,8 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_count_python">
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
@@ -1349,8 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ship_date_python">
 <a href="#ship_date_python" style="color: inherit; text-decoration: inherit;">ship_<wbr>date</a>
@@ -1358,94 +1264,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="drivestate">Drive<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Specified</dt>
-    <dd>Specified</dd>
-    <dt>Received</dt>
-    <dd>Received</dd>
-    <dt>Never<wbr>Received</dt>
-    <dd>NeverReceived</dd>
-    <dt>Transferring</dt>
-    <dd>Transferring</dd>
-    <dt>Completed</dt>
-    <dd>Completed</dd>
-    <dt>Completed<wbr>More<wbr>Info</dt>
-    <dd>CompletedMoreInfo</dd>
-    <dt>Shipped<wbr>Back</dt>
-    <dd>ShippedBack</dd>
-</dl>
+<dl class="tabular"><dt>Specified</dt>
+    <dd>Specified</dd><dt>Received</dt>
+    <dd>Received</dd><dt>Never<wbr>Received</dt>
+    <dd>NeverReceived</dd><dt>Transferring</dt>
+    <dd>Transferring</dd><dt>Completed</dt>
+    <dd>Completed</dd><dt>Completed<wbr>More<wbr>Info</dt>
+    <dd>CompletedMoreInfo</dd><dt>Shipped<wbr>Back</dt>
+    <dd>ShippedBack</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Drive<wbr>State<wbr>Specified</dt>
-    <dd>Specified</dd>
-    <dt>Drive<wbr>State<wbr>Received</dt>
-    <dd>Received</dd>
-    <dt>Drive<wbr>State<wbr>Never<wbr>Received</dt>
-    <dd>NeverReceived</dd>
-    <dt>Drive<wbr>State<wbr>Transferring</dt>
-    <dd>Transferring</dd>
-    <dt>Drive<wbr>State<wbr>Completed</dt>
-    <dd>Completed</dd>
-    <dt>Drive<wbr>State<wbr>Completed<wbr>More<wbr>Info</dt>
-    <dd>CompletedMoreInfo</dd>
-    <dt>Drive<wbr>State<wbr>Shipped<wbr>Back</dt>
-    <dd>ShippedBack</dd>
-</dl>
+<dl class="tabular"><dt>Drive<wbr>State<wbr>Specified</dt>
+    <dd>Specified</dd><dt>Drive<wbr>State<wbr>Received</dt>
+    <dd>Received</dd><dt>Drive<wbr>State<wbr>Never<wbr>Received</dt>
+    <dd>NeverReceived</dd><dt>Drive<wbr>State<wbr>Transferring</dt>
+    <dd>Transferring</dd><dt>Drive<wbr>State<wbr>Completed</dt>
+    <dd>Completed</dd><dt>Drive<wbr>State<wbr>Completed<wbr>More<wbr>Info</dt>
+    <dd>CompletedMoreInfo</dd><dt>Drive<wbr>State<wbr>Shipped<wbr>Back</dt>
+    <dd>ShippedBack</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Specified</dt>
-    <dd>Specified</dd>
-    <dt>Received</dt>
-    <dd>Received</dd>
-    <dt>Never<wbr>Received</dt>
-    <dd>NeverReceived</dd>
-    <dt>Transferring</dt>
-    <dd>Transferring</dd>
-    <dt>Completed</dt>
-    <dd>Completed</dd>
-    <dt>Completed<wbr>More<wbr>Info</dt>
-    <dd>CompletedMoreInfo</dd>
-    <dt>Shipped<wbr>Back</dt>
-    <dd>ShippedBack</dd>
-</dl>
+<dl class="tabular"><dt>Specified</dt>
+    <dd>Specified</dd><dt>Received</dt>
+    <dd>Received</dd><dt>Never<wbr>Received</dt>
+    <dd>NeverReceived</dd><dt>Transferring</dt>
+    <dd>Transferring</dd><dt>Completed</dt>
+    <dd>Completed</dd><dt>Completed<wbr>More<wbr>Info</dt>
+    <dd>CompletedMoreInfo</dd><dt>Shipped<wbr>Back</dt>
+    <dd>ShippedBack</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SPECIFIED</dt>
-    <dd>Specified</dd>
-    <dt>RECEIVED</dt>
-    <dd>Received</dd>
-    <dt>NEVER_RECEIVED</dt>
-    <dd>NeverReceived</dd>
-    <dt>TRANSFERRING</dt>
-    <dd>Transferring</dd>
-    <dt>COMPLETED</dt>
-    <dd>Completed</dd>
-    <dt>COMPLETED_MORE_INFO</dt>
-    <dd>CompletedMoreInfo</dd>
-    <dt>SHIPPED_BACK</dt>
-    <dd>ShippedBack</dd>
-</dl>
+<dl class="tabular"><dt>SPECIFIED</dt>
+    <dd>Specified</dd><dt>RECEIVED</dt>
+    <dd>Received</dd><dt>NEVER_RECEIVED</dt>
+    <dd>NeverReceived</dd><dt>TRANSFERRING</dt>
+    <dd>Transferring</dd><dt>COMPLETED</dt>
+    <dd>Completed</dd><dt>COMPLETED_MORE_INFO</dt>
+    <dd>CompletedMoreInfo</dd><dt>SHIPPED_BACK</dt>
+    <dd>ShippedBack</dd></dl>
 {{% /choosable %}}
 
 <h4 id="drivestatus">Drive<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bitlockerkey_csharp">
 <a href="#bitlockerkey_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Locker<wbr>Key</a>
@@ -1453,8 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytessucceeded_csharp">
 <a href="#bytessucceeded_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
@@ -1462,8 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copystatus_csharp">
 <a href="#copystatus_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Status</a>
@@ -1471,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveheaderhash_csharp">
 <a href="#driveheaderhash_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Header<wbr>Hash</a>
@@ -1480,8 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveid_csharp">
 <a href="#driveid_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Id</a>
@@ -1489,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorloguri_csharp">
 <a href="#errorloguri_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Log<wbr>Uri</a>
@@ -1498,8 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestfile_csharp">
 <a href="#manifestfile_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>File</a>
@@ -1507,8 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesthash_csharp">
 <a href="#manifesthash_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Hash</a>
@@ -1516,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesturi_csharp">
 <a href="#manifesturi_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Uri</a>
@@ -1525,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_csharp">
 <a href="#percentcomplete_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -1534,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1543,8 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#drivestate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Drive<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verboseloguri_csharp">
 <a href="#verboseloguri_csharp" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Log<wbr>Uri</a>
@@ -1552,14 +1412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bitlockerkey_go">
 <a href="#bitlockerkey_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Locker<wbr>Key</a>
@@ -1567,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytessucceeded_go">
 <a href="#bytessucceeded_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
@@ -1576,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copystatus_go">
 <a href="#copystatus_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Status</a>
@@ -1585,8 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveheaderhash_go">
 <a href="#driveheaderhash_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Header<wbr>Hash</a>
@@ -1594,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveid_go">
 <a href="#driveid_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Id</a>
@@ -1603,8 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorloguri_go">
 <a href="#errorloguri_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Log<wbr>Uri</a>
@@ -1612,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestfile_go">
 <a href="#manifestfile_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>File</a>
@@ -1621,8 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesthash_go">
 <a href="#manifesthash_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Hash</a>
@@ -1630,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesturi_go">
 <a href="#manifesturi_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Uri</a>
@@ -1639,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_go">
 <a href="#percentcomplete_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -1648,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1657,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#drivestate">Drive<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verboseloguri_go">
 <a href="#verboseloguri_go" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Log<wbr>Uri</a>
@@ -1666,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bitlockerkey_nodejs">
 <a href="#bitlockerkey_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
@@ -1681,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytessucceeded_nodejs">
 <a href="#bytessucceeded_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
@@ -1690,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copystatus_nodejs">
 <a href="#copystatus_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Status</a>
@@ -1699,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveheaderhash_nodejs">
 <a href="#driveheaderhash_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Header<wbr>Hash</a>
@@ -1708,8 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveid_nodejs">
 <a href="#driveid_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Id</a>
@@ -1717,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorloguri_nodejs">
 <a href="#errorloguri_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Uri</a>
@@ -1726,8 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestfile_nodejs">
 <a href="#manifestfile_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>File</a>
@@ -1735,8 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesthash_nodejs">
 <a href="#manifesthash_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Hash</a>
@@ -1744,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesturi_nodejs">
 <a href="#manifesturi_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Uri</a>
@@ -1753,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_nodejs">
 <a href="#percentcomplete_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Complete</a>
@@ -1762,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1771,8 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#drivestate">Drive<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verboseloguri_nodejs">
 <a href="#verboseloguri_nodejs" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Uri</a>
@@ -1780,14 +1612,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bit_locker_key_python">
 <a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
@@ -1795,8 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytes_succeeded_python">
 <a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
@@ -1804,8 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_status_python">
 <a href="#copy_status_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>status</a>
@@ -1813,8 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_header_hash_python">
 <a href="#drive_header_hash_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>header_<wbr>hash</a>
@@ -1822,8 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_id_python">
 <a href="#drive_id_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>id</a>
@@ -1831,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_log_uri_python">
 <a href="#error_log_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>uri</a>
@@ -1840,8 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_file_python">
 <a href="#manifest_file_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>file</a>
@@ -1849,8 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_hash_python">
 <a href="#manifest_hash_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>hash</a>
@@ -1858,8 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_uri_python">
 <a href="#manifest_uri_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>uri</a>
@@ -1867,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_complete_python">
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
@@ -1876,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1885,8 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#drivestate">Drive<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbose_log_uri_python">
 <a href="#verbose_log_uri_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>uri</a>
@@ -1894,16 +1712,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="drivestatusresponse">Drive<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bitlockerkey_csharp">
 <a href="#bitlockerkey_csharp" style="color: inherit; text-decoration: inherit;">Bit<wbr>Locker<wbr>Key</a>
@@ -1911,8 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytessucceeded_csharp">
 <a href="#bytessucceeded_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
@@ -1920,8 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copystatus_csharp">
 <a href="#copystatus_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Status</a>
@@ -1929,8 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveheaderhash_csharp">
 <a href="#driveheaderhash_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Header<wbr>Hash</a>
@@ -1938,8 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveid_csharp">
 <a href="#driveid_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Id</a>
@@ -1947,8 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorloguri_csharp">
 <a href="#errorloguri_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Log<wbr>Uri</a>
@@ -1956,8 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestfile_csharp">
 <a href="#manifestfile_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>File</a>
@@ -1965,8 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesthash_csharp">
 <a href="#manifesthash_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Hash</a>
@@ -1974,8 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesturi_csharp">
 <a href="#manifesturi_csharp" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Uri</a>
@@ -1983,8 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_csharp">
 <a href="#percentcomplete_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -1992,8 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2001,8 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verboseloguri_csharp">
 <a href="#verboseloguri_csharp" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Log<wbr>Uri</a>
@@ -2010,14 +1814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bitlockerkey_go">
 <a href="#bitlockerkey_go" style="color: inherit; text-decoration: inherit;">Bit<wbr>Locker<wbr>Key</a>
@@ -2025,8 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytessucceeded_go">
 <a href="#bytessucceeded_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
@@ -2034,8 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copystatus_go">
 <a href="#copystatus_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Status</a>
@@ -2043,8 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveheaderhash_go">
 <a href="#driveheaderhash_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Header<wbr>Hash</a>
@@ -2052,8 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveid_go">
 <a href="#driveid_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Id</a>
@@ -2061,8 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorloguri_go">
 <a href="#errorloguri_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Log<wbr>Uri</a>
@@ -2070,8 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestfile_go">
 <a href="#manifestfile_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>File</a>
@@ -2079,8 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesthash_go">
 <a href="#manifesthash_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Hash</a>
@@ -2088,8 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesturi_go">
 <a href="#manifesturi_go" style="color: inherit; text-decoration: inherit;">Manifest<wbr>Uri</a>
@@ -2097,8 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_go">
 <a href="#percentcomplete_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -2106,8 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2115,8 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verboseloguri_go">
 <a href="#verboseloguri_go" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Log<wbr>Uri</a>
@@ -2124,14 +1914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bitlockerkey_nodejs">
 <a href="#bitlockerkey_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Locker<wbr>Key</a>
@@ -2139,8 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytessucceeded_nodejs">
 <a href="#bytessucceeded_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Succeeded</a>
@@ -2148,8 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copystatus_nodejs">
 <a href="#copystatus_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Status</a>
@@ -2157,8 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveheaderhash_nodejs">
 <a href="#driveheaderhash_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Header<wbr>Hash</a>
@@ -2166,8 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driveid_nodejs">
 <a href="#driveid_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Id</a>
@@ -2175,8 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorloguri_nodejs">
 <a href="#errorloguri_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Uri</a>
@@ -2184,8 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifestfile_nodejs">
 <a href="#manifestfile_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>File</a>
@@ -2193,8 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesthash_nodejs">
 <a href="#manifesthash_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Hash</a>
@@ -2202,8 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifesturi_nodejs">
 <a href="#manifesturi_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Uri</a>
@@ -2211,8 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_nodejs">
 <a href="#percentcomplete_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Complete</a>
@@ -2220,8 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2229,8 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verboseloguri_nodejs">
 <a href="#verboseloguri_nodejs" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Uri</a>
@@ -2238,14 +2014,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bit_locker_key_python">
 <a href="#bit_locker_key_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>locker_<wbr>key</a>
@@ -2253,8 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BitLocker key used to encrypt the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bytes_succeeded_python">
 <a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
@@ -2262,8 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_status_python">
 <a href="#copy_status_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>status</a>
@@ -2271,8 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_header_hash_python">
 <a href="#drive_header_hash_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>header_<wbr>hash</a>
@@ -2280,8 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive header hash value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_id_python">
 <a href="#drive_id_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>id</a>
@@ -2289,8 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's hardware serial number, without spaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_log_uri_python">
 <a href="#error_log_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>uri</a>
@@ -2298,8 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the error log for the data transfer operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_file_python">
 <a href="#manifest_file_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>file</a>
@@ -2307,8 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative path of the manifest file on the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_hash_python">
 <a href="#manifest_hash_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>hash</a>
@@ -2316,8 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Base16-encoded MD5 hash of the manifest file on the drive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manifest_uri_python">
 <a href="#manifest_uri_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>uri</a>
@@ -2325,8 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A URI that points to the blob containing the drive manifest file. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_complete_python">
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
@@ -2334,8 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Percentage completed for the drive. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2343,8 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The drive's current state. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbose_log_uri_python">
 <a href="#verbose_log_uri_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>uri</a>
@@ -2352,54 +2114,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A URI that points to the blob containing the verbose log for the data transfer operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionkektype">Encryption<wbr>Kek<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged</dd>
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged</dd>
-</dl>
+<dl class="tabular"><dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged</dd><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Encryption<wbr>Kek<wbr>Type<wbr>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged</dd>
-    <dt>Encryption<wbr>Kek<wbr>Type<wbr>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged</dd>
-</dl>
+<dl class="tabular"><dt>Encryption<wbr>Kek<wbr>Type<wbr>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged</dd><dt>Encryption<wbr>Kek<wbr>Type<wbr>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged</dd>
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged</dd>
-</dl>
+<dl class="tabular"><dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged</dd><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MICROSOFT_MANAGED</dt>
-    <dd>MicrosoftManaged</dd>
-    <dt>CUSTOMER_MANAGED</dt>
-    <dd>CustomerManaged</dd>
-</dl>
+<dl class="tabular"><dt>MICROSOFT_MANAGED</dt>
+    <dd>MicrosoftManaged</dd><dt>CUSTOMER_MANAGED</dt>
+    <dd>CustomerManaged</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionkeydetails">Encryption<wbr>Key<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kektype_csharp">
 <a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -2407,8 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#encryptionkektype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_csharp">
 <a href="#kekurl_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -2416,8 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_csharp">
 <a href="#kekvaultresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -2425,14 +2170,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kektype_go">
 <a href="#kektype_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -2440,8 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#encryptionkektype">Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_go">
 <a href="#kekurl_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -2449,8 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_go">
 <a href="#kekvaultresourceid_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -2458,14 +2198,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kektype_nodejs">
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
@@ -2473,8 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#encryptionkektype">Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_nodejs">
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
@@ -2482,8 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_nodejs">
 <a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -2491,14 +2226,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kek_type_python">
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
@@ -2506,8 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#encryptionkektype">Encryption<wbr>Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_url_python">
 <a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
@@ -2515,8 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_vault_resource_id_python">
 <a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
@@ -2524,16 +2254,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kektype_csharp">
 <a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -2541,8 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_csharp">
 <a href="#kekurl_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -2550,8 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_csharp">
 <a href="#kekvaultresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -2559,14 +2284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kektype_go">
 <a href="#kektype_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -2574,8 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_go">
 <a href="#kekurl_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -2583,8 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_go">
 <a href="#kekvaultresourceid_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -2592,14 +2312,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kektype_nodejs">
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
@@ -2607,8 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_nodejs">
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
@@ -2616,8 +2332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_nodejs">
 <a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -2625,14 +2340,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kek_type_python">
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
@@ -2640,8 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of kek encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_url_python">
 <a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
@@ -2649,8 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the url for kek encryption key. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_vault_resource_id_python">
 <a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
@@ -2658,16 +2368,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the keyvault resource id for kek encryption key. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="export">Export</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloblistblobpath_csharp">
 <a href="#bloblistblobpath_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>List<wbr>Blob<wbr>Path</a>
@@ -2675,8 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpath_csharp">
 <a href="#blobpath_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path</a>
@@ -2684,8 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathprefix_csharp">
 <a href="#blobpathprefix_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Prefix</a>
@@ -2693,14 +2398,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloblistblobpath_go">
 <a href="#bloblistblobpath_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>List<wbr>Blob<wbr>Path</a>
@@ -2708,8 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpath_go">
 <a href="#blobpath_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path</a>
@@ -2717,8 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathprefix_go">
 <a href="#blobpathprefix_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Prefix</a>
@@ -2726,14 +2426,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloblistblobpath_nodejs">
 <a href="#bloblistblobpath_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>List<wbr>Blob<wbr>Path</a>
@@ -2741,8 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpath_nodejs">
 <a href="#blobpath_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path</a>
@@ -2750,8 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathprefix_nodejs">
 <a href="#blobpathprefix_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Prefix</a>
@@ -2759,14 +2454,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_list_blob_path_python">
 <a href="#blob_list_blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>list_<wbr>blob_<wbr>path</a>
@@ -2774,8 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_path_python">
 <a href="#blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path</a>
@@ -2783,8 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_path_prefix_python">
 <a href="#blob_path_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>prefix</a>
@@ -2792,16 +2482,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="exportresponse">Export<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloblistblobpath_csharp">
 <a href="#bloblistblobpath_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>List<wbr>Blob<wbr>Path</a>
@@ -2809,8 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpath_csharp">
 <a href="#blobpath_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path</a>
@@ -2818,8 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathprefix_csharp">
 <a href="#blobpathprefix_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Prefix</a>
@@ -2827,14 +2512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloblistblobpath_go">
 <a href="#bloblistblobpath_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>List<wbr>Blob<wbr>Path</a>
@@ -2842,8 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpath_go">
 <a href="#blobpath_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path</a>
@@ -2851,8 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathprefix_go">
 <a href="#blobpathprefix_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Prefix</a>
@@ -2860,14 +2540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloblistblobpath_nodejs">
 <a href="#bloblistblobpath_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>List<wbr>Blob<wbr>Path</a>
@@ -2875,8 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpath_nodejs">
 <a href="#blobpath_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path</a>
@@ -2884,8 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathprefix_nodejs">
 <a href="#blobpathprefix_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Prefix</a>
@@ -2893,14 +2568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_list_blob_path_python">
 <a href="#blob_list_blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>list_<wbr>blob_<wbr>path</a>
@@ -2908,8 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_path_python">
 <a href="#blob_path_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path</a>
@@ -2917,8 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of blob-path strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_path_prefix_python">
 <a href="#blob_path_prefix_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>prefix</a>
@@ -2926,16 +2596,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of blob-prefix strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identitydetailsresponse">Identity<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2943,8 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2952,8 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2961,14 +2626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2976,8 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2985,8 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2994,14 +2654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -3009,8 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -3018,8 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3027,14 +2682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3042,8 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the principal id for the identity for the job. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -3051,8 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the tenant id for the identity for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3060,16 +2710,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobdetails">Job<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupdrivemanifest_csharp">
 <a href="#backupdrivemanifest_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Drive<wbr>Manifest</a>
@@ -3077,8 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancelrequested_csharp">
 <a href="#cancelrequested_csharp" style="color: inherit; text-decoration: inherit;">Cancel<wbr>Requested</a>
@@ -3086,8 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverypackage_csharp">
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -3095,8 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticspath_csharp">
 <a href="#diagnosticspath_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Path</a>
@@ -3104,8 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivelist_csharp">
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
@@ -3113,8 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -3122,8 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_csharp">
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
@@ -3131,8 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#export">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incompletebloblisturi_csharp">
 <a href="#incompletebloblisturi_csharp" style="color: inherit; text-decoration: inherit;">Incomplete<wbr>Blob<wbr>List<wbr>Uri</a>
@@ -3140,8 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtype_csharp">
 <a href="#jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -3149,8 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -3158,8 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_csharp">
 <a href="#percentcomplete_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -3167,8 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3176,8 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnaddress_csharp">
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
@@ -3185,8 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnpackage_csharp">
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -3194,8 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnshipping_csharp">
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
@@ -3203,8 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshipping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippinginformation_csharp">
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
@@ -3212,8 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3221,8 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -3230,14 +2860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupdrivemanifest_go">
 <a href="#backupdrivemanifest_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Drive<wbr>Manifest</a>
@@ -3245,8 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancelrequested_go">
 <a href="#cancelrequested_go" style="color: inherit; text-decoration: inherit;">Cancel<wbr>Requested</a>
@@ -3254,8 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverypackage_go">
 <a href="#deliverypackage_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -3263,8 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticspath_go">
 <a href="#diagnosticspath_go" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Path</a>
@@ -3272,8 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivelist_go">
 <a href="#drivelist_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
@@ -3281,8 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatus">[]Drive<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -3290,8 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_go">
 <a href="#export_go" style="color: inherit; text-decoration: inherit;">Export</a>
@@ -3299,8 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#export">Export</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incompletebloblisturi_go">
 <a href="#incompletebloblisturi_go" style="color: inherit; text-decoration: inherit;">Incomplete<wbr>Blob<wbr>List<wbr>Uri</a>
@@ -3308,8 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtype_go">
 <a href="#jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -3317,8 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -3326,8 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_go">
 <a href="#percentcomplete_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -3335,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3344,8 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnaddress_go">
 <a href="#returnaddress_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
@@ -3353,8 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddress">Return<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -3362,8 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformation">Package<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnshipping_go">
 <a href="#returnshipping_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
@@ -3371,8 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippinginformation_go">
 <a href="#shippinginformation_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
@@ -3380,8 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3389,8 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -3398,14 +3008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupdrivemanifest_nodejs">
 <a href="#backupdrivemanifest_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Drive<wbr>Manifest</a>
@@ -3413,8 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancelrequested_nodejs">
 <a href="#cancelrequested_nodejs" style="color: inherit; text-decoration: inherit;">cancel<wbr>Requested</a>
@@ -3422,8 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverypackage_nodejs">
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
@@ -3431,8 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticspath_nodejs">
 <a href="#diagnosticspath_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Path</a>
@@ -3440,8 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivelist_nodejs">
 <a href="#drivelist_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>List</a>
@@ -3449,8 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatus">Drive<wbr>Status[]</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -3458,8 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_nodejs">
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
@@ -3467,8 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#export">Export</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incompletebloblisturi_nodejs">
 <a href="#incompletebloblisturi_nodejs" style="color: inherit; text-decoration: inherit;">incomplete<wbr>Blob<wbr>List<wbr>Uri</a>
@@ -3476,8 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtype_nodejs">
 <a href="#jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
@@ -3485,8 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -3494,8 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_nodejs">
 <a href="#percentcomplete_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Complete</a>
@@ -3503,8 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -3512,8 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnaddress_nodejs">
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
@@ -3521,8 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddress">Return<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
@@ -3530,8 +3124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformation">Package<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnshipping_nodejs">
 <a href="#returnshipping_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Shipping</a>
@@ -3539,8 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippinginformation_nodejs">
 <a href="#shippinginformation_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Information</a>
@@ -3548,8 +3140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3557,8 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -3566,14 +3156,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backup_drive_manifest_python">
 <a href="#backup_drive_manifest_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>drive_<wbr>manifest</a>
@@ -3581,8 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancel_requested_python">
 <a href="#cancel_requested_python" style="color: inherit; text-decoration: inherit;">cancel_<wbr>requested</a>
@@ -3590,8 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_package_python">
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
@@ -3599,8 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnostics_path_python">
 <a href="#diagnostics_path_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>path</a>
@@ -3608,8 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_list_python">
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
@@ -3617,8 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatus">Sequence[Drive<wbr>Status<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -3626,8 +3208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_python">
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
@@ -3635,8 +3216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#export">Export<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incomplete_blob_list_uri_python">
 <a href="#incomplete_blob_list_uri_python" style="color: inherit; text-decoration: inherit;">incomplete_<wbr>blob_<wbr>list_<wbr>uri</a>
@@ -3644,8 +3224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_type_python">
 <a href="#job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
@@ -3653,8 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -3662,8 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_complete_python">
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
@@ -3671,8 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -3680,8 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_address_python">
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
@@ -3689,8 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddress">Return<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
@@ -3698,8 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformation">Package<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_shipping_python">
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
@@ -3707,8 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_information_python">
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
@@ -3716,8 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3725,8 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -3734,16 +3304,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobdetailsresponse">Job<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupdrivemanifest_csharp">
 <a href="#backupdrivemanifest_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Drive<wbr>Manifest</a>
@@ -3751,8 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancelrequested_csharp">
 <a href="#cancelrequested_csharp" style="color: inherit; text-decoration: inherit;">Cancel<wbr>Requested</a>
@@ -3760,8 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverypackage_csharp">
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -3769,8 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticspath_csharp">
 <a href="#diagnosticspath_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Path</a>
@@ -3778,8 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivelist_csharp">
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
@@ -3787,8 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -3796,8 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_csharp">
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
@@ -3805,8 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incompletebloblisturi_csharp">
 <a href="#incompletebloblisturi_csharp" style="color: inherit; text-decoration: inherit;">Incomplete<wbr>Blob<wbr>List<wbr>Uri</a>
@@ -3814,8 +3374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtype_csharp">
 <a href="#jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -3823,8 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -3832,8 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_csharp">
 <a href="#percentcomplete_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -3841,8 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3850,8 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnaddress_csharp">
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
@@ -3859,8 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnpackage_csharp">
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -3868,8 +3422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnshipping_csharp">
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
@@ -3877,8 +3430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippinginformation_csharp">
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
@@ -3886,8 +3438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3895,8 +3446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -3904,14 +3454,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupdrivemanifest_go">
 <a href="#backupdrivemanifest_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Drive<wbr>Manifest</a>
@@ -3919,8 +3466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancelrequested_go">
 <a href="#cancelrequested_go" style="color: inherit; text-decoration: inherit;">Cancel<wbr>Requested</a>
@@ -3928,8 +3474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverypackage_go">
 <a href="#deliverypackage_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -3937,8 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticspath_go">
 <a href="#diagnosticspath_go" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Path</a>
@@ -3946,8 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivelist_go">
 <a href="#drivelist_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
@@ -3955,8 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatusresponse">[]Drive<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -3964,8 +3506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_go">
 <a href="#export_go" style="color: inherit; text-decoration: inherit;">Export</a>
@@ -3973,8 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportresponse">Export<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incompletebloblisturi_go">
 <a href="#incompletebloblisturi_go" style="color: inherit; text-decoration: inherit;">Incomplete<wbr>Blob<wbr>List<wbr>Uri</a>
@@ -3982,8 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtype_go">
 <a href="#jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
@@ -3991,8 +3530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -4000,8 +3538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_go">
 <a href="#percentcomplete_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -4009,8 +3546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4018,8 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnaddress_go">
 <a href="#returnaddress_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
@@ -4027,8 +3562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -4036,8 +3570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnshipping_go">
 <a href="#returnshipping_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
@@ -4045,8 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippinginformation_go">
 <a href="#shippinginformation_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
@@ -4054,8 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -4063,8 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -4072,14 +3602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupdrivemanifest_nodejs">
 <a href="#backupdrivemanifest_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Drive<wbr>Manifest</a>
@@ -4087,8 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancelrequested_nodejs">
 <a href="#cancelrequested_nodejs" style="color: inherit; text-decoration: inherit;">cancel<wbr>Requested</a>
@@ -4096,8 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverypackage_nodejs">
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
@@ -4105,8 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticspath_nodejs">
 <a href="#diagnosticspath_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Path</a>
@@ -4114,8 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drivelist_nodejs">
 <a href="#drivelist_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>List</a>
@@ -4123,8 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatusresponse">Drive<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -4132,8 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_nodejs">
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
@@ -4141,8 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportresponse">Export<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incompletebloblisturi_nodejs">
 <a href="#incompletebloblisturi_nodejs" style="color: inherit; text-decoration: inherit;">incomplete<wbr>Blob<wbr>List<wbr>Uri</a>
@@ -4150,8 +3670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtype_nodejs">
 <a href="#jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
@@ -4159,8 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -4168,8 +3686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentcomplete_nodejs">
 <a href="#percentcomplete_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Complete</a>
@@ -4177,8 +3694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -4186,8 +3702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnaddress_nodejs">
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
@@ -4195,8 +3710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
@@ -4204,8 +3718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="returnshipping_nodejs">
 <a href="#returnshipping_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Shipping</a>
@@ -4213,8 +3726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippinginformation_nodejs">
 <a href="#shippinginformation_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Information</a>
@@ -4222,8 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4231,8 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -4240,14 +3750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backup_drive_manifest_python">
 <a href="#backup_drive_manifest_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>drive_<wbr>manifest</a>
@@ -4255,8 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cancel_requested_python">
 <a href="#cancel_requested_python" style="color: inherit; text-decoration: inherit;">cancel_<wbr>requested</a>
@@ -4264,8 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether a request has been submitted to cancel the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_package_python">
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
@@ -4273,8 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnostics_path_python">
 <a href="#diagnostics_path_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>path</a>
@@ -4282,8 +3786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drive_list_python">
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
@@ -4291,8 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -4300,8 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_python">
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
@@ -4309,8 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incomplete_blob_list_uri_python">
 <a href="#incomplete_blob_list_uri_python" style="color: inherit; text-decoration: inherit;">incomplete_<wbr>blob_<wbr>list_<wbr>uri</a>
@@ -4318,8 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_type_python">
 <a href="#job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
@@ -4327,8 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of job{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -4336,8 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default value is Error. Indicates whether error logging or verbose logging will be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_complete_python">
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
@@ -4345,8 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Overall percentage completed for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -4354,8 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the provisioning state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_address_python">
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
@@ -4363,8 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
@@ -4372,8 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="return_shipping_python">
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
@@ -4381,8 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_information_python">
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
@@ -4390,8 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4399,8 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -4408,16 +3898,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the storage account where data will be imported to or exported from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packageinformation">Package<wbr>Information</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -4425,8 +3912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drivecount_csharp">
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -4434,8 +3920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipdate_csharp">
 <a href="#shipdate_csharp" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -4443,8 +3928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_csharp">
 <a href="#trackingnumber_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -4452,14 +3936,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -4467,8 +3948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drivecount_go">
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -4476,8 +3956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipdate_go">
 <a href="#shipdate_go" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -4485,8 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_go">
 <a href="#trackingnumber_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -4494,14 +3972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -4509,8 +3984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drivecount_nodejs">
 <a href="#drivecount_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Count</a>
@@ -4518,8 +3992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipdate_nodejs">
 <a href="#shipdate_nodejs" style="color: inherit; text-decoration: inherit;">ship<wbr>Date</a>
@@ -4527,8 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_nodejs">
 <a href="#trackingnumber_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Number</a>
@@ -4536,14 +4008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -4551,8 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drive_count_python">
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
@@ -4560,8 +4028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ship_date_python">
 <a href="#ship_date_python" style="color: inherit; text-decoration: inherit;">ship_<wbr>date</a>
@@ -4569,8 +4036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_number_python">
 <a href="#tracking_number_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>number</a>
@@ -4578,16 +4044,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packageinformationresponse">Package<wbr>Information<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -4595,8 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drivecount_csharp">
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -4604,8 +4066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipdate_csharp">
 <a href="#shipdate_csharp" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -4613,8 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_csharp">
 <a href="#trackingnumber_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -4622,14 +4082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -4637,8 +4094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drivecount_go">
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
@@ -4646,8 +4102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipdate_go">
 <a href="#shipdate_go" style="color: inherit; text-decoration: inherit;">Ship<wbr>Date</a>
@@ -4655,8 +4110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_go">
 <a href="#trackingnumber_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Number</a>
@@ -4664,14 +4118,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -4679,8 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drivecount_nodejs">
 <a href="#drivecount_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>Count</a>
@@ -4688,8 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shipdate_nodejs">
 <a href="#shipdate_nodejs" style="color: inherit; text-decoration: inherit;">ship<wbr>Date</a>
@@ -4697,8 +4146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingnumber_nodejs">
 <a href="#trackingnumber_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Number</a>
@@ -4706,14 +4154,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -4721,8 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the carrier that is used to ship the import or export drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="drive_count_python">
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
@@ -4730,8 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ship_date_python">
 <a href="#ship_date_python" style="color: inherit; text-decoration: inherit;">ship_<wbr>date</a>
@@ -4739,8 +4182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date when the package is shipped.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_number_python">
 <a href="#tracking_number_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>number</a>
@@ -4748,16 +4190,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tracking number of the package.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="returnaddress">Return<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -4765,8 +4204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -4774,8 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -4783,8 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -4792,8 +4228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -4801,8 +4236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipientname_csharp">
 <a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -4810,8 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -4819,8 +4252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -4828,8 +4260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -4837,14 +4268,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -4852,8 +4280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -4861,8 +4288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -4870,8 +4296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -4879,8 +4304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -4888,8 +4312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipientname_go">
 <a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -4897,8 +4320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -4906,8 +4328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -4915,8 +4336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -4924,14 +4344,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -4939,8 +4356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
@@ -4948,8 +4364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -4957,8 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -4966,8 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -4975,8 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipientname_nodejs">
 <a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
@@ -4984,8 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -4993,8 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -5002,8 +4412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -5011,14 +4420,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -5026,8 +4432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
@@ -5035,8 +4440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -5044,8 +4448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -5053,8 +4456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -5062,8 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipient_name_python">
 <a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
@@ -5071,8 +4472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -5080,8 +4480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -5089,8 +4488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -5098,16 +4496,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="returnaddressresponse">Return<wbr>Address<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -5115,8 +4510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -5124,8 +4518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -5133,8 +4526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -5142,8 +4534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -5151,8 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipientname_csharp">
 <a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -5160,8 +4550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -5169,8 +4558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -5178,8 +4566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -5187,14 +4574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -5202,8 +4586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -5211,8 +4594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -5220,8 +4602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -5229,8 +4610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -5238,8 +4618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipientname_go">
 <a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -5247,8 +4626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -5256,8 +4634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -5265,8 +4642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -5274,14 +4650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -5289,8 +4662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
@@ -5298,8 +4670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -5307,8 +4678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -5316,8 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -5325,8 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipientname_nodejs">
 <a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
@@ -5334,8 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -5343,8 +4710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -5352,8 +4718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -5361,14 +4726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -5376,8 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
@@ -5385,8 +4746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -5394,8 +4754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -5403,8 +4762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -5412,8 +4770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipient_name_python">
 <a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
@@ -5421,8 +4778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -5430,8 +4786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -5439,8 +4794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -5448,16 +4802,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="returnshipping">Return<wbr>Shipping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrieraccountnumber_csharp">
 <a href="#carrieraccountnumber_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Account<wbr>Number</a>
@@ -5465,8 +4816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -5474,14 +4824,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrieraccountnumber_go">
 <a href="#carrieraccountnumber_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Account<wbr>Number</a>
@@ -5489,8 +4836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -5498,14 +4844,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrieraccountnumber_nodejs">
 <a href="#carrieraccountnumber_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Account<wbr>Number</a>
@@ -5513,8 +4856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -5522,14 +4864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_account_number_python">
 <a href="#carrier_account_number_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>account_<wbr>number</a>
@@ -5537,8 +4876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -5546,16 +4884,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="returnshippingresponse">Return<wbr>Shipping<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrieraccountnumber_csharp">
 <a href="#carrieraccountnumber_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Account<wbr>Number</a>
@@ -5563,8 +4898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -5572,14 +4906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrieraccountnumber_go">
 <a href="#carrieraccountnumber_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Account<wbr>Number</a>
@@ -5587,8 +4918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -5596,14 +4926,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrieraccountnumber_nodejs">
 <a href="#carrieraccountnumber_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Account<wbr>Number</a>
@@ -5611,8 +4938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -5620,14 +4946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_account_number_python">
 <a href="#carrier_account_number_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>account_<wbr>number</a>
@@ -5635,8 +4958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The customer's account number with the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -5644,16 +4966,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The carrier's name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippinginformation">Shipping<wbr>Information</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -5661,8 +4980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -5670,8 +4988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -5679,8 +4996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -5688,8 +5004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientname_csharp">
 <a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -5697,8 +5012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -5706,8 +5020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -5715,8 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -5724,14 +5036,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -5739,8 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -5748,8 +5056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -5757,8 +5064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -5766,8 +5072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientname_go">
 <a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -5775,8 +5080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -5784,8 +5088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -5793,8 +5096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -5802,14 +5104,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -5817,8 +5116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
@@ -5826,8 +5124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -5835,8 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -5844,8 +5140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientname_nodejs">
 <a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
@@ -5853,8 +5148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -5862,8 +5156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -5871,8 +5164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -5880,14 +5172,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -5895,8 +5184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
@@ -5904,8 +5192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -5913,8 +5200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -5922,8 +5208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_name_python">
 <a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
@@ -5931,8 +5216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -5940,8 +5224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -5949,8 +5232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -5958,16 +5240,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippinginformationresponse">Shipping<wbr>Information<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinformation_csharp">
 <a href="#additionalinformation_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Information</a>
@@ -5975,8 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -5984,8 +5262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_csharp">
 <a href="#countryorregion_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -5993,8 +5270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -6002,8 +5278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -6011,8 +5286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientname_csharp">
 <a href="#recipientname_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -6020,8 +5294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -6029,8 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -6038,8 +5310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -6047,14 +5318,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinformation_go">
 <a href="#additionalinformation_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Information</a>
@@ -6062,8 +5330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -6071,8 +5338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_go">
 <a href="#countryorregion_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Or<wbr>Region</a>
@@ -6080,8 +5346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -6089,8 +5354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -6098,8 +5362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientname_go">
 <a href="#recipientname_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Name</a>
@@ -6107,8 +5370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -6116,8 +5378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -6125,8 +5386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -6134,14 +5394,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinformation_nodejs">
 <a href="#additionalinformation_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Information</a>
@@ -6149,8 +5406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -6158,8 +5414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countryorregion_nodejs">
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
@@ -6167,8 +5422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -6176,8 +5430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -6185,8 +5438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientname_nodejs">
 <a href="#recipientname_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Name</a>
@@ -6194,8 +5446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -6203,8 +5454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -6212,8 +5462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -6221,14 +5470,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additional_information_python">
 <a href="#additional_information_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>information</a>
@@ -6236,8 +5482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional shipping information for customer, specific to datacenter to which customer should send their disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -6245,8 +5490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The city name to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_or_region_python">
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
@@ -6254,8 +5498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The country or region to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -6263,8 +5506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the recipient of the returned drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -6272,8 +5514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The postal code to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_name_python">
 <a href="#recipient_name_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>name</a>
@@ -6281,8 +5522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the recipient who will receive the hard drives when they are returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -6290,8 +5530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province to use when returning the drives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -6299,8 +5538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The first line of the street address to use when returning the drives. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -6308,16 +5546,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -6325,8 +5560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -6334,8 +5568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -6343,8 +5576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -6352,8 +5584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -6361,8 +5592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -6370,14 +5600,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -6385,8 +5612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -6394,8 +5620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -6403,8 +5628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -6412,8 +5636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -6421,8 +5644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -6430,14 +5652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -6445,8 +5664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -6454,8 +5672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -6463,8 +5680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -6472,8 +5688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -6481,8 +5696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -6490,14 +5704,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -6505,8 +5716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -6514,8 +5724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -6523,8 +5732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -6532,8 +5740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -6541,8 +5748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -6550,8 +5756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

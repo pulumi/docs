@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Kusto cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing the Kusto cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -166,14 +148,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#followerdatabasedefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Outputs.<wbr>Follower<wbr>Database<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -181,14 +160,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#followerdatabasedefinitionresponse">[]Follower<wbr>Database<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -196,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#followerdatabasedefinitionresponse">Follower<wbr>Database<wbr>Definition<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -211,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#followerdatabasedefinitionresponse">Sequence[Follower<wbr>Database<wbr>Definition<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of follower database result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -226,9 +198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attacheddatabaseconfigurationname_csharp">
 <a href="#attacheddatabaseconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Configuration<wbr>Name</a>
@@ -236,8 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourceid_csharp">
 <a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -245,8 +214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -254,14 +222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attacheddatabaseconfigurationname_go">
 <a href="#attacheddatabaseconfigurationname_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Configuration<wbr>Name</a>
@@ -269,8 +234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourceid_go">
 <a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -278,8 +242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -287,14 +250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attacheddatabaseconfigurationname_nodejs">
 <a href="#attacheddatabaseconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Database<wbr>Configuration<wbr>Name</a>
@@ -302,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourceid_nodejs">
 <a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
@@ -311,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -320,14 +278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attached_database_configuration_name_python">
 <a href="#attached_database_configuration_name_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>database_<wbr>configuration_<wbr>name</a>
@@ -335,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name of the attached database configuration in the follower cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_resource_id_python">
 <a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
@@ -344,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource id of the cluster that follows a database owned by this cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -353,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The database name owned by this cluster that was followed. * in case following all databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

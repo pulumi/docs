@@ -14,11 +14,17 @@ Bot channel resource definition
 API Version: 2020-06-02.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create Alexa Bot
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -49,13 +55,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -76,9 +88,12 @@ channel = azure_native.botservice.Channel("channel",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -100,10 +115,17 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create Bot
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -135,13 +157,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -163,9 +191,12 @@ channel = azure_native.botservice.Channel("channel",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -188,10 +219,17 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create DirectLine Speech Bot
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -222,13 +260,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -249,9 +293,12 @@ channel = azure_native.botservice.Channel("channel",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -273,10 +320,17 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create Line Bot
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -313,13 +367,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -342,9 +402,12 @@ channel = azure_native.botservice.Channel("channel",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -368,9 +431,16 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Channel Resource {#create}
@@ -395,9 +465,7 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -405,9 +473,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -415,9 +481,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -425,10 +489,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -454,9 +515,7 @@ const channel = new azure_native.botservice.Channel("channel", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -464,9 +523,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -474,9 +531,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -484,9 +539,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -494,18 +547,13 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -513,9 +561,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -523,9 +569,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -533,10 +577,7 @@ const channel = new azure_native.botservice.Channel("channel", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -551,9 +592,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -561,8 +600,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -570,8 +608,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelname_csharp">
 <a href="#channelname_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Name</a>
@@ -579,8 +616,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -588,8 +624,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -597,8 +632,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -606,8 +640,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -615,8 +648,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Args</a> | <a href="#directlinechannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#directlinespeechchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a> | <a href="#emailchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Args</a> | <a href="#facebookchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Args</a> | <a href="#kikchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Args</a> | <a href="#linechannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#msteamschannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Args</a> | <a href="#skypechannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Args</a> | <a href="#slackchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Args</a> | <a href="#smschannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Args</a> | <a href="#telegramchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Args</a> | <a href="#webchatchannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -624,8 +656,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -633,14 +664,11 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -648,8 +676,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -657,8 +684,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelname_go">
 <a href="#channelname_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Name</a>
@@ -666,8 +692,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -675,8 +700,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -684,8 +708,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -693,8 +716,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -702,8 +724,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</a> | <a href="#emailchannel">Email<wbr>Channel</a> | <a href="#facebookchannel">Facebook<wbr>Channel</a> | <a href="#kikchannel">Kik<wbr>Channel</a> | <a href="#linechannel">Line<wbr>Channel</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel</a> | <a href="#skypechannel">Skype<wbr>Channel</a> | <a href="#slackchannel">Slack<wbr>Channel</a> | <a href="#smschannel">Sms<wbr>Channel</a> | <a href="#telegramchannel">Telegram<wbr>Channel</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -711,8 +732,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -720,14 +740,11 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -735,8 +752,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -744,8 +760,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelname_nodejs">
 <a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
@@ -753,8 +768,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -762,8 +776,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -771,8 +784,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -780,8 +792,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -789,8 +800,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</a> | <a href="#emailchannel">Email<wbr>Channel</a> | <a href="#facebookchannel">Facebook<wbr>Channel</a> | <a href="#kikchannel">Kik<wbr>Channel</a> | <a href="#linechannel">Line<wbr>Channel</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel</a> | <a href="#skypechannel">Skype<wbr>Channel</a> | <a href="#slackchannel">Slack<wbr>Channel</a> | <a href="#smschannel">Sms<wbr>Channel</a> | <a href="#telegramchannel">Telegram<wbr>Channel</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -798,8 +808,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -807,14 +816,11 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -822,8 +828,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -831,8 +836,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_name_python">
 <a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
@@ -840,8 +844,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -849,8 +852,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -858,8 +860,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -867,8 +868,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -876,8 +876,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel<wbr>Args</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a> | <a href="#emailchannel">Email<wbr>Channel<wbr>Args</a> | <a href="#facebookchannel">Facebook<wbr>Channel<wbr>Args</a> | <a href="#kikchannel">Kik<wbr>Channel<wbr>Args</a> | <a href="#linechannel">Line<wbr>Channel<wbr>Args</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel<wbr>Args</a> | <a href="#skypechannel">Skype<wbr>Channel<wbr>Args</a> | <a href="#slackchannel">Slack<wbr>Channel<wbr>Args</a> | <a href="#smschannel">Sms<wbr>Channel<wbr>Args</a> | <a href="#telegramchannel">Telegram<wbr>Channel<wbr>Args</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -885,8 +884,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -894,8 +892,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -906,9 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -916,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -925,8 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -934,14 +927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -949,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -958,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -967,14 +955,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -982,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -991,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1000,14 +983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1015,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1024,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1033,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1050,9 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="alexachannel">Alexa<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1060,14 +1035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1075,14 +1047,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1090,14 +1059,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1105,16 +1071,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alexachannelproperties">Alexa<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexaskillid_csharp">
 <a href="#alexaskillid_csharp" style="color: inherit; text-decoration: inherit;">Alexa<wbr>Skill<wbr>Id</a>
@@ -1122,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1131,14 +1093,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexaskillid_go">
 <a href="#alexaskillid_go" style="color: inherit; text-decoration: inherit;">Alexa<wbr>Skill<wbr>Id</a>
@@ -1146,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1155,14 +1113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexaskillid_nodejs">
 <a href="#alexaskillid_nodejs" style="color: inherit; text-decoration: inherit;">alexa<wbr>Skill<wbr>Id</a>
@@ -1170,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1179,14 +1133,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexa_skill_id_python">
 <a href="#alexa_skill_id_python" style="color: inherit; text-decoration: inherit;">alexa_<wbr>skill_<wbr>id</a>
@@ -1194,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1203,16 +1153,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexaskillid_csharp">
 <a href="#alexaskillid_csharp" style="color: inherit; text-decoration: inherit;">Alexa<wbr>Skill<wbr>Id</a>
@@ -1220,8 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1229,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointuri_csharp">
 <a href="#serviceendpointuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Uri</a>
@@ -1238,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urlfragment_csharp">
 <a href="#urlfragment_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Fragment</a>
@@ -1247,14 +1191,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexaskillid_go">
 <a href="#alexaskillid_go" style="color: inherit; text-decoration: inherit;">Alexa<wbr>Skill<wbr>Id</a>
@@ -1262,8 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1271,8 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointuri_go">
 <a href="#serviceendpointuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Uri</a>
@@ -1280,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urlfragment_go">
 <a href="#urlfragment_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Fragment</a>
@@ -1289,14 +1227,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexaskillid_nodejs">
 <a href="#alexaskillid_nodejs" style="color: inherit; text-decoration: inherit;">alexa<wbr>Skill<wbr>Id</a>
@@ -1304,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1313,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointuri_nodejs">
 <a href="#serviceendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Uri</a>
@@ -1322,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urlfragment_nodejs">
 <a href="#urlfragment_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Fragment</a>
@@ -1331,14 +1263,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alexa_skill_id_python">
 <a href="#alexa_skill_id_python" style="color: inherit; text-decoration: inherit;">alexa_<wbr>skill_<wbr>id</a>
@@ -1346,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Alexa skill Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1355,8 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_uri_python">
 <a href="#service_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>uri</a>
@@ -1364,8 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Full Uri used to configured the skill in Alexa{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_fragment_python">
 <a href="#url_fragment_python" style="color: inherit; text-decoration: inherit;">url_<wbr>fragment</a>
@@ -1373,16 +1299,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url fragment used in part of the Uri configured in Alexa{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alexachannelresponse">Alexa<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1390,14 +1313,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1405,14 +1325,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1420,14 +1337,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1435,16 +1349,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinechannel">Direct<wbr>Line<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1452,14 +1363,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1467,14 +1375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1482,14 +1387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1497,16 +1399,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_csharp">
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -1514,14 +1413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesite">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_go">
 <a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -1529,14 +1425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesite">[]Direct<wbr>Line<wbr>Site</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_nodejs">
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -1544,14 +1437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesite">Direct<wbr>Line<wbr>Site[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_python">
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -1559,16 +1449,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesite">Sequence[Direct<wbr>Line<wbr>Site<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_csharp">
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -1576,14 +1463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_go">
 <a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -1591,14 +1475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesiteresponse">[]Direct<wbr>Line<wbr>Site<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_nodejs">
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -1606,14 +1487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesiteresponse">Direct<wbr>Line<wbr>Site<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_python">
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -1621,16 +1499,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinesiteresponse">Sequence[Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinechannelresponse">Direct<wbr>Line<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1638,14 +1513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1653,14 +1525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1668,14 +1537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1683,16 +1549,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinesite">Direct<wbr>Line<wbr>Site</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1700,8 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv1enabled_csharp">
 <a href="#isv1enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>V1Enabled</a>
@@ -1709,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv3enabled_csharp">
 <a href="#isv3enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>V3Enabled</a>
@@ -1718,8 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_csharp">
 <a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -1727,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecuresiteenabled_csharp">
 <a href="#issecuresiteenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure<wbr>Site<wbr>Enabled</a>
@@ -1736,8 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedorigins_csharp">
 <a href="#trustedorigins_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Origins</a>
@@ -1745,14 +1603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1760,8 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv1enabled_go">
 <a href="#isv1enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>V1Enabled</a>
@@ -1769,8 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv3enabled_go">
 <a href="#isv3enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>V3Enabled</a>
@@ -1778,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_go">
 <a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -1787,8 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecuresiteenabled_go">
 <a href="#issecuresiteenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure<wbr>Site<wbr>Enabled</a>
@@ -1796,8 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedorigins_go">
 <a href="#trustedorigins_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Origins</a>
@@ -1805,14 +1655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -1820,8 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv1enabled_nodejs">
 <a href="#isv1enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V1Enabled</a>
@@ -1829,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv3enabled_nodejs">
 <a href="#isv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V3Enabled</a>
@@ -1838,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_nodejs">
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
@@ -1847,8 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecuresiteenabled_nodejs">
 <a href="#issecuresiteenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secure<wbr>Site<wbr>Enabled</a>
@@ -1856,8 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedorigins_nodejs">
 <a href="#trustedorigins_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Origins</a>
@@ -1865,14 +1707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -1880,8 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_v1_enabled_python">
 <a href="#is_v1_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v1_<wbr>enabled</a>
@@ -1889,8 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_v3_enabled_python">
 <a href="#is_v3_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v3_<wbr>enabled</a>
@@ -1898,8 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_name_python">
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
@@ -1907,8 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_secure_site_enabled_python">
 <a href="#is_secure_site_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure_<wbr>site_<wbr>enabled</a>
@@ -1916,8 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_origins_python">
 <a href="#trusted_origins_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>origins</a>
@@ -1925,16 +1759,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinesiteresponse">Direct<wbr>Line<wbr>Site<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -1942,8 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv1enabled_csharp">
 <a href="#isv1enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>V1Enabled</a>
@@ -1951,8 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv3enabled_csharp">
 <a href="#isv3enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>V3Enabled</a>
@@ -1960,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1969,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_csharp">
 <a href="#key2_csharp" style="color: inherit; text-decoration: inherit;">Key2</a>
@@ -1978,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="siteid_csharp">
 <a href="#siteid_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
@@ -1987,8 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_csharp">
 <a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -1996,8 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecuresiteenabled_csharp">
 <a href="#issecuresiteenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure<wbr>Site<wbr>Enabled</a>
@@ -2005,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedorigins_csharp">
 <a href="#trustedorigins_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Origins</a>
@@ -2014,14 +1837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2029,8 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv1enabled_go">
 <a href="#isv1enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>V1Enabled</a>
@@ -2038,8 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv3enabled_go">
 <a href="#isv3enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>V3Enabled</a>
@@ -2047,8 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2056,8 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_go">
 <a href="#key2_go" style="color: inherit; text-decoration: inherit;">Key2</a>
@@ -2065,8 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="siteid_go">
 <a href="#siteid_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
@@ -2074,8 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_go">
 <a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -2083,8 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecuresiteenabled_go">
 <a href="#issecuresiteenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secure<wbr>Site<wbr>Enabled</a>
@@ -2092,8 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedorigins_go">
 <a href="#trustedorigins_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Origins</a>
@@ -2101,14 +1913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -2116,8 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv1enabled_nodejs">
 <a href="#isv1enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V1Enabled</a>
@@ -2125,8 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isv3enabled_nodejs">
 <a href="#isv3enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>V3Enabled</a>
@@ -2134,8 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2143,8 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_nodejs">
 <a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
@@ -2152,8 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="siteid_nodejs">
 <a href="#siteid_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
@@ -2161,8 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_nodejs">
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
@@ -2170,8 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issecuresiteenabled_nodejs">
 <a href="#issecuresiteenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secure<wbr>Site<wbr>Enabled</a>
@@ -2179,8 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedorigins_nodejs">
 <a href="#trustedorigins_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Origins</a>
@@ -2188,14 +1989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2203,8 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_v1_enabled_python">
 <a href="#is_v1_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v1_<wbr>enabled</a>
@@ -2212,8 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_v3_enabled_python">
 <a href="#is_v3_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>v3_<wbr>enabled</a>
@@ -2221,8 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for Bot Framework V1 protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2230,8 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_python">
 <a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
@@ -2239,8 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_id_python">
 <a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>
@@ -2248,8 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_name_python">
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
@@ -2257,8 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Site name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_secure_site_enabled_python">
 <a href="#is_secure_site_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secure_<wbr>site_<wbr>enabled</a>
@@ -2266,8 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this site is enabled for authentication with Bot Framework.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_origins_python">
 <a href="#trusted_origins_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>origins</a>
@@ -2275,16 +2065,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2292,14 +2079,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2307,14 +2091,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2322,14 +2103,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2337,16 +2115,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitiveservicessubscriptionid_csharp">
 <a href="#cognitiveservicessubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
@@ -2354,8 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_csharp">
 <a href="#customspeechmodelid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2363,8 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customvoicedeploymentid_csharp">
 <a href="#customvoicedeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
@@ -2372,8 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefaultbotforcogsvcaccount_csharp">
 <a href="#isdefaultbotforcogsvcaccount_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
@@ -2381,8 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2390,14 +2161,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitiveservicessubscriptionid_go">
 <a href="#cognitiveservicessubscriptionid_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
@@ -2405,8 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_go">
 <a href="#customspeechmodelid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2414,8 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customvoicedeploymentid_go">
 <a href="#customvoicedeploymentid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
@@ -2423,8 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefaultbotforcogsvcaccount_go">
 <a href="#isdefaultbotforcogsvcaccount_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
@@ -2432,8 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2441,14 +2205,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitiveservicessubscriptionid_nodejs">
 <a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
@@ -2456,8 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_nodejs">
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2465,8 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customvoicedeploymentid_nodejs">
 <a href="#customvoicedeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
@@ -2474,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefaultbotforcogsvcaccount_nodejs">
 <a href="#isdefaultbotforcogsvcaccount_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
@@ -2483,8 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -2492,14 +2249,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitive_services_subscription_id_python">
 <a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
@@ -2507,8 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_speech_model_id_python">
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
@@ -2516,8 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_voice_deployment_id_python">
 <a href="#custom_voice_deployment_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>voice_<wbr>deployment_<wbr>id</a>
@@ -2525,8 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_default_bot_for_cog_svc_account_python">
 <a href="#is_default_bot_for_cog_svc_account_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default_<wbr>bot_<wbr>for_<wbr>cog_<wbr>svc_<wbr>account</a>
@@ -2534,8 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2543,16 +2293,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitiveservicessubscriptionid_csharp">
 <a href="#cognitiveservicessubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
@@ -2560,8 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_csharp">
 <a href="#customspeechmodelid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2569,8 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customvoicedeploymentid_csharp">
 <a href="#customvoicedeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
@@ -2578,8 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefaultbotforcogsvcaccount_csharp">
 <a href="#isdefaultbotforcogsvcaccount_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
@@ -2587,8 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2596,14 +2339,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitiveservicessubscriptionid_go">
 <a href="#cognitiveservicessubscriptionid_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
@@ -2611,8 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_go">
 <a href="#customspeechmodelid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2620,8 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customvoicedeploymentid_go">
 <a href="#customvoicedeploymentid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
@@ -2629,8 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefaultbotforcogsvcaccount_go">
 <a href="#isdefaultbotforcogsvcaccount_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
@@ -2638,8 +2375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2647,14 +2383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitiveservicessubscriptionid_nodejs">
 <a href="#cognitiveservicessubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Services<wbr>Subscription<wbr>Id</a>
@@ -2662,8 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customspeechmodelid_nodejs">
 <a href="#customspeechmodelid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Speech<wbr>Model<wbr>Id</a>
@@ -2671,8 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customvoicedeploymentid_nodejs">
 <a href="#customvoicedeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Voice<wbr>Deployment<wbr>Id</a>
@@ -2680,8 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefaultbotforcogsvcaccount_nodejs">
 <a href="#isdefaultbotforcogsvcaccount_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default<wbr>Bot<wbr>For<wbr>Cog<wbr>Svc<wbr>Account</a>
@@ -2689,8 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -2698,14 +2427,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cognitive_services_subscription_id_python">
 <a href="#cognitive_services_subscription_id_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>services_<wbr>subscription_<wbr>id</a>
@@ -2713,8 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cognitive service subscription ID to use with this channel registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_speech_model_id_python">
 <a href="#custom_speech_model_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>speech_<wbr>model_<wbr>id</a>
@@ -2722,8 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom voice deployment id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_voice_deployment_id_python">
 <a href="#custom_voice_deployment_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>voice_<wbr>deployment_<wbr>id</a>
@@ -2731,8 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom speech model id (optional).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_default_bot_for_cog_svc_account_python">
 <a href="#is_default_bot_for_cog_svc_account_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default_<wbr>bot_<wbr>for_<wbr>cog_<wbr>svc_<wbr>account</a>
@@ -2740,8 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Make this a default bot for chosen cognitive service account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2749,16 +2471,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="directlinespeechchannelresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2766,14 +2485,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2781,14 +2497,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2796,14 +2509,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2811,16 +2521,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="emailchannel">Email<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2828,14 +2535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2843,14 +2547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2858,14 +2559,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2873,16 +2571,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="emailchannelproperties">Email<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2890,8 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2899,8 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2908,14 +2601,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2923,8 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -2932,8 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2941,14 +2629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -2956,8 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -2965,8 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2974,14 +2657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -2989,8 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -2998,8 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3007,16 +2685,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -3024,8 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3033,8 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3042,14 +2715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -3057,8 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3066,8 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3075,14 +2743,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -3090,8 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -3099,8 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3108,14 +2771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -3123,8 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -3132,8 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3141,16 +2799,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="emailchannelresponse">Email<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3158,14 +2813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3173,14 +2825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3188,14 +2837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3203,16 +2849,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facebookchannel">Facebook<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3220,14 +2863,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3235,14 +2875,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3250,14 +2887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3265,16 +2899,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -3282,8 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3291,8 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsecret_csharp">
 <a href="#appsecret_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Secret</a>
@@ -3300,8 +2929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_csharp">
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -3309,14 +2937,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -3324,8 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3333,8 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsecret_go">
 <a href="#appsecret_go" style="color: inherit; text-decoration: inherit;">App<wbr>Secret</a>
@@ -3342,8 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_go">
 <a href="#pages_go" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -3351,14 +2973,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpage">[]Facebook<wbr>Page</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -3366,8 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -3375,8 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsecret_nodejs">
 <a href="#appsecret_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Secret</a>
@@ -3384,8 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_nodejs">
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -3393,14 +3009,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpage">Facebook<wbr>Page[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -3408,8 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -3417,8 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_secret_python">
 <a href="#app_secret_python" style="color: inherit; text-decoration: inherit;">app_<wbr>secret</a>
@@ -3426,8 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_python">
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -3435,16 +3045,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpage">Sequence[Facebook<wbr>Page<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -3452,8 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="callbackurl_csharp">
 <a href="#callbackurl_csharp" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
@@ -3461,8 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Callback Url{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3470,8 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verifytoken_csharp">
 <a href="#verifytoken_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Token</a>
@@ -3479,8 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsecret_csharp">
 <a href="#appsecret_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Secret</a>
@@ -3488,8 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_csharp">
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -3497,14 +3099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -3512,8 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="callbackurl_go">
 <a href="#callbackurl_go" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
@@ -3521,8 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Callback Url{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -3530,8 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verifytoken_go">
 <a href="#verifytoken_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Token</a>
@@ -3539,8 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsecret_go">
 <a href="#appsecret_go" style="color: inherit; text-decoration: inherit;">App<wbr>Secret</a>
@@ -3548,8 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_go">
 <a href="#pages_go" style="color: inherit; text-decoration: inherit;">Pages</a>
@@ -3557,14 +3151,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpageresponse">[]Facebook<wbr>Page<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -3572,8 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="callbackurl_nodejs">
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
@@ -3581,8 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Callback Url{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -3590,8 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verifytoken_nodejs">
 <a href="#verifytoken_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Token</a>
@@ -3599,8 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsecret_nodejs">
 <a href="#appsecret_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Secret</a>
@@ -3608,8 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_nodejs">
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -3617,14 +3203,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpageresponse">Facebook<wbr>Page<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -3632,8 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook application id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Facebook application id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="callback_url_python">
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
@@ -3641,8 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Callback Url{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -3650,8 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verify_token_python">
 <a href="#verify_token_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>token</a>
@@ -3659,8 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verify token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_secret_python">
 <a href="#app_secret_python" style="color: inherit; text-decoration: inherit;">app_<wbr>secret</a>
@@ -3668,8 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pages_python">
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
@@ -3677,16 +3255,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookpageresponse">Sequence[Facebook<wbr>Page<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facebookchannelresponse">Facebook<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3694,14 +3269,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3709,14 +3281,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3724,14 +3293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3739,16 +3305,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facebookpage">Facebook<wbr>Page</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3756,8 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -3765,14 +3327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3780,8 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -3789,14 +3347,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3804,8 +3359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -3813,14 +3367,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3828,8 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -3837,16 +3387,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facebookpageresponse">Facebook<wbr>Page<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3854,8 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -3863,14 +3409,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3878,8 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -3887,14 +3429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3902,8 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -3911,14 +3449,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3926,8 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Page id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Page id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -3935,16 +3469,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kikchannel">Kik<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3952,14 +3483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3967,14 +3495,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3982,14 +3507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3997,16 +3519,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kikchannelproperties">Kik<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4014,8 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -4023,8 +3541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -4032,8 +3549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -4041,14 +3557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4056,8 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -4065,8 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -4074,8 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -4083,14 +3593,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -4098,8 +3605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -4107,8 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -4116,8 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -4125,14 +3629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -4140,8 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -4149,8 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -4158,8 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -4167,16 +3665,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4184,8 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -4193,8 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -4202,8 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -4211,14 +3703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -4226,8 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -4235,8 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -4244,8 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -4253,14 +3739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -4268,8 +3751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -4277,8 +3759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -4286,8 +3767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -4295,14 +3775,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -4310,8 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -4319,8 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kik user name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Kik user name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -4328,8 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -4337,16 +3811,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kikchannelresponse">Kik<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4354,14 +3825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4369,14 +3837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4384,14 +3849,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4399,70 +3861,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Sdk</dt>
-    <dd>sdk</dd>
-    <dt>Designer</dt>
-    <dd>designer</dd>
-    <dt>Bot</dt>
-    <dd>bot</dd>
-    <dt>Function</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>Sdk</dt>
+    <dd>sdk</dd><dt>Designer</dt>
+    <dd>designer</dd><dt>Bot</dt>
+    <dd>bot</dd><dt>Function</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>Sdk</dt>
-    <dd>sdk</dd>
-    <dt>Kind<wbr>Designer</dt>
-    <dd>designer</dd>
-    <dt>Kind<wbr>Bot</dt>
-    <dd>bot</dd>
-    <dt>Kind<wbr>Function</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>Sdk</dt>
+    <dd>sdk</dd><dt>Kind<wbr>Designer</dt>
+    <dd>designer</dd><dt>Kind<wbr>Bot</dt>
+    <dd>bot</dd><dt>Kind<wbr>Function</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Sdk</dt>
-    <dd>sdk</dd>
-    <dt>Designer</dt>
-    <dd>designer</dd>
-    <dt>Bot</dt>
-    <dd>bot</dd>
-    <dt>Function</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>Sdk</dt>
+    <dd>sdk</dd><dt>Designer</dt>
+    <dd>designer</dd><dt>Bot</dt>
+    <dd>bot</dd><dt>Function</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SDK</dt>
-    <dd>sdk</dd>
-    <dt>DESIGNER</dt>
-    <dd>designer</dd>
-    <dt>BOT</dt>
-    <dd>bot</dd>
-    <dt>FUNCTION</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>SDK</dt>
+    <dd>sdk</dd><dt>DESIGNER</dt>
+    <dd>designer</dd><dt>BOT</dt>
+    <dd>bot</dd><dt>FUNCTION</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linechannel">Line<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4470,14 +3909,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4485,14 +3921,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4500,14 +3933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4515,16 +3945,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linechannelproperties">Line<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lineregistrations_csharp">
 <a href="#lineregistrations_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
@@ -4532,14 +3959,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lineregistrations_go">
 <a href="#lineregistrations_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
@@ -4547,14 +3971,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistration">[]Line<wbr>Registration</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lineregistrations_nodejs">
 <a href="#lineregistrations_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
@@ -4562,14 +3983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistration">Line<wbr>Registration[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="line_registrations_python">
 <a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
@@ -4577,16 +3995,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistration">Sequence[Line<wbr>Registration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackurl_csharp">
 <a href="#callbackurl_csharp" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
@@ -4594,8 +4009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -4603,8 +4017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lineregistrations_csharp">
 <a href="#lineregistrations_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
@@ -4612,14 +4025,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistrationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackurl_go">
 <a href="#callbackurl_go" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
@@ -4627,8 +4037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -4636,8 +4045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lineregistrations_go">
 <a href="#lineregistrations_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
@@ -4645,14 +4053,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistrationresponse">[]Line<wbr>Registration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackurl_nodejs">
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
@@ -4660,8 +4065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -4669,8 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lineregistrations_nodejs">
 <a href="#lineregistrations_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
@@ -4678,14 +4081,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistrationresponse">Line<wbr>Registration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callback_url_python">
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
@@ -4693,8 +4093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Callback Url to enter in line registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -4702,8 +4101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="line_registrations_python">
 <a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
@@ -4711,16 +4109,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#lineregistrationresponse">Sequence[Line<wbr>Registration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linechannelresponse">Line<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4728,14 +4123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4743,14 +4135,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4758,14 +4147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4773,16 +4159,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="lineregistration">Line<wbr>Registration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelaccesstoken_csharp">
 <a href="#channelaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Access<wbr>Token</a>
@@ -4790,8 +4173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsecret_csharp">
 <a href="#channelsecret_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Secret</a>
@@ -4799,14 +4181,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelaccesstoken_go">
 <a href="#channelaccesstoken_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Access<wbr>Token</a>
@@ -4814,8 +4193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsecret_go">
 <a href="#channelsecret_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Secret</a>
@@ -4823,14 +4201,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelaccesstoken_nodejs">
 <a href="#channelaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Access<wbr>Token</a>
@@ -4838,8 +4213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsecret_nodejs">
 <a href="#channelsecret_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Secret</a>
@@ -4847,14 +4221,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channel_access_token_python">
 <a href="#channel_access_token_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>access_<wbr>token</a>
@@ -4862,8 +4233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_secret_python">
 <a href="#channel_secret_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>secret</a>
@@ -4871,16 +4241,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="lineregistrationresponse">Line<wbr>Registration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="generatedid_csharp">
 <a href="#generatedid_csharp" style="color: inherit; text-decoration: inherit;">Generated<wbr>Id</a>
@@ -4888,8 +4255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelaccesstoken_csharp">
 <a href="#channelaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Access<wbr>Token</a>
@@ -4897,8 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsecret_csharp">
 <a href="#channelsecret_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Secret</a>
@@ -4906,14 +4271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="generatedid_go">
 <a href="#generatedid_go" style="color: inherit; text-decoration: inherit;">Generated<wbr>Id</a>
@@ -4921,8 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelaccesstoken_go">
 <a href="#channelaccesstoken_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Access<wbr>Token</a>
@@ -4930,8 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsecret_go">
 <a href="#channelsecret_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Secret</a>
@@ -4939,14 +4299,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="generatedid_nodejs">
 <a href="#generatedid_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Id</a>
@@ -4954,8 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelaccesstoken_nodejs">
 <a href="#channelaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Access<wbr>Token</a>
@@ -4963,8 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsecret_nodejs">
 <a href="#channelsecret_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Secret</a>
@@ -4972,14 +4327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="generated_id_python">
 <a href="#generated_id_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>id</a>
@@ -4987,8 +4339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Id generated for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_access_token_python">
 <a href="#channel_access_token_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>access_<wbr>token</a>
@@ -4996,8 +4347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Access token for the line channel registration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_secret_python">
 <a href="#channel_secret_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>secret</a>
@@ -5005,16 +4355,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret for the line channel registration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="msteamschannel">Ms<wbr>Teams<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5022,14 +4369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5037,14 +4381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5052,14 +4393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5067,16 +4405,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -5084,8 +4419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_csharp">
 <a href="#callingwebhook_csharp" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -5093,8 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_csharp">
 <a href="#enablecalling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -5102,14 +4435,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -5117,8 +4447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_go">
 <a href="#callingwebhook_go" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -5126,8 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_go">
 <a href="#enablecalling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -5135,14 +4463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -5150,8 +4475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_nodejs">
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
@@ -5159,8 +4483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_nodejs">
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
@@ -5168,14 +4491,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -5183,8 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calling_web_hook_python">
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
@@ -5192,8 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_calling_python">
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
@@ -5201,16 +4519,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -5218,8 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_csharp">
 <a href="#callingwebhook_csharp" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -5227,8 +4541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_csharp">
 <a href="#enablecalling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -5236,14 +4549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -5251,8 +4561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_go">
 <a href="#callingwebhook_go" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -5260,8 +4569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_go">
 <a href="#enablecalling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -5269,14 +4577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -5284,8 +4589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_nodejs">
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
@@ -5293,8 +4597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_nodejs">
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
@@ -5302,14 +4605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -5317,8 +4617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calling_web_hook_python">
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
@@ -5326,8 +4625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Webhook for Microsoft Teams channel calls{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_calling_python">
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
@@ -5335,16 +4633,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable calling for Microsoft Teams channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="msteamschannelresponse">Ms<wbr>Teams<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5352,14 +4647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5367,14 +4659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5382,14 +4671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5397,16 +4683,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5414,14 +4697,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5429,14 +4709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5444,14 +4721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5459,54 +4733,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuname">Sku<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>F0</dt>
-    <dd>F0</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>F0</dt>
+    <dd>F0</dd><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Name<wbr>F0</dt>
-    <dd>F0</dd>
-    <dt>Sku<wbr>Name<wbr>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Name<wbr>F0</dt>
+    <dd>F0</dd><dt>Sku<wbr>Name<wbr>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>F0</dt>
-    <dd>F0</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>F0</dt>
+    <dd>F0</dd><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>F0</dt>
-    <dd>F0</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>F0</dt>
+    <dd>F0</dd><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5514,8 +4773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -5523,14 +4781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5538,8 +4793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -5547,14 +4801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5562,8 +4813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -5571,14 +4821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5586,8 +4833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -5595,16 +4841,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skypechannel">Skype<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5612,14 +4855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5627,14 +4867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5642,14 +4879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5657,16 +4891,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skypechannelproperties">Skype<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -5674,8 +4905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_csharp">
 <a href="#callingwebhook_csharp" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -5683,8 +4913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_csharp">
 <a href="#enablecalling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -5692,8 +4921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablegroups_csharp">
 <a href="#enablegroups_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Groups</a>
@@ -5701,8 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemediacards_csharp">
 <a href="#enablemediacards_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Media<wbr>Cards</a>
@@ -5710,8 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemessaging_csharp">
 <a href="#enablemessaging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Messaging</a>
@@ -5719,8 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablescreensharing_csharp">
 <a href="#enablescreensharing_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Screen<wbr>Sharing</a>
@@ -5728,8 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevideo_csharp">
 <a href="#enablevideo_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Video</a>
@@ -5737,8 +4961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsmode_csharp">
 <a href="#groupsmode_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Mode</a>
@@ -5746,14 +4969,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -5761,8 +4981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_go">
 <a href="#callingwebhook_go" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -5770,8 +4989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_go">
 <a href="#enablecalling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -5779,8 +4997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablegroups_go">
 <a href="#enablegroups_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Groups</a>
@@ -5788,8 +5005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemediacards_go">
 <a href="#enablemediacards_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Media<wbr>Cards</a>
@@ -5797,8 +5013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemessaging_go">
 <a href="#enablemessaging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Messaging</a>
@@ -5806,8 +5021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablescreensharing_go">
 <a href="#enablescreensharing_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Screen<wbr>Sharing</a>
@@ -5815,8 +5029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevideo_go">
 <a href="#enablevideo_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Video</a>
@@ -5824,8 +5037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsmode_go">
 <a href="#groupsmode_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Mode</a>
@@ -5833,14 +5045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -5848,8 +5057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_nodejs">
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
@@ -5857,8 +5065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_nodejs">
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
@@ -5866,8 +5073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablegroups_nodejs">
 <a href="#enablegroups_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Groups</a>
@@ -5875,8 +5081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemediacards_nodejs">
 <a href="#enablemediacards_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Media<wbr>Cards</a>
@@ -5884,8 +5089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemessaging_nodejs">
 <a href="#enablemessaging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Messaging</a>
@@ -5893,8 +5097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablescreensharing_nodejs">
 <a href="#enablescreensharing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Screen<wbr>Sharing</a>
@@ -5902,8 +5105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevideo_nodejs">
 <a href="#enablevideo_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Video</a>
@@ -5911,8 +5113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsmode_nodejs">
 <a href="#groupsmode_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Mode</a>
@@ -5920,14 +5121,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -5935,8 +5133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calling_web_hook_python">
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
@@ -5944,8 +5141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_calling_python">
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
@@ -5953,8 +5149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_groups_python">
 <a href="#enable_groups_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>groups</a>
@@ -5962,8 +5157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_media_cards_python">
 <a href="#enable_media_cards_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>media_<wbr>cards</a>
@@ -5971,8 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_messaging_python">
 <a href="#enable_messaging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>messaging</a>
@@ -5980,8 +5173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_screen_sharing_python">
 <a href="#enable_screen_sharing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>screen_<wbr>sharing</a>
@@ -5989,8 +5181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_video_python">
 <a href="#enable_video_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>video</a>
@@ -5998,8 +5189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_mode_python">
 <a href="#groups_mode_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>mode</a>
@@ -6007,16 +5197,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6024,8 +5211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_csharp">
 <a href="#callingwebhook_csharp" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -6033,8 +5219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_csharp">
 <a href="#enablecalling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -6042,8 +5227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablegroups_csharp">
 <a href="#enablegroups_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Groups</a>
@@ -6051,8 +5235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemediacards_csharp">
 <a href="#enablemediacards_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Media<wbr>Cards</a>
@@ -6060,8 +5243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemessaging_csharp">
 <a href="#enablemessaging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Messaging</a>
@@ -6069,8 +5251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablescreensharing_csharp">
 <a href="#enablescreensharing_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Screen<wbr>Sharing</a>
@@ -6078,8 +5259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevideo_csharp">
 <a href="#enablevideo_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Video</a>
@@ -6087,8 +5267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsmode_csharp">
 <a href="#groupsmode_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Mode</a>
@@ -6096,14 +5275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6111,8 +5287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_go">
 <a href="#callingwebhook_go" style="color: inherit; text-decoration: inherit;">Calling<wbr>Web<wbr>Hook</a>
@@ -6120,8 +5295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_go">
 <a href="#enablecalling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Calling</a>
@@ -6129,8 +5303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablegroups_go">
 <a href="#enablegroups_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Groups</a>
@@ -6138,8 +5311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemediacards_go">
 <a href="#enablemediacards_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Media<wbr>Cards</a>
@@ -6147,8 +5319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemessaging_go">
 <a href="#enablemessaging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Messaging</a>
@@ -6156,8 +5327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablescreensharing_go">
 <a href="#enablescreensharing_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Screen<wbr>Sharing</a>
@@ -6165,8 +5335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevideo_go">
 <a href="#enablevideo_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Video</a>
@@ -6174,8 +5343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsmode_go">
 <a href="#groupsmode_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Mode</a>
@@ -6183,14 +5351,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -6198,8 +5363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="callingwebhook_nodejs">
 <a href="#callingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">calling<wbr>Web<wbr>Hook</a>
@@ -6207,8 +5371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablecalling_nodejs">
 <a href="#enablecalling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Calling</a>
@@ -6216,8 +5379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablegroups_nodejs">
 <a href="#enablegroups_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Groups</a>
@@ -6225,8 +5387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemediacards_nodejs">
 <a href="#enablemediacards_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Media<wbr>Cards</a>
@@ -6234,8 +5395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablemessaging_nodejs">
 <a href="#enablemessaging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Messaging</a>
@@ -6243,8 +5403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablescreensharing_nodejs">
 <a href="#enablescreensharing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Screen<wbr>Sharing</a>
@@ -6252,8 +5411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevideo_nodejs">
 <a href="#enablevideo_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Video</a>
@@ -6261,8 +5419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsmode_nodejs">
 <a href="#groupsmode_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Mode</a>
@@ -6270,14 +5427,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -6285,8 +5439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calling_web_hook_python">
 <a href="#calling_web_hook_python" style="color: inherit; text-decoration: inherit;">calling_<wbr>web_<wbr>hook</a>
@@ -6294,8 +5447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Calling web hook for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_calling_python">
 <a href="#enable_calling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>calling</a>
@@ -6303,8 +5455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable calling for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_groups_python">
 <a href="#enable_groups_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>groups</a>
@@ -6312,8 +5463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable groups for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_media_cards_python">
 <a href="#enable_media_cards_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>media_<wbr>cards</a>
@@ -6321,8 +5471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable media cards for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_messaging_python">
 <a href="#enable_messaging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>messaging</a>
@@ -6330,8 +5479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable messaging for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_screen_sharing_python">
 <a href="#enable_screen_sharing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>screen_<wbr>sharing</a>
@@ -6339,8 +5487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable screen sharing for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_video_python">
 <a href="#enable_video_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>video</a>
@@ -6348,8 +5495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable video for Skype channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_mode_python">
 <a href="#groups_mode_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>mode</a>
@@ -6357,16 +5503,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Group mode for Skype channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skypechannelresponse">Skype<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -6374,14 +5517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -6389,14 +5529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -6404,14 +5541,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -6419,16 +5553,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slackchannel">Slack<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -6436,14 +5567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -6451,14 +5579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -6466,14 +5591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -6481,16 +5603,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slackchannelproperties">Slack<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6498,8 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6507,8 +5625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -6516,8 +5633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landingpageurl_csharp">
 <a href="#landingpageurl_csharp" style="color: inherit; text-decoration: inherit;">Landing<wbr>Page<wbr>Url</a>
@@ -6525,8 +5641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingsecret_csharp">
 <a href="#signingsecret_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
@@ -6534,8 +5649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationtoken_csharp">
 <a href="#verificationtoken_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -6543,14 +5657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6558,8 +5669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6567,8 +5677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -6576,8 +5685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landingpageurl_go">
 <a href="#landingpageurl_go" style="color: inherit; text-decoration: inherit;">Landing<wbr>Page<wbr>Url</a>
@@ -6585,8 +5693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingsecret_go">
 <a href="#signingsecret_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
@@ -6594,8 +5701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationtoken_go">
 <a href="#verificationtoken_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -6603,14 +5709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -6618,8 +5721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -6627,8 +5729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -6636,8 +5737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landingpageurl_nodejs">
 <a href="#landingpageurl_nodejs" style="color: inherit; text-decoration: inherit;">landing<wbr>Page<wbr>Url</a>
@@ -6645,8 +5745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingsecret_nodejs">
 <a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
@@ -6654,8 +5753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationtoken_nodejs">
 <a href="#verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
@@ -6663,14 +5761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -6678,8 +5773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -6687,8 +5781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -6696,8 +5789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landing_page_url_python">
 <a href="#landing_page_url_python" style="color: inherit; text-decoration: inherit;">landing_<wbr>page_<wbr>url</a>
@@ -6705,8 +5797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signing_secret_python">
 <a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
@@ -6714,8 +5805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verification_token_python">
 <a href="#verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
@@ -6723,16 +5813,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6740,8 +5827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -6749,8 +5835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsubmissionid_csharp">
 <a href="#lastsubmissionid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Submission<wbr>Id</a>
@@ -6758,8 +5843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="redirectaction_csharp">
 <a href="#redirectaction_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Action</a>
@@ -6767,8 +5851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registerbeforeoauthflow_csharp">
 <a href="#registerbeforeoauthflow_csharp" style="color: inherit; text-decoration: inherit;">Register<wbr>Before<wbr>OAuth<wbr>Flow</a>
@@ -6776,8 +5859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6785,8 +5867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -6794,8 +5875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landingpageurl_csharp">
 <a href="#landingpageurl_csharp" style="color: inherit; text-decoration: inherit;">Landing<wbr>Page<wbr>Url</a>
@@ -6803,8 +5883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingsecret_csharp">
 <a href="#signingsecret_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
@@ -6812,8 +5891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationtoken_csharp">
 <a href="#verificationtoken_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -6821,14 +5899,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -6836,8 +5911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -6845,8 +5919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsubmissionid_go">
 <a href="#lastsubmissionid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Submission<wbr>Id</a>
@@ -6854,8 +5927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="redirectaction_go">
 <a href="#redirectaction_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Action</a>
@@ -6863,8 +5935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registerbeforeoauthflow_go">
 <a href="#registerbeforeoauthflow_go" style="color: inherit; text-decoration: inherit;">Register<wbr>Before<wbr>OAuth<wbr>Flow</a>
@@ -6872,8 +5943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6881,8 +5951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -6890,8 +5959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landingpageurl_go">
 <a href="#landingpageurl_go" style="color: inherit; text-decoration: inherit;">Landing<wbr>Page<wbr>Url</a>
@@ -6899,8 +5967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingsecret_go">
 <a href="#signingsecret_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Secret</a>
@@ -6908,8 +5975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationtoken_go">
 <a href="#verificationtoken_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -6917,14 +5983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -6932,8 +5995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -6941,8 +6003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsubmissionid_nodejs">
 <a href="#lastsubmissionid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Submission<wbr>Id</a>
@@ -6950,8 +6011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="redirectaction_nodejs">
 <a href="#redirectaction_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Action</a>
@@ -6959,8 +6019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registerbeforeoauthflow_nodejs">
 <a href="#registerbeforeoauthflow_nodejs" style="color: inherit; text-decoration: inherit;">register<wbr>Before<wbr>OAuth<wbr>Flow</a>
@@ -6968,8 +6027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -6977,8 +6035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -6986,8 +6043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landingpageurl_nodejs">
 <a href="#landingpageurl_nodejs" style="color: inherit; text-decoration: inherit;">landing<wbr>Page<wbr>Url</a>
@@ -6995,8 +6051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingsecret_nodejs">
 <a href="#signingsecret_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Secret</a>
@@ -7004,8 +6059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationtoken_nodejs">
 <a href="#verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
@@ -7013,14 +6067,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -7028,8 +6079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -7037,8 +6087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_submission_id_python">
 <a href="#last_submission_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>submission_<wbr>id</a>
@@ -7046,8 +6095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms auth token{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="redirect_action_python">
 <a href="#redirect_action_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>action</a>
@@ -7055,8 +6103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Slack redirect action{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="register_before_o_auth_flow_python">
 <a href="#register_before_o_auth_flow_python" style="color: inherit; text-decoration: inherit;">register_<wbr>before_<wbr>o_<wbr>auth_<wbr>flow</a>
@@ -7064,8 +6111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to register the settings before OAuth validation is performed. Recommended to True.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -7073,8 +6119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack client id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -7082,8 +6127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="landing_page_url_python">
 <a href="#landing_page_url_python" style="color: inherit; text-decoration: inherit;">landing_<wbr>page_<wbr>url</a>
@@ -7091,8 +6135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack landing page Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signing_secret_python">
 <a href="#signing_secret_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>secret</a>
@@ -7100,8 +6143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Slack signing secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verification_token_python">
 <a href="#verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
@@ -7109,16 +6151,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slackchannelresponse">Slack<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7126,14 +6165,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7141,14 +6177,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7156,14 +6189,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7171,16 +6201,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="smschannel">Sms<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7188,14 +6215,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7203,14 +6227,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7218,14 +6239,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7233,16 +6251,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="smschannelproperties">Sms<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountsid_csharp">
 <a href="#accountsid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>SID</a>
@@ -7250,8 +6265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7259,8 +6273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -7268,8 +6281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtoken_csharp">
 <a href="#authtoken_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token</a>
@@ -7277,8 +6289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7286,14 +6297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountsid_go">
 <a href="#accountsid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>SID</a>
@@ -7301,8 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7310,8 +6317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -7319,8 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtoken_go">
 <a href="#authtoken_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token</a>
@@ -7328,8 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7337,14 +6341,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountsid_nodejs">
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>SID</a>
@@ -7352,8 +6353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -7361,8 +6361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -7370,8 +6369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtoken_nodejs">
 <a href="#authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
@@ -7379,8 +6377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -7388,14 +6385,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_sid_python">
 <a href="#account_sid_python" style="color: inherit; text-decoration: inherit;">account_<wbr>sid</a>
@@ -7403,8 +6397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -7412,8 +6405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -7421,8 +6413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_token_python">
 <a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
@@ -7430,8 +6421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -7439,16 +6429,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountsid_csharp">
 <a href="#accountsid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>SID</a>
@@ -7456,8 +6443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7465,8 +6451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -7474,8 +6459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtoken_csharp">
 <a href="#authtoken_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token</a>
@@ -7483,8 +6467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7492,14 +6475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountsid_go">
 <a href="#accountsid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>SID</a>
@@ -7507,8 +6487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7516,8 +6495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -7525,8 +6503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtoken_go">
 <a href="#authtoken_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token</a>
@@ -7534,8 +6511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7543,14 +6519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountsid_nodejs">
 <a href="#accountsid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>SID</a>
@@ -7558,8 +6531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -7567,8 +6539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -7576,8 +6547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtoken_nodejs">
 <a href="#authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
@@ -7585,8 +6555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -7594,14 +6563,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_sid_python">
 <a href="#account_sid_python" style="color: inherit; text-decoration: inherit;">account_<wbr>sid</a>
@@ -7609,8 +6575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -7618,8 +6583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -7627,8 +6591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms phone{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms phone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_token_python">
 <a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
@@ -7636,8 +6599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -7645,16 +6607,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="smschannelresponse">Sms<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7662,14 +6621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7677,14 +6633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7692,14 +6645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7707,16 +6657,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="telegramchannel">Telegram<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7724,14 +6671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7739,14 +6683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7754,14 +6695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7769,16 +6707,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7786,8 +6721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -7795,8 +6729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7804,14 +6737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7819,8 +6749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -7828,8 +6757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7837,14 +6765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -7852,8 +6777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -7861,8 +6785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -7870,14 +6793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -7885,8 +6805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -7894,8 +6813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -7903,16 +6821,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7920,8 +6835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -7929,8 +6843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_csharp">
 <a href="#isvalidated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7938,14 +6851,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -7953,8 +6863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -7962,8 +6871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_go">
 <a href="#isvalidated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Validated</a>
@@ -7971,14 +6879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -7986,8 +6891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -7995,8 +6899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvalidated_nodejs">
 <a href="#isvalidated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Validated</a>
@@ -8004,14 +6907,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -8019,8 +6919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this channel is enabled for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -8028,8 +6927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_validated_python">
 <a href="#is_validated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>validated</a>
@@ -8037,16 +6935,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether this channel is validated for the bot{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="telegramchannelresponse">Telegram<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -8054,14 +6949,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -8069,14 +6961,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -8084,14 +6973,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -8099,16 +6985,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webchatchannel">Web<wbr>Chat<wbr>Channel</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -8116,14 +6999,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -8131,14 +7011,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -8146,14 +7023,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -8161,16 +7035,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_csharp">
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -8178,14 +7049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsite">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_go">
 <a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -8193,14 +7061,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsite">[]Web<wbr>Chat<wbr>Site</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_nodejs">
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -8208,14 +7073,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsite">Web<wbr>Chat<wbr>Site[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sites_python">
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -8223,16 +7085,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsite">Sequence[Web<wbr>Chat<wbr>Site<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="webchatembedcode_csharp">
 <a href="#webchatembedcode_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Chat<wbr>Embed<wbr>Code</a>
@@ -8240,8 +7099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_csharp">
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -8249,14 +7107,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="webchatembedcode_go">
 <a href="#webchatembedcode_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Chat<wbr>Embed<wbr>Code</a>
@@ -8264,8 +7119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_go">
 <a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
@@ -8273,14 +7127,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsiteresponse">[]Web<wbr>Chat<wbr>Site<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="webchatembedcode_nodejs">
 <a href="#webchatembedcode_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Chat<wbr>Embed<wbr>Code</a>
@@ -8288,8 +7139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_nodejs">
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -8297,14 +7147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsiteresponse">Web<wbr>Chat<wbr>Site<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="web_chat_embed_code_python">
 <a href="#web_chat_embed_code_python" style="color: inherit; text-decoration: inherit;">web_<wbr>chat_<wbr>embed_<wbr>code</a>
@@ -8312,8 +7159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Web chat control embed code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sites_python">
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
@@ -8321,16 +7167,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatsiteresponse">Sequence[Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webchatchannelresponse">Web<wbr>Chat<wbr>Channel<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -8338,14 +7181,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -8353,14 +7193,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -8368,14 +7205,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -8383,16 +7217,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webchatsite">Web<wbr>Chat<wbr>Site</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablepreview_csharp">
 <a href="#enablepreview_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Preview</a>
@@ -8400,8 +7231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -8409,8 +7239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_csharp">
 <a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -8418,14 +7247,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablepreview_go">
 <a href="#enablepreview_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Preview</a>
@@ -8433,8 +7259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -8442,8 +7267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_go">
 <a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -8451,14 +7275,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablepreview_nodejs">
 <a href="#enablepreview_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Preview</a>
@@ -8466,8 +7287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -8475,8 +7295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_nodejs">
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
@@ -8484,14 +7303,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_preview_python">
 <a href="#enable_preview_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>preview</a>
@@ -8499,8 +7315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -8508,8 +7323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_name_python">
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
@@ -8517,16 +7331,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webchatsiteresponse">Web<wbr>Chat<wbr>Site<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablepreview_csharp">
 <a href="#enablepreview_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Preview</a>
@@ -8534,8 +7345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -8543,8 +7353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -8552,8 +7361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_csharp">
 <a href="#key2_csharp" style="color: inherit; text-decoration: inherit;">Key2</a>
@@ -8561,8 +7369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="siteid_csharp">
 <a href="#siteid_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
@@ -8570,8 +7377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_csharp">
 <a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -8579,14 +7385,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablepreview_go">
 <a href="#enablepreview_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Preview</a>
@@ -8594,8 +7397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -8603,8 +7405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -8612,8 +7413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_go">
 <a href="#key2_go" style="color: inherit; text-decoration: inherit;">Key2</a>
@@ -8621,8 +7421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="siteid_go">
 <a href="#siteid_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
@@ -8630,8 +7429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_go">
 <a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
@@ -8639,14 +7437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablepreview_nodejs">
 <a href="#enablepreview_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Preview</a>
@@ -8654,8 +7449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -8663,8 +7457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -8672,8 +7465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_nodejs">
 <a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
@@ -8681,8 +7473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="siteid_nodejs">
 <a href="#siteid_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Id</a>
@@ -8690,8 +7481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sitename_nodejs">
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
@@ -8699,14 +7489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_preview_python">
 <a href="#enable_preview_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>preview</a>
@@ -8714,8 +7501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for preview versions of Webchat{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -8723,8 +7509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether this site is enabled for DirectLine channel{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -8732,8 +7517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key2_python">
 <a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
@@ -8741,8 +7525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_id_python">
 <a href="#site_id_python" style="color: inherit; text-decoration: inherit;">site_<wbr>id</a>
@@ -8750,8 +7533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="site_name_python">
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
@@ -8759,8 +7541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Site name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

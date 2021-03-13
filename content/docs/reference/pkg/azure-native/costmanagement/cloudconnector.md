@@ -14,11 +14,17 @@ The Connector model definition
 API Version: 2019-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CloudConnector_Put
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -41,9 +47,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -71,9 +80,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -88,9 +100,12 @@ cloud_connector = azure_native.costmanagement.CloudConnector("cloudConnector",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,9 +121,16 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CloudConnector Resource {#create}
@@ -133,9 +155,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -143,9 +163,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -153,9 +171,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -163,10 +179,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +205,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -202,9 +213,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -212,9 +221,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -222,9 +229,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -232,18 +237,13 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +251,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +259,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,10 +267,7 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +282,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="billingmodel_csharp">
 <a href="#billingmodel_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
@@ -299,8 +290,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#connectorbillingmodel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector billing model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectorname_csharp">
 <a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -308,8 +298,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialskey_csharp">
 <a href="#credentialskey_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Key</a>
@@ -317,8 +306,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialssecret_csharp">
 <a href="#credentialssecret_csharp" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Secret</a>
@@ -326,8 +314,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultmanagementgroupid_csharp">
 <a href="#defaultmanagementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Management<wbr>Group<wbr>Id</a>
@@ -335,8 +322,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -344,8 +330,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -353,8 +338,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reportid_csharp">
 <a href="#reportid_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Id</a>
@@ -362,8 +346,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -371,14 +354,11 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="billingmodel_go">
 <a href="#billingmodel_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Model</a>
@@ -386,8 +366,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#connectorbillingmodel">Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector billing model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectorname_go">
 <a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -395,8 +374,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialskey_go">
 <a href="#credentialskey_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Key</a>
@@ -404,8 +382,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialssecret_go">
 <a href="#credentialssecret_go" style="color: inherit; text-decoration: inherit;">Credentials<wbr>Secret</a>
@@ -413,8 +390,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultmanagementgroupid_go">
 <a href="#defaultmanagementgroupid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Management<wbr>Group<wbr>Id</a>
@@ -422,8 +398,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -431,8 +406,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -440,8 +414,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reportid_go">
 <a href="#reportid_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Id</a>
@@ -449,8 +422,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -458,14 +430,11 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="billingmodel_nodejs">
 <a href="#billingmodel_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Model</a>
@@ -473,8 +442,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#connectorbillingmodel">Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector billing model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectorname_nodejs">
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
@@ -482,8 +450,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialskey_nodejs">
 <a href="#credentialskey_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Key</a>
@@ -491,8 +458,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentialssecret_nodejs">
 <a href="#credentialssecret_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Secret</a>
@@ -500,8 +466,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultmanagementgroupid_nodejs">
 <a href="#defaultmanagementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Management<wbr>Group<wbr>Id</a>
@@ -509,8 +474,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -518,8 +482,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -527,8 +490,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reportid_nodejs">
 <a href="#reportid_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Id</a>
@@ -536,8 +498,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -545,14 +506,11 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="billing_model_python">
 <a href="#billing_model_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>model</a>
@@ -560,8 +518,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#connectorbillingmodel">Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Connector billing model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector billing model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connector_name_python">
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
@@ -569,8 +526,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_key_python">
 <a href="#credentials_key_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>key</a>
@@ -578,8 +534,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_secret_python">
 <a href="#credentials_secret_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>secret</a>
@@ -587,8 +542,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_management_group_id_python">
 <a href="#default_management_group_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>management_<wbr>group_<wbr>id</a>
@@ -596,8 +550,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -605,8 +558,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -614,8 +566,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="report_id_python">
 <a href="#report_id_python" style="color: inherit; text-decoration: inherit;">report_<wbr>id</a>
@@ -623,8 +574,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -632,8 +582,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -644,9 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collectioninfo_csharp">
 <a href="#collectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Collection<wbr>Info</a>
@@ -654,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -663,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daystrialremaining_csharp">
 <a href="#daystrialremaining_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Trial<wbr>Remaining</a>
@@ -672,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalbillingaccountid_csharp">
 <a href="#externalbillingaccountid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Billing<wbr>Account<wbr>Id</a>
@@ -681,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -690,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_csharp">
 <a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -699,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -708,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerbillingaccountdisplayname_csharp">
 <a href="#providerbillingaccountdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Billing<wbr>Account<wbr>Display<wbr>Name</a>
@@ -717,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerbillingaccountid_csharp">
 <a href="#providerbillingaccountid_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Billing<wbr>Account<wbr>Id</a>
@@ -726,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -735,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -744,14 +681,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Connector type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collectioninfo_go">
 <a href="#collectioninfo_go" style="color: inherit; text-decoration: inherit;">Collection<wbr>Info</a>
@@ -759,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -768,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daystrialremaining_go">
 <a href="#daystrialremaining_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Trial<wbr>Remaining</a>
@@ -777,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalbillingaccountid_go">
 <a href="#externalbillingaccountid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Billing<wbr>Account<wbr>Id</a>
@@ -786,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -795,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_go">
 <a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -804,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -813,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerbillingaccountdisplayname_go">
 <a href="#providerbillingaccountdisplayname_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Billing<wbr>Account<wbr>Display<wbr>Name</a>
@@ -822,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerbillingaccountid_go">
 <a href="#providerbillingaccountid_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Billing<wbr>Account<wbr>Id</a>
@@ -831,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -840,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -849,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Connector type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collectioninfo_nodejs">
 <a href="#collectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Info</a>
@@ -864,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -873,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daystrialremaining_nodejs">
 <a href="#daystrialremaining_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Trial<wbr>Remaining</a>
@@ -882,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalbillingaccountid_nodejs">
 <a href="#externalbillingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Billing<wbr>Account<wbr>Id</a>
@@ -891,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_nodejs">
 <a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -909,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -918,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerbillingaccountdisplayname_nodejs">
 <a href="#providerbillingaccountdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Billing<wbr>Account<wbr>Display<wbr>Name</a>
@@ -927,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="providerbillingaccountid_nodejs">
 <a href="#providerbillingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Billing<wbr>Account<wbr>Id</a>
@@ -936,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -945,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -954,14 +865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Connector type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="collection_info_python">
 <a href="#collection_info_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>info</a>
@@ -969,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection information{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection information{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -978,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector definition creation datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="days_trial_remaining_python">
 <a href="#days_trial_remaining_python" style="color: inherit; text-decoration: inherit;">days_<wbr>trial_<wbr>remaining</a>
@@ -987,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of days remaining of trial{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="external_billing_account_id_python">
 <a href="#external_billing_account_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>billing_<wbr>account_<wbr>id</a>
@@ -996,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Associated ExternalBillingAccountId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1005,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_on_python">
 <a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -1014,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector last modified datetime{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1023,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_billing_account_display_name_python">
 <a href="#provider_billing_account_display_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>billing_<wbr>account_<wbr>display_<wbr>name</a>
@@ -1032,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the providerBillingAccountId as defined on the external provider{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provider_billing_account_id_python">
 <a href="#provider_billing_account_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>billing_<wbr>account_<wbr>id</a>
@@ -1041,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number){{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1050,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector status{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connector status{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1059,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connector type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Connector type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1076,63 +973,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="connectorbillingmodel">Connector<wbr>Billing<wbr>Model</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Trial</dt>
-    <dd>trial</dd>
-    <dt>Auto<wbr>Upgrade</dt>
-    <dd>autoUpgrade</dd>
-    <dt>Premium</dt>
-    <dd>premium</dd>
-    <dt>Expired</dt>
-    <dd>expired</dd>
-</dl>
+<dl class="tabular"><dt>Trial</dt>
+    <dd>trial</dd><dt>Auto<wbr>Upgrade</dt>
+    <dd>autoUpgrade</dd><dt>Premium</dt>
+    <dd>premium</dd><dt>Expired</dt>
+    <dd>expired</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Connector<wbr>Billing<wbr>Model<wbr>Trial</dt>
-    <dd>trial</dd>
-    <dt>Connector<wbr>Billing<wbr>Model<wbr>Auto<wbr>Upgrade</dt>
-    <dd>autoUpgrade</dd>
-    <dt>Connector<wbr>Billing<wbr>Model<wbr>Premium</dt>
-    <dd>premium</dd>
-    <dt>Connector<wbr>Billing<wbr>Model<wbr>Expired</dt>
-    <dd>expired</dd>
-</dl>
+<dl class="tabular"><dt>Connector<wbr>Billing<wbr>Model<wbr>Trial</dt>
+    <dd>trial</dd><dt>Connector<wbr>Billing<wbr>Model<wbr>Auto<wbr>Upgrade</dt>
+    <dd>autoUpgrade</dd><dt>Connector<wbr>Billing<wbr>Model<wbr>Premium</dt>
+    <dd>premium</dd><dt>Connector<wbr>Billing<wbr>Model<wbr>Expired</dt>
+    <dd>expired</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Trial</dt>
-    <dd>trial</dd>
-    <dt>Auto<wbr>Upgrade</dt>
-    <dd>autoUpgrade</dd>
-    <dt>Premium</dt>
-    <dd>premium</dd>
-    <dt>Expired</dt>
-    <dd>expired</dd>
-</dl>
+<dl class="tabular"><dt>Trial</dt>
+    <dd>trial</dd><dt>Auto<wbr>Upgrade</dt>
+    <dd>autoUpgrade</dd><dt>Premium</dt>
+    <dd>premium</dd><dt>Expired</dt>
+    <dd>expired</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TRIAL</dt>
-    <dd>trial</dd>
-    <dt>AUTO_UPGRADE</dt>
-    <dd>autoUpgrade</dd>
-    <dt>PREMIUM</dt>
-    <dd>premium</dd>
-    <dt>EXPIRED</dt>
-    <dd>expired</dd>
-</dl>
+<dl class="tabular"><dt>TRIAL</dt>
+    <dd>trial</dd><dt>AUTO_UPGRADE</dt>
+    <dd>autoUpgrade</dd><dt>PREMIUM</dt>
+    <dd>premium</dd><dt>EXPIRED</dt>
+    <dd>expired</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1140,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1149,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorstarttime_csharp">
 <a href="#errorstarttime_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Start<wbr>Time</a>
@@ -1158,14 +1031,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1173,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1182,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorstarttime_go">
 <a href="#errorstarttime_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Start<wbr>Time</a>
@@ -1191,14 +1059,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -1206,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1215,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorstarttime_nodejs">
 <a href="#errorstarttime_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Start<wbr>Time</a>
@@ -1224,14 +1087,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -1239,8 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Short error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1248,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Detailed error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_start_time_python">
 <a href="#error_start_time_python" style="color: inherit; text-decoration: inherit;">error_<wbr>start_<wbr>time</a>
@@ -1257,16 +1115,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastRun){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectorcollectioninforesponse">Connector<wbr>Collection<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastrun_csharp">
 <a href="#lastrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
@@ -1274,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_csharp">
 <a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -1283,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcelastupdated_csharp">
 <a href="#sourcelastupdated_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Last<wbr>Updated</a>
@@ -1292,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1301,14 +1153,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastrun_go">
 <a href="#lastrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run</a>
@@ -1316,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_go">
 <a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -1325,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcelastupdated_go">
 <a href="#sourcelastupdated_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Last<wbr>Updated</a>
@@ -1334,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1343,14 +1189,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastrun_nodejs">
 <a href="#lastrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run</a>
@@ -1358,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdated_nodejs">
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
@@ -1367,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcelastupdated_nodejs">
 <a href="#sourcelastupdated_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Last<wbr>Updated</a>
@@ -1376,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1385,14 +1225,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_run_python">
 <a href="#last_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run</a>
@@ -1400,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the data acquisition process completed (even if no new data was found){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_python">
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
@@ -1409,8 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_last_updated_python">
 <a href="#source_last_updated_python" style="color: inherit; text-decoration: inherit;">source_<wbr>last_<wbr>updated</a>
@@ -1418,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1427,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

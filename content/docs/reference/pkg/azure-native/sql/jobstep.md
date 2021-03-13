@@ -14,11 +14,17 @@ A job step.
 API Version: 2020-08-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a job step with all properties specified.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -69,9 +75,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -124,9 +133,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -166,9 +178,12 @@ job_step = azure_native.sql.JobStep("jobStep",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -209,10 +224,17 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a job step with minimal properties specified.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -241,9 +263,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -276,9 +301,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -298,9 +326,12 @@ job_step = azure_native.sql.JobStep("jobStep",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -321,9 +352,16 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a JobStep Resource {#create}
@@ -348,9 +386,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -358,9 +394,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -368,9 +402,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -378,10 +410,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -407,9 +436,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -417,9 +444,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -427,9 +452,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -437,9 +460,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -447,18 +468,13 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -466,9 +482,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -476,9 +490,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -486,10 +498,7 @@ const jobStep = new azure_native.sql.JobStep("jobStep", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -504,9 +513,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -514,8 +521,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credential_csharp">
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
@@ -523,8 +529,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobagentname_csharp">
 <a href="#jobagentname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Agent<wbr>Name</a>
@@ -532,8 +537,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -541,8 +545,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -550,8 +553,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -559,8 +561,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetgroup_csharp">
 <a href="#targetgroup_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group</a>
@@ -568,8 +569,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionoptions_csharp">
 <a href="#executionoptions_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Options</a>
@@ -577,8 +577,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepexecutionoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -586,8 +585,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepoutput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Job<wbr>Step<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepid_csharp">
 <a href="#stepid_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -595,8 +593,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepname_csharp">
 <a href="#stepname_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Name</a>
@@ -604,14 +601,11 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -619,8 +613,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepaction">Job<wbr>Step<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credential_go">
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
@@ -628,8 +621,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobagentname_go">
 <a href="#jobagentname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Agent<wbr>Name</a>
@@ -637,8 +629,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -646,8 +637,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -655,8 +645,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -664,8 +653,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetgroup_go">
 <a href="#targetgroup_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group</a>
@@ -673,8 +661,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionoptions_go">
 <a href="#executionoptions_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Options</a>
@@ -682,8 +669,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -691,8 +677,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepid_go">
 <a href="#stepid_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -700,8 +685,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepname_go">
 <a href="#stepname_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Name</a>
@@ -709,14 +693,11 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -724,8 +705,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepaction">Job<wbr>Step<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credential_nodejs">
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
@@ -733,8 +713,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobagentname_nodejs">
 <a href="#jobagentname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Agent<wbr>Name</a>
@@ -742,8 +721,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
@@ -751,8 +729,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -760,8 +737,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -769,8 +745,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetgroup_nodejs">
 <a href="#targetgroup_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group</a>
@@ -778,8 +753,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionoptions_nodejs">
 <a href="#executionoptions_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Options</a>
@@ -787,8 +761,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -796,8 +769,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepid_nodejs">
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
@@ -805,8 +777,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepname_nodejs">
 <a href="#stepname_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Name</a>
@@ -814,14 +785,11 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -829,8 +797,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepaction">Job<wbr>Step<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="credential_python">
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
@@ -838,8 +805,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the job credential that will be used to connect to the targets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_agent_name_python">
 <a href="#job_agent_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>agent_<wbr>name</a>
@@ -847,8 +813,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
@@ -856,8 +821,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -865,8 +829,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -874,8 +837,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_group_python">
 <a href="#target_group_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group</a>
@@ -883,8 +845,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the target group that the job step will be executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="execution_options_python">
 <a href="#execution_options_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>options</a>
@@ -892,8 +853,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -901,8 +861,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="step_id_python">
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
@@ -910,8 +869,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="step_name_python">
 <a href="#step_name_python" style="color: inherit; text-decoration: inherit;">step_<wbr>name</a>
@@ -919,8 +877,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -931,9 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -941,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -950,8 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -959,14 +912,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -974,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -983,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -992,14 +940,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1007,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1016,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1025,14 +968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1040,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1049,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1058,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1075,9 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="jobstepaction">Job<wbr>Step<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1085,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1094,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepactionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Action<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1103,14 +1036,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepactiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1118,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1127,8 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepactionsource">Job<wbr>Step<wbr>Action<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1136,14 +1064,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepactiontype">Job<wbr>Step<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1151,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1160,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepactionsource">Job<wbr>Step<wbr>Action<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1169,14 +1092,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepactiontype">Job<wbr>Step<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1184,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1193,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#jobstepactionsource">Job<wbr>Step<wbr>Action<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1202,16 +1120,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#jobstepactiontype">Job<wbr>Step<wbr>Action<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepactionresponse">Job<wbr>Step<wbr>Action<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1219,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1228,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1237,14 +1150,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1252,8 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1261,8 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1270,14 +1178,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1285,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1294,8 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1303,14 +1206,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1318,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The action value, for example the text of the T-SQL script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1327,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the action to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1336,76 +1234,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of action being executed by the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepactionsource">Job<wbr>Step<wbr>Action<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Inline</dt>
-    <dd>Inline</dd>
-</dl>
+<dl class="tabular"><dt>Inline</dt>
+    <dd>Inline</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Job<wbr>Step<wbr>Action<wbr>Source<wbr>Inline</dt>
-    <dd>Inline</dd>
-</dl>
+<dl class="tabular"><dt>Job<wbr>Step<wbr>Action<wbr>Source<wbr>Inline</dt>
+    <dd>Inline</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Inline</dt>
-    <dd>Inline</dd>
-</dl>
+<dl class="tabular"><dt>Inline</dt>
+    <dd>Inline</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>INLINE</dt>
-    <dd>Inline</dd>
-</dl>
+<dl class="tabular"><dt>INLINE</dt>
+    <dd>Inline</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepactiontype">Job<wbr>Step<wbr>Action<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>TSql</dt>
-    <dd>TSql</dd>
-</dl>
+<dl class="tabular"><dt>TSql</dt>
+    <dd>TSql</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Job<wbr>Step<wbr>Action<wbr>Type<wbr>TSql</dt>
-    <dd>TSql</dd>
-</dl>
+<dl class="tabular"><dt>Job<wbr>Step<wbr>Action<wbr>Type<wbr>TSql</dt>
+    <dd>TSql</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>TSql</dt>
-    <dd>TSql</dd>
-</dl>
+<dl class="tabular"><dt>TSql</dt>
+    <dd>TSql</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>T_SQL</dt>
-    <dd>TSql</dd>
-</dl>
+<dl class="tabular"><dt>T_SQL</dt>
+    <dd>TSql</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initialretryintervalseconds_csharp">
 <a href="#initialretryintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1413,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryintervalseconds_csharp">
 <a href="#maximumretryintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1422,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempts_csharp">
 <a href="#retryattempts_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempts</a>
@@ -1431,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryintervalbackoffmultiplier_csharp">
 <a href="#retryintervalbackoffmultiplier_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Interval<wbr>Backoff<wbr>Multiplier</a>
@@ -1440,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -1449,14 +1324,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initialretryintervalseconds_go">
 <a href="#initialretryintervalseconds_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1464,8 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryintervalseconds_go">
 <a href="#maximumretryintervalseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1473,8 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempts_go">
 <a href="#retryattempts_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempts</a>
@@ -1482,8 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryintervalbackoffmultiplier_go">
 <a href="#retryintervalbackoffmultiplier_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Interval<wbr>Backoff<wbr>Multiplier</a>
@@ -1491,8 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -1500,14 +1368,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initialretryintervalseconds_nodejs">
 <a href="#initialretryintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1515,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryintervalseconds_nodejs">
 <a href="#maximumretryintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1524,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempts_nodejs">
 <a href="#retryattempts_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Attempts</a>
@@ -1533,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryintervalbackoffmultiplier_nodejs">
 <a href="#retryintervalbackoffmultiplier_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>Backoff<wbr>Multiplier</a>
@@ -1542,8 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
@@ -1551,14 +1412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initial_retry_interval_seconds_python">
 <a href="#initial_retry_interval_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>retry_<wbr>interval_<wbr>seconds</a>
@@ -1566,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_retry_interval_seconds_python">
 <a href="#maximum_retry_interval_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>interval_<wbr>seconds</a>
@@ -1575,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_attempts_python">
 <a href="#retry_attempts_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>attempts</a>
@@ -1584,8 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_interval_backoff_multiplier_python">
 <a href="#retry_interval_backoff_multiplier_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>interval_<wbr>backoff_<wbr>multiplier</a>
@@ -1593,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -1602,16 +1456,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepexecutionoptionsresponse">Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initialretryintervalseconds_csharp">
 <a href="#initialretryintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1619,8 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryintervalseconds_csharp">
 <a href="#maximumretryintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1628,8 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempts_csharp">
 <a href="#retryattempts_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempts</a>
@@ -1637,8 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryintervalbackoffmultiplier_csharp">
 <a href="#retryintervalbackoffmultiplier_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Interval<wbr>Backoff<wbr>Multiplier</a>
@@ -1646,8 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -1655,14 +1502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initialretryintervalseconds_go">
 <a href="#initialretryintervalseconds_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1670,8 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryintervalseconds_go">
 <a href="#maximumretryintervalseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1679,8 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempts_go">
 <a href="#retryattempts_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempts</a>
@@ -1688,8 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryintervalbackoffmultiplier_go">
 <a href="#retryintervalbackoffmultiplier_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Interval<wbr>Backoff<wbr>Multiplier</a>
@@ -1697,8 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -1706,14 +1546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initialretryintervalseconds_nodejs">
 <a href="#initialretryintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1721,8 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryintervalseconds_nodejs">
 <a href="#maximumretryintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Interval<wbr>Seconds</a>
@@ -1730,8 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempts_nodejs">
 <a href="#retryattempts_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Attempts</a>
@@ -1739,8 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryintervalbackoffmultiplier_nodejs">
 <a href="#retryintervalbackoffmultiplier_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Interval<wbr>Backoff<wbr>Multiplier</a>
@@ -1748,8 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
@@ -1757,14 +1590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="initial_retry_interval_seconds_python">
 <a href="#initial_retry_interval_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>retry_<wbr>interval_<wbr>seconds</a>
@@ -1772,8 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Initial delay between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_retry_interval_seconds_python">
 <a href="#maximum_retry_interval_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>interval_<wbr>seconds</a>
@@ -1781,8 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum amount of time to wait between retries for job step execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_attempts_python">
 <a href="#retry_attempts_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>attempts</a>
@@ -1790,8 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of times the job step will be reattempted if the first attempt fails.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_interval_backoff_multiplier_python">
 <a href="#retry_interval_backoff_multiplier_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>interval_<wbr>backoff_<wbr>multiplier</a>
@@ -1799,8 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backoff multiplier for the time between retries.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -1808,16 +1634,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Execution timeout for the job step.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepoutput">Job<wbr>Step<wbr>Output</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_csharp">
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
@@ -1825,8 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1834,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1843,8 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -1852,8 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1861,8 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaname_csharp">
 <a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -1870,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1879,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1888,14 +1704,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepoutputtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Job<wbr>Step<wbr>Output<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_go">
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
@@ -1903,8 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1912,8 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1921,8 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -1930,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1939,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaname_go">
 <a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -1948,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1957,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1966,14 +1772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepoutputtype">Job<wbr>Step<wbr>Output<wbr>Type<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_nodejs">
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
@@ -1981,8 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1990,8 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -1999,8 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -2008,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2017,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaname_nodejs">
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
@@ -2026,8 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -2035,8 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2044,14 +1840,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobstepoutputtype">Job<wbr>Step<wbr>Output<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_python">
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
@@ -2059,8 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -2068,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -2077,8 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -2086,8 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2095,8 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_name_python">
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
@@ -2104,8 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -2113,8 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2122,16 +1908,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#jobstepoutputtype">Job<wbr>Step<wbr>Output<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepoutputresponse">Job<wbr>Step<wbr>Output<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_csharp">
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
@@ -2139,8 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -2148,8 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -2157,8 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -2166,8 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2175,8 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaname_csharp">
 <a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -2184,8 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -2193,8 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2202,14 +1978,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_go">
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
@@ -2217,8 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -2226,8 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -2235,8 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -2244,8 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2253,8 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaname_go">
 <a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -2262,8 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -2271,8 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2280,14 +2046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_nodejs">
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
@@ -2295,8 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -2304,8 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -2313,8 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -2322,8 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2331,8 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaname_nodejs">
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
@@ -2340,8 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -2349,8 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2358,14 +2114,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="credential_python">
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
@@ -2373,8 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the credential to use to connect to the output destination.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -2382,8 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -2391,8 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The output destination server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -2400,8 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination table.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination table.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2409,8 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_name_python">
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
@@ -2418,8 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -2427,8 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The output destination subscription id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2436,38 +2182,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The output destination type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output destination type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstepoutputtype">Job<wbr>Step<wbr>Output<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Sql<wbr>Database</dt>
-    <dd>SqlDatabase</dd>
-</dl>
+<dl class="tabular"><dt>Sql<wbr>Database</dt>
+    <dd>SqlDatabase</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Job<wbr>Step<wbr>Output<wbr>Type<wbr>Sql<wbr>Database</dt>
-    <dd>SqlDatabase</dd>
-</dl>
+<dl class="tabular"><dt>Job<wbr>Step<wbr>Output<wbr>Type<wbr>Sql<wbr>Database</dt>
+    <dd>SqlDatabase</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Sql<wbr>Database</dt>
-    <dd>SqlDatabase</dd>
-</dl>
+<dl class="tabular"><dt>Sql<wbr>Database</dt>
+    <dd>SqlDatabase</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SQL_DATABASE</dt>
-    <dd>SqlDatabase</dd>
-</dl>
+<dl class="tabular"><dt>SQL_DATABASE</dt>
+    <dd>SqlDatabase</dd></dl>
 {{% /choosable %}}
 ## Import
 

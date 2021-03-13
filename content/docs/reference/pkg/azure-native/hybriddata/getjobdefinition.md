@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_csharp">
 <a href="#datamanagername_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataservicename_csharp">
 <a href="#dataservicename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobdefinitionname_csharp">
 <a href="#jobdefinitionname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Definition<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_go">
 <a href="#datamanagername_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataservicename_go">
 <a href="#dataservicename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobdefinitionname_go">
 <a href="#jobdefinitionname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Definition<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_nodejs">
 <a href="#datamanagername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manager<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataservicename_nodejs">
 <a href="#dataservicename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Service<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobdefinitionname_nodejs">
 <a href="#jobdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Definition<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_manager_name_python">
 <a href="#data_manager_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manager_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_service_name_python">
 <a href="#data_service_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>service_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service name of the job definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_definition_name_python">
 <a href="#job_definition_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>definition_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The job definition name that is being queried.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datasinkid_csharp">
 <a href="#datasinkid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sink<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datasourceid_csharp">
 <a href="#datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customersecrets_csharp">
 <a href="#customersecrets_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Outputs.<wbr>Customer<wbr>Secret<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataserviceinput_csharp">
 <a href="#dataserviceinput_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Input</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runlocation_csharp">
 <a href="#runlocation_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Location</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Outputs.<wbr>Schedule<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userconfirmation_csharp">
 <a href="#userconfirmation_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Confirmation</a>
@@ -337,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datasinkid_go">
 <a href="#datasinkid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sink<wbr>Id</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datasourceid_go">
 <a href="#datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customersecrets_go">
 <a href="#customersecrets_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">[]Customer<wbr>Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataserviceinput_go">
 <a href="#dataserviceinput_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Input</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runlocation_go">
 <a href="#runlocation_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Location</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">[]Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userconfirmation_go">
 <a href="#userconfirmation_go" style="color: inherit; text-decoration: inherit;">User<wbr>Confirmation</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datasinkid_nodejs">
 <a href="#datasinkid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sink<wbr>Id</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datasourceid_nodejs">
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customersecrets_nodejs">
 <a href="#customersecrets_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Secrets</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">Customer<wbr>Secret<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataserviceinput_nodejs">
 <a href="#dataserviceinput_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Service<wbr>Input</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runlocation_nodejs">
 <a href="#runlocation_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Location</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userconfirmation_nodejs">
 <a href="#userconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Confirmation</a>
@@ -565,14 +500,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_sink_id_python">
 <a href="#data_sink_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sink_<wbr>id</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_source_id_python">
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_secrets_python">
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecretresponse">Sequence[Customer<wbr>Secret<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_service_input_python">
 <a href="#data_service_input_python" style="color: inherit; text-decoration: inherit;">data_<wbr>service_<wbr>input</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="run_location_python">
 <a href="#run_location_python" style="color: inherit; text-decoration: inherit;">run_<wbr>location</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">Sequence[Schedule<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_confirmation_python">
 <a href="#user_confirmation_python" style="color: inherit; text-decoration: inherit;">user_<wbr>confirmation</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -704,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -713,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -722,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -737,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -746,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -755,14 +666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -770,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -779,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -788,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
@@ -830,9 +730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_csharp">
 <a href="#policylist_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>List</a>
@@ -849,14 +746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -864,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_go">
 <a href="#policylist_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>List</a>
@@ -873,14 +766,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -888,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_nodejs">
 <a href="#policylist_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>List</a>
@@ -897,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_list_python">
 <a href="#policy_list_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>list</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

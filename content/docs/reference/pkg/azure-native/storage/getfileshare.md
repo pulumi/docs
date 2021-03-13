@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharename_csharp">
 <a href="#sharename_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharename_go">
 <a href="#sharename_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharename_nodejs">
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="share_name_python">
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional, used to expand the properties within share's properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstierchangetime_csharp">
 <a href="#accesstierchangetime_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier<wbr>Change<wbr>Time</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesstierstatus_csharp">
 <a href="#accesstierstatus_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier<wbr>Status</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleted_csharp">
 <a href="#deleted_csharp" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletedtime_csharp">
 <a href="#deletedtime_csharp" style="color: inherit; text-decoration: inherit;">Deleted<wbr>Time</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remainingretentiondays_csharp">
 <a href="#remainingretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Retention<wbr>Days</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareusagebytes_csharp">
 <a href="#shareusagebytes_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Usage<wbr>Bytes</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshottime_csharp">
 <a href="#snapshottime_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Time</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesstier_csharp">
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootsquash_csharp">
 <a href="#rootsquash_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharequota_csharp">
 <a href="#sharequota_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Quota</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstierchangetime_go">
 <a href="#accesstierchangetime_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier<wbr>Change<wbr>Time</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesstierstatus_go">
 <a href="#accesstierstatus_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier<wbr>Status</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleted_go">
 <a href="#deleted_go" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletedtime_go">
 <a href="#deletedtime_go" style="color: inherit; text-decoration: inherit;">Deleted<wbr>Time</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remainingretentiondays_go">
 <a href="#remainingretentiondays_go" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Retention<wbr>Days</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareusagebytes_go">
 <a href="#shareusagebytes_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Usage<wbr>Bytes</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshottime_go">
 <a href="#snapshottime_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Time</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesstier_go">
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootsquash_go">
 <a href="#rootsquash_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharequota_go">
 <a href="#sharequota_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Quota</a>
@@ -559,14 +496,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstierchangetime_nodejs">
 <a href="#accesstierchangetime_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier<wbr>Change<wbr>Time</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesstierstatus_nodejs">
 <a href="#accesstierstatus_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier<wbr>Status</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleted_nodejs">
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletedtime_nodejs">
 <a href="#deletedtime_nodejs" style="color: inherit; text-decoration: inherit;">deleted<wbr>Time</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remainingretentiondays_nodejs">
 <a href="#remainingretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">remaining<wbr>Retention<wbr>Days</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareusagebytes_nodejs">
 <a href="#shareusagebytes_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Usage<wbr>Bytes</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshottime_nodejs">
 <a href="#snapshottime_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Time</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesstier_nodejs">
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootsquash_nodejs">
 <a href="#rootsquash_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharequota_nodejs">
 <a href="#sharequota_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Quota</a>
@@ -727,14 +644,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_tier_change_time_python">
 <a href="#access_tier_change_time_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier_<wbr>change_<wbr>time</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the last modification time for share access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_tier_status_python">
 <a href="#access_tier_status_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier_<wbr>status</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates if there is a pending transition for access tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleted_python">
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleted_time_python">
 <a href="#deleted_time_python" style="color: inherit; text-decoration: inherit;">deleted_<wbr>time</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deleted time if the share was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the share was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remaining_retention_days_python">
 <a href="#remaining_retention_days_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>retention_<wbr>days</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for share that was soft deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_usage_bytes_python">
 <a href="#share_usage_bytes_python" style="color: inherit; text-decoration: inherit;">share_<wbr>usage_<wbr>bytes</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshot_time_python">
 <a href="#snapshot_time_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>time</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation time of share snapshot returned in the response of list shares with expand param "snapshots".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_tier_python">
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication protocol that is used for the file share. Can only be specified when creating a share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A name-value pair to associate with the share as metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_squash_python">
 <a href="#root_squash_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property is for NFS share only. The default is NoRootSquash.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_quota_python">
 <a href="#share_quota_python" style="color: inherit; text-decoration: inherit;">share_<wbr>quota</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

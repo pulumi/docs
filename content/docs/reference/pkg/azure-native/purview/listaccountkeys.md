@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="atlaskafkaprimaryendpoint_csharp">
 <a href="#atlaskafkaprimaryendpoint_csharp" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Kafka<wbr>Primary<wbr>Endpoint</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlaskafkasecondaryendpoint_csharp">
 <a href="#atlaskafkasecondaryendpoint_csharp" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Kafka<wbr>Secondary<wbr>Endpoint</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="atlaskafkaprimaryendpoint_go">
 <a href="#atlaskafkaprimaryendpoint_go" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Kafka<wbr>Primary<wbr>Endpoint</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlaskafkasecondaryendpoint_go">
 <a href="#atlaskafkasecondaryendpoint_go" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Kafka<wbr>Secondary<wbr>Endpoint</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="atlaskafkaprimaryendpoint_nodejs">
 <a href="#atlaskafkaprimaryendpoint_nodejs" style="color: inherit; text-decoration: inherit;">atlas<wbr>Kafka<wbr>Primary<wbr>Endpoint</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlaskafkasecondaryendpoint_nodejs">
 <a href="#atlaskafkasecondaryendpoint_nodejs" style="color: inherit; text-decoration: inherit;">atlas<wbr>Kafka<wbr>Secondary<wbr>Endpoint</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="atlas_kafka_primary_endpoint_python">
 <a href="#atlas_kafka_primary_endpoint_python" style="color: inherit; text-decoration: inherit;">atlas_<wbr>kafka_<wbr>primary_<wbr>endpoint</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the primary connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlas_kafka_secondary_endpoint_python">
 <a href="#atlas_kafka_secondary_endpoint_python" style="color: inherit; text-decoration: inherit;">atlas_<wbr>kafka_<wbr>secondary_<wbr>endpoint</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the secondary connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

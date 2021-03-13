@@ -14,11 +14,17 @@ The connector setting
 API Version: 2020-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### AwsAssumeRole - Create a cloud account connector for a subscription
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -59,13 +65,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -94,9 +106,12 @@ connector = azure_native.security.Connector("connector",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,10 +141,17 @@ const connector = new azure_native.security.Connector("connector", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### AwsCred - Create a cloud account connector for a subscription
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -170,13 +192,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -205,9 +233,12 @@ connector = azure_native.security.Connector("connector",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -237,10 +268,17 @@ const connector = new azure_native.security.Connector("connector", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### gcpCredentials - Create a cloud account connector for a subscription
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -306,13 +344,19 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -368,9 +412,12 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -427,9 +474,16 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Connector Resource {#create}
@@ -454,9 +508,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -464,9 +516,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -474,9 +524,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -484,10 +532,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -513,9 +558,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -523,9 +566,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -533,9 +574,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -543,9 +582,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -553,18 +590,13 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -572,9 +604,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -582,9 +612,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -592,10 +620,7 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -610,9 +635,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationdetails_csharp">
 <a href="#authenticationdetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
@@ -620,8 +643,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#awscredsauthenticationdetailsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#gcpcredentialsdetailsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectorname_csharp">
 <a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -629,8 +651,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybridcomputesettings_csharp">
 <a href="#hybridcomputesettings_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Compute<wbr>Settings</a>
@@ -638,14 +659,11 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hybridcomputesettingsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationdetails_go">
 <a href="#authenticationdetails_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Details</a>
@@ -653,8 +671,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties</a> | <a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties</a> | <a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectorname_go">
 <a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
@@ -662,8 +679,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybridcomputesettings_go">
 <a href="#hybridcomputesettings_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Compute<wbr>Settings</a>
@@ -671,14 +687,11 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hybridcomputesettingsproperties">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationdetails_nodejs">
 <a href="#authenticationdetails_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Details</a>
@@ -686,8 +699,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties</a> | <a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties</a> | <a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectorname_nodejs">
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
@@ -695,8 +707,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybridcomputesettings_nodejs">
 <a href="#hybridcomputesettings_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Compute<wbr>Settings</a>
@@ -704,14 +715,11 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hybridcomputesettingsproperties">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_details_python">
 <a href="#authentication_details_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>details</a>
@@ -719,8 +727,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connector_name_python">
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
@@ -728,8 +735,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hybrid_compute_settings_python">
 <a href="#hybrid_compute_settings_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>compute_<wbr>settings</a>
@@ -737,8 +743,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hybridcomputesettingsproperties">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -749,9 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -759,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -768,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -777,14 +778,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -792,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -801,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -810,14 +806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -825,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -834,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -843,14 +834,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -858,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -867,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -876,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -893,47 +878,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="autoprovision">Auto<wbr>Provision</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>On</dt>
-    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd>
-    <dt>Off</dt>
-    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>On</dt>
+    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd><dt>Off</dt>
+    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Auto<wbr>Provision<wbr>On</dt>
-    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd>
-    <dt>Auto<wbr>Provision<wbr>Off</dt>
-    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Auto<wbr>Provision<wbr>On</dt>
+    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd><dt>Auto<wbr>Provision<wbr>Off</dt>
+    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>On</dt>
-    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd>
-    <dt>Off</dt>
-    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>On</dt>
+    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd><dt>Off</dt>
+    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ON</dt>
-    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd>
-    <dt>OFF</dt>
-    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ON</dt>
+    <dd>On{{% md %}}Install missing Azure Arc agents on machines automatically{{% /md %}}</dd><dt>OFF</dt>
+    <dd>Off{{% md %}}Do not install Azure Arc agent on the machines automatically{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsassumerolearn_csharp">
 <a href="#awsassumerolearn_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Assume<wbr>Role<wbr>Arn</a>
@@ -941,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsexternalid_csharp">
 <a href="#awsexternalid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>External<wbr>Id</a>
@@ -950,14 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsassumerolearn_go">
 <a href="#awsassumerolearn_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Assume<wbr>Role<wbr>Arn</a>
@@ -965,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsexternalid_go">
 <a href="#awsexternalid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>External<wbr>Id</a>
@@ -974,14 +940,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsassumerolearn_nodejs">
 <a href="#awsassumerolearn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Assume<wbr>Role<wbr>Arn</a>
@@ -989,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsexternalid_nodejs">
 <a href="#awsexternalid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>External<wbr>Id</a>
@@ -998,14 +960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aws_assume_role_arn_python">
 <a href="#aws_assume_role_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>assume_<wbr>role_<wbr>arn</a>
@@ -1013,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aws_external_id_python">
 <a href="#aws_external_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>external_<wbr>id</a>
@@ -1022,16 +980,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="awassumeroleauthenticationdetailspropertiesresponse">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1039,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_csharp">
 <a href="#authenticationprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Provisioning<wbr>State</a>
@@ -1048,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsassumerolearn_csharp">
 <a href="#awsassumerolearn_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Assume<wbr>Role<wbr>Arn</a>
@@ -1057,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsexternalid_csharp">
 <a href="#awsexternalid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>External<wbr>Id</a>
@@ -1066,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_csharp">
 <a href="#grantedpermissions_csharp" style="color: inherit; text-decoration: inherit;">Granted<wbr>Permissions</a>
@@ -1075,14 +1026,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1090,8 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_go">
 <a href="#authenticationprovisioningstate_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Provisioning<wbr>State</a>
@@ -1099,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsassumerolearn_go">
 <a href="#awsassumerolearn_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Assume<wbr>Role<wbr>Arn</a>
@@ -1108,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsexternalid_go">
 <a href="#awsexternalid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>External<wbr>Id</a>
@@ -1117,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_go">
 <a href="#grantedpermissions_go" style="color: inherit; text-decoration: inherit;">Granted<wbr>Permissions</a>
@@ -1126,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1141,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_nodejs">
 <a href="#authenticationprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Provisioning<wbr>State</a>
@@ -1150,8 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsassumerolearn_nodejs">
 <a href="#awsassumerolearn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Assume<wbr>Role<wbr>Arn</a>
@@ -1159,8 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsexternalid_nodejs">
 <a href="#awsexternalid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>External<wbr>Id</a>
@@ -1168,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_nodejs">
 <a href="#grantedpermissions_nodejs" style="color: inherit; text-decoration: inherit;">granted<wbr>Permissions</a>
@@ -1177,14 +1114,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1192,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authentication_provisioning_state_python">
 <a href="#authentication_provisioning_state_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>provisioning_<wbr>state</a>
@@ -1201,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aws_assume_role_arn_python">
 <a href="#aws_assume_role_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>assume_<wbr>role_<wbr>arn</a>
@@ -1210,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aws_external_id_python">
 <a href="#aws_external_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>external_<wbr>id</a>
@@ -1219,8 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="granted_permissions_python">
 <a href="#granted_permissions_python" style="color: inherit; text-decoration: inherit;">granted_<wbr>permissions</a>
@@ -1228,16 +1158,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsaccesskeyid_csharp">
 <a href="#awsaccesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key<wbr>Id</a>
@@ -1245,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awssecretaccesskey_csharp">
 <a href="#awssecretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Secret<wbr>Access<wbr>Key</a>
@@ -1254,14 +1180,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsaccesskeyid_go">
 <a href="#awsaccesskeyid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key<wbr>Id</a>
@@ -1269,8 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awssecretaccesskey_go">
 <a href="#awssecretaccesskey_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Secret<wbr>Access<wbr>Key</a>
@@ -1278,14 +1200,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsaccesskeyid_nodejs">
 <a href="#awsaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key<wbr>Id</a>
@@ -1293,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awssecretaccesskey_nodejs">
 <a href="#awssecretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Secret<wbr>Access<wbr>Key</a>
@@ -1302,14 +1220,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aws_access_key_id_python">
 <a href="#aws_access_key_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key_<wbr>id</a>
@@ -1317,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aws_secret_access_key_python">
 <a href="#aws_secret_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>secret_<wbr>access_<wbr>key</a>
@@ -1326,16 +1240,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="awscredsauthenticationdetailspropertiesresponse">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1343,8 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_csharp">
 <a href="#authenticationprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Provisioning<wbr>State</a>
@@ -1352,8 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsaccesskeyid_csharp">
 <a href="#awsaccesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key<wbr>Id</a>
@@ -1361,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awssecretaccesskey_csharp">
 <a href="#awssecretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Secret<wbr>Access<wbr>Key</a>
@@ -1370,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_csharp">
 <a href="#grantedpermissions_csharp" style="color: inherit; text-decoration: inherit;">Granted<wbr>Permissions</a>
@@ -1379,14 +1286,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1394,8 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_go">
 <a href="#authenticationprovisioningstate_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Provisioning<wbr>State</a>
@@ -1403,8 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsaccesskeyid_go">
 <a href="#awsaccesskeyid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key<wbr>Id</a>
@@ -1412,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awssecretaccesskey_go">
 <a href="#awssecretaccesskey_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Secret<wbr>Access<wbr>Key</a>
@@ -1421,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_go">
 <a href="#grantedpermissions_go" style="color: inherit; text-decoration: inherit;">Granted<wbr>Permissions</a>
@@ -1430,14 +1330,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1445,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_nodejs">
 <a href="#authenticationprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Provisioning<wbr>State</a>
@@ -1454,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awsaccesskeyid_nodejs">
 <a href="#awsaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key<wbr>Id</a>
@@ -1463,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="awssecretaccesskey_nodejs">
 <a href="#awssecretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Secret<wbr>Access<wbr>Key</a>
@@ -1472,8 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_nodejs">
 <a href="#grantedpermissions_nodejs" style="color: inherit; text-decoration: inherit;">granted<wbr>Permissions</a>
@@ -1481,14 +1374,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1496,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authentication_provisioning_state_python">
 <a href="#authentication_provisioning_state_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>provisioning_<wbr>state</a>
@@ -1505,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aws_access_key_id_python">
 <a href="#aws_access_key_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key_<wbr>id</a>
@@ -1514,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aws_secret_access_key_python">
 <a href="#aws_secret_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>secret_<wbr>access_<wbr>key</a>
@@ -1523,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="granted_permissions_python">
 <a href="#granted_permissions_python" style="color: inherit; text-decoration: inherit;">granted_<wbr>permissions</a>
@@ -1532,16 +1418,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authproviderx509certurl_csharp">
 <a href="#authproviderx509certurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
@@ -1549,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authuri_csharp">
 <a href="#authuri_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Uri</a>
@@ -1558,8 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_csharp">
 <a href="#clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1567,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1576,8 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientx509certurl_csharp">
 <a href="#clientx509certurl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>X509Cert<wbr>Url</a>
@@ -1585,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_csharp">
 <a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -1594,8 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1603,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_csharp">
 <a href="#privatekeyid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -1612,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1621,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenuri_csharp">
 <a href="#tokenuri_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Uri</a>
@@ -1630,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1639,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authproviderx509certurl_go">
 <a href="#authproviderx509certurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
@@ -1654,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authuri_go">
 <a href="#authuri_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Uri</a>
@@ -1663,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_go">
 <a href="#clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1672,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1681,8 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientx509certurl_go">
 <a href="#clientx509certurl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>X509Cert<wbr>Url</a>
@@ -1690,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_go">
 <a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -1699,8 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1708,8 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_go">
 <a href="#privatekeyid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -1717,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1726,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenuri_go">
 <a href="#tokenuri_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Uri</a>
@@ -1735,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1744,14 +1604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authproviderx509certurl_nodejs">
 <a href="#authproviderx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
@@ -1759,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authuri_nodejs">
 <a href="#authuri_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Uri</a>
@@ -1768,8 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_nodejs">
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -1777,8 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1786,8 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientx509certurl_nodejs">
 <a href="#clientx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>X509Cert<wbr>Url</a>
@@ -1795,8 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_nodejs">
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
@@ -1804,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1813,8 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_nodejs">
 <a href="#privatekeyid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Id</a>
@@ -1822,8 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1831,8 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenuri_nodejs">
 <a href="#tokenuri_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Uri</a>
@@ -1840,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1849,14 +1696,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auth_provider_x509_cert_url_python">
 <a href="#auth_provider_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>provider_<wbr>x509_<wbr>cert_<wbr>url</a>
@@ -1864,8 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="auth_uri_python">
 <a href="#auth_uri_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>uri</a>
@@ -1873,8 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_email_python">
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -1882,8 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1891,8 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_x509_cert_url_python">
 <a href="#client_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">client_<wbr>x509_<wbr>cert_<wbr>url</a>
@@ -1900,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_id_python">
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
@@ -1909,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1918,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_id_python">
 <a href="#private_key_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>id</a>
@@ -1927,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1936,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_uri_python">
 <a href="#token_uri_python" style="color: inherit; text-decoration: inherit;">token_<wbr>uri</a>
@@ -1945,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1954,16 +1788,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gcpcredentialsdetailspropertiesresponse">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authproviderx509certurl_csharp">
 <a href="#authproviderx509certurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
@@ -1971,8 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authuri_csharp">
 <a href="#authuri_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Uri</a>
@@ -1980,8 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_csharp">
 <a href="#authenticationprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Provisioning<wbr>State</a>
@@ -1989,8 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_csharp">
 <a href="#clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1998,8 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -2007,8 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientx509certurl_csharp">
 <a href="#clientx509certurl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>X509Cert<wbr>Url</a>
@@ -2016,8 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_csharp">
 <a href="#grantedpermissions_csharp" style="color: inherit; text-decoration: inherit;">Granted<wbr>Permissions</a>
@@ -2025,8 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_csharp">
 <a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -2034,8 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2043,8 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_csharp">
 <a href="#privatekeyid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -2052,8 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2061,8 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenuri_csharp">
 <a href="#tokenuri_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Uri</a>
@@ -2070,8 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2079,14 +1898,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authproviderx509certurl_go">
 <a href="#authproviderx509certurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
@@ -2094,8 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authuri_go">
 <a href="#authuri_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Uri</a>
@@ -2103,8 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_go">
 <a href="#authenticationprovisioningstate_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Provisioning<wbr>State</a>
@@ -2112,8 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_go">
 <a href="#clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -2121,8 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -2130,8 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientx509certurl_go">
 <a href="#clientx509certurl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>X509Cert<wbr>Url</a>
@@ -2139,8 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_go">
 <a href="#grantedpermissions_go" style="color: inherit; text-decoration: inherit;">Granted<wbr>Permissions</a>
@@ -2148,8 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_go">
 <a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -2157,8 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2166,8 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_go">
 <a href="#privatekeyid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -2175,8 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2184,8 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenuri_go">
 <a href="#tokenuri_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Uri</a>
@@ -2193,8 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2202,14 +2006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authproviderx509certurl_nodejs">
 <a href="#authproviderx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
@@ -2217,8 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authuri_nodejs">
 <a href="#authuri_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Uri</a>
@@ -2226,8 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationprovisioningstate_nodejs">
 <a href="#authenticationprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Provisioning<wbr>State</a>
@@ -2235,8 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_nodejs">
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -2244,8 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -2253,8 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientx509certurl_nodejs">
 <a href="#clientx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>X509Cert<wbr>Url</a>
@@ -2262,8 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grantedpermissions_nodejs">
 <a href="#grantedpermissions_nodejs" style="color: inherit; text-decoration: inherit;">granted<wbr>Permissions</a>
@@ -2271,8 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_nodejs">
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
@@ -2280,8 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -2289,8 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_nodejs">
 <a href="#privatekeyid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Id</a>
@@ -2298,8 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -2307,8 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenuri_nodejs">
 <a href="#tokenuri_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Uri</a>
@@ -2316,8 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2325,14 +2114,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auth_provider_x509_cert_url_python">
 <a href="#auth_provider_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>provider_<wbr>x509_<wbr>cert_<wbr>url</a>
@@ -2340,8 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="auth_uri_python">
 <a href="#auth_uri_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>uri</a>
@@ -2349,8 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authentication_provisioning_state_python">
 <a href="#authentication_provisioning_state_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>provisioning_<wbr>state</a>
@@ -2358,8 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_email_python">
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -2367,8 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -2376,8 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_x509_cert_url_python">
 <a href="#client_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">client_<wbr>x509_<wbr>cert_<wbr>url</a>
@@ -2385,8 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="granted_permissions_python">
 <a href="#granted_permissions_python" style="color: inherit; text-decoration: inherit;">granted_<wbr>permissions</a>
@@ -2394,8 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_id_python">
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
@@ -2403,8 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -2412,8 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_id_python">
 <a href="#private_key_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>id</a>
@@ -2421,8 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2430,8 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_uri_python">
 <a href="#token_uri_python" style="color: inherit; text-decoration: inherit;">token_<wbr>uri</a>
@@ -2439,8 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2448,16 +2222,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hybridcomputesettingsproperties">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_csharp">
 <a href="#autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -2465,8 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#autoprovision">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Auto<wbr>Provision</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyserver_csharp">
 <a href="#proxyserver_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
@@ -2474,8 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2483,8 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2492,8 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipal_csharp">
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
@@ -2501,14 +2268,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_go">
 <a href="#autoprovision_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -2516,8 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#autoprovision">Auto<wbr>Provision</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyserver_go">
 <a href="#proxyserver_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
@@ -2525,8 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverproperties">Proxy<wbr>Server<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2534,8 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2543,8 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipal_go">
 <a href="#serviceprincipal_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
@@ -2552,14 +2312,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_nodejs">
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
@@ -2567,8 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#autoprovision">Auto<wbr>Provision</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyserver_nodejs">
 <a href="#proxyserver_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Server</a>
@@ -2576,8 +2332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverproperties">Proxy<wbr>Server<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2585,8 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2594,8 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipal_nodejs">
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
@@ -2603,14 +2356,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_provision_python">
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
@@ -2618,8 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#autoprovision">Auto<wbr>Provision</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_server_python">
 <a href="#proxy_server_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>server</a>
@@ -2627,8 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverproperties">Proxy<wbr>Server<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2636,8 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2645,8 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_principal_python">
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
@@ -2654,16 +2400,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hybridcomputesettingspropertiesresponse">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_csharp">
 <a href="#autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -2671,8 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hybridcomputeprovisioningstate_csharp">
 <a href="#hybridcomputeprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Compute<wbr>Provisioning<wbr>State</a>
@@ -2680,8 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyserver_csharp">
 <a href="#proxyserver_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
@@ -2689,8 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2698,8 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2707,8 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipal_csharp">
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
@@ -2716,14 +2454,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_go">
 <a href="#autoprovision_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -2731,8 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hybridcomputeprovisioningstate_go">
 <a href="#hybridcomputeprovisioningstate_go" style="color: inherit; text-decoration: inherit;">Hybrid<wbr>Compute<wbr>Provisioning<wbr>State</a>
@@ -2740,8 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyserver_go">
 <a href="#proxyserver_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Server</a>
@@ -2749,8 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverpropertiesresponse">Proxy<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2758,8 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2767,8 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipal_go">
 <a href="#serviceprincipal_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
@@ -2776,14 +2506,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_nodejs">
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
@@ -2791,8 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hybridcomputeprovisioningstate_nodejs">
 <a href="#hybridcomputeprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Compute<wbr>Provisioning<wbr>State</a>
@@ -2800,8 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyserver_nodejs">
 <a href="#proxyserver_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Server</a>
@@ -2809,8 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverpropertiesresponse">Proxy<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2818,8 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2827,8 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipal_nodejs">
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
@@ -2836,14 +2558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_provision_python">
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
@@ -2851,8 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hybrid_compute_provisioning_state_python">
 <a href="#hybrid_compute_provisioning_state_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>compute_<wbr>provisioning_<wbr>state</a>
@@ -2860,8 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_server_python">
 <a href="#proxy_server_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>server</a>
@@ -2869,8 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxyserverpropertiesresponse">Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2878,8 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2887,8 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_principal_python">
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
@@ -2896,16 +2610,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="proxyserverproperties">Proxy<wbr>Server<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -2913,8 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2922,14 +2632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -2937,8 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2946,14 +2652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -2961,8 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2970,14 +2672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -2985,8 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2994,16 +2692,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="proxyserverpropertiesresponse">Proxy<wbr>Server<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -3011,8 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3020,14 +2714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -3035,8 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3044,14 +2734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -3059,8 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3068,14 +2754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -3083,8 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3092,16 +2774,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Proxy server port{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -3109,8 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3118,14 +2796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -3133,8 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3142,14 +2816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -3157,8 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3166,14 +2836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -3181,8 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3190,16 +2856,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -3207,8 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3216,14 +2878,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -3231,8 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -3240,14 +2898,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -3255,8 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3264,14 +2918,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -3279,8 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -3288,8 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

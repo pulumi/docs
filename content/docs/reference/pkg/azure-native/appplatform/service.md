@@ -14,11 +14,17 @@ Service resource
 API Version: 2020-07-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Services_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -49,9 +55,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -85,9 +94,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -108,9 +120,12 @@ service = azure_native.appplatform.Service("service",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -132,10 +147,17 @@ const service = new azure_native.appplatform.Service("service", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Services_CreateOrUpdate_VNetInjection
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -176,9 +198,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -220,9 +245,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -251,9 +279,12 @@ service = azure_native.appplatform.Service("service",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -283,9 +314,16 @@ const service = new azure_native.appplatform.Service("service", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Service Resource {#create}
@@ -310,9 +348,7 @@ const service = new azure_native.appplatform.Service("service", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -320,9 +356,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -330,9 +364,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -340,10 +372,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -369,9 +398,7 @@ const service = new azure_native.appplatform.Service("service", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -379,9 +406,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -389,9 +414,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -399,9 +422,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -409,18 +430,13 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -428,9 +444,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -438,9 +452,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -448,10 +460,7 @@ const service = new azure_native.appplatform.Service("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -466,9 +475,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -476,8 +483,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -485,8 +491,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -494,8 +499,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterresourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -503,8 +507,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -512,8 +515,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -521,14 +523,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -536,8 +535,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -545,8 +543,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -554,8 +551,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -563,8 +559,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -572,8 +567,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -581,14 +575,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -596,8 +587,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -605,8 +595,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -614,8 +603,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -623,8 +611,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -632,8 +619,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -641,14 +627,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -656,8 +639,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -665,8 +647,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The GEO location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -674,8 +655,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -683,8 +663,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -692,8 +671,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -701,8 +679,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -713,9 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -723,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -732,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -741,14 +714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -756,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -765,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -774,14 +742,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -789,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -798,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -807,14 +770,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -822,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -831,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -840,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -857,9 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -867,14 +822,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -882,14 +834,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
@@ -897,14 +846,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
@@ -912,16 +858,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterresourcepropertiesresponse">Cluster<wbr>Resource<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -929,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_csharp">
 <a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -938,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -947,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -956,14 +896,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -971,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_go">
 <a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -980,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -989,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -998,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1013,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_nodejs">
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -1022,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1031,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
@@ -1040,14 +968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1055,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the Service{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_id_python">
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -1064,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ServiceInstanceEntity GUID which uniquely identifies a created resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1073,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Version of the Service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the Service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
@@ -1082,16 +1004,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkprofile">Network<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_csharp">
 <a href="#appnetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1099,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsubnetid_csharp">
 <a href="#appsubnetid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
@@ -1108,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_csharp">
 <a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1117,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_csharp">
 <a href="#serviceruntimenetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1126,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimesubnetid_csharp">
 <a href="#serviceruntimesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -1135,14 +1050,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_go">
 <a href="#appnetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1150,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsubnetid_go">
 <a href="#appsubnetid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
@@ -1159,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_go">
 <a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1168,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_go">
 <a href="#serviceruntimenetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1177,8 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimesubnetid_go">
 <a href="#serviceruntimesubnetid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -1186,14 +1094,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_nodejs">
 <a href="#appnetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1201,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsubnetid_nodejs">
 <a href="#appsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Subnet<wbr>Id</a>
@@ -1210,8 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_nodejs">
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
@@ -1219,8 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_nodejs">
 <a href="#serviceruntimenetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1228,8 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimesubnetid_nodejs">
 <a href="#serviceruntimesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -1237,14 +1138,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_network_resource_group_python">
 <a href="#app_network_resource_group_python" style="color: inherit; text-decoration: inherit;">app_<wbr>network_<wbr>resource_<wbr>group</a>
@@ -1252,8 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_subnet_id_python">
 <a href="#app_subnet_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>subnet_<wbr>id</a>
@@ -1261,8 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_cidr_python">
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
@@ -1270,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_runtime_network_resource_group_python">
 <a href="#service_runtime_network_resource_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>network_<wbr>resource_<wbr>group</a>
@@ -1279,8 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_runtime_subnet_id_python">
 <a href="#service_runtime_subnet_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>subnet_<wbr>id</a>
@@ -1288,16 +1182,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkprofileresponse">Network<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="outboundips_csharp">
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
@@ -1305,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiredtraffics_csharp">
 <a href="#requiredtraffics_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Traffics</a>
@@ -1314,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requiredtrafficresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Required<wbr>Traffic<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_csharp">
 <a href="#appnetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1323,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsubnetid_csharp">
 <a href="#appsubnetid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
@@ -1332,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_csharp">
 <a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1341,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_csharp">
 <a href="#serviceruntimenetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1350,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimesubnetid_csharp">
 <a href="#serviceruntimesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -1359,14 +1244,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="outboundips_go">
 <a href="#outboundips_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
@@ -1374,8 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiredtraffics_go">
 <a href="#requiredtraffics_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Traffics</a>
@@ -1383,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requiredtrafficresponse">[]Required<wbr>Traffic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_go">
 <a href="#appnetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1392,8 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsubnetid_go">
 <a href="#appsubnetid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
@@ -1401,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_go">
 <a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1410,8 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_go">
 <a href="#serviceruntimenetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1419,8 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimesubnetid_go">
 <a href="#serviceruntimesubnetid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -1428,14 +1304,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="outboundips_nodejs">
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
@@ -1443,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requiredtraffics_nodejs">
 <a href="#requiredtraffics_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Traffics</a>
@@ -1452,8 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requiredtrafficresponse">Required<wbr>Traffic<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_nodejs">
 <a href="#appnetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1461,8 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsubnetid_nodejs">
 <a href="#appsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Subnet<wbr>Id</a>
@@ -1470,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_nodejs">
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
@@ -1479,8 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_nodejs">
 <a href="#serviceruntimenetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -1488,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimesubnetid_nodejs">
 <a href="#serviceruntimesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -1497,14 +1364,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="outbound_ips_python">
 <a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
@@ -1512,8 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="required_traffics_python">
 <a href="#required_traffics_python" style="color: inherit; text-decoration: inherit;">required_<wbr>traffics</a>
@@ -1521,8 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requiredtrafficresponse">Sequence[Required<wbr>Traffic<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_network_resource_group_python">
 <a href="#app_network_resource_group_python" style="color: inherit; text-decoration: inherit;">app_<wbr>network_<wbr>resource_<wbr>group</a>
@@ -1530,8 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_subnet_id_python">
 <a href="#app_subnet_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>subnet_<wbr>id</a>
@@ -1539,8 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_cidr_python">
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
@@ -1548,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Spring Cloud service reserved CIDR{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_runtime_network_resource_group_python">
 <a href="#service_runtime_network_resource_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>network_<wbr>resource_<wbr>group</a>
@@ -1557,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group containing network resources of Azure Spring Cloud Service Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_runtime_subnet_id_python">
 <a href="#service_runtime_subnet_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>subnet_<wbr>id</a>
@@ -1566,16 +1424,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publicips_csharp">
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
@@ -1583,14 +1438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publicips_go">
 <a href="#publicips_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
@@ -1598,14 +1450,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publicips_nodejs">
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
@@ -1613,14 +1462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_ips_python">
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
@@ -1628,16 +1474,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP addresses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="requiredtrafficresponse">Required<wbr>Traffic<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1645,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdns_csharp">
 <a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -1654,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -1663,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1672,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1681,14 +1520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1696,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdns_go">
 <a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -1705,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ips_go">
 <a href="#ips_go" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -1714,8 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1723,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1732,14 +1564,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1747,8 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdns_nodejs">
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -1756,8 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ips_nodejs">
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -1765,8 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1774,8 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1783,14 +1608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1798,8 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The direction of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fqdns_python">
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -1807,8 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The FQDN list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -1816,8 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ip list of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1825,8 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The port of required traffic{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1834,16 +1652,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The protocol of required traffic{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1851,8 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1860,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1869,14 +1682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1884,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1893,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1902,14 +1710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1917,8 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1926,8 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1935,14 +1738,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1950,8 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1959,8 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1968,16 +1766,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1985,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1994,8 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2003,14 +1796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -2018,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2027,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2036,14 +1824,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -2051,8 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2060,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2069,14 +1852,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -2084,8 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2093,8 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2102,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

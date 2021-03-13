@@ -14,11 +14,17 @@ The backup schedule.
 API Version: 2017-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### BackupSchedulesCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -57,13 +63,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -92,9 +104,12 @@ backup_schedule = azure_native.storsimple.BackupSchedule("backupSchedule",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -124,9 +139,16 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BackupSchedule Resource {#create}
@@ -151,9 +173,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +181,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +189,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +197,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -210,9 +223,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -220,9 +231,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -230,9 +239,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,9 +247,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -250,18 +255,13 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -269,9 +269,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -279,9 +277,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -289,10 +285,7 @@ const backupSchedule = new azure_native.storsimple.BackupSchedule("backupSchedul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -307,9 +300,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuppolicyname_csharp">
 <a href="#backuppolicyname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Name</a>
@@ -317,8 +308,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backuptype_csharp">
 <a href="#backuptype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
@@ -326,8 +316,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backuptype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Backup<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -335,8 +324,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -344,8 +332,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -353,8 +340,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentioncount_csharp">
 <a href="#retentioncount_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Count</a>
@@ -362,8 +348,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulerecurrence_csharp">
 <a href="#schedulerecurrence_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Recurrence</a>
@@ -371,8 +356,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulerecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Schedule<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulestatus_csharp">
 <a href="#schedulestatus_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Status</a>
@@ -380,8 +364,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Schedule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -389,8 +372,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupschedulename_csharp">
 <a href="#backupschedulename_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Name</a>
@@ -398,8 +380,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -407,14 +388,11 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuppolicyname_go">
 <a href="#backuppolicyname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Name</a>
@@ -422,8 +400,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backuptype_go">
 <a href="#backuptype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Type</a>
@@ -431,8 +408,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backuptype">Backup<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -440,8 +416,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -449,8 +424,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -458,8 +432,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentioncount_go">
 <a href="#retentioncount_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Count</a>
@@ -467,8 +440,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulerecurrence_go">
 <a href="#schedulerecurrence_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Recurrence</a>
@@ -476,8 +448,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulerecurrence">Schedule<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulestatus_go">
 <a href="#schedulestatus_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Status</a>
@@ -485,8 +456,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulestatus">Schedule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -494,8 +464,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupschedulename_go">
 <a href="#backupschedulename_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Name</a>
@@ -503,8 +472,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -512,14 +480,11 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuppolicyname_nodejs">
 <a href="#backuppolicyname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Name</a>
@@ -527,8 +492,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backuptype_nodejs">
 <a href="#backuptype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Type</a>
@@ -536,8 +500,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backuptype">Backup<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -545,8 +508,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -554,8 +516,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -563,8 +524,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentioncount_nodejs">
 <a href="#retentioncount_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Count</a>
@@ -572,8 +532,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulerecurrence_nodejs">
 <a href="#schedulerecurrence_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Recurrence</a>
@@ -581,8 +540,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulerecurrence">Schedule<wbr>Recurrence</a></span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedulestatus_nodejs">
 <a href="#schedulestatus_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Status</a>
@@ -590,8 +548,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulestatus">Schedule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -599,8 +556,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupschedulename_nodejs">
 <a href="#backupschedulename_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Name</a>
@@ -608,8 +564,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -617,14 +572,11 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_policy_name_python">
 <a href="#backup_policy_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>name</a>
@@ -632,8 +584,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The backup policy name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backup_type_python">
 <a href="#backup_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>type</a>
@@ -641,8 +592,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backuptype">Backup<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of backup which needs to be taken.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -650,8 +600,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -659,8 +608,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -668,8 +616,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_count_python">
 <a href="#retention_count_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>count</a>
@@ -677,8 +624,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of backups to be retained.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_recurrence_python">
 <a href="#schedule_recurrence_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>recurrence</a>
@@ -686,8 +632,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulerecurrence">Schedule<wbr>Recurrence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_status_python">
 <a href="#schedule_status_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>status</a>
@@ -695,8 +640,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulestatus">Schedule<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The schedule status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schedule status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -704,8 +648,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_schedule_name_python">
 <a href="#backup_schedule_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>name</a>
@@ -713,8 +656,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The backup schedule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -722,8 +664,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -734,9 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -744,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastsuccessfulrun_csharp">
 <a href="#lastsuccessfulrun_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Successful<wbr>Run</a>
@@ -753,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -762,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -771,14 +707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -786,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastsuccessfulrun_go">
 <a href="#lastsuccessfulrun_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Successful<wbr>Run</a>
@@ -795,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -804,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -813,14 +743,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -828,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastsuccessfulrun_nodejs">
 <a href="#lastsuccessfulrun_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Successful<wbr>Run</a>
@@ -837,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -846,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -855,14 +779,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -870,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_successful_run_python">
 <a href="#last_successful_run_python" style="color: inherit; text-decoration: inherit;">last_<wbr>successful_<wbr>run</a>
@@ -879,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last successful backup run which was triggered for the schedule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -888,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -897,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -914,209 +831,135 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="backuptype">Backup<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Local<wbr>Snapshot</dt>
-    <dd>LocalSnapshot</dd>
-    <dt>Cloud<wbr>Snapshot</dt>
-    <dd>CloudSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>Local<wbr>Snapshot</dt>
+    <dd>LocalSnapshot</dd><dt>Cloud<wbr>Snapshot</dt>
+    <dd>CloudSnapshot</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Backup<wbr>Type<wbr>Local<wbr>Snapshot</dt>
-    <dd>LocalSnapshot</dd>
-    <dt>Backup<wbr>Type<wbr>Cloud<wbr>Snapshot</dt>
-    <dd>CloudSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>Backup<wbr>Type<wbr>Local<wbr>Snapshot</dt>
+    <dd>LocalSnapshot</dd><dt>Backup<wbr>Type<wbr>Cloud<wbr>Snapshot</dt>
+    <dd>CloudSnapshot</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Local<wbr>Snapshot</dt>
-    <dd>LocalSnapshot</dd>
-    <dt>Cloud<wbr>Snapshot</dt>
-    <dd>CloudSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>Local<wbr>Snapshot</dt>
+    <dd>LocalSnapshot</dd><dt>Cloud<wbr>Snapshot</dt>
+    <dd>CloudSnapshot</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>LOCAL_SNAPSHOT</dt>
-    <dd>LocalSnapshot</dd>
-    <dt>CLOUD_SNAPSHOT</dt>
-    <dd>CloudSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>LOCAL_SNAPSHOT</dt>
+    <dd>LocalSnapshot</dd><dt>CLOUD_SNAPSHOT</dt>
+    <dd>CloudSnapshot</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dayofweek">Day<wbr>Of<wbr>Week</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-</dl>
+<dl class="tabular"><dt>Sunday</dt>
+    <dd>Sunday</dd><dt>Monday</dt>
+    <dd>Monday</dd><dt>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Thursday</dt>
+    <dd>Thursday</dd><dt>Friday</dt>
+    <dd>Friday</dd><dt>Saturday</dt>
+    <dd>Saturday</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
-    <dd>Sunday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
-    <dd>Saturday</dd>
-</dl>
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>Sunday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>Monday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>Thursday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>Friday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>Saturday</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-</dl>
+<dl class="tabular"><dt>Sunday</dt>
+    <dd>Sunday</dd><dt>Monday</dt>
+    <dd>Monday</dd><dt>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Thursday</dt>
+    <dd>Thursday</dd><dt>Friday</dt>
+    <dd>Friday</dd><dt>Saturday</dt>
+    <dd>Saturday</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SUNDAY</dt>
-    <dd>Sunday</dd>
-    <dt>MONDAY</dt>
-    <dd>Monday</dd>
-    <dt>TUESDAY</dt>
-    <dd>Tuesday</dd>
-    <dt>WEDNESDAY</dt>
-    <dd>Wednesday</dd>
-    <dt>THURSDAY</dt>
-    <dd>Thursday</dd>
-    <dt>FRIDAY</dt>
-    <dd>Friday</dd>
-    <dt>SATURDAY</dt>
-    <dd>Saturday</dd>
-</dl>
+<dl class="tabular"><dt>SUNDAY</dt>
+    <dd>Sunday</dd><dt>MONDAY</dt>
+    <dd>Monday</dd><dt>TUESDAY</dt>
+    <dd>Tuesday</dd><dt>WEDNESDAY</dt>
+    <dd>Wednesday</dd><dt>THURSDAY</dt>
+    <dd>Thursday</dd><dt>FRIDAY</dt>
+    <dd>Friday</dd><dt>SATURDAY</dt>
+    <dd>Saturday</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SERIES8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>SERIES8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recurrencetype">Recurrence<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Minutes</dt>
-    <dd>Minutes</dd>
-    <dt>Hourly</dt>
-    <dd>Hourly</dd>
-    <dt>Daily</dt>
-    <dd>Daily</dd>
-    <dt>Weekly</dt>
-    <dd>Weekly</dd>
-</dl>
+<dl class="tabular"><dt>Minutes</dt>
+    <dd>Minutes</dd><dt>Hourly</dt>
+    <dd>Hourly</dd><dt>Daily</dt>
+    <dd>Daily</dd><dt>Weekly</dt>
+    <dd>Weekly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Recurrence<wbr>Type<wbr>Minutes</dt>
-    <dd>Minutes</dd>
-    <dt>Recurrence<wbr>Type<wbr>Hourly</dt>
-    <dd>Hourly</dd>
-    <dt>Recurrence<wbr>Type<wbr>Daily</dt>
-    <dd>Daily</dd>
-    <dt>Recurrence<wbr>Type<wbr>Weekly</dt>
-    <dd>Weekly</dd>
-</dl>
+<dl class="tabular"><dt>Recurrence<wbr>Type<wbr>Minutes</dt>
+    <dd>Minutes</dd><dt>Recurrence<wbr>Type<wbr>Hourly</dt>
+    <dd>Hourly</dd><dt>Recurrence<wbr>Type<wbr>Daily</dt>
+    <dd>Daily</dd><dt>Recurrence<wbr>Type<wbr>Weekly</dt>
+    <dd>Weekly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Minutes</dt>
-    <dd>Minutes</dd>
-    <dt>Hourly</dt>
-    <dd>Hourly</dd>
-    <dt>Daily</dt>
-    <dd>Daily</dd>
-    <dt>Weekly</dt>
-    <dd>Weekly</dd>
-</dl>
+<dl class="tabular"><dt>Minutes</dt>
+    <dd>Minutes</dd><dt>Hourly</dt>
+    <dd>Hourly</dd><dt>Daily</dt>
+    <dd>Daily</dd><dt>Weekly</dt>
+    <dd>Weekly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MINUTES</dt>
-    <dd>Minutes</dd>
-    <dt>HOURLY</dt>
-    <dd>Hourly</dd>
-    <dt>DAILY</dt>
-    <dd>Daily</dd>
-    <dt>WEEKLY</dt>
-    <dd>Weekly</dd>
-</dl>
+<dl class="tabular"><dt>MINUTES</dt>
+    <dd>Minutes</dd><dt>HOURLY</dt>
+    <dd>Hourly</dd><dt>DAILY</dt>
+    <dd>Daily</dd><dt>WEEKLY</dt>
+    <dd>Weekly</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulerecurrence">Schedule<wbr>Recurrence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_csharp">
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
@@ -1124,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Recurrence<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrencevalue_csharp">
 <a href="#recurrencevalue_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Value</a>
@@ -1133,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklydayslist_csharp">
 <a href="#weeklydayslist_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
@@ -1142,14 +983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_go">
 <a href="#recurrencetype_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
@@ -1157,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencetype">Recurrence<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrencevalue_go">
 <a href="#recurrencevalue_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Value</a>
@@ -1166,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklydayslist_go">
 <a href="#weeklydayslist_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
@@ -1175,14 +1011,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_nodejs">
 <a href="#recurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Type</a>
@@ -1190,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencetype">Recurrence<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrencevalue_nodejs">
 <a href="#recurrencevalue_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Value</a>
@@ -1199,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklydayslist_nodejs">
 <a href="#weeklydayslist_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Days<wbr>List</a>
@@ -1208,14 +1039,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_type_python">
 <a href="#recurrence_type_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>type</a>
@@ -1223,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencetype">Recurrence<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrence_value_python">
 <a href="#recurrence_value_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>value</a>
@@ -1232,8 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_days_list_python">
 <a href="#weekly_days_list_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>days_<wbr>list</a>
@@ -1241,16 +1067,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">Sequence[Day<wbr>Of<wbr>Week]</a></span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulerecurrenceresponse">Schedule<wbr>Recurrence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_csharp">
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
@@ -1258,8 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrencevalue_csharp">
 <a href="#recurrencevalue_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Value</a>
@@ -1267,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklydayslist_csharp">
 <a href="#weeklydayslist_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
@@ -1276,14 +1097,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_go">
 <a href="#recurrencetype_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
@@ -1291,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrencevalue_go">
 <a href="#recurrencevalue_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Value</a>
@@ -1300,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklydayslist_go">
 <a href="#weeklydayslist_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Days<wbr>List</a>
@@ -1309,14 +1125,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_nodejs">
 <a href="#recurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Type</a>
@@ -1324,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrencevalue_nodejs">
 <a href="#recurrencevalue_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Value</a>
@@ -1333,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklydayslist_nodejs">
 <a href="#weeklydayslist_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Days<wbr>List</a>
@@ -1342,14 +1153,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_type_python">
 <a href="#recurrence_type_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>type</a>
@@ -1357,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The recurrence type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recurrence_value_python">
 <a href="#recurrence_value_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>value</a>
@@ -1366,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_days_list_python">
 <a href="#weekly_days_list_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>days_<wbr>list</a>
@@ -1375,46 +1181,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The week days list. Applicable only for schedules of recurrence type 'weekly'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulestatus">Schedule<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Schedule<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Schedule<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Schedule<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Schedule<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 ## Import
 

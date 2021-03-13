@@ -14,11 +14,17 @@ The source user image virtual hard disk. The virtual hard disk will be copied be
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a virtual machine image from a blob with DiskEncryptionSet resource.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -52,9 +58,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -90,9 +99,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -115,9 +127,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -141,10 +156,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image from a blob.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -175,9 +197,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -211,9 +236,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -234,9 +262,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -258,10 +289,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -298,9 +336,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -338,9 +379,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -365,9 +409,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -393,10 +440,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image from a managed disk.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -430,9 +484,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -468,9 +525,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -493,9 +553,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -519,10 +582,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -559,9 +629,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -599,9 +672,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -626,9 +702,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -654,10 +733,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image from a snapshot.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -691,9 +777,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -729,9 +818,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -754,9 +846,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -780,10 +875,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image from an existing virtual machine.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -808,9 +910,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -839,9 +944,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -857,9 +965,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -876,10 +987,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image that includes a data disk from a blob.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -918,9 +1036,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -960,9 +1081,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -987,9 +1111,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1015,10 +1142,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image that includes a data disk from a managed disk.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -1063,9 +1197,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -1109,9 +1246,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -1140,9 +1280,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1172,10 +1315,17 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a virtual machine image that includes a data disk from a snapshot.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -1220,9 +1370,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -1266,9 +1419,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -1297,9 +1453,12 @@ image = azure_native.compute.Image("image",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1329,9 +1488,16 @@ const image = new azure_native.compute.Image("image", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Image Resource {#create}
@@ -1356,9 +1522,7 @@ const image = new azure_native.compute.Image("image", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1366,9 +1530,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1376,9 +1538,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1386,10 +1546,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1415,9 +1572,7 @@ const image = new azure_native.compute.Image("image", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1425,9 +1580,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1435,9 +1588,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1445,9 +1596,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1455,18 +1604,13 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1474,9 +1618,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1484,9 +1626,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1494,10 +1634,7 @@ const image = new azure_native.compute.Image("image", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1512,9 +1649,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1522,8 +1657,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedlocation_csharp">
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
@@ -1531,8 +1665,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervgeneration_csharp">
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -1540,8 +1673,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hypervgenerationtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1549,8 +1681,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1558,8 +1689,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachine_csharp">
 <a href="#sourcevirtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine</a>
@@ -1567,8 +1697,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_csharp">
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -1576,8 +1705,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagestorageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1585,14 +1713,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1600,8 +1725,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedlocation_go">
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
@@ -1609,8 +1733,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -1618,8 +1741,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1627,8 +1749,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1636,8 +1757,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachine_go">
 <a href="#sourcevirtualmachine_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine</a>
@@ -1645,8 +1765,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_go">
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -1654,8 +1773,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagestorageprofile">Image<wbr>Storage<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1663,14 +1781,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1678,8 +1793,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedlocation_nodejs">
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
@@ -1687,8 +1801,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervgeneration_nodejs">
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
@@ -1696,8 +1809,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1705,8 +1817,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1714,8 +1825,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachine_nodejs">
 <a href="#sourcevirtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Virtual<wbr>Machine</a>
@@ -1723,8 +1833,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageprofile_nodejs">
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
@@ -1732,8 +1841,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagestorageprofile">Image<wbr>Storage<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1741,14 +1849,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1756,8 +1861,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_location_python">
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
@@ -1765,8 +1869,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
@@ -1774,8 +1877,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -1783,8 +1885,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1792,8 +1893,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_virtual_machine_python">
 <a href="#source_virtual_machine_python" style="color: inherit; text-decoration: inherit;">source_<wbr>virtual_<wbr>machine</a>
@@ -1801,8 +1901,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source virtual machine from which Image is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_profile_python">
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
@@ -1810,8 +1909,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagestorageprofile">Image<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1819,8 +1917,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1831,9 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1841,8 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1850,8 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1859,8 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1868,14 +1960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1883,8 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1892,8 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1901,8 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1910,14 +1996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1925,8 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1934,8 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1943,8 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1952,14 +2032,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1967,8 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1976,8 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1985,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1994,8 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2011,55 +2084,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="cachingtypes">Caching<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Caching<wbr>Types<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Caching<wbr>Types<wbr>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Caching<wbr>Types<wbr>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>Caching<wbr>Types<wbr>None</dt>
+    <dd>None</dd><dt>Caching<wbr>Types<wbr>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Caching<wbr>Types<wbr>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>READ_ONLY</dt>
-    <dd>ReadOnly</dd>
-    <dt>READ_WRITE</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>READ_ONLY</dt>
+    <dd>ReadOnly</dd><dt>READ_WRITE</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2067,14 +2122,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2082,14 +2134,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2097,14 +2146,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2112,16 +2158,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2129,14 +2172,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2144,14 +2184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2159,14 +2196,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2174,16 +2208,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocation">Extended<wbr>Location</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2191,8 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2200,14 +2230,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Extended<wbr>Location<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2215,8 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2224,14 +2250,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2239,8 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2248,14 +2270,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2263,8 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2272,16 +2290,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2289,8 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2298,14 +2312,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2313,8 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2322,14 +2332,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2337,8 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2346,14 +2352,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2361,8 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2370,84 +2372,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocationtypes">Extended<wbr>Location<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Edge<wbr>Zone</dt>
-    <dd>EdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Extended<wbr>Location<wbr>Types<wbr>Edge<wbr>Zone</dt>
-    <dd>EdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>Extended<wbr>Location<wbr>Types<wbr>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Edge<wbr>Zone</dt>
-    <dd>EdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EDGE_ZONE</dt>
-    <dd>EdgeZone</dd>
-</dl>
+<dl class="tabular"><dt>EDGE_ZONE</dt>
+    <dd>EdgeZone</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>V1</dt>
-    <dd>V1</dd>
-    <dt>V2</dt>
-    <dd>V2</dd>
-</dl>
+<dl class="tabular"><dt>V1</dt>
+    <dd>V1</dd><dt>V2</dt>
+    <dd>V2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Hyper<wbr>VGeneration<wbr>Types<wbr>V1</dt>
-    <dd>V1</dd>
-    <dt>Hyper<wbr>VGeneration<wbr>Types<wbr>V2</dt>
-    <dd>V2</dd>
-</dl>
+<dl class="tabular"><dt>Hyper<wbr>VGeneration<wbr>Types<wbr>V1</dt>
+    <dd>V1</dd><dt>Hyper<wbr>VGeneration<wbr>Types<wbr>V2</dt>
+    <dd>V2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>V1</dt>
-    <dd>V1</dd>
-    <dt>V2</dt>
-    <dd>V2</dd>
-</dl>
+<dl class="tabular"><dt>V1</dt>
+    <dd>V1</dd><dt>V2</dt>
+    <dd>V2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>V1</dt>
-    <dd>V1</dd>
-    <dt>V2</dt>
-    <dd>V2</dd>
-</dl>
+<dl class="tabular"><dt>V1</dt>
+    <dd>V1</dd><dt>V2</dt>
+    <dd>V2</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagedatadisk">Image<wbr>Data<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2455,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_csharp">
 <a href="#bloburi_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -2464,8 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -2473,8 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_csharp">
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -2482,8 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -2491,8 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_csharp">
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -2500,8 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -2509,8 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2518,14 +2490,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2533,8 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_go">
 <a href="#bloburi_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -2542,8 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -2551,8 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_go">
 <a href="#diskencryptionset_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -2560,8 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -2569,8 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_go">
 <a href="#manageddisk_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -2578,8 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -2587,8 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2596,14 +2558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttypes">Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2611,8 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_nodejs">
 <a href="#bloburi_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
@@ -2620,8 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -2629,8 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_nodejs">
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
@@ -2638,8 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -2647,8 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_nodejs">
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
@@ -2656,8 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2665,8 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -2674,14 +2626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttypes">Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2689,8 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_uri_python">
 <a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
@@ -2698,8 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -2707,8 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_python">
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
@@ -2716,8 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -2725,8 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_python">
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
@@ -2734,8 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2743,8 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -2752,16 +2694,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storageaccounttypes">Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagedatadiskresponse">Image<wbr>Data<wbr>Disk<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2769,8 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_csharp">
 <a href="#bloburi_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -2778,8 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -2787,8 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_csharp">
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -2796,8 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -2805,8 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_csharp">
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -2814,8 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -2823,8 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2832,14 +2764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -2847,8 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_go">
 <a href="#bloburi_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -2856,8 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -2865,8 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_go">
 <a href="#diskencryptionset_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -2874,8 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -2883,8 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_go">
 <a href="#manageddisk_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -2892,8 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -2901,8 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -2910,14 +2832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -2925,8 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_nodejs">
 <a href="#bloburi_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
@@ -2934,8 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -2943,8 +2860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_nodejs">
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
@@ -2952,8 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -2961,8 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_nodejs">
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
@@ -2970,8 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2979,8 +2892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -2988,14 +2900,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -3003,8 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_uri_python">
 <a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
@@ -3012,8 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -3021,8 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_python">
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
@@ -3030,8 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -3039,8 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_python">
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
@@ -3048,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -3057,8 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -3066,16 +2968,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imageosdisk">Image<wbr>OSDisk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="osstate_csharp">
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
@@ -3083,8 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemstatetypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Operating<wbr>System<wbr>State<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3092,8 +2990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_csharp">
 <a href="#bloburi_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -3101,8 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -3110,8 +3006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_csharp">
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -3119,8 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -3128,8 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_csharp">
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -3137,8 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -3146,8 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3155,14 +3046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="osstate_go">
 <a href="#osstate_go" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
@@ -3170,8 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemstatetypes">Operating<wbr>System<wbr>State<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3179,8 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_go">
 <a href="#bloburi_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -3188,8 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -3197,8 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_go">
 <a href="#diskencryptionset_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -3206,8 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -3215,8 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_go">
 <a href="#manageddisk_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -3224,8 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -3233,8 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3242,14 +3122,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttypes">Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="osstate_nodejs">
 <a href="#osstate_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
@@ -3257,8 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemstatetypes">Operating<wbr>System<wbr>State<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -3266,8 +3142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_nodejs">
 <a href="#bloburi_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
@@ -3275,8 +3150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -3284,8 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_nodejs">
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
@@ -3293,8 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -3302,8 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_nodejs">
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
@@ -3311,8 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -3320,8 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -3329,14 +3198,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttypes">Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_state_python">
 <a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
@@ -3344,8 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemstatetypes">Operating<wbr>System<wbr>State<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -3353,8 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_uri_python">
 <a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
@@ -3362,8 +3226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -3371,8 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_python">
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
@@ -3380,8 +3242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -3389,8 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_python">
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
@@ -3398,8 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -3407,8 +3266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -3416,16 +3274,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storageaccounttypes">Storage<wbr>Account<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imageosdiskresponse">Image<wbr>OSDisk<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="osstate_csharp">
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
@@ -3433,8 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3442,8 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_csharp">
 <a href="#bloburi_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -3451,8 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -3460,8 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_csharp">
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -3469,8 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -3478,8 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_csharp">
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -3487,8 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -3496,8 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3505,14 +3352,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="osstate_go">
 <a href="#osstate_go" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
@@ -3520,8 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3529,8 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_go">
 <a href="#bloburi_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -3538,8 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -3547,8 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_go">
 <a href="#diskencryptionset_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
@@ -3556,8 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -3565,8 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_go">
 <a href="#manageddisk_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
@@ -3574,8 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -3583,8 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -3592,14 +3428,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="osstate_nodejs">
 <a href="#osstate_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
@@ -3607,8 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -3616,8 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bloburi_nodejs">
 <a href="#bloburi_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
@@ -3625,8 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -3634,8 +3464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionset_nodejs">
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
@@ -3643,8 +3472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -3652,8 +3480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisk_nodejs">
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
@@ -3661,8 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -3670,8 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -3679,14 +3504,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_state_python">
 <a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
@@ -3694,8 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OS State.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The OS State.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -3703,8 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_uri_python">
 <a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
@@ -3712,8 +3532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Virtual Hard Disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -3721,8 +3540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_python">
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
@@ -3730,8 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -3739,8 +3556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_python">
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
@@ -3748,8 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -3757,8 +3572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshot.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -3766,16 +3580,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagestorageprofile">Image<wbr>Storage<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_csharp">
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -3783,8 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_csharp">
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -3792,8 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_csharp">
 <a href="#zoneresilient_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -3801,14 +3610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_go">
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -3816,8 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_go">
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -3825,8 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdisk">Image<wbr>OSDisk</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_go">
 <a href="#zoneresilient_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -3834,14 +3638,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_nodejs">
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -3849,8 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadisk">Image<wbr>Data<wbr>Disk[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_nodejs">
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
@@ -3858,8 +3658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdisk">Image<wbr>OSDisk</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_nodejs">
 <a href="#zoneresilient_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Resilient</a>
@@ -3867,14 +3666,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disks_python">
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -3882,8 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadisk">Sequence[Image<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_python">
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
@@ -3891,8 +3686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdisk">Image<wbr>OSDisk<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_resilient_python">
 <a href="#zone_resilient_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>resilient</a>
@@ -3900,16 +3694,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagestorageprofileresponse">Image<wbr>Storage<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_csharp">
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -3917,8 +3708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_csharp">
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -3926,8 +3716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_csharp">
 <a href="#zoneresilient_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -3935,14 +3724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_go">
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -3950,8 +3736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadiskresponse">[]Image<wbr>Data<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_go">
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -3959,8 +3744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdiskresponse">Image<wbr>OSDisk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_go">
 <a href="#zoneresilient_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -3968,14 +3752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadisks_nodejs">
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -3983,8 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadiskresponse">Image<wbr>Data<wbr>Disk<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_nodejs">
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
@@ -3992,8 +3772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdiskresponse">Image<wbr>OSDisk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_nodejs">
 <a href="#zoneresilient_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Resilient</a>
@@ -4001,14 +3780,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_disks_python">
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -4016,8 +3792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagedatadiskresponse">Sequence[Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_python">
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
@@ -4025,8 +3800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageosdiskresponse">Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_resilient_python">
 <a href="#zone_resilient_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>resilient</a>
@@ -4034,146 +3808,99 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatingsystemstatetypes">Operating<wbr>System<wbr>State<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Generalized</dt>
-    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd>
-    <dt>Specialized</dt>
-    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Generalized</dt>
+    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd><dt>Specialized</dt>
+    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operating<wbr>System<wbr>State<wbr>Types<wbr>Generalized</dt>
-    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd>
-    <dt>Operating<wbr>System<wbr>State<wbr>Types<wbr>Specialized</dt>
-    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Operating<wbr>System<wbr>State<wbr>Types<wbr>Generalized</dt>
+    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd><dt>Operating<wbr>System<wbr>State<wbr>Types<wbr>Specialized</dt>
+    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Generalized</dt>
-    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd>
-    <dt>Specialized</dt>
-    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Generalized</dt>
+    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd><dt>Specialized</dt>
+    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GENERALIZED</dt>
-    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd>
-    <dt>SPECIALIZED</dt>
-    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>GENERALIZED</dt>
+    <dd>Generalized{{% md %}}Generalized image. Needs to be provisioned during deployment time.{{% /md %}}</dd><dt>SPECIALIZED</dt>
+    <dd>Specialized{{% md %}}Specialized image. Contains already provisioned OS Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatingsystemtypes">Operating<wbr>System<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operating<wbr>System<wbr>Types<wbr>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Operating<wbr>System<wbr>Types<wbr>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Operating<wbr>System<wbr>Types<wbr>Windows</dt>
+    <dd>Windows</dd><dt>Operating<wbr>System<wbr>Types<wbr>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WINDOWS</dt>
-    <dd>Windows</dd>
-    <dt>LINUX</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>WINDOWS</dt>
+    <dd>Windows</dd><dt>LINUX</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccounttypes">Storage<wbr>Account<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Premium_LRS</dt>
-    <dd>Premium_LRS</dd>
-    <dt>Standard<wbr>SSD_LRS</dt>
-    <dd>StandardSSD_LRS</dd>
-    <dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd>
-</dl>
+<dl class="tabular"><dt>Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Premium_LRS</dt>
+    <dd>Premium_LRS</dd><dt>Standard<wbr>SSD_LRS</dt>
+    <dd>StandardSSD_LRS</dd><dt>Ultra<wbr>SSD_LRS</dt>
+    <dd>UltraSSD_LRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Account<wbr>Types_Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Storage<wbr>Account<wbr>Types_Premium_LRS</dt>
-    <dd>Premium_LRS</dd>
-    <dt>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_LRS</dt>
-    <dd>StandardSSD_LRS</dd>
-    <dt>Storage<wbr>Account<wbr>Types_Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Account<wbr>Types_Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Premium_LRS</dt>
+    <dd>Premium_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Standard<wbr>SSD_LRS</dt>
+    <dd>StandardSSD_LRS</dd><dt>Storage<wbr>Account<wbr>Types_Ultra<wbr>SSD_LRS</dt>
+    <dd>UltraSSD_LRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Premium_LRS</dt>
-    <dd>Premium_LRS</dd>
-    <dt>Standard<wbr>SSD_LRS</dt>
-    <dd>StandardSSD_LRS</dd>
-    <dt>Ultra<wbr>SSD_LRS</dt>
-    <dd>UltraSSD_LRS</dd>
-</dl>
+<dl class="tabular"><dt>Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Premium_LRS</dt>
+    <dd>Premium_LRS</dd><dt>Standard<wbr>SSD_LRS</dt>
+    <dd>StandardSSD_LRS</dd><dt>Ultra<wbr>SSD_LRS</dt>
+    <dd>UltraSSD_LRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>PREMIUM_LRS</dt>
-    <dd>Premium_LRS</dd>
-    <dt>STANDARD_SS_D_LRS</dt>
-    <dd>StandardSSD_LRS</dd>
-    <dt>ULTRA_SS_D_LRS</dt>
-    <dd>UltraSSD_LRS</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD_LRS</dt>
+    <dd>Standard_LRS</dd><dt>PREMIUM_LRS</dt>
+    <dd>Premium_LRS</dd><dt>STANDARD_SS_D_LRS</dt>
+    <dd>StandardSSD_LRS</dd><dt>ULTRA_SS_D_LRS</dt>
+    <dd>UltraSSD_LRS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresource">Sub<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4181,14 +3908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4196,14 +3920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4211,14 +3932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4226,16 +3944,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4243,14 +3958,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4258,14 +3970,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4273,14 +3982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4288,8 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

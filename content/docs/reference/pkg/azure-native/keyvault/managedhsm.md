@@ -14,11 +14,17 @@ Resource information with extended details.
 API Version: 2020-04-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a new managed HSM Pool or update an existing managed HSM Pool
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -60,9 +66,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -105,9 +114,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -135,9 +147,12 @@ managed_hsm = azure_native.keyvault.ManagedHsm("managedHsm",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -166,9 +181,16 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagedHsm Resource {#create}
@@ -193,9 +215,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -203,9 +223,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -213,9 +231,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -223,10 +239,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -252,9 +265,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -262,9 +273,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +281,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +289,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,18 +297,13 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -311,9 +311,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -321,9 +319,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -331,10 +327,7 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -349,9 +342,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -359,8 +350,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -368,8 +358,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -377,8 +366,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -386,8 +374,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -395,8 +382,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmsku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -404,14 +390,11 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -419,8 +402,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -428,8 +410,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -437,8 +418,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -446,8 +426,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -455,8 +434,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -464,14 +442,11 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -479,8 +454,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -488,8 +462,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -497,8 +470,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -506,8 +478,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -515,8 +486,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -524,14 +494,11 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -539,8 +506,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -548,8 +514,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -557,8 +522,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -566,8 +530,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -575,8 +538,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SKU details{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -584,8 +546,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -596,9 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -606,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -615,14 +573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -630,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -639,14 +593,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -654,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -663,14 +613,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -687,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the managed HSM Pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -704,47 +649,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="createmode">Create<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Recover</dt>
-    <dd>recover</dd>
-    <dt>@Default</dt>
-    <dd>default</dd>
-</dl>
+<dl class="tabular"><dt>Recover</dt>
+    <dd>recover</dd><dt>@Default</dt>
+    <dd>default</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Create<wbr>Mode<wbr>Recover</dt>
-    <dd>recover</dd>
-    <dt>Create<wbr>Mode<wbr>Default</dt>
-    <dd>default</dd>
-</dl>
+<dl class="tabular"><dt>Create<wbr>Mode<wbr>Recover</dt>
+    <dd>recover</dd><dt>Create<wbr>Mode<wbr>Default</dt>
+    <dd>default</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Recover</dt>
-    <dd>recover</dd>
-    <dt>Default</dt>
-    <dd>default</dd>
-</dl>
+<dl class="tabular"><dt>Recover</dt>
+    <dd>recover</dd><dt>Default</dt>
+    <dd>default</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>RECOVER</dt>
-    <dd>recover</dd>
-    <dt>DEFAULT</dt>
-    <dd>default</dd>
-</dl>
+<dl class="tabular"><dt>RECOVER</dt>
+    <dd>recover</dd><dt>DEFAULT</dt>
+    <dd>default</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedhsmproperties">Managed<wbr>Hsm<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -752,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_csharp">
 <a href="#enablepurgeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -761,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_csharp">
 <a href="#enablesoftdelete_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Soft<wbr>Delete</a>
@@ -770,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_csharp">
 <a href="#initialadminobjectids_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
@@ -779,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_csharp">
 <a href="#softdeleteretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -788,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -797,14 +723,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -812,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_go">
 <a href="#enablepurgeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -821,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_go">
 <a href="#enablesoftdelete_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Soft<wbr>Delete</a>
@@ -830,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_go">
 <a href="#initialadminobjectids_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
@@ -839,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_go">
 <a href="#softdeleteretentionindays_go" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -848,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -857,14 +775,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -872,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_nodejs">
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
@@ -881,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_nodejs">
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
@@ -890,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_nodejs">
 <a href="#initialadminobjectids_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Admin<wbr>Object<wbr>Ids</a>
@@ -899,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_nodejs">
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -908,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -917,14 +827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -932,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_purge_protection_python">
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
@@ -941,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_soft_delete_python">
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
@@ -950,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_admin_object_ids_python">
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
@@ -959,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soft_delete_retention_in_days_python">
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
@@ -968,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -977,16 +879,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedhsmpropertiesresponse">Managed<wbr>Hsm<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hsmuri_csharp">
 <a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
@@ -994,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1003,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_csharp">
 <a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
@@ -1012,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -1021,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_csharp">
 <a href="#enablepurgeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -1030,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_csharp">
 <a href="#enablesoftdelete_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Soft<wbr>Delete</a>
@@ -1039,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_csharp">
 <a href="#initialadminobjectids_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
@@ -1048,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_csharp">
 <a href="#softdeleteretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1057,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1066,14 +957,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hsmuri_go">
 <a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
@@ -1081,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1090,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_go">
 <a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
@@ -1099,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -1108,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_go">
 <a href="#enablepurgeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Purge<wbr>Protection</a>
@@ -1117,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_go">
 <a href="#enablesoftdelete_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Soft<wbr>Delete</a>
@@ -1126,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_go">
 <a href="#initialadminobjectids_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
@@ -1135,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_go">
 <a href="#softdeleteretentionindays_go" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1144,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1153,14 +1033,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hsmuri_nodejs">
 <a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
@@ -1168,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1177,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_nodejs">
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
@@ -1186,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -1195,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepurgeprotection_nodejs">
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
@@ -1204,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesoftdelete_nodejs">
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
@@ -1213,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_nodejs">
 <a href="#initialadminobjectids_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Admin<wbr>Object<wbr>Ids</a>
@@ -1222,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_nodejs">
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1231,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1240,14 +1109,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hsm_uri_python">
 <a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
@@ -1255,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1264,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_message_python">
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
@@ -1273,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -1282,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_purge_protection_python">
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
@@ -1291,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_soft_delete_python">
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
@@ -1300,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_admin_object_ids_python">
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
@@ -1309,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soft_delete_retention_in_days_python">
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
@@ -1318,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1327,16 +1185,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedhsmsku">Managed<wbr>Hsm<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1344,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedhsmskufamily">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1353,14 +1207,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmskuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1368,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedhsmskufamily">Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1377,14 +1227,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmskuname">Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1392,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedhsmskufamily">Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1401,14 +1247,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmskuname">Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1416,8 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#managedhsmskufamily">Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1425,84 +1267,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedhsmskuname">Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedhsmskufamily">Managed<wbr>Hsm<wbr>Sku<wbr>Family</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>B</dt>
-    <dd>B</dd>
-</dl>
+<dl class="tabular"><dt>B</dt>
+    <dd>B</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Hsm<wbr>Sku<wbr>Family<wbr>B</dt>
-    <dd>B</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Hsm<wbr>Sku<wbr>Family<wbr>B</dt>
+    <dd>B</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>B</dt>
-    <dd>B</dd>
-</dl>
+<dl class="tabular"><dt>B</dt>
+    <dd>B</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>B</dt>
-    <dd>B</dd>
-</dl>
+<dl class="tabular"><dt>B</dt>
+    <dd>B</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedhsmskuname">Managed<wbr>Hsm<wbr>Sku<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard_B1</dt>
-    <dd>Standard_B1</dd>
-    <dt>Custom_B32</dt>
-    <dd>Custom_B32</dd>
-</dl>
+<dl class="tabular"><dt>Standard_B1</dt>
+    <dd>Standard_B1</dd><dt>Custom_B32</dt>
+    <dd>Custom_B32</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Hsm<wbr>Sku<wbr>Name_Standard_B1</dt>
-    <dd>Standard_B1</dd>
-    <dt>Managed<wbr>Hsm<wbr>Sku<wbr>Name_Custom_B32</dt>
-    <dd>Custom_B32</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Hsm<wbr>Sku<wbr>Name_Standard_B1</dt>
+    <dd>Standard_B1</dd><dt>Managed<wbr>Hsm<wbr>Sku<wbr>Name_Custom_B32</dt>
+    <dd>Custom_B32</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard_B1</dt>
-    <dd>Standard_B1</dd>
-    <dt>Custom_B32</dt>
-    <dd>Custom_B32</dd>
-</dl>
+<dl class="tabular"><dt>Standard_B1</dt>
+    <dd>Standard_B1</dd><dt>Custom_B32</dt>
+    <dd>Custom_B32</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD_B1</dt>
-    <dd>Standard_B1</dd>
-    <dt>CUSTOM_B32</dt>
-    <dd>Custom_B32</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD_B1</dt>
+    <dd>Standard_B1</dd><dt>CUSTOM_B32</dt>
+    <dd>Custom_B32</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedhsmskuresponse">Managed<wbr>Hsm<wbr>Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1510,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1519,14 +1337,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1534,8 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1543,14 +1357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1558,8 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1567,14 +1377,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1582,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1591,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

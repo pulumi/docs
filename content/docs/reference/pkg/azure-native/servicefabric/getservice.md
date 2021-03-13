@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicekind_csharp">
 <a href="#servicekind_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Kind</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlationscheme_csharp">
 <a href="#correlationscheme_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Scheme</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorrelationdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Service<wbr>Correlation<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmovecost_csharp">
 <a href="#defaultmovecost_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Move<wbr>Cost</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitiondescription_csharp">
 <a href="#partitiondescription_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#singletonpartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#uniformint64rangepartitionschemedescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placementconstraints_csharp">
 <a href="#placementconstraints_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicednsname_csharp">
 <a href="#servicednsname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Dns<wbr>Name</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceloadmetrics_csharp">
 <a href="#serviceloadmetrics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Load<wbr>Metrics</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepackageactivationmode_csharp">
 <a href="#servicepackageactivationmode_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Package<wbr>Activation<wbr>Mode</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceplacementpolicies_csharp">
 <a href="#serviceplacementpolicies_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Placement<wbr>Policies</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Outputs.<wbr>Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetypename_csharp">
 <a href="#servicetypename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Name</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the service type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -382,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicekind_go">
 <a href="#servicekind_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Kind</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlationscheme_go">
 <a href="#correlationscheme_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Scheme</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorrelationdescriptionresponse">[]Service<wbr>Correlation<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmovecost_go">
 <a href="#defaultmovecost_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Move<wbr>Cost</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitiondescription_go">
 <a href="#partitiondescription_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placementconstraints_go">
 <a href="#placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicednsname_go">
 <a href="#servicednsname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Dns<wbr>Name</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceloadmetrics_go">
 <a href="#serviceloadmetrics_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Load<wbr>Metrics</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">[]Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepackageactivationmode_go">
 <a href="#servicepackageactivationmode_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Package<wbr>Activation<wbr>Mode</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceplacementpolicies_go">
 <a href="#serviceplacementpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Placement<wbr>Policies</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">[]Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetypename_go">
 <a href="#servicetypename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Name</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the service type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -541,14 +480,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicekind_nodejs">
 <a href="#servicekind_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Kind</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlationscheme_nodejs">
 <a href="#correlationscheme_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Scheme</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorrelationdescriptionresponse">Service<wbr>Correlation<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmovecost_nodejs">
 <a href="#defaultmovecost_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Move<wbr>Cost</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partitiondescription_nodejs">
 <a href="#partitiondescription_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Description</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placementconstraints_nodejs">
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicednsname_nodejs">
 <a href="#servicednsname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Dns<wbr>Name</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceloadmetrics_nodejs">
 <a href="#serviceloadmetrics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Load<wbr>Metrics</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepackageactivationmode_nodejs">
 <a href="#servicepackageactivationmode_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Package<wbr>Activation<wbr>Mode</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceplacementpolicies_nodejs">
 <a href="#serviceplacementpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Placement<wbr>Policies</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetypename_nodejs">
 <a href="#servicetypename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Name</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the service type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -700,14 +620,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_kind_python">
 <a href="#service_kind_python" style="color: inherit; text-decoration: inherit;">service_<wbr>kind</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="correlation_scheme_python">
 <a href="#correlation_scheme_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>scheme</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorrelationdescriptionresponse">Sequence[Service<wbr>Correlation<wbr>Description<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_move_cost_python">
 <a href="#default_move_cost_python" style="color: inherit; text-decoration: inherit;">default_<wbr>move_<wbr>cost</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partition_description_python">
 <a href="#partition_description_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>description</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namedpartitionschemedescriptionresponse">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a> | <a href="#uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placement_constraints_python">
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_dns_name_python">
 <a href="#service_dns_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>dns_<wbr>name</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_load_metrics_python">
 <a href="#service_load_metrics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>load_<wbr>metrics</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceloadmetricdescriptionresponse">Sequence[Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_package_activation_mode_python">
 <a href="#service_package_activation_mode_python" style="color: inherit; text-decoration: inherit;">service_<wbr>package_<wbr>activation_<wbr>mode</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_placement_policies_python">
 <a href="#service_placement_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>placement_<wbr>policies</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceplacementpolicydescriptionresponse">Sequence[Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_name_python">
 <a href="#service_type_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>name</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the service type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -874,9 +774,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -884,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -893,14 +790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -908,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -917,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -932,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -941,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -956,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -965,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecorrelationdescriptionresponse">Service<wbr>Correlation<wbr>Description<wbr>Response</h4>
@@ -974,9 +858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheme_csharp">
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -984,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -993,14 +874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheme_go">
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -1008,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1017,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheme_nodejs">
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -1032,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1041,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheme_python">
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceloadmetricdescriptionresponse">Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Response</h4>
@@ -1074,9 +942,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1084,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultload_csharp">
 <a href="#defaultload_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Load</a>
@@ -1093,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarydefaultload_csharp">
 <a href="#primarydefaultload_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Default<wbr>Load</a>
@@ -1102,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarydefaultload_csharp">
 <a href="#secondarydefaultload_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Default<wbr>Load</a>
@@ -1111,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1120,14 +982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1135,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultload_go">
 <a href="#defaultload_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Load</a>
@@ -1144,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarydefaultload_go">
 <a href="#primarydefaultload_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Default<wbr>Load</a>
@@ -1153,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarydefaultload_go">
 <a href="#secondarydefaultload_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Default<wbr>Load</a>
@@ -1162,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1171,14 +1026,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1186,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultload_nodejs">
 <a href="#defaultload_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
@@ -1195,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarydefaultload_nodejs">
 <a href="#primarydefaultload_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
@@ -1204,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarydefaultload_nodejs">
 <a href="#secondarydefaultload_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
@@ -1213,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1222,14 +1070,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1237,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_load_python">
 <a href="#default_load_python" style="color: inherit; text-decoration: inherit;">default_<wbr>load</a>
@@ -1246,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_default_load_python">
 <a href="#primary_default_load_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>default_<wbr>load</a>
@@ -1255,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_default_load_python">
 <a href="#secondary_default_load_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>default_<wbr>load</a>
@@ -1264,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1273,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceplacementpolicydescriptionresponse">Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Response</h4>
@@ -1282,9 +1122,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1292,14 +1130,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1307,14 +1142,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1322,14 +1154,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1337,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="singletonpartitionschemedescriptionresponse">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</h4>
@@ -1346,27 +1174,19 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 <h4 id="uniformint64rangepartitionschemedescriptionresponse">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Response</h4>
@@ -1374,9 +1194,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1384,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="highkey_csharp">
 <a href="#highkey_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Key</a>
@@ -1395,8 +1212,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lowkey_csharp">
 <a href="#lowkey_csharp" style="color: inherit; text-decoration: inherit;">Low<wbr>Key</a>
@@ -1406,14 +1222,11 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1421,8 +1234,7 @@ should be split between the partition ‘count’
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="highkey_go">
 <a href="#highkey_go" style="color: inherit; text-decoration: inherit;">High<wbr>Key</a>
@@ -1432,8 +1244,7 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lowkey_go">
 <a href="#lowkey_go" style="color: inherit; text-decoration: inherit;">Low<wbr>Key</a>
@@ -1443,14 +1254,11 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1458,8 +1266,7 @@ should be split between the partition ‘count’
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="highkey_nodejs">
 <a href="#highkey_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Key</a>
@@ -1469,8 +1276,7 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lowkey_nodejs">
 <a href="#lowkey_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Key</a>
@@ -1480,14 +1286,11 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1495,8 +1298,7 @@ should be split between the partition ‘count’
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="high_key_python">
 <a href="#high_key_python" style="color: inherit; text-decoration: inherit;">high_<wbr>key</a>
@@ -1506,8 +1308,7 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="low_key_python">
 <a href="#low_key_python" style="color: inherit; text-decoration: inherit;">low_<wbr>key</a>
@@ -1517,8 +1318,7 @@ should be split between the partition ‘count’
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

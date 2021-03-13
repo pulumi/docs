@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roleassignmentname_csharp">
 <a href="#roleassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignment<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roleassignmentname_go">
 <a href="#roleassignmentname_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignment<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roleassignmentname_nodejs">
 <a href="#roleassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Assignment<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_assignment_name_python">
 <a href="#role_assignment_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>assignment_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment to get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="candelegate_csharp">
 <a href="#candelegate_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Delegate</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conditionversion_csharp">
 <a href="#conditionversion_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegatedmanagedidentityresourceid_csharp">
 <a href="#delegatedmanagedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_csharp">
 <a href="#updatedon_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -301,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="candelegate_go">
 <a href="#candelegate_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Delegate</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conditionversion_go">
 <a href="#conditionversion_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegatedmanagedidentityresourceid_go">
 <a href="#delegatedmanagedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_go">
 <a href="#updatedon_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="candelegate_nodejs">
 <a href="#candelegate_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Delegate</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conditionversion_nodejs">
 <a href="#conditionversion_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Version</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegatedmanagedidentityresourceid_nodejs">
 <a href="#delegatedmanagedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_nodejs">
 <a href="#updatedon_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>On</a>
@@ -601,14 +532,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="can_delegate_python">
 <a href="#can_delegate_python" style="color: inherit; text-decoration: inherit;">can_<wbr>delegate</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Delegation flag for the role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_version_python">
 <a href="#condition_version_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>version</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegated_managed_identity_resource_id_python">
 <a href="#delegated_managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>managed_<wbr>identity_<wbr>resource_<wbr>id</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the delegated managed identity resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of role assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal type of the assigned principal ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role definition ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The role assignment scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_on_python">
 <a href="#updated_on_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>on</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

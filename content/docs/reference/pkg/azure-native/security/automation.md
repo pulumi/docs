@@ -14,11 +14,17 @@ The security automation resource.
 API Version: 2019-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a security automation for all assessments
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -67,13 +73,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -102,9 +114,12 @@ automation = azure_native.security.Automation("automation",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -134,10 +149,17 @@ const automation = new azure_native.security.Automation("automation", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a security automation for all high severity assessments
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -202,13 +224,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -245,9 +273,12 @@ automation = azure_native.security.Automation("automation",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -285,10 +316,17 @@ const automation = new azure_native.security.Automation("automation", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Disable or enable a security automation
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -353,13 +391,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -396,9 +440,12 @@ automation = azure_native.security.Automation("automation",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -436,9 +483,16 @@ const automation = new azure_native.security.Automation("automation", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Automation Resource {#create}
@@ -463,9 +517,7 @@ const automation = new azure_native.security.Automation("automation", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -473,9 +525,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -483,9 +533,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -493,10 +541,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -522,9 +567,7 @@ const automation = new azure_native.security.Automation("automation", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -532,9 +575,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -542,9 +583,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -552,9 +591,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -562,18 +599,13 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -581,9 +613,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -591,9 +621,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -601,10 +629,7 @@ const automation = new azure_native.security.Automation("automation", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -619,9 +644,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -629,8 +652,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -638,8 +660,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automationname_csharp">
 <a href="#automationname_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Name</a>
@@ -647,8 +668,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security automation name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -656,8 +676,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security automation description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -665,8 +684,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -674,8 +692,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -683,8 +700,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -692,8 +708,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -701,8 +716,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationscope">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -710,8 +724,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationsource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -719,14 +732,11 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -734,8 +744,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -743,8 +752,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automationname_go">
 <a href="#automationname_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Name</a>
@@ -752,8 +760,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security automation name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -761,8 +768,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security automation description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -770,8 +776,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -779,8 +784,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -788,8 +792,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -797,8 +800,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -806,8 +808,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationscope">[]Automation<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -815,8 +816,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -824,14 +824,11 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -839,8 +836,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -848,8 +844,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Automation<wbr>Action<wbr>Event<wbr>Hub | Automation<wbr>Action<wbr>Logic<wbr>App | Automation<wbr>Action<wbr>Workspace[]</span>
     </dt>
-    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automationname_nodejs">
 <a href="#automationname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Name</a>
@@ -857,8 +852,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security automation name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -866,8 +860,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security automation description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -875,8 +868,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -884,8 +876,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -893,8 +884,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -902,8 +892,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -911,8 +900,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationscope">Automation<wbr>Scope[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -920,8 +908,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationsource">Automation<wbr>Source[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -929,14 +916,11 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -944,8 +928,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -953,8 +936,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Args, Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Args, Automation<wbr>Action<wbr>Workspace<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automation_name_python">
 <a href="#automation_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>name</a>
@@ -962,8 +944,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security automation name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -971,8 +952,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security automation description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security automation description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -980,8 +960,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity tag is used for comparing two or more entities from the same requested resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -989,8 +968,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the security automation is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -998,8 +976,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1007,8 +984,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location where the resource is stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1016,8 +992,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationscope">Sequence[Automation<wbr>Scope<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -1025,8 +1000,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationsource">Sequence[Automation<wbr>Source<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1034,8 +1008,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of key value pairs that describe the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1046,9 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1056,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1065,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1074,14 +1043,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1089,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1098,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1107,14 +1071,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1122,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1131,8 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1140,14 +1099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1155,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1164,8 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1173,8 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1190,9 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="automationactioneventhub">Automation<wbr>Action<wbr>Event<wbr>Hub</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1200,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubresourceid_csharp">
 <a href="#eventhubresourceid_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -1209,14 +1159,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1224,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubresourceid_go">
 <a href="#eventhubresourceid_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -1233,14 +1179,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1248,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubresourceid_nodejs">
 <a href="#eventhubresourceid_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -1257,14 +1199,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1272,8 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_resource_id_python">
 <a href="#event_hub_resource_id_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>resource_<wbr>id</a>
@@ -1281,16 +1219,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationactioneventhubresponse">Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="saspolicyname_csharp">
 <a href="#saspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy<wbr>Name</a>
@@ -1298,8 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1307,8 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubresourceid_csharp">
 <a href="#eventhubresourceid_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -1316,14 +1249,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="saspolicyname_go">
 <a href="#saspolicyname_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy<wbr>Name</a>
@@ -1331,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1340,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubresourceid_go">
 <a href="#eventhubresourceid_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -1349,14 +1277,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="saspolicyname_nodejs">
 <a href="#saspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policy<wbr>Name</a>
@@ -1364,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1373,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubresourceid_nodejs">
 <a href="#eventhubresourceid_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Resource<wbr>Id</a>
@@ -1382,14 +1305,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sas_policy_name_python">
 <a href="#sas_policy_name_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policy_<wbr>name</a>
@@ -1397,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub SAS policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1406,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target Event Hub connection string (it will not be included in any response).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_resource_id_python">
 <a href="#event_hub_resource_id_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>resource_<wbr>id</a>
@@ -1415,16 +1333,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target Event Hub Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationactionlogicapp">Automation<wbr>Action<wbr>Logic<wbr>App</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logicappresourceid_csharp">
 <a href="#logicappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
@@ -1432,8 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1441,14 +1355,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logicappresourceid_go">
 <a href="#logicappresourceid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
@@ -1456,8 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1465,14 +1375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logicappresourceid_nodejs">
 <a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
@@ -1480,8 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1489,14 +1395,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logic_app_resource_id_python">
 <a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
@@ -1504,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1513,16 +1415,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationactionlogicappresponse">Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logicappresourceid_csharp">
 <a href="#logicappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
@@ -1530,8 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1539,14 +1437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logicappresourceid_go">
 <a href="#logicappresourceid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Resource<wbr>Id</a>
@@ -1554,8 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1563,14 +1457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logicappresourceid_nodejs">
 <a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
@@ -1578,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1587,14 +1477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logic_app_resource_id_python">
 <a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
@@ -1602,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1611,16 +1497,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Logic App trigger URI endpoint (it will not be included in any response).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationactionworkspace">Automation<wbr>Action<wbr>Workspace</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_csharp">
 <a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -1628,14 +1511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_go">
 <a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -1643,14 +1523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_nodejs">
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
@@ -1658,14 +1535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspace_resource_id_python">
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
@@ -1673,16 +1547,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationactionworkspaceresponse">Automation<wbr>Action<wbr>Workspace<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_csharp">
 <a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -1690,14 +1561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_go">
 <a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -1705,14 +1573,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_nodejs">
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
@@ -1720,14 +1585,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspace_resource_id_python">
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
@@ -1735,16 +1597,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Log Analytics Workspace Azure Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationruleset">Automation<wbr>Rule<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1752,14 +1611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1767,14 +1623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringrule">[]Automation<wbr>Triggering<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1782,14 +1635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringrule">Automation<wbr>Triggering<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1797,16 +1647,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringrule">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationrulesetresponse">Automation<wbr>Rule<wbr>Set<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1814,14 +1661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1829,14 +1673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringruleresponse">[]Automation<wbr>Triggering<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1844,14 +1685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringruleresponse">Automation<wbr>Triggering<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1859,16 +1697,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationtriggeringruleresponse">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationscope">Automation<wbr>Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1876,8 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopepath_csharp">
 <a href="#scopepath_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Path</a>
@@ -1885,14 +1719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1900,8 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopepath_go">
 <a href="#scopepath_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Path</a>
@@ -1909,14 +1739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1924,8 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopepath_nodejs">
 <a href="#scopepath_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Path</a>
@@ -1933,14 +1759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1948,8 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_path_python">
 <a href="#scope_path_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>path</a>
@@ -1957,16 +1779,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationscoperesponse">Automation<wbr>Scope<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1974,8 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopepath_csharp">
 <a href="#scopepath_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Path</a>
@@ -1983,14 +1801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1998,8 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopepath_go">
 <a href="#scopepath_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Path</a>
@@ -2007,14 +1821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2022,8 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopepath_nodejs">
 <a href="#scopepath_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Path</a>
@@ -2031,14 +1841,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2046,8 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resources scope description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_path_python">
 <a href="#scope_path_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>path</a>
@@ -2055,16 +1861,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationsource">Automation<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventsource_csharp">
 <a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2072,8 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#eventsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Event<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_csharp">
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -2081,14 +1883,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventsource_go">
 <a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2096,8 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#eventsource">Event<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_go">
 <a href="#rulesets_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -2105,14 +1903,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationruleset">[]Automation<wbr>Rule<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventsource_nodejs">
 <a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
@@ -2120,8 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#eventsource">Event<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_nodejs">
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
@@ -2129,14 +1923,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationruleset">Automation<wbr>Rule<wbr>Set[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="event_source_python">
 <a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
@@ -2144,8 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#eventsource">Event<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_sets_python">
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
@@ -2153,16 +1943,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationruleset">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationsourceresponse">Automation<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventsource_csharp">
 <a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2170,8 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_csharp">
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -2179,14 +1965,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventsource_go">
 <a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2194,8 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_go">
 <a href="#rulesets_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -2203,14 +1985,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationrulesetresponse">[]Automation<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventsource_nodejs">
 <a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
@@ -2218,8 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_nodejs">
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
@@ -2227,14 +2005,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationrulesetresponse">Automation<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="event_source_python">
 <a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
@@ -2242,8 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid event source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_sets_python">
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
@@ -2251,16 +2025,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#automationrulesetresponse">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationtriggeringrule">Automation<wbr>Triggering<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_csharp">
 <a href="#expectedvalue_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -2268,8 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2277,8 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyjpath_csharp">
 <a href="#propertyjpath_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>JPath</a>
@@ -2286,8 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertytype_csharp">
 <a href="#propertytype_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
@@ -2295,14 +2063,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#propertytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Property<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_go">
 <a href="#expectedvalue_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -2310,8 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2319,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operator">Operator</a></span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyjpath_go">
 <a href="#propertyjpath_go" style="color: inherit; text-decoration: inherit;">Property<wbr>JPath</a>
@@ -2328,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertytype_go">
 <a href="#propertytype_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
@@ -2337,14 +2099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#propertytype">Property<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_nodejs">
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
@@ -2352,8 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2361,8 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operator">Operator</a></span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyjpath_nodejs">
 <a href="#propertyjpath_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>JPath</a>
@@ -2370,8 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertytype_nodejs">
 <a href="#propertytype_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Type</a>
@@ -2379,14 +2135,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#propertytype">Property<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expected_value_python">
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
@@ -2394,8 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2403,8 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#operator">Operator</a></span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="property_j_path_python">
 <a href="#property_j_path_python" style="color: inherit; text-decoration: inherit;">property_<wbr>j_<wbr>path</a>
@@ -2412,8 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="property_type_python">
 <a href="#property_type_python" style="color: inherit; text-decoration: inherit;">property_<wbr>type</a>
@@ -2421,16 +2171,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#propertytype">Property<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="automationtriggeringruleresponse">Automation<wbr>Triggering<wbr>Rule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_csharp">
 <a href="#expectedvalue_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -2438,8 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2447,8 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyjpath_csharp">
 <a href="#propertyjpath_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>JPath</a>
@@ -2456,8 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertytype_csharp">
 <a href="#propertytype_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
@@ -2465,14 +2209,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_go">
 <a href="#expectedvalue_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -2480,8 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2489,8 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyjpath_go">
 <a href="#propertyjpath_go" style="color: inherit; text-decoration: inherit;">Property<wbr>JPath</a>
@@ -2498,8 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertytype_go">
 <a href="#propertytype_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Type</a>
@@ -2507,14 +2245,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_nodejs">
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
@@ -2522,8 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2531,8 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertyjpath_nodejs">
 <a href="#propertyjpath_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>JPath</a>
@@ -2540,8 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="propertytype_nodejs">
 <a href="#propertytype_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Type</a>
@@ -2549,14 +2281,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expected_value_python">
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
@@ -2564,8 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expected value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2573,8 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="property_j_path_python">
 <a href="#property_j_path_python" style="color: inherit; text-decoration: inherit;">property_<wbr>j_<wbr>path</a>
@@ -2582,8 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The JPath of the entity model property that should be checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="property_type_python">
 <a href="#property_type_python" style="color: inherit; text-decoration: inherit;">property_<wbr>type</a>
@@ -2591,250 +2317,149 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="eventsource">Event<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Assessments</dt>
-    <dd>Assessments</dd>
-    <dt>Sub<wbr>Assessments</dt>
-    <dd>SubAssessments</dd>
-    <dt>Alerts</dt>
-    <dd>Alerts</dd>
-    <dt>Secure<wbr>Scores</dt>
-    <dd>SecureScores</dd>
-    <dt>Secure<wbr>Scores<wbr>Snapshot</dt>
-    <dd>SecureScoresSnapshot</dd>
-    <dt>Secure<wbr>Score<wbr>Controls</dt>
-    <dd>SecureScoreControls</dd>
-    <dt>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
-    <dd>SecureScoreControlsSnapshot</dd>
-    <dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
-    <dd>RegulatoryComplianceAssessment</dd>
-    <dt>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
-    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>Assessments</dt>
+    <dd>Assessments</dd><dt>Sub<wbr>Assessments</dt>
+    <dd>SubAssessments</dd><dt>Alerts</dt>
+    <dd>Alerts</dd><dt>Secure<wbr>Scores</dt>
+    <dd>SecureScores</dd><dt>Secure<wbr>Scores<wbr>Snapshot</dt>
+    <dd>SecureScoresSnapshot</dd><dt>Secure<wbr>Score<wbr>Controls</dt>
+    <dd>SecureScoreControls</dd><dt>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
+    <dd>SecureScoreControlsSnapshot</dd><dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
+    <dd>RegulatoryComplianceAssessment</dd><dt>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Event<wbr>Source<wbr>Assessments</dt>
-    <dd>Assessments</dd>
-    <dt>Event<wbr>Source<wbr>Sub<wbr>Assessments</dt>
-    <dd>SubAssessments</dd>
-    <dt>Event<wbr>Source<wbr>Alerts</dt>
-    <dd>Alerts</dd>
-    <dt>Event<wbr>Source<wbr>Secure<wbr>Scores</dt>
-    <dd>SecureScores</dd>
-    <dt>Event<wbr>Source<wbr>Secure<wbr>Scores<wbr>Snapshot</dt>
-    <dd>SecureScoresSnapshot</dd>
-    <dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls</dt>
-    <dd>SecureScoreControls</dd>
-    <dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
-    <dd>SecureScoreControlsSnapshot</dd>
-    <dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment</dt>
-    <dd>RegulatoryComplianceAssessment</dd>
-    <dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
-    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>Event<wbr>Source<wbr>Assessments</dt>
+    <dd>Assessments</dd><dt>Event<wbr>Source<wbr>Sub<wbr>Assessments</dt>
+    <dd>SubAssessments</dd><dt>Event<wbr>Source<wbr>Alerts</dt>
+    <dd>Alerts</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Scores</dt>
+    <dd>SecureScores</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Scores<wbr>Snapshot</dt>
+    <dd>SecureScoresSnapshot</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls</dt>
+    <dd>SecureScoreControls</dd><dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
+    <dd>SecureScoreControlsSnapshot</dd><dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment</dt>
+    <dd>RegulatoryComplianceAssessment</dd><dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Assessments</dt>
-    <dd>Assessments</dd>
-    <dt>Sub<wbr>Assessments</dt>
-    <dd>SubAssessments</dd>
-    <dt>Alerts</dt>
-    <dd>Alerts</dd>
-    <dt>Secure<wbr>Scores</dt>
-    <dd>SecureScores</dd>
-    <dt>Secure<wbr>Scores<wbr>Snapshot</dt>
-    <dd>SecureScoresSnapshot</dd>
-    <dt>Secure<wbr>Score<wbr>Controls</dt>
-    <dd>SecureScoreControls</dd>
-    <dt>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
-    <dd>SecureScoreControlsSnapshot</dd>
-    <dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
-    <dd>RegulatoryComplianceAssessment</dd>
-    <dt>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
-    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>Assessments</dt>
+    <dd>Assessments</dd><dt>Sub<wbr>Assessments</dt>
+    <dd>SubAssessments</dd><dt>Alerts</dt>
+    <dd>Alerts</dd><dt>Secure<wbr>Scores</dt>
+    <dd>SecureScores</dd><dt>Secure<wbr>Scores<wbr>Snapshot</dt>
+    <dd>SecureScoresSnapshot</dd><dt>Secure<wbr>Score<wbr>Controls</dt>
+    <dd>SecureScoreControls</dd><dt>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
+    <dd>SecureScoreControlsSnapshot</dd><dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
+    <dd>RegulatoryComplianceAssessment</dd><dt>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ASSESSMENTS</dt>
-    <dd>Assessments</dd>
-    <dt>SUB_ASSESSMENTS</dt>
-    <dd>SubAssessments</dd>
-    <dt>ALERTS</dt>
-    <dd>Alerts</dd>
-    <dt>SECURE_SCORES</dt>
-    <dd>SecureScores</dd>
-    <dt>SECURE_SCORES_SNAPSHOT</dt>
-    <dd>SecureScoresSnapshot</dd>
-    <dt>SECURE_SCORE_CONTROLS</dt>
-    <dd>SecureScoreControls</dd>
-    <dt>SECURE_SCORE_CONTROLS_SNAPSHOT</dt>
-    <dd>SecureScoreControlsSnapshot</dd>
-    <dt>REGULATORY_COMPLIANCE_ASSESSMENT</dt>
-    <dd>RegulatoryComplianceAssessment</dd>
-    <dt>REGULATORY_COMPLIANCE_ASSESSMENT_SNAPSHOT</dt>
-    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
-</dl>
+<dl class="tabular"><dt>ASSESSMENTS</dt>
+    <dd>Assessments</dd><dt>SUB_ASSESSMENTS</dt>
+    <dd>SubAssessments</dd><dt>ALERTS</dt>
+    <dd>Alerts</dd><dt>SECURE_SCORES</dt>
+    <dd>SecureScores</dd><dt>SECURE_SCORES_SNAPSHOT</dt>
+    <dd>SecureScoresSnapshot</dd><dt>SECURE_SCORE_CONTROLS</dt>
+    <dd>SecureScoreControls</dd><dt>SECURE_SCORE_CONTROLS_SNAPSHOT</dt>
+    <dd>SecureScoreControlsSnapshot</dd><dt>REGULATORY_COMPLIANCE_ASSESSMENT</dt>
+    <dd>RegulatoryComplianceAssessment</dd><dt>REGULATORY_COMPLIANCE_ASSESSMENT_SNAPSHOT</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operator">Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Equals<wbr>Value</dt>
-    <dd>Equals</dd>
-    <dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>GreaterThanOrEqualTo</dd>
-    <dt>Lesser<wbr>Than</dt>
-    <dd>LesserThan</dd>
-    <dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>LesserThanOrEqualTo</dd>
-    <dt>Not<wbr>Equals</dt>
-    <dd>NotEquals</dd>
-    <dt>Contains</dt>
-    <dd>Contains</dd>
-    <dt>Starts<wbr>With</dt>
-    <dd>StartsWith</dd>
-    <dt>Ends<wbr>With</dt>
-    <dd>EndsWith</dd>
-</dl>
+<dl class="tabular"><dt>Equals<wbr>Value</dt>
+    <dd>Equals</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GreaterThanOrEqualTo</dd><dt>Lesser<wbr>Than</dt>
+    <dd>LesserThan</dd><dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LesserThanOrEqualTo</dd><dt>Not<wbr>Equals</dt>
+    <dd>NotEquals</dd><dt>Contains</dt>
+    <dd>Contains</dd><dt>Starts<wbr>With</dt>
+    <dd>StartsWith</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operator<wbr>Equals</dt>
-    <dd>Equals</dd>
-    <dt>Operator<wbr>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>GreaterThanOrEqualTo</dd>
-    <dt>Operator<wbr>Lesser<wbr>Than</dt>
-    <dd>LesserThan</dd>
-    <dt>Operator<wbr>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>LesserThanOrEqualTo</dd>
-    <dt>Operator<wbr>Not<wbr>Equals</dt>
-    <dd>NotEquals</dd>
-    <dt>Operator<wbr>Contains</dt>
-    <dd>Contains</dd>
-    <dt>Operator<wbr>Starts<wbr>With</dt>
-    <dd>StartsWith</dd>
-    <dt>Operator<wbr>Ends<wbr>With</dt>
-    <dd>EndsWith</dd>
-</dl>
+<dl class="tabular"><dt>Operator<wbr>Equals</dt>
+    <dd>Equals</dd><dt>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GreaterThanOrEqualTo</dd><dt>Operator<wbr>Lesser<wbr>Than</dt>
+    <dd>LesserThan</dd><dt>Operator<wbr>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LesserThanOrEqualTo</dd><dt>Operator<wbr>Not<wbr>Equals</dt>
+    <dd>NotEquals</dd><dt>Operator<wbr>Contains</dt>
+    <dd>Contains</dd><dt>Operator<wbr>Starts<wbr>With</dt>
+    <dd>StartsWith</dd><dt>Operator<wbr>Ends<wbr>With</dt>
+    <dd>EndsWith</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Equals</dt>
-    <dd>Equals</dd>
-    <dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>GreaterThanOrEqualTo</dd>
-    <dt>Lesser<wbr>Than</dt>
-    <dd>LesserThan</dd>
-    <dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
-    <dd>LesserThanOrEqualTo</dd>
-    <dt>Not<wbr>Equals</dt>
-    <dd>NotEquals</dd>
-    <dt>Contains</dt>
-    <dd>Contains</dd>
-    <dt>Starts<wbr>With</dt>
-    <dd>StartsWith</dd>
-    <dt>Ends<wbr>With</dt>
-    <dd>EndsWith</dd>
-</dl>
+<dl class="tabular"><dt>Equals</dt>
+    <dd>Equals</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>GreaterThanOrEqualTo</dd><dt>Lesser<wbr>Than</dt>
+    <dd>LesserThan</dd><dt>Lesser<wbr>Than<wbr>Or<wbr>Equal<wbr>To</dt>
+    <dd>LesserThanOrEqualTo</dd><dt>Not<wbr>Equals</dt>
+    <dd>NotEquals</dd><dt>Contains</dt>
+    <dd>Contains</dd><dt>Starts<wbr>With</dt>
+    <dd>StartsWith</dd><dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EQUALS</dt>
-    <dd>Equals</dd>
-    <dt>GREATER_THAN</dt>
-    <dd>GreaterThan</dd>
-    <dt>GREATER_THAN_OR_EQUAL_TO</dt>
-    <dd>GreaterThanOrEqualTo</dd>
-    <dt>LESSER_THAN</dt>
-    <dd>LesserThan</dd>
-    <dt>LESSER_THAN_OR_EQUAL_TO</dt>
-    <dd>LesserThanOrEqualTo</dd>
-    <dt>NOT_EQUALS</dt>
-    <dd>NotEquals</dd>
-    <dt>CONTAINS</dt>
-    <dd>Contains</dd>
-    <dt>STARTS_WITH</dt>
-    <dd>StartsWith</dd>
-    <dt>ENDS_WITH</dt>
-    <dd>EndsWith</dd>
-</dl>
+<dl class="tabular"><dt>EQUALS</dt>
+    <dd>Equals</dd><dt>GREATER_THAN</dt>
+    <dd>GreaterThan</dd><dt>GREATER_THAN_OR_EQUAL_TO</dt>
+    <dd>GreaterThanOrEqualTo</dd><dt>LESSER_THAN</dt>
+    <dd>LesserThan</dd><dt>LESSER_THAN_OR_EQUAL_TO</dt>
+    <dd>LesserThanOrEqualTo</dd><dt>NOT_EQUALS</dt>
+    <dd>NotEquals</dd><dt>CONTAINS</dt>
+    <dd>Contains</dd><dt>STARTS_WITH</dt>
+    <dd>StartsWith</dd><dt>ENDS_WITH</dt>
+    <dd>EndsWith</dd></dl>
 {{% /choosable %}}
 
 <h4 id="propertytype">Property<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>String</dt>
-    <dd>String</dd>
-    <dt>Integer</dt>
-    <dd>Integer</dd>
-    <dt>Number</dt>
-    <dd>Number</dd>
-    <dt>Boolean</dt>
-    <dd>Boolean</dd>
-</dl>
+<dl class="tabular"><dt>String</dt>
+    <dd>String</dd><dt>Integer</dt>
+    <dd>Integer</dd><dt>Number</dt>
+    <dd>Number</dd><dt>Boolean</dt>
+    <dd>Boolean</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Property<wbr>Type<wbr>String</dt>
-    <dd>String</dd>
-    <dt>Property<wbr>Type<wbr>Integer</dt>
-    <dd>Integer</dd>
-    <dt>Property<wbr>Type<wbr>Number</dt>
-    <dd>Number</dd>
-    <dt>Property<wbr>Type<wbr>Boolean</dt>
-    <dd>Boolean</dd>
-</dl>
+<dl class="tabular"><dt>Property<wbr>Type<wbr>String</dt>
+    <dd>String</dd><dt>Property<wbr>Type<wbr>Integer</dt>
+    <dd>Integer</dd><dt>Property<wbr>Type<wbr>Number</dt>
+    <dd>Number</dd><dt>Property<wbr>Type<wbr>Boolean</dt>
+    <dd>Boolean</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>String</dt>
-    <dd>String</dd>
-    <dt>Integer</dt>
-    <dd>Integer</dd>
-    <dt>Number</dt>
-    <dd>Number</dd>
-    <dt>Boolean</dt>
-    <dd>Boolean</dd>
-</dl>
+<dl class="tabular"><dt>String</dt>
+    <dd>String</dd><dt>Integer</dt>
+    <dd>Integer</dd><dt>Number</dt>
+    <dd>Number</dd><dt>Boolean</dt>
+    <dd>Boolean</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STRING</dt>
-    <dd>String</dd>
-    <dt>INTEGER</dt>
-    <dd>Integer</dd>
-    <dt>NUMBER</dt>
-    <dd>Number</dd>
-    <dt>BOOLEAN</dt>
-    <dd>Boolean</dd>
-</dl>
+<dl class="tabular"><dt>STRING</dt>
+    <dd>String</dd><dt>INTEGER</dt>
+    <dd>Integer</dd><dt>NUMBER</dt>
+    <dd>Number</dd><dt>BOOLEAN</dt>
+    <dd>Boolean</dd></dl>
 {{% /choosable %}}
 ## Import
 

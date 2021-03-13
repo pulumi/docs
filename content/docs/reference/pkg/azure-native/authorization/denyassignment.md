@@ -14,11 +14,17 @@ Deny Assignment
 API Version: 2020-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create deny assignment for resource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -58,9 +64,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -100,9 +109,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -125,9 +137,12 @@ deny_assignment = azure_native.authorization.DenyAssignment("denyAssignment",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -151,10 +166,17 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create deny assignment for resource group
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -194,9 +216,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -236,9 +261,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -261,9 +289,12 @@ deny_assignment = azure_native.authorization.DenyAssignment("denyAssignment",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -287,10 +318,17 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create deny assignment for subscription
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -330,9 +368,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -372,9 +413,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -397,9 +441,12 @@ deny_assignment = azure_native.authorization.DenyAssignment("denyAssignment",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -423,9 +470,16 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DenyAssignment Resource {#create}
@@ -450,9 +504,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -460,9 +512,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -470,9 +520,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -480,10 +528,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -509,9 +554,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -519,9 +562,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -529,9 +570,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -539,9 +578,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -549,18 +586,13 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -568,9 +600,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -578,9 +608,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -588,10 +616,7 @@ const denyAssignment = new azure_native.authorization.DenyAssignment("denyAssign
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -606,9 +631,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -616,8 +639,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permission">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principals_csharp">
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
@@ -625,8 +647,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -634,8 +655,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -643,8 +663,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionversion_csharp">
 <a href="#conditionversion_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -652,8 +671,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denyassignmentname_csharp">
 <a href="#denyassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Assignment<wbr>Name</a>
@@ -661,8 +679,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -670,8 +687,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="donotapplytochildscopes_csharp">
 <a href="#donotapplytochildscopes_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Apply<wbr>To<wbr>Child<wbr>Scopes</a>
@@ -679,8 +695,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeprincipals_csharp">
 <a href="#excludeprincipals_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Principals</a>
@@ -688,8 +703,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issystemprotected_csharp">
 <a href="#issystemprotected_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Protected</a>
@@ -697,14 +711,11 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -712,8 +723,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permission">[]Permission</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principals_go">
 <a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
@@ -721,8 +731,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">[]Principal</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -730,8 +739,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -739,8 +747,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionversion_go">
 <a href="#conditionversion_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -748,8 +755,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denyassignmentname_go">
 <a href="#denyassignmentname_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Assignment<wbr>Name</a>
@@ -757,8 +763,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -766,8 +771,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="donotapplytochildscopes_go">
 <a href="#donotapplytochildscopes_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Apply<wbr>To<wbr>Child<wbr>Scopes</a>
@@ -775,8 +779,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeprincipals_go">
 <a href="#excludeprincipals_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Principals</a>
@@ -784,8 +787,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">[]Principal</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issystemprotected_go">
 <a href="#issystemprotected_go" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Protected</a>
@@ -793,14 +795,11 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -808,8 +807,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permission">Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principals_nodejs">
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
@@ -817,8 +815,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">Principal[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -826,8 +823,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -835,8 +831,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditionversion_nodejs">
 <a href="#conditionversion_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Version</a>
@@ -844,8 +839,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denyassignmentname_nodejs">
 <a href="#denyassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Assignment<wbr>Name</a>
@@ -853,8 +847,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -862,8 +855,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="donotapplytochildscopes_nodejs">
 <a href="#donotapplytochildscopes_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Apply<wbr>To<wbr>Child<wbr>Scopes</a>
@@ -871,8 +863,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeprincipals_nodejs">
 <a href="#excludeprincipals_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Principals</a>
@@ -880,8 +871,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">Principal[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issystemprotected_nodejs">
 <a href="#issystemprotected_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>System<wbr>Protected</a>
@@ -889,14 +879,11 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -904,8 +891,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permission">Sequence[Permission<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principals_python">
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
@@ -913,8 +899,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">Sequence[Principal<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -922,8 +907,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -931,8 +915,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_version_python">
 <a href="#condition_version_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>version</a>
@@ -940,8 +923,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_assignment_name_python">
 <a href="#deny_assignment_name_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>assignment_<wbr>name</a>
@@ -949,8 +931,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -958,8 +939,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="do_not_apply_to_child_scopes_python">
 <a href="#do_not_apply_to_child_scopes_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>apply_<wbr>to_<wbr>child_<wbr>scopes</a>
@@ -967,8 +947,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_principals_python">
 <a href="#exclude_principals_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>principals</a>
@@ -976,8 +955,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principal">Sequence[Principal<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_system_protected_python">
 <a href="#is_system_protected_python" style="color: inherit; text-decoration: inherit;">is_<wbr>system_<wbr>protected</a>
@@ -985,8 +963,7 @@ The DenyAssignment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -997,9 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1007,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1016,8 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1025,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1034,8 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1043,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -1052,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_csharp">
 <a href="#updatedon_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -1061,14 +1030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1076,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1085,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1094,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1103,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1112,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -1121,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_go">
 <a href="#updatedon_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -1130,14 +1090,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1145,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -1154,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1163,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1172,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1181,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -1190,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_nodejs">
 <a href="#updatedon_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>On</a>
@@ -1199,14 +1150,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1214,8 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -1223,8 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1232,8 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1241,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1250,8 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -1259,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_on_python">
 <a href="#updated_on_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>on</a>
@@ -1268,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1285,9 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="permission">Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -1295,8 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_csharp">
 <a href="#dataactions_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -1304,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_csharp">
 <a href="#notactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -1313,8 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_csharp">
 <a href="#notdataactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -1322,14 +1258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -1337,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_go">
 <a href="#dataactions_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -1346,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_go">
 <a href="#notactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -1355,8 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_go">
 <a href="#notdataactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -1364,14 +1294,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -1379,8 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_nodejs">
 <a href="#dataactions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
@@ -1388,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_nodejs">
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
@@ -1397,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_nodejs">
 <a href="#notdataactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
@@ -1406,14 +1330,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -1421,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_actions_python">
 <a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
@@ -1430,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_actions_python">
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
@@ -1439,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_data_actions_python">
 <a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
@@ -1448,16 +1366,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="permissionresponse">Permission<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -1465,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_csharp">
 <a href="#dataactions_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -1474,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_csharp">
 <a href="#notactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -1483,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_csharp">
 <a href="#notdataactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -1492,14 +1404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -1507,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_go">
 <a href="#dataactions_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -1516,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_go">
 <a href="#notactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -1525,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_go">
 <a href="#notdataactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -1534,14 +1440,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -1549,8 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_nodejs">
 <a href="#dataactions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
@@ -1558,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_nodejs">
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
@@ -1567,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_nodejs">
 <a href="#notdataactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
@@ -1576,14 +1476,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -1591,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_actions_python">
 <a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
@@ -1600,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_actions_python">
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
@@ -1609,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_data_actions_python">
 <a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
@@ -1618,16 +1512,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="principal">Principal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1635,8 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1644,14 +1534,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1659,8 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1668,14 +1554,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1683,8 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1692,14 +1574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1707,8 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1716,16 +1594,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="principalresponse">Principal<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1733,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1742,14 +1616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1757,8 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1766,14 +1636,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1781,8 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1790,14 +1656,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1805,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1814,8 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

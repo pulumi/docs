@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appname_csharp">
 <a href="#appname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncstatus_csharp">
 <a href="#syncstatus_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appname_go">
 <a href="#appname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncstatus_go">
 <a href="#syncstatus_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Status</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appname_nodejs">
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncstatus_nodejs">
 <a href="#syncstatus_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Status</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_name_python">
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_status_python">
 <a href="#sync_status_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>status</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Outputs.<wbr>App<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedidentitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Outputs.<wbr>Managed<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appresourcepropertiesresponse">App<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedidentitypropertiesresponse">Managed<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appresourcepropertiesresponse">App<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedidentitypropertiesresponse">Managed<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -403,14 +356,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appresourcepropertiesresponse">App<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedidentitypropertiesresponse">Managed<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URL of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedeploymentname_csharp">
 <a href="#activedeploymentname_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Deployment<wbr>Name</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsonly_csharp">
 <a href="#httpsonly_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Only</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistentdisk_csharp">
 <a href="#persistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
@@ -542,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -551,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporarydisk_csharp">
 <a href="#temporarydisk_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Disk</a>
@@ -560,14 +494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#temporarydiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -575,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -584,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -593,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URL of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedeploymentname_go">
 <a href="#activedeploymentname_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Deployment<wbr>Name</a>
@@ -602,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -611,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsonly_go">
 <a href="#httpsonly_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Only</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistentdisk_go">
 <a href="#persistentdisk_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporarydisk_go">
 <a href="#temporarydisk_go" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Disk</a>
@@ -647,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -662,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -671,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -680,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URL of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedeploymentname_nodejs">
 <a href="#activedeploymentname_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Deployment<wbr>Name</a>
@@ -689,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsonly_nodejs">
 <a href="#httpsonly_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Only</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistentdisk_nodejs">
 <a href="#persistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Disk</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporarydisk_nodejs">
 <a href="#temporarydisk_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Disk</a>
@@ -734,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -758,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -767,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URL of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_deployment_name_python">
 <a href="#active_deployment_name_python" style="color: inherit; text-decoration: inherit;">active_<wbr>deployment_<wbr>name</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_only_python">
 <a href="#https_only_python" style="color: inherit; text-decoration: inherit;">https_<wbr>only</a>
@@ -794,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistent_disk_python">
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporary_disk_python">
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedidentitypropertiesresponse">Managed<wbr>Identity<wbr>Properties<wbr>Response</h4>
@@ -830,9 +730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -849,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -858,14 +754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -873,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -882,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -891,14 +782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -906,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -915,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -924,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -939,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Principal Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -948,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -957,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="persistentdiskresponse">Persistent<wbr>Disk<wbr>Response</h4>
@@ -966,9 +846,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usedingb_csharp">
 <a href="#usedingb_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>In<wbr>GB</a>
@@ -976,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountpath_csharp">
 <a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -985,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeingb_csharp">
 <a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -994,14 +870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usedingb_go">
 <a href="#usedingb_go" style="color: inherit; text-decoration: inherit;">Used<wbr>In<wbr>GB</a>
@@ -1009,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountpath_go">
 <a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -1018,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeingb_go">
 <a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -1027,14 +898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usedingb_nodejs">
 <a href="#usedingb_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>In<wbr>GB</a>
@@ -1042,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountpath_nodejs">
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
@@ -1051,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeingb_nodejs">
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
@@ -1060,14 +926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="used_in_gb_python">
 <a href="#used_in_gb_python" style="color: inherit; text-decoration: inherit;">used_<wbr>in_<wbr>gb</a>
@@ -1075,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mount_path_python">
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
@@ -1084,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_in_gb_python">
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
@@ -1093,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="temporarydiskresponse">Temporary<wbr>Disk<wbr>Response</h4>
@@ -1102,9 +962,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mountpath_csharp">
 <a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -1112,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeingb_csharp">
 <a href="#sizeingb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -1121,14 +978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mountpath_go">
 <a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -1136,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeingb_go">
 <a href="#sizeingb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>GB</a>
@@ -1145,14 +998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mountpath_nodejs">
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
@@ -1160,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizeingb_nodejs">
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
@@ -1169,14 +1018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mount_path_python">
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
@@ -1184,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_in_gb_python">
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
@@ -1193,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

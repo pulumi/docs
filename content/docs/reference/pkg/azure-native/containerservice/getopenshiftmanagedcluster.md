@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterversion_csharp">
 <a href="#clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="openshiftversion_csharp">
 <a href="#openshiftversion_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Shift<wbr>Version</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publichostname_csharp">
 <a href="#publichostname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Hostname</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_csharp">
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authprofile_csharp">
 <a href="#authprofile_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Profile</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusterauthprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterpoolprofile_csharp">
 <a href="#masterpoolprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Pool<wbr>Profile</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routerprofiles_csharp">
 <a href="#routerprofiles_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Profiles</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftrouterprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -301,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterversion_go">
 <a href="#clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="openshiftversion_go">
 <a href="#openshiftversion_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Shift<wbr>Version</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publichostname_go">
 <a href="#publichostname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Hostname</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_go">
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofileresponse">[]Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authprofile_go">
 <a href="#authprofile_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Profile</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusterauthprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterpoolprofile_go">
 <a href="#masterpoolprofile_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Pool<wbr>Profile</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routerprofiles_go">
 <a href="#routerprofiles_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Profiles</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftrouterprofileresponse">[]Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterversion_nodejs">
 <a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="openshiftversion_nodejs">
 <a href="#openshiftversion_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Shift<wbr>Version</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publichostname_nodejs">
 <a href="#publichostname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Hostname</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_nodejs">
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authprofile_nodejs">
 <a href="#authprofile_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Profile</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusterauthprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterpoolprofile_nodejs">
 <a href="#masterpoolprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pool<wbr>Profile</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routerprofiles_nodejs">
 <a href="#routerprofiles_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Profiles</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftrouterprofileresponse">Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -601,14 +532,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cluster_version_python">
 <a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server loadbalancer internal hostname.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="open_shift_version_python">
 <a href="#open_shift_version_python" style="color: inherit; text-decoration: inherit;">open_<wbr>shift_<wbr>version</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_hostname_python">
 <a href="#public_hostname_python" style="color: inherit; text-decoration: inherit;">public_<wbr>hostname</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service generated FQDN for OpenShift API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agent_pool_profiles_python">
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofileresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auth_profile_python">
 <a href="#auth_profile_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>profile</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusterauthprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_pool_profile_python">
 <a href="#master_pool_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pool_<wbr>profile</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="router_profiles_python">
 <a href="#router_profiles_python" style="color: inherit; text-decoration: inherit;">router_<wbr>profiles</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftrouterprofileresponse">Sequence[Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -766,9 +678,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="peervnetid_csharp">
 <a href="#peervnetid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vnet<wbr>Id</a>
@@ -776,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetcidr_csharp">
 <a href="#vnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Cidr</a>
@@ -785,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_csharp">
 <a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
@@ -794,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="peervnetid_go">
 <a href="#peervnetid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vnet<wbr>Id</a>
@@ -809,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetcidr_go">
 <a href="#vnetcidr_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Cidr</a>
@@ -818,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_go">
 <a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
@@ -827,14 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="peervnetid_nodejs">
 <a href="#peervnetid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vnet<wbr>Id</a>
@@ -842,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetcidr_nodejs">
 <a href="#vnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Cidr</a>
@@ -851,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_nodejs">
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
@@ -860,14 +758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="peer_vnet_id_python">
 <a href="#peer_vnet_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vnet_<wbr>id</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_cidr_python">
 <a href="#vnet_cidr_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>cidr</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_id_python">
 <a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -912,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customeradmingroupid_csharp">
 <a href="#customeradmingroupid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Admin<wbr>Group<wbr>Id</a>
@@ -921,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -930,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -939,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -954,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customeradmingroupid_go">
 <a href="#customeradmingroupid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Admin<wbr>Group<wbr>Id</a>
@@ -963,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -972,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -981,14 +862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -996,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customeradmingroupid_nodejs">
 <a href="#customeradmingroupid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Admin<wbr>Group<wbr>Id</a>
@@ -1005,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1014,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1023,14 +898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1038,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_admin_group_id_python">
 <a href="#customer_admin_group_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>admin_<wbr>group_<wbr>id</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusteragentpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</h4>
@@ -1074,9 +942,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1084,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1093,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1102,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1111,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1120,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetcidr_csharp">
 <a href="#subnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
@@ -1129,14 +990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1144,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1153,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1162,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1171,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1180,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetcidr_go">
 <a href="#subnetcidr_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
@@ -1189,14 +1042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1204,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1213,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -1222,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1231,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1240,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetcidr_nodejs">
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
@@ -1249,14 +1094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1264,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1273,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -1282,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1291,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1300,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_cidr_python">
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
@@ -1309,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusterauthprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Response</h4>
@@ -1318,9 +1154,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviders_csharp">
 <a href="#identityproviders_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
@@ -1328,14 +1162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviders_go">
 <a href="#identityproviders_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
@@ -1343,14 +1174,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">[]Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviders_nodejs">
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
@@ -1358,14 +1186,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_providers_python">
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
@@ -1373,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response</h4>
@@ -1382,9 +1206,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1392,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -1401,14 +1222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1416,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -1425,14 +1242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1440,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -1449,14 +1262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1464,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -1473,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclustermasterpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</h4>
@@ -1482,9 +1290,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1492,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1501,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1510,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1519,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetcidr_csharp">
 <a href="#subnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
@@ -1528,14 +1330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1543,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1552,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1561,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1570,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetcidr_go">
 <a href="#subnetcidr_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Cidr</a>
@@ -1579,14 +1374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1594,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -1603,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1612,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1621,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetcidr_nodejs">
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
@@ -1630,14 +1418,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1645,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -1654,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1663,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1672,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_cidr_python">
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
@@ -1681,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="openshiftrouterprofileresponse">Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Response</h4>
@@ -1690,9 +1470,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1700,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicsubdomain_csharp">
 <a href="#publicsubdomain_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Subdomain</a>
@@ -1709,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1718,14 +1494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1733,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicsubdomain_go">
 <a href="#publicsubdomain_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Subdomain</a>
@@ -1742,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1751,14 +1522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1766,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicsubdomain_nodejs">
 <a href="#publicsubdomain_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Subdomain</a>
@@ -1775,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1784,14 +1550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1799,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_subdomain_python">
 <a href="#public_subdomain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>subdomain</a>
@@ -1808,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1817,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</h4>
@@ -1826,9 +1586,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1836,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1845,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotioncode_csharp">
 <a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
@@ -1854,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The promotion code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1863,14 +1618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1878,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1887,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotioncode_go">
 <a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
@@ -1896,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The promotion code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1905,14 +1654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1920,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1929,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotioncode_nodejs">
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
@@ -1938,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The promotion code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1947,14 +1690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1962,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1971,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotion_code_python">
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
@@ -1980,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The promotion code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1989,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

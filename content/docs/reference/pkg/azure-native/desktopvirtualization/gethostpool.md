@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolname_csharp">
 <a href="#hostpoolname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolname_go">
 <a href="#hostpoolname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolname_nodejs">
 <a href="#hostpoolname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_pool_name_python">
 <a href="#host_pool_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="applicationgroupreferences_csharp">
 <a href="#applicationgroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Group<wbr>References</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostpooltype_csharp">
 <a href="#hostpooltype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancertype_csharp">
 <a href="#loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredappgrouptype_csharp">
 <a href="#preferredappgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>App<wbr>Group<wbr>Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customrdpproperty_csharp">
 <a href="#customrdpproperty_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rdp<wbr>Property</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxsessionlimit_csharp">
 <a href="#maxsessionlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Session<wbr>Limit</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="personaldesktopassignmenttype_csharp">
 <a href="#personaldesktopassignmenttype_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationinfo_csharp">
 <a href="#registrationinfo_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Info</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registrationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Registration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ring_csharp">
 <a href="#ring_csharp" style="color: inherit; text-decoration: inherit;">Ring</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoclientid_csharp">
 <a href="#ssoclientid_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Id</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoclientsecretkeyvaultpath_csharp">
 <a href="#ssoclientsecretkeyvaultpath_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssosecrettype_csharp">
 <a href="#ssosecrettype_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoadfsauthority_csharp">
 <a href="#ssoadfsauthority_csharp" style="color: inherit; text-decoration: inherit;">Ssoadfs<wbr>Authority</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startvmonconnect_csharp">
 <a href="#startvmonconnect_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>VMOn<wbr>Connect</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validationenvironment_csharp">
 <a href="#validationenvironment_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Environment</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmtemplate_csharp">
 <a href="#vmtemplate_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Template</a>
@@ -364,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="applicationgroupreferences_go">
 <a href="#applicationgroupreferences_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Group<wbr>References</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostpooltype_go">
 <a href="#hostpooltype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancertype_go">
 <a href="#loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredappgrouptype_go">
 <a href="#preferredappgrouptype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>App<wbr>Group<wbr>Type</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customrdpproperty_go">
 <a href="#customrdpproperty_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rdp<wbr>Property</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxsessionlimit_go">
 <a href="#maxsessionlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Session<wbr>Limit</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="personaldesktopassignmenttype_go">
 <a href="#personaldesktopassignmenttype_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationinfo_go">
 <a href="#registrationinfo_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Info</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registrationinforesponse">Registration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ring_go">
 <a href="#ring_go" style="color: inherit; text-decoration: inherit;">Ring</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoclientid_go">
 <a href="#ssoclientid_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Id</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoclientsecretkeyvaultpath_go">
 <a href="#ssoclientsecretkeyvaultpath_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssosecrettype_go">
 <a href="#ssosecrettype_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoadfsauthority_go">
 <a href="#ssoadfsauthority_go" style="color: inherit; text-decoration: inherit;">Ssoadfs<wbr>Authority</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startvmonconnect_go">
 <a href="#startvmonconnect_go" style="color: inherit; text-decoration: inherit;">Start<wbr>VMOn<wbr>Connect</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validationenvironment_go">
 <a href="#validationenvironment_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Environment</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmtemplate_go">
 <a href="#vmtemplate_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Template</a>
@@ -577,14 +512,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="applicationgroupreferences_nodejs">
 <a href="#applicationgroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Group<wbr>References</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostpooltype_nodejs">
 <a href="#hostpooltype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Type</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancertype_nodejs">
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredappgrouptype_nodejs">
 <a href="#preferredappgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>App<wbr>Group<wbr>Type</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customrdpproperty_nodejs">
 <a href="#customrdpproperty_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rdp<wbr>Property</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxsessionlimit_nodejs">
 <a href="#maxsessionlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Session<wbr>Limit</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="personaldesktopassignmenttype_nodejs">
 <a href="#personaldesktopassignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationinfo_nodejs">
 <a href="#registrationinfo_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Info</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registrationinforesponse">Registration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ring_nodejs">
 <a href="#ring_nodejs" style="color: inherit; text-decoration: inherit;">ring</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoclientid_nodejs">
 <a href="#ssoclientid_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Id</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoclientsecretkeyvaultpath_nodejs">
 <a href="#ssoclientsecretkeyvaultpath_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssosecrettype_nodejs">
 <a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoadfsauthority_nodejs">
 <a href="#ssoadfsauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssoadfs<wbr>Authority</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startvmonconnect_nodejs">
 <a href="#startvmonconnect_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>VMOn<wbr>Connect</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validationenvironment_nodejs">
 <a href="#validationenvironment_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Environment</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmtemplate_nodejs">
 <a href="#vmtemplate_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Template</a>
@@ -790,14 +700,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="application_group_references_python">
 <a href="#application_group_references_python" style="color: inherit; text-decoration: inherit;">application_<wbr>group_<wbr>references</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of applicationGroup links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_pool_type_python">
 <a href="#host_pool_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>type</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="load_balancer_type_python">
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferred_app_group_type_python">
 <a href="#preferred_app_group_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>app_<wbr>group_<wbr>type</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_rdp_property_python">
 <a href="#custom_rdp_property_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rdp_<wbr>property</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_session_limit_python">
 <a href="#max_session_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>session_<wbr>limit</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="personal_desktop_assignment_type_python">
 <a href="#personal_desktop_assignment_type_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>desktop_<wbr>assignment_<wbr>type</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registration_info_python">
 <a href="#registration_info_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>info</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#registrationinforesponse">Registration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ring_python">
 <a href="#ring_python" style="color: inherit; text-decoration: inherit;">ring</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sso_client_id_python">
 <a href="#sso_client_id_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>id</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sso_client_secret_key_vault_path_python">
 <a href="#sso_client_secret_key_vault_path_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>secret_<wbr>key_<wbr>vault_<wbr>path</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sso_secret_type_python">
 <a href="#sso_secret_type_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>secret_<wbr>type</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssoadfs_authority_python">
 <a href="#ssoadfs_authority_python" style="color: inherit; text-decoration: inherit;">ssoadfs_<wbr>authority</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_vm_on_connect_python">
 <a href="#start_vm_on_connect_python" style="color: inherit; text-decoration: inherit;">start_<wbr>vm_<wbr>on_<wbr>connect</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validation_environment_python">
 <a href="#validation_environment_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>environment</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is validation environment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_template_python">
 <a href="#vm_template_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>template</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1018,9 +902,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1028,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationtokenoperation_csharp">
 <a href="#registrationtokenoperation_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Token<wbr>Operation</a>
@@ -1037,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1046,14 +926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1061,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationtokenoperation_go">
 <a href="#registrationtokenoperation_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Token<wbr>Operation</a>
@@ -1070,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1079,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -1094,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationtokenoperation_nodejs">
 <a href="#registrationtokenoperation_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Token<wbr>Operation</a>
@@ -1103,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1112,14 +982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -1127,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_token_operation_python">
 <a href="#registration_token_operation_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>token_<wbr>operation</a>
@@ -1136,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1145,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningservicename_csharp">
 <a href="#provisioningservicename_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Service<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningservicename_go">
 <a href="#provisioningservicename_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Service<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningservicename_nodejs">
 <a href="#provisioningservicename_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Service<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_service_name_python">
 <a href="#provisioning_service_name_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>service_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning service name to get the shared access keys for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The next link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Outputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The next link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">[]Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The next link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The next link.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The next link.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of shared access policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_csharp">
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -281,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -290,8 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -299,14 +262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -314,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_go">
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -323,8 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -332,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -341,14 +298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -356,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_nodejs">
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -365,8 +318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -374,8 +326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -383,14 +334,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -398,8 +346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_python">
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -407,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -416,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -425,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

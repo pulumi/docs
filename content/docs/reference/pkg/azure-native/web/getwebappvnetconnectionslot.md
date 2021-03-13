@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_csharp">
 <a href="#slot_csharp" style="color: inherit; text-decoration: inherit;">Slot</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetname_csharp">
 <a href="#vnetname_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_go">
 <a href="#slot_go" style="color: inherit; text-decoration: inherit;">Slot</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetname_go">
 <a href="#vnetname_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_nodejs">
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetname_nodejs">
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_python">
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will get the named virtual network for the production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnet_name_python">
 <a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certthumbprint_csharp">
 <a href="#certthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Thumbprint</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resyncrequired_csharp">
 <a href="#resyncrequired_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Required</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routes_csharp">
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnetrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>Vnet<wbr>Route<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certblob_csharp">
 <a href="#certblob_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Blob</a>
@@ -302,8 +269,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
-Point-To-Site VPN connection.{{% /md %}}</dd>
-    <dt class="property-"
+Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -311,8 +277,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isswift_csharp">
 <a href="#isswift_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Swift</a>
@@ -320,8 +285,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -329,8 +293,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetresourceid_csharp">
 <a href="#vnetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Resource<wbr>Id</a>
@@ -338,14 +301,11 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certthumbprint_go">
 <a href="#certthumbprint_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Thumbprint</a>
@@ -353,8 +313,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -362,8 +321,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -371,8 +329,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resyncrequired_go">
 <a href="#resyncrequired_go" style="color: inherit; text-decoration: inherit;">Resync<wbr>Required</a>
@@ -380,8 +337,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routes_go">
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -389,8 +345,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnetrouteresponse">[]Vnet<wbr>Route<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -398,8 +353,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -407,8 +361,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certblob_go">
 <a href="#certblob_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Blob</a>
@@ -417,8 +370,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
-Point-To-Site VPN connection.{{% /md %}}</dd>
-    <dt class="property-"
+Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -426,8 +378,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isswift_go">
 <a href="#isswift_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Swift</a>
@@ -435,8 +386,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -444,8 +394,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetresourceid_go">
 <a href="#vnetresourceid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Resource<wbr>Id</a>
@@ -453,14 +402,11 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certthumbprint_nodejs">
 <a href="#certthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Thumbprint</a>
@@ -468,8 +414,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -477,8 +422,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -486,8 +430,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resyncrequired_nodejs">
 <a href="#resyncrequired_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>Required</a>
@@ -495,8 +438,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routes_nodejs">
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -504,8 +446,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -513,8 +454,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -522,8 +462,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certblob_nodejs">
 <a href="#certblob_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Blob</a>
@@ -532,8 +471,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
-Point-To-Site VPN connection.{{% /md %}}</dd>
-    <dt class="property-"
+Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -541,8 +479,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isswift_nodejs">
 <a href="#isswift_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Swift</a>
@@ -550,8 +487,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -559,8 +495,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnetresourceid_nodejs">
 <a href="#vnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Resource<wbr>Id</a>
@@ -568,14 +503,11 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_thumbprint_python">
 <a href="#cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>thumbprint</a>
@@ -583,8 +515,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The client certificate thumbprint.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -592,8 +523,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -601,8 +531,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resync_required_python">
 <a href="#resync_required_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>required</a>
@@ -610,8 +539,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if a resync is required; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routes_python">
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -619,8 +547,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vnetrouteresponse">Sequence[Vnet<wbr>Route<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routes that this Virtual Network connection uses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -628,8 +555,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -637,8 +563,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cert_blob_python">
 <a href="#cert_blob_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>blob</a>
@@ -647,8 +572,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
-Point-To-Site VPN connection.{{% /md %}}</dd>
-    <dt class="property-"
+Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -656,8 +580,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_swift_python">
 <a href="#is_swift_python" style="color: inherit; text-decoration: inherit;">is_<wbr>swift</a>
@@ -665,8 +588,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -674,8 +596,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vnet_resource_id_python">
 <a href="#vnet_resource_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>resource_<wbr>id</a>
@@ -683,8 +604,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -698,9 +618,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -708,8 +626,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -717,8 +634,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -726,8 +642,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -735,8 +650,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -744,8 +658,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -753,14 +666,11 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -768,8 +678,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -777,8 +686,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -786,8 +694,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -795,8 +702,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -804,8 +710,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -813,14 +718,11 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -828,8 +730,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -837,8 +738,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -846,8 +746,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -855,8 +754,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -864,8 +762,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -873,14 +770,11 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -888,8 +782,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -897,8 +790,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -906,8 +798,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -915,8 +806,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -924,8 +814,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -933,8 +822,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vnetrouteresponse">Vnet<wbr>Route<wbr>Response</h4>
@@ -942,9 +830,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -952,8 +838,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -961,8 +846,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -970,8 +854,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -979,8 +862,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endaddress_csharp">
 <a href="#endaddress_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Address</a>
@@ -988,8 +870,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -997,8 +878,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetype_csharp">
 <a href="#routetype_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Type</a>
@@ -1011,8 +891,7 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startaddress_csharp">
 <a href="#startaddress_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Address</a>
@@ -1020,14 +899,11 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1035,8 +911,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1044,8 +919,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1053,8 +927,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1062,8 +935,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endaddress_go">
 <a href="#endaddress_go" style="color: inherit; text-decoration: inherit;">End<wbr>Address</a>
@@ -1071,8 +943,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1080,8 +951,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetype_go">
 <a href="#routetype_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Type</a>
@@ -1094,8 +964,7 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startaddress_go">
 <a href="#startaddress_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Address</a>
@@ -1103,14 +972,11 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1118,8 +984,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1127,8 +992,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1136,8 +1000,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1145,8 +1008,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endaddress_nodejs">
 <a href="#endaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Address</a>
@@ -1154,8 +1016,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1163,8 +1024,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetype_nodejs">
 <a href="#routetype_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Type</a>
@@ -1177,8 +1037,7 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startaddress_nodejs">
 <a href="#startaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Address</a>
@@ -1186,14 +1045,11 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1201,8 +1057,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1210,8 +1065,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1219,8 +1073,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1228,8 +1081,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_address_python">
 <a href="#end_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>address</a>
@@ -1237,8 +1089,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1246,8 +1097,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_type_python">
 <a href="#route_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>type</a>
@@ -1260,8 +1110,7 @@ DEFAULT - By default, every app has routes to the local address ranges specified
 INHERITED - Routes inherited from the real Virtual Network routes
 STATIC - Static route set on the app only
 
-These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+These values will be used for syncing an app's routes with those from a Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_address_python">
 <a href="#start_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>address</a>
@@ -1269,8 +1118,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

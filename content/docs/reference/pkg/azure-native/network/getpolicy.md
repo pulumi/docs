@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Web Application Firewall Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="frontendendpointlinks_csharp">
 <a href="#frontendendpointlinks_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoint<wbr>Links</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontendendpointlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Frontend<wbr>Endpoint<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingrulelinks_csharp">
 <a href="#routingrulelinks_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rule<wbr>Links</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingrulelinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Routing<wbr>Rule<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitypolicylinks_csharp">
 <a href="#securitypolicylinks_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Links</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicylinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Security<wbr>Policy<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customrules_csharp">
 <a href="#customrules_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrulelistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Custom<wbr>Rule<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedrules_csharp">
 <a href="#managedrules_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetlistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policysettings_csharp">
 <a href="#policysettings_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="frontendendpointlinks_go">
 <a href="#frontendendpointlinks_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoint<wbr>Links</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontendendpointlinkresponse">[]Frontend<wbr>Endpoint<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingrulelinks_go">
 <a href="#routingrulelinks_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rule<wbr>Links</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingrulelinkresponse">[]Routing<wbr>Rule<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitypolicylinks_go">
 <a href="#securitypolicylinks_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Links</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicylinkresponse">[]Security<wbr>Policy<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customrules_go">
 <a href="#customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrulelistresponse">Custom<wbr>Rule<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedrules_go">
 <a href="#managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetlistresponse">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policysettings_go">
 <a href="#policysettings_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -433,14 +384,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="frontendendpointlinks_nodejs">
 <a href="#frontendendpointlinks_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoint<wbr>Links</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontendendpointlinkresponse">Frontend<wbr>Endpoint<wbr>Link<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingrulelinks_nodejs">
 <a href="#routingrulelinks_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rule<wbr>Links</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingrulelinkresponse">Routing<wbr>Rule<wbr>Link<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitypolicylinks_nodejs">
 <a href="#securitypolicylinks_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Links</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicylinkresponse">Security<wbr>Policy<wbr>Link<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customrules_nodejs">
 <a href="#customrules_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rules</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrulelistresponse">Custom<wbr>Rule<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedrules_nodejs">
 <a href="#managedrules_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rules</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetlistresponse">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policysettings_nodejs">
 <a href="#policysettings_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Settings</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -574,14 +508,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="frontend_endpoint_links_python">
 <a href="#frontend_endpoint_links_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoint_<wbr>links</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#frontendendpointlinkresponse">Sequence[Frontend<wbr>Endpoint<wbr>Link<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Frontend Endpoints associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routing_rule_links_python">
 <a href="#routing_rule_links_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rule_<wbr>links</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routingrulelinkresponse">Sequence[Routing<wbr>Rule<wbr>Link<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_policy_links_python">
 <a href="#security_policy_links_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>links</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitypolicylinkresponse">Sequence[Security<wbr>Policy<wbr>Link<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_rules_python">
 <a href="#custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrulelistresponse">Custom<wbr>Rule<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_rules_python">
 <a href="#managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetlistresponse">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_settings_python">
 <a href="#policy_settings_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>settings</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,9 +646,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -740,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -755,14 +666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customruleresponse">[]Custom<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -770,14 +678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customruleresponse">Custom<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customruleresponse">Custom<wbr>Rule<wbr>Response</h4>
@@ -794,9 +698,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchconditions_csharp">
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
@@ -813,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -822,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ruletype_csharp">
 <a href="#ruletype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
@@ -831,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledstate_csharp">
 <a href="#enabledstate_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -849,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitdurationinminutes_csharp">
 <a href="#ratelimitdurationinminutes_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
@@ -858,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitthreshold_csharp">
 <a href="#ratelimitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Threshold</a>
@@ -867,14 +762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -882,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchconditions_go">
 <a href="#matchconditions_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
@@ -891,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchconditionresponse">[]Match<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -900,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ruletype_go">
 <a href="#ruletype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Type</a>
@@ -909,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledstate_go">
 <a href="#enabledstate_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>State</a>
@@ -918,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -927,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitdurationinminutes_go">
 <a href="#ratelimitdurationinminutes_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
@@ -936,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitthreshold_go">
 <a href="#ratelimitthreshold_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Threshold</a>
@@ -945,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchconditions_nodejs">
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
@@ -969,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchconditionresponse">Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ruletype_nodejs">
 <a href="#ruletype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Type</a>
@@ -987,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledstate_nodejs">
 <a href="#enabledstate_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>State</a>
@@ -996,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1005,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitdurationinminutes_nodejs">
 <a href="#ratelimitdurationinminutes_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
@@ -1014,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitthreshold_nodejs">
 <a href="#ratelimitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
@@ -1023,14 +898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1038,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes what action to be applied when rule matches.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_conditions_python">
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_type_python">
 <a href="#rule_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>type</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes type of rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_state_python">
 <a href="#enabled_state_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>state</a>
@@ -1074,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1083,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rate_limit_duration_in_minutes_python">
 <a href="#rate_limit_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>duration_<wbr>in_<wbr>minutes</a>
@@ -1092,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time window for resetting the rate limit count. Default is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rate_limit_threshold_python">
 <a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
@@ -1101,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of allowed requests per client within the time window.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="frontendendpointlinkresponse">Frontend<wbr>Endpoint<wbr>Link<wbr>Response</h4>
@@ -1110,9 +974,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1120,14 +982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1135,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1150,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1165,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedrulegroupoverrideresponse">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response</h4>
@@ -1174,9 +1026,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulegroupname_csharp">
 <a href="#rulegroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
@@ -1184,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1193,14 +1042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulegroupname_go">
 <a href="#rulegroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Name</a>
@@ -1208,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1217,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedruleoverrideresponse">[]Managed<wbr>Rule<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulegroupname_nodejs">
 <a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
@@ -1232,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1241,14 +1082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedruleoverrideresponse">Managed<wbr>Rule<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rule_group_name_python">
 <a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
@@ -1256,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed rule group to override.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1265,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedruleoverrideresponse">Managed<wbr>Rule<wbr>Override<wbr>Response</h4>
@@ -1274,9 +1110,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ruleid_csharp">
 <a href="#ruleid_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
@@ -1284,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1293,14 +1126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ruleid_go">
 <a href="#ruleid_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Id</a>
@@ -1308,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1317,14 +1146,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ruleid_nodejs">
 <a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
@@ -1332,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1341,14 +1166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rule_id_python">
 <a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
@@ -1356,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for the managed rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1365,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the managed rule. Defaults to Disabled if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedrulesetlistresponse">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Response</h4>
@@ -1374,9 +1194,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managedrulesets_csharp">
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
@@ -1384,14 +1202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managedrulesets_go">
 <a href="#managedrulesets_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
@@ -1399,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetresponse">[]Managed<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managedrulesets_nodejs">
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
@@ -1414,14 +1226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetresponse">Managed<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managed_rule_sets_python">
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
@@ -1429,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedrulesetresponse">Managed<wbr>Rule<wbr>Set<wbr>Response</h4>
@@ -1438,9 +1246,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulesettype_csharp">
 <a href="#rulesettype_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
@@ -1448,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulesetversion_csharp">
 <a href="#rulesetversion_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
@@ -1457,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulegroupoverrides_csharp">
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
@@ -1466,14 +1270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulesettype_go">
 <a href="#rulesettype_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Type</a>
@@ -1481,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulesetversion_go">
 <a href="#rulesetversion_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Set<wbr>Version</a>
@@ -1490,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulegroupoverrides_go">
 <a href="#rulegroupoverrides_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
@@ -1499,14 +1298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulegroupoverrideresponse">[]Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulesettype_nodejs">
 <a href="#rulesettype_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Type</a>
@@ -1514,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulesetversion_nodejs">
 <a href="#rulesetversion_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Set<wbr>Version</a>
@@ -1523,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulegroupoverrides_nodejs">
 <a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
@@ -1532,14 +1326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulegroupoverrideresponse">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rule_set_type_python">
 <a href="#rule_set_type_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>type</a>
@@ -1547,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Defines the rule set type to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_set_version_python">
 <a href="#rule_set_version_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>set_<wbr>version</a>
@@ -1556,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the version of the rule set to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_group_overrides_python">
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
@@ -1565,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="matchconditionresponse">Match<wbr>Condition<wbr>Response</h4>
@@ -1574,9 +1362,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -1584,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchvariables_csharp">
 <a href="#matchvariables_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
@@ -1593,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Match<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1602,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negationconditon_csharp">
 <a href="#negationconditon_csharp" style="color: inherit; text-decoration: inherit;">Negation<wbr>Conditon</a>
@@ -1611,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -1620,14 +1402,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -1635,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchvariables_go">
 <a href="#matchvariables_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
@@ -1644,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchvariableresponse">[]Match<wbr>Variable<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1653,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negationconditon_go">
 <a href="#negationconditon_go" style="color: inherit; text-decoration: inherit;">Negation<wbr>Conditon</a>
@@ -1662,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -1671,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -1686,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="matchvariables_nodejs">
 <a href="#matchvariables_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variables</a>
@@ -1695,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchvariableresponse">Match<wbr>Variable<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1704,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negationconditon_nodejs">
 <a href="#negationconditon_nodejs" style="color: inherit; text-decoration: inherit;">negation<wbr>Conditon</a>
@@ -1713,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -1722,14 +1490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -1737,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Match value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Match value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_variables_python">
 <a href="#match_variables_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variables</a>
@@ -1746,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#matchvariableresponse">Sequence[Match<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of match variables.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of match variables.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1755,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operator to be matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negation_conditon_python">
 <a href="#negation_conditon_python" style="color: inherit; text-decoration: inherit;">negation_<wbr>conditon</a>
@@ -1764,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether this is negate condition or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -1773,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of transforms.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of transforms.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="matchvariableresponse">Match<wbr>Variable<wbr>Response</h4>
@@ -1782,9 +1542,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variablename_csharp">
 <a href="#variablename_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
@@ -1792,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -1801,14 +1558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variablename_go">
 <a href="#variablename_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
@@ -1816,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -1825,14 +1578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variablename_nodejs">
 <a href="#variablename_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
@@ -1840,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -1849,14 +1598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variable_name_python">
 <a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
@@ -1864,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Match Variable.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Match Variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -1873,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The selector of match variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policysettingsresponse">Policy<wbr>Settings<wbr>Response</h4>
@@ -1882,9 +1626,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fileuploadlimitinmb_csharp">
 <a href="#fileuploadlimitinmb_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
@@ -1892,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrequestbodysizeinkb_csharp">
 <a href="#maxrequestbodysizeinkb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
@@ -1901,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1910,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbodycheck_csharp">
 <a href="#requestbodycheck_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
@@ -1919,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1928,14 +1666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fileuploadlimitinmb_go">
 <a href="#fileuploadlimitinmb_go" style="color: inherit; text-decoration: inherit;">File<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
@@ -1943,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrequestbodysizeinkb_go">
 <a href="#maxrequestbodysizeinkb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
@@ -1952,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1961,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbodycheck_go">
 <a href="#requestbodycheck_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Check</a>
@@ -1970,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1979,14 +1710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fileuploadlimitinmb_nodejs">
 <a href="#fileuploadlimitinmb_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Upload<wbr>Limit<wbr>In<wbr>Mb</a>
@@ -1994,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxrequestbodysizeinkb_nodejs">
 <a href="#maxrequestbodysizeinkb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Body<wbr>Size<wbr>In<wbr>Kb</a>
@@ -2003,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2012,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbodycheck_nodejs">
 <a href="#requestbodycheck_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Check</a>
@@ -2021,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2030,14 +1754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_upload_limit_in_mb_python">
 <a href="#file_upload_limit_in_mb_python" style="color: inherit; text-decoration: inherit;">file_<wbr>upload_<wbr>limit_<wbr>in_<wbr>mb</a>
@@ -2045,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum file upload size in Mb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_request_body_size_in_kb_python">
 <a href="#max_request_body_size_in_kb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>body_<wbr>size_<wbr>in_<wbr>kb</a>
@@ -2054,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum request body size in Kb for WAF.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2063,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The mode of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_body_check_python">
 <a href="#request_body_check_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>check</a>
@@ -2072,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to allow WAF to check request Body.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2081,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routingrulelinkresponse">Routing<wbr>Rule<wbr>Link<wbr>Response</h4>
@@ -2090,9 +1806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2100,14 +1814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2115,14 +1826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2130,14 +1838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2145,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitypolicylinkresponse">Security<wbr>Policy<wbr>Link<wbr>Response</h4>
@@ -2154,9 +1858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2164,14 +1866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2179,14 +1878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2194,14 +1890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2209,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -2218,9 +1910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2228,14 +1918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2243,14 +1930,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2258,14 +1942,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2273,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="consent_csharp">
 <a href="#consent_csharp" style="color: inherit; text-decoration: inherit;">Consent</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainpurchaseconsentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactadmin_csharp">
 <a href="#contactadmin_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Admin</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactbilling_csharp">
 <a href="#contactbilling_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Billing</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactregistrant_csharp">
 <a href="#contactregistrant_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Registrant</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contacttech_csharp">
 <a href="#contacttech_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Tech</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnotrenewablereasons_csharp">
 <a href="#domainnotrenewablereasons_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Not<wbr>Renewable<wbr>Reasons</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrenewedtime_csharp">
 <a href="#lastrenewedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Renewed<wbr>Time</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedhostnames_csharp">
 <a href="#managedhostnames_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Host<wbr>Names</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Host<wbr>Name<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameservers_csharp">
 <a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Name servers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readyfordnsrecordmanagement_csharp">
 <a href="#readyfordnsrecordmanagement_csharp" style="color: inherit; text-decoration: inherit;">Ready<wbr>For<wbr>Dns<wbr>Record<wbr>Management</a>
@@ -302,8 +269,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
- it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd>
-    <dt class="property-"
+ it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationstatus_csharp">
 <a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
@@ -311,8 +277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -320,8 +285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -329,8 +293,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authcode_csharp">
 <a href="#authcode_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Code</a>
@@ -338,8 +301,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autorenew_csharp">
 <a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -347,8 +309,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnstype_csharp">
 <a href="#dnstype_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Type</a>
@@ -356,8 +317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current DNS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnszoneid_csharp">
 <a href="#dnszoneid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
@@ -365,8 +325,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -374,8 +333,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privacy_csharp">
 <a href="#privacy_csharp" style="color: inherit; text-decoration: inherit;">Privacy</a>
@@ -383,8 +341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -392,8 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetdnstype_csharp">
 <a href="#targetdnstype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Type</a>
@@ -401,14 +357,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="consent_go">
 <a href="#consent_go" style="color: inherit; text-decoration: inherit;">Consent</a>
@@ -416,8 +369,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainpurchaseconsentresponse">Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactadmin_go">
 <a href="#contactadmin_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Admin</a>
@@ -425,8 +377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactbilling_go">
 <a href="#contactbilling_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Billing</a>
@@ -434,8 +385,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactregistrant_go">
 <a href="#contactregistrant_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Registrant</a>
@@ -443,8 +393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contacttech_go">
 <a href="#contacttech_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Tech</a>
@@ -452,8 +401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -461,8 +409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnotrenewablereasons_go">
 <a href="#domainnotrenewablereasons_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Not<wbr>Renewable<wbr>Reasons</a>
@@ -470,8 +417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -479,8 +425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -488,8 +433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrenewedtime_go">
 <a href="#lastrenewedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Renewed<wbr>Time</a>
@@ -497,8 +441,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -506,8 +449,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedhostnames_go">
 <a href="#managedhostnames_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Host<wbr>Names</a>
@@ -515,8 +457,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostnameresponse">[]Host<wbr>Name<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -524,8 +465,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameservers_go">
 <a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -533,8 +473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Name servers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -542,8 +481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readyfordnsrecordmanagement_go">
 <a href="#readyfordnsrecordmanagement_go" style="color: inherit; text-decoration: inherit;">Ready<wbr>For<wbr>Dns<wbr>Record<wbr>Management</a>
@@ -552,8 +490,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
- it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd>
-    <dt class="property-"
+ it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationstatus_go">
 <a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
@@ -561,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -570,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -579,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authcode_go">
 <a href="#authcode_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Code</a>
@@ -588,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autorenew_go">
 <a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -597,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnstype_go">
 <a href="#dnstype_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Type</a>
@@ -606,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current DNS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnszoneid_go">
 <a href="#dnszoneid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zone<wbr>Id</a>
@@ -615,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -624,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privacy_go">
 <a href="#privacy_go" style="color: inherit; text-decoration: inherit;">Privacy</a>
@@ -633,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -642,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetdnstype_go">
 <a href="#targetdnstype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Type</a>
@@ -651,14 +578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="consent_nodejs">
 <a href="#consent_nodejs" style="color: inherit; text-decoration: inherit;">consent</a>
@@ -666,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainpurchaseconsentresponse">Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactadmin_nodejs">
 <a href="#contactadmin_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Admin</a>
@@ -675,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactbilling_nodejs">
 <a href="#contactbilling_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Billing</a>
@@ -684,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contactregistrant_nodejs">
 <a href="#contactregistrant_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Registrant</a>
@@ -693,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contacttech_nodejs">
 <a href="#contacttech_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Tech</a>
@@ -702,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -711,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnotrenewablereasons_nodejs">
 <a href="#domainnotrenewablereasons_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Not<wbr>Renewable<wbr>Reasons</a>
@@ -720,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -729,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -738,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrenewedtime_nodejs">
 <a href="#lastrenewedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Renewed<wbr>Time</a>
@@ -747,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -756,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedhostnames_nodejs">
 <a href="#managedhostnames_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Host<wbr>Names</a>
@@ -765,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostnameresponse">Host<wbr>Name<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameservers_nodejs">
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
@@ -783,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Name servers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -792,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readyfordnsrecordmanagement_nodejs">
 <a href="#readyfordnsrecordmanagement_nodejs" style="color: inherit; text-decoration: inherit;">ready<wbr>For<wbr>Dns<wbr>Record<wbr>Management</a>
@@ -802,8 +711,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
- it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd>
-    <dt class="property-"
+ it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registrationstatus_nodejs">
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
@@ -811,8 +719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -820,8 +727,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -829,8 +735,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authcode_nodejs">
 <a href="#authcode_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Code</a>
@@ -838,8 +743,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autorenew_nodejs">
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -847,8 +751,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnstype_nodejs">
 <a href="#dnstype_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Type</a>
@@ -856,8 +759,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current DNS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnszoneid_nodejs">
 <a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
@@ -865,8 +767,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -874,8 +775,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privacy_nodejs">
 <a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
@@ -883,8 +783,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -892,8 +791,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetdnstype_nodejs">
 <a href="#targetdnstype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Dns<wbr>Type</a>
@@ -901,14 +799,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="consent_python">
 <a href="#consent_python" style="color: inherit; text-decoration: inherit;">consent</a>
@@ -916,8 +811,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainpurchaseconsentresponse">Domain<wbr>Purchase<wbr>Consent<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contact_admin_python">
 <a href="#contact_admin_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>admin</a>
@@ -925,8 +819,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contact_billing_python">
 <a href="#contact_billing_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>billing</a>
@@ -934,8 +827,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Billing contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contact_registrant_python">
 <a href="#contact_registrant_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>registrant</a>
@@ -943,8 +835,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contact_tech_python">
 <a href="#contact_tech_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>tech</a>
@@ -952,8 +843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactresponse">Contact<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Technical contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -961,8 +851,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain creation timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_not_renewable_reasons_python">
 <a href="#domain_not_renewable_reasons_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>not_<wbr>renewable_<wbr>reasons</a>
@@ -970,8 +859,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reasons why domain is not renewable.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -979,8 +867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain expiration timestamp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -988,8 +875,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_renewed_time_python">
 <a href="#last_renewed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>renewed_<wbr>time</a>
@@ -997,8 +883,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Timestamp when the domain was renewed last time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1006,8 +891,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_host_names_python">
 <a href="#managed_host_names_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>host_<wbr>names</a>
@@ -1015,8 +899,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostnameresponse">Sequence[Host<wbr>Name<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}All hostnames derived from the domain and assigned to Azure resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1024,8 +907,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_servers_python">
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
@@ -1033,8 +915,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Name servers.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name servers.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1042,8 +923,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_for_dns_record_management_python">
 <a href="#ready_for_dns_record_management_python" style="color: inherit; text-decoration: inherit;">ready_<wbr>for_<wbr>dns_<wbr>record_<wbr>management</a>
@@ -1052,8 +932,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and 
- it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd>
-    <dt class="property-"
+ it is hosted on name servers Azure has programmatic access to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registration_status_python">
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
@@ -1061,8 +940,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain registration status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1070,8 +948,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1079,8 +956,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auth_code_python">
 <a href="#auth_code_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>code</a>
@@ -1088,8 +964,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_renew_python">
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -1097,8 +972,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_type_python">
 <a href="#dns_type_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>type</a>
@@ -1106,8 +980,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current DNS type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_zone_id_python">
 <a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
@@ -1115,8 +988,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1124,8 +996,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privacy_python">
 <a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
@@ -1133,8 +1004,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1142,8 +1012,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_dns_type_python">
 <a href="#target_dns_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dns_<wbr>type</a>
@@ -1151,8 +1020,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1166,9 +1034,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address1_csharp">
 <a href="#address1_csharp" style="color: inherit; text-decoration: inherit;">Address1</a>
@@ -1176,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1185,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1194,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1203,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1212,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address2_csharp">
 <a href="#address2_csharp" style="color: inherit; text-decoration: inherit;">Address2</a>
@@ -1221,14 +1082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address1_go">
 <a href="#address1_go" style="color: inherit; text-decoration: inherit;">Address1</a>
@@ -1236,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -1245,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1254,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1263,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1272,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address2_go">
 <a href="#address2_go" style="color: inherit; text-decoration: inherit;">Address2</a>
@@ -1281,14 +1134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address1_nodejs">
 <a href="#address1_nodejs" style="color: inherit; text-decoration: inherit;">address1</a>
@@ -1296,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1305,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The city for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1314,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The country for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1323,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1332,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address2_nodejs">
 <a href="#address2_nodejs" style="color: inherit; text-decoration: inherit;">address2</a>
@@ -1341,14 +1186,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address1_python">
 <a href="#address1_python" style="color: inherit; text-decoration: inherit;">address1</a>
@@ -1356,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First line of an Address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -1365,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The city for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The city for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1374,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The country for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The country for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1383,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1392,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address2_python">
 <a href="#address2_python" style="color: inherit; text-decoration: inherit;">address2</a>
@@ -1401,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contactresponse">Contact<wbr>Response</h4>
@@ -1410,9 +1246,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1420,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namefirst_csharp">
 <a href="#namefirst_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>First</a>
@@ -1429,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namelast_csharp">
 <a href="#namelast_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Last</a>
@@ -1438,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -1447,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressmailing_csharp">
 <a href="#addressmailing_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Mailing</a>
@@ -1456,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fax_csharp">
 <a href="#fax_csharp" style="color: inherit; text-decoration: inherit;">Fax</a>
@@ -1465,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fax number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fax number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtitle_csharp">
 <a href="#jobtitle_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -1474,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Job title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Job title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namemiddle_csharp">
 <a href="#namemiddle_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Middle</a>
@@ -1483,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Middle name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Middle name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1492,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1507,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namefirst_go">
 <a href="#namefirst_go" style="color: inherit; text-decoration: inherit;">Name<wbr>First</a>
@@ -1516,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namelast_go">
 <a href="#namelast_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Last</a>
@@ -1525,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -1534,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressmailing_go">
 <a href="#addressmailing_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Mailing</a>
@@ -1543,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressresponse">Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fax_go">
 <a href="#fax_go" style="color: inherit; text-decoration: inherit;">Fax</a>
@@ -1552,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fax number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fax number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtitle_go">
 <a href="#jobtitle_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
@@ -1561,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Job title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Job title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namemiddle_go">
 <a href="#namemiddle_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Middle</a>
@@ -1570,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Middle name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Middle name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1579,14 +1394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1594,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namefirst_nodejs">
 <a href="#namefirst_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>First</a>
@@ -1603,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namelast_nodejs">
 <a href="#namelast_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Last</a>
@@ -1612,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -1621,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressmailing_nodejs">
 <a href="#addressmailing_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Mailing</a>
@@ -1630,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressresponse">Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fax_nodejs">
 <a href="#fax_nodejs" style="color: inherit; text-decoration: inherit;">fax</a>
@@ -1639,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fax number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fax number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobtitle_nodejs">
 <a href="#jobtitle_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Title</a>
@@ -1648,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Job title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Job title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namemiddle_nodejs">
 <a href="#namemiddle_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Middle</a>
@@ -1657,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Middle name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Middle name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -1666,14 +1470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1681,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Email address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_first_python">
 <a href="#name_first_python" style="color: inherit; text-decoration: inherit;">name_<wbr>first</a>
@@ -1690,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}First name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}First name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_last_python">
 <a href="#name_last_python" style="color: inherit; text-decoration: inherit;">name_<wbr>last</a>
@@ -1699,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -1708,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_mailing_python">
 <a href="#address_mailing_python" style="color: inherit; text-decoration: inherit;">address_<wbr>mailing</a>
@@ -1717,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressresponse">Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mailing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fax_python">
 <a href="#fax_python" style="color: inherit; text-decoration: inherit;">fax</a>
@@ -1726,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fax number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fax number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_title_python">
 <a href="#job_title_python" style="color: inherit; text-decoration: inherit;">job_<wbr>title</a>
@@ -1735,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Job title.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Job title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_middle_python">
 <a href="#name_middle_python" style="color: inherit; text-decoration: inherit;">name_<wbr>middle</a>
@@ -1744,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Middle name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Middle name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -1753,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainpurchaseconsentresponse">Domain<wbr>Purchase<wbr>Consent<wbr>Response</h4>
@@ -1762,9 +1554,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agreedat_csharp">
 <a href="#agreedat_csharp" style="color: inherit; text-decoration: inherit;">Agreed<wbr>At</a>
@@ -1772,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreedby_csharp">
 <a href="#agreedby_csharp" style="color: inherit; text-decoration: inherit;">Agreed<wbr>By</a>
@@ -1781,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreementkeys_csharp">
 <a href="#agreementkeys_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Keys</a>
@@ -1790,14 +1578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agreedat_go">
 <a href="#agreedat_go" style="color: inherit; text-decoration: inherit;">Agreed<wbr>At</a>
@@ -1805,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreedby_go">
 <a href="#agreedby_go" style="color: inherit; text-decoration: inherit;">Agreed<wbr>By</a>
@@ -1814,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreementkeys_go">
 <a href="#agreementkeys_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Keys</a>
@@ -1823,14 +1606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agreedat_nodejs">
 <a href="#agreedat_nodejs" style="color: inherit; text-decoration: inherit;">agreed<wbr>At</a>
@@ -1838,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreedby_nodejs">
 <a href="#agreedby_nodejs" style="color: inherit; text-decoration: inherit;">agreed<wbr>By</a>
@@ -1847,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreementkeys_nodejs">
 <a href="#agreementkeys_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Keys</a>
@@ -1856,14 +1634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agreed_at_python">
 <a href="#agreed_at_python" style="color: inherit; text-decoration: inherit;">agreed_<wbr>at</a>
@@ -1871,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreed_by_python">
 <a href="#agreed_by_python" style="color: inherit; text-decoration: inherit;">agreed_<wbr>by</a>
@@ -1880,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client IP address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agreement_keys_python">
 <a href="#agreement_keys_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>keys</a>
@@ -1889,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hostnameresponse">Host<wbr>Name<wbr>Response</h4>
@@ -1898,9 +1670,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureresourcename_csharp">
 <a href="#azureresourcename_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Name</a>
@@ -1908,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureresourcetype_csharp">
 <a href="#azureresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Type</a>
@@ -1917,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhostnamednsrecordtype_csharp">
 <a href="#customhostnamednsrecordtype_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a>
@@ -1926,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnametype_csharp">
 <a href="#hostnametype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Type</a>
@@ -1935,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1944,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sitenames_csharp">
 <a href="#sitenames_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Names</a>
@@ -1953,14 +1718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureresourcename_go">
 <a href="#azureresourcename_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Name</a>
@@ -1968,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureresourcetype_go">
 <a href="#azureresourcetype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Type</a>
@@ -1977,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhostnamednsrecordtype_go">
 <a href="#customhostnamednsrecordtype_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a>
@@ -1986,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnametype_go">
 <a href="#hostnametype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Type</a>
@@ -1995,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2004,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sitenames_go">
 <a href="#sitenames_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Names</a>
@@ -2013,14 +1770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureresourcename_nodejs">
 <a href="#azureresourcename_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Resource<wbr>Name</a>
@@ -2028,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureresourcetype_nodejs">
 <a href="#azureresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Resource<wbr>Type</a>
@@ -2037,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customhostnamednsrecordtype_nodejs">
 <a href="#customhostnamednsrecordtype_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a>
@@ -2046,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnametype_nodejs">
 <a href="#hostnametype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Type</a>
@@ -2055,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2064,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sitenames_nodejs">
 <a href="#sitenames_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Names</a>
@@ -2073,14 +1822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_resource_name_python">
 <a href="#azure_resource_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>resource_<wbr>name</a>
@@ -2088,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_resource_type_python">
 <a href="#azure_resource_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>resource_<wbr>type</a>
@@ -2097,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_host_name_dns_record_type_python">
 <a href="#custom_host_name_dns_record_type_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>name_<wbr>dns_<wbr>record_<wbr>type</a>
@@ -2106,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_name_type_python">
 <a href="#host_name_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>type</a>
@@ -2115,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2124,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="site_names_python">
 <a href="#site_names_python" style="color: inherit; text-decoration: inherit;">site_<wbr>names</a>
@@ -2133,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -2142,9 +1882,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2152,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2161,8 +1898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2170,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2179,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2188,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2197,14 +1930,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2212,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2221,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2230,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2239,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2248,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2257,14 +1982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2272,8 +1994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2281,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2290,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2299,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2308,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2317,14 +2034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2332,8 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2341,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2350,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2359,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2368,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2377,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

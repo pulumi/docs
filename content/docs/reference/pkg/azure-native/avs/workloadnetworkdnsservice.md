@@ -14,11 +14,17 @@ NSX DNS Service
 API Version: 2020-07-17-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### WorkloadNetworks_CreateDnsService
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -48,9 +54,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -84,9 +93,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -105,9 +117,12 @@ workload_network_dns_service = azure_native.avs.WorkloadNetworkDnsService("workl
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -127,9 +142,16 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a WorkloadNetworkDnsService Resource {#create}
@@ -154,9 +176,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +184,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +192,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +200,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -213,9 +226,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -223,9 +234,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +242,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +250,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,18 +258,13 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +272,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +280,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,10 +288,7 @@ const workloadNetworkDnsService = new azure_native.avs.WorkloadNetworkDnsService
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -310,9 +303,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_csharp">
 <a href="#privatecloudname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -320,8 +311,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -329,8 +319,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdnszone_csharp">
 <a href="#defaultdnszone_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Dns<wbr>Zone</a>
@@ -338,8 +327,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -347,8 +335,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceid_csharp">
 <a href="#dnsserviceid_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Id</a>
@@ -356,8 +343,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_csharp">
 <a href="#dnsserviceip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Ip</a>
@@ -365,8 +351,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdnzones_csharp">
 <a href="#fqdnzones_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Zones</a>
@@ -374,8 +359,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -383,8 +367,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dnsserviceloglevelenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -392,14 +375,11 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_go">
 <a href="#privatecloudname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -407,8 +387,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -416,8 +395,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdnszone_go">
 <a href="#defaultdnszone_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Dns<wbr>Zone</a>
@@ -425,8 +403,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -434,8 +411,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceid_go">
 <a href="#dnsserviceid_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Id</a>
@@ -443,8 +419,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_go">
 <a href="#dnsserviceip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>Ip</a>
@@ -452,8 +427,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdnzones_go">
 <a href="#fqdnzones_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Zones</a>
@@ -461,8 +435,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -470,8 +443,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dnsserviceloglevelenum">Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -479,14 +451,11 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_nodejs">
 <a href="#privatecloudname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Name</a>
@@ -494,8 +463,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -503,8 +471,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultdnszone_nodejs">
 <a href="#defaultdnszone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Dns<wbr>Zone</a>
@@ -512,8 +479,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -521,8 +487,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceid_nodejs">
 <a href="#dnsserviceid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Id</a>
@@ -530,8 +495,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_nodejs">
 <a href="#dnsserviceip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>Ip</a>
@@ -539,8 +503,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdnzones_nodejs">
 <a href="#fqdnzones_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Zones</a>
@@ -548,8 +511,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -557,8 +519,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dnsserviceloglevelenum">Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -566,14 +527,11 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_cloud_name_python">
 <a href="#private_cloud_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>name</a>
@@ -581,8 +539,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -590,8 +547,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_dns_zone_python">
 <a href="#default_dns_zone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>dns_<wbr>zone</a>
@@ -599,8 +555,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default DNS zone of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -608,8 +563,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_service_id_python">
 <a href="#dns_service_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>id</a>
@@ -617,8 +571,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}NSX DNS Service identifier. Generally the same as the DNS Service's display name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_service_ip_python">
 <a href="#dns_service_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>ip</a>
@@ -626,8 +579,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS service IP of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_zones_python">
 <a href="#fqdn_zones_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>zones</a>
@@ -635,8 +587,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN zones of the DNS Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -644,8 +595,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#dnsserviceloglevelenum">Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Service log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -653,8 +603,7 @@ The WorkloadNetworkDnsService resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NSX revision number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -665,9 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -675,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -684,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -693,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -702,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -711,14 +654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -726,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -735,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -744,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -753,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -762,14 +698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -777,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -786,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -795,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -804,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -813,14 +742,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -828,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -837,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -846,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -855,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS Service status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -864,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -881,63 +802,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="dnsserviceloglevelenum">Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>DEBUG</dt>
-    <dd>DEBUG</dd>
-    <dt>INFO</dt>
-    <dd>INFO</dd>
-    <dt>WARNING</dt>
-    <dd>WARNING</dd>
-    <dt>ERROR</dt>
-    <dd>ERROR</dd>
-    <dt>FATAL</dt>
-    <dd>FATAL</dd>
-</dl>
+<dl class="tabular"><dt>DEBUG</dt>
+    <dd>DEBUG</dd><dt>INFO</dt>
+    <dd>INFO</dd><dt>WARNING</dt>
+    <dd>WARNING</dd><dt>ERROR</dt>
+    <dd>ERROR</dd><dt>FATAL</dt>
+    <dd>FATAL</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>DEBUG</dt>
-    <dd>DEBUG</dd>
-    <dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>INFO</dt>
-    <dd>INFO</dd>
-    <dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>WARNING</dt>
-    <dd>WARNING</dd>
-    <dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>ERROR</dt>
-    <dd>ERROR</dd>
-    <dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>FATAL</dt>
-    <dd>FATAL</dd>
-</dl>
+<dl class="tabular"><dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>DEBUG</dt>
+    <dd>DEBUG</dd><dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>INFO</dt>
+    <dd>INFO</dd><dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>WARNING</dt>
+    <dd>WARNING</dd><dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>ERROR</dt>
+    <dd>ERROR</dd><dt>Dns<wbr>Service<wbr>Log<wbr>Level<wbr>Enum<wbr>FATAL</dt>
+    <dd>FATAL</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>DEBUG</dt>
-    <dd>DEBUG</dd>
-    <dt>INFO</dt>
-    <dd>INFO</dd>
-    <dt>WARNING</dt>
-    <dd>WARNING</dd>
-    <dt>ERROR</dt>
-    <dd>ERROR</dd>
-    <dt>FATAL</dt>
-    <dd>FATAL</dd>
-</dl>
+<dl class="tabular"><dt>DEBUG</dt>
+    <dd>DEBUG</dd><dt>INFO</dt>
+    <dd>INFO</dd><dt>WARNING</dt>
+    <dd>WARNING</dd><dt>ERROR</dt>
+    <dd>ERROR</dd><dt>FATAL</dt>
+    <dd>FATAL</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DEBUG</dt>
-    <dd>DEBUG</dd>
-    <dt>INFO</dt>
-    <dd>INFO</dd>
-    <dt>WARNING</dt>
-    <dd>WARNING</dd>
-    <dt>ERROR</dt>
-    <dd>ERROR</dd>
-    <dt>FATAL</dt>
-    <dd>FATAL</dd>
-</dl>
+<dl class="tabular"><dt>DEBUG</dt>
+    <dd>DEBUG</dd><dt>INFO</dt>
+    <dd>INFO</dd><dt>WARNING</dt>
+    <dd>WARNING</dd><dt>ERROR</dt>
+    <dd>ERROR</dd><dt>FATAL</dt>
+    <dd>FATAL</dd></dl>
 {{% /choosable %}}
 ## Import
 

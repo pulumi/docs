@@ -14,11 +14,17 @@ Diagnostic details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateApiDiagnostic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -97,9 +103,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -168,9 +177,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -218,9 +230,12 @@ api_diagnostic = azure_native.apimanagement.ApiDiagnostic("apiDiagnostic",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -269,9 +284,16 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ApiDiagnostic Resource {#create}
@@ -296,9 +318,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +326,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +334,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,10 +342,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -355,9 +368,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -365,9 +376,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -375,9 +384,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -385,9 +392,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -395,18 +400,13 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -414,9 +414,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -424,9 +422,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -434,10 +430,7 @@ const apiDiagnostic = new azure_native.apimanagement.ApiDiagnostic("apiDiagnosti
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -452,9 +445,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -462,8 +453,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loggerid_csharp">
 <a href="#loggerid_csharp" style="color: inherit; text-decoration: inherit;">Logger<wbr>Id</a>
@@ -471,8 +461,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -480,8 +469,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -489,8 +477,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayslog_csharp">
 <a href="#alwayslog_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
@@ -498,8 +485,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alwayslog">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Always<wbr>Log</a></span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -507,8 +493,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticid_csharp">
 <a href="#diagnosticid_csharp" style="color: inherit; text-decoration: inherit;">Diagnostic<wbr>Id</a>
@@ -516,8 +501,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_csharp">
 <a href="#frontend_csharp" style="color: inherit; text-decoration: inherit;">Frontend</a>
@@ -525,8 +509,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcorrelationprotocol_csharp">
 <a href="#httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -534,8 +517,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#httpcorrelationprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Http<wbr>Correlation<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logclientip_csharp">
 <a href="#logclientip_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -543,8 +525,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_csharp">
 <a href="#sampling_csharp" style="color: inherit; text-decoration: inherit;">Sampling</a>
@@ -552,8 +533,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Sampling<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_csharp">
 <a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -561,14 +541,11 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#verbosity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Verbosity</a></span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -576,8 +553,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loggerid_go">
 <a href="#loggerid_go" style="color: inherit; text-decoration: inherit;">Logger<wbr>Id</a>
@@ -585,8 +561,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -594,8 +569,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -603,8 +577,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayslog_go">
 <a href="#alwayslog_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log</a>
@@ -612,8 +585,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alwayslog">Always<wbr>Log</a></span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -621,8 +593,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticid_go">
 <a href="#diagnosticid_go" style="color: inherit; text-decoration: inherit;">Diagnostic<wbr>Id</a>
@@ -630,8 +601,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_go">
 <a href="#frontend_go" style="color: inherit; text-decoration: inherit;">Frontend</a>
@@ -639,8 +609,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcorrelationprotocol_go">
 <a href="#httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -648,8 +617,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#httpcorrelationprotocol">Http<wbr>Correlation<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logclientip_go">
 <a href="#logclientip_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -657,8 +625,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_go">
 <a href="#sampling_go" style="color: inherit; text-decoration: inherit;">Sampling</a>
@@ -666,8 +633,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettings">Sampling<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_go">
 <a href="#verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -675,14 +641,11 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#verbosity">Verbosity</a></span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -690,8 +653,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loggerid_nodejs">
 <a href="#loggerid_nodejs" style="color: inherit; text-decoration: inherit;">logger<wbr>Id</a>
@@ -699,8 +661,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -708,8 +669,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -717,8 +677,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayslog_nodejs">
 <a href="#alwayslog_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log</a>
@@ -726,8 +685,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alwayslog">Always<wbr>Log</a></span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -735,8 +693,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnosticid_nodejs">
 <a href="#diagnosticid_nodejs" style="color: inherit; text-decoration: inherit;">diagnostic<wbr>Id</a>
@@ -744,8 +701,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_nodejs">
 <a href="#frontend_nodejs" style="color: inherit; text-decoration: inherit;">frontend</a>
@@ -753,8 +709,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcorrelationprotocol_nodejs">
 <a href="#httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
@@ -762,8 +717,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#httpcorrelationprotocol">Http<wbr>Correlation<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logclientip_nodejs">
 <a href="#logclientip_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Client<wbr>Ip</a>
@@ -771,8 +725,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_nodejs">
 <a href="#sampling_nodejs" style="color: inherit; text-decoration: inherit;">sampling</a>
@@ -780,8 +733,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettings">Sampling<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_nodejs">
 <a href="#verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -789,14 +741,11 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#verbosity">Verbosity</a></span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -804,8 +753,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logger_id_python">
 <a href="#logger_id_python" style="color: inherit; text-decoration: inherit;">logger_<wbr>id</a>
@@ -813,8 +761,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of a target logger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -822,8 +769,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -831,8 +777,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="always_log_python">
 <a href="#always_log_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log</a>
@@ -840,8 +785,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#alwayslog">Always<wbr>Log</a></span>
     </dt>
-    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies for what type of messages sampling settings should not apply.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -849,8 +793,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diagnostic_id_python">
 <a href="#diagnostic_id_python" style="color: inherit; text-decoration: inherit;">diagnostic_<wbr>id</a>
@@ -858,8 +801,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_python">
 <a href="#frontend_python" style="color: inherit; text-decoration: inherit;">frontend</a>
@@ -867,8 +809,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_correlation_protocol_python">
 <a href="#http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
@@ -876,8 +817,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#httpcorrelationprotocol">Http<wbr>Correlation<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets correlation protocol to use for Application Insights diagnostics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_client_ip_python">
 <a href="#log_client_ip_python" style="color: inherit; text-decoration: inherit;">log_<wbr>client_<wbr>ip</a>
@@ -885,8 +825,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log the ClientIP. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_python">
 <a href="#sampling_python" style="color: inherit; text-decoration: inherit;">sampling</a>
@@ -894,8 +833,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samplingsettings">Sampling<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_python">
 <a href="#verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -903,8 +841,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#verbosity">Verbosity</a></span>
     </dt>
-    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity level applied to traces emitted by trace policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -915,9 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -925,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -934,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -943,14 +876,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -958,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -967,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -976,14 +904,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -991,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1000,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1009,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1024,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1033,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1042,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1059,39 +976,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="alwayslog">Always<wbr>Log</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All<wbr>Errors</dt>
-    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>All<wbr>Errors</dt>
+    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Always<wbr>Log<wbr>All<wbr>Errors</dt>
-    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Always<wbr>Log<wbr>All<wbr>Errors</dt>
+    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All<wbr>Errors</dt>
-    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>All<wbr>Errors</dt>
+    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL_ERRORS</dt>
-    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ALL_ERRORS</dt>
+    <dd>allErrors{{% md %}}Always log all erroneous request regardless of sampling settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_csharp">
 <a href="#bytes_csharp" style="color: inherit; text-decoration: inherit;">Bytes</a>
@@ -1099,14 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_go">
 <a href="#bytes_go" style="color: inherit; text-decoration: inherit;">Bytes</a>
@@ -1114,14 +1018,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_nodejs">
 <a href="#bytes_nodejs" style="color: inherit; text-decoration: inherit;">bytes</a>
@@ -1129,14 +1030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_python">
 <a href="#bytes_python" style="color: inherit; text-decoration: inherit;">bytes</a>
@@ -1144,16 +1042,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_csharp">
 <a href="#bytes_csharp" style="color: inherit; text-decoration: inherit;">Bytes</a>
@@ -1161,14 +1056,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_go">
 <a href="#bytes_go" style="color: inherit; text-decoration: inherit;">Bytes</a>
@@ -1176,14 +1068,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_nodejs">
 <a href="#bytes_nodejs" style="color: inherit; text-decoration: inherit;">bytes</a>
@@ -1191,14 +1080,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytes_python">
 <a href="#bytes_python" style="color: inherit; text-decoration: inherit;">bytes</a>
@@ -1206,62 +1092,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of request body bytes to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpcorrelationprotocol">Http<wbr>Correlation<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd>
-    <dt>Legacy</dt>
-    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd>
-    <dt>W3C</dt>
-    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd><dt>Legacy</dt>
+    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd><dt>W3C</dt>
+    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Http<wbr>Correlation<wbr>Protocol<wbr>None</dt>
-    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd>
-    <dt>Http<wbr>Correlation<wbr>Protocol<wbr>Legacy</dt>
-    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd>
-    <dt>Http<wbr>Correlation<wbr>Protocol<wbr>W3C</dt>
-    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Http<wbr>Correlation<wbr>Protocol<wbr>None</dt>
+    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd><dt>Http<wbr>Correlation<wbr>Protocol<wbr>Legacy</dt>
+    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd><dt>Http<wbr>Correlation<wbr>Protocol<wbr>W3C</dt>
+    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd>
-    <dt>Legacy</dt>
-    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd>
-    <dt>W3C</dt>
-    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd><dt>Legacy</dt>
+    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd><dt>W3C</dt>
+    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd>
-    <dt>LEGACY</dt>
-    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd>
-    <dt>W3_C</dt>
-    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None{{% md %}}Do not read and inject correlation headers.{{% /md %}}</dd><dt>LEGACY</dt>
+    <dd>Legacy{{% md %}}Inject Request-Id and Request-Context headers with request correlation data. See https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/HttpCorrelationProtocol.md.{{% /md %}}</dd><dt>W3_C</dt>
+    <dd>W3C{{% md %}}Inject Trace Context headers. See https://w3c.github.io/trace-context.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -1269,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1278,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -1293,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1302,14 +1164,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
@@ -1317,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1326,14 +1184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
@@ -1341,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1350,16 +1204,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -1367,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1376,14 +1226,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -1391,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1400,14 +1246,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
@@ -1415,8 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1424,14 +1266,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
@@ -1439,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1448,16 +1286,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of HTTP Headers to log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_csharp">
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -1465,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -1474,14 +1308,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_go">
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -1489,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -1498,14 +1328,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_nodejs">
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
@@ -1513,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -1522,14 +1348,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_python">
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
@@ -1537,8 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -1546,16 +1368,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pipelinediagnosticsettingsresponse">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_csharp">
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -1563,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_csharp">
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -1572,14 +1390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_go">
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -1587,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_go">
 <a href="#response_go" style="color: inherit; text-decoration: inherit;">Response</a>
@@ -1596,14 +1410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_nodejs">
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
@@ -1611,8 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_nodejs">
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
@@ -1620,14 +1430,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_python">
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
@@ -1635,8 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_python">
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
@@ -1644,16 +1450,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="samplingsettings">Sampling<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1661,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_csharp">
 <a href="#samplingtype_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
@@ -1670,14 +1472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#samplingtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Sampling<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1685,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_go">
 <a href="#samplingtype_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
@@ -1694,14 +1492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#samplingtype">Sampling<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1709,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_nodejs">
 <a href="#samplingtype_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Type</a>
@@ -1718,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#samplingtype">Sampling<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1733,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_type_python">
 <a href="#sampling_type_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>type</a>
@@ -1742,16 +1532,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#samplingtype">Sampling<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="samplingsettingsresponse">Sampling<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1759,8 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_csharp">
 <a href="#samplingtype_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
@@ -1768,14 +1554,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1783,8 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_go">
 <a href="#samplingtype_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Type</a>
@@ -1792,14 +1574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1807,8 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingtype_nodejs">
 <a href="#samplingtype_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Type</a>
@@ -1816,14 +1594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1831,8 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rate of sampling for fixed-rate sampling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_type_python">
 <a href="#sampling_type_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>type</a>
@@ -1840,84 +1614,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sampling type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sampling type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="samplingtype">Sampling<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>@Fixed</dt>
-    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>@Fixed</dt>
+    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sampling<wbr>Type<wbr>Fixed</dt>
-    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Sampling<wbr>Type<wbr>Fixed</dt>
+    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Fixed</dt>
-    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Fixed</dt>
+    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FIXED</dt>
-    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>FIXED</dt>
+    <dd>fixed{{% md %}}Fixed-rate sampling.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="verbosity">Verbosity</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Verbose</dt>
-    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>Information</dt>
-    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>Error</dt>
-    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Verbose</dt>
+    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>Information</dt>
+    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>Error</dt>
+    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Verbosity<wbr>Verbose</dt>
-    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>Verbosity<wbr>Information</dt>
-    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>Verbosity<wbr>Error</dt>
-    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Verbosity<wbr>Verbose</dt>
+    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>Verbosity<wbr>Information</dt>
+    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>Verbosity<wbr>Error</dt>
+    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Verbose</dt>
-    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>Information</dt>
-    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>Error</dt>
-    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Verbose</dt>
+    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>Information</dt>
+    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>Error</dt>
+    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>VERBOSE</dt>
-    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>INFORMATION</dt>
-    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-    <dt>ERROR</dt>
-    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>VERBOSE</dt>
+    <dd>verbose{{% md %}}All the traces emitted by trace policies will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>INFORMATION</dt>
+    <dd>information{{% md %}}Traces with 'severity' set to 'information' and 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd><dt>ERROR</dt>
+    <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

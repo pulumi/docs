@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopepath_csharp">
 <a href="#scopepath_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Path</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopepath_go">
 <a href="#scopepath_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Path</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopepath_nodejs">
 <a href="#scopepath_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Path</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_path_python">
 <a href="#scope_path_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>path</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of a specific item defined in the Application Insights component{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of a specific item defined in the Application Insights component{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentanalyticsitempropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timecreated_csharp">
 <a href="#timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timemodified_csharp">
 <a href="#timemodified_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content of this item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The content of this item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -346,14 +308,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentanalyticsitempropertiesresponse">Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timecreated_go">
 <a href="#timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timemodified_go">
 <a href="#timemodified_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content of this item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The content of this item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -433,14 +384,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentanalyticsitempropertiesresponse">Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timecreated_nodejs">
 <a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timemodified_nodejs">
 <a href="#timemodified_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Modified</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The content of this item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The content of this item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -520,14 +460,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentanalyticsitempropertiesresponse">Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_created_python">
 <a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC when this item was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_modified_python">
 <a href="#time_modified_python" style="color: inherit; text-decoration: inherit;">time_<wbr>modified</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The content of this item{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The content of this item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the item definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum indicating the type of the Analytics item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_csharp">
 <a href="#functionalias_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -632,14 +558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_go">
 <a href="#functionalias_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Alias</a>
@@ -647,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="functionalias_nodejs">
 <a href="#functionalias_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Alias</a>
@@ -662,14 +582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="function_alias_python">
 <a href="#function_alias_python" style="color: inherit; text-decoration: inherit;">function_<wbr>alias</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A function alias, used when the type of the item is Function{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

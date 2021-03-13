@@ -14,11 +14,17 @@ Represents a published blueprint.
 API Version: 2018-11-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### PublishedManagementGroupBlueprint_Publish
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -39,9 +45,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -67,9 +76,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -82,9 +94,12 @@ published_blueprint = azure_native.blueprint.PublishedBlueprint("publishedBluepr
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,10 +113,17 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### PublishedSubscriptionBlueprint_Publish
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -122,9 +144,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -150,9 +175,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -165,9 +193,12 @@ published_blueprint = azure_native.blueprint.PublishedBlueprint("publishedBluepr
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -181,9 +212,16 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PublishedBlueprint Resource {#create}
@@ -208,9 +246,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -218,9 +254,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -228,9 +262,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -238,10 +270,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -267,9 +296,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -277,9 +304,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -287,9 +312,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -297,9 +320,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -307,18 +328,13 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -326,9 +342,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -336,9 +350,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -346,10 +358,7 @@ const publishedBlueprint = new azure_native.blueprint.PublishedBlueprint("publis
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -364,9 +373,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprintname_csharp">
 <a href="#blueprintname_csharp" style="color: inherit; text-decoration: inherit;">Blueprint<wbr>Name</a>
@@ -374,8 +381,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcescope_csharp">
 <a href="#resourcescope_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Scope</a>
@@ -383,8 +389,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changenotes_csharp">
 <a href="#changenotes_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Notes</a>
@@ -392,8 +397,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -401,8 +405,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -410,8 +413,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -419,8 +421,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Parameter<wbr>Definition<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroups_csharp">
 <a href="#resourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
@@ -428,8 +429,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Definition<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetscope_csharp">
 <a href="#targetscope_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Scope</a>
@@ -437,8 +437,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#blueprinttargetscope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Blueprint<wbr>Target<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionid_csharp">
 <a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -446,14 +445,11 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprintname_go">
 <a href="#blueprintname_go" style="color: inherit; text-decoration: inherit;">Blueprint<wbr>Name</a>
@@ -461,8 +457,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcescope_go">
 <a href="#resourcescope_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Scope</a>
@@ -470,8 +465,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changenotes_go">
 <a href="#changenotes_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Notes</a>
@@ -479,8 +473,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -488,8 +481,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -497,8 +489,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -506,8 +497,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Parameter<wbr>Definition</span>
     </dt>
-    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroups_go">
 <a href="#resourcegroups_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
@@ -515,8 +505,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Resource<wbr>Group<wbr>Definition</span>
     </dt>
-    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetscope_go">
 <a href="#targetscope_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Scope</a>
@@ -524,8 +513,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#blueprinttargetscope">Blueprint<wbr>Target<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionid_go">
 <a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -533,14 +521,11 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprintname_nodejs">
 <a href="#blueprintname_nodejs" style="color: inherit; text-decoration: inherit;">blueprint<wbr>Name</a>
@@ -548,8 +533,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcescope_nodejs">
 <a href="#resourcescope_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Scope</a>
@@ -557,8 +541,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="changenotes_nodejs">
 <a href="#changenotes_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Notes</a>
@@ -566,8 +549,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -575,8 +557,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -584,8 +565,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -593,8 +573,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Parameter<wbr>Definition}</span>
     </dt>
-    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroups_nodejs">
 <a href="#resourcegroups_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Groups</a>
@@ -602,8 +581,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Resource<wbr>Group<wbr>Definition}</span>
     </dt>
-    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetscope_nodejs">
 <a href="#targetscope_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Scope</a>
@@ -611,8 +589,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#blueprinttargetscope">Blueprint<wbr>Target<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionid_nodejs">
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -620,14 +597,11 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprint_name_python">
 <a href="#blueprint_name_python" style="color: inherit; text-decoration: inherit;">blueprint_<wbr>name</a>
@@ -635,8 +609,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the published blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_scope_python">
 <a href="#resource_scope_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>scope</a>
@@ -644,8 +617,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="change_notes_python">
 <a href="#change_notes_python" style="color: inherit; text-decoration: inherit;">change_<wbr>notes</a>
@@ -653,8 +625,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version-specific change notes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -662,8 +633,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -671,8 +641,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -680,8 +649,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Parameter<wbr>Definition<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_groups_python">
 <a href="#resource_groups_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>groups</a>
@@ -689,8 +657,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Resource<wbr>Group<wbr>Definition<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_scope_python">
 <a href="#target_scope_python" style="color: inherit; text-decoration: inherit;">target_<wbr>scope</a>
@@ -698,8 +665,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#blueprinttargetscope">Blueprint<wbr>Target<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope where this blueprint definition can be assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_id_python">
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -707,8 +673,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the published blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -719,9 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -729,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -738,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -747,8 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blueprintstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Outputs.<wbr>Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -756,14 +716,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -771,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -780,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -789,8 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blueprintstatusresponse">Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -798,14 +752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -813,8 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -822,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -831,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blueprintstatusresponse">Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -840,14 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -855,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -864,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -873,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blueprintstatusresponse">Blueprint<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the blueprint. This field is readonly.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -882,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -899,9 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="blueprintstatusresponse">Blueprint<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -909,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timecreated_csharp">
 <a href="#timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
@@ -918,14 +856,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -933,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timecreated_go">
 <a href="#timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
@@ -942,14 +876,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -957,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timecreated_nodejs">
 <a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
@@ -966,14 +896,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -981,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_created_python">
 <a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
@@ -990,54 +916,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="blueprinttargetscope">Blueprint<wbr>Target<wbr>Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Subscription</dt>
-    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd>
-    <dt>Management<wbr>Group</dt>
-    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Subscription</dt>
+    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd><dt>Management<wbr>Group</dt>
+    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Blueprint<wbr>Target<wbr>Scope<wbr>Subscription</dt>
-    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd>
-    <dt>Blueprint<wbr>Target<wbr>Scope<wbr>Management<wbr>Group</dt>
-    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Blueprint<wbr>Target<wbr>Scope<wbr>Subscription</dt>
+    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd><dt>Blueprint<wbr>Target<wbr>Scope<wbr>Management<wbr>Group</dt>
+    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Subscription</dt>
-    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd>
-    <dt>Management<wbr>Group</dt>
-    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Subscription</dt>
+    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd><dt>Management<wbr>Group</dt>
+    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SUBSCRIPTION</dt>
-    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd>
-    <dt>MANAGEMENT_GROUP</dt>
-    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>SUBSCRIPTION</dt>
+    <dd>subscription{{% md %}}The blueprint targets a subscription during blueprint assignment.{{% /md %}}</dd><dt>MANAGEMENT_GROUP</dt>
+    <dd>managementGroup{{% md %}}The blueprint targets a management group during blueprint assignment. This is reserved for future use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parameterdefinition">Parameter<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1045,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#templateparametertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Template<wbr>Parameter<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_csharp">
 <a href="#allowedvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
@@ -1054,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_csharp">
 <a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1063,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1072,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1081,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_csharp">
 <a href="#strongtype_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1090,14 +996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1105,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#templateparametertype">Template<wbr>Parameter<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_go">
 <a href="#allowedvalues_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
@@ -1114,8 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_go">
 <a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1123,8 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1132,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1141,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_go">
 <a href="#strongtype_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1150,14 +1048,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1165,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#templateparametertype">Template<wbr>Parameter<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_nodejs">
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
@@ -1174,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_nodejs">
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
@@ -1183,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1192,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1201,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_nodejs">
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
@@ -1210,14 +1100,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1225,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#templateparametertype">Template<wbr>Parameter<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_values_python">
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
@@ -1234,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_value_python">
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
@@ -1243,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1252,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1261,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strong_type_python">
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
@@ -1270,16 +1152,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parameterdefinitionresponse">Parameter<wbr>Definition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1287,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_csharp">
 <a href="#allowedvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
@@ -1296,8 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_csharp">
 <a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1305,8 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1314,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1323,8 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_csharp">
 <a href="#strongtype_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1332,14 +1206,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1347,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_go">
 <a href="#allowedvalues_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
@@ -1356,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_go">
 <a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1365,8 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1374,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1383,8 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_go">
 <a href="#strongtype_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1392,14 +1258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1407,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_nodejs">
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
@@ -1416,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_nodejs">
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
@@ -1425,8 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1434,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1443,8 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_nodejs">
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
@@ -1452,14 +1310,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1467,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed data types for Resource Manager template parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_values_python">
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
@@ -1476,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of allowed values for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_value_python">
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
@@ -1485,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default Value for this parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1494,8 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1503,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strong_type_python">
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
@@ -1512,16 +1362,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcegroupdefinition">Resource<wbr>Group<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1529,8 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1538,8 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1547,8 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1556,8 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1565,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_csharp">
 <a href="#strongtype_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1574,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1583,14 +1424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
 <a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1598,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1607,8 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1616,8 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1625,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1634,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_go">
 <a href="#strongtype_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1643,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1652,14 +1484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
@@ -1667,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1676,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1685,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1694,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1703,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_nodejs">
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
@@ -1712,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1721,14 +1544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
@@ -1736,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1745,8 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1754,8 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1763,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1772,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strong_type_python">
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
@@ -1781,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1790,16 +1604,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcegroupdefinitionresponse">Resource<wbr>Group<wbr>Definition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1807,8 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1816,8 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1825,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1834,8 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1843,8 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_csharp">
 <a href="#strongtype_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1852,8 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1861,14 +1666,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
 <a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1876,8 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1885,8 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1894,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1903,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1912,8 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_go">
 <a href="#strongtype_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -1921,8 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1930,14 +1726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
@@ -1945,8 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1954,8 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1963,8 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1972,8 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1981,8 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_nodejs">
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
@@ -1990,8 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1999,14 +1786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
@@ -2014,8 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Artifacts which need to be deployed before this resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2023,8 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2032,8 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DisplayName of this parameter/resourceGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2041,8 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location of this resourceGroup. Leave empty if the resource group location will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2050,8 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this resourceGroup. Leave empty if the resource group name will be specified during the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strong_type_python">
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
@@ -2059,8 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2068,86 +1846,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags to be assigned to this resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="templateparametertype">Template<wbr>Parameter<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>@String</dt>
-    <dd>string</dd>
-    <dt>Array</dt>
-    <dd>array</dd>
-    <dt>@Bool</dt>
-    <dd>bool</dd>
-    <dt>@Int</dt>
-    <dd>int</dd>
-    <dt>@Object</dt>
-    <dd>object</dd>
-    <dt>Secure<wbr>Object</dt>
-    <dd>secureObject</dd>
-    <dt>Secure<wbr>String</dt>
-    <dd>secureString</dd>
-</dl>
+<dl class="tabular"><dt>@String</dt>
+    <dd>string</dd><dt>Array</dt>
+    <dd>array</dd><dt>@Bool</dt>
+    <dd>bool</dd><dt>@Int</dt>
+    <dd>int</dd><dt>@Object</dt>
+    <dd>object</dd><dt>Secure<wbr>Object</dt>
+    <dd>secureObject</dd><dt>Secure<wbr>String</dt>
+    <dd>secureString</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>String</dt>
-    <dd>string</dd>
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>Array</dt>
-    <dd>array</dd>
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>Bool</dt>
-    <dd>bool</dd>
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>Int</dt>
-    <dd>int</dd>
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>Object</dt>
-    <dd>object</dd>
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>Secure<wbr>Object</dt>
-    <dd>secureObject</dd>
-    <dt>Template<wbr>Parameter<wbr>Type<wbr>Secure<wbr>String</dt>
-    <dd>secureString</dd>
-</dl>
+<dl class="tabular"><dt>Template<wbr>Parameter<wbr>Type<wbr>String</dt>
+    <dd>string</dd><dt>Template<wbr>Parameter<wbr>Type<wbr>Array</dt>
+    <dd>array</dd><dt>Template<wbr>Parameter<wbr>Type<wbr>Bool</dt>
+    <dd>bool</dd><dt>Template<wbr>Parameter<wbr>Type<wbr>Int</dt>
+    <dd>int</dd><dt>Template<wbr>Parameter<wbr>Type<wbr>Object</dt>
+    <dd>object</dd><dt>Template<wbr>Parameter<wbr>Type<wbr>Secure<wbr>Object</dt>
+    <dd>secureObject</dd><dt>Template<wbr>Parameter<wbr>Type<wbr>Secure<wbr>String</dt>
+    <dd>secureString</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>String</dt>
-    <dd>string</dd>
-    <dt>Array</dt>
-    <dd>array</dd>
-    <dt>Bool</dt>
-    <dd>bool</dd>
-    <dt>Int</dt>
-    <dd>int</dd>
-    <dt>Object</dt>
-    <dd>object</dd>
-    <dt>Secure<wbr>Object</dt>
-    <dd>secureObject</dd>
-    <dt>Secure<wbr>String</dt>
-    <dd>secureString</dd>
-</dl>
+<dl class="tabular"><dt>String</dt>
+    <dd>string</dd><dt>Array</dt>
+    <dd>array</dd><dt>Bool</dt>
+    <dd>bool</dd><dt>Int</dt>
+    <dd>int</dd><dt>Object</dt>
+    <dd>object</dd><dt>Secure<wbr>Object</dt>
+    <dd>secureObject</dd><dt>Secure<wbr>String</dt>
+    <dd>secureString</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STRING</dt>
-    <dd>string</dd>
-    <dt>ARRAY</dt>
-    <dd>array</dd>
-    <dt>BOOL</dt>
-    <dd>bool</dd>
-    <dt>INT</dt>
-    <dd>int</dd>
-    <dt>OBJECT</dt>
-    <dd>object</dd>
-    <dt>SECURE_OBJECT</dt>
-    <dd>secureObject</dd>
-    <dt>SECURE_STRING</dt>
-    <dd>secureString</dd>
-</dl>
+<dl class="tabular"><dt>STRING</dt>
+    <dd>string</dd><dt>ARRAY</dt>
+    <dd>array</dd><dt>BOOL</dt>
+    <dd>bool</dd><dt>INT</dt>
+    <dd>int</dd><dt>OBJECT</dt>
+    <dd>object</dd><dt>SECURE_OBJECT</dt>
+    <dd>secureObject</dd><dt>SECURE_STRING</dt>
+    <dd>secureString</dd></dl>
 {{% /choosable %}}
 ## Import
 

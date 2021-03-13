@@ -14,11 +14,17 @@ The Log Search Rule resource.
 API Version: 2018-04-16.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or Update rule - AlertingAction
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -76,13 +82,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -126,9 +138,12 @@ scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryR
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -173,10 +188,17 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or Update rule - AlertingAction with Cross-Resource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -234,13 +256,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -281,9 +309,12 @@ scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryR
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -325,10 +356,17 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or Update rule - LogToMetricAction
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -368,13 +406,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -400,9 +444,12 @@ scheduled_query_rule = azure_native.insights.ScheduledQueryRule("scheduledQueryR
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -429,9 +476,16 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ScheduledQueryRule Resource {#create}
@@ -456,9 +510,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -466,9 +518,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -476,9 +526,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -486,10 +534,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -515,9 +560,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -525,9 +568,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -535,9 +576,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -545,9 +584,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -555,18 +592,13 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -574,9 +606,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -584,9 +614,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -594,10 +622,7 @@ const scheduledQueryRule = new azure_native.insights.ScheduledQueryRule("schedul
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -612,9 +637,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -622,8 +645,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertingaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -631,8 +653,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -640,8 +661,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#source">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -649,8 +669,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -658,8 +677,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -667,8 +685,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enabled">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Enabled</a></span>
     </dt>
-    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -676,8 +693,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -685,8 +701,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -694,8 +709,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -703,14 +717,11 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -718,8 +729,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -727,8 +737,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -736,8 +745,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#source">Source</a></span>
     </dt>
-    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -745,8 +753,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -754,8 +761,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -763,8 +769,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enabled">Enabled</a></span>
     </dt>
-    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -772,8 +777,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -781,8 +785,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -790,8 +793,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -799,14 +801,11 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -814,8 +813,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -823,8 +821,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -832,8 +829,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#source">Source</a></span>
     </dt>
-    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -841,8 +837,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -850,8 +845,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -859,8 +853,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enabled">Enabled</a></span>
     </dt>
-    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -868,8 +861,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -877,8 +869,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -886,8 +877,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -895,14 +885,11 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -910,8 +897,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -919,8 +905,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -928,8 +913,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -937,8 +921,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -946,8 +929,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -955,8 +937,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enabled">Enabled</a></span>
     </dt>
-    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -964,8 +945,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -973,8 +953,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -982,8 +961,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -991,8 +969,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1003,9 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdwithapiversion_csharp">
 <a href="#createdwithapiversion_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
@@ -1013,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1022,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1031,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="islegacyloganalyticsrule_csharp">
 <a href="#islegacyloganalyticsrule_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
@@ -1040,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1049,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -1058,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1067,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1076,8 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1085,14 +1052,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdwithapiversion_go">
 <a href="#createdwithapiversion_go" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
@@ -1100,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1109,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1118,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="islegacyloganalyticsrule_go">
 <a href="#islegacyloganalyticsrule_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
@@ -1127,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1136,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -1145,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1154,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1163,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1172,14 +1128,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdwithapiversion_nodejs">
 <a href="#createdwithapiversion_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>With<wbr>Api<wbr>Version</a>
@@ -1187,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1196,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1205,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="islegacyloganalyticsrule_nodejs">
 <a href="#islegacyloganalyticsrule_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
@@ -1214,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1223,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
@@ -1232,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1241,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1250,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1259,14 +1204,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_with_api_version_python">
 <a href="#created_with_api_version_python" style="color: inherit; text-decoration: inherit;">created_<wbr>with_<wbr>api_<wbr>version</a>
@@ -1274,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1283,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1292,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_legacy_log_analytics_rule_python">
 <a href="#is_legacy_log_analytics_rule_python" style="color: inherit; text-decoration: inherit;">is_<wbr>legacy_<wbr>log_<wbr>analytics_<wbr>rule</a>
@@ -1301,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1310,8 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
@@ -1319,8 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1328,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1337,8 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1346,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1363,71 +1296,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="alertseverity">Alert<wbr>Severity</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Zero</dt>
-    <dd>0</dd>
-    <dt>One</dt>
-    <dd>1</dd>
-    <dt>Two</dt>
-    <dd>2</dd>
-    <dt>Three</dt>
-    <dd>3</dd>
-    <dt>Four</dt>
-    <dd>4</dd>
-</dl>
+<dl class="tabular"><dt>Zero</dt>
+    <dd>0</dd><dt>One</dt>
+    <dd>1</dd><dt>Two</dt>
+    <dd>2</dd><dt>Three</dt>
+    <dd>3</dd><dt>Four</dt>
+    <dd>4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Alert<wbr>Severity<wbr>Zero</dt>
-    <dd>0</dd>
-    <dt>Alert<wbr>Severity<wbr>One</dt>
-    <dd>1</dd>
-    <dt>Alert<wbr>Severity<wbr>Two</dt>
-    <dd>2</dd>
-    <dt>Alert<wbr>Severity<wbr>Three</dt>
-    <dd>3</dd>
-    <dt>Alert<wbr>Severity<wbr>Four</dt>
-    <dd>4</dd>
-</dl>
+<dl class="tabular"><dt>Alert<wbr>Severity<wbr>Zero</dt>
+    <dd>0</dd><dt>Alert<wbr>Severity<wbr>One</dt>
+    <dd>1</dd><dt>Alert<wbr>Severity<wbr>Two</dt>
+    <dd>2</dd><dt>Alert<wbr>Severity<wbr>Three</dt>
+    <dd>3</dd><dt>Alert<wbr>Severity<wbr>Four</dt>
+    <dd>4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Zero</dt>
-    <dd>0</dd>
-    <dt>One</dt>
-    <dd>1</dd>
-    <dt>Two</dt>
-    <dd>2</dd>
-    <dt>Three</dt>
-    <dd>3</dd>
-    <dt>Four</dt>
-    <dd>4</dd>
-</dl>
+<dl class="tabular"><dt>Zero</dt>
+    <dd>0</dd><dt>One</dt>
+    <dd>1</dd><dt>Two</dt>
+    <dd>2</dd><dt>Three</dt>
+    <dd>3</dd><dt>Four</dt>
+    <dd>4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ZERO</dt>
-    <dd>0</dd>
-    <dt>ONE</dt>
-    <dd>1</dd>
-    <dt>TWO</dt>
-    <dd>2</dd>
-    <dt>THREE</dt>
-    <dd>3</dd>
-    <dt>FOUR</dt>
-    <dd>4</dd>
-</dl>
+<dl class="tabular"><dt>ZERO</dt>
+    <dd>0</dd><dt>ONE</dt>
+    <dd>1</dd><dt>TWO</dt>
+    <dd>2</dd><dt>THREE</dt>
+    <dd>3</dd><dt>FOUR</dt>
+    <dd>4</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertingaction">Alerting<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1435,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertseverity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Alert<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -1444,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggercondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aznsaction_csharp">
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
@@ -1453,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroup">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_csharp">
 <a href="#throttlinginmin_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>In<wbr>Min</a>
@@ -1462,14 +1366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1477,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertseverity">Alert<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -1486,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aznsaction_go">
 <a href="#aznsaction_go" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
@@ -1495,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_go">
 <a href="#throttlinginmin_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>In<wbr>Min</a>
@@ -1504,14 +1402,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1519,8 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#alertseverity">Alert<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -1528,8 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aznsaction_nodejs">
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
@@ -1537,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_nodejs">
 <a href="#throttlinginmin_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
@@ -1546,14 +1438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1561,8 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#alertseverity">Alert<wbr>Severity</a></span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -1570,8 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azns_action_python">
 <a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
@@ -1579,8 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_in_min_python">
 <a href="#throttling_in_min_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>in_<wbr>min</a>
@@ -1588,16 +1474,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertingactionresponse">Alerting<wbr>Action<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1605,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -1614,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aznsaction_csharp">
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
@@ -1623,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_csharp">
 <a href="#throttlinginmin_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>In<wbr>Min</a>
@@ -1632,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1647,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -1656,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aznsaction_go">
 <a href="#aznsaction_go" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
@@ -1665,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_go">
 <a href="#throttlinginmin_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>In<wbr>Min</a>
@@ -1674,14 +1548,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1689,8 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -1698,8 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aznsaction_nodejs">
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
@@ -1707,8 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_nodejs">
 <a href="#throttlinginmin_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
@@ -1716,14 +1584,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1731,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Severity of the alert{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -1740,8 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azns_action_python">
 <a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
@@ -1749,8 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_in_min_python">
 <a href="#throttling_in_min_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>in_<wbr>min</a>
@@ -1758,16 +1620,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroup_csharp">
 <a href="#actiongroup_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
@@ -1775,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_csharp">
 <a href="#customwebhookpayload_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1784,8 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_csharp">
 <a href="#emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -1793,14 +1650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroup_go">
 <a href="#actiongroup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
@@ -1808,8 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_go">
 <a href="#customwebhookpayload_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1817,8 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_go">
 <a href="#emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -1826,14 +1678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroup_nodejs">
 <a href="#actiongroup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
@@ -1841,8 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_nodejs">
 <a href="#customwebhookpayload_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Webhook<wbr>Payload</a>
@@ -1850,8 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_nodejs">
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
@@ -1859,14 +1706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_group_python">
 <a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
@@ -1874,8 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_webhook_payload_python">
 <a href="#custom_webhook_payload_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>webhook_<wbr>payload</a>
@@ -1883,8 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_subject_python">
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
@@ -1892,16 +1734,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroup_csharp">
 <a href="#actiongroup_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
@@ -1909,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_csharp">
 <a href="#customwebhookpayload_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1918,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_csharp">
 <a href="#emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -1927,14 +1764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroup_go">
 <a href="#actiongroup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
@@ -1942,8 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_go">
 <a href="#customwebhookpayload_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
@@ -1951,8 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_go">
 <a href="#emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -1960,14 +1792,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroup_nodejs">
 <a href="#actiongroup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
@@ -1975,8 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_nodejs">
 <a href="#customwebhookpayload_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Webhook<wbr>Payload</a>
@@ -1984,8 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_nodejs">
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
@@ -1993,14 +1820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_group_python">
 <a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
@@ -2008,8 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_webhook_payload_python">
 <a href="#custom_webhook_payload_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>webhook_<wbr>payload</a>
@@ -2017,8 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_subject_python">
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
@@ -2026,78 +1848,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="conditionaloperator">Conditional<wbr>Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd>
-    <dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Less<wbr>Than</dt>
-    <dd>LessThan</dd>
-    <dt>Equal</dt>
-    <dd>Equal</dd>
-</dl>
+<dl class="tabular"><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Equal</dt>
+    <dd>Equal</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>Conditional<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd>
-    <dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Conditional<wbr>Operator<wbr>Less<wbr>Than</dt>
-    <dd>LessThan</dd>
-    <dt>Conditional<wbr>Operator<wbr>Equal</dt>
-    <dd>Equal</dd>
-</dl>
+<dl class="tabular"><dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Conditional<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd><dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Conditional<wbr>Operator<wbr>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Conditional<wbr>Operator<wbr>Equal</dt>
+    <dd>Equal</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd>
-    <dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Less<wbr>Than</dt>
-    <dd>LessThan</dd>
-    <dt>Equal</dt>
-    <dd>Equal</dd>
-</dl>
+<dl class="tabular"><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Equal</dt>
+    <dd>Equal</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GREATER_THAN_OR_EQUAL</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>LESS_THAN_OR_EQUAL</dt>
-    <dd>LessThanOrEqual</dd>
-    <dt>GREATER_THAN</dt>
-    <dd>GreaterThan</dd>
-    <dt>LESS_THAN</dt>
-    <dd>LessThan</dd>
-    <dt>EQUAL</dt>
-    <dd>Equal</dd>
-</dl>
+<dl class="tabular"><dt>GREATER_THAN_OR_EQUAL</dt>
+    <dd>GreaterThanOrEqual</dd><dt>LESS_THAN_OR_EQUAL</dt>
+    <dd>LessThanOrEqual</dd><dt>GREATER_THAN</dt>
+    <dd>GreaterThan</dd><dt>LESS_THAN</dt>
+    <dd>LessThan</dd><dt>EQUAL</dt>
+    <dd>Equal</dd></dl>
 {{% /choosable %}}
 
 <h4 id="criteria">Criteria</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2105,8 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -2114,14 +1908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2129,8 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -2138,14 +1928,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimension">[]Dimension</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -2153,8 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -2162,14 +1948,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimension">Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -2177,8 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -2186,16 +1968,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimension">Sequence[Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="criteriaresponse">Criteria<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2203,8 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -2212,14 +1990,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2227,8 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -2236,14 +2010,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">[]Dimension<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -2251,8 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -2260,14 +2030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -2275,8 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the metric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -2284,16 +2050,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">Sequence[Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dimension">Dimension</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2301,8 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2310,8 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2319,14 +2080,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2334,8 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2343,8 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operator">Operator</a></span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2352,14 +2108,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2367,8 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2376,8 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#operator">Operator</a></span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2385,14 +2136,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2400,8 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2409,8 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#operator">Operator</a></span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2418,16 +2164,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dimensionresponse">Dimension<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2435,8 +2178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2444,8 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2453,14 +2194,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2468,8 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2477,8 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2486,14 +2222,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2501,8 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2510,8 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2519,14 +2250,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2534,8 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the dimension{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2543,8 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2552,54 +2278,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of dimension values{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enabled">Enabled</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>@True</dt>
-    <dd>true</dd>
-    <dt>@False</dt>
-    <dd>false</dd>
-</dl>
+<dl class="tabular"><dt>@True</dt>
+    <dd>true</dd><dt>@False</dt>
+    <dd>false</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Enabled<wbr>True</dt>
-    <dd>true</dd>
-    <dt>Enabled<wbr>False</dt>
-    <dd>false</dd>
-</dl>
+<dl class="tabular"><dt>Enabled<wbr>True</dt>
+    <dd>true</dd><dt>Enabled<wbr>False</dt>
+    <dd>false</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>True</dt>
-    <dd>true</dd>
-    <dt>False</dt>
-    <dd>false</dd>
-</dl>
+<dl class="tabular"><dt>True</dt>
+    <dd>true</dd><dt>False</dt>
+    <dd>false</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TRUE</dt>
-    <dd>true</dd>
-    <dt>FALSE</dt>
-    <dd>false</dd>
-</dl>
+<dl class="tabular"><dt>TRUE</dt>
+    <dd>true</dd><dt>FALSE</dt>
+    <dd>false</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logmetrictrigger">Log<wbr>Metric<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metriccolumn_csharp">
 <a href="#metriccolumn_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Column</a>
@@ -2607,8 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_csharp">
 <a href="#metrictriggertype_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
@@ -2616,8 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#metrictriggertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Metric<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2625,8 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_csharp">
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -2634,14 +2342,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#conditionaloperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metriccolumn_go">
 <a href="#metriccolumn_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Column</a>
@@ -2649,8 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_go">
 <a href="#metrictriggertype_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
@@ -2658,8 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#metrictriggertype">Metric<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2667,8 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_go">
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -2676,14 +2378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#conditionaloperator">Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metriccolumn_nodejs">
 <a href="#metriccolumn_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
@@ -2691,8 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_nodejs">
 <a href="#metrictriggertype_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
@@ -2700,8 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#metrictriggertype">Metric<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2709,8 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_nodejs">
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
@@ -2718,14 +2414,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#conditionaloperator">Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metric_column_python">
 <a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
@@ -2733,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_trigger_type_python">
 <a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
@@ -2742,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#metrictriggertype">Metric<wbr>Trigger<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2751,8 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_operator_python">
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
@@ -2760,16 +2450,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#conditionaloperator">Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metriccolumn_csharp">
 <a href="#metriccolumn_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Column</a>
@@ -2777,8 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_csharp">
 <a href="#metrictriggertype_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
@@ -2786,8 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2795,8 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_csharp">
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -2804,14 +2488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metriccolumn_go">
 <a href="#metriccolumn_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Column</a>
@@ -2819,8 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_go">
 <a href="#metrictriggertype_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
@@ -2828,8 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2837,8 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_go">
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -2846,14 +2524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metriccolumn_nodejs">
 <a href="#metriccolumn_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
@@ -2861,8 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_nodejs">
 <a href="#metrictriggertype_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
@@ -2870,8 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2879,8 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_nodejs">
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
@@ -2888,14 +2560,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="metric_column_python">
 <a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
@@ -2903,8 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_trigger_type_python">
 <a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
@@ -2912,8 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2921,8 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_operator_python">
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
@@ -2930,16 +2596,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_csharp">
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -2947,14 +2610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_go">
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -2962,14 +2622,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteria">[]Criteria</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_nodejs">
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -2977,14 +2634,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteria">Criteria[]</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_python">
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -2992,16 +2646,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteria">Sequence[Criteria<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_csharp">
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -3009,14 +2660,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_go">
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -3024,14 +2672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">[]Criteria<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_nodejs">
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -3039,14 +2684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">Criteria<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_python">
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -3054,114 +2696,83 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">Sequence[Criteria<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metrictriggertype">Metric<wbr>Trigger<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Consecutive</dt>
-    <dd>Consecutive</dd>
-    <dt>Total</dt>
-    <dd>Total</dd>
-</dl>
+<dl class="tabular"><dt>Consecutive</dt>
+    <dd>Consecutive</dd><dt>Total</dt>
+    <dd>Total</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Metric<wbr>Trigger<wbr>Type<wbr>Consecutive</dt>
-    <dd>Consecutive</dd>
-    <dt>Metric<wbr>Trigger<wbr>Type<wbr>Total</dt>
-    <dd>Total</dd>
-</dl>
+<dl class="tabular"><dt>Metric<wbr>Trigger<wbr>Type<wbr>Consecutive</dt>
+    <dd>Consecutive</dd><dt>Metric<wbr>Trigger<wbr>Type<wbr>Total</dt>
+    <dd>Total</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Consecutive</dt>
-    <dd>Consecutive</dd>
-    <dt>Total</dt>
-    <dd>Total</dd>
-</dl>
+<dl class="tabular"><dt>Consecutive</dt>
+    <dd>Consecutive</dd><dt>Total</dt>
+    <dd>Total</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CONSECUTIVE</dt>
-    <dd>Consecutive</dd>
-    <dt>TOTAL</dt>
-    <dd>Total</dd>
-</dl>
+<dl class="tabular"><dt>CONSECUTIVE</dt>
+    <dd>Consecutive</dd><dt>TOTAL</dt>
+    <dd>Total</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operator">Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Include</dt>
-    <dd>Include</dd>
-</dl>
+<dl class="tabular"><dt>Include</dt>
+    <dd>Include</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operator<wbr>Include</dt>
-    <dd>Include</dd>
-</dl>
+<dl class="tabular"><dt>Operator<wbr>Include</dt>
+    <dd>Include</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Include</dt>
-    <dd>Include</dd>
-</dl>
+<dl class="tabular"><dt>Include</dt>
+    <dd>Include</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>INCLUDE</dt>
-    <dd>Include</dd>
-</dl>
+<dl class="tabular"><dt>INCLUDE</dt>
+    <dd>Include</dd></dl>
 {{% /choosable %}}
 
 <h4 id="querytype">Query<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Result<wbr>Count</dt>
-    <dd>ResultCount</dd>
-</dl>
+<dl class="tabular"><dt>Result<wbr>Count</dt>
+    <dd>ResultCount</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Query<wbr>Type<wbr>Result<wbr>Count</dt>
-    <dd>ResultCount</dd>
-</dl>
+<dl class="tabular"><dt>Query<wbr>Type<wbr>Result<wbr>Count</dt>
+    <dd>ResultCount</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Result<wbr>Count</dt>
-    <dd>ResultCount</dd>
-</dl>
+<dl class="tabular"><dt>Result<wbr>Count</dt>
+    <dd>ResultCount</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>RESULT_COUNT</dt>
-    <dd>ResultCount</dd>
-</dl>
+<dl class="tabular"><dt>RESULT_COUNT</dt>
+    <dd>ResultCount</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedule">Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinminutes_csharp">
 <a href="#frequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>In<wbr>Minutes</a>
@@ -3169,8 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_csharp">
 <a href="#timewindowinminutes_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>In<wbr>Minutes</a>
@@ -3178,14 +2788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinminutes_go">
 <a href="#frequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>In<wbr>Minutes</a>
@@ -3193,8 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_go">
 <a href="#timewindowinminutes_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>In<wbr>Minutes</a>
@@ -3202,14 +2808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinminutes_nodejs">
 <a href="#frequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>In<wbr>Minutes</a>
@@ -3217,8 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_nodejs">
 <a href="#timewindowinminutes_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>In<wbr>Minutes</a>
@@ -3226,14 +2828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_in_minutes_python">
 <a href="#frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>in_<wbr>minutes</a>
@@ -3241,8 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_window_in_minutes_python">
 <a href="#time_window_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>in_<wbr>minutes</a>
@@ -3250,16 +2848,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinminutes_csharp">
 <a href="#frequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>In<wbr>Minutes</a>
@@ -3267,8 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_csharp">
 <a href="#timewindowinminutes_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>In<wbr>Minutes</a>
@@ -3276,14 +2870,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinminutes_go">
 <a href="#frequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>In<wbr>Minutes</a>
@@ -3291,8 +2882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_go">
 <a href="#timewindowinminutes_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>In<wbr>Minutes</a>
@@ -3300,14 +2890,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinminutes_nodejs">
 <a href="#frequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>In<wbr>Minutes</a>
@@ -3315,8 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_nodejs">
 <a href="#timewindowinminutes_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>In<wbr>Minutes</a>
@@ -3324,14 +2910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_in_minutes_python">
 <a href="#frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>in_<wbr>minutes</a>
@@ -3339,8 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_window_in_minutes_python">
 <a href="#time_window_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>in_<wbr>minutes</a>
@@ -3348,16 +2930,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="source">Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_csharp">
 <a href="#datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -3365,8 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_csharp">
 <a href="#authorizedresources_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Resources</a>
@@ -3374,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -3383,8 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytype_csharp">
 <a href="#querytype_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
@@ -3392,14 +2968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#querytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Query<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_go">
 <a href="#datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -3407,8 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_go">
 <a href="#authorizedresources_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Resources</a>
@@ -3416,8 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -3425,8 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytype_go">
 <a href="#querytype_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
@@ -3434,14 +3004,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#querytype">Query<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_nodejs">
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
@@ -3449,8 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_nodejs">
 <a href="#authorizedresources_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Resources</a>
@@ -3458,8 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -3467,8 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytype_nodejs">
 <a href="#querytype_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Type</a>
@@ -3476,14 +3040,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#querytype">Query<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_source_id_python">
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
@@ -3491,8 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_resources_python">
 <a href="#authorized_resources_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resources</a>
@@ -3500,8 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -3509,8 +3068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_type_python">
 <a href="#query_type_python" style="color: inherit; text-decoration: inherit;">query_<wbr>type</a>
@@ -3518,16 +3076,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#querytype">Query<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourceresponse">Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_csharp">
 <a href="#datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -3535,8 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_csharp">
 <a href="#authorizedresources_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Resources</a>
@@ -3544,8 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -3553,8 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytype_csharp">
 <a href="#querytype_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
@@ -3562,14 +3114,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_go">
 <a href="#datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -3577,8 +3126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_go">
 <a href="#authorizedresources_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Resources</a>
@@ -3586,8 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -3595,8 +3142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytype_go">
 <a href="#querytype_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
@@ -3604,14 +3150,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_nodejs">
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
@@ -3619,8 +3162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_nodejs">
 <a href="#authorizedresources_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Resources</a>
@@ -3628,8 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -3637,8 +3178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytype_nodejs">
 <a href="#querytype_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Type</a>
@@ -3646,14 +3186,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_source_id_python">
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
@@ -3661,8 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_resources_python">
 <a href="#authorized_resources_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resources</a>
@@ -3670,8 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -3679,8 +3214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_type_python">
 <a href="#query_type_python" style="color: inherit; text-decoration: inherit;">query_<wbr>type</a>
@@ -3688,16 +3222,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggercondition">Trigger<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3705,8 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdoperator_csharp">
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -3714,8 +3244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#conditionaloperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_csharp">
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
@@ -3723,14 +3252,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3738,8 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdoperator_go">
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -3747,8 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#conditionaloperator">Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_go">
 <a href="#metrictrigger_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
@@ -3756,14 +3280,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3771,8 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdoperator_nodejs">
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
@@ -3780,8 +3300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#conditionaloperator">Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_nodejs">
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
@@ -3789,14 +3308,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3804,8 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_operator_python">
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
@@ -3813,8 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#conditionaloperator">Conditional<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_trigger_python">
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
@@ -3822,16 +3336,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3839,8 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdoperator_csharp">
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -3848,8 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_csharp">
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
@@ -3857,14 +3366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3872,8 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdoperator_go">
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
@@ -3881,8 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_go">
 <a href="#metrictrigger_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
@@ -3890,14 +3394,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3905,8 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdoperator_nodejs">
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
@@ -3914,8 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_nodejs">
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
@@ -3923,14 +3422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3938,8 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_operator_python">
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
@@ -3947,8 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_trigger_python">
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
@@ -3956,8 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

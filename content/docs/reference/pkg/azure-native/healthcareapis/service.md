@@ -14,11 +14,17 @@ The description of the service.
 API Version: 2021-01-11.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or Update a service with all parameters
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -98,9 +104,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -173,9 +182,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -231,9 +243,12 @@ service = azure_native.healthcareapis.Service("service",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -290,10 +305,17 @@ const service = new azure_native.healthcareapis.Service("service", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or Update a service with minimum parameters
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -326,9 +348,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -363,9 +388,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -385,9 +413,12 @@ service = azure_native.healthcareapis.Service("service",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -408,9 +439,16 @@ const service = new azure_native.healthcareapis.Service("service", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Service Resource {#create}
@@ -435,9 +473,7 @@ const service = new azure_native.healthcareapis.Service("service", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -445,9 +481,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -455,9 +489,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -465,10 +497,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -494,9 +523,7 @@ const service = new azure_native.healthcareapis.Service("service", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -504,9 +531,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -514,9 +539,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -524,9 +547,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -534,18 +555,13 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -553,9 +569,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -563,9 +577,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -573,10 +585,7 @@ const service = new azure_native.healthcareapis.Service("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -591,9 +600,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -601,8 +608,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -610,8 +616,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -619,8 +624,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -628,8 +632,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesresourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Services<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -637,8 +640,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -646,8 +648,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Services<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -655,8 +656,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -664,14 +664,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -679,8 +676,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -688,8 +684,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -697,8 +692,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -706,8 +700,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesresourceidentity">Services<wbr>Resource<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -715,8 +708,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -724,8 +716,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesproperties">Services<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -733,8 +724,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -742,14 +732,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -757,8 +744,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -766,8 +752,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -775,8 +760,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -784,8 +768,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesresourceidentity">Services<wbr>Resource<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -793,8 +776,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -802,8 +784,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesproperties">Services<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -811,8 +792,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -820,14 +800,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -835,8 +812,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -844,8 +820,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -853,8 +828,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An etag associated with the resource, used for optimistic concurrency when editing it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -862,8 +836,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesresourceidentity">Services<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -871,8 +844,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -880,8 +852,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicesproperties">Services<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -889,8 +860,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -898,8 +868,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -920,8 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -929,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -938,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -947,14 +911,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -962,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -971,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -980,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -989,14 +947,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1004,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1013,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1022,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1031,14 +983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1046,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1055,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1064,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1073,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1090,93 +1035,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Fhir</dt>
-    <dd>fhir</dd>
-    <dt>Fhir_Stu3</dt>
-    <dd>fhir-Stu3</dd>
-    <dt>Fhir_R4</dt>
-    <dd>fhir-R4</dd>
-</dl>
+<dl class="tabular"><dt>Fhir</dt>
+    <dd>fhir</dd><dt>Fhir_Stu3</dt>
+    <dd>fhir-Stu3</dd><dt>Fhir_R4</dt>
+    <dd>fhir-R4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>Fhir</dt>
-    <dd>fhir</dd>
-    <dt>Kind_Fhir_Stu3</dt>
-    <dd>fhir-Stu3</dd>
-    <dt>Kind_Fhir_R4</dt>
-    <dd>fhir-R4</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>Fhir</dt>
+    <dd>fhir</dd><dt>Kind_Fhir_Stu3</dt>
+    <dd>fhir-Stu3</dd><dt>Kind_Fhir_R4</dt>
+    <dd>fhir-R4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Fhir</dt>
-    <dd>fhir</dd>
-    <dt>Fhir_Stu3</dt>
-    <dd>fhir-Stu3</dd>
-    <dt>Fhir_R4</dt>
-    <dd>fhir-R4</dd>
-</dl>
+<dl class="tabular"><dt>Fhir</dt>
+    <dd>fhir</dd><dt>Fhir_Stu3</dt>
+    <dd>fhir-Stu3</dd><dt>Fhir_R4</dt>
+    <dd>fhir-R4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FHIR</dt>
-    <dd>fhir</dd>
-    <dt>FHIR_STU3</dt>
-    <dd>fhir-Stu3</dd>
-    <dt>FHIR_R4</dt>
-    <dd>fhir-R4</dd>
-</dl>
+<dl class="tabular"><dt>FHIR</dt>
+    <dd>fhir</dd><dt>FHIR_STU3</dt>
+    <dd>fhir-Stu3</dd><dt>FHIR_R4</dt>
+    <dd>fhir-R4</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Managed<wbr>Service<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SYSTEM_ASSIGNED</dt>
-    <dd>SystemAssigned</dd>
-    <dt>NONE</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnection">Private<wbr>Endpoint<wbr>Connection</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1184,14 +1099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1199,14 +1111,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1214,14 +1123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1229,16 +1135,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1246,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1255,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1264,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1273,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1282,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1291,14 +1189,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1306,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1315,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1324,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1333,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1342,8 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1351,14 +1241,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1366,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1375,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1384,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1393,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1402,8 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -1411,14 +1293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1426,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1435,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1444,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1453,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1462,8 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -1471,16 +1345,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1488,14 +1359,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1503,14 +1371,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1518,14 +1383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1533,62 +1395,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointserviceconnectionstatus">Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Rejected</dt>
-    <dd>Rejected</dd>
-</dl>
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Approved</dt>
+    <dd>Approved</dd><dt>Rejected</dt>
+    <dd>Rejected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status<wbr>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status<wbr>Rejected</dt>
-    <dd>Rejected</dd>
-</dl>
+<dl class="tabular"><dt>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status<wbr>Pending</dt>
+    <dd>Pending</dd><dt>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status<wbr>Approved</dt>
+    <dd>Approved</dd><dt>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status<wbr>Rejected</dt>
+    <dd>Rejected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Rejected</dt>
-    <dd>Rejected</dd>
-</dl>
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Approved</dt>
+    <dd>Approved</dd><dt>Rejected</dt>
+    <dd>Rejected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PENDING</dt>
-    <dd>Pending</dd>
-    <dt>APPROVED</dt>
-    <dd>Approved</dd>
-    <dt>REJECTED</dt>
-    <dd>Rejected</dd>
-</dl>
+<dl class="tabular"><dt>PENDING</dt>
+    <dd>Pending</dd><dt>APPROVED</dt>
+    <dd>Approved</dd><dt>REJECTED</dt>
+    <dd>Rejected</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1596,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1605,8 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1614,14 +1455,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1629,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1638,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1647,14 +1483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -1662,8 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1671,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1680,14 +1511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#privateendpointserviceconnectionstatus">Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -1695,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1704,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1713,16 +1539,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#privateendpointserviceconnectionstatus">Private<wbr>Endpoint<wbr>Service<wbr>Connection<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1730,8 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1739,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1748,14 +1569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1763,8 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1772,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1781,14 +1597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -1796,8 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1805,8 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1814,14 +1625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -1829,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1838,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1847,54 +1653,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publicnetworkaccess">Public<wbr>Network<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceaccesspolicyentry">Service<wbr>Access<wbr>Policy<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1902,14 +1693,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1917,14 +1705,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1932,14 +1717,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1947,16 +1729,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceaccesspolicyentryresponse">Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1964,14 +1743,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1979,14 +1755,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1994,14 +1767,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -2009,16 +1779,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginservers_csharp">
 <a href="#loginservers_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Servers</a>
@@ -2026,14 +1793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginservers_go">
 <a href="#loginservers_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Servers</a>
@@ -2041,14 +1805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginservers_nodejs">
 <a href="#loginservers_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Servers</a>
@@ -2056,14 +1817,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="login_servers_python">
 <a href="#login_servers_python" style="color: inherit; text-decoration: inherit;">login_<wbr>servers</a>
@@ -2071,16 +1829,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginservers_csharp">
 <a href="#loginservers_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Servers</a>
@@ -2088,14 +1843,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginservers_go">
 <a href="#loginservers_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Servers</a>
@@ -2103,14 +1855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="loginservers_nodejs">
 <a href="#loginservers_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Servers</a>
@@ -2118,14 +1867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="login_servers_python">
 <a href="#login_servers_python" style="color: inherit; text-decoration: inherit;">login_<wbr>servers</a>
@@ -2133,16 +1879,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the ACR login servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2150,8 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_csharp">
 <a href="#authority_csharp" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -2159,8 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smartproxyenabled_csharp">
 <a href="#smartproxyenabled_csharp" style="color: inherit; text-decoration: inherit;">Smart<wbr>Proxy<wbr>Enabled</a>
@@ -2168,14 +1909,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2183,8 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_go">
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -2192,8 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smartproxyenabled_go">
 <a href="#smartproxyenabled_go" style="color: inherit; text-decoration: inherit;">Smart<wbr>Proxy<wbr>Enabled</a>
@@ -2201,14 +1937,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2216,8 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_nodejs">
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -2225,8 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smartproxyenabled_nodejs">
 <a href="#smartproxyenabled_nodejs" style="color: inherit; text-decoration: inherit;">smart<wbr>Proxy<wbr>Enabled</a>
@@ -2234,14 +1965,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2249,8 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_python">
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -2258,8 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smart_proxy_enabled_python">
 <a href="#smart_proxy_enabled_python" style="color: inherit; text-decoration: inherit;">smart_<wbr>proxy_<wbr>enabled</a>
@@ -2267,16 +1993,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2284,8 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_csharp">
 <a href="#authority_csharp" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -2293,8 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smartproxyenabled_csharp">
 <a href="#smartproxyenabled_csharp" style="color: inherit; text-decoration: inherit;">Smart<wbr>Proxy<wbr>Enabled</a>
@@ -2302,14 +2023,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2317,8 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_go">
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
@@ -2326,8 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smartproxyenabled_go">
 <a href="#smartproxyenabled_go" style="color: inherit; text-decoration: inherit;">Smart<wbr>Proxy<wbr>Enabled</a>
@@ -2335,14 +2051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2350,8 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_nodejs">
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -2359,8 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smartproxyenabled_nodejs">
 <a href="#smartproxyenabled_nodejs" style="color: inherit; text-decoration: inherit;">smart<wbr>Proxy<wbr>Enabled</a>
@@ -2368,14 +2079,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2383,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The audience url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_python">
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
@@ -2392,8 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authority url for the service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smart_proxy_enabled_python">
 <a href="#smart_proxy_enabled_python" style="color: inherit; text-decoration: inherit;">smart_<wbr>proxy_<wbr>enabled</a>
@@ -2401,16 +2107,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the SMART on FHIR proxy is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -2418,8 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2427,8 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -2436,8 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -2445,8 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -2454,14 +2153,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -2469,8 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2478,8 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -2487,8 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_go">
 <a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -2496,8 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -2505,14 +2197,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -2520,8 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2529,8 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -2538,8 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -2547,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -2556,14 +2241,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -2571,8 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2580,8 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -2589,8 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_python">
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -2598,8 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -2607,16 +2285,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -2624,8 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2633,8 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -2642,8 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -2651,8 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -2660,14 +2331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -2675,8 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2684,8 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -2693,8 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_go">
 <a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -2702,8 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -2711,14 +2375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -2726,8 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2735,8 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -2744,8 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -2753,8 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -2762,14 +2419,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -2777,8 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If credentials are allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2786,8 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The headers to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -2795,8 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The max age to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_python">
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -2804,8 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The methods to be allowed via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -2813,16 +2463,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The origins to be allowed via CORS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyuri_csharp">
 <a href="#keyvaultkeyuri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Uri</a>
@@ -2830,8 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerthroughput_csharp">
 <a href="#offerthroughput_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Throughput</a>
@@ -2839,14 +2485,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyuri_go">
 <a href="#keyvaultkeyuri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Uri</a>
@@ -2854,8 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerthroughput_go">
 <a href="#offerthroughput_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Throughput</a>
@@ -2863,14 +2505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyuri_nodejs">
 <a href="#keyvaultkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Uri</a>
@@ -2878,8 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerthroughput_nodejs">
 <a href="#offerthroughput_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Throughput</a>
@@ -2887,14 +2525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_vault_key_uri_python">
 <a href="#key_vault_key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>uri</a>
@@ -2902,8 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_throughput_python">
 <a href="#offer_throughput_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>throughput</a>
@@ -2911,16 +2545,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyuri_csharp">
 <a href="#keyvaultkeyuri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Uri</a>
@@ -2928,8 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerthroughput_csharp">
 <a href="#offerthroughput_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Throughput</a>
@@ -2937,14 +2567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyuri_go">
 <a href="#keyvaultkeyuri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Uri</a>
@@ -2952,8 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerthroughput_go">
 <a href="#offerthroughput_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Throughput</a>
@@ -2961,14 +2587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultkeyuri_nodejs">
 <a href="#keyvaultkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Uri</a>
@@ -2976,8 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerthroughput_nodejs">
 <a href="#offerthroughput_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Throughput</a>
@@ -2985,14 +2607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_vault_key_uri_python">
 <a href="#key_vault_key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>uri</a>
@@ -3000,8 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the customer-managed key for the backing database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_throughput_python">
 <a href="#offer_throughput_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>throughput</a>
@@ -3009,16 +2627,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioned throughput for the backing database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storageaccountname_csharp">
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -3026,14 +2641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storageaccountname_go">
 <a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -3041,14 +2653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storageaccountname_nodejs">
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -3056,14 +2665,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storage_account_name_python">
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -3071,16 +2677,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storageaccountname_csharp">
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -3088,14 +2691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storageaccountname_go">
 <a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -3103,14 +2703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storageaccountname_nodejs">
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -3118,14 +2715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="storage_account_name_python">
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -3133,16 +2727,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the default export storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesproperties">Services<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_csharp">
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -3150,8 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acrconfiguration_csharp">
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
@@ -3159,8 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_csharp">
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
@@ -3168,8 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_csharp">
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
@@ -3177,8 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbconfiguration_csharp">
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
@@ -3186,8 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportconfiguration_csharp">
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
@@ -3195,8 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3204,8 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3213,14 +2797,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_go">
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -3228,8 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentry">[]Service<wbr>Access<wbr>Policy<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acrconfiguration_go">
 <a href="#acrconfiguration_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
@@ -3237,8 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_go">
 <a href="#authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
@@ -3246,8 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_go">
 <a href="#corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
@@ -3255,8 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbconfiguration_go">
 <a href="#cosmosdbconfiguration_go" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
@@ -3264,8 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportconfiguration_go">
 <a href="#exportconfiguration_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
@@ -3273,8 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3282,8 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">[]Private<wbr>Endpoint<wbr>Connection<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3291,14 +2865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_nodejs">
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
@@ -3306,8 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentry">Service<wbr>Access<wbr>Policy<wbr>Entry[]</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acrconfiguration_nodejs">
 <a href="#acrconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Configuration</a>
@@ -3315,8 +2885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_nodejs">
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
@@ -3324,8 +2893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_nodejs">
 <a href="#corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
@@ -3333,8 +2901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbconfiguration_nodejs">
 <a href="#cosmosdbconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cosmos<wbr>Db<wbr>Configuration</a>
@@ -3342,8 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportconfiguration_nodejs">
 <a href="#exportconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Configuration</a>
@@ -3351,8 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -3360,8 +2925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -3369,14 +2933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_policies_python">
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
@@ -3384,8 +2945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentry">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acr_configuration_python">
 <a href="#acr_configuration_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>configuration</a>
@@ -3393,8 +2953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_configuration_python">
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
@@ -3402,8 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_configuration_python">
 <a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
@@ -3411,8 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmos_db_configuration_python">
 <a href="#cosmos_db_configuration_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db_<wbr>configuration</a>
@@ -3420,8 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_configuration_python">
 <a href="#export_configuration_python" style="color: inherit; text-decoration: inherit;">export_<wbr>configuration</a>
@@ -3429,8 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -3438,8 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -3447,16 +3001,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicespropertiesresponse">Services<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3464,8 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_csharp">
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -3473,8 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acrconfiguration_csharp">
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
@@ -3482,8 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_csharp">
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
@@ -3491,8 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_csharp">
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
@@ -3500,8 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbconfiguration_csharp">
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
@@ -3509,8 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportconfiguration_csharp">
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
@@ -3518,8 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3527,8 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3536,14 +3079,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3551,8 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_go">
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -3560,8 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentryresponse">[]Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acrconfiguration_go">
 <a href="#acrconfiguration_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
@@ -3569,8 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_go">
 <a href="#authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
@@ -3578,8 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_go">
 <a href="#corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
@@ -3587,8 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbconfiguration_go">
 <a href="#cosmosdbconfiguration_go" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
@@ -3596,8 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportconfiguration_go">
 <a href="#exportconfiguration_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
@@ -3605,8 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -3614,8 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -3623,14 +3155,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -3638,8 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_nodejs">
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
@@ -3647,8 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acrconfiguration_nodejs">
 <a href="#acrconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Configuration</a>
@@ -3656,8 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_nodejs">
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
@@ -3665,8 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsconfiguration_nodejs">
 <a href="#corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
@@ -3674,8 +3199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmosdbconfiguration_nodejs">
 <a href="#cosmosdbconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cosmos<wbr>Db<wbr>Configuration</a>
@@ -3683,8 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportconfiguration_nodejs">
 <a href="#exportconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Configuration</a>
@@ -3692,8 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -3701,8 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -3710,14 +3231,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -3725,8 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_policies_python">
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
@@ -3734,8 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acr_configuration_python">
 <a href="#acr_configuration_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>configuration</a>
@@ -3743,8 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_configuration_python">
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
@@ -3752,8 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_configuration_python">
 <a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
@@ -3761,8 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cosmos_db_configuration_python">
 <a href="#cosmos_db_configuration_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db_<wbr>configuration</a>
@@ -3770,8 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_configuration_python">
 <a href="#export_configuration_python" style="color: inherit; text-decoration: inherit;">export_<wbr>configuration</a>
@@ -3779,8 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -3788,8 +3299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -3797,16 +3307,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesresourceidentity">Services<wbr>Resource<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3814,14 +3321,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedserviceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3829,14 +3333,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3844,14 +3345,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3859,16 +3357,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesresourceresponseidentity">Services<wbr>Resource<wbr>Response<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3876,8 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3885,8 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3894,14 +3387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3909,8 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3918,8 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3927,14 +3415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -3942,8 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -3951,8 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3960,14 +3443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3975,8 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -3984,8 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3993,16 +3471,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of identity being specified, currently SystemAssigned and None are allowed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -4010,8 +3485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -4019,8 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -4028,8 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -4037,8 +3509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -4046,8 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -4055,14 +3525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -4070,8 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -4079,8 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -4088,8 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -4097,8 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -4106,8 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -4115,14 +3577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -4130,8 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -4139,8 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -4148,8 +3605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -4157,8 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -4166,8 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -4175,14 +3629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -4190,8 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -4199,8 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -4208,8 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -4217,8 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -4226,8 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -4235,8 +3681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

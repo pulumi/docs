@@ -14,11 +14,17 @@ A virtual network.
 API Version: 2018-09-15.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### VirtualNetworks_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -76,9 +85,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -95,9 +107,12 @@ virtual_network = azure_native.devtestlab.VirtualNetwork("virtualNetwork",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -115,9 +130,16 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualNetwork Resource {#create}
@@ -142,9 +164,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -152,9 +172,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -162,9 +180,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -172,10 +188,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +214,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -211,9 +222,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +230,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +238,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,18 +246,13 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +260,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +268,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +276,7 @@ const virtualNetwork = new azure_native.devtestlab.VirtualNetwork("virtualNetwor
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +291,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -308,8 +299,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -317,8 +307,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsubnets_csharp">
 <a href="#allowedsubnets_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
@@ -326,8 +315,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -335,8 +323,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalproviderresourceid_csharp">
 <a href="#externalproviderresourceid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Provider<wbr>Resource<wbr>Id</a>
@@ -344,8 +331,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -353,8 +339,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -362,8 +347,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetoverrides_csharp">
 <a href="#subnetoverrides_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
@@ -371,8 +355,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -380,14 +363,11 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -395,8 +375,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -404,8 +383,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsubnets_go">
 <a href="#allowedsubnets_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
@@ -413,8 +391,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">[]Subnet</a></span>
     </dt>
-    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -422,8 +399,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalproviderresourceid_go">
 <a href="#externalproviderresourceid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Provider<wbr>Resource<wbr>Id</a>
@@ -431,8 +407,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -440,8 +415,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -449,8 +423,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetoverrides_go">
 <a href="#subnetoverrides_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
@@ -458,8 +431,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetoverride">[]Subnet<wbr>Override</a></span>
     </dt>
-    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -467,14 +439,11 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
@@ -482,8 +451,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -491,8 +459,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedsubnets_nodejs">
 <a href="#allowedsubnets_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Subnets</a>
@@ -500,8 +467,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">Subnet[]</a></span>
     </dt>
-    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -509,8 +475,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalproviderresourceid_nodejs">
 <a href="#externalproviderresourceid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Provider<wbr>Resource<wbr>Id</a>
@@ -518,8 +483,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -527,8 +491,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -536,8 +499,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetoverrides_nodejs">
 <a href="#subnetoverrides_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Overrides</a>
@@ -545,8 +507,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetoverride">Subnet<wbr>Override[]</a></span>
     </dt>
-    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -554,14 +515,11 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
@@ -569,8 +527,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -578,8 +535,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_subnets_python">
 <a href="#allowed_subnets_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>subnets</a>
@@ -587,8 +543,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnet">Sequence[Subnet<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -596,8 +551,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_provider_resource_id_python">
 <a href="#external_provider_resource_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>provider_<wbr>resource_<wbr>id</a>
@@ -605,8 +559,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Microsoft.Network resource identifier of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -614,8 +567,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -623,8 +575,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_overrides_python">
 <a href="#subnet_overrides_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>overrides</a>
@@ -632,8 +583,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetoverride">Sequence[Subnet<wbr>Override<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -641,8 +591,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -653,9 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -663,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalsubnets_csharp">
 <a href="#externalsubnets_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Subnets</a>
@@ -672,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalsubnetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Outputs.<wbr>External<wbr>Subnet<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -681,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -690,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -699,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -708,14 +650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -723,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalsubnets_go">
 <a href="#externalsubnets_go" style="color: inherit; text-decoration: inherit;">External<wbr>Subnets</a>
@@ -732,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalsubnetresponse">[]External<wbr>Subnet<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -741,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -750,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -759,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -768,14 +702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -783,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalsubnets_nodejs">
 <a href="#externalsubnets_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Subnets</a>
@@ -792,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalsubnetresponse">External<wbr>Subnet<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -801,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -810,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -819,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -828,14 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -843,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="external_subnets_python">
 <a href="#external_subnets_python" style="color: inherit; text-decoration: inherit;">external_<wbr>subnets</a>
@@ -852,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externalsubnetresponse">Sequence[External<wbr>Subnet<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The external subnet properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -861,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -870,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -879,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -888,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -905,9 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="externalsubnetresponse">External<wbr>Subnet<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -915,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -924,14 +838,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -939,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -948,14 +858,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -963,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -972,14 +878,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -987,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -996,16 +898,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="port">Port</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendport_csharp">
 <a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
@@ -1013,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_csharp">
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -1022,14 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transportprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendport_go">
 <a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
@@ -1037,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_go">
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -1046,14 +940,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transportprotocol">Transport<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendport_nodejs">
 <a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
@@ -1061,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_nodejs">
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
@@ -1070,14 +960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transportprotocol">Transport<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_port_python">
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
@@ -1085,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transport_protocol_python">
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
@@ -1094,16 +980,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#transportprotocol">Transport<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="portresponse">Port<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendport_csharp">
 <a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
@@ -1111,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_csharp">
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -1120,14 +1002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendport_go">
 <a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
@@ -1135,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_go">
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -1144,14 +1022,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendport_nodejs">
 <a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
@@ -1159,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_nodejs">
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
@@ -1168,14 +1042,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_port_python">
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
@@ -1183,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backend port of the target virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transport_protocol_python">
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
@@ -1192,16 +1062,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Protocol type of the port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnet">Subnet</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpublicip_csharp">
 <a href="#allowpublicip_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
@@ -1209,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_csharp">
 <a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1218,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1227,14 +1092,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpublicip_go">
 <a href="#allowpublicip_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
@@ -1242,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_go">
 <a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1251,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1260,14 +1120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpublicip_nodejs">
 <a href="#allowpublicip_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
@@ -1275,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_nodejs">
 <a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
@@ -1284,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1293,14 +1148,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_public_ip_python">
 <a href="#allow_public_ip_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>public_<wbr>ip</a>
@@ -1308,8 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lab_subnet_name_python">
 <a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
@@ -1317,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1326,16 +1176,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetoverride">Subnet<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_csharp">
 <a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1343,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1352,8 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_csharp">
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
@@ -1361,8 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinvmcreationpermission_csharp">
 <a href="#useinvmcreationpermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
@@ -1370,8 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicipaddresspermission_csharp">
 <a href="#usepublicipaddresspermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
@@ -1379,8 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpoolname_csharp">
 <a href="#virtualnetworkpoolname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Pool<wbr>Name</a>
@@ -1388,14 +1230,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_go">
 <a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1403,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1412,8 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_go">
 <a href="#sharedpublicipaddressconfiguration_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
@@ -1421,8 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinvmcreationpermission_go">
 <a href="#useinvmcreationpermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
@@ -1430,8 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicipaddresspermission_go">
 <a href="#usepublicipaddresspermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
@@ -1439,8 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpoolname_go">
 <a href="#virtualnetworkpoolname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Pool<wbr>Name</a>
@@ -1448,14 +1282,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_nodejs">
 <a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
@@ -1463,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1472,8 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_nodejs">
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
@@ -1481,8 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinvmcreationpermission_nodejs">
 <a href="#useinvmcreationpermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
@@ -1490,8 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicipaddresspermission_nodejs">
 <a href="#usepublicipaddresspermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
@@ -1499,8 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpoolname_nodejs">
 <a href="#virtualnetworkpoolname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
@@ -1508,14 +1334,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lab_subnet_name_python">
 <a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
@@ -1523,8 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1532,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_public_ip_address_configuration_python">
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
@@ -1541,8 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_in_vm_creation_permission_python">
 <a href="#use_in_vm_creation_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>in_<wbr>vm_<wbr>creation_<wbr>permission</a>
@@ -1550,8 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_public_ip_address_permission_python">
 <a href="#use_public_ip_address_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip_<wbr>address_<wbr>permission</a>
@@ -1559,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#usagepermissiontype">Usage<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_pool_name_python">
 <a href="#virtual_network_pool_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>pool_<wbr>name</a>
@@ -1568,16 +1386,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetoverrideresponse">Subnet<wbr>Override<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_csharp">
 <a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1585,8 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1594,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_csharp">
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
@@ -1603,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinvmcreationpermission_csharp">
 <a href="#useinvmcreationpermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
@@ -1612,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicipaddresspermission_csharp">
 <a href="#usepublicipaddresspermission_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
@@ -1621,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpoolname_csharp">
 <a href="#virtualnetworkpoolname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Pool<wbr>Name</a>
@@ -1630,14 +1440,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_go">
 <a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1645,8 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1654,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_go">
 <a href="#sharedpublicipaddressconfiguration_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
@@ -1663,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinvmcreationpermission_go">
 <a href="#useinvmcreationpermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
@@ -1672,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicipaddresspermission_go">
 <a href="#usepublicipaddresspermission_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
@@ -1681,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpoolname_go">
 <a href="#virtualnetworkpoolname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Pool<wbr>Name</a>
@@ -1690,14 +1492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_nodejs">
 <a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
@@ -1705,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1714,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_nodejs">
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
@@ -1723,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useinvmcreationpermission_nodejs">
 <a href="#useinvmcreationpermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>In<wbr>Vm<wbr>Creation<wbr>Permission</a>
@@ -1732,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepublicipaddresspermission_nodejs">
 <a href="#usepublicipaddresspermission_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip<wbr>Address<wbr>Permission</a>
@@ -1741,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkpoolname_nodejs">
 <a href="#virtualnetworkpoolname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Pool<wbr>Name</a>
@@ -1750,14 +1544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lab_subnet_name_python">
 <a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
@@ -1765,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name given to the subnet within the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1774,8 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_public_ip_address_configuration_python">
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
@@ -1783,8 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_in_vm_creation_permission_python">
 <a href="#use_in_vm_creation_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>in_<wbr>vm_<wbr>creation_<wbr>permission</a>
@@ -1792,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_public_ip_address_permission_python">
 <a href="#use_public_ip_address_permission_python" style="color: inherit; text-decoration: inherit;">use_<wbr>public_<wbr>ip_<wbr>address_<wbr>permission</a>
@@ -1801,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_pool_name_python">
 <a href="#virtual_network_pool_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>pool_<wbr>name</a>
@@ -1810,16 +1596,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network pool associated with this subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetresponse">Subnet<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpublicip_csharp">
 <a href="#allowpublicip_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
@@ -1827,8 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_csharp">
 <a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1836,8 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1845,14 +1626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpublicip_go">
 <a href="#allowpublicip_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Public<wbr>Ip</a>
@@ -1860,8 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_go">
 <a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
@@ -1869,8 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1878,14 +1654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowpublicip_nodejs">
 <a href="#allowpublicip_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Public<wbr>Ip</a>
@@ -1893,8 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_nodejs">
 <a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
@@ -1902,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1911,14 +1682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_public_ip_python">
 <a href="#allow_public_ip_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>public_<wbr>ip</a>
@@ -1926,8 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lab_subnet_name_python">
 <a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
@@ -1935,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet as seen in the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1944,16 +1710,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedports_csharp">
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
@@ -1961,14 +1724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedports_go">
 <a href="#allowedports_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
@@ -1976,14 +1736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#port">[]Port</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedports_nodejs">
 <a href="#allowedports_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ports</a>
@@ -1991,14 +1748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#port">Port[]</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_ports_python">
 <a href="#allowed_ports_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ports</a>
@@ -2006,16 +1760,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#port">Sequence[Port<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedports_csharp">
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
@@ -2023,14 +1774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedports_go">
 <a href="#allowedports_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
@@ -2038,14 +1786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portresponse">[]Port<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedports_nodejs">
 <a href="#allowedports_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ports</a>
@@ -2053,14 +1798,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portresponse">Port<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_ports_python">
 <a href="#allowed_ports_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ports</a>
@@ -2068,92 +1810,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transportprotocol">Transport<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Tcp</dt>
-    <dd>Tcp</dd>
-    <dt>Udp</dt>
-    <dd>Udp</dd>
-</dl>
+<dl class="tabular"><dt>Tcp</dt>
+    <dd>Tcp</dd><dt>Udp</dt>
+    <dd>Udp</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Transport<wbr>Protocol<wbr>Tcp</dt>
-    <dd>Tcp</dd>
-    <dt>Transport<wbr>Protocol<wbr>Udp</dt>
-    <dd>Udp</dd>
-</dl>
+<dl class="tabular"><dt>Transport<wbr>Protocol<wbr>Tcp</dt>
+    <dd>Tcp</dd><dt>Transport<wbr>Protocol<wbr>Udp</dt>
+    <dd>Udp</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Tcp</dt>
-    <dd>Tcp</dd>
-    <dt>Udp</dt>
-    <dd>Udp</dd>
-</dl>
+<dl class="tabular"><dt>Tcp</dt>
+    <dd>Tcp</dd><dt>Udp</dt>
+    <dd>Udp</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TCP</dt>
-    <dd>Tcp</dd>
-    <dt>UDP</dt>
-    <dd>Udp</dd>
-</dl>
+<dl class="tabular"><dt>TCP</dt>
+    <dd>Tcp</dd><dt>UDP</dt>
+    <dd>Udp</dd></dl>
 {{% /choosable %}}
 
 <h4 id="usagepermissiontype">Usage<wbr>Permission<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Default</dt>
-    <dd>Default</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Deny</dt>
+    <dd>Deny</dd><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Usage<wbr>Permission<wbr>Type<wbr>Default</dt>
-    <dd>Default</dd>
-    <dt>Usage<wbr>Permission<wbr>Type<wbr>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Usage<wbr>Permission<wbr>Type<wbr>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Usage<wbr>Permission<wbr>Type<wbr>Default</dt>
+    <dd>Default</dd><dt>Usage<wbr>Permission<wbr>Type<wbr>Deny</dt>
+    <dd>Deny</dd><dt>Usage<wbr>Permission<wbr>Type<wbr>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Default</dt>
-    <dd>Default</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default</dd><dt>Deny</dt>
+    <dd>Deny</dd><dt>Allow</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DEFAULT</dt>
-    <dd>Default</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-    <dt>ALLOW</dt>
-    <dd>Allow</dd>
-</dl>
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>Default</dd><dt>DENY</dt>
+    <dd>Deny</dd><dt>ALLOW</dt>
+    <dd>Allow</dd></dl>
 {{% /choosable %}}
 ## Import
 

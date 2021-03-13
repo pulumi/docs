@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileservicesname_csharp">
 <a href="#fileservicesname_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Services<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileservicesname_go">
 <a href="#fileservicesname_go" style="color: inherit; text-decoration: inherit;">File<wbr>Services<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileservicesname_nodejs">
 <a href="#fileservicesname_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Services<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_services_name_python">
 <a href="#file_services_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>services_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file Service within the specified storage account. File Service Name must be "default"{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cors_csharp">
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsrulesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Cors<wbr>Rules<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolsettings_csharp">
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedeleteretentionpolicy_csharp">
 <a href="#sharedeleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Delete<wbr>Retention<wbr>Policy</a>
@@ -256,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deleteretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cors_go">
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsrulesresponse">Cors<wbr>Rules<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolsettings_go">
 <a href="#protocolsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolsettingsresponse">Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedeleteretentionpolicy_go">
 <a href="#sharedeleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Delete<wbr>Retention<wbr>Policy</a>
@@ -325,14 +288,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deleteretentionpolicyresponse">Delete<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cors_nodejs">
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsrulesresponse">Cors<wbr>Rules<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolsettings_nodejs">
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolsettingsresponse">Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedeleteretentionpolicy_nodejs">
 <a href="#sharedeleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Delete<wbr>Retention<wbr>Policy</a>
@@ -394,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deleteretentionpolicyresponse">Delete<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku name and tier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cors_python">
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsrulesresponse">Cors<wbr>Rules<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_settings_python">
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#protocolsettingsresponse">Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_delete_retention_policy_python">
 <a href="#share_delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">share_<wbr>delete_<wbr>retention_<wbr>policy</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deleteretentionpolicyresponse">Delete<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_csharp">
 <a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_csharp">
 <a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -524,14 +462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -539,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -548,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -557,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_go">
 <a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_go">
 <a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -575,14 +506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -599,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -608,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_nodejs">
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
@@ -617,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_nodejs">
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -626,14 +550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_headers_python">
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -650,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -659,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposed_headers_python">
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_age_in_seconds_python">
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="corsrulesresponse">Cors<wbr>Rules<wbr>Response</h4>
@@ -686,9 +602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_csharp">
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -696,14 +610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
 <a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -711,14 +622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsruleresponse">[]Cors<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_nodejs">
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
@@ -726,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsruleresponse">Cors<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_rules_python">
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
@@ -741,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deleteretentionpolicyresponse">Delete<wbr>Retention<wbr>Policy<wbr>Response</h4>
@@ -750,9 +654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -760,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -769,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -784,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -793,14 +690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -808,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -817,14 +710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -832,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -841,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multichannelresponse">Multichannel<wbr>Response</h4>
@@ -850,9 +738,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -860,14 +746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -875,14 +758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -890,14 +770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -905,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether multichannel is enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="protocolsettingsresponse">Protocol<wbr>Settings<wbr>Response</h4>
@@ -914,9 +790,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="smb_csharp">
 <a href="#smb_csharp" style="color: inherit; text-decoration: inherit;">Smb</a>
@@ -924,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smbsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="smb_go">
 <a href="#smb_go" style="color: inherit; text-decoration: inherit;">Smb</a>
@@ -939,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="smb_nodejs">
 <a href="#smb_nodejs" style="color: inherit; text-decoration: inherit;">smb</a>
@@ -954,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="smb_python">
 <a href="#smb_python" style="color: inherit; text-decoration: inherit;">smb</a>
@@ -969,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -978,9 +842,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -988,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -997,14 +858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1012,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1021,14 +878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1036,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1045,14 +898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1060,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1069,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="smbsettingresponse">Smb<wbr>Setting<wbr>Response</h4>
@@ -1078,9 +926,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethods_csharp">
 <a href="#authenticationmethods_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Methods</a>
@@ -1088,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelencryption_csharp">
 <a href="#channelencryption_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Encryption</a>
@@ -1097,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kerberosticketencryption_csharp">
 <a href="#kerberosticketencryption_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Ticket<wbr>Encryption</a>
@@ -1106,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multichannel_csharp">
 <a href="#multichannel_csharp" style="color: inherit; text-decoration: inherit;">Multichannel</a>
@@ -1115,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#multichannelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_csharp">
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -1124,14 +966,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethods_go">
 <a href="#authenticationmethods_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Methods</a>
@@ -1139,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelencryption_go">
 <a href="#channelencryption_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Encryption</a>
@@ -1148,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kerberosticketencryption_go">
 <a href="#kerberosticketencryption_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Ticket<wbr>Encryption</a>
@@ -1157,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multichannel_go">
 <a href="#multichannel_go" style="color: inherit; text-decoration: inherit;">Multichannel</a>
@@ -1166,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_go">
 <a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -1175,14 +1010,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authenticationmethods_nodejs">
 <a href="#authenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Methods</a>
@@ -1190,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelencryption_nodejs">
 <a href="#channelencryption_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Encryption</a>
@@ -1199,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kerberosticketencryption_nodejs">
 <a href="#kerberosticketencryption_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Ticket<wbr>Encryption</a>
@@ -1208,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multichannel_nodejs">
 <a href="#multichannel_nodejs" style="color: inherit; text-decoration: inherit;">multichannel</a>
@@ -1217,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_nodejs">
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -1226,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authentication_methods_python">
 <a href="#authentication_methods_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>methods</a>
@@ -1241,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_encryption_python">
 <a href="#channel_encryption_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>encryption</a>
@@ -1250,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kerberos_ticket_encryption_python">
 <a href="#kerberos_ticket_encryption_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>ticket_<wbr>encryption</a>
@@ -1259,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multichannel_python">
 <a href="#multichannel_python" style="color: inherit; text-decoration: inherit;">multichannel</a>
@@ -1268,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_python">
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -1277,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

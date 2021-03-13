@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -60,8 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -69,14 +66,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -84,8 +78,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -93,14 +86,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -108,8 +98,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -117,14 +106,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -132,8 +118,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -141,8 +126,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The initial domain name of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -155,9 +139,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -165,8 +147,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -174,8 +155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -183,8 +163,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -192,8 +171,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2cresourceskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Active<wbr>Directory.<wbr>Outputs.<wbr>B2CResource<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -201,8 +179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingconfig_csharp">
 <a href="#billingconfig_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Config</a>
@@ -210,8 +187,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2ctenantresourcepropertiesresponsebillingconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Active<wbr>Directory.<wbr>Outputs.<wbr>B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -219,8 +195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -228,14 +203,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -243,8 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -252,8 +223,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -261,8 +231,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -270,8 +239,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2cresourceskuresponse">B2CResource<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -279,8 +247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingconfig_go">
 <a href="#billingconfig_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Config</a>
@@ -288,8 +255,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2ctenantresourcepropertiesresponsebillingconfig">B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -297,8 +263,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -306,14 +271,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -321,8 +283,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -330,8 +291,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -339,8 +299,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -348,8 +307,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2cresourceskuresponse">B2CResource<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -357,8 +315,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingconfig_nodejs">
 <a href="#billingconfig_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Config</a>
@@ -366,8 +323,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2ctenantresourcepropertiesresponsebillingconfig">B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -375,8 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -384,14 +339,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -399,8 +351,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An identifier that represents the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -408,8 +359,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location in which the resource is hosted and data resides. Refer to [this documentation](https://aka.ms/B2CDataResidency) to see valid data residency locations. Please choose one of 'United States', 'Europe', and 'Asia Pacific'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -417,8 +367,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -426,8 +375,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2cresourceskuresponse">B2CResource<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -435,8 +383,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the B2C tenant resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billing_config_python">
 <a href="#billing_config_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>config</a>
@@ -444,8 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2ctenantresourcepropertiesresponsebillingconfig">B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The billing configuration for the tenant.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -453,8 +399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource Tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -462,8 +407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An identifier of the B2C tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -477,9 +421,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -487,8 +429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -496,14 +437,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -511,8 +449,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -520,14 +457,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -535,8 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -544,14 +477,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -559,8 +489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -568,8 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="b2ctenantresourcepropertiesresponsebillingconfig">B2CTenant<wbr>Resource<wbr>Properties<wbr>Response<wbr>Billing<wbr>Config</h4>
@@ -577,9 +505,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effectivestartdateutc_csharp">
 <a href="#effectivestartdateutc_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Start<wbr>Date<wbr>Utc</a>
@@ -587,8 +513,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingtype_csharp">
 <a href="#billingtype_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
@@ -596,14 +521,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effectivestartdateutc_go">
 <a href="#effectivestartdateutc_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Start<wbr>Date<wbr>Utc</a>
@@ -611,8 +533,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingtype_go">
 <a href="#billingtype_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Type</a>
@@ -620,14 +541,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effectivestartdateutc_nodejs">
 <a href="#effectivestartdateutc_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Start<wbr>Date<wbr>Utc</a>
@@ -635,8 +553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingtype_nodejs">
 <a href="#billingtype_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Type</a>
@@ -644,14 +561,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="effective_start_date_utc_python">
 <a href="#effective_start_date_utc_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>start_<wbr>date_<wbr>utc</a>
@@ -659,8 +573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data from which the billing type took effect{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_type_python">
 <a href="#billing_type_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>type</a>
@@ -668,8 +581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

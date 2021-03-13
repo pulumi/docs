@@ -14,11 +14,17 @@ Api Operation details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateApiOperation
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -80,9 +86,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -141,9 +150,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -185,9 +197,12 @@ api_operation = azure_native.apimanagement.ApiOperation("apiOperation",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -230,9 +245,16 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ApiOperation Resource {#create}
@@ -257,9 +279,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,9 +287,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -277,9 +295,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -287,10 +303,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -316,9 +329,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -326,9 +337,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -336,9 +345,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -346,9 +353,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -356,18 +361,13 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -375,9 +375,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -385,9 +383,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -395,10 +391,7 @@ const apiOperation = new azure_native.apimanagement.ApiOperation("apiOperation",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -413,9 +406,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -423,8 +414,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -432,8 +422,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operation Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -441,8 +430,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -450,8 +438,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -459,8 +446,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urltemplate_csharp">
 <a href="#urltemplate_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
@@ -468,8 +454,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -477,8 +462,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationid_csharp">
 <a href="#operationid_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Id</a>
@@ -486,8 +470,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -495,8 +478,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation Policies{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation Policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_csharp">
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -504,8 +486,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requestcontract">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Request<wbr>Contract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responses_csharp">
 <a href="#responses_csharp" style="color: inherit; text-decoration: inherit;">Responses</a>
@@ -513,8 +494,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#responsecontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Response<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateparameters_csharp">
 <a href="#templateparameters_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
@@ -522,14 +502,11 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -537,8 +514,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -546,8 +522,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operation Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -555,8 +530,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -564,8 +538,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -573,8 +546,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urltemplate_go">
 <a href="#urltemplate_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
@@ -582,8 +554,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -591,8 +562,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationid_go">
 <a href="#operationid_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Id</a>
@@ -600,8 +570,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -609,8 +578,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation Policies{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation Policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_go">
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
@@ -618,8 +586,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requestcontract">Request<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responses_go">
 <a href="#responses_go" style="color: inherit; text-decoration: inherit;">Responses</a>
@@ -627,8 +594,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#responsecontract">[]Response<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateparameters_go">
 <a href="#templateparameters_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
@@ -636,14 +602,11 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -651,8 +614,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -660,8 +622,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operation Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -669,8 +630,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -678,8 +638,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -687,8 +646,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urltemplate_nodejs">
 <a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
@@ -696,8 +654,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -705,8 +662,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationid_nodejs">
 <a href="#operationid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Id</a>
@@ -714,8 +670,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -723,8 +678,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation Policies{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation Policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_nodejs">
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
@@ -732,8 +686,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requestcontract">Request<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responses_nodejs">
 <a href="#responses_nodejs" style="color: inherit; text-decoration: inherit;">responses</a>
@@ -741,8 +694,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#responsecontract">Response<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateparameters_nodejs">
 <a href="#templateparameters_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Parameters</a>
@@ -750,14 +702,11 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -765,8 +714,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -774,8 +722,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Operation Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -783,8 +730,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -792,8 +738,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -801,8 +746,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_template_python">
 <a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
@@ -810,8 +754,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -819,8 +762,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the operation. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_id_python">
 <a href="#operation_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>id</a>
@@ -828,8 +770,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation identifier within an API. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -837,8 +778,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation Policies{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation Policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_python">
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
@@ -846,8 +786,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#requestcontract">Request<wbr>Contract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responses_python">
 <a href="#responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
@@ -855,8 +794,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#responsecontract">Sequence[Response<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_parameters_python">
 <a href="#template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
@@ -864,8 +802,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -876,9 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -886,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -895,8 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -904,14 +837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -919,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -928,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -937,14 +865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -952,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -961,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -970,14 +893,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -985,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -994,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1003,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1020,9 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="parametercontract">Parameter<wbr>Contract</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1030,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1039,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_csharp">
 <a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1048,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1057,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_csharp">
 <a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -1066,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1075,14 +985,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1090,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1099,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_go">
 <a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1108,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1117,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_go">
 <a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -1126,8 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1135,14 +1037,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1150,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1159,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_nodejs">
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
@@ -1168,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1177,8 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_nodejs">
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
@@ -1186,8 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1195,14 +1089,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1210,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1219,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_value_python">
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
@@ -1228,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1237,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_python">
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
@@ -1246,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1255,16 +1141,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parametercontractresponse">Parameter<wbr>Contract<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1272,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1281,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_csharp">
 <a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1290,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1299,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_csharp">
 <a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -1308,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1317,14 +1195,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1332,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1341,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_go">
 <a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -1350,8 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1359,8 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_go">
 <a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -1368,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1377,14 +1247,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1392,8 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1401,8 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_nodejs">
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
@@ -1410,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1419,8 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_nodejs">
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
@@ -1428,8 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1437,14 +1299,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1452,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1461,8 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Parameter type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_value_python">
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
@@ -1470,8 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default parameter value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1479,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_python">
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
@@ -1488,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether parameter is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1497,16 +1351,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Parameter values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="representationcontract">Representation<wbr>Contract</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1514,8 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formparameters_csharp">
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
@@ -1523,8 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_csharp">
 <a href="#sample_csharp" style="color: inherit; text-decoration: inherit;">Sample</a>
@@ -1532,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaid_csharp">
 <a href="#schemaid_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
@@ -1541,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_csharp">
 <a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1550,14 +1397,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1565,8 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formparameters_go">
 <a href="#formparameters_go" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
@@ -1574,8 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_go">
 <a href="#sample_go" style="color: inherit; text-decoration: inherit;">Sample</a>
@@ -1583,8 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaid_go">
 <a href="#schemaid_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
@@ -1592,8 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_go">
 <a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1601,14 +1441,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -1616,8 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formparameters_nodejs">
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
@@ -1625,8 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_nodejs">
 <a href="#sample_nodejs" style="color: inherit; text-decoration: inherit;">sample</a>
@@ -1634,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaid_nodejs">
 <a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
@@ -1643,8 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_nodejs">
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
@@ -1652,14 +1485,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1667,8 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="form_parameters_python">
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
@@ -1676,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_python">
 <a href="#sample_python" style="color: inherit; text-decoration: inherit;">sample</a>
@@ -1685,8 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_id_python">
 <a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
@@ -1694,8 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_name_python">
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
@@ -1703,16 +1529,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="representationcontractresponse">Representation<wbr>Contract<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1720,8 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formparameters_csharp">
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
@@ -1729,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_csharp">
 <a href="#sample_csharp" style="color: inherit; text-decoration: inherit;">Sample</a>
@@ -1738,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaid_csharp">
 <a href="#schemaid_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
@@ -1747,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_csharp">
 <a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1756,14 +1575,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1771,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formparameters_go">
 <a href="#formparameters_go" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
@@ -1780,8 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_go">
 <a href="#sample_go" style="color: inherit; text-decoration: inherit;">Sample</a>
@@ -1789,8 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaid_go">
 <a href="#schemaid_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
@@ -1798,8 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_go">
 <a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1807,14 +1619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -1822,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="formparameters_nodejs">
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
@@ -1831,8 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_nodejs">
 <a href="#sample_nodejs" style="color: inherit; text-decoration: inherit;">sample</a>
@@ -1840,8 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaid_nodejs">
 <a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
@@ -1849,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="typename_nodejs">
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
@@ -1858,14 +1663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1873,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a registered or custom content type for this representation, e.g. application/xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="form_parameters_python">
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
@@ -1882,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_python">
 <a href="#sample_python" style="color: inherit; text-decoration: inherit;">sample</a>
@@ -1891,8 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An example of the representation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_id_python">
 <a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
@@ -1900,8 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_name_python">
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
@@ -1909,16 +1707,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="requestcontract">Request<wbr>Contract</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1926,8 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1935,8 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparameters_csharp">
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
@@ -1944,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_csharp">
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -1953,14 +1745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1968,8 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1977,8 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparameters_go">
 <a href="#queryparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
@@ -1986,8 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_go">
 <a href="#representations_go" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -1995,14 +1781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">[]Representation<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2010,8 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2019,8 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparameters_nodejs">
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
@@ -2028,8 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_nodejs">
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2037,14 +1817,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">Representation<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2052,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2061,8 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_parameters_python">
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
@@ -2070,8 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_python">
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2079,16 +1853,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="requestcontractresponse">Request<wbr>Contract<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2096,8 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2105,8 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparameters_csharp">
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
@@ -2114,8 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_csharp">
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -2123,14 +1891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2138,8 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2147,8 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparameters_go">
 <a href="#queryparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
@@ -2156,8 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_go">
 <a href="#representations_go" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -2165,14 +1927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">[]Representation<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2180,8 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2189,8 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparameters_nodejs">
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
@@ -2198,8 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_nodejs">
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2207,14 +1963,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2222,8 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation request description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation request description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2231,8 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_parameters_python">
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
@@ -2240,8 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_python">
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2249,16 +1999,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="responsecontract">Response<wbr>Contract</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -2266,8 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2275,8 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2284,8 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_csharp">
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -2293,14 +2037,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -2308,8 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2317,8 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2326,8 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_go">
 <a href="#representations_go" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -2335,14 +2073,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">[]Representation<wbr>Contract</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -2350,8 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2359,8 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2368,8 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_nodejs">
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2377,14 +2109,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">Representation<wbr>Contract[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -2392,8 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2401,8 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2410,8 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_python">
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2419,16 +2145,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="responsecontractresponse">Response<wbr>Contract<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -2436,8 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2445,8 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2454,8 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_csharp">
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -2463,14 +2183,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -2478,8 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2487,8 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -2496,8 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">[]Parameter<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_go">
 <a href="#representations_go" style="color: inherit; text-decoration: inherit;">Representations</a>
@@ -2505,14 +2219,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">[]Representation<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -2520,8 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2529,8 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2538,8 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_nodejs">
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2547,14 +2255,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -2562,8 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2571,8 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation response description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation response description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -2580,8 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="representations_python">
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
@@ -2589,8 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

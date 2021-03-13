@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -166,14 +148,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeltypedescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Engagement<wbr>Fabric.<wbr>Outputs.<wbr>Channel<wbr>Type<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -181,14 +160,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeltypedescriptionresponse">[]Channel<wbr>Type<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -196,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeltypedescriptionresponse">Channel<wbr>Type<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -211,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channeltypedescriptionresponse">Sequence[Channel<wbr>Type<wbr>Description<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel descriptions{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -226,9 +198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channeldescription_csharp">
 <a href="#channeldescription_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Description</a>
@@ -236,8 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelfunctions_csharp">
 <a href="#channelfunctions_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Functions</a>
@@ -245,8 +214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channeltype_csharp">
 <a href="#channeltype_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Type</a>
@@ -254,14 +222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Channel type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channeldescription_go">
 <a href="#channeldescription_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Description</a>
@@ -269,8 +234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelfunctions_go">
 <a href="#channelfunctions_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Functions</a>
@@ -278,8 +242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channeltype_go">
 <a href="#channeltype_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Type</a>
@@ -287,14 +250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Channel type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channeldescription_nodejs">
 <a href="#channeldescription_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Description</a>
@@ -302,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelfunctions_nodejs">
 <a href="#channelfunctions_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Functions</a>
@@ -311,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channeltype_nodejs">
 <a href="#channeltype_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Type</a>
@@ -320,14 +278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Channel type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channel_description_python">
 <a href="#channel_description_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>description</a>
@@ -335,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Text description for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_functions_python">
 <a href="#channel_functions_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>functions</a>
@@ -344,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}All the available functions for the channel{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_type_python">
 <a href="#channel_type_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>type</a>
@@ -353,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Channel type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Channel type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

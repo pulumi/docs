@@ -14,11 +14,17 @@ Threat intelligence information object.
 API Version: 2019-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Update a threat Intelligence indicator
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -64,9 +70,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -115,9 +124,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -149,9 +161,12 @@ threat_intelligence_indicator = azure_native.securityinsights.ThreatIntelligence
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -184,9 +199,16 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ThreatIntelligenceIndicator Resource {#create}
@@ -211,9 +233,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +241,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +249,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,10 +257,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -270,9 +283,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -280,9 +291,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -290,9 +299,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -300,9 +307,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -310,18 +315,13 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -329,9 +329,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -339,9 +337,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -349,10 +345,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -367,9 +360,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -377,8 +368,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#threatintelligenceresourcekind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -386,8 +376,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -395,8 +384,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -404,8 +392,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidence_csharp">
 <a href="#confidence_csharp" style="color: inherit; text-decoration: inherit;">Confidence</a>
@@ -413,8 +400,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -422,8 +408,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbyref_csharp">
 <a href="#createdbyref_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Ref</a>
@@ -431,8 +416,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defanged_csharp">
 <a href="#defanged_csharp" style="color: inherit; text-decoration: inherit;">Defanged</a>
@@ -440,8 +424,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -449,8 +432,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -458,8 +440,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -467,8 +448,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensions_csharp">
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
@@ -476,8 +456,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -485,8 +464,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externallastupdatedtimeutc_csharp">
 <a href="#externallastupdatedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Last<wbr>Updated<wbr>Time<wbr>Utc</a>
@@ -494,8 +472,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalreferences_csharp">
 <a href="#externalreferences_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>References</a>
@@ -503,8 +480,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceexternalreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}External References{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularmarkings_csharp">
 <a href="#granularmarkings_csharp" style="color: inherit; text-decoration: inherit;">Granular<wbr>Markings</a>
@@ -512,8 +488,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Granular Markings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicatortypes_csharp">
 <a href="#indicatortypes_csharp" style="color: inherit; text-decoration: inherit;">Indicator<wbr>Types</a>
@@ -521,8 +496,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="killchainphases_csharp">
 <a href="#killchainphases_csharp" style="color: inherit; text-decoration: inherit;">Kill<wbr>Chain<wbr>Phases</a>
@@ -530,8 +504,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencekillchainphase">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -539,8 +512,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_csharp">
 <a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -548,8 +520,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdatedtimeutc_csharp">
 <a href="#lastupdatedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
@@ -557,8 +528,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modified_csharp">
 <a href="#modified_csharp" style="color: inherit; text-decoration: inherit;">Modified</a>
@@ -566,8 +536,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Modified by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -575,8 +544,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectmarkingrefs_csharp">
 <a href="#objectmarkingrefs_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Marking<wbr>Refs</a>
@@ -584,8 +552,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsedpattern_csharp">
 <a href="#parsedpattern_csharp" style="color: inherit; text-decoration: inherit;">Parsed<wbr>Pattern</a>
@@ -593,8 +560,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpattern">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -602,8 +568,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterntype_csharp">
 <a href="#patterntype_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type</a>
@@ -611,8 +576,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patternversion_csharp">
 <a href="#patternversion_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Version</a>
@@ -620,8 +584,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_csharp">
 <a href="#revoked_csharp" style="color: inherit; text-decoration: inherit;">Revoked</a>
@@ -629,8 +592,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -638,8 +600,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelligencetags_csharp">
 <a href="#threatintelligencetags_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intelligence<wbr>Tags</a>
@@ -647,8 +608,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threattypes_csharp">
 <a href="#threattypes_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Types</a>
@@ -656,8 +616,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Threat types{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat types{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_csharp">
 <a href="#validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -665,8 +624,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Valid from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_csharp">
 <a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -674,14 +632,11 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid until{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid until{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -689,8 +644,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#threatintelligenceresourcekind">Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -698,8 +652,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -707,8 +660,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -716,8 +668,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidence_go">
 <a href="#confidence_go" style="color: inherit; text-decoration: inherit;">Confidence</a>
@@ -725,8 +676,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -734,8 +684,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbyref_go">
 <a href="#createdbyref_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Ref</a>
@@ -743,8 +692,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defanged_go">
 <a href="#defanged_go" style="color: inherit; text-decoration: inherit;">Defanged</a>
@@ -752,8 +700,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -761,8 +708,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -770,8 +716,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -779,8 +724,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensions_go">
 <a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
@@ -788,8 +732,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -797,8 +740,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externallastupdatedtimeutc_go">
 <a href="#externallastupdatedtimeutc_go" style="color: inherit; text-decoration: inherit;">External<wbr>Last<wbr>Updated<wbr>Time<wbr>Utc</a>
@@ -806,8 +748,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalreferences_go">
 <a href="#externalreferences_go" style="color: inherit; text-decoration: inherit;">External<wbr>References</a>
@@ -815,8 +756,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceexternalreference">[]Threat<wbr>Intelligence<wbr>External<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}External References{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularmarkings_go">
 <a href="#granularmarkings_go" style="color: inherit; text-decoration: inherit;">Granular<wbr>Markings</a>
@@ -824,8 +764,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">[]Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}Granular Markings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicatortypes_go">
 <a href="#indicatortypes_go" style="color: inherit; text-decoration: inherit;">Indicator<wbr>Types</a>
@@ -833,8 +772,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="killchainphases_go">
 <a href="#killchainphases_go" style="color: inherit; text-decoration: inherit;">Kill<wbr>Chain<wbr>Phases</a>
@@ -842,8 +780,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencekillchainphase">[]Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase</a></span>
     </dt>
-    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -851,8 +788,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_go">
 <a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -860,8 +796,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdatedtimeutc_go">
 <a href="#lastupdatedtimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time<wbr>Utc</a>
@@ -869,8 +804,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modified_go">
 <a href="#modified_go" style="color: inherit; text-decoration: inherit;">Modified</a>
@@ -878,8 +812,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Modified by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -887,8 +820,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectmarkingrefs_go">
 <a href="#objectmarkingrefs_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Marking<wbr>Refs</a>
@@ -896,8 +828,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsedpattern_go">
 <a href="#parsedpattern_go" style="color: inherit; text-decoration: inherit;">Parsed<wbr>Pattern</a>
@@ -905,8 +836,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpattern">[]Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern</a></span>
     </dt>
-    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -914,8 +844,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterntype_go">
 <a href="#patterntype_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type</a>
@@ -923,8 +852,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patternversion_go">
 <a href="#patternversion_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Version</a>
@@ -932,8 +860,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_go">
 <a href="#revoked_go" style="color: inherit; text-decoration: inherit;">Revoked</a>
@@ -941,8 +868,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -950,8 +876,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelligencetags_go">
 <a href="#threatintelligencetags_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intelligence<wbr>Tags</a>
@@ -959,8 +884,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threattypes_go">
 <a href="#threattypes_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Types</a>
@@ -968,8 +892,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Threat types{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat types{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_go">
 <a href="#validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -977,8 +900,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Valid from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_go">
 <a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -986,14 +908,11 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid until{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid until{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1001,8 +920,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#threatintelligenceresourcekind">Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -1010,8 +928,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1019,8 +936,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -1028,8 +944,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidence_nodejs">
 <a href="#confidence_nodejs" style="color: inherit; text-decoration: inherit;">confidence</a>
@@ -1037,8 +952,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1046,8 +960,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbyref_nodejs">
 <a href="#createdbyref_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Ref</a>
@@ -1055,8 +968,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defanged_nodejs">
 <a href="#defanged_nodejs" style="color: inherit; text-decoration: inherit;">defanged</a>
@@ -1064,8 +976,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1073,8 +984,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1082,8 +992,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1091,8 +1000,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensions_nodejs">
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
@@ -1100,8 +1008,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -1109,8 +1016,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externallastupdatedtimeutc_nodejs">
 <a href="#externallastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Last<wbr>Updated<wbr>Time<wbr>Utc</a>
@@ -1118,8 +1024,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalreferences_nodejs">
 <a href="#externalreferences_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>References</a>
@@ -1127,8 +1032,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceexternalreference">Threat<wbr>Intelligence<wbr>External<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}External References{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularmarkings_nodejs">
 <a href="#granularmarkings_nodejs" style="color: inherit; text-decoration: inherit;">granular<wbr>Markings</a>
@@ -1136,8 +1040,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model[]</a></span>
     </dt>
-    <dd>{{% md %}}Granular Markings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicatortypes_nodejs">
 <a href="#indicatortypes_nodejs" style="color: inherit; text-decoration: inherit;">indicator<wbr>Types</a>
@@ -1145,8 +1048,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="killchainphases_nodejs">
 <a href="#killchainphases_nodejs" style="color: inherit; text-decoration: inherit;">kill<wbr>Chain<wbr>Phases</a>
@@ -1154,8 +1056,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencekillchainphase">Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase[]</a></span>
     </dt>
-    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1163,8 +1064,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_nodejs">
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
@@ -1172,8 +1072,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastupdatedtimeutc_nodejs">
 <a href="#lastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time<wbr>Utc</a>
@@ -1181,8 +1080,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modified_nodejs">
 <a href="#modified_nodejs" style="color: inherit; text-decoration: inherit;">modified</a>
@@ -1190,8 +1088,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Modified by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1199,8 +1096,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectmarkingrefs_nodejs">
 <a href="#objectmarkingrefs_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Marking<wbr>Refs</a>
@@ -1208,8 +1104,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsedpattern_nodejs">
 <a href="#parsedpattern_nodejs" style="color: inherit; text-decoration: inherit;">parsed<wbr>Pattern</a>
@@ -1217,8 +1112,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern[]</a></span>
     </dt>
-    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -1226,8 +1120,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterntype_nodejs">
 <a href="#patterntype_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type</a>
@@ -1235,8 +1128,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patternversion_nodejs">
 <a href="#patternversion_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Version</a>
@@ -1244,8 +1136,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_nodejs">
 <a href="#revoked_nodejs" style="color: inherit; text-decoration: inherit;">revoked</a>
@@ -1253,8 +1144,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1262,8 +1152,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelligencetags_nodejs">
 <a href="#threatintelligencetags_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intelligence<wbr>Tags</a>
@@ -1271,8 +1160,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threattypes_nodejs">
 <a href="#threattypes_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Types</a>
@@ -1280,8 +1168,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Threat types{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat types{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_nodejs">
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
@@ -1289,8 +1176,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Valid from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_nodejs">
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -1298,14 +1184,11 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid until{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid until{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1313,8 +1196,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#threatintelligenceresourcekind">Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
@@ -1322,8 +1204,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1331,8 +1212,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -1340,8 +1220,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidence_python">
 <a href="#confidence_python" style="color: inherit; text-decoration: inherit;">confidence</a>
@@ -1349,8 +1228,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1358,8 +1236,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Created by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_ref_python">
 <a href="#created_by_ref_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>ref</a>
@@ -1367,8 +1244,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defanged_python">
 <a href="#defanged_python" style="color: inherit; text-decoration: inherit;">defanged</a>
@@ -1376,8 +1252,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1385,8 +1260,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1394,8 +1268,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1403,8 +1276,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extensions_python">
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
@@ -1412,8 +1284,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Extensions map{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extensions map{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -1421,8 +1292,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_last_updated_time_utc_python">
 <a href="#external_last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">external_<wbr>last_<wbr>updated_<wbr>time_<wbr>utc</a>
@@ -1430,8 +1300,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_references_python">
 <a href="#external_references_python" style="color: inherit; text-decoration: inherit;">external_<wbr>references</a>
@@ -1439,8 +1308,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceexternalreference">Sequence[Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}External References{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granular_markings_python">
 <a href="#granular_markings_python" style="color: inherit; text-decoration: inherit;">granular_<wbr>markings</a>
@@ -1448,8 +1316,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Sequence[Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Granular Markings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicator_types_python">
 <a href="#indicator_types_python" style="color: inherit; text-decoration: inherit;">indicator_<wbr>types</a>
@@ -1457,8 +1324,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kill_chain_phases_python">
 <a href="#kill_chain_phases_python" style="color: inherit; text-decoration: inherit;">kill_<wbr>chain_<wbr>phases</a>
@@ -1466,8 +1332,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligencekillchainphase">Sequence[Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1475,8 +1340,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="language_python">
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
@@ -1484,8 +1348,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_updated_time_utc_python">
 <a href="#last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time_<wbr>utc</a>
@@ -1493,8 +1356,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modified_python">
 <a href="#modified_python" style="color: inherit; text-decoration: inherit;">modified</a>
@@ -1502,8 +1364,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Modified by{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Modified by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1511,8 +1372,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_marking_refs_python">
 <a href="#object_marking_refs_python" style="color: inherit; text-decoration: inherit;">object_<wbr>marking_<wbr>refs</a>
@@ -1520,8 +1380,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsed_pattern_python">
 <a href="#parsed_pattern_python" style="color: inherit; text-decoration: inherit;">parsed_<wbr>pattern</a>
@@ -1529,8 +1388,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpattern">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -1538,8 +1396,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_type_python">
 <a href="#pattern_type_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type</a>
@@ -1547,8 +1404,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_version_python">
 <a href="#pattern_version_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>version</a>
@@ -1556,8 +1412,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_python">
 <a href="#revoked_python" style="color: inherit; text-decoration: inherit;">revoked</a>
@@ -1565,8 +1420,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1574,8 +1428,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threat_intelligence_tags_python">
 <a href="#threat_intelligence_tags_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>tags</a>
@@ -1583,8 +1436,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threat_types_python">
 <a href="#threat_types_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>types</a>
@@ -1592,8 +1444,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Threat types{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threat types{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_from_python">
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
@@ -1601,8 +1452,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Valid from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_until_python">
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -1610,8 +1460,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid until{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid until{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1622,9 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1632,8 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1641,14 +1487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1656,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1665,14 +1507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1680,8 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1689,14 +1527,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1704,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1713,8 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1730,9 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="threatintelligenceexternalreference">Threat<wbr>Intelligence<wbr>External<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1740,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -1749,8 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashes_csharp">
 <a href="#hashes_csharp" style="color: inherit; text-decoration: inherit;">Hashes</a>
@@ -1758,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}External reference hashes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference hashes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcename_csharp">
 <a href="#sourcename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1767,8 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference source name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference source name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1776,14 +1603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference URL{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}External reference URL{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1791,8 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -1800,8 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashes_go">
 <a href="#hashes_go" style="color: inherit; text-decoration: inherit;">Hashes</a>
@@ -1809,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}External reference hashes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference hashes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcename_go">
 <a href="#sourcename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Name</a>
@@ -1818,8 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference source name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference source name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1827,14 +1647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference URL{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}External reference URL{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1842,8 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -1851,8 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashes_nodejs">
 <a href="#hashes_nodejs" style="color: inherit; text-decoration: inherit;">hashes</a>
@@ -1860,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}External reference hashes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference hashes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcename_nodejs">
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
@@ -1869,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference source name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference source name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1878,14 +1691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}External reference URL{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}External reference URL{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1893,8 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External reference description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -1902,8 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External reference ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashes_python">
 <a href="#hashes_python" style="color: inherit; text-decoration: inherit;">hashes</a>
@@ -1911,8 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}External reference hashes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference hashes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_name_python">
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
@@ -1920,8 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External reference source name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}External reference source name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1929,16 +1735,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}External reference URL{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}External reference URL{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="threatintelligencegranularmarkingmodel">Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="language_csharp">
 <a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -1946,8 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markingref_csharp">
 <a href="#markingref_csharp" style="color: inherit; text-decoration: inherit;">Marking<wbr>Ref</a>
@@ -1955,8 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_csharp">
 <a href="#selectors_csharp" style="color: inherit; text-decoration: inherit;">Selectors</a>
@@ -1964,14 +1765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="language_go">
 <a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
@@ -1979,8 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markingref_go">
 <a href="#markingref_go" style="color: inherit; text-decoration: inherit;">Marking<wbr>Ref</a>
@@ -1988,8 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_go">
 <a href="#selectors_go" style="color: inherit; text-decoration: inherit;">Selectors</a>
@@ -1997,14 +1793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="language_nodejs">
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
@@ -2012,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markingref_nodejs">
 <a href="#markingref_nodejs" style="color: inherit; text-decoration: inherit;">marking<wbr>Ref</a>
@@ -2021,8 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_nodejs">
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
@@ -2030,14 +1821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="language_python">
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
@@ -2045,8 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Language granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="marking_ref_python">
 <a href="#marking_ref_python" style="color: inherit; text-decoration: inherit;">marking_<wbr>ref</a>
@@ -2054,8 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_python">
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
@@ -2063,16 +1849,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="threatintelligencekillchainphase">Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="killchainname_csharp">
 <a href="#killchainname_csharp" style="color: inherit; text-decoration: inherit;">Kill<wbr>Chain<wbr>Name</a>
@@ -2080,8 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phasename_csharp">
 <a href="#phasename_csharp" style="color: inherit; text-decoration: inherit;">Phase<wbr>Name</a>
@@ -2089,14 +1871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phase name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phase name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="killchainname_go">
 <a href="#killchainname_go" style="color: inherit; text-decoration: inherit;">Kill<wbr>Chain<wbr>Name</a>
@@ -2104,8 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phasename_go">
 <a href="#phasename_go" style="color: inherit; text-decoration: inherit;">Phase<wbr>Name</a>
@@ -2113,14 +1891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phase name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phase name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="killchainname_nodejs">
 <a href="#killchainname_nodejs" style="color: inherit; text-decoration: inherit;">kill<wbr>Chain<wbr>Name</a>
@@ -2128,8 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phasename_nodejs">
 <a href="#phasename_nodejs" style="color: inherit; text-decoration: inherit;">phase<wbr>Name</a>
@@ -2137,14 +1911,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phase name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phase name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kill_chain_name_python">
 <a href="#kill_chain_name_python" style="color: inherit; text-decoration: inherit;">kill_<wbr>chain_<wbr>name</a>
@@ -2152,8 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Kill chainName name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phase_name_python">
 <a href="#phase_name_python" style="color: inherit; text-decoration: inherit;">phase_<wbr>name</a>
@@ -2161,16 +1931,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phase name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phase name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="patterntypekey_csharp">
 <a href="#patterntypekey_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Key</a>
@@ -2178,8 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterntypevalues_csharp">
 <a href="#patterntypevalues_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Values</a>
@@ -2187,14 +1953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="patterntypekey_go">
 <a href="#patterntypekey_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Key</a>
@@ -2202,8 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterntypevalues_go">
 <a href="#patterntypevalues_go" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Values</a>
@@ -2211,14 +1973,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">[]Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value</a></span>
     </dt>
-    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="patterntypekey_nodejs">
 <a href="#patterntypekey_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Key</a>
@@ -2226,8 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterntypevalues_nodejs">
 <a href="#patterntypevalues_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Values</a>
@@ -2235,14 +1993,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value[]</a></span>
     </dt>
-    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="pattern_type_key_python">
 <a href="#pattern_type_key_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>key</a>
@@ -2250,8 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pattern type key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pattern type key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_type_values_python">
 <a href="#pattern_type_values_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>values</a>
@@ -2259,16 +2013,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2276,8 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuetype_csharp">
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -2285,14 +2035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2300,8 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuetype_go">
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -2309,14 +2055,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2324,8 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuetype_nodejs">
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
@@ -2333,14 +2075,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2348,8 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_type_python">
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
@@ -2357,38 +2095,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the value{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the value{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="threatintelligenceresourcekind">Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Indicator</dt>
-    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Indicator</dt>
+    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Threat<wbr>Intelligence<wbr>Resource<wbr>Kind<wbr>Indicator</dt>
-    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Threat<wbr>Intelligence<wbr>Resource<wbr>Kind<wbr>Indicator</dt>
+    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Indicator</dt>
-    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Indicator</dt>
+    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>INDICATOR</dt>
-    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>INDICATOR</dt>
+    <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

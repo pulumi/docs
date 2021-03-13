@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure-native.devspaces.Controller resource wit
 API Version: 2019-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ControllersCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -81,9 +90,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -103,9 +115,12 @@ controller = azure_native.devspaces.Controller("controller",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,9 +141,16 @@ const controller = new azure_native.devspaces.Controller("controller", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Controller Resource {#create}
@@ -153,9 +175,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +183,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +191,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +199,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -212,9 +225,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -222,9 +233,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +241,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +249,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,18 +257,13 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -271,9 +271,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -281,9 +279,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -291,10 +287,7 @@ const controller = new azure_native.devspaces.Controller("controller", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -309,9 +302,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -319,8 +310,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -328,8 +318,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Spaces.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostcredentialsbase64_csharp">
 <a href="#targetcontainerhostcredentialsbase64_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Credentials<wbr>Base64</a>
@@ -337,8 +326,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostresourceid_csharp">
 <a href="#targetcontainerhostresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -346,8 +334,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -355,8 +342,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -364,8 +350,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -373,14 +358,11 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -388,8 +370,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -397,8 +378,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostcredentialsbase64_go">
 <a href="#targetcontainerhostcredentialsbase64_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Credentials<wbr>Base64</a>
@@ -406,8 +386,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostresourceid_go">
 <a href="#targetcontainerhostresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -415,8 +394,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -424,8 +402,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +410,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -442,14 +418,11 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -457,8 +430,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -466,8 +438,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostcredentialsbase64_nodejs">
 <a href="#targetcontainerhostcredentialsbase64_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Host<wbr>Credentials<wbr>Base64</a>
@@ -475,8 +446,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostresourceid_nodejs">
 <a href="#targetcontainerhostresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -484,8 +454,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -493,8 +462,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -502,8 +470,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -511,14 +478,11 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -526,8 +490,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -535,8 +498,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Model representing SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_container_host_credentials_base64_python">
 <a href="#target_container_host_credentials_base64_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>host_<wbr>credentials_<wbr>base64</a>
@@ -544,8 +506,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Credentials of the target container host (base64).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_container_host_resource_id_python">
 <a href="#target_container_host_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>host_<wbr>resource_<wbr>id</a>
@@ -553,8 +514,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the target container host{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -562,8 +522,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Region where the Azure resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -571,8 +530,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -580,8 +538,7 @@ The Controller resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags for the Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -592,9 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dataplanefqdn_csharp">
 <a href="#dataplanefqdn_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Fqdn</a>
@@ -602,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostsuffix_csharp">
 <a href="#hostsuffix_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Suffix</a>
@@ -611,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -620,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -629,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcontainerhostapiserverfqdn_csharp">
 <a href="#targetcontainerhostapiserverfqdn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Api<wbr>Server<wbr>Fqdn</a>
@@ -638,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -647,14 +597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dataplanefqdn_go">
 <a href="#dataplanefqdn_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Fqdn</a>
@@ -662,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostsuffix_go">
 <a href="#hostsuffix_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Suffix</a>
@@ -671,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -680,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -689,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcontainerhostapiserverfqdn_go">
 <a href="#targetcontainerhostapiserverfqdn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Api<wbr>Server<wbr>Fqdn</a>
@@ -698,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -707,14 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dataplanefqdn_nodejs">
 <a href="#dataplanefqdn_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Plane<wbr>Fqdn</a>
@@ -722,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostsuffix_nodejs">
 <a href="#hostsuffix_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Suffix</a>
@@ -731,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -740,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -749,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcontainerhostapiserverfqdn_nodejs">
 <a href="#targetcontainerhostapiserverfqdn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Host<wbr>Api<wbr>Server<wbr>Fqdn</a>
@@ -758,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -767,14 +701,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_plane_fqdn_python">
 <a href="#data_plane_fqdn_python" style="color: inherit; text-decoration: inherit;">data_<wbr>plane_<wbr>fqdn</a>
@@ -782,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS name for accessing DataPlane services{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_suffix_python">
 <a href="#host_suffix_python" style="color: inherit; text-decoration: inherit;">host_<wbr>suffix</a>
@@ -791,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS suffix for public endpoints running in the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -800,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -809,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_container_host_api_server_fqdn_python">
 <a href="#target_container_host_api_server_fqdn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>host_<wbr>api_<wbr>server_<wbr>fqdn</a>
@@ -818,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS of the target container host's API server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -827,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -844,9 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -854,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Spaces.<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -863,14 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Spaces.<wbr>Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -878,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -887,14 +805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -902,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -911,14 +825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -926,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -935,46 +845,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuname">Sku<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Name<wbr>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Name<wbr>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -982,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -991,14 +889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1006,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1015,14 +909,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1030,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1039,14 +929,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1054,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1063,38 +949,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tier of the SKU for Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skutier">Sku<wbr>Tier</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Tier<wbr>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 ## Import
 

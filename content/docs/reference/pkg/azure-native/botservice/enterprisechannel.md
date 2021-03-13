@@ -14,11 +14,17 @@ Enterprise Channel resource definition
 API Version: 2018-07-12.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create Enterprise Channel
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -61,9 +67,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -106,9 +115,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -136,9 +148,12 @@ enterprise_channel = azure_native.botservice.EnterpriseChannel("enterpriseChanne
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -167,9 +182,16 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EnterpriseChannel Resource {#create}
@@ -194,9 +216,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +224,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +232,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,10 +240,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -253,9 +266,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -263,9 +274,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +282,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +290,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,18 +298,13 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -312,9 +312,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -322,9 +320,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -332,10 +328,7 @@ const enterpriseChannel = new azure_native.botservice.EnterpriseChannel("enterpr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -350,9 +343,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -360,8 +351,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -369,8 +359,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -378,8 +367,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -387,8 +375,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -396,8 +383,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -405,8 +391,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -414,8 +399,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -423,14 +407,11 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -438,8 +419,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -447,8 +427,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -456,8 +435,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -465,8 +443,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -474,8 +451,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelproperties">Enterprise<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -483,8 +459,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -492,8 +467,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -501,14 +475,11 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -516,8 +487,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -525,8 +495,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -534,8 +503,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -543,8 +511,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -552,8 +519,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelproperties">Enterprise<wbr>Channel<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -561,8 +527,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -570,8 +535,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -579,14 +543,11 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -594,8 +555,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -603,8 +563,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -612,8 +571,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -621,8 +579,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -630,8 +587,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelproperties">Enterprise<wbr>Channel<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The set of properties specific to an Enterprise Channel resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -639,8 +595,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -648,8 +603,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -657,8 +611,7 @@ The EnterpriseChannel resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -669,9 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -679,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -688,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -697,14 +646,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -712,8 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -721,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -730,14 +674,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -745,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -754,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -763,14 +702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -787,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -796,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -813,9 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="enterprisechannelnode">Enterprise<wbr>Channel<wbr>Node</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurelocation_csharp">
 <a href="#azurelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
@@ -823,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azuresku_csharp">
 <a href="#azuresku_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sku</a>
@@ -832,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -841,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -850,14 +778,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enterprisechannelnodestate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurelocation_go">
 <a href="#azurelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
@@ -865,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azuresku_go">
 <a href="#azuresku_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sku</a>
@@ -874,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -883,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -892,14 +814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enterprisechannelnodestate">Enterprise<wbr>Channel<wbr>Node<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurelocation_nodejs">
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
@@ -907,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azuresku_nodejs">
 <a href="#azuresku_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Sku</a>
@@ -916,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -925,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -934,14 +850,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enterprisechannelnodestate">Enterprise<wbr>Channel<wbr>Node<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_location_python">
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
@@ -949,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azure_sku_python">
 <a href="#azure_sku_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sku</a>
@@ -958,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -967,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -976,16 +886,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enterprisechannelnodestate">Enterprise<wbr>Channel<wbr>Node<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enterprisechannelnoderesponse">Enterprise<wbr>Channel<wbr>Node<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurelocation_csharp">
 <a href="#azurelocation_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
@@ -993,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azuresku_csharp">
 <a href="#azuresku_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sku</a>
@@ -1002,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1011,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1020,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1029,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurelocation_go">
 <a href="#azurelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Location</a>
@@ -1044,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azuresku_go">
 <a href="#azuresku_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sku</a>
@@ -1053,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1062,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1071,8 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1080,14 +976,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurelocation_nodejs">
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
@@ -1095,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azuresku_nodejs">
 <a href="#azuresku_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Sku</a>
@@ -1104,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1113,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1122,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1131,14 +1020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_location_python">
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
@@ -1146,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azure_sku_python">
 <a href="#azure_sku_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sku</a>
@@ -1155,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1164,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of Enterprise Channel Node. This is generated by the Bot Framework.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1173,8 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Enterprise Channel Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1182,118 +1064,71 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel Node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enterprisechannelnodestate">Enterprise<wbr>Channel<wbr>Node<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd>
-    <dt>Started</dt>
-    <dd>Started</dd>
-    <dt>Starting</dt>
-    <dd>Starting</dd>
-    <dt>Start<wbr>Failed</dt>
-    <dd>StartFailed</dd>
-    <dt>Stopped</dt>
-    <dd>Stopped</dd>
-    <dt>Stopping</dt>
-    <dd>Stopping</dd>
-    <dt>Stop<wbr>Failed</dt>
-    <dd>StopFailed</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Started</dt>
+    <dd>Started</dd><dt>Starting</dt>
+    <dd>Starting</dd><dt>Start<wbr>Failed</dt>
+    <dd>StartFailed</dd><dt>Stopped</dt>
+    <dd>Stopped</dd><dt>Stopping</dt>
+    <dd>Stopping</dd><dt>Stop<wbr>Failed</dt>
+    <dd>StopFailed</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Started</dt>
-    <dd>Started</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Starting</dt>
-    <dd>Starting</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Start<wbr>Failed</dt>
-    <dd>StartFailed</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Stopped</dt>
-    <dd>Stopped</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Stopping</dt>
-    <dd>Stopping</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Stop<wbr>Failed</dt>
-    <dd>StopFailed</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Started</dt>
+    <dd>Started</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Starting</dt>
+    <dd>Starting</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Start<wbr>Failed</dt>
+    <dd>StartFailed</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Stopped</dt>
+    <dd>Stopped</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Stopping</dt>
+    <dd>Stopping</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Stop<wbr>Failed</dt>
+    <dd>StopFailed</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Enterprise<wbr>Channel<wbr>Node<wbr>State<wbr>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd>
-    <dt>Started</dt>
-    <dd>Started</dd>
-    <dt>Starting</dt>
-    <dd>Starting</dd>
-    <dt>Start<wbr>Failed</dt>
-    <dd>StartFailed</dd>
-    <dt>Stopped</dt>
-    <dd>Stopped</dd>
-    <dt>Stopping</dt>
-    <dd>Stopping</dd>
-    <dt>Stop<wbr>Failed</dt>
-    <dd>StopFailed</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Started</dt>
+    <dd>Started</dd><dt>Starting</dt>
+    <dd>Starting</dd><dt>Start<wbr>Failed</dt>
+    <dd>StartFailed</dd><dt>Stopped</dt>
+    <dd>Stopped</dd><dt>Stopping</dt>
+    <dd>Stopping</dd><dt>Stop<wbr>Failed</dt>
+    <dd>StopFailed</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>CREATE_FAILED</dt>
-    <dd>CreateFailed</dd>
-    <dt>STARTED</dt>
-    <dd>Started</dd>
-    <dt>STARTING</dt>
-    <dd>Starting</dd>
-    <dt>START_FAILED</dt>
-    <dd>StartFailed</dd>
-    <dt>STOPPED</dt>
-    <dd>Stopped</dd>
-    <dt>STOPPING</dt>
-    <dd>Stopping</dd>
-    <dt>STOP_FAILED</dt>
-    <dd>StopFailed</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>DELETE_FAILED</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>Creating</dd><dt>CREATE_FAILED</dt>
+    <dd>CreateFailed</dd><dt>STARTED</dt>
+    <dd>Started</dd><dt>STARTING</dt>
+    <dd>Starting</dd><dt>START_FAILED</dt>
+    <dd>StartFailed</dd><dt>STOPPED</dt>
+    <dd>Stopped</dd><dt>STOPPING</dt>
+    <dd>Stopping</dd><dt>STOP_FAILED</dt>
+    <dd>StopFailed</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>DELETE_FAILED</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enterprisechannelproperties">Enterprise<wbr>Channel<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1301,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnode">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1310,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enterprisechannelstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Enterprise<wbr>Channel<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1325,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnode">[]Enterprise<wbr>Channel<wbr>Node</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1334,14 +1164,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enterprisechannelstate">Enterprise<wbr>Channel<wbr>State<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1349,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnode">Enterprise<wbr>Channel<wbr>Node[]</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1358,14 +1184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enterprisechannelstate">Enterprise<wbr>Channel<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1373,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnode">Sequence[Enterprise<wbr>Channel<wbr>Node<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1382,16 +1204,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enterprisechannelstate">Enterprise<wbr>Channel<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enterprisechannelpropertiesresponse">Enterprise<wbr>Channel<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1399,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Enterprise<wbr>Channel<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1408,14 +1226,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1423,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnoderesponse">[]Enterprise<wbr>Channel<wbr>Node<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1432,14 +1246,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1447,8 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnoderesponse">Enterprise<wbr>Channel<wbr>Node<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1456,14 +1266,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1471,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enterprisechannelnoderesponse">Sequence[Enterprise<wbr>Channel<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The nodes associated with the Enterprise Channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1480,172 +1286,105 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the Enterprise Channel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enterprisechannelstate">Enterprise<wbr>Channel<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd>
-    <dt>Started</dt>
-    <dd>Started</dd>
-    <dt>Starting</dt>
-    <dd>Starting</dd>
-    <dt>Start<wbr>Failed</dt>
-    <dd>StartFailed</dd>
-    <dt>Stopped</dt>
-    <dd>Stopped</dd>
-    <dt>Stopping</dt>
-    <dd>Stopping</dd>
-    <dt>Stop<wbr>Failed</dt>
-    <dd>StopFailed</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Started</dt>
+    <dd>Started</dd><dt>Starting</dt>
+    <dd>Starting</dd><dt>Start<wbr>Failed</dt>
+    <dd>StartFailed</dd><dt>Stopped</dt>
+    <dd>Stopped</dd><dt>Stopping</dt>
+    <dd>Stopping</dd><dt>Stop<wbr>Failed</dt>
+    <dd>StopFailed</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Started</dt>
-    <dd>Started</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Starting</dt>
-    <dd>Starting</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Start<wbr>Failed</dt>
-    <dd>StartFailed</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Stopped</dt>
-    <dd>Stopped</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Stopping</dt>
-    <dd>Stopping</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Stop<wbr>Failed</dt>
-    <dd>StopFailed</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Enterprise<wbr>Channel<wbr>State<wbr>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>Enterprise<wbr>Channel<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Started</dt>
+    <dd>Started</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Starting</dt>
+    <dd>Starting</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Start<wbr>Failed</dt>
+    <dd>StartFailed</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Stopped</dt>
+    <dd>Stopped</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Stopping</dt>
+    <dd>Stopping</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Stop<wbr>Failed</dt>
+    <dd>StopFailed</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Enterprise<wbr>Channel<wbr>State<wbr>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Create<wbr>Failed</dt>
-    <dd>CreateFailed</dd>
-    <dt>Started</dt>
-    <dd>Started</dd>
-    <dt>Starting</dt>
-    <dd>Starting</dd>
-    <dt>Start<wbr>Failed</dt>
-    <dd>StartFailed</dd>
-    <dt>Stopped</dt>
-    <dd>Stopped</dd>
-    <dt>Stopping</dt>
-    <dd>Stopping</dd>
-    <dt>Stop<wbr>Failed</dt>
-    <dd>StopFailed</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Delete<wbr>Failed</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Create<wbr>Failed</dt>
+    <dd>CreateFailed</dd><dt>Started</dt>
+    <dd>Started</dd><dt>Starting</dt>
+    <dd>Starting</dd><dt>Start<wbr>Failed</dt>
+    <dd>StartFailed</dd><dt>Stopped</dt>
+    <dd>Stopped</dd><dt>Stopping</dt>
+    <dd>Stopping</dd><dt>Stop<wbr>Failed</dt>
+    <dd>StopFailed</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Delete<wbr>Failed</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>CREATE_FAILED</dt>
-    <dd>CreateFailed</dd>
-    <dt>STARTED</dt>
-    <dd>Started</dd>
-    <dt>STARTING</dt>
-    <dd>Starting</dd>
-    <dt>START_FAILED</dt>
-    <dd>StartFailed</dd>
-    <dt>STOPPED</dt>
-    <dd>Stopped</dd>
-    <dt>STOPPING</dt>
-    <dd>Stopping</dd>
-    <dt>STOP_FAILED</dt>
-    <dd>StopFailed</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>DELETE_FAILED</dt>
-    <dd>DeleteFailed</dd>
-</dl>
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>Creating</dd><dt>CREATE_FAILED</dt>
+    <dd>CreateFailed</dd><dt>STARTED</dt>
+    <dd>Started</dd><dt>STARTING</dt>
+    <dd>Starting</dd><dt>START_FAILED</dt>
+    <dd>StartFailed</dd><dt>STOPPED</dt>
+    <dd>Stopped</dd><dt>STOPPING</dt>
+    <dd>Stopping</dd><dt>STOP_FAILED</dt>
+    <dd>StopFailed</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>DELETE_FAILED</dt>
+    <dd>DeleteFailed</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Sdk</dt>
-    <dd>sdk</dd>
-    <dt>Designer</dt>
-    <dd>designer</dd>
-    <dt>Bot</dt>
-    <dd>bot</dd>
-    <dt>Function</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>Sdk</dt>
+    <dd>sdk</dd><dt>Designer</dt>
+    <dd>designer</dd><dt>Bot</dt>
+    <dd>bot</dd><dt>Function</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>Sdk</dt>
-    <dd>sdk</dd>
-    <dt>Kind<wbr>Designer</dt>
-    <dd>designer</dd>
-    <dt>Kind<wbr>Bot</dt>
-    <dd>bot</dd>
-    <dt>Kind<wbr>Function</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>Sdk</dt>
+    <dd>sdk</dd><dt>Kind<wbr>Designer</dt>
+    <dd>designer</dd><dt>Kind<wbr>Bot</dt>
+    <dd>bot</dd><dt>Kind<wbr>Function</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Sdk</dt>
-    <dd>sdk</dd>
-    <dt>Designer</dt>
-    <dd>designer</dd>
-    <dt>Bot</dt>
-    <dd>bot</dd>
-    <dt>Function</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>Sdk</dt>
+    <dd>sdk</dd><dt>Designer</dt>
+    <dd>designer</dd><dt>Bot</dt>
+    <dd>bot</dd><dt>Function</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SDK</dt>
-    <dd>sdk</dd>
-    <dt>DESIGNER</dt>
-    <dd>designer</dd>
-    <dt>BOT</dt>
-    <dd>bot</dd>
-    <dt>FUNCTION</dt>
-    <dd>function</dd>
-</dl>
+<dl class="tabular"><dt>SDK</dt>
+    <dd>sdk</dd><dt>DESIGNER</dt>
+    <dd>designer</dd><dt>BOT</dt>
+    <dd>bot</dd><dt>FUNCTION</dt>
+    <dd>function</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1653,14 +1392,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1668,14 +1404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1683,14 +1416,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1698,54 +1428,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuname">Sku<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>F0</dt>
-    <dd>F0</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>F0</dt>
+    <dd>F0</dd><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Name<wbr>F0</dt>
-    <dd>F0</dd>
-    <dt>Sku<wbr>Name<wbr>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Name<wbr>F0</dt>
+    <dd>F0</dd><dt>Sku<wbr>Name<wbr>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>F0</dt>
-    <dd>F0</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>F0</dt>
+    <dd>F0</dd><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>F0</dt>
-    <dd>F0</dd>
-    <dt>S1</dt>
-    <dd>S1</dd>
-</dl>
+<dl class="tabular"><dt>F0</dt>
+    <dd>F0</dd><dt>S1</dt>
+    <dd>S1</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1753,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1762,14 +1476,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1777,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1786,14 +1496,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1801,8 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1810,14 +1516,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1825,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1834,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ FirewallPolicy Resource.
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create FirewallPolicy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -112,9 +118,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -195,9 +204,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -249,9 +261,12 @@ firewall_policy = azure_native.network.FirewallPolicy("firewallPolicy",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -304,9 +319,16 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a FirewallPolicy Resource {#create}
@@ -331,9 +353,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -341,9 +361,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -351,9 +369,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -361,10 +377,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -390,9 +403,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -400,9 +411,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -410,9 +419,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -420,9 +427,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -430,18 +435,13 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -449,9 +449,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -459,9 +457,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -469,10 +465,7 @@ const firewallPolicy = new azure_native.network.FirewallPolicy("firewallPolicy",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -487,9 +480,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -497,8 +488,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basepolicy_csharp">
 <a href="#basepolicy_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Policy</a>
@@ -506,8 +496,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssettings_csharp">
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
@@ -515,8 +504,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallpolicyname_csharp">
 <a href="#firewallpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Name</a>
@@ -524,8 +512,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -533,8 +520,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -542,8 +528,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedserviceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intrusiondetection_csharp">
 <a href="#intrusiondetection_csharp" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
@@ -551,8 +536,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetection">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -560,8 +544,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -569,8 +552,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicysku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -578,8 +560,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelmode_csharp">
 <a href="#threatintelmode_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Mode</a>
@@ -587,8 +568,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelwhitelist_csharp">
 <a href="#threatintelwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Whitelist</a>
@@ -596,8 +576,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportsecurity_csharp">
 <a href="#transportsecurity_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Security</a>
@@ -605,14 +584,11 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicytransportsecurity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Transport<wbr>Security<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -620,8 +596,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basepolicy_go">
 <a href="#basepolicy_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Policy</a>
@@ -629,8 +604,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssettings_go">
 <a href="#dnssettings_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
@@ -638,8 +612,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallpolicyname_go">
 <a href="#firewallpolicyname_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Name</a>
@@ -647,8 +620,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -656,8 +628,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -665,8 +636,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intrusiondetection_go">
 <a href="#intrusiondetection_go" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
@@ -674,8 +644,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -683,8 +652,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -692,8 +660,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -701,8 +668,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelmode_go">
 <a href="#threatintelmode_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Mode</a>
@@ -710,8 +676,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelwhitelist_go">
 <a href="#threatintelwhitelist_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Whitelist</a>
@@ -719,8 +684,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist</a></span>
     </dt>
-    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportsecurity_go">
 <a href="#transportsecurity_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Security</a>
@@ -728,14 +692,11 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicytransportsecurity">Firewall<wbr>Policy<wbr>Transport<wbr>Security</a></span>
     </dt>
-    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -743,8 +704,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basepolicy_nodejs">
 <a href="#basepolicy_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Policy</a>
@@ -752,8 +712,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnssettings_nodejs">
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
@@ -761,8 +720,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallpolicyname_nodejs">
 <a href="#firewallpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Name</a>
@@ -770,8 +728,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -779,8 +736,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -788,8 +744,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intrusiondetection_nodejs">
 <a href="#intrusiondetection_nodejs" style="color: inherit; text-decoration: inherit;">intrusion<wbr>Detection</a>
@@ -797,8 +752,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -806,8 +760,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -815,8 +768,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -824,8 +776,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelmode_nodejs">
 <a href="#threatintelmode_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intel<wbr>Mode</a>
@@ -833,8 +784,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#azurefirewallthreatintelmode">Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatintelwhitelist_nodejs">
 <a href="#threatintelwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intel<wbr>Whitelist</a>
@@ -842,8 +792,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist</a></span>
     </dt>
-    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportsecurity_nodejs">
 <a href="#transportsecurity_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Security</a>
@@ -851,14 +800,11 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicytransportsecurity">Firewall<wbr>Policy<wbr>Transport<wbr>Security</a></span>
     </dt>
-    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -866,8 +812,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_policy_python">
 <a href="#base_policy_python" style="color: inherit; text-decoration: inherit;">base_<wbr>policy</a>
@@ -875,8 +820,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_settings_python">
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
@@ -884,8 +828,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewall_policy_name_python">
 <a href="#firewall_policy_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>name</a>
@@ -893,8 +836,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -902,8 +844,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -911,8 +852,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intrusion_detection_python">
 <a href="#intrusion_detection_python" style="color: inherit; text-decoration: inherit;">intrusion_<wbr>detection</a>
@@ -920,8 +860,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -929,8 +868,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -938,8 +876,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -947,8 +884,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threat_intel_mode_python">
 <a href="#threat_intel_mode_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intel_<wbr>mode</a>
@@ -956,8 +892,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#azurefirewallthreatintelmode">Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operation mode for Threat Intelligence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threat_intel_whitelist_python">
 <a href="#threat_intel_whitelist_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intel_<wbr>whitelist</a>
@@ -965,8 +900,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transport_security_python">
 <a href="#transport_security_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>security</a>
@@ -974,8 +908,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicytransportsecurity">Firewall<wbr>Policy<wbr>Transport<wbr>Security<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -986,9 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="childpolicies_csharp">
 <a href="#childpolicies_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Policies</a>
@@ -996,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1005,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewalls_csharp">
 <a href="#firewalls_csharp" style="color: inherit; text-decoration: inherit;">Firewalls</a>
@@ -1014,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1023,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1032,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1041,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rulecollectiongroups_csharp">
 <a href="#rulecollectiongroups_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collection<wbr>Groups</a>
@@ -1050,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1059,14 +983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="childpolicies_go">
 <a href="#childpolicies_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Policies</a>
@@ -1074,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1083,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewalls_go">
 <a href="#firewalls_go" style="color: inherit; text-decoration: inherit;">Firewalls</a>
@@ -1092,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1101,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1110,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1119,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rulecollectiongroups_go">
 <a href="#rulecollectiongroups_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collection<wbr>Groups</a>
@@ -1128,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1137,14 +1051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="childpolicies_nodejs">
 <a href="#childpolicies_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Policies</a>
@@ -1152,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1161,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewalls_nodejs">
 <a href="#firewalls_nodejs" style="color: inherit; text-decoration: inherit;">firewalls</a>
@@ -1170,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1179,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1188,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1197,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rulecollectiongroups_nodejs">
 <a href="#rulecollectiongroups_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Collection<wbr>Groups</a>
@@ -1206,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1215,14 +1119,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="child_policies_python">
 <a href="#child_policies_python" style="color: inherit; text-decoration: inherit;">child_<wbr>policies</a>
@@ -1230,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Child Firewall Policies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1239,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewalls_python">
 <a href="#firewalls_python" style="color: inherit; text-decoration: inherit;">firewalls</a>
@@ -1248,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to Azure Firewalls that this Firewall Policy is associated with.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1257,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1266,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1275,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the firewall policy resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rule_collection_groups_python">
 <a href="#rule_collection_groups_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>collection_<wbr>groups</a>
@@ -1284,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of references to FirewallPolicyRuleCollectionGroups.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1293,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1310,55 +1203,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="azurefirewallthreatintelmode">Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Alert</dt>
-    <dd>Alert</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Off</dt>
-    <dd>Off</dd>
-</dl>
+<dl class="tabular"><dt>Alert</dt>
+    <dd>Alert</dd><dt>Deny</dt>
+    <dd>Deny</dd><dt>Off</dt>
+    <dd>Off</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode<wbr>Alert</dt>
-    <dd>Alert</dd>
-    <dt>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode<wbr>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode<wbr>Off</dt>
-    <dd>Off</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode<wbr>Alert</dt>
+    <dd>Alert</dd><dt>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode<wbr>Deny</dt>
+    <dd>Deny</dd><dt>Azure<wbr>Firewall<wbr>Threat<wbr>Intel<wbr>Mode<wbr>Off</dt>
+    <dd>Off</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Alert</dt>
-    <dd>Alert</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-    <dt>Off</dt>
-    <dd>Off</dd>
-</dl>
+<dl class="tabular"><dt>Alert</dt>
+    <dd>Alert</dd><dt>Deny</dt>
+    <dd>Deny</dd><dt>Off</dt>
+    <dd>Off</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALERT</dt>
-    <dd>Alert</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-    <dt>OFF</dt>
-    <dd>Off</dd>
-</dl>
+<dl class="tabular"><dt>ALERT</dt>
+    <dd>Alert</dd><dt>DENY</dt>
+    <dd>Deny</dd><dt>OFF</dt>
+    <dd>Off</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dnssettings">Dns<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableproxy_csharp">
 <a href="#enableproxy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy</a>
@@ -1366,8 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireproxyfornetworkrules_csharp">
 <a href="#requireproxyfornetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Proxy<wbr>For<wbr>Network<wbr>Rules</a>
@@ -1375,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1384,14 +1257,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableproxy_go">
 <a href="#enableproxy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy</a>
@@ -1399,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireproxyfornetworkrules_go">
 <a href="#requireproxyfornetworkrules_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Proxy<wbr>For<wbr>Network<wbr>Rules</a>
@@ -1408,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1417,14 +1285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableproxy_nodejs">
 <a href="#enableproxy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy</a>
@@ -1432,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireproxyfornetworkrules_nodejs">
 <a href="#requireproxyfornetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Proxy<wbr>For<wbr>Network<wbr>Rules</a>
@@ -1441,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1450,14 +1313,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_proxy_python">
 <a href="#enable_proxy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy</a>
@@ -1465,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_proxy_for_network_rules_python">
 <a href="#require_proxy_for_network_rules_python" style="color: inherit; text-decoration: inherit;">require_<wbr>proxy_<wbr>for_<wbr>network_<wbr>rules</a>
@@ -1474,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1483,16 +1341,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dnssettingsresponse">Dns<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableproxy_csharp">
 <a href="#enableproxy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy</a>
@@ -1500,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireproxyfornetworkrules_csharp">
 <a href="#requireproxyfornetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Proxy<wbr>For<wbr>Network<wbr>Rules</a>
@@ -1509,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1518,14 +1371,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableproxy_go">
 <a href="#enableproxy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Proxy</a>
@@ -1533,8 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireproxyfornetworkrules_go">
 <a href="#requireproxyfornetworkrules_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Proxy<wbr>For<wbr>Network<wbr>Rules</a>
@@ -1542,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1551,14 +1399,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableproxy_nodejs">
 <a href="#enableproxy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy</a>
@@ -1566,8 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireproxyfornetworkrules_nodejs">
 <a href="#requireproxyfornetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Proxy<wbr>For<wbr>Network<wbr>Rules</a>
@@ -1575,8 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1584,14 +1427,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_proxy_python">
 <a href="#enable_proxy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy</a>
@@ -1599,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable DNS Proxy on Firewalls attached to the Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_proxy_for_network_rules_python">
 <a href="#require_proxy_for_network_rules_python" style="color: inherit; text-decoration: inherit;">require_<wbr>proxy_<wbr>for_<wbr>network_<wbr>rules</a>
@@ -1608,8 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDNs in Network Rules are supported when set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1617,16 +1455,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Custom DNS Servers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_csharp">
 <a href="#keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -1634,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1643,14 +1477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_go">
 <a href="#keyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -1658,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1667,14 +1497,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_nodejs">
 <a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -1682,8 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1691,14 +1517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_vault_secret_id_python">
 <a href="#key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
@@ -1706,8 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1715,16 +1537,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_csharp">
 <a href="#keyvaultsecretid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -1732,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1741,14 +1559,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_go">
 <a href="#keyvaultsecretid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -1756,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1765,14 +1579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvaultsecretid_nodejs">
 <a href="#keyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Id</a>
@@ -1780,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1789,14 +1599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_vault_secret_id_python">
 <a href="#key_vault_secret_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>id</a>
@@ -1804,8 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1813,16 +1619,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the CA certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1830,8 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1839,14 +1641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1854,8 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1863,14 +1661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1878,8 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1887,14 +1681,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1902,8 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1911,16 +1701,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionbypasstrafficspecifications">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1928,8 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
@@ -1937,8 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_csharp">
 <a href="#destinationipgroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
@@ -1946,8 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationports_csharp">
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
@@ -1955,8 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1964,8 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1973,8 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
@@ -1982,8 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
@@ -1991,14 +1771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2006,8 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
@@ -2015,8 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_go">
 <a href="#destinationipgroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
@@ -2024,8 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationports_go">
 <a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
@@ -2033,8 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2042,8 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2051,8 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionprotocol">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
@@ -2060,8 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
@@ -2069,14 +1839,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2084,8 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
@@ -2093,8 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_nodejs">
 <a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
@@ -2102,8 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationports_nodejs">
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
@@ -2111,8 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2120,8 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2129,8 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionprotocol">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
@@ -2138,8 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
@@ -2147,14 +1907,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2162,8 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
@@ -2171,8 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ip_groups_python">
 <a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
@@ -2180,8 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ports_python">
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
@@ -2189,8 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2198,8 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2207,8 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#firewallpolicyintrusiondetectionprotocol">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
@@ -2216,8 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
@@ -2225,16 +1975,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2242,8 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
@@ -2251,8 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_csharp">
 <a href="#destinationipgroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
@@ -2260,8 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationports_csharp">
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
@@ -2269,8 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2278,8 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2287,8 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
@@ -2296,8 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
@@ -2305,14 +2045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2320,8 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
@@ -2329,8 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_go">
 <a href="#destinationipgroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
@@ -2338,8 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationports_go">
 <a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
@@ -2347,8 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2356,8 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2365,8 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
@@ -2374,8 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
@@ -2383,14 +2113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2398,8 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
@@ -2407,8 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_nodejs">
 <a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
@@ -2416,8 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationports_nodejs">
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
@@ -2425,8 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2434,8 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2443,8 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
@@ -2452,8 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
@@ -2461,14 +2181,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2476,8 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
@@ -2485,8 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ip_groups_python">
 <a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
@@ -2494,8 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ports_python">
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
@@ -2503,8 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of destination ports or ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2512,8 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the bypass traffic rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2521,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rule bypass protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
@@ -2530,8 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of source IP addresses or ranges for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
@@ -2539,16 +2249,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypasstrafficsettings_csharp">
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
@@ -2556,8 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signatureoverrides_csharp">
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
@@ -2565,14 +2271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypasstrafficsettings_go">
 <a href="#bypasstrafficsettings_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
@@ -2580,8 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">[]Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signatureoverrides_go">
 <a href="#signatureoverrides_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
@@ -2589,14 +2291,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">[]Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypasstrafficsettings_nodejs">
 <a href="#bypasstrafficsettings_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Traffic<wbr>Settings</a>
@@ -2604,8 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications[]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signatureoverrides_nodejs">
 <a href="#signatureoverrides_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Overrides</a>
@@ -2613,14 +2311,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification[]</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_traffic_settings_python">
 <a href="#bypass_traffic_settings_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>traffic_<wbr>settings</a>
@@ -2628,8 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_overrides_python">
 <a href="#signature_overrides_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>overrides</a>
@@ -2637,16 +2331,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypasstrafficsettings_csharp">
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
@@ -2654,8 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signatureoverrides_csharp">
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
@@ -2663,14 +2353,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypasstrafficsettings_go">
 <a href="#bypasstrafficsettings_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
@@ -2678,8 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">[]Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signatureoverrides_go">
 <a href="#signatureoverrides_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
@@ -2687,14 +2373,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">[]Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypasstrafficsettings_nodejs">
 <a href="#bypasstrafficsettings_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Traffic<wbr>Settings</a>
@@ -2702,8 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signatureoverrides_nodejs">
 <a href="#signatureoverrides_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Overrides</a>
@@ -2711,14 +2393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bypass_traffic_settings_python">
 <a href="#bypass_traffic_settings_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>traffic_<wbr>settings</a>
@@ -2726,8 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_overrides_python">
 <a href="#signature_overrides_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>overrides</a>
@@ -2735,70 +2413,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionprotocol">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>TCP</dt>
-    <dd>TCP</dd>
-    <dt>UDP</dt>
-    <dd>UDP</dd>
-    <dt>ICMP</dt>
-    <dd>ICMP</dd>
-    <dt>ANY</dt>
-    <dd>ANY</dd>
-</dl>
+<dl class="tabular"><dt>TCP</dt>
+    <dd>TCP</dd><dt>UDP</dt>
+    <dd>UDP</dd><dt>ICMP</dt>
+    <dd>ICMP</dd><dt>ANY</dt>
+    <dd>ANY</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>TCP</dt>
-    <dd>TCP</dd>
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>UDP</dt>
-    <dd>UDP</dd>
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>ICMP</dt>
-    <dd>ICMP</dd>
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>ANY</dt>
-    <dd>ANY</dd>
-</dl>
+<dl class="tabular"><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>TCP</dt>
+    <dd>TCP</dd><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>UDP</dt>
+    <dd>UDP</dd><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>ICMP</dt>
+    <dd>ICMP</dd><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Protocol<wbr>ANY</dt>
+    <dd>ANY</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>TCP</dt>
-    <dd>TCP</dd>
-    <dt>UDP</dt>
-    <dd>UDP</dd>
-    <dt>ICMP</dt>
-    <dd>ICMP</dd>
-    <dt>ANY</dt>
-    <dd>ANY</dd>
-</dl>
+<dl class="tabular"><dt>TCP</dt>
+    <dd>TCP</dd><dt>UDP</dt>
+    <dd>UDP</dd><dt>ICMP</dt>
+    <dd>ICMP</dd><dt>ANY</dt>
+    <dd>ANY</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TCP</dt>
-    <dd>TCP</dd>
-    <dt>UDP</dt>
-    <dd>UDP</dd>
-    <dt>ICMP</dt>
-    <dd>ICMP</dd>
-    <dt>ANY</dt>
-    <dd>ANY</dd>
-</dl>
+<dl class="tabular"><dt>TCP</dt>
+    <dd>TCP</dd><dt>UDP</dt>
+    <dd>UDP</dd><dt>ICMP</dt>
+    <dd>ICMP</dd><dt>ANY</dt>
+    <dd>ANY</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -2806,8 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2815,14 +2469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -2830,8 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2839,14 +2489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -2854,8 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2863,14 +2509,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -2878,8 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2887,16 +2529,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Intrusion detection general state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionsignaturespecification">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2904,8 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2913,14 +2551,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2928,8 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2937,14 +2571,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2952,8 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2961,14 +2591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2976,8 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2985,16 +2611,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionsignaturespecificationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3002,8 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3011,14 +2633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3026,8 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3035,14 +2653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3050,8 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -3059,14 +2673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3074,8 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Signature id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Signature id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -3083,62 +2693,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The signature state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signature state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyintrusiondetectionstatetype">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Off</dt>
-    <dd>Off</dd>
-    <dt>Alert</dt>
-    <dd>Alert</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Off</dt>
+    <dd>Off</dd><dt>Alert</dt>
+    <dd>Alert</dd><dt>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type<wbr>Off</dt>
-    <dd>Off</dd>
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type<wbr>Alert</dt>
-    <dd>Alert</dd>
-    <dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type<wbr>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type<wbr>Off</dt>
+    <dd>Off</dd><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type<wbr>Alert</dt>
+    <dd>Alert</dd><dt>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>State<wbr>Type<wbr>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Off</dt>
-    <dd>Off</dd>
-    <dt>Alert</dt>
-    <dd>Alert</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>Off</dt>
+    <dd>Off</dd><dt>Alert</dt>
+    <dd>Alert</dd><dt>Deny</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>OFF</dt>
-    <dd>Off</dd>
-    <dt>ALERT</dt>
-    <dd>Alert</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-</dl>
+<dl class="tabular"><dt>OFF</dt>
+    <dd>Off</dd><dt>ALERT</dt>
+    <dd>Alert</dd><dt>DENY</dt>
+    <dd>Deny</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3146,14 +2737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyskutier">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3161,14 +2749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyskutier">Firewall<wbr>Policy<wbr>Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3176,14 +2761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#firewallpolicyskutier">Firewall<wbr>Policy<wbr>Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3191,16 +2773,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#firewallpolicyskutier">Firewall<wbr>Policy<wbr>Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyskuresponse">Firewall<wbr>Policy<wbr>Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3208,14 +2787,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3223,14 +2799,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3238,14 +2811,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3253,54 +2823,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of Firewall Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicyskutier">Firewall<wbr>Policy<wbr>Sku<wbr>Tier</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Firewall<wbr>Policy<wbr>Sku<wbr>Tier<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Firewall<wbr>Policy<wbr>Sku<wbr>Tier<wbr>Premium</dt>
-    <dd>Premium</dd>
-</dl>
+<dl class="tabular"><dt>Firewall<wbr>Policy<wbr>Sku<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Firewall<wbr>Policy<wbr>Sku<wbr>Tier<wbr>Premium</dt>
+    <dd>Premium</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>PREMIUM</dt>
+    <dd>Premium</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicythreatintelwhitelist">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_csharp">
 <a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -3308,8 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3317,14 +2871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_go">
 <a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -3332,8 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3341,14 +2891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_nodejs">
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -3356,8 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -3365,14 +2911,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_python">
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -3380,8 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -3389,16 +2931,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicythreatintelwhitelistresponse">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_csharp">
 <a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -3406,8 +2945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3415,14 +2953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_go">
 <a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
@@ -3430,8 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3439,14 +2973,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_nodejs">
 <a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -3454,8 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -3463,14 +2993,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fqdns_python">
 <a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
@@ -3478,8 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of FQDNs for the ThreatIntel Whitelist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -3487,16 +3013,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of IP addresses for the ThreatIntel Whitelist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicytransportsecurity">Firewall<wbr>Policy<wbr>Transport<wbr>Security</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_csharp">
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -3504,14 +3027,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthority">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_go">
 <a href="#certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -3519,14 +3039,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_nodejs">
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -3534,14 +3051,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_authority_python">
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -3549,16 +3063,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpolicytransportsecurityresponse">Firewall<wbr>Policy<wbr>Transport<wbr>Security<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_csharp">
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -3566,14 +3077,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_go">
 <a href="#certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -3581,14 +3089,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_nodejs">
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -3596,14 +3101,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_authority_python">
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -3611,16 +3113,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedserviceidentity">Managed<wbr>Service<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3628,8 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -3637,14 +3135,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3652,8 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -3661,14 +3155,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3676,8 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -3685,14 +3175,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3700,8 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -3709,16 +3195,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3726,8 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3735,8 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3744,8 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -3753,14 +3233,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3768,8 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3777,8 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3786,8 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -3795,14 +3269,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -3810,8 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -3819,8 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3828,8 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -3837,14 +3305,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3852,8 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -3861,8 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3870,8 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -3879,16 +3341,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedserviceidentityresponseuserassignedidentities">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3896,8 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3905,14 +3363,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3920,8 +3375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3929,14 +3383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -3944,8 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -3953,14 +3403,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -3968,8 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3977,70 +3423,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SYSTEM_ASSIGNED</dt>
-    <dd>SystemAssigned</dd>
-    <dt>USER_ASSIGNED</dt>
-    <dd>UserAssigned</dd>
-    <dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
-    <dd>SystemAssigned, UserAssigned</dd>
-    <dt>NONE</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd><dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
+    <dd>SystemAssigned, UserAssigned</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresource">Sub<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4048,14 +3471,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4063,14 +3483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4078,14 +3495,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4093,16 +3507,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4110,14 +3521,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4125,14 +3533,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4140,14 +3545,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4155,8 +3557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

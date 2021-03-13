@@ -14,11 +14,17 @@ Represents a blueprint artifact.
 API Version: 2018-11-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### MG-ARMTemplateArtifact
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -40,9 +46,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -69,9 +78,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -85,9 +97,12 @@ artifact = azure_native.blueprint.Artifact("artifact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,10 +117,17 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### MG-PolicyAssignmentArtifact
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -127,9 +149,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -156,9 +181,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -172,9 +200,12 @@ artifact = azure_native.blueprint.Artifact("artifact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -189,10 +220,17 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### MG-RoleAssignmentArtifact
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -214,9 +252,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -243,9 +284,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -259,9 +303,12 @@ artifact = azure_native.blueprint.Artifact("artifact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -276,10 +323,17 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Sub-ARMTemplateArtifact
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -301,9 +355,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -330,9 +387,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -346,9 +406,12 @@ artifact = azure_native.blueprint.Artifact("artifact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -363,10 +426,17 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Sub-PolicyAssignmentArtifact
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -388,9 +458,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -417,9 +490,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -433,9 +509,12 @@ artifact = azure_native.blueprint.Artifact("artifact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -450,10 +529,17 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Sub-RoleAssignmentArtifact
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -475,9 +561,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -504,9 +593,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -520,9 +612,12 @@ artifact = azure_native.blueprint.Artifact("artifact",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -537,9 +632,16 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Artifact Resource {#create}
@@ -564,9 +666,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -574,9 +674,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -584,9 +682,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -594,10 +690,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -623,9 +716,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -633,9 +724,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -643,9 +732,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -653,9 +740,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -663,18 +748,13 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -682,9 +762,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -692,9 +770,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -702,10 +778,7 @@ const artifact = new azure_native.blueprint.Artifact("artifact", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -720,9 +793,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprintname_csharp">
 <a href="#blueprintname_csharp" style="color: inherit; text-decoration: inherit;">Blueprint<wbr>Name</a>
@@ -730,8 +801,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -739,8 +809,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#artifactkind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Artifact<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcescope_csharp">
 <a href="#resourcescope_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Scope</a>
@@ -748,8 +817,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactname_csharp">
 <a href="#artifactname_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Name</a>
@@ -757,14 +825,11 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprintname_go">
 <a href="#blueprintname_go" style="color: inherit; text-decoration: inherit;">Blueprint<wbr>Name</a>
@@ -772,8 +837,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -781,8 +845,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#artifactkind">Artifact<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcescope_go">
 <a href="#resourcescope_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Scope</a>
@@ -790,8 +853,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactname_go">
 <a href="#artifactname_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Name</a>
@@ -799,14 +861,11 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprintname_nodejs">
 <a href="#blueprintname_nodejs" style="color: inherit; text-decoration: inherit;">blueprint<wbr>Name</a>
@@ -814,8 +873,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -823,8 +881,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#artifactkind">Artifact<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcescope_nodejs">
 <a href="#resourcescope_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Scope</a>
@@ -832,8 +889,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifactname_nodejs">
 <a href="#artifactname_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Name</a>
@@ -841,14 +897,11 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blueprint_name_python">
 <a href="#blueprint_name_python" style="color: inherit; text-decoration: inherit;">blueprint_<wbr>name</a>
@@ -856,8 +909,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -865,8 +917,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#artifactkind">Artifact<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the kind of blueprint artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_scope_python">
 <a href="#resource_scope_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>scope</a>
@@ -874,8 +925,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_name_python">
 <a href="#artifact_name_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>name</a>
@@ -883,8 +933,7 @@ The Artifact resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the blueprint artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -895,9 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -905,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -914,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -923,14 +968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -938,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -947,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -956,14 +996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -971,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -980,8 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -989,14 +1024,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1004,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1013,8 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1022,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1039,47 +1068,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="artifactkind">Artifact<wbr>Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Template</dt>
-    <dd>template</dd>
-    <dt>Role<wbr>Assignment</dt>
-    <dd>roleAssignment</dd>
-    <dt>Policy<wbr>Assignment</dt>
-    <dd>policyAssignment</dd>
-</dl>
+<dl class="tabular"><dt>Template</dt>
+    <dd>template</dd><dt>Role<wbr>Assignment</dt>
+    <dd>roleAssignment</dd><dt>Policy<wbr>Assignment</dt>
+    <dd>policyAssignment</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Artifact<wbr>Kind<wbr>Template</dt>
-    <dd>template</dd>
-    <dt>Artifact<wbr>Kind<wbr>Role<wbr>Assignment</dt>
-    <dd>roleAssignment</dd>
-    <dt>Artifact<wbr>Kind<wbr>Policy<wbr>Assignment</dt>
-    <dd>policyAssignment</dd>
-</dl>
+<dl class="tabular"><dt>Artifact<wbr>Kind<wbr>Template</dt>
+    <dd>template</dd><dt>Artifact<wbr>Kind<wbr>Role<wbr>Assignment</dt>
+    <dd>roleAssignment</dd><dt>Artifact<wbr>Kind<wbr>Policy<wbr>Assignment</dt>
+    <dd>policyAssignment</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Template</dt>
-    <dd>template</dd>
-    <dt>Role<wbr>Assignment</dt>
-    <dd>roleAssignment</dd>
-    <dt>Policy<wbr>Assignment</dt>
-    <dd>policyAssignment</dd>
-</dl>
+<dl class="tabular"><dt>Template</dt>
+    <dd>template</dd><dt>Role<wbr>Assignment</dt>
+    <dd>roleAssignment</dd><dt>Policy<wbr>Assignment</dt>
+    <dd>policyAssignment</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TEMPLATE</dt>
-    <dd>template</dd>
-    <dt>ROLE_ASSIGNMENT</dt>
-    <dd>roleAssignment</dd>
-    <dt>POLICY_ASSIGNMENT</dt>
-    <dd>policyAssignment</dd>
-</dl>
+<dl class="tabular"><dt>TEMPLATE</dt>
+    <dd>template</dd><dt>ROLE_ASSIGNMENT</dt>
+    <dd>roleAssignment</dd><dt>POLICY_ASSIGNMENT</dt>
+    <dd>policyAssignment</dd></dl>
 {{% /choosable %}}
 ## Import
 

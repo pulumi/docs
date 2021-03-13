@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The constant value for the application name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Outputs.<wbr>Application<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -367,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The properties of the application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag for the application{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags for the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,9 +390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationport_csharp">
 <a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
@@ -470,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
@@ -479,14 +422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationport_go">
 <a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicport_go">
 <a href="#publicport_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationport_nodejs">
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
@@ -563,14 +494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_port_python">
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
@@ -578,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -587,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_port_python">
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationgethttpsendpointresponse">Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response</h4>
@@ -614,9 +538,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -624,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
@@ -633,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessmodes_csharp">
 <a href="#accessmodes_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Modes</a>
@@ -642,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_csharp">
 <a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -651,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegatewayauth_csharp">
 <a href="#disablegatewayauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Gateway<wbr>Auth</a>
@@ -660,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
@@ -669,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdomainsuffix_csharp">
 <a href="#subdomainsuffix_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Domain<wbr>Suffix</a>
@@ -678,14 +594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -693,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicport_go">
 <a href="#publicport_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
@@ -702,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessmodes_go">
 <a href="#accessmodes_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Modes</a>
@@ -711,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_go">
 <a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -720,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegatewayauth_go">
 <a href="#disablegatewayauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Gateway<wbr>Auth</a>
@@ -729,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
@@ -738,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdomainsuffix_go">
 <a href="#subdomainsuffix_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Domain<wbr>Suffix</a>
@@ -747,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -762,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
@@ -771,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessmodes_nodejs">
 <a href="#accessmodes_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Modes</a>
@@ -780,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_nodejs">
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
@@ -789,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegatewayauth_nodejs">
 <a href="#disablegatewayauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gateway<wbr>Auth</a>
@@ -798,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
@@ -807,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdomainsuffix_nodejs">
 <a href="#subdomainsuffix_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Domain<wbr>Suffix</a>
@@ -816,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -831,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_port_python">
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The public port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_modes_python">
 <a href="#access_modes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>modes</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of access modes for the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_port_python">
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
@@ -858,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_gateway_auth_python">
 <a href="#disable_gateway_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gateway_<wbr>auth</a>
@@ -867,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicates whether to disable GatewayAuth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -876,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sub_domain_suffix_python">
 <a href="#sub_domain_suffix_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>domain_<wbr>suffix</a>
@@ -885,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The subdomain suffix of the application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</h4>
@@ -894,9 +782,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationstate_csharp">
 <a href="#applicationstate_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>State</a>
@@ -904,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -913,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application create date time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application create date time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplaceidentifier_csharp">
 <a href="#marketplaceidentifier_csharp" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Identifier</a>
@@ -922,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -931,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationtype_csharp">
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -940,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeprofile_csharp">
 <a href="#computeprofile_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Profile</a>
@@ -949,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -958,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Errors<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsendpoints_csharp">
 <a href="#httpsendpoints_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoints</a>
@@ -967,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgethttpsendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installscriptactions_csharp">
 <a href="#installscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Script<wbr>Actions</a>
@@ -976,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshendpoints_csharp">
 <a href="#sshendpoints_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoints</a>
@@ -985,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgetendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Application<wbr>Get<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uninstallscriptactions_csharp">
 <a href="#uninstallscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Uninstall<wbr>Script<wbr>Actions</a>
@@ -994,14 +870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationstate_go">
 <a href="#applicationstate_go" style="color: inherit; text-decoration: inherit;">Application<wbr>State</a>
@@ -1009,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -1018,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application create date time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application create date time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplaceidentifier_go">
 <a href="#marketplaceidentifier_go" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Identifier</a>
@@ -1027,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1036,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationtype_go">
 <a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -1045,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeprofile_go">
 <a href="#computeprofile_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Profile</a>
@@ -1054,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeprofileresponse">Compute<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1063,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorsresponse">[]Errors<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsendpoints_go">
 <a href="#httpsendpoints_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoints</a>
@@ -1072,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgethttpsendpointresponse">[]Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installscriptactions_go">
 <a href="#installscriptactions_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Script<wbr>Actions</a>
@@ -1081,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">[]Runtime<wbr>Script<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshendpoints_go">
 <a href="#sshendpoints_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoints</a>
@@ -1090,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgetendpointresponse">[]Application<wbr>Get<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uninstallscriptactions_go">
 <a href="#uninstallscriptactions_go" style="color: inherit; text-decoration: inherit;">Uninstall<wbr>Script<wbr>Actions</a>
@@ -1099,14 +962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">[]Runtime<wbr>Script<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationstate_nodejs">
 <a href="#applicationstate_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>State</a>
@@ -1114,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -1123,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application create date time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application create date time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplaceidentifier_nodejs">
 <a href="#marketplaceidentifier_nodejs" style="color: inherit; text-decoration: inherit;">marketplace<wbr>Identifier</a>
@@ -1132,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1141,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationtype_nodejs">
 <a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
@@ -1150,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeprofile_nodejs">
 <a href="#computeprofile_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Profile</a>
@@ -1159,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeprofileresponse">Compute<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1168,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorsresponse">Errors<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsendpoints_nodejs">
 <a href="#httpsendpoints_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Endpoints</a>
@@ -1177,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgethttpsendpointresponse">Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installscriptactions_nodejs">
 <a href="#installscriptactions_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Script<wbr>Actions</a>
@@ -1186,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">Runtime<wbr>Script<wbr>Action<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshendpoints_nodejs">
 <a href="#sshendpoints_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoints</a>
@@ -1195,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgetendpointresponse">Application<wbr>Get<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uninstallscriptactions_nodejs">
 <a href="#uninstallscriptactions_nodejs" style="color: inherit; text-decoration: inherit;">uninstall<wbr>Script<wbr>Actions</a>
@@ -1204,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">Runtime<wbr>Script<wbr>Action<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_state_python">
 <a href="#application_state_python" style="color: inherit; text-decoration: inherit;">application_<wbr>state</a>
@@ -1219,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1228,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application create date time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application create date time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplace_identifier_python">
 <a href="#marketplace_identifier_python" style="color: inherit; text-decoration: inherit;">marketplace_<wbr>identifier</a>
@@ -1237,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The marketplace identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1246,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_type_python">
 <a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
@@ -1255,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_profile_python">
 <a href="#compute_profile_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>profile</a>
@@ -1264,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeprofileresponse">Compute<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1273,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorsresponse">Sequence[Errors<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_endpoints_python">
 <a href="#https_endpoints_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoints</a>
@@ -1282,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgethttpsendpointresponse">Sequence[Application<wbr>Get<wbr>Https<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application HTTPS endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="install_script_actions_python">
 <a href="#install_script_actions_python" style="color: inherit; text-decoration: inherit;">install_<wbr>script_<wbr>actions</a>
@@ -1291,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">Sequence[Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of install script actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_endpoints_python">
 <a href="#ssh_endpoints_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoints</a>
@@ -1300,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationgetendpointresponse">Sequence[Application<wbr>Get<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of application SSH endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uninstall_script_actions_python">
 <a href="#uninstall_script_actions_python" style="color: inherit; text-decoration: inherit;">uninstall_<wbr>script_<wbr>actions</a>
@@ -1309,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimescriptactionresponse">Sequence[Runtime<wbr>Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of uninstall script actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalecapacityresponse">Autoscale<wbr>Capacity<wbr>Response</h4>
@@ -1318,9 +1154,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstancecount_csharp">
 <a href="#maxinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
@@ -1328,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_csharp">
 <a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
@@ -1337,14 +1170,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstancecount_go">
 <a href="#maxinstancecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
@@ -1352,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_go">
 <a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
@@ -1361,14 +1190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstancecount_nodejs">
 <a href="#maxinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
@@ -1376,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_nodejs">
 <a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
@@ -1385,14 +1210,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_instance_count_python">
 <a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
@@ -1400,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instance_count_python">
 <a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
@@ -1409,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response</h4>
@@ -1418,9 +1238,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1428,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalescheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Schedule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -1437,14 +1254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1452,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalescheduleresponse">[]Autoscale<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -1461,14 +1274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1476,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalescheduleresponse">Autoscale<wbr>Schedule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -1485,14 +1294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1500,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalescheduleresponse">Sequence[Autoscale<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of schedule-based autoscale rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -1509,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone for the autoscale schedule times{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscaleresponse">Autoscale<wbr>Response</h4>
@@ -1518,9 +1322,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1528,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalecapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrence_csharp">
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
@@ -1537,14 +1338,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalerecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1552,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalecapacityresponse">Autoscale<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrence_go">
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
@@ -1561,14 +1358,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1576,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalecapacityresponse">Autoscale<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrence_nodejs">
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
@@ -1585,14 +1378,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1600,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalecapacityresponse">Autoscale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Parameters for load-based autoscale{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrence_python">
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
@@ -1609,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters for schedule-based autoscale{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalescheduleresponse">Autoscale<wbr>Schedule<wbr>Response</h4>
@@ -1618,9 +1406,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -1628,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeandcapacity_csharp">
 <a href="#timeandcapacity_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>And<wbr>Capacity</a>
@@ -1637,14 +1422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -1652,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeandcapacity_go">
 <a href="#timeandcapacity_go" style="color: inherit; text-decoration: inherit;">Time<wbr>And<wbr>Capacity</a>
@@ -1661,14 +1442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -1676,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeandcapacity_nodejs">
 <a href="#timeandcapacity_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>And<wbr>Capacity</a>
@@ -1685,14 +1462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -1700,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Days of the week for a schedule-based autoscale rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_and_capacity_python">
 <a href="#time_and_capacity_python" style="color: inherit; text-decoration: inherit;">time_<wbr>and_<wbr>capacity</a>
@@ -1709,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time and capacity for a schedule-based autoscale rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response</h4>
@@ -1718,9 +1490,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstancecount_csharp">
 <a href="#maxinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
@@ -1728,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_csharp">
 <a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
@@ -1737,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1746,14 +1514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstancecount_go">
 <a href="#maxinstancecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
@@ -1761,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_go">
 <a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
@@ -1770,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1779,14 +1542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstancecount_nodejs">
 <a href="#maxinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
@@ -1794,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_nodejs">
 <a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
@@ -1803,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1812,14 +1570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_instance_count_python">
 <a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
@@ -1827,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instance_count_python">
 <a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
@@ -1836,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1845,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}24-hour time in the form xx:xx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeprofileresponse">Compute<wbr>Profile<wbr>Response</h4>
@@ -1854,9 +1606,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1864,14 +1614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#roleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Role<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1879,14 +1626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#roleresponse">[]Role<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1894,14 +1638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#roleresponse">Role<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1909,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#roleresponse">Sequence[Role<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of roles in the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadisksgroupsresponse">Data<wbr>Disks<wbr>Groups<wbr>Response</h4>
@@ -1918,9 +1658,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -1928,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -1937,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskspernode_csharp">
 <a href="#diskspernode_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>Per<wbr>Node</a>
@@ -1946,14 +1682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -1961,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -1970,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskspernode_go">
 <a href="#diskspernode_go" style="color: inherit; text-decoration: inherit;">Disks<wbr>Per<wbr>Node</a>
@@ -1979,14 +1710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -1994,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -2003,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskspernode_nodejs">
 <a href="#diskspernode_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>Per<wbr>Node</a>
@@ -2012,14 +1738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -2027,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ReadOnly. The DiskSize in GB. Do not set this value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -2036,8 +1758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ReadOnly. The storage account type. Do not set this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disks_per_node_python">
 <a href="#disks_per_node_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>per_<wbr>node</a>
@@ -2045,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of disks per node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errorsresponse">Errors<wbr>Response</h4>
@@ -2054,9 +1774,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2064,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2073,14 +1790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2088,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2097,14 +1810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2112,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2121,14 +1830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2136,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2145,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</h4>
@@ -2154,9 +1858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -2164,14 +1866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the VM{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the VM{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -2179,14 +1878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the VM{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the VM{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -2194,14 +1890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the VM{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the VM{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -2209,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of the VM{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the VM{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response</h4>
@@ -2218,9 +1910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2228,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshprofile_csharp">
 <a href="#sshprofile_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Profile</a>
@@ -2237,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2246,14 +1934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2261,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshprofile_go">
 <a href="#sshprofile_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Profile</a>
@@ -2270,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshprofileresponse">Ssh<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2279,14 +1962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2294,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshprofile_nodejs">
 <a href="#sshprofile_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Profile</a>
@@ -2303,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshprofileresponse">Ssh<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2312,14 +1990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2327,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_profile_python">
 <a href="#ssh_profile_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>profile</a>
@@ -2336,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshprofileresponse">Ssh<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SSH profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2345,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="osprofileresponse">Os<wbr>Profile<wbr>Response</h4>
@@ -2354,9 +2026,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxoperatingsystemprofile_csharp">
 <a href="#linuxoperatingsystemprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Operating<wbr>System<wbr>Profile</a>
@@ -2364,14 +2034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxoperatingsystemprofile_go">
 <a href="#linuxoperatingsystemprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Operating<wbr>System<wbr>Profile</a>
@@ -2379,14 +2046,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxoperatingsystemprofile_nodejs">
 <a href="#linuxoperatingsystemprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Operating<wbr>System<wbr>Profile</a>
@@ -2394,14 +2058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_operating_system_profile_python">
 <a href="#linux_operating_system_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>operating_<wbr>system_<wbr>profile</a>
@@ -2409,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Linux OS profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="roleresponse">Role<wbr>Response</h4>
@@ -2418,9 +2078,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscaleconfiguration_csharp">
 <a href="#autoscaleconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
@@ -2428,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Autoscale<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisksgroups_csharp">
 <a href="#datadisksgroups_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks<wbr>Groups</a>
@@ -2437,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksgroupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptdatadisks_csharp">
 <a href="#encryptdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Data<wbr>Disks</a>
@@ -2446,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardwareprofile_csharp">
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
@@ -2455,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_csharp">
 <a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
@@ -2464,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2473,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2482,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptactions_csharp">
 <a href="#scriptactions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Actions</a>
@@ -2491,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstancecount_csharp">
 <a href="#targetinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
@@ -2500,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmgroupname_csharp">
 <a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
@@ -2509,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_csharp">
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
@@ -2518,14 +2166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscaleconfiguration_go">
 <a href="#autoscaleconfiguration_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
@@ -2533,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleresponse">Autoscale<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisksgroups_go">
 <a href="#datadisksgroups_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks<wbr>Groups</a>
@@ -2542,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksgroupsresponse">[]Data<wbr>Disks<wbr>Groups<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptdatadisks_go">
 <a href="#encryptdatadisks_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Data<wbr>Disks</a>
@@ -2551,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardwareprofile_go">
 <a href="#hardwareprofile_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
@@ -2560,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_go">
 <a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
@@ -2569,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2578,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2587,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptactions_go">
 <a href="#scriptactions_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Actions</a>
@@ -2596,8 +2234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptactionresponse">[]Script<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstancecount_go">
 <a href="#targetinstancecount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
@@ -2605,8 +2242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmgroupname_go">
 <a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
@@ -2614,8 +2250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_go">
 <a href="#virtualnetworkprofile_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
@@ -2623,14 +2258,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscaleconfiguration_nodejs">
 <a href="#autoscaleconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Configuration</a>
@@ -2638,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleresponse">Autoscale<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisksgroups_nodejs">
 <a href="#datadisksgroups_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks<wbr>Groups</a>
@@ -2647,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksgroupsresponse">Data<wbr>Disks<wbr>Groups<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptdatadisks_nodejs">
 <a href="#encryptdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Data<wbr>Disks</a>
@@ -2656,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardwareprofile_nodejs">
 <a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
@@ -2665,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstancecount_nodejs">
 <a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
@@ -2674,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2683,8 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
@@ -2692,8 +2318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptactions_nodejs">
 <a href="#scriptactions_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Actions</a>
@@ -2701,8 +2326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptactionresponse">Script<wbr>Action<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetinstancecount_nodejs">
 <a href="#targetinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
@@ -2710,8 +2334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmgroupname_nodejs">
 <a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
@@ -2719,8 +2342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_nodejs">
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
@@ -2728,14 +2350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscale_configuration_python">
 <a href="#autoscale_configuration_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>configuration</a>
@@ -2743,8 +2362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleresponse">Autoscale<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The autoscale configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_disks_groups_python">
 <a href="#data_disks_groups_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks_<wbr>groups</a>
@@ -2752,8 +2370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksgroupsresponse">Sequence[Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_data_disks_python">
 <a href="#encrypt_data_disks_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>data_<wbr>disks</a>
@@ -2761,8 +2378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardware_profile_python">
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
@@ -2770,8 +2386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instance_count_python">
 <a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
@@ -2779,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2788,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
@@ -2797,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_actions_python">
 <a href="#script_actions_python" style="color: inherit; text-decoration: inherit;">script_<wbr>actions</a>
@@ -2806,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptactionresponse">Sequence[Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of script actions on the role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_instance_count_python">
 <a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
@@ -2815,8 +2426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="v_m_group_name_python">
 <a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
@@ -2824,8 +2434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_profile_python">
 <a href="#virtual_network_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>profile</a>
@@ -2833,8 +2442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual network profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="runtimescriptactionresponse">Runtime<wbr>Script<wbr>Action<wbr>Response</h4>
@@ -2842,9 +2450,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -2852,8 +2458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2861,8 +2466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -2870,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -2879,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -2888,14 +2490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -2903,8 +2502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2912,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -2921,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -2930,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -2939,14 +2534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -2954,8 +2546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2963,8 +2554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -2972,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2981,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -2990,14 +2578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -3005,8 +2590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The application name of the script action, if any.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3014,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -3023,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of roles where script will be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -3032,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3041,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The parameters for the script{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scriptactionresponse">Script<wbr>Action<wbr>Response</h4>
@@ -3050,9 +2630,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3060,8 +2638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -3069,8 +2646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -3078,14 +2654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3093,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -3102,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -3111,14 +2682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3126,8 +2694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3135,8 +2702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -3144,14 +2710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3159,8 +2722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the script action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3168,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parameters for the script provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -3177,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI to the script.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshprofileresponse">Ssh<wbr>Profile<wbr>Response</h4>
@@ -3186,9 +2746,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -3196,14 +2754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>HDInsight.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -3211,14 +2766,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">[]Ssh<wbr>Public<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -3226,14 +2778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -3241,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
@@ -3250,9 +2798,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificatedata_csharp">
 <a href="#certificatedata_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
@@ -3260,14 +2806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificatedata_go">
 <a href="#certificatedata_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
@@ -3275,14 +2818,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificatedata_nodejs">
 <a href="#certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
@@ -3290,14 +2830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_data_python">
 <a href="#certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
@@ -3305,8 +2842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</h4>
@@ -3314,9 +2850,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3324,8 +2858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3333,14 +2866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3348,8 +2878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3357,14 +2886,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3372,8 +2898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3381,14 +2906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3396,8 +2918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3405,8 +2926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

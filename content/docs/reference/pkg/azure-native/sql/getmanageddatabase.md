@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedinstancename_csharp">
 <a href="#managedinstancename_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedinstancename_go">
 <a href="#managedinstancename_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedinstancename_nodejs">
 <a href="#managedinstancename_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_instance_name_python">
 <a href="#managed_instance_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_csharp">
 <a href="#defaultsecondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestrestorepoint_csharp">
 <a href="#earliestrestorepoint_csharp" style="color: inherit; text-decoration: inherit;">Earliest<wbr>Restore<wbr>Point</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failovergroupid_csharp">
 <a href="#failovergroupid_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Group<wbr>Id</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autocompleterestore_csharp">
 <a href="#autocompleterestore_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Complete<wbr>Restore</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogcollation_csharp">
 <a href="#catalogcollation_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Collation</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_csharp">
 <a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastbackupname_csharp">
 <a href="#lastbackupname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Name</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longtermretentionbackupresourceid_csharp">
 <a href="#longtermretentionbackupresourceid_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverabledatabaseid_csharp">
 <a href="#recoverabledatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorabledroppeddatabaseid_csharp">
 <a href="#restorabledroppeddatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorepointintime_csharp">
 <a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabaseid_csharp">
 <a href="#sourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagecontainersastoken_csharp">
 <a href="#storagecontainersastoken_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Sas<wbr>Token</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagecontaineruri_csharp">
 <a href="#storagecontaineruri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Uri</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_go">
 <a href="#defaultsecondarylocation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestrestorepoint_go">
 <a href="#earliestrestorepoint_go" style="color: inherit; text-decoration: inherit;">Earliest<wbr>Restore<wbr>Point</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failovergroupid_go">
 <a href="#failovergroupid_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Group<wbr>Id</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autocompleterestore_go">
 <a href="#autocompleterestore_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Complete<wbr>Restore</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogcollation_go">
 <a href="#catalogcollation_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Collation</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_go">
 <a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastbackupname_go">
 <a href="#lastbackupname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Name</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longtermretentionbackupresourceid_go">
 <a href="#longtermretentionbackupresourceid_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverabledatabaseid_go">
 <a href="#recoverabledatabaseid_go" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorabledroppeddatabaseid_go">
 <a href="#restorabledroppeddatabaseid_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorepointintime_go">
 <a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabaseid_go">
 <a href="#sourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagecontainersastoken_go">
 <a href="#storagecontainersastoken_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Sas<wbr>Token</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagecontaineruri_go">
 <a href="#storagecontaineruri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Uri</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -595,14 +528,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_nodejs">
 <a href="#defaultsecondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Location</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestrestorepoint_nodejs">
 <a href="#earliestrestorepoint_nodejs" style="color: inherit; text-decoration: inherit;">earliest<wbr>Restore<wbr>Point</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failovergroupid_nodejs">
 <a href="#failovergroupid_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Group<wbr>Id</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autocompleterestore_nodejs">
 <a href="#autocompleterestore_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Complete<wbr>Restore</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogcollation_nodejs">
 <a href="#catalogcollation_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Collation</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_nodejs">
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastbackupname_nodejs">
 <a href="#lastbackupname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Name</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longtermretentionbackupresourceid_nodejs">
 <a href="#longtermretentionbackupresourceid_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverabledatabaseid_nodejs">
 <a href="#recoverabledatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recoverable<wbr>Database<wbr>Id</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorabledroppeddatabaseid_nodejs">
 <a href="#restorabledroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorepointintime_nodejs">
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedatabaseid_nodejs">
 <a href="#sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagecontainersastoken_nodejs">
 <a href="#storagecontainersastoken_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Sas<wbr>Token</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagecontaineruri_nodejs">
 <a href="#storagecontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Uri</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -799,14 +708,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_secondary_location_python">
 <a href="#default_secondary_location_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>location</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Geo paired region.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliest_restore_point_python">
 <a href="#earliest_restore_point_python" style="color: inherit; text-decoration: inherit;">earliest_<wbr>restore_<wbr>point</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Earliest restore point in time for point in time restore.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failover_group_id_python">
 <a href="#failover_group_id_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>group_<wbr>id</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance Failover Group resource identifier that this managed database belongs to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_complete_restore_python">
 <a href="#auto_complete_restore_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>complete_<wbr>restore</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to auto complete restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalog_collation_python">
 <a href="#catalog_collation_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>collation</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="collation_python">
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collation of the managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_backup_name_python">
 <a href="#last_backup_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>name</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last backup file name for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="long_term_retention_backup_resource_id_python">
 <a href="#long_term_retention_backup_resource_id_python" style="color: inherit; text-decoration: inherit;">long_<wbr>term_<wbr>retention_<wbr>backup_<wbr>resource_<wbr>id</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the Long Term Retention backup to be used for restore of this managed database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recoverable_database_id_python">
 <a href="#recoverable_database_id_python" style="color: inherit; text-decoration: inherit;">recoverable_<wbr>database_<wbr>id</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restorable_dropped_database_id_python">
 <a href="#restorable_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>id</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The restorable dropped database resource id to restore when creating this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="restore_point_in_time_python">
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_database_id_python">
 <a href="#source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_container_sas_token_python">
 <a href="#storage_container_sas_token_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>sas_<wbr>token</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_container_uri_python">
 <a href="#storage_container_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>uri</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

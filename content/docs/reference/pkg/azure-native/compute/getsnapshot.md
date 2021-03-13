@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotname_csharp">
 <a href="#snapshotname_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotname_go">
 <a href="#snapshotname_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotname_nodejs">
 <a href="#snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_name_python">
 <a href="#snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdata_csharp">
 <a href="#creationdata_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Data</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Creation<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizebytes_csharp">
 <a href="#disksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskstate_csharp">
 <a href="#diskstate_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_csharp">
 <a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timecreated_csharp">
 <a href="#timecreated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_csharp">
 <a href="#uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskaccessid_csharp">
 <a href="#diskaccessid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionsettingscollection_csharp">
 <a href="#encryptionsettingscollection_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Collection</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingscollectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Encryption<wbr>Settings<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extendedlocation_csharp">
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervgeneration_csharp">
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incremental_csharp">
 <a href="#incremental_csharp" style="color: inherit; text-decoration: inherit;">Incremental</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkaccesspolicy_csharp">
 <a href="#networkaccesspolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purchaseplan_csharp">
 <a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Snapshot<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -364,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdata_go">
 <a href="#creationdata_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Data</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationdataresponse">Creation<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizebytes_go">
 <a href="#disksizebytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskstate_go">
 <a href="#diskstate_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>State</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_go">
 <a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timecreated_go">
 <a href="#timecreated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Created</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_go">
 <a href="#uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskaccessid_go">
 <a href="#diskaccessid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionsettingscollection_go">
 <a href="#encryptionsettingscollection_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Collection</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingscollectionresponse">Encryption<wbr>Settings<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extendedlocation_go">
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incremental_go">
 <a href="#incremental_go" style="color: inherit; text-decoration: inherit;">Incremental</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkaccesspolicy_go">
 <a href="#networkaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Access<wbr>Policy</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purchaseplan_go">
 <a href="#purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotskuresponse">Snapshot<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -577,14 +512,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdata_nodejs">
 <a href="#creationdata_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Data</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationdataresponse">Creation<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizebytes_nodejs">
 <a href="#disksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Bytes</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskstate_nodejs">
 <a href="#diskstate_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>State</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_nodejs">
 <a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timecreated_nodejs">
 <a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_nodejs">
 <a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskaccessid_nodejs">
 <a href="#diskaccessid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Access<wbr>Id</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionsettingscollection_nodejs">
 <a href="#encryptionsettingscollection_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings<wbr>Collection</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingscollectionresponse">Encryption<wbr>Settings<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extendedlocation_nodejs">
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hypervgeneration_nodejs">
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incremental_nodejs">
 <a href="#incremental_nodejs" style="color: inherit; text-decoration: inherit;">incremental</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkaccesspolicy_nodejs">
 <a href="#networkaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access<wbr>Policy</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purchaseplan_nodejs">
 <a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotskuresponse">Snapshot<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -790,14 +700,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_data_python">
 <a href="#creation_data_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>data</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#creationdataresponse">Creation<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_size_bytes_python">
 <a href="#disk_size_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>bytes</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_state_python">
 <a href="#disk_state_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>state</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_by_python">
 <a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unused. Always Null.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The disk provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_created_python">
 <a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the snapshot was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_id_python">
 <a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_access_id_python">
 <a href="#disk_access_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>access_<wbr>id</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_settings_collection_python">
 <a href="#encryption_settings_collection_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>collection</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingscollectionresponse">Encryption<wbr>Settings<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="extended_location_python">
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incremental_python">
 <a href="#incremental_python" style="color: inherit; text-decoration: inherit;">incremental</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_access_policy_python">
 <a href="#network_access_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access_<wbr>policy</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="purchase_plan_python">
 <a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotskuresponse">Snapshot<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1018,9 +902,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -1028,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceuniqueid_csharp">
 <a href="#sourceuniqueid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Unique<wbr>Id</a>
@@ -1037,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_csharp">
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
@@ -1046,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_csharp">
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -1055,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicalsectorsize_csharp">
 <a href="#logicalsectorsize_csharp" style="color: inherit; text-decoration: inherit;">Logical<wbr>Sector<wbr>Size</a>
@@ -1064,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
@@ -1073,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1082,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1091,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploadsizebytes_csharp">
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
@@ -1100,14 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
@@ -1115,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceuniqueid_go">
 <a href="#sourceuniqueid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Unique<wbr>Id</a>
@@ -1124,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_go">
 <a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
@@ -1133,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_go">
 <a href="#imagereference_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
@@ -1142,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicalsectorsize_go">
 <a href="#logicalsectorsize_go" style="color: inherit; text-decoration: inherit;">Logical<wbr>Sector<wbr>Size</a>
@@ -1151,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
@@ -1160,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1169,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1178,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploadsizebytes_go">
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
@@ -1187,14 +1050,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
@@ -1202,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceuniqueid_nodejs">
 <a href="#sourceuniqueid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Unique<wbr>Id</a>
@@ -1211,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_nodejs">
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
@@ -1220,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagereference_nodejs">
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
@@ -1229,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicalsectorsize_nodejs">
 <a href="#logicalsectorsize_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Sector<wbr>Size</a>
@@ -1238,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
@@ -1247,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
@@ -1256,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -1265,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uploadsizebytes_nodejs">
 <a href="#uploadsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Size<wbr>Bytes</a>
@@ -1274,14 +1126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
@@ -1289,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_unique_id_python">
 <a href="#source_unique_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>unique_<wbr>id</a>
@@ -1298,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gallery_image_reference_python">
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
@@ -1307,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_reference_python">
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
@@ -1316,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Disk source information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logical_sector_size_python">
 <a href="#logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
@@ -1325,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
@@ -1334,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
@@ -1343,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -1352,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upload_size_bytes_python">
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
@@ -1361,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionresponse">Encryption<wbr>Response</h4>
@@ -1370,9 +1210,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1380,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1389,14 +1226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1404,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1413,14 +1246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
@@ -1428,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1437,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -1452,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1461,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionsettingscollectionresponse">Encryption<wbr>Settings<wbr>Collection<wbr>Response</h4>
@@ -1470,9 +1294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1480,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionsettings_csharp">
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
@@ -1489,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionsettingsversion_csharp">
 <a href="#encryptionsettingsversion_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Version</a>
@@ -1498,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1513,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionsettings_go">
 <a href="#encryptionsettings_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
@@ -1522,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingselementresponse">[]Encryption<wbr>Settings<wbr>Element<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionsettingsversion_go">
 <a href="#encryptionsettingsversion_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Version</a>
@@ -1531,14 +1346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1546,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionsettings_nodejs">
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
@@ -1555,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionsettingsversion_nodejs">
 <a href="#encryptionsettingsversion_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings<wbr>Version</a>
@@ -1564,14 +1374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1579,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_settings_python">
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
@@ -1588,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_settings_version_python">
 <a href="#encryption_settings_version_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>version</a>
@@ -1597,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response</h4>
@@ -1606,9 +1410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_csharp">
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -1616,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -1625,14 +1426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_go">
 <a href="#diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -1640,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -1649,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_nodejs">
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
@@ -1664,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -1673,14 +1466,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_key_python">
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
@@ -1688,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -1697,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
@@ -1706,9 +1494,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1716,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1725,14 +1510,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1740,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1749,14 +1530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1764,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1773,14 +1550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1788,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1797,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</h4>
@@ -1806,9 +1578,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1816,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1825,14 +1594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1840,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1849,14 +1614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1864,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1873,14 +1634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1888,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1897,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</h4>
@@ -1906,9 +1662,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyurl_csharp">
 <a href="#keyurl_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Url</a>
@@ -1916,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -1925,14 +1678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyurl_go">
 <a href="#keyurl_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Url</a>
@@ -1940,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -1949,14 +1698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyurl_nodejs">
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
@@ -1964,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
@@ -1973,14 +1718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_url_python">
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
@@ -1988,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
@@ -1997,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</h4>
@@ -2006,9 +1746,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secreturl_csharp">
 <a href="#secreturl_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
@@ -2016,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -2025,14 +1762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secreturl_go">
 <a href="#secreturl_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
@@ -2040,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
@@ -2049,14 +1782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secreturl_nodejs">
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
@@ -2064,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
@@ -2073,14 +1802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secret_url_python">
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
@@ -2088,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
@@ -2097,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</h4>
@@ -2106,9 +1830,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2116,8 +1838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -2125,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2134,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotioncode_csharp">
 <a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
@@ -2143,14 +1862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2158,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -2167,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2176,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotioncode_go">
 <a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
@@ -2185,14 +1898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2200,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -2209,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2218,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotioncode_nodejs">
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
@@ -2227,14 +1934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2242,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -2251,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2260,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="promotion_code_python">
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
@@ -2269,8 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="snapshotskuresponse">Snapshot<wbr>Sku<wbr>Response</h4>
@@ -2278,9 +1978,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2288,8 +1986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku tier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku tier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2297,14 +1994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2312,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku tier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku tier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2321,14 +2014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2336,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku tier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku tier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2345,14 +2034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2360,8 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku tier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku tier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2369,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcevaultresponse">Source<wbr>Vault<wbr>Response</h4>
@@ -2378,9 +2062,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2388,14 +2070,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2403,14 +2082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2418,14 +2094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2433,8 +2106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

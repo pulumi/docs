@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentname_csharp">
 <a href="#deploymentname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentname_go">
 <a href="#deploymentname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentname_nodejs">
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_name_python">
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentpropertiesextendedresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Outputs.<wbr>Deployment<wbr>Properties<wbr>Extended<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Deployment tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Deployment tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentpropertiesextendedresponse">Deployment<wbr>Properties<wbr>Extended<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Deployment tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Deployment tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentpropertiesextendedresponse">Deployment<wbr>Properties<wbr>Extended<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -331,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Deployment tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Deployment tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentpropertiesextendedresponse">Deployment<wbr>Properties<wbr>Extended<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Deployment properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}the location of the deployment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Deployment tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Deployment tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -425,14 +374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -440,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -449,14 +394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -464,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -473,14 +414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -488,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The attributes of the token that the alias path is referring to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -497,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the token that the alias path is referring to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aliaspathresponse">Alias<wbr>Path<wbr>Response</h4>
@@ -506,9 +442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -516,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversions_csharp">
 <a href="#apiversions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Versions</a>
@@ -525,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The API versions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -534,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -543,14 +474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -558,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversions_go">
 <a href="#apiversions_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Versions</a>
@@ -567,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The API versions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -576,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -585,14 +510,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -600,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversions_nodejs">
 <a href="#apiversions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Versions</a>
@@ -609,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The API versions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -618,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -627,14 +546,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -642,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata of the alias path. If missing, fall back to the default metadata of the alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_versions_python">
 <a href="#api_versions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>versions</a>
@@ -651,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The API versions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -660,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path of an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -669,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pattern for an alias path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</h4>
@@ -678,9 +590,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="phrase_csharp">
 <a href="#phrase_csharp" style="color: inherit; text-decoration: inherit;">Phrase</a>
@@ -688,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -697,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variable_csharp">
 <a href="#variable_csharp" style="color: inherit; text-decoration: inherit;">Variable</a>
@@ -706,14 +614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="phrase_go">
 <a href="#phrase_go" style="color: inherit; text-decoration: inherit;">Phrase</a>
@@ -721,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -730,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variable_go">
 <a href="#variable_go" style="color: inherit; text-decoration: inherit;">Variable</a>
@@ -739,14 +642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="phrase_nodejs">
 <a href="#phrase_nodejs" style="color: inherit; text-decoration: inherit;">phrase</a>
@@ -754,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -763,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variable_nodejs">
 <a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
@@ -772,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="phrase_python">
 <a href="#phrase_python" style="color: inherit; text-decoration: inherit;">phrase</a>
@@ -787,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias pattern phrase.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -796,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of alias pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variable_python">
 <a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
@@ -805,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alias pattern variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aliasresponse">Alias<wbr>Response</h4>
@@ -814,9 +706,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultmetadata_csharp">
 <a href="#defaultmetadata_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Metadata</a>
@@ -824,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpath_csharp">
 <a href="#defaultpath_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Path</a>
@@ -833,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpattern_csharp">
 <a href="#defaultpattern_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Pattern</a>
@@ -842,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -851,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -860,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -869,14 +754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultmetadata_go">
 <a href="#defaultmetadata_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Metadata</a>
@@ -884,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpath_go">
 <a href="#defaultpath_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Path</a>
@@ -893,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpattern_go">
 <a href="#defaultpattern_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Pattern</a>
@@ -902,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -911,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -920,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathresponse">[]Alias<wbr>Path<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -929,14 +806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultmetadata_nodejs">
 <a href="#defaultmetadata_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Metadata</a>
@@ -944,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpath_nodejs">
 <a href="#defaultpath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Path</a>
@@ -953,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpattern_nodejs">
 <a href="#defaultpattern_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pattern</a>
@@ -962,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -971,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alias name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -980,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathresponse">Alias<wbr>Path<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -989,14 +858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_metadata_python">
 <a href="#default_metadata_python" style="color: inherit; text-decoration: inherit;">default_<wbr>metadata</a>
@@ -1004,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathmetadataresponse">Alias<wbr>Path<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_path_python">
 <a href="#default_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>path</a>
@@ -1013,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default path for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_pattern_python">
 <a href="#default_pattern_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pattern</a>
@@ -1022,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspatternresponse">Alias<wbr>Pattern<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default pattern for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1031,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alias name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alias name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -1040,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliaspathresponse">Sequence[Alias<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The paths for an alias.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1049,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the alias.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiprofileresponse">Api<wbr>Profile<wbr>Response</h4>
@@ -1058,9 +918,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -1068,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profileversion_csharp">
 <a href="#profileversion_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Version</a>
@@ -1077,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The profile version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -1092,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profileversion_go">
 <a href="#profileversion_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Version</a>
@@ -1101,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The profile version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -1116,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profileversion_nodejs">
 <a href="#profileversion_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Version</a>
@@ -1125,14 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The profile version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The profile version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -1140,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_version_python">
 <a href="#profile_version_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>version</a>
@@ -1149,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The profile version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The profile version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="basicdependencyresponse">Basic<wbr>Dependency<wbr>Response</h4>
@@ -1158,9 +1002,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1168,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -1177,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1186,14 +1026,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1201,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -1210,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1219,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1234,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -1243,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1252,14 +1082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1267,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -1276,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -1285,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="debugsettingresponse">Debug<wbr>Setting<wbr>Response</h4>
@@ -1294,9 +1118,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="detaillevel_csharp">
 <a href="#detaillevel_csharp" style="color: inherit; text-decoration: inherit;">Detail<wbr>Level</a>
@@ -1304,14 +1126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="detaillevel_go">
 <a href="#detaillevel_go" style="color: inherit; text-decoration: inherit;">Detail<wbr>Level</a>
@@ -1319,14 +1138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="detaillevel_nodejs">
 <a href="#detaillevel_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Level</a>
@@ -1334,14 +1150,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="detail_level_python">
 <a href="#detail_level_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>level</a>
@@ -1349,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dependencyresponse">Dependency<wbr>Response</h4>
@@ -1358,9 +1170,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1368,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#basicdependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Basic<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1377,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -1386,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1395,14 +1202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
 <a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1410,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#basicdependencyresponse">[]Basic<wbr>Dependency<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1419,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -1428,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1437,14 +1238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
@@ -1452,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#basicdependencyresponse">Basic<wbr>Dependency<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1461,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -1470,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1479,14 +1274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
@@ -1494,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#basicdependencyresponse">Sequence[Basic<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1503,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -1512,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dependency resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -1521,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dependency resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentpropertiesextendedresponse">Deployment<wbr>Properties<wbr>Extended<wbr>Response</h4>
@@ -1530,9 +1318,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlationid_csharp">
 <a href="#correlationid_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -1540,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="debugsetting_csharp">
 <a href="#debugsetting_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Setting</a>
@@ -1549,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#debugsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencies_csharp">
 <a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -1558,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1567,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1576,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The deployment error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1585,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onerrordeployment_csharp">
 <a href="#onerrordeployment_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Error<wbr>Deployment</a>
@@ -1594,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onerrordeploymentextendedresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputresources_csharp">
 <a href="#outputresources_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Resources</a>
@@ -1603,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1612,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1621,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameterslink_csharp">
 <a href="#parameterslink_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Link</a>
@@ -1630,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterslinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providers_csharp">
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
@@ -1639,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1648,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatehash_csharp">
 <a href="#templatehash_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Hash</a>
@@ -1657,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatelink_csharp">
 <a href="#templatelink_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Link</a>
@@ -1666,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatelinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Template<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1675,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatedresources_csharp">
 <a href="#validatedresources_csharp" style="color: inherit; text-decoration: inherit;">Validated<wbr>Resources</a>
@@ -1684,14 +1454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlationid_go">
 <a href="#correlationid_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -1699,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="debugsetting_go">
 <a href="#debugsetting_go" style="color: inherit; text-decoration: inherit;">Debug<wbr>Setting</a>
@@ -1708,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencies_go">
 <a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -1717,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dependencyresponse">[]Dependency<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1726,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1735,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1744,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onerrordeployment_go">
 <a href="#onerrordeployment_go" style="color: inherit; text-decoration: inherit;">On<wbr>Error<wbr>Deployment</a>
@@ -1753,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputresources_go">
 <a href="#outputresources_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Resources</a>
@@ -1762,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">[]Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1771,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1780,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameterslink_go">
 <a href="#parameterslink_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Link</a>
@@ -1789,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providers_go">
 <a href="#providers_go" style="color: inherit; text-decoration: inherit;">Providers</a>
@@ -1798,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresponse">[]Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1807,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatehash_go">
 <a href="#templatehash_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Hash</a>
@@ -1816,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatelink_go">
 <a href="#templatelink_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Link</a>
@@ -1825,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1834,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatedresources_go">
 <a href="#validatedresources_go" style="color: inherit; text-decoration: inherit;">Validated<wbr>Resources</a>
@@ -1843,14 +1594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">[]Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlationid_nodejs">
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
@@ -1858,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="debugsetting_nodejs">
 <a href="#debugsetting_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Setting</a>
@@ -1867,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencies_nodejs">
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -1876,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dependencyresponse">Dependency<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1885,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1894,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1903,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onerrordeployment_nodejs">
 <a href="#onerrordeployment_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Deployment</a>
@@ -1912,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputresources_nodejs">
 <a href="#outputresources_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Resources</a>
@@ -1921,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1930,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1939,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameterslink_nodejs">
 <a href="#parameterslink_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Link</a>
@@ -1948,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providers_nodejs">
 <a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
@@ -1957,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresponse">Provider<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1966,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatehash_nodejs">
 <a href="#templatehash_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Hash</a>
@@ -1975,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templatelink_nodejs">
 <a href="#templatelink_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Link</a>
@@ -1984,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -1993,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatedresources_nodejs">
 <a href="#validatedresources_nodejs" style="color: inherit; text-decoration: inherit;">validated<wbr>Resources</a>
@@ -2002,14 +1734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlation_id_python">
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
@@ -2017,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="debug_setting_python">
 <a href="#debug_setting_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>setting</a>
@@ -2026,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#debugsettingresponse">Debug<wbr>Setting<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The debug setting of the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dependencies_python">
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -2035,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dependencyresponse">Sequence[Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of deployment dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2044,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The duration of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -2053,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The deployment error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2062,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment mode. Possible values are Incremental and Complete.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="on_error_deployment_python">
 <a href="#on_error_deployment_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error_<wbr>deployment</a>
@@ -2071,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The deployment on error behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_resources_python">
 <a href="#output_resources_python" style="color: inherit; text-decoration: inherit;">output_<wbr>resources</a>
@@ -2080,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Array of provisioned resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -2089,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Key/value pairs that represent deployment output.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -2098,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Deployment parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_link_python">
 <a href="#parameters_link_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>link</a>
@@ -2107,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterslinkresponse">Parameters<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the parameters. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providers_python">
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
@@ -2116,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresponse">Sequence[Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of resource providers needed for the deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2125,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Denotes the state of provisioning.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_hash_python">
 <a href="#template_hash_python" style="color: inherit; text-decoration: inherit;">template_<wbr>hash</a>
@@ -2134,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hash produced for the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_link_python">
 <a href="#template_link_python" style="color: inherit; text-decoration: inherit;">template_<wbr>link</a>
@@ -2143,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#templatelinkresponse">Template<wbr>Link<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URI referencing the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -2152,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the template deployment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validated_resources_python">
 <a href="#validated_resources_python" style="color: inherit; text-decoration: inherit;">validated_<wbr>resources</a>
@@ -2161,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of validated resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response</h4>
@@ -2170,9 +1882,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_csharp">
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -2180,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2189,14 +1898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional info type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The additional info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_go">
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -2204,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2213,14 +1918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional info type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The additional info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_nodejs">
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
@@ -2228,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2237,14 +1938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional info type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The additional info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_python">
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
@@ -2252,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2261,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The additional info type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The additional info type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
@@ -2270,9 +1966,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinfo_csharp">
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
@@ -2280,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#erroradditionalinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2289,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2298,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2307,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2316,14 +2006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinfo_go">
 <a href="#additionalinfo_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
@@ -2331,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#erroradditionalinforesponse">[]Error<wbr>Additional<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2340,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2349,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">[]Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2358,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2367,14 +2050,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinfo_nodejs">
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
@@ -2382,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2391,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2400,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2409,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2418,14 +2094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additional_info_python">
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
@@ -2433,8 +2106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#erroradditionalinforesponse">Sequence[Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2442,8 +2114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2451,8 +2122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Sequence[Error<wbr>Response<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The error details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2460,8 +2130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2469,8 +2138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="onerrordeploymentextendedresponse">On<wbr>Error<wbr>Deployment<wbr>Extended<wbr>Response</h4>
@@ -2478,9 +2146,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2488,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentname_csharp">
 <a href="#deploymentname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -2497,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2506,14 +2170,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2521,8 +2182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentname_go">
 <a href="#deploymentname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -2530,8 +2190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2539,14 +2198,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -2554,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentname_nodejs">
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
@@ -2563,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2572,14 +2226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2587,8 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the provisioning for the on error deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_name_python">
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
@@ -2596,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The deployment to be used on error case.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2605,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parameterslinkresponse">Parameters<wbr>Link<wbr>Response</h4>
@@ -2614,9 +2262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -2624,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentversion_csharp">
 <a href="#contentversion_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
@@ -2633,14 +2278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -2648,8 +2290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentversion_go">
 <a href="#contentversion_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
@@ -2657,14 +2298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2672,8 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentversion_nodejs">
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
@@ -2681,14 +2318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -2696,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the parameters file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_version_python">
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
@@ -2705,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response</h4>
@@ -2714,9 +2346,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extendedlocations_csharp">
 <a href="#extendedlocations_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Locations</a>
@@ -2724,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2733,8 +2362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2742,14 +2370,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extendedlocations_go">
 <a href="#extendedlocations_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Locations</a>
@@ -2757,8 +2382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2766,8 +2390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2775,14 +2398,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extendedlocations_nodejs">
 <a href="#extendedlocations_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Locations</a>
@@ -2790,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2799,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2808,14 +2426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="extended_locations_python">
 <a href="#extended_locations_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>locations</a>
@@ -2823,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended locations for the azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2832,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The azure location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The azure location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2841,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The extended location type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The extended location type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response</h4>
@@ -2850,9 +2462,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiprofiles_csharp">
 <a href="#apiprofiles_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Profiles</a>
@@ -2860,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Api<wbr>Profile<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultapiversion_csharp">
 <a href="#defaultapiversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Api<wbr>Version</a>
@@ -2869,8 +2478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -2878,8 +2486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliasresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Alias<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversions_csharp">
 <a href="#apiversions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Versions</a>
@@ -2887,8 +2494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -2896,8 +2502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationmappings_csharp">
 <a href="#locationmappings_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Mappings</a>
@@ -2905,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerextendedlocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -2914,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2923,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -2932,14 +2534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiprofiles_go">
 <a href="#apiprofiles_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Profiles</a>
@@ -2947,8 +2546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiprofileresponse">[]Api<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultapiversion_go">
 <a href="#defaultapiversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Api<wbr>Version</a>
@@ -2956,8 +2554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -2965,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliasresponse">[]Alias<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversions_go">
 <a href="#apiversions_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Versions</a>
@@ -2974,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -2983,8 +2578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationmappings_go">
 <a href="#locationmappings_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Mappings</a>
@@ -2992,8 +2586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerextendedlocationresponse">[]Provider<wbr>Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3001,8 +2594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3010,8 +2602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -3019,14 +2610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiprofiles_nodejs">
 <a href="#apiprofiles_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Profiles</a>
@@ -3034,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiprofileresponse">Api<wbr>Profile<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultapiversion_nodejs">
 <a href="#defaultapiversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Api<wbr>Version</a>
@@ -3043,8 +2630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -3052,8 +2638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliasresponse">Alias<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversions_nodejs">
 <a href="#apiversions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Versions</a>
@@ -3061,8 +2646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -3070,8 +2654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationmappings_nodejs">
 <a href="#locationmappings_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Mappings</a>
@@ -3079,8 +2662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3088,8 +2670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3097,8 +2678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -3106,14 +2686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_profiles_python">
 <a href="#api_profiles_python" style="color: inherit; text-decoration: inherit;">api_<wbr>profiles</a>
@@ -3121,8 +2698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiprofileresponse">Sequence[Api<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The API profiles for the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="default_api_version_python">
 <a href="#default_api_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>api_<wbr>version</a>
@@ -3130,8 +2706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -3139,8 +2714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aliasresponse">Sequence[Alias<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The aliases that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_versions_python">
 <a href="#api_versions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>versions</a>
@@ -3148,8 +2722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The API version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -3157,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The additional capabilities offered by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_mappings_python">
 <a href="#location_mappings_python" style="color: inherit; text-decoration: inherit;">location_<wbr>mappings</a>
@@ -3166,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerextendedlocationresponse">Sequence[Provider<wbr>Extended<wbr>Location<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location mappings that are supported by this resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3175,8 +2746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of locations where this resource type can be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3184,8 +2754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -3193,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerresponse">Provider<wbr>Response</h4>
@@ -3202,9 +2770,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3212,8 +2778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationpolicy_csharp">
 <a href="#registrationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Policy</a>
@@ -3221,8 +2786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationstate_csharp">
 <a href="#registrationstate_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>State</a>
@@ -3230,8 +2794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetypes_csharp">
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -3239,8 +2802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresourcetyperesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -3248,14 +2810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3263,8 +2822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationpolicy_go">
 <a href="#registrationpolicy_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Policy</a>
@@ -3272,8 +2830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationstate_go">
 <a href="#registrationstate_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>State</a>
@@ -3281,8 +2838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetypes_go">
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -3290,8 +2846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresourcetyperesponse">[]Provider<wbr>Resource<wbr>Type<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -3299,14 +2854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3314,8 +2866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationpolicy_nodejs">
 <a href="#registrationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Policy</a>
@@ -3323,8 +2874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationstate_nodejs">
 <a href="#registrationstate_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>State</a>
@@ -3332,8 +2882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetypes_nodejs">
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
@@ -3341,8 +2890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -3350,14 +2898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3365,8 +2910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_policy_python">
 <a href="#registration_policy_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>policy</a>
@@ -3374,8 +2918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration policy of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_state_python">
 <a href="#registration_state_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>state</a>
@@ -3383,8 +2926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The registration state of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_types_python">
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
@@ -3392,8 +2934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerresourcetyperesponse">Sequence[Provider<wbr>Resource<wbr>Type<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of provider resource types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -3401,8 +2942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>
@@ -3410,9 +2950,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3420,14 +2958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3435,14 +2970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3450,14 +2982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3465,8 +2994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="templatelinkresponse">Template<wbr>Link<wbr>Response</h4>
@@ -3474,9 +3002,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentversion_csharp">
 <a href="#contentversion_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
@@ -3484,8 +3010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3493,8 +3018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -3502,8 +3026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -3511,8 +3034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -3520,14 +3042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentversion_go">
 <a href="#contentversion_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Version</a>
@@ -3535,8 +3054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3544,8 +3062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -3553,8 +3070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -3562,8 +3078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -3571,14 +3086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentversion_nodejs">
 <a href="#contentversion_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Version</a>
@@ -3586,8 +3098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3595,8 +3106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -3604,8 +3114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -3613,8 +3122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -3622,14 +3130,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_version_python">
 <a href="#content_version_python" style="color: inherit; text-decoration: inherit;">content_<wbr>version</a>
@@ -3637,8 +3142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If included, must match the ContentVersion in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3646,8 +3150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -3655,8 +3158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -3664,8 +3166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -3673,8 +3174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

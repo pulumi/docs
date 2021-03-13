@@ -14,11 +14,17 @@ Describes a Shared Private Link Resource managed by the Azure Cognitive Search s
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### SharedPrivateLinkResourceCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -45,9 +51,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -78,9 +87,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -98,9 +110,12 @@ shared_private_link_resource = azure_native.search.SharedPrivateLinkResource("sh
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,9 +134,16 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SharedPrivateLinkResource Resource {#create}
@@ -146,9 +168,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -156,9 +176,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -166,9 +184,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -176,10 +192,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -205,9 +218,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -215,9 +226,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,9 +234,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -235,9 +242,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -245,18 +250,13 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,9 +264,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,9 +272,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,10 +280,7 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -302,9 +295,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -312,8 +303,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searchservicename_csharp">
 <a href="#searchservicename_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Service<wbr>Name</a>
@@ -321,8 +311,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -330,8 +319,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedprivatelinkresourcename_csharp">
 <a href="#sharedprivatelinkresourcename_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Name</a>
@@ -339,14 +327,11 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -354,8 +339,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searchservicename_go">
 <a href="#searchservicename_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Service<wbr>Name</a>
@@ -363,8 +347,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -372,8 +355,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedprivatelinkresourcename_go">
 <a href="#sharedprivatelinkresourcename_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Name</a>
@@ -381,14 +363,11 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -396,8 +375,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searchservicename_nodejs">
 <a href="#searchservicename_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Service<wbr>Name</a>
@@ -405,8 +383,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -414,8 +391,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedprivatelinkresourcename_nodejs">
 <a href="#sharedprivatelinkresourcename_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Name</a>
@@ -423,14 +399,11 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -438,8 +411,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="search_service_name_python">
 <a href="#search_service_name_python" style="color: inherit; text-decoration: inherit;">search_<wbr>service_<wbr>name</a>
@@ -447,8 +419,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -456,8 +427,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_private_link_resource_name_python">
 <a href="#shared_private_link_resource_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>private_<wbr>link_<wbr>resource_<wbr>name</a>
@@ -465,8 +435,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -477,9 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -487,8 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -496,8 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -505,14 +470,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -520,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -529,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -538,14 +498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -553,8 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -562,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -571,14 +526,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -586,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -595,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -604,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -621,9 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -631,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_csharp">
 <a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -640,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -649,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_csharp">
 <a href="#requestmessage_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -658,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceregion_csharp">
 <a href="#resourceregion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Region</a>
@@ -667,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -676,14 +618,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -691,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_go">
 <a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -700,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -709,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_go">
 <a href="#requestmessage_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -718,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceregion_go">
 <a href="#resourceregion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Region</a>
@@ -727,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -736,14 +670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -751,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_nodejs">
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -760,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -769,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_nodejs">
 <a href="#requestmessage_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Message</a>
@@ -778,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceregion_nodejs">
 <a href="#resourceregion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Region</a>
@@ -787,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -796,14 +722,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -811,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_resource_id_python">
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
@@ -820,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -829,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_message_python">
 <a href="#request_message_python" style="color: inherit; text-decoration: inherit;">request_<wbr>message</a>
@@ -838,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_region_python">
 <a href="#resource_region_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>region</a>
@@ -847,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -856,16 +774,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedprivatelinkresourcepropertiesresponse">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -873,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_csharp">
 <a href="#privatelinkresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -882,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -891,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_csharp">
 <a href="#requestmessage_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -900,8 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceregion_csharp">
 <a href="#resourceregion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Region</a>
@@ -909,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -918,14 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -933,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_go">
 <a href="#privatelinkresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -942,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -951,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_go">
 <a href="#requestmessage_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Message</a>
@@ -960,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceregion_go">
 <a href="#resourceregion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Region</a>
@@ -969,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -978,14 +880,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -993,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkresourceid_nodejs">
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
@@ -1002,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1011,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmessage_nodejs">
 <a href="#requestmessage_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Message</a>
@@ -1020,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceregion_nodejs">
 <a href="#resourceregion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Region</a>
@@ -1029,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1038,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -1053,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_resource_id_python">
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
@@ -1062,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1071,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_message_python">
 <a href="#request_message_python" style="color: inherit; text-decoration: inherit;">request_<wbr>message</a>
@@ -1080,8 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_region_python">
 <a href="#resource_region_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>region</a>
@@ -1089,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1098,124 +984,79 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Incomplete</dt>
-    <dd>Incomplete</dd>
-</dl>
+<dl class="tabular"><dt>Updating</dt>
+    <dd>Updating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Incomplete</dt>
+    <dd>Incomplete</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Incomplete</dt>
-    <dd>Incomplete</dd>
-</dl>
+<dl class="tabular"><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Updating</dt>
+    <dd>Updating</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State<wbr>Incomplete</dt>
+    <dd>Incomplete</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Incomplete</dt>
-    <dd>Incomplete</dd>
-</dl>
+<dl class="tabular"><dt>Updating</dt>
+    <dd>Updating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Incomplete</dt>
+    <dd>Incomplete</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UPDATING</dt>
-    <dd>Updating</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>FAILED</dt>
-    <dd>Failed</dd>
-    <dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd>
-    <dt>INCOMPLETE</dt>
-    <dd>Incomplete</dd>
-</dl>
+<dl class="tabular"><dt>UPDATING</dt>
+    <dd>Updating</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd><dt>INCOMPLETE</dt>
+    <dd>Incomplete</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Rejected</dt>
-    <dd>Rejected</dd>
-    <dt>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Approved</dt>
+    <dd>Approved</dd><dt>Rejected</dt>
+    <dd>Rejected</dd><dt>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Rejected</dt>
-    <dd>Rejected</dd>
-    <dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Pending</dt>
+    <dd>Pending</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Approved</dt>
+    <dd>Approved</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Rejected</dt>
+    <dd>Rejected</dd><dt>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status<wbr>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Pending</dt>
-    <dd>Pending</dd>
-    <dt>Approved</dt>
-    <dd>Approved</dd>
-    <dt>Rejected</dt>
-    <dd>Rejected</dd>
-    <dt>Disconnected</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>Pending</dt>
+    <dd>Pending</dd><dt>Approved</dt>
+    <dd>Approved</dd><dt>Rejected</dt>
+    <dd>Rejected</dd><dt>Disconnected</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PENDING</dt>
-    <dd>Pending</dd>
-    <dt>APPROVED</dt>
-    <dd>Approved</dd>
-    <dt>REJECTED</dt>
-    <dd>Rejected</dd>
-    <dt>DISCONNECTED</dt>
-    <dd>Disconnected</dd>
-</dl>
+<dl class="tabular"><dt>PENDING</dt>
+    <dd>Pending</dd><dt>APPROVED</dt>
+    <dd>Approved</dd><dt>REJECTED</dt>
+    <dd>Rejected</dd><dt>DISCONNECTED</dt>
+    <dd>Disconnected</dd></dl>
 {{% /choosable %}}
 ## Import
 

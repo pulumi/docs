@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="favoriteid_csharp">
 <a href="#favoriteid_csharp" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="favoriteid_go">
 <a href="#favoriteid_go" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Id</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="favoriteid_nodejs">
 <a href="#favoriteid_nodejs" style="color: inherit; text-decoration: inherit;">favorite<wbr>Id</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="favorite_id_python">
 <a href="#favorite_id_python" style="color: inherit; text-decoration: inherit;">favorite_<wbr>id</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Id of a specific favorite defined in the Application Insights component{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favoriteid_csharp">
 <a href="#favoriteid_csharp" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timemodified_csharp">
 <a href="#timemodified_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="favoritetype_csharp">
 <a href="#favoritetype_csharp" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isgeneratedfromtemplate_csharp">
 <a href="#isgeneratedfromtemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Generated<wbr>From<wbr>Template</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favoriteid_go">
 <a href="#favoriteid_go" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timemodified_go">
 <a href="#timemodified_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="favoritetype_go">
 <a href="#favoritetype_go" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Type</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isgeneratedfromtemplate_go">
 <a href="#isgeneratedfromtemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Generated<wbr>From<wbr>Template</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favoriteid_nodejs">
 <a href="#favoriteid_nodejs" style="color: inherit; text-decoration: inherit;">favorite<wbr>Id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timemodified_nodejs">
 <a href="#timemodified_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Modified</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="favoritetype_nodejs">
 <a href="#favoritetype_nodejs" style="color: inherit; text-decoration: inherit;">favorite<wbr>Type</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isgeneratedfromtemplate_nodejs">
 <a href="#isgeneratedfromtemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Generated<wbr>From<wbr>Template</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -502,14 +444,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="favorite_id_python">
 <a href="#favorite_id_python" style="color: inherit; text-decoration: inherit;">favorite_<wbr>id</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Internally assigned unique id of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_modified_python">
 <a href="#time_modified_python" style="color: inherit; text-decoration: inherit;">time_<wbr>modified</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date and time in UTC of the last modification that was made to this favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique user id of the specific user that owns this favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Favorite category, as defined by the user at creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="favorite_type_python">
 <a href="#favorite_type_python" style="color: inherit; text-decoration: inherit;">favorite_<wbr>type</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_generated_from_template_python">
 <a href="#is_generated_from_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>generated_<wbr>from_<wbr>template</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag denoting wether or not this favorite was generated from a template.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The user-defined name of the favorite.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_type_python">
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source of the favorite definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of 0 or more tags that are associated with this favorite definition{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

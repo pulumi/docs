@@ -14,11 +14,17 @@ Job Definition.
 API Version: 2019-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### JobDefinitions_CreateOrUpdatePUT83
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -62,9 +68,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -110,9 +119,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -141,9 +153,12 @@ job_definition = azure_native.hybriddata.JobDefinition("jobDefinition",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -173,9 +188,16 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a JobDefinition Resource {#create}
@@ -200,9 +222,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -210,9 +230,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -220,9 +238,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -230,10 +246,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -259,9 +272,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -269,9 +280,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -279,9 +288,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -289,9 +296,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -299,18 +304,13 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -318,9 +318,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -328,9 +326,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -338,10 +334,7 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -356,9 +349,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_csharp">
 <a href="#datamanagername_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -366,8 +357,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataservicename_csharp">
 <a href="#dataservicename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Name</a>
@@ -375,8 +365,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasinkid_csharp">
 <a href="#datasinkid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Sink<wbr>Id</a>
@@ -384,8 +373,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasourceid_csharp">
 <a href="#datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -393,8 +381,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -402,8 +389,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -411,8 +397,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersecrets_csharp">
 <a href="#customersecrets_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -420,8 +405,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Inputs.<wbr>Customer<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataserviceinput_csharp">
 <a href="#dataserviceinput_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Input</a>
@@ -429,8 +413,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobdefinitionname_csharp">
 <a href="#jobdefinitionname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Definition<wbr>Name</a>
@@ -438,8 +421,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -447,8 +429,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runlocation_csharp">
 <a href="#runlocation_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Location</a>
@@ -456,8 +437,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Run<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -465,8 +445,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Inputs.<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userconfirmation_csharp">
 <a href="#userconfirmation_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Confirmation</a>
@@ -474,14 +453,11 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userconfirmation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>User<wbr>Confirmation</a></span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_go">
 <a href="#datamanagername_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -489,8 +465,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataservicename_go">
 <a href="#dataservicename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Name</a>
@@ -498,8 +473,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasinkid_go">
 <a href="#datasinkid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sink<wbr>Id</a>
@@ -507,8 +481,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasourceid_go">
 <a href="#datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -516,8 +489,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -525,8 +497,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -534,8 +505,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersecrets_go">
 <a href="#customersecrets_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -543,8 +513,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">[]Customer<wbr>Secret</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataserviceinput_go">
 <a href="#dataserviceinput_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Service<wbr>Input</a>
@@ -552,8 +521,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobdefinitionname_go">
 <a href="#jobdefinitionname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Definition<wbr>Name</a>
@@ -561,8 +529,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -570,8 +537,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runlocation_go">
 <a href="#runlocation_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Location</a>
@@ -579,8 +545,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runlocation">Run<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -588,8 +553,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">[]Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userconfirmation_go">
 <a href="#userconfirmation_go" style="color: inherit; text-decoration: inherit;">User<wbr>Confirmation</a>
@@ -597,14 +561,11 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userconfirmation">User<wbr>Confirmation</a></span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_nodejs">
 <a href="#datamanagername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manager<wbr>Name</a>
@@ -612,8 +573,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataservicename_nodejs">
 <a href="#dataservicename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Service<wbr>Name</a>
@@ -621,8 +581,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasinkid_nodejs">
 <a href="#datasinkid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sink<wbr>Id</a>
@@ -630,8 +589,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasourceid_nodejs">
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
@@ -639,8 +597,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -648,8 +605,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -657,8 +613,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersecrets_nodejs">
 <a href="#customersecrets_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Secrets</a>
@@ -666,8 +621,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">Customer<wbr>Secret[]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataserviceinput_nodejs">
 <a href="#dataserviceinput_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Service<wbr>Input</a>
@@ -675,8 +629,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobdefinitionname_nodejs">
 <a href="#jobdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Definition<wbr>Name</a>
@@ -684,8 +637,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -693,8 +645,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runlocation_nodejs">
 <a href="#runlocation_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Location</a>
@@ -702,8 +653,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runlocation">Run<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -711,8 +661,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userconfirmation_nodejs">
 <a href="#userconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Confirmation</a>
@@ -720,14 +669,11 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userconfirmation">User<wbr>Confirmation</a></span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_manager_name_python">
 <a href="#data_manager_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manager_<wbr>name</a>
@@ -735,8 +681,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_service_name_python">
 <a href="#data_service_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>service_<wbr>name</a>
@@ -744,8 +689,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_sink_id_python">
 <a href="#data_sink_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sink_<wbr>id</a>
@@ -753,8 +697,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_source_id_python">
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
@@ -762,8 +705,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -771,8 +713,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -780,8 +721,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_secrets_python">
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
@@ -789,8 +729,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">Sequence[Customer<wbr>Secret<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_service_input_python">
 <a href="#data_service_input_python" style="color: inherit; text-decoration: inherit;">data_<wbr>service_<wbr>input</a>
@@ -798,8 +737,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_definition_name_python">
 <a href="#job_definition_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>definition_<wbr>name</a>
@@ -807,8 +745,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -816,8 +753,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_location_python">
 <a href="#run_location_python" style="color: inherit; text-decoration: inherit;">run_<wbr>location</a>
@@ -825,8 +761,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runlocation">Run<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -834,8 +769,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedule">Sequence[Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_confirmation_python">
 <a href="#user_confirmation_python" style="color: inherit; text-decoration: inherit;">user_<wbr>confirmation</a>
@@ -843,8 +777,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userconfirmation">User<wbr>Confirmation</a></span>
     </dt>
-    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -855,9 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -865,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -874,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -883,14 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -898,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -907,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -916,14 +840,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -931,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -940,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -949,14 +868,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -964,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -973,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -982,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -999,9 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="customersecret">Customer<wbr>Secret</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1009,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1018,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -1027,14 +936,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1042,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1051,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -1060,14 +964,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1075,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -1084,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -1093,14 +992,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1108,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -1117,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -1126,16 +1020,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customersecretresponse">Customer<wbr>Secret<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1143,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1152,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -1161,14 +1050,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1176,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1185,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -1194,14 +1078,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1209,8 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -1218,8 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -1227,14 +1106,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1242,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -1251,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -1260,254 +1134,139 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="runlocation">Run<wbr>Location</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>none</dd>
-    <dt>Australiaeast</dt>
-    <dd>australiaeast</dd>
-    <dt>Australiasoutheast</dt>
-    <dd>australiasoutheast</dd>
-    <dt>Brazilsouth</dt>
-    <dd>brazilsouth</dd>
-    <dt>Canadacentral</dt>
-    <dd>canadacentral</dd>
-    <dt>Canadaeast</dt>
-    <dd>canadaeast</dd>
-    <dt>Centralindia</dt>
-    <dd>centralindia</dd>
-    <dt>Centralus</dt>
-    <dd>centralus</dd>
-    <dt>Eastasia</dt>
-    <dd>eastasia</dd>
-    <dt>Eastus</dt>
-    <dd>eastus</dd>
-    <dt>Eastus2</dt>
-    <dd>eastus2</dd>
-    <dt>Japaneast</dt>
-    <dd>japaneast</dd>
-    <dt>Japanwest</dt>
-    <dd>japanwest</dd>
-    <dt>Koreacentral</dt>
-    <dd>koreacentral</dd>
-    <dt>Koreasouth</dt>
-    <dd>koreasouth</dd>
-    <dt>Southeastasia</dt>
-    <dd>southeastasia</dd>
-    <dt>Southcentralus</dt>
-    <dd>southcentralus</dd>
-    <dt>Southindia</dt>
-    <dd>southindia</dd>
-    <dt>Northcentralus</dt>
-    <dd>northcentralus</dd>
-    <dt>Northeurope</dt>
-    <dd>northeurope</dd>
-    <dt>Uksouth</dt>
-    <dd>uksouth</dd>
-    <dt>Ukwest</dt>
-    <dd>ukwest</dd>
-    <dt>Westcentralus</dt>
-    <dd>westcentralus</dd>
-    <dt>Westeurope</dt>
-    <dd>westeurope</dd>
-    <dt>Westindia</dt>
-    <dd>westindia</dd>
-    <dt>Westus</dt>
-    <dd>westus</dd>
-    <dt>Westus2</dt>
-    <dd>westus2</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>none</dd><dt>Australiaeast</dt>
+    <dd>australiaeast</dd><dt>Australiasoutheast</dt>
+    <dd>australiasoutheast</dd><dt>Brazilsouth</dt>
+    <dd>brazilsouth</dd><dt>Canadacentral</dt>
+    <dd>canadacentral</dd><dt>Canadaeast</dt>
+    <dd>canadaeast</dd><dt>Centralindia</dt>
+    <dd>centralindia</dd><dt>Centralus</dt>
+    <dd>centralus</dd><dt>Eastasia</dt>
+    <dd>eastasia</dd><dt>Eastus</dt>
+    <dd>eastus</dd><dt>Eastus2</dt>
+    <dd>eastus2</dd><dt>Japaneast</dt>
+    <dd>japaneast</dd><dt>Japanwest</dt>
+    <dd>japanwest</dd><dt>Koreacentral</dt>
+    <dd>koreacentral</dd><dt>Koreasouth</dt>
+    <dd>koreasouth</dd><dt>Southeastasia</dt>
+    <dd>southeastasia</dd><dt>Southcentralus</dt>
+    <dd>southcentralus</dd><dt>Southindia</dt>
+    <dd>southindia</dd><dt>Northcentralus</dt>
+    <dd>northcentralus</dd><dt>Northeurope</dt>
+    <dd>northeurope</dd><dt>Uksouth</dt>
+    <dd>uksouth</dd><dt>Ukwest</dt>
+    <dd>ukwest</dd><dt>Westcentralus</dt>
+    <dd>westcentralus</dd><dt>Westeurope</dt>
+    <dd>westeurope</dd><dt>Westindia</dt>
+    <dd>westindia</dd><dt>Westus</dt>
+    <dd>westus</dd><dt>Westus2</dt>
+    <dd>westus2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Run<wbr>Location<wbr>None</dt>
-    <dd>none</dd>
-    <dt>Run<wbr>Location<wbr>Australiaeast</dt>
-    <dd>australiaeast</dd>
-    <dt>Run<wbr>Location<wbr>Australiasoutheast</dt>
-    <dd>australiasoutheast</dd>
-    <dt>Run<wbr>Location<wbr>Brazilsouth</dt>
-    <dd>brazilsouth</dd>
-    <dt>Run<wbr>Location<wbr>Canadacentral</dt>
-    <dd>canadacentral</dd>
-    <dt>Run<wbr>Location<wbr>Canadaeast</dt>
-    <dd>canadaeast</dd>
-    <dt>Run<wbr>Location<wbr>Centralindia</dt>
-    <dd>centralindia</dd>
-    <dt>Run<wbr>Location<wbr>Centralus</dt>
-    <dd>centralus</dd>
-    <dt>Run<wbr>Location<wbr>Eastasia</dt>
-    <dd>eastasia</dd>
-    <dt>Run<wbr>Location<wbr>Eastus</dt>
-    <dd>eastus</dd>
-    <dt>Run<wbr>Location<wbr>Eastus2</dt>
-    <dd>eastus2</dd>
-    <dt>Run<wbr>Location<wbr>Japaneast</dt>
-    <dd>japaneast</dd>
-    <dt>Run<wbr>Location<wbr>Japanwest</dt>
-    <dd>japanwest</dd>
-    <dt>Run<wbr>Location<wbr>Koreacentral</dt>
-    <dd>koreacentral</dd>
-    <dt>Run<wbr>Location<wbr>Koreasouth</dt>
-    <dd>koreasouth</dd>
-    <dt>Run<wbr>Location<wbr>Southeastasia</dt>
-    <dd>southeastasia</dd>
-    <dt>Run<wbr>Location<wbr>Southcentralus</dt>
-    <dd>southcentralus</dd>
-    <dt>Run<wbr>Location<wbr>Southindia</dt>
-    <dd>southindia</dd>
-    <dt>Run<wbr>Location<wbr>Northcentralus</dt>
-    <dd>northcentralus</dd>
-    <dt>Run<wbr>Location<wbr>Northeurope</dt>
-    <dd>northeurope</dd>
-    <dt>Run<wbr>Location<wbr>Uksouth</dt>
-    <dd>uksouth</dd>
-    <dt>Run<wbr>Location<wbr>Ukwest</dt>
-    <dd>ukwest</dd>
-    <dt>Run<wbr>Location<wbr>Westcentralus</dt>
-    <dd>westcentralus</dd>
-    <dt>Run<wbr>Location<wbr>Westeurope</dt>
-    <dd>westeurope</dd>
-    <dt>Run<wbr>Location<wbr>Westindia</dt>
-    <dd>westindia</dd>
-    <dt>Run<wbr>Location<wbr>Westus</dt>
-    <dd>westus</dd>
-    <dt>Run<wbr>Location<wbr>Westus2</dt>
-    <dd>westus2</dd>
-</dl>
+<dl class="tabular"><dt>Run<wbr>Location<wbr>None</dt>
+    <dd>none</dd><dt>Run<wbr>Location<wbr>Australiaeast</dt>
+    <dd>australiaeast</dd><dt>Run<wbr>Location<wbr>Australiasoutheast</dt>
+    <dd>australiasoutheast</dd><dt>Run<wbr>Location<wbr>Brazilsouth</dt>
+    <dd>brazilsouth</dd><dt>Run<wbr>Location<wbr>Canadacentral</dt>
+    <dd>canadacentral</dd><dt>Run<wbr>Location<wbr>Canadaeast</dt>
+    <dd>canadaeast</dd><dt>Run<wbr>Location<wbr>Centralindia</dt>
+    <dd>centralindia</dd><dt>Run<wbr>Location<wbr>Centralus</dt>
+    <dd>centralus</dd><dt>Run<wbr>Location<wbr>Eastasia</dt>
+    <dd>eastasia</dd><dt>Run<wbr>Location<wbr>Eastus</dt>
+    <dd>eastus</dd><dt>Run<wbr>Location<wbr>Eastus2</dt>
+    <dd>eastus2</dd><dt>Run<wbr>Location<wbr>Japaneast</dt>
+    <dd>japaneast</dd><dt>Run<wbr>Location<wbr>Japanwest</dt>
+    <dd>japanwest</dd><dt>Run<wbr>Location<wbr>Koreacentral</dt>
+    <dd>koreacentral</dd><dt>Run<wbr>Location<wbr>Koreasouth</dt>
+    <dd>koreasouth</dd><dt>Run<wbr>Location<wbr>Southeastasia</dt>
+    <dd>southeastasia</dd><dt>Run<wbr>Location<wbr>Southcentralus</dt>
+    <dd>southcentralus</dd><dt>Run<wbr>Location<wbr>Southindia</dt>
+    <dd>southindia</dd><dt>Run<wbr>Location<wbr>Northcentralus</dt>
+    <dd>northcentralus</dd><dt>Run<wbr>Location<wbr>Northeurope</dt>
+    <dd>northeurope</dd><dt>Run<wbr>Location<wbr>Uksouth</dt>
+    <dd>uksouth</dd><dt>Run<wbr>Location<wbr>Ukwest</dt>
+    <dd>ukwest</dd><dt>Run<wbr>Location<wbr>Westcentralus</dt>
+    <dd>westcentralus</dd><dt>Run<wbr>Location<wbr>Westeurope</dt>
+    <dd>westeurope</dd><dt>Run<wbr>Location<wbr>Westindia</dt>
+    <dd>westindia</dd><dt>Run<wbr>Location<wbr>Westus</dt>
+    <dd>westus</dd><dt>Run<wbr>Location<wbr>Westus2</dt>
+    <dd>westus2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>none</dd>
-    <dt>Australiaeast</dt>
-    <dd>australiaeast</dd>
-    <dt>Australiasoutheast</dt>
-    <dd>australiasoutheast</dd>
-    <dt>Brazilsouth</dt>
-    <dd>brazilsouth</dd>
-    <dt>Canadacentral</dt>
-    <dd>canadacentral</dd>
-    <dt>Canadaeast</dt>
-    <dd>canadaeast</dd>
-    <dt>Centralindia</dt>
-    <dd>centralindia</dd>
-    <dt>Centralus</dt>
-    <dd>centralus</dd>
-    <dt>Eastasia</dt>
-    <dd>eastasia</dd>
-    <dt>Eastus</dt>
-    <dd>eastus</dd>
-    <dt>Eastus2</dt>
-    <dd>eastus2</dd>
-    <dt>Japaneast</dt>
-    <dd>japaneast</dd>
-    <dt>Japanwest</dt>
-    <dd>japanwest</dd>
-    <dt>Koreacentral</dt>
-    <dd>koreacentral</dd>
-    <dt>Koreasouth</dt>
-    <dd>koreasouth</dd>
-    <dt>Southeastasia</dt>
-    <dd>southeastasia</dd>
-    <dt>Southcentralus</dt>
-    <dd>southcentralus</dd>
-    <dt>Southindia</dt>
-    <dd>southindia</dd>
-    <dt>Northcentralus</dt>
-    <dd>northcentralus</dd>
-    <dt>Northeurope</dt>
-    <dd>northeurope</dd>
-    <dt>Uksouth</dt>
-    <dd>uksouth</dd>
-    <dt>Ukwest</dt>
-    <dd>ukwest</dd>
-    <dt>Westcentralus</dt>
-    <dd>westcentralus</dd>
-    <dt>Westeurope</dt>
-    <dd>westeurope</dd>
-    <dt>Westindia</dt>
-    <dd>westindia</dd>
-    <dt>Westus</dt>
-    <dd>westus</dd>
-    <dt>Westus2</dt>
-    <dd>westus2</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>none</dd><dt>Australiaeast</dt>
+    <dd>australiaeast</dd><dt>Australiasoutheast</dt>
+    <dd>australiasoutheast</dd><dt>Brazilsouth</dt>
+    <dd>brazilsouth</dd><dt>Canadacentral</dt>
+    <dd>canadacentral</dd><dt>Canadaeast</dt>
+    <dd>canadaeast</dd><dt>Centralindia</dt>
+    <dd>centralindia</dd><dt>Centralus</dt>
+    <dd>centralus</dd><dt>Eastasia</dt>
+    <dd>eastasia</dd><dt>Eastus</dt>
+    <dd>eastus</dd><dt>Eastus2</dt>
+    <dd>eastus2</dd><dt>Japaneast</dt>
+    <dd>japaneast</dd><dt>Japanwest</dt>
+    <dd>japanwest</dd><dt>Koreacentral</dt>
+    <dd>koreacentral</dd><dt>Koreasouth</dt>
+    <dd>koreasouth</dd><dt>Southeastasia</dt>
+    <dd>southeastasia</dd><dt>Southcentralus</dt>
+    <dd>southcentralus</dd><dt>Southindia</dt>
+    <dd>southindia</dd><dt>Northcentralus</dt>
+    <dd>northcentralus</dd><dt>Northeurope</dt>
+    <dd>northeurope</dd><dt>Uksouth</dt>
+    <dd>uksouth</dd><dt>Ukwest</dt>
+    <dd>ukwest</dd><dt>Westcentralus</dt>
+    <dd>westcentralus</dd><dt>Westeurope</dt>
+    <dd>westeurope</dd><dt>Westindia</dt>
+    <dd>westindia</dd><dt>Westus</dt>
+    <dd>westus</dd><dt>Westus2</dt>
+    <dd>westus2</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>none</dd>
-    <dt>AUSTRALIAEAST</dt>
-    <dd>australiaeast</dd>
-    <dt>AUSTRALIASOUTHEAST</dt>
-    <dd>australiasoutheast</dd>
-    <dt>BRAZILSOUTH</dt>
-    <dd>brazilsouth</dd>
-    <dt>CANADACENTRAL</dt>
-    <dd>canadacentral</dd>
-    <dt>CANADAEAST</dt>
-    <dd>canadaeast</dd>
-    <dt>CENTRALINDIA</dt>
-    <dd>centralindia</dd>
-    <dt>CENTRALUS</dt>
-    <dd>centralus</dd>
-    <dt>EASTASIA</dt>
-    <dd>eastasia</dd>
-    <dt>EASTUS</dt>
-    <dd>eastus</dd>
-    <dt>EASTUS2</dt>
-    <dd>eastus2</dd>
-    <dt>JAPANEAST</dt>
-    <dd>japaneast</dd>
-    <dt>JAPANWEST</dt>
-    <dd>japanwest</dd>
-    <dt>KOREACENTRAL</dt>
-    <dd>koreacentral</dd>
-    <dt>KOREASOUTH</dt>
-    <dd>koreasouth</dd>
-    <dt>SOUTHEASTASIA</dt>
-    <dd>southeastasia</dd>
-    <dt>SOUTHCENTRALUS</dt>
-    <dd>southcentralus</dd>
-    <dt>SOUTHINDIA</dt>
-    <dd>southindia</dd>
-    <dt>NORTHCENTRALUS</dt>
-    <dd>northcentralus</dd>
-    <dt>NORTHEUROPE</dt>
-    <dd>northeurope</dd>
-    <dt>UKSOUTH</dt>
-    <dd>uksouth</dd>
-    <dt>UKWEST</dt>
-    <dd>ukwest</dd>
-    <dt>WESTCENTRALUS</dt>
-    <dd>westcentralus</dd>
-    <dt>WESTEUROPE</dt>
-    <dd>westeurope</dd>
-    <dt>WESTINDIA</dt>
-    <dd>westindia</dd>
-    <dt>WESTUS</dt>
-    <dd>westus</dd>
-    <dt>WESTUS2</dt>
-    <dd>westus2</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>none</dd><dt>AUSTRALIAEAST</dt>
+    <dd>australiaeast</dd><dt>AUSTRALIASOUTHEAST</dt>
+    <dd>australiasoutheast</dd><dt>BRAZILSOUTH</dt>
+    <dd>brazilsouth</dd><dt>CANADACENTRAL</dt>
+    <dd>canadacentral</dd><dt>CANADAEAST</dt>
+    <dd>canadaeast</dd><dt>CENTRALINDIA</dt>
+    <dd>centralindia</dd><dt>CENTRALUS</dt>
+    <dd>centralus</dd><dt>EASTASIA</dt>
+    <dd>eastasia</dd><dt>EASTUS</dt>
+    <dd>eastus</dd><dt>EASTUS2</dt>
+    <dd>eastus2</dd><dt>JAPANEAST</dt>
+    <dd>japaneast</dd><dt>JAPANWEST</dt>
+    <dd>japanwest</dd><dt>KOREACENTRAL</dt>
+    <dd>koreacentral</dd><dt>KOREASOUTH</dt>
+    <dd>koreasouth</dd><dt>SOUTHEASTASIA</dt>
+    <dd>southeastasia</dd><dt>SOUTHCENTRALUS</dt>
+    <dd>southcentralus</dd><dt>SOUTHINDIA</dt>
+    <dd>southindia</dd><dt>NORTHCENTRALUS</dt>
+    <dd>northcentralus</dd><dt>NORTHEUROPE</dt>
+    <dd>northeurope</dd><dt>UKSOUTH</dt>
+    <dd>uksouth</dd><dt>UKWEST</dt>
+    <dd>ukwest</dd><dt>WESTCENTRALUS</dt>
+    <dd>westcentralus</dd><dt>WESTEUROPE</dt>
+    <dd>westeurope</dd><dt>WESTINDIA</dt>
+    <dd>westindia</dd><dt>WESTUS</dt>
+    <dd>westus</dd><dt>WESTUS2</dt>
+    <dd>westus2</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedule">Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1515,8 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_csharp">
 <a href="#policylist_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>List</a>
@@ -1524,14 +1282,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1539,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_go">
 <a href="#policylist_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>List</a>
@@ -1548,14 +1302,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1563,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_nodejs">
 <a href="#policylist_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>List</a>
@@ -1572,14 +1322,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1587,8 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_list_python">
 <a href="#policy_list_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>list</a>
@@ -1596,16 +1342,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1613,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_csharp">
 <a href="#policylist_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>List</a>
@@ -1622,14 +1364,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1637,8 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_go">
 <a href="#policylist_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>List</a>
@@ -1646,14 +1384,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1661,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policylist_nodejs">
 <a href="#policylist_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>List</a>
@@ -1670,14 +1404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1685,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_list_python">
 <a href="#policy_list_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>list</a>
@@ -1694,146 +1424,97 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="state">State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Supported</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Supported</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>State<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>State<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>State<wbr>Supported</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>State<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>State<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>State<wbr>Supported</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Supported</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Supported</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>SUPPORTED</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>SUPPORTED</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 <h4 id="supportedalgorithm">Supported<wbr>Algorithm</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>RSA_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>Plain<wbr>Text</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>RSA_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>Plain<wbr>Text</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Supported<wbr>Algorithm<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Supported<wbr>Algorithm_RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>Supported<wbr>Algorithm_RSA_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>Supported<wbr>Algorithm<wbr>Plain<wbr>Text</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>Supported<wbr>Algorithm<wbr>None</dt>
+    <dd>None</dd><dt>Supported<wbr>Algorithm_RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>Supported<wbr>Algorithm_RSA_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>Supported<wbr>Algorithm<wbr>Plain<wbr>Text</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>RSA_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>Plain<wbr>Text</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>RSA_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>Plain<wbr>Text</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>RS_A_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>PLAIN_TEXT</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>RS_A_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>PLAIN_TEXT</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userconfirmation">User<wbr>Confirmation</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Not<wbr>Required</dt>
-    <dd>NotRequired</dd>
-    <dt>Required</dt>
-    <dd>Required</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Required</dt>
+    <dd>NotRequired</dd><dt>Required</dt>
+    <dd>Required</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>User<wbr>Confirmation<wbr>Not<wbr>Required</dt>
-    <dd>NotRequired</dd>
-    <dt>User<wbr>Confirmation<wbr>Required</dt>
-    <dd>Required</dd>
-</dl>
+<dl class="tabular"><dt>User<wbr>Confirmation<wbr>Not<wbr>Required</dt>
+    <dd>NotRequired</dd><dt>User<wbr>Confirmation<wbr>Required</dt>
+    <dd>Required</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Not<wbr>Required</dt>
-    <dd>NotRequired</dd>
-    <dt>Required</dt>
-    <dd>Required</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Required</dt>
+    <dd>NotRequired</dd><dt>Required</dt>
+    <dd>Required</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NOT_REQUIRED</dt>
-    <dd>NotRequired</dd>
-    <dt>REQUIRED</dt>
-    <dd>Required</dd>
-</dl>
+<dl class="tabular"><dt>NOT_REQUIRED</dt>
+    <dd>NotRequired</dd><dt>REQUIRED</dt>
+    <dd>Required</dd></dl>
 {{% /choosable %}}
 ## Import
 

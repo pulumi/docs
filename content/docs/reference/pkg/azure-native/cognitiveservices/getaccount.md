@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of Cognitive Services account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Outputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountpropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountpropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -439,14 +388,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The id of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the created account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the created account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountpropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU of Cognitive Services account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,9 +486,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadclientid_csharp">
 <a href="#aadclientid_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Client<wbr>Id</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenantid_csharp">
 <a href="#aadtenantid_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant<wbr>Id</a>
@@ -569,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubconnectionstring_csharp">
 <a href="#eventhubconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Connection<wbr>String</a>
@@ -578,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaazuresearchendpointid_csharp">
 <a href="#qnaazuresearchendpointid_csharp" style="color: inherit; text-decoration: inherit;">Qna<wbr>Azure<wbr>Search<wbr>Endpoint<wbr>Id</a>
@@ -587,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaazuresearchendpointkey_csharp">
 <a href="#qnaazuresearchendpointkey_csharp" style="color: inherit; text-decoration: inherit;">Qna<wbr>Azure<wbr>Search<wbr>Endpoint<wbr>Key</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaruntimeendpoint_csharp">
 <a href="#qnaruntimeendpoint_csharp" style="color: inherit; text-decoration: inherit;">Qna<wbr>Runtime<wbr>Endpoint</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statisticsenabled_csharp">
 <a href="#statisticsenabled_csharp" style="color: inherit; text-decoration: inherit;">Statistics<wbr>Enabled</a>
@@ -614,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountconnectionstring_csharp">
 <a href="#storageaccountconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Connection<wbr>String</a>
@@ -623,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_csharp">
 <a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Super<wbr>User</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websitename_csharp">
 <a href="#websitename_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Name</a>
@@ -641,14 +566,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadclientid_go">
 <a href="#aadclientid_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Client<wbr>Id</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenantid_go">
 <a href="#aadtenantid_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant<wbr>Id</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubconnectionstring_go">
 <a href="#eventhubconnectionstring_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Connection<wbr>String</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaazuresearchendpointid_go">
 <a href="#qnaazuresearchendpointid_go" style="color: inherit; text-decoration: inherit;">Qna<wbr>Azure<wbr>Search<wbr>Endpoint<wbr>Id</a>
@@ -683,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaazuresearchendpointkey_go">
 <a href="#qnaazuresearchendpointkey_go" style="color: inherit; text-decoration: inherit;">Qna<wbr>Azure<wbr>Search<wbr>Endpoint<wbr>Key</a>
@@ -692,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaruntimeendpoint_go">
 <a href="#qnaruntimeendpoint_go" style="color: inherit; text-decoration: inherit;">Qna<wbr>Runtime<wbr>Endpoint</a>
@@ -701,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statisticsenabled_go">
 <a href="#statisticsenabled_go" style="color: inherit; text-decoration: inherit;">Statistics<wbr>Enabled</a>
@@ -710,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountconnectionstring_go">
 <a href="#storageaccountconnectionstring_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Connection<wbr>String</a>
@@ -719,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_go">
 <a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Super<wbr>User</a>
@@ -728,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websitename_go">
 <a href="#websitename_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Name</a>
@@ -737,14 +650,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadclientid_nodejs">
 <a href="#aadclientid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Client<wbr>Id</a>
@@ -752,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenantid_nodejs">
 <a href="#aadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
@@ -761,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventhubconnectionstring_nodejs">
 <a href="#eventhubconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Connection<wbr>String</a>
@@ -770,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaazuresearchendpointid_nodejs">
 <a href="#qnaazuresearchendpointid_nodejs" style="color: inherit; text-decoration: inherit;">qna<wbr>Azure<wbr>Search<wbr>Endpoint<wbr>Id</a>
@@ -779,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaazuresearchendpointkey_nodejs">
 <a href="#qnaazuresearchendpointkey_nodejs" style="color: inherit; text-decoration: inherit;">qna<wbr>Azure<wbr>Search<wbr>Endpoint<wbr>Key</a>
@@ -788,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qnaruntimeendpoint_nodejs">
 <a href="#qnaruntimeendpoint_nodejs" style="color: inherit; text-decoration: inherit;">qna<wbr>Runtime<wbr>Endpoint</a>
@@ -797,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statisticsenabled_nodejs">
 <a href="#statisticsenabled_nodejs" style="color: inherit; text-decoration: inherit;">statistics<wbr>Enabled</a>
@@ -806,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountconnectionstring_nodejs">
 <a href="#storageaccountconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Connection<wbr>String</a>
@@ -815,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_nodejs">
 <a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">super<wbr>User</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websitename_nodejs">
 <a href="#websitename_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Name</a>
@@ -833,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aad_client_id_python">
 <a href="#aad_client_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>client_<wbr>id</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Client Id (Application Id).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_tenant_id_python">
 <a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The Azure AD Tenant Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_hub_connection_string_python">
 <a href="#event_hub_connection_string_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>connection_<wbr>string</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qna_azure_search_endpoint_id_python">
 <a href="#qna_azure_search_endpoint_id_python" style="color: inherit; text-decoration: inherit;">qna_<wbr>azure_<wbr>search_<wbr>endpoint_<wbr>id</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint id of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qna_azure_search_endpoint_key_python">
 <a href="#qna_azure_search_endpoint_key_python" style="color: inherit; text-decoration: inherit;">qna_<wbr>azure_<wbr>search_<wbr>endpoint_<wbr>key</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The Azure Search endpoint key of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qna_runtime_endpoint_python">
 <a href="#qna_runtime_endpoint_python" style="color: inherit; text-decoration: inherit;">qna_<wbr>runtime_<wbr>endpoint</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(QnAMaker Only) The runtime endpoint of QnAMaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistics_enabled_python">
 <a href="#statistics_enabled_python" style="color: inherit; text-decoration: inherit;">statistics_<wbr>enabled</a>
@@ -902,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Bing Search Only) The flag to enable statistics of Bing Search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_connection_string_python">
 <a href="#storage_account_connection_string_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>connection_<wbr>string</a>
@@ -911,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Personalization Only) The storage account connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="super_user_python">
 <a href="#super_user_python" style="color: inherit; text-decoration: inherit;">super_<wbr>user</a>
@@ -920,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}(Metrics Advisor Only) The super user of Metrics Advisor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_name_python">
 <a href="#website_name_python" style="color: inherit; text-decoration: inherit;">website_<wbr>name</a>
@@ -929,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}(Metrics Advisor Only) The website name of Metrics Advisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cognitiveservicesaccountpropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Properties<wbr>Response</h4>
@@ -938,9 +826,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -948,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datecreated_csharp">
 <a href="#datecreated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
@@ -957,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -966,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internalid_csharp">
 <a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -975,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ismigrated_csharp">
 <a href="#ismigrated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
@@ -984,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -993,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuchangeinfo_csharp">
 <a href="#skuchangeinfo_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Change<wbr>Info</a>
@@ -1002,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiproperties_csharp">
 <a href="#apiproperties_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
@@ -1011,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsubdomainname_csharp">
 <a href="#customsubdomainname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sub<wbr>Domain<wbr>Name</a>
@@ -1020,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -1029,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkacls_csharp">
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
@@ -1038,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -1047,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -1056,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userownedstorage_csharp">
 <a href="#userownedstorage_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Owned<wbr>Storage</a>
@@ -1065,14 +938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userownedstorageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -1080,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapabilityresponse">[]Sku<wbr>Capability<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datecreated_go">
 <a href="#datecreated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
@@ -1089,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1098,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internalid_go">
 <a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1107,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ismigrated_go">
 <a href="#ismigrated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
@@ -1116,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1125,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuchangeinfo_go">
 <a href="#skuchangeinfo_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Change<wbr>Info</a>
@@ -1134,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiproperties_go">
 <a href="#apiproperties_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
@@ -1143,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsubdomainname_go">
 <a href="#customsubdomainname_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sub<wbr>Domain<wbr>Name</a>
@@ -1152,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -1161,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkacls_go">
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
@@ -1170,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -1179,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -1188,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userownedstorage_go">
 <a href="#userownedstorage_go" style="color: inherit; text-decoration: inherit;">User<wbr>Owned<wbr>Storage</a>
@@ -1197,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userownedstorageresponse">[]User<wbr>Owned<wbr>Storage<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1212,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datecreated_nodejs">
 <a href="#datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
@@ -1221,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1230,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internalid_nodejs">
 <a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -1239,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ismigrated_nodejs">
 <a href="#ismigrated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Migrated</a>
@@ -1248,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1257,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuchangeinfo_nodejs">
 <a href="#skuchangeinfo_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Change<wbr>Info</a>
@@ -1266,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiproperties_nodejs">
 <a href="#apiproperties_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Properties</a>
@@ -1275,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsubdomainname_nodejs">
 <a href="#customsubdomainname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sub<wbr>Domain<wbr>Name</a>
@@ -1284,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -1293,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkacls_nodejs">
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
@@ -1302,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -1311,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -1320,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userownedstorage_nodejs">
 <a href="#userownedstorage_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Owned<wbr>Storage</a>
@@ -1329,14 +1170,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userownedstorageresponse">User<wbr>Owned<wbr>Storage<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1344,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="date_created_python">
 <a href="#date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
@@ -1353,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1362,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint of the created account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internal_id_python">
 <a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -1371,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The internal identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_migrated_python">
 <a href="#is_migrated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>migrated</a>
@@ -1380,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the resource is migrated from an existing key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1389,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the status of the cognitive services account at the time the operation was called.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_change_info_python">
 <a href="#sku_change_info_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>change_<wbr>info</a>
@@ -1398,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_properties_python">
 <a href="#api_properties_python" style="color: inherit; text-decoration: inherit;">api_<wbr>properties</a>
@@ -1407,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_sub_domain_name_python">
 <a href="#custom_sub_domain_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sub_<wbr>domain_<wbr>name</a>
@@ -1416,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional subdomain name used for token-based authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -1425,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_acls_python">
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
@@ -1434,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -1443,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -1452,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_owned_storage_python">
 <a href="#user_owned_storage_python" style="color: inherit; text-decoration: inherit;">user_<wbr>owned_<wbr>storage</a>
@@ -1461,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userownedstorageresponse">Sequence[User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response</h4>
@@ -1470,9 +1294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countofdowngrades_csharp">
 <a href="#countofdowngrades_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Of<wbr>Downgrades</a>
@@ -1480,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countofupgradesafterdowngrades_csharp">
 <a href="#countofupgradesafterdowngrades_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Of<wbr>Upgrades<wbr>After<wbr>Downgrades</a>
@@ -1489,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastchangedate_csharp">
 <a href="#lastchangedate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Change<wbr>Date</a>
@@ -1498,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countofdowngrades_go">
 <a href="#countofdowngrades_go" style="color: inherit; text-decoration: inherit;">Count<wbr>Of<wbr>Downgrades</a>
@@ -1513,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countofupgradesafterdowngrades_go">
 <a href="#countofupgradesafterdowngrades_go" style="color: inherit; text-decoration: inherit;">Count<wbr>Of<wbr>Upgrades<wbr>After<wbr>Downgrades</a>
@@ -1522,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastchangedate_go">
 <a href="#lastchangedate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Change<wbr>Date</a>
@@ -1531,14 +1346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countofdowngrades_nodejs">
 <a href="#countofdowngrades_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Of<wbr>Downgrades</a>
@@ -1546,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countofupgradesafterdowngrades_nodejs">
 <a href="#countofupgradesafterdowngrades_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Of<wbr>Upgrades<wbr>After<wbr>Downgrades</a>
@@ -1555,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastchangedate_nodejs">
 <a href="#lastchangedate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Change<wbr>Date</a>
@@ -1564,14 +1374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_of_downgrades_python">
 <a href="#count_of_downgrades_python" style="color: inherit; text-decoration: inherit;">count_<wbr>of_<wbr>downgrades</a>
@@ -1579,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="count_of_upgrades_after_downgrades_python">
 <a href="#count_of_upgrades_after_downgrades_python" style="color: inherit; text-decoration: inherit;">count_<wbr>of_<wbr>upgrades_<wbr>after_<wbr>downgrades</a>
@@ -1588,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the count of upgrades after downgrades.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_change_date_python">
 <a href="#last_change_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>change_<wbr>date</a>
@@ -1597,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the last change date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionresponse">Encryption<wbr>Response</h4>
@@ -1606,9 +1410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keysource_csharp">
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
@@ -1616,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultproperties_csharp">
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
@@ -1625,14 +1426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keysource_go">
 <a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
@@ -1640,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultproperties_go">
 <a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
@@ -1649,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keysource_nodejs">
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
@@ -1664,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultproperties_nodejs">
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
@@ -1673,14 +1466,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_source_python">
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
@@ -1688,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enumerates the possible value of keySource for Encryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_properties_python">
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
@@ -1697,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
@@ -1706,9 +1494,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1716,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1725,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1734,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1743,14 +1526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1758,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1767,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1776,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1785,14 +1562,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1800,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1809,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1818,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -1827,14 +1598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1842,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1851,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1860,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -1869,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipruleresponse">Ip<wbr>Rule<wbr>Response</h4>
@@ -1878,9 +1642,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1888,14 +1650,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1903,14 +1662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1918,14 +1674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1933,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
@@ -1942,9 +1694,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1952,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaulturi_csharp">
 <a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
@@ -1961,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversion_csharp">
 <a href="#keyversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
@@ -1970,14 +1718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1985,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaulturi_go">
 <a href="#keyvaulturi_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
@@ -1994,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversion_go">
 <a href="#keyversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version</a>
@@ -2003,14 +1746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -2018,8 +1758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaulturi_nodejs">
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
@@ -2027,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversion_nodejs">
 <a href="#keyversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version</a>
@@ -2036,14 +1774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -2051,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Key from KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_uri_python">
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
@@ -2060,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri of KeyVault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_version_python">
 <a href="#key_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version</a>
@@ -2069,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Version of the Key from KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</h4>
@@ -2078,9 +1810,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -2088,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -2097,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -2106,14 +1834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -2121,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -2130,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">[]Ip<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_go">
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -2139,14 +1862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">[]Virtual<wbr>Network<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -2154,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -2163,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">Ip<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
@@ -2172,14 +1890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -2187,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -2196,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipruleresponse">Sequence[Ip<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_rules_python">
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
@@ -2205,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
@@ -2214,9 +1926,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -2224,8 +1934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupids_csharp">
 <a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -2233,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -2242,14 +1950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -2257,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupids_go">
 <a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
@@ -2266,8 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -2275,14 +1978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -2290,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupids_nodejs">
 <a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
@@ -2299,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -2308,14 +2006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -2323,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_ids_python">
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
@@ -2332,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private link resource group ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -2341,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
@@ -2350,9 +2042,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2360,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2369,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2378,8 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2387,8 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2396,8 +2082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2405,14 +2090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2420,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2429,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2438,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2447,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2456,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2465,14 +2142,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2480,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2489,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2498,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2507,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2516,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2525,14 +2194,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2540,8 +2206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2549,8 +2214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2558,8 +2222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2567,8 +2230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2576,8 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2585,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
@@ -2594,9 +2254,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2604,14 +2262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2619,14 +2274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2634,14 +2286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2649,8 +2298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
@@ -2658,9 +2306,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -2668,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2677,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2686,14 +2330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -2701,8 +2342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2710,8 +2350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2719,14 +2358,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -2734,8 +2370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2743,8 +2378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2752,14 +2386,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -2767,8 +2398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2776,8 +2406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2785,8 +2414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skucapabilityresponse">Sku<wbr>Capability<wbr>Response</h4>
@@ -2794,9 +2422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2804,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2813,14 +2438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2828,8 +2450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2837,14 +2458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2852,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2861,14 +2478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2876,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the SkuCapability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2885,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the SkuCapability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -2894,9 +2506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2904,8 +2514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2913,14 +2522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2928,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2937,14 +2542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2952,8 +2554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2961,14 +2562,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2976,8 +2574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the sku name. Required for account creation, optional for update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2985,8 +2582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
@@ -2994,9 +2590,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3004,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3013,14 +2606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3028,8 +2618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3037,14 +2626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -3052,8 +2638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -3061,14 +2646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -3076,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3085,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userownedstorageresponse">User<wbr>Owned<wbr>Storage<wbr>Response</h4>
@@ -3094,9 +2674,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3104,14 +2682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3119,14 +2694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -3134,14 +2706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -3149,8 +2718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response</h4>
@@ -3158,9 +2726,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3168,8 +2734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_csharp">
 <a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -3177,8 +2742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3186,14 +2750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3201,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_go">
 <a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -3210,8 +2770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3219,14 +2778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3234,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_nodejs">
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
@@ -3243,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3252,14 +2806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3267,8 +2818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_vnet_service_endpoint_python">
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
@@ -3276,8 +2826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Ignore missing vnet service endpoint or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3285,8 +2834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_csharp">
 <a href="#datamanagername_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_go">
 <a href="#datamanagername_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_nodejs">
 <a href="#datamanagername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manager<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_manager_name_python">
 <a href="#data_manager_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manager_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -177,8 +158,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
 US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -186,8 +166,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -195,8 +174,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -204,8 +182,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -213,8 +190,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -223,14 +199,11 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-(across resource groups).{{% /md %}}</dd>
-</dl>
+(across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -238,8 +211,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -249,8 +221,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
 US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -258,8 +229,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -267,8 +237,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -276,8 +245,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -285,8 +253,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -295,14 +262,11 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-(across resource groups).{{% /md %}}</dd>
-</dl>
+(across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -310,8 +274,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -321,8 +284,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
 US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -330,8 +292,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -339,8 +300,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -348,8 +308,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -357,8 +316,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -367,14 +325,11 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-(across resource groups).{{% /md %}}</dd>
-</dl>
+(across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -382,8 +337,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -393,8 +347,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
 US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -402,8 +355,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -411,8 +363,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -420,8 +371,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -429,8 +379,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -439,8 +388,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-(across resource groups).{{% /md %}}</dd>
-</dl>
+(across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -454,9 +402,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -464,8 +410,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -473,14 +418,11 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -488,8 +430,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -497,14 +438,11 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -512,8 +450,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -521,14 +458,11 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -536,8 +470,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name. Required for data manager creation, optional for update.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -545,8 +478,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

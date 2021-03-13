@@ -14,11 +14,17 @@ Describes a database on the RedisEnterprise cluster
 API Version: 2021-03-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### RedisEnterpriseDatabasesCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -65,9 +71,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -114,9 +123,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -150,9 +162,12 @@ database = azure_native.cache.Database("database",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -187,9 +202,16 @@ const database = new azure_native.cache.Database("database", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Database Resource {#create}
@@ -214,9 +236,7 @@ const database = new azure_native.cache.Database("database", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +244,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +252,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,10 +260,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -273,9 +286,7 @@ const database = new azure_native.cache.Database("database", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -283,9 +294,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -293,9 +302,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -303,9 +310,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -313,18 +318,13 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -332,9 +332,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -342,9 +340,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -352,10 +348,7 @@ const database = new azure_native.cache.Database("database", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -370,9 +363,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -380,8 +371,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -389,8 +379,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprotocol_csharp">
 <a href="#clientprotocol_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
@@ -398,8 +387,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteringpolicy_csharp">
 <a href="#clusteringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Clustering<wbr>Policy</a>
@@ -407,8 +395,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#clusteringpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Clustering<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -416,8 +403,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_csharp">
 <a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -425,8 +411,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#evictionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Eviction<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modules_csharp">
 <a href="#modules_csharp" style="color: inherit; text-decoration: inherit;">Modules</a>
@@ -434,8 +419,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#module">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Inputs.<wbr>Module<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_csharp">
 <a href="#persistence_csharp" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -443,8 +427,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Inputs.<wbr>Persistence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -452,14 +435,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -467,8 +447,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -476,8 +455,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprotocol_go">
 <a href="#clientprotocol_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Protocol</a>
@@ -485,8 +463,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocol">Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteringpolicy_go">
 <a href="#clusteringpolicy_go" style="color: inherit; text-decoration: inherit;">Clustering<wbr>Policy</a>
@@ -494,8 +471,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#clusteringpolicy">Clustering<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -503,8 +479,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_go">
 <a href="#evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
@@ -512,8 +487,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#evictionpolicy">Eviction<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modules_go">
 <a href="#modules_go" style="color: inherit; text-decoration: inherit;">Modules</a>
@@ -521,8 +495,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#module">[]Module</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_go">
 <a href="#persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -530,8 +503,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistence">Persistence</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -539,14 +511,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -554,8 +523,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -563,8 +531,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientprotocol_nodejs">
 <a href="#clientprotocol_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Protocol</a>
@@ -572,8 +539,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#protocol">Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteringpolicy_nodejs">
 <a href="#clusteringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">clustering<wbr>Policy</a>
@@ -581,8 +547,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#clusteringpolicy">Clustering<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -590,8 +555,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_nodejs">
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
@@ -599,8 +563,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#evictionpolicy">Eviction<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modules_nodejs">
 <a href="#modules_nodejs" style="color: inherit; text-decoration: inherit;">modules</a>
@@ -608,8 +571,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#module">Module[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_nodejs">
 <a href="#persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -617,8 +579,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistence">Persistence</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -626,14 +587,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -641,8 +599,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -650,8 +607,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_protocol_python">
 <a href="#client_protocol_python" style="color: inherit; text-decoration: inherit;">client_<wbr>protocol</a>
@@ -659,8 +615,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#protocol">Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustering_policy_python">
 <a href="#clustering_policy_python" style="color: inherit; text-decoration: inherit;">clustering_<wbr>policy</a>
@@ -668,8 +623,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#clusteringpolicy">Clustering<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Clustering policy - default is OSSCluster. Specified at create time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -677,8 +631,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eviction_policy_python">
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
@@ -686,8 +639,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#evictionpolicy">Eviction<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Redis eviction policy - default is VolatileLRU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modules_python">
 <a href="#modules_python" style="color: inherit; text-decoration: inherit;">modules</a>
@@ -695,8 +647,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#module">Sequence[Module<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_python">
 <a href="#persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -704,8 +655,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistence">Persistence<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Persistence settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -713,8 +663,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TCP port of the database endpoint. Specified at create time. Defaults to an available port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -725,9 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -735,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -744,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -753,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -762,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -771,14 +714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -786,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -795,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -804,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
@@ -813,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -822,14 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -837,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -846,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -855,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
@@ -864,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -873,14 +802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -888,8 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -897,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -906,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current provisioning status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
@@ -915,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current resource status of the database{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -924,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -941,171 +862,109 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="aoffrequency">Aof<wbr>Frequency</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Aof<wbr>Frequency_1s</dt>
-    <dd>1s</dd>
-    <dt>Always</dt>
-    <dd>always</dd>
-</dl>
+<dl class="tabular"><dt>Aof<wbr>Frequency_1s</dt>
+    <dd>1s</dd><dt>Always</dt>
+    <dd>always</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Aof<wbr>Frequency_1s</dt>
-    <dd>1s</dd>
-    <dt>Aof<wbr>Frequency<wbr>Always</dt>
-    <dd>always</dd>
-</dl>
+<dl class="tabular"><dt>Aof<wbr>Frequency_1s</dt>
+    <dd>1s</dd><dt>Aof<wbr>Frequency<wbr>Always</dt>
+    <dd>always</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Aof<wbr>Frequency_1s</dt>
-    <dd>1s</dd>
-    <dt>Always</dt>
-    <dd>always</dd>
-</dl>
+<dl class="tabular"><dt>Aof<wbr>Frequency_1s</dt>
+    <dd>1s</dd><dt>Always</dt>
+    <dd>always</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AOF_FREQUENCY_1S</dt>
-    <dd>1s</dd>
-    <dt>ALWAYS</dt>
-    <dd>always</dd>
-</dl>
+<dl class="tabular"><dt>AOF_FREQUENCY_1S</dt>
+    <dd>1s</dd><dt>ALWAYS</dt>
+    <dd>always</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusteringpolicy">Clustering<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enterprise<wbr>Cluster</dt>
-    <dd>EnterpriseCluster</dd>
-    <dt>OSSCluster</dt>
-    <dd>OSSCluster</dd>
-</dl>
+<dl class="tabular"><dt>Enterprise<wbr>Cluster</dt>
+    <dd>EnterpriseCluster</dd><dt>OSSCluster</dt>
+    <dd>OSSCluster</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Clustering<wbr>Policy<wbr>Enterprise<wbr>Cluster</dt>
-    <dd>EnterpriseCluster</dd>
-    <dt>Clustering<wbr>Policy<wbr>OSSCluster</dt>
-    <dd>OSSCluster</dd>
-</dl>
+<dl class="tabular"><dt>Clustering<wbr>Policy<wbr>Enterprise<wbr>Cluster</dt>
+    <dd>EnterpriseCluster</dd><dt>Clustering<wbr>Policy<wbr>OSSCluster</dt>
+    <dd>OSSCluster</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enterprise<wbr>Cluster</dt>
-    <dd>EnterpriseCluster</dd>
-    <dt>OSSCluster</dt>
-    <dd>OSSCluster</dd>
-</dl>
+<dl class="tabular"><dt>Enterprise<wbr>Cluster</dt>
+    <dd>EnterpriseCluster</dd><dt>OSSCluster</dt>
+    <dd>OSSCluster</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENTERPRISE_CLUSTER</dt>
-    <dd>EnterpriseCluster</dd>
-    <dt>OSS_CLUSTER</dt>
-    <dd>OSSCluster</dd>
-</dl>
+<dl class="tabular"><dt>ENTERPRISE_CLUSTER</dt>
+    <dd>EnterpriseCluster</dd><dt>OSS_CLUSTER</dt>
+    <dd>OSSCluster</dd></dl>
 {{% /choosable %}}
 
 <h4 id="evictionpolicy">Eviction<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All<wbr>Keys<wbr>LFU</dt>
-    <dd>AllKeysLFU</dd>
-    <dt>All<wbr>Keys<wbr>LRU</dt>
-    <dd>AllKeysLRU</dd>
-    <dt>All<wbr>Keys<wbr>Random</dt>
-    <dd>AllKeysRandom</dd>
-    <dt>Volatile<wbr>LRU</dt>
-    <dd>VolatileLRU</dd>
-    <dt>Volatile<wbr>LFU</dt>
-    <dd>VolatileLFU</dd>
-    <dt>Volatile<wbr>TTL</dt>
-    <dd>VolatileTTL</dd>
-    <dt>Volatile<wbr>Random</dt>
-    <dd>VolatileRandom</dd>
-    <dt>No<wbr>Eviction</dt>
-    <dd>NoEviction</dd>
-</dl>
+<dl class="tabular"><dt>All<wbr>Keys<wbr>LFU</dt>
+    <dd>AllKeysLFU</dd><dt>All<wbr>Keys<wbr>LRU</dt>
+    <dd>AllKeysLRU</dd><dt>All<wbr>Keys<wbr>Random</dt>
+    <dd>AllKeysRandom</dd><dt>Volatile<wbr>LRU</dt>
+    <dd>VolatileLRU</dd><dt>Volatile<wbr>LFU</dt>
+    <dd>VolatileLFU</dd><dt>Volatile<wbr>TTL</dt>
+    <dd>VolatileTTL</dd><dt>Volatile<wbr>Random</dt>
+    <dd>VolatileRandom</dd><dt>No<wbr>Eviction</dt>
+    <dd>NoEviction</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Eviction<wbr>Policy<wbr>All<wbr>Keys<wbr>LFU</dt>
-    <dd>AllKeysLFU</dd>
-    <dt>Eviction<wbr>Policy<wbr>All<wbr>Keys<wbr>LRU</dt>
-    <dd>AllKeysLRU</dd>
-    <dt>Eviction<wbr>Policy<wbr>All<wbr>Keys<wbr>Random</dt>
-    <dd>AllKeysRandom</dd>
-    <dt>Eviction<wbr>Policy<wbr>Volatile<wbr>LRU</dt>
-    <dd>VolatileLRU</dd>
-    <dt>Eviction<wbr>Policy<wbr>Volatile<wbr>LFU</dt>
-    <dd>VolatileLFU</dd>
-    <dt>Eviction<wbr>Policy<wbr>Volatile<wbr>TTL</dt>
-    <dd>VolatileTTL</dd>
-    <dt>Eviction<wbr>Policy<wbr>Volatile<wbr>Random</dt>
-    <dd>VolatileRandom</dd>
-    <dt>Eviction<wbr>Policy<wbr>No<wbr>Eviction</dt>
-    <dd>NoEviction</dd>
-</dl>
+<dl class="tabular"><dt>Eviction<wbr>Policy<wbr>All<wbr>Keys<wbr>LFU</dt>
+    <dd>AllKeysLFU</dd><dt>Eviction<wbr>Policy<wbr>All<wbr>Keys<wbr>LRU</dt>
+    <dd>AllKeysLRU</dd><dt>Eviction<wbr>Policy<wbr>All<wbr>Keys<wbr>Random</dt>
+    <dd>AllKeysRandom</dd><dt>Eviction<wbr>Policy<wbr>Volatile<wbr>LRU</dt>
+    <dd>VolatileLRU</dd><dt>Eviction<wbr>Policy<wbr>Volatile<wbr>LFU</dt>
+    <dd>VolatileLFU</dd><dt>Eviction<wbr>Policy<wbr>Volatile<wbr>TTL</dt>
+    <dd>VolatileTTL</dd><dt>Eviction<wbr>Policy<wbr>Volatile<wbr>Random</dt>
+    <dd>VolatileRandom</dd><dt>Eviction<wbr>Policy<wbr>No<wbr>Eviction</dt>
+    <dd>NoEviction</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All<wbr>Keys<wbr>LFU</dt>
-    <dd>AllKeysLFU</dd>
-    <dt>All<wbr>Keys<wbr>LRU</dt>
-    <dd>AllKeysLRU</dd>
-    <dt>All<wbr>Keys<wbr>Random</dt>
-    <dd>AllKeysRandom</dd>
-    <dt>Volatile<wbr>LRU</dt>
-    <dd>VolatileLRU</dd>
-    <dt>Volatile<wbr>LFU</dt>
-    <dd>VolatileLFU</dd>
-    <dt>Volatile<wbr>TTL</dt>
-    <dd>VolatileTTL</dd>
-    <dt>Volatile<wbr>Random</dt>
-    <dd>VolatileRandom</dd>
-    <dt>No<wbr>Eviction</dt>
-    <dd>NoEviction</dd>
-</dl>
+<dl class="tabular"><dt>All<wbr>Keys<wbr>LFU</dt>
+    <dd>AllKeysLFU</dd><dt>All<wbr>Keys<wbr>LRU</dt>
+    <dd>AllKeysLRU</dd><dt>All<wbr>Keys<wbr>Random</dt>
+    <dd>AllKeysRandom</dd><dt>Volatile<wbr>LRU</dt>
+    <dd>VolatileLRU</dd><dt>Volatile<wbr>LFU</dt>
+    <dd>VolatileLFU</dd><dt>Volatile<wbr>TTL</dt>
+    <dd>VolatileTTL</dd><dt>Volatile<wbr>Random</dt>
+    <dd>VolatileRandom</dd><dt>No<wbr>Eviction</dt>
+    <dd>NoEviction</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL_KEYS_LFU</dt>
-    <dd>AllKeysLFU</dd>
-    <dt>ALL_KEYS_LRU</dt>
-    <dd>AllKeysLRU</dd>
-    <dt>ALL_KEYS_RANDOM</dt>
-    <dd>AllKeysRandom</dd>
-    <dt>VOLATILE_LRU</dt>
-    <dd>VolatileLRU</dd>
-    <dt>VOLATILE_LFU</dt>
-    <dd>VolatileLFU</dd>
-    <dt>VOLATILE_TTL</dt>
-    <dd>VolatileTTL</dd>
-    <dt>VOLATILE_RANDOM</dt>
-    <dd>VolatileRandom</dd>
-    <dt>NO_EVICTION</dt>
-    <dd>NoEviction</dd>
-</dl>
+<dl class="tabular"><dt>ALL_KEYS_LFU</dt>
+    <dd>AllKeysLFU</dd><dt>ALL_KEYS_LRU</dt>
+    <dd>AllKeysLRU</dd><dt>ALL_KEYS_RANDOM</dt>
+    <dd>AllKeysRandom</dd><dt>VOLATILE_LRU</dt>
+    <dd>VolatileLRU</dd><dt>VOLATILE_LFU</dt>
+    <dd>VolatileLFU</dd><dt>VOLATILE_TTL</dt>
+    <dd>VolatileTTL</dd><dt>VOLATILE_RANDOM</dt>
+    <dd>VolatileRandom</dd><dt>NO_EVICTION</dt>
+    <dd>NoEviction</dd></dl>
 {{% /choosable %}}
 
 <h4 id="module">Module</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1113,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -1122,14 +980,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1137,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -1146,14 +1000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1161,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -1170,14 +1020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1185,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -1194,16 +1040,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="moduleresponse">Module<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1211,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1220,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -1229,14 +1070,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1244,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1253,8 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -1262,14 +1098,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1277,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1286,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -1295,14 +1126,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1310,8 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1319,8 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the module, e.g. '1.0'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -1328,16 +1154,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="persistence">Persistence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_csharp">
 <a href="#aofenabled_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Enabled</a>
@@ -1345,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_csharp">
 <a href="#aoffrequency_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Frequency</a>
@@ -1354,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#aoffrequency">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Aof<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_csharp">
 <a href="#rdbenabled_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Enabled</a>
@@ -1363,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_csharp">
 <a href="#rdbfrequency_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Frequency</a>
@@ -1372,14 +1192,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rdbfrequency">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Rdb<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_go">
 <a href="#aofenabled_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Enabled</a>
@@ -1387,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_go">
 <a href="#aoffrequency_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Frequency</a>
@@ -1396,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#aoffrequency">Aof<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_go">
 <a href="#rdbenabled_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Enabled</a>
@@ -1405,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_go">
 <a href="#rdbfrequency_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Frequency</a>
@@ -1414,14 +1228,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rdbfrequency">Rdb<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_nodejs">
 <a href="#aofenabled_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Enabled</a>
@@ -1429,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_nodejs">
 <a href="#aoffrequency_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Frequency</a>
@@ -1438,8 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#aoffrequency">Aof<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_nodejs">
 <a href="#rdbenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Enabled</a>
@@ -1447,8 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_nodejs">
 <a href="#rdbfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Frequency</a>
@@ -1456,14 +1264,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#rdbfrequency">Rdb<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aof_enabled_python">
 <a href="#aof_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>enabled</a>
@@ -1471,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_frequency_python">
 <a href="#aof_frequency_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>frequency</a>
@@ -1480,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#aoffrequency">Aof<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_enabled_python">
 <a href="#rdb_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>enabled</a>
@@ -1489,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_frequency_python">
 <a href="#rdb_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>frequency</a>
@@ -1498,16 +1300,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#rdbfrequency">Rdb<wbr>Frequency</a></span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="persistenceresponse">Persistence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_csharp">
 <a href="#aofenabled_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Enabled</a>
@@ -1515,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_csharp">
 <a href="#aoffrequency_csharp" style="color: inherit; text-decoration: inherit;">Aof<wbr>Frequency</a>
@@ -1524,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_csharp">
 <a href="#rdbenabled_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Enabled</a>
@@ -1533,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_csharp">
 <a href="#rdbfrequency_csharp" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Frequency</a>
@@ -1542,14 +1338,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_go">
 <a href="#aofenabled_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Enabled</a>
@@ -1557,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_go">
 <a href="#aoffrequency_go" style="color: inherit; text-decoration: inherit;">Aof<wbr>Frequency</a>
@@ -1566,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_go">
 <a href="#rdbenabled_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Enabled</a>
@@ -1575,8 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_go">
 <a href="#rdbfrequency_go" style="color: inherit; text-decoration: inherit;">Rdb<wbr>Frequency</a>
@@ -1584,14 +1374,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aofenabled_nodejs">
 <a href="#aofenabled_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Enabled</a>
@@ -1599,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aoffrequency_nodejs">
 <a href="#aoffrequency_nodejs" style="color: inherit; text-decoration: inherit;">aof<wbr>Frequency</a>
@@ -1608,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbenabled_nodejs">
 <a href="#rdbenabled_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Enabled</a>
@@ -1617,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdbfrequency_nodejs">
 <a href="#rdbfrequency_nodejs" style="color: inherit; text-decoration: inherit;">rdb<wbr>Frequency</a>
@@ -1626,14 +1410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aof_enabled_python">
 <a href="#aof_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>enabled</a>
@@ -1641,8 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether AOF is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aof_frequency_python">
 <a href="#aof_frequency_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>frequency</a>
@@ -1650,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets the frequency at which data is written to disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_enabled_python">
 <a href="#rdb_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>enabled</a>
@@ -1659,8 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets whether RDB is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rdb_frequency_python">
 <a href="#rdb_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>frequency</a>
@@ -1668,92 +1446,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sets the frequency at which a snapshot of the database is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="protocol">Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Encrypted</dt>
-    <dd>Encrypted</dd>
-    <dt>Plaintext</dt>
-    <dd>Plaintext</dd>
-</dl>
+<dl class="tabular"><dt>Encrypted</dt>
+    <dd>Encrypted</dd><dt>Plaintext</dt>
+    <dd>Plaintext</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Protocol<wbr>Encrypted</dt>
-    <dd>Encrypted</dd>
-    <dt>Protocol<wbr>Plaintext</dt>
-    <dd>Plaintext</dd>
-</dl>
+<dl class="tabular"><dt>Protocol<wbr>Encrypted</dt>
+    <dd>Encrypted</dd><dt>Protocol<wbr>Plaintext</dt>
+    <dd>Plaintext</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Encrypted</dt>
-    <dd>Encrypted</dd>
-    <dt>Plaintext</dt>
-    <dd>Plaintext</dd>
-</dl>
+<dl class="tabular"><dt>Encrypted</dt>
+    <dd>Encrypted</dd><dt>Plaintext</dt>
+    <dd>Plaintext</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENCRYPTED</dt>
-    <dd>Encrypted</dd>
-    <dt>PLAINTEXT</dt>
-    <dd>Plaintext</dd>
-</dl>
+<dl class="tabular"><dt>ENCRYPTED</dt>
+    <dd>Encrypted</dd><dt>PLAINTEXT</dt>
+    <dd>Plaintext</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rdbfrequency">Rdb<wbr>Frequency</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Rdb<wbr>Frequency_1h</dt>
-    <dd>1h</dd>
-    <dt>Rdb<wbr>Frequency_6h</dt>
-    <dd>6h</dd>
-    <dt>Rdb<wbr>Frequency_12h</dt>
-    <dd>12h</dd>
-</dl>
+<dl class="tabular"><dt>Rdb<wbr>Frequency_1h</dt>
+    <dd>1h</dd><dt>Rdb<wbr>Frequency_6h</dt>
+    <dd>6h</dd><dt>Rdb<wbr>Frequency_12h</dt>
+    <dd>12h</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Rdb<wbr>Frequency_1h</dt>
-    <dd>1h</dd>
-    <dt>Rdb<wbr>Frequency_6h</dt>
-    <dd>6h</dd>
-    <dt>Rdb<wbr>Frequency_12h</dt>
-    <dd>12h</dd>
-</dl>
+<dl class="tabular"><dt>Rdb<wbr>Frequency_1h</dt>
+    <dd>1h</dd><dt>Rdb<wbr>Frequency_6h</dt>
+    <dd>6h</dd><dt>Rdb<wbr>Frequency_12h</dt>
+    <dd>12h</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Rdb<wbr>Frequency_1h</dt>
-    <dd>1h</dd>
-    <dt>Rdb<wbr>Frequency_6h</dt>
-    <dd>6h</dd>
-    <dt>Rdb<wbr>Frequency_12h</dt>
-    <dd>12h</dd>
-</dl>
+<dl class="tabular"><dt>Rdb<wbr>Frequency_1h</dt>
+    <dd>1h</dd><dt>Rdb<wbr>Frequency_6h</dt>
+    <dd>6h</dd><dt>Rdb<wbr>Frequency_12h</dt>
+    <dd>12h</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>RDB_FREQUENCY_1H</dt>
-    <dd>1h</dd>
-    <dt>RDB_FREQUENCY_6H</dt>
-    <dd>6h</dd>
-    <dt>RDB_FREQUENCY_12H</dt>
-    <dd>12h</dd>
-</dl>
+<dl class="tabular"><dt>RDB_FREQUENCY_1H</dt>
+    <dd>1h</dd><dt>RDB_FREQUENCY_6H</dt>
+    <dd>6h</dd><dt>RDB_FREQUENCY_12H</dt>
+    <dd>12h</dd></dl>
 {{% /choosable %}}
 ## Import
 

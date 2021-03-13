@@ -14,11 +14,17 @@ Job Resource.
 API Version: 2020-11-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### JobsCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -80,13 +86,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -128,9 +140,12 @@ job = azure_native.databox.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -173,10 +188,17 @@ const job = new azure_native.databox.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### JobsCreateDevicePassword
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -240,13 +262,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -290,9 +318,12 @@ job = azure_native.databox.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -337,10 +368,17 @@ const job = new azure_native.databox.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### JobsCreateDoubleEncryption
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -409,13 +447,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -462,9 +506,12 @@ job = azure_native.databox.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -512,10 +559,17 @@ const job = new azure_native.databox.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### JobsCreateExport
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -590,13 +644,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -648,9 +708,12 @@ job = azure_native.databox.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -703,10 +766,17 @@ const job = new azure_native.databox.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### JobsCreateWithUserAssignedIdentity
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -776,13 +846,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -830,9 +906,12 @@ job = azure_native.databox.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -881,9 +960,16 @@ const job = new azure_native.databox.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Job Resource {#create}
@@ -908,9 +994,7 @@ const job = new azure_native.databox.Job("job", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -918,9 +1002,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -928,9 +1010,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -938,10 +1018,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -967,9 +1044,7 @@ const job = new azure_native.databox.Job("job", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -977,9 +1052,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -987,9 +1060,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -997,9 +1068,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1007,18 +1076,13 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1026,9 +1090,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1036,9 +1098,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1046,10 +1106,7 @@ const job = new azure_native.databox.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1064,9 +1121,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1074,8 +1129,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1083,8 +1137,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfertype_csharp">
 <a href="#transfertype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
@@ -1092,8 +1145,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transfertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Transfer<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliveryinfo_csharp">
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
@@ -1101,8 +1153,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdeliveryinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverytype_csharp">
 <a href="#deliverytype_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
@@ -1110,8 +1161,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobdeliverytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1119,8 +1169,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskjobdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxheavyjobdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxjobdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1128,8 +1177,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -1137,8 +1185,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1146,8 +1193,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1155,14 +1201,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1170,8 +1213,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1179,8 +1221,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfertype_go">
 <a href="#transfertype_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
@@ -1188,8 +1229,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transfertype">Transfer<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliveryinfo_go">
 <a href="#deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
@@ -1197,8 +1237,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdeliveryinfo">Job<wbr>Delivery<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverytype_go">
 <a href="#deliverytype_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
@@ -1206,8 +1245,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobdeliverytype">Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1215,8 +1253,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details</a> | <a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details</a> | <a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1224,8 +1261,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -1233,8 +1269,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1242,8 +1277,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1251,14 +1285,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1266,8 +1297,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1275,8 +1305,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfertype_nodejs">
 <a href="#transfertype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Type</a>
@@ -1284,8 +1313,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transfertype">Transfer<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliveryinfo_nodejs">
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
@@ -1293,8 +1321,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdeliveryinfo">Job<wbr>Delivery<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliverytype_nodejs">
 <a href="#deliverytype_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Type</a>
@@ -1302,8 +1329,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#jobdeliverytype">Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1311,8 +1337,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details</a> | <a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details</a> | <a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1320,8 +1345,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
@@ -1329,8 +1353,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1338,8 +1361,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1347,14 +1369,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1362,8 +1381,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1371,8 +1389,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sku type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_type_python">
 <a href="#transfer_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>type</a>
@@ -1380,8 +1397,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#transfertype">Transfer<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_info_python">
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
@@ -1389,8 +1405,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobdeliveryinfo">Job<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery Info of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_type_python">
 <a href="#delivery_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>type</a>
@@ -1398,8 +1413,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#jobdeliverytype">Job<wbr>Delivery<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Delivery type of Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1407,8 +1421,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Args</a> | <a href="#databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of a job run. This field will only be sent for expand details filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1416,8 +1429,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
@@ -1425,8 +1437,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1434,8 +1445,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1443,8 +1453,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1455,9 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cancellationreason_csharp">
 <a href="#cancellationreason_csharp" style="color: inherit; text-decoration: inherit;">Cancellation<wbr>Reason</a>
@@ -1465,8 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1474,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1483,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscancellable_csharp">
 <a href="#iscancellable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cancellable</a>
@@ -1492,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscancellablewithoutfee_csharp">
 <a href="#iscancellablewithoutfee_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cancellable<wbr>Without<wbr>Fee</a>
@@ -1501,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdeletable_csharp">
 <a href="#isdeletable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deletable</a>
@@ -1510,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispreparetoshipenabled_csharp">
 <a href="#ispreparetoshipenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Prepare<wbr>To<wbr>Ship<wbr>Enabled</a>
@@ -1519,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isshippingaddresseditable_csharp">
 <a href="#isshippingaddresseditable_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Shipping<wbr>Address<wbr>Editable</a>
@@ -1528,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1537,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1546,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1555,8 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1564,8 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1573,14 +1568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cancellationreason_go">
 <a href="#cancellationreason_go" style="color: inherit; text-decoration: inherit;">Cancellation<wbr>Reason</a>
@@ -1588,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1597,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1606,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscancellable_go">
 <a href="#iscancellable_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Cancellable</a>
@@ -1615,8 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscancellablewithoutfee_go">
 <a href="#iscancellablewithoutfee_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Cancellable<wbr>Without<wbr>Fee</a>
@@ -1624,8 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdeletable_go">
 <a href="#isdeletable_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deletable</a>
@@ -1633,8 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispreparetoshipenabled_go">
 <a href="#ispreparetoshipenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Prepare<wbr>To<wbr>Ship<wbr>Enabled</a>
@@ -1642,8 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isshippingaddresseditable_go">
 <a href="#isshippingaddresseditable_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Shipping<wbr>Address<wbr>Editable</a>
@@ -1651,8 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1660,8 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1669,8 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1678,8 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -1687,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1696,14 +1676,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cancellationreason_nodejs">
 <a href="#cancellationreason_nodejs" style="color: inherit; text-decoration: inherit;">cancellation<wbr>Reason</a>
@@ -1711,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1720,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1729,8 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscancellable_nodejs">
 <a href="#iscancellable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cancellable</a>
@@ -1738,8 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscancellablewithoutfee_nodejs">
 <a href="#iscancellablewithoutfee_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cancellable<wbr>Without<wbr>Fee</a>
@@ -1747,8 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdeletable_nodejs">
 <a href="#isdeletable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deletable</a>
@@ -1756,8 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispreparetoshipenabled_nodejs">
 <a href="#ispreparetoshipenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Prepare<wbr>To<wbr>Ship<wbr>Enabled</a>
@@ -1765,8 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isshippingaddresseditable_nodejs">
 <a href="#isshippingaddresseditable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Shipping<wbr>Address<wbr>Editable</a>
@@ -1774,8 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1783,8 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1792,8 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1801,8 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1810,8 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1819,14 +1784,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cancellation_reason_python">
 <a href="#cancellation_reason_python" style="color: inherit; text-decoration: inherit;">cancellation_<wbr>reason</a>
@@ -1834,8 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Reason for cancellation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1843,8 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Top level error for the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1852,8 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_cancellable_python">
 <a href="#is_cancellable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cancellable</a>
@@ -1861,8 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is cancellable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_cancellable_without_fee_python">
 <a href="#is_cancellable_without_fee_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cancellable_<wbr>without_<wbr>fee</a>
@@ -1870,8 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to indicate cancellation of scheduled job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_deletable_python">
 <a href="#is_deletable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deletable</a>
@@ -1879,8 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the job is deletable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_prepare_to_ship_enabled_python">
 <a href="#is_prepare_to_ship_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>prepare_<wbr>to_<wbr>ship_<wbr>enabled</a>
@@ -1888,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is Prepare To Ship Enabled on this job{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_shipping_address_editable_python">
 <a href="#is_shipping_address_editable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>shipping_<wbr>address_<wbr>editable</a>
@@ -1897,8 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes whether the shipping address is editable or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1906,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1915,8 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time at which the job was started in UTC ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1924,8 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the stage which is in progress.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1933,8 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1942,8 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1959,9 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="additionalerrorinforesponse">Additional<wbr>Error<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="info_csharp">
 <a href="#info_csharp" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -1969,8 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1978,14 +1924,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional error type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="info_go">
 <a href="#info_go" style="color: inherit; text-decoration: inherit;">Info</a>
@@ -1993,8 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2002,14 +1944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional error type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="info_nodejs">
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
@@ -2017,8 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2026,14 +1964,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional error type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="info_python">
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
@@ -2041,8 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Additional error info.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2050,62 +1984,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Additional error type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional error type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="addresstype">Address<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>Residential</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>Commercial</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>Residential</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>Commercial</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Address<wbr>Type<wbr>None</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>Address<wbr>Type<wbr>Residential</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>Address<wbr>Type<wbr>Commercial</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Address<wbr>Type<wbr>None</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>Address<wbr>Type<wbr>Residential</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>Address<wbr>Type<wbr>Commercial</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>Residential</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>Commercial</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>Residential</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>Commercial</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd>
-    <dt>RESIDENTIAL</dt>
-    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd>
-    <dt>COMMERCIAL</dt>
-    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None{{% md %}}Address type not known.{{% /md %}}</dd><dt>RESIDENTIAL</dt>
+    <dd>Residential{{% md %}}Residential Address.{{% /md %}}</dd><dt>COMMERCIAL</dt>
+    <dd>Commercial{{% md %}}Commercial Address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurefilefilterdetails">Azure<wbr>File<wbr>Filter<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepathlist_csharp">
 <a href="#filepathlist_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path<wbr>List</a>
@@ -2113,8 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileprefixlist_csharp">
 <a href="#fileprefixlist_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Prefix<wbr>List</a>
@@ -2122,8 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharelist_csharp">
 <a href="#filesharelist_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>List</a>
@@ -2131,14 +2044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepathlist_go">
 <a href="#filepathlist_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path<wbr>List</a>
@@ -2146,8 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileprefixlist_go">
 <a href="#fileprefixlist_go" style="color: inherit; text-decoration: inherit;">File<wbr>Prefix<wbr>List</a>
@@ -2155,8 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharelist_go">
 <a href="#filesharelist_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>List</a>
@@ -2164,14 +2072,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepathlist_nodejs">
 <a href="#filepathlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>List</a>
@@ -2179,8 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileprefixlist_nodejs">
 <a href="#fileprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix<wbr>List</a>
@@ -2188,8 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharelist_nodejs">
 <a href="#filesharelist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>List</a>
@@ -2197,14 +2100,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_path_list_python">
 <a href="#file_path_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>list</a>
@@ -2212,8 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_prefix_list_python">
 <a href="#file_prefix_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix_<wbr>list</a>
@@ -2221,8 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_share_list_python">
 <a href="#file_share_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>list</a>
@@ -2230,16 +2128,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepathlist_csharp">
 <a href="#filepathlist_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path<wbr>List</a>
@@ -2247,8 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileprefixlist_csharp">
 <a href="#fileprefixlist_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Prefix<wbr>List</a>
@@ -2256,8 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharelist_csharp">
 <a href="#filesharelist_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>List</a>
@@ -2265,14 +2158,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepathlist_go">
 <a href="#filepathlist_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path<wbr>List</a>
@@ -2280,8 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileprefixlist_go">
 <a href="#fileprefixlist_go" style="color: inherit; text-decoration: inherit;">File<wbr>Prefix<wbr>List</a>
@@ -2289,8 +2178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharelist_go">
 <a href="#filesharelist_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>List</a>
@@ -2298,14 +2186,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepathlist_nodejs">
 <a href="#filepathlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>List</a>
@@ -2313,8 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileprefixlist_nodejs">
 <a href="#fileprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Prefix<wbr>List</a>
@@ -2322,8 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharelist_nodejs">
 <a href="#filesharelist_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>List</a>
@@ -2331,14 +2214,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_path_list_python">
 <a href="#file_path_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>list</a>
@@ -2346,8 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_prefix_list_python">
 <a href="#file_prefix_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>prefix_<wbr>list</a>
@@ -2355,8 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure files to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_share_list_python">
 <a href="#file_share_list_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>list</a>
@@ -2364,16 +2242,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of file shares to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="blobfilterdetails">Blob<wbr>Filter<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobpathlist_csharp">
 <a href="#blobpathlist_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>List</a>
@@ -2381,8 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobprefixlist_csharp">
 <a href="#blobprefixlist_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Prefix<wbr>List</a>
@@ -2390,8 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlist_csharp">
 <a href="#containerlist_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>List</a>
@@ -2399,14 +2272,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobpathlist_go">
 <a href="#blobpathlist_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>List</a>
@@ -2414,8 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobprefixlist_go">
 <a href="#blobprefixlist_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Prefix<wbr>List</a>
@@ -2423,8 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlist_go">
 <a href="#containerlist_go" style="color: inherit; text-decoration: inherit;">Container<wbr>List</a>
@@ -2432,14 +2300,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobpathlist_nodejs">
 <a href="#blobpathlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>List</a>
@@ -2447,8 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobprefixlist_nodejs">
 <a href="#blobprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix<wbr>List</a>
@@ -2456,8 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlist_nodejs">
 <a href="#containerlist_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>List</a>
@@ -2465,14 +2328,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_path_list_python">
 <a href="#blob_path_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>list</a>
@@ -2480,8 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_prefix_list_python">
 <a href="#blob_prefix_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix_<wbr>list</a>
@@ -2489,8 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_list_python">
 <a href="#container_list_python" style="color: inherit; text-decoration: inherit;">container_<wbr>list</a>
@@ -2498,16 +2356,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobpathlist_csharp">
 <a href="#blobpathlist_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>List</a>
@@ -2515,8 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobprefixlist_csharp">
 <a href="#blobprefixlist_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Prefix<wbr>List</a>
@@ -2524,8 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlist_csharp">
 <a href="#containerlist_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>List</a>
@@ -2533,14 +2386,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobpathlist_go">
 <a href="#blobpathlist_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>List</a>
@@ -2548,8 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobprefixlist_go">
 <a href="#blobprefixlist_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Prefix<wbr>List</a>
@@ -2557,8 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlist_go">
 <a href="#containerlist_go" style="color: inherit; text-decoration: inherit;">Container<wbr>List</a>
@@ -2566,14 +2414,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobpathlist_nodejs">
 <a href="#blobpathlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>List</a>
@@ -2581,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobprefixlist_nodejs">
 <a href="#blobprefixlist_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Prefix<wbr>List</a>
@@ -2590,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlist_nodejs">
 <a href="#containerlist_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>List</a>
@@ -2599,14 +2442,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_path_list_python">
 <a href="#blob_path_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>list</a>
@@ -2614,8 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of full path of the blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_prefix_list_python">
 <a href="#blob_prefix_list_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>prefix_<wbr>list</a>
@@ -2623,8 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Prefix list of the Azure blobs to be transferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_list_python">
 <a href="#container_list_python" style="color: inherit; text-decoration: inherit;">container_<wbr>list</a>
@@ -2632,16 +2470,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of blob containers to be transferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clouderrorresponse">Cloud<wbr>Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinfo_csharp">
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
@@ -2649,8 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2658,8 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2667,8 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2676,8 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2685,14 +2516,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinfo_go">
 <a href="#additionalinfo_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
@@ -2700,8 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">[]Additional<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2709,8 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">[]Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2718,8 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2727,8 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -2736,14 +2560,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additionalinfo_nodejs">
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
@@ -2751,8 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">Additional<wbr>Error<wbr>Info<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2760,8 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2769,8 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2778,8 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2787,14 +2604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="additional_info_python">
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
@@ -2802,8 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2811,8 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2820,8 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2829,8 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cloud error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -2838,16 +2648,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cloud error target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contactdetails">Contact<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_csharp">
 <a href="#contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -2855,8 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emaillist_csharp">
 <a href="#emaillist_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
@@ -2864,8 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -2873,8 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_csharp">
 <a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -2882,8 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreference_csharp">
 <a href="#notificationpreference_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preference</a>
@@ -2891,8 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_csharp">
 <a href="#phoneextension_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -2900,14 +2702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_go">
 <a href="#contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -2915,8 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emaillist_go">
 <a href="#emaillist_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
@@ -2924,8 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -2933,8 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_go">
 <a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -2942,8 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreference_go">
 <a href="#notificationpreference_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preference</a>
@@ -2951,8 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreference">[]Notification<wbr>Preference</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_go">
 <a href="#phoneextension_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -2960,14 +2754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_nodejs">
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
@@ -2975,8 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emaillist_nodejs">
 <a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
@@ -2984,8 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -2993,8 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_nodejs">
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -3002,8 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreference_nodejs">
 <a href="#notificationpreference_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preference</a>
@@ -3011,8 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreference">Notification<wbr>Preference[]</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_nodejs">
 <a href="#phoneextension_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
@@ -3020,14 +2806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_name_python">
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
@@ -3035,8 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_list_python">
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
@@ -3044,8 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -3053,8 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_python">
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -3062,8 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_preference_python">
 <a href="#notification_preference_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>preference</a>
@@ -3071,8 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreference">Sequence[Notification<wbr>Preference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_extension_python">
 <a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
@@ -3080,16 +2858,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contactdetailsresponse">Contact<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_csharp">
 <a href="#contactname_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -3097,8 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emaillist_csharp">
 <a href="#emaillist_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
@@ -3106,8 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -3115,8 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_csharp">
 <a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -3124,8 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreference_csharp">
 <a href="#notificationpreference_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preference</a>
@@ -3133,8 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Notification<wbr>Preference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_csharp">
 <a href="#phoneextension_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -3142,14 +2912,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_go">
 <a href="#contactname_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Name</a>
@@ -3157,8 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emaillist_go">
 <a href="#emaillist_go" style="color: inherit; text-decoration: inherit;">Email<wbr>List</a>
@@ -3166,8 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -3175,8 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_go">
 <a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
@@ -3184,8 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreference_go">
 <a href="#notificationpreference_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preference</a>
@@ -3193,8 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreferenceresponse">[]Notification<wbr>Preference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_go">
 <a href="#phoneextension_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Extension</a>
@@ -3202,14 +2964,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactname_nodejs">
 <a href="#contactname_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Name</a>
@@ -3217,8 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emaillist_nodejs">
 <a href="#emaillist_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>List</a>
@@ -3226,8 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -3235,8 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_nodejs">
 <a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -3244,8 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreference_nodejs">
 <a href="#notificationpreference_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preference</a>
@@ -3253,8 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreferenceresponse">Notification<wbr>Preference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phoneextension_nodejs">
 <a href="#phoneextension_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Extension</a>
@@ -3262,14 +3016,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_name_python">
 <a href="#contact_name_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>name</a>
@@ -3277,8 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact name of the person.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_list_python">
 <a href="#email_list_python" style="color: inherit; text-decoration: inherit;">email_<wbr>list</a>
@@ -3286,8 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of Email-ids to be notified about job progress.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -3295,8 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Phone number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_python">
 <a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
@@ -3304,8 +3052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Mobile number of the contact person.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_preference_python">
 <a href="#notification_preference_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>preference</a>
@@ -3313,8 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationpreferenceresponse">Sequence[Notification<wbr>Preference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification preference for a job stage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_extension_python">
 <a href="#phone_extension_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>extension</a>
@@ -3322,16 +3068,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone extension number of the contact person.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="copyprogressresponse">Copy<wbr>Progress<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -3339,8 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytesprocessed_csharp">
 <a href="#bytesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Processed</a>
@@ -3348,8 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_csharp">
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -3357,8 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="directorieserroredout_csharp">
 <a href="#directorieserroredout_csharp" style="color: inherit; text-decoration: inherit;">Directories<wbr>Errored<wbr>Out</a>
@@ -3366,8 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileserroredout_csharp">
 <a href="#fileserroredout_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Errored<wbr>Out</a>
@@ -3375,8 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filesprocessed_csharp">
 <a href="#filesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Processed</a>
@@ -3384,8 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files processed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invaliddirectoriesprocessed_csharp">
 <a href="#invaliddirectoriesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Directories<wbr>Processed</a>
@@ -3393,8 +3130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalidfilebytesuploaded_csharp">
 <a href="#invalidfilebytesuploaded_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
@@ -3402,8 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalidfilesprocessed_csharp">
 <a href="#invalidfilesprocessed_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Files<wbr>Processed</a>
@@ -3411,8 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenumerationinprogress_csharp">
 <a href="#isenumerationinprogress_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enumeration<wbr>In<wbr>Progress</a>
@@ -3421,8 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if enumeration of data is in progress. 
-Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
-    <dt class="property-required"
+Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="renamedcontainercount_csharp">
 <a href="#renamedcontainercount_csharp" style="color: inherit; text-decoration: inherit;">Renamed<wbr>Container<wbr>Count</a>
@@ -3430,8 +3163,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountname_csharp">
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -3439,8 +3171,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalbytestoprocess_csharp">
 <a href="#totalbytestoprocess_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>To<wbr>Process</a>
@@ -3448,8 +3179,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalfilestoprocess_csharp">
 <a href="#totalfilestoprocess_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Files<wbr>To<wbr>Process</a>
@@ -3457,8 +3187,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total files to process{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total files to process{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfertype_csharp">
 <a href="#transfertype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
@@ -3466,14 +3195,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -3481,8 +3207,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytesprocessed_go">
 <a href="#bytesprocessed_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Processed</a>
@@ -3490,8 +3215,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_go">
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -3499,8 +3223,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="directorieserroredout_go">
 <a href="#directorieserroredout_go" style="color: inherit; text-decoration: inherit;">Directories<wbr>Errored<wbr>Out</a>
@@ -3508,8 +3231,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileserroredout_go">
 <a href="#fileserroredout_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Errored<wbr>Out</a>
@@ -3517,8 +3239,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filesprocessed_go">
 <a href="#filesprocessed_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Processed</a>
@@ -3526,8 +3247,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files processed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invaliddirectoriesprocessed_go">
 <a href="#invaliddirectoriesprocessed_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Directories<wbr>Processed</a>
@@ -3535,8 +3255,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalidfilebytesuploaded_go">
 <a href="#invalidfilebytesuploaded_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
@@ -3544,8 +3263,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalidfilesprocessed_go">
 <a href="#invalidfilesprocessed_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>Files<wbr>Processed</a>
@@ -3553,8 +3271,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenumerationinprogress_go">
 <a href="#isenumerationinprogress_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enumeration<wbr>In<wbr>Progress</a>
@@ -3563,8 +3280,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if enumeration of data is in progress. 
-Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
-    <dt class="property-required"
+Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="renamedcontainercount_go">
 <a href="#renamedcontainercount_go" style="color: inherit; text-decoration: inherit;">Renamed<wbr>Container<wbr>Count</a>
@@ -3572,8 +3288,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountname_go">
 <a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -3581,8 +3296,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalbytestoprocess_go">
 <a href="#totalbytestoprocess_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>To<wbr>Process</a>
@@ -3590,8 +3304,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalfilestoprocess_go">
 <a href="#totalfilestoprocess_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Files<wbr>To<wbr>Process</a>
@@ -3599,8 +3312,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total files to process{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total files to process{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfertype_go">
 <a href="#transfertype_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Type</a>
@@ -3608,14 +3320,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -3623,8 +3332,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytesprocessed_nodejs">
 <a href="#bytesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Processed</a>
@@ -3632,8 +3340,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_nodejs">
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
@@ -3641,8 +3348,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="directorieserroredout_nodejs">
 <a href="#directorieserroredout_nodejs" style="color: inherit; text-decoration: inherit;">directories<wbr>Errored<wbr>Out</a>
@@ -3650,8 +3356,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileserroredout_nodejs">
 <a href="#fileserroredout_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Errored<wbr>Out</a>
@@ -3659,8 +3364,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filesprocessed_nodejs">
 <a href="#filesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Processed</a>
@@ -3668,8 +3372,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files processed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invaliddirectoriesprocessed_nodejs">
 <a href="#invaliddirectoriesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>Directories<wbr>Processed</a>
@@ -3677,8 +3380,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalidfilebytesuploaded_nodejs">
 <a href="#invalidfilebytesuploaded_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>File<wbr>Bytes<wbr>Uploaded</a>
@@ -3686,8 +3388,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalidfilesprocessed_nodejs">
 <a href="#invalidfilesprocessed_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>Files<wbr>Processed</a>
@@ -3695,8 +3396,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenumerationinprogress_nodejs">
 <a href="#isenumerationinprogress_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enumeration<wbr>In<wbr>Progress</a>
@@ -3705,8 +3405,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To indicate if enumeration of data is in progress. 
-Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
-    <dt class="property-required"
+Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="renamedcontainercount_nodejs">
 <a href="#renamedcontainercount_nodejs" style="color: inherit; text-decoration: inherit;">renamed<wbr>Container<wbr>Count</a>
@@ -3714,8 +3413,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountname_nodejs">
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -3723,8 +3421,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalbytestoprocess_nodejs">
 <a href="#totalbytestoprocess_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>To<wbr>Process</a>
@@ -3732,8 +3429,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalfilestoprocess_nodejs">
 <a href="#totalfilestoprocess_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Files<wbr>To<wbr>Process</a>
@@ -3741,8 +3437,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total files to process{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total files to process{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfertype_nodejs">
 <a href="#transfertype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Type</a>
@@ -3750,14 +3445,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -3765,8 +3457,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the account where the data needs to be uploaded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bytes_processed_python">
 <a href="#bytes_processed_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>processed</a>
@@ -3774,8 +3465,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_account_type_python">
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
@@ -3783,8 +3473,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data Account Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="directories_errored_out_python">
 <a href="#directories_errored_out_python" style="color: inherit; text-decoration: inherit;">directories_<wbr>errored_<wbr>out</a>
@@ -3792,8 +3481,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories errored out in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="files_errored_out_python">
 <a href="#files_errored_out_python" style="color: inherit; text-decoration: inherit;">files_<wbr>errored_<wbr>out</a>
@@ -3801,8 +3489,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files which could not be copied{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="files_processed_python">
 <a href="#files_processed_python" style="color: inherit; text-decoration: inherit;">files_<wbr>processed</a>
@@ -3810,8 +3497,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of files processed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files processed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalid_directories_processed_python">
 <a href="#invalid_directories_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>directories_<wbr>processed</a>
@@ -3819,8 +3505,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}To indicate directories renamed{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalid_file_bytes_uploaded_python">
 <a href="#invalid_file_bytes_uploaded_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>file_<wbr>bytes_<wbr>uploaded</a>
@@ -3828,8 +3513,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invalid_files_processed_python">
 <a href="#invalid_files_processed_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>files_<wbr>processed</a>
@@ -3837,8 +3521,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of files not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enumeration_in_progress_python">
 <a href="#is_enumeration_in_progress_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enumeration_<wbr>in_<wbr>progress</a>
@@ -3847,8 +3530,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To indicate if enumeration of data is in progress. 
-Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
-    <dt class="property-required"
+Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="renamed_container_count_python">
 <a href="#renamed_container_count_python" style="color: inherit; text-decoration: inherit;">renamed_<wbr>container_<wbr>count</a>
@@ -3856,8 +3538,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of folders not adhering to azure naming conventions which were processed by automatic renaming{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_name_python">
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -3865,8 +3546,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the storage account. This will be empty for data account types other than storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_bytes_to_process_python">
 <a href="#total_bytes_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>to_<wbr>process</a>
@@ -3874,8 +3554,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total amount of data to be processed by the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_files_to_process_python">
 <a href="#total_files_to_process_python" style="color: inherit; text-decoration: inherit;">total_<wbr>files_<wbr>to_<wbr>process</a>
@@ -3883,8 +3562,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total files to process{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Total files to process{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_type_python">
 <a href="#transfer_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>type</a>
@@ -3892,54 +3570,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transfer type of data{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataaccounttype">Data<wbr>Account<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Account</dt>
-    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd>
-    <dt>Managed<wbr>Disk</dt>
-    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Account</dt>
+    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd><dt>Managed<wbr>Disk</dt>
+    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Data<wbr>Account<wbr>Type<wbr>Storage<wbr>Account</dt>
-    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd>
-    <dt>Data<wbr>Account<wbr>Type<wbr>Managed<wbr>Disk</dt>
-    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Data<wbr>Account<wbr>Type<wbr>Storage<wbr>Account</dt>
+    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd><dt>Data<wbr>Account<wbr>Type<wbr>Managed<wbr>Disk</dt>
+    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Account</dt>
-    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd>
-    <dt>Managed<wbr>Disk</dt>
-    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Account</dt>
+    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd><dt>Managed<wbr>Disk</dt>
+    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STORAGE_ACCOUNT</dt>
-    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd>
-    <dt>MANAGED_DISK</dt>
-    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>STORAGE_ACCOUNT</dt>
+    <dd>StorageAccount{{% md %}}Storage Accounts .{{% /md %}}</dd><dt>MANAGED_DISK</dt>
+    <dd>ManagedDisk{{% md %}}Azure Managed disk storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxaccountcopylogdetailsresponse">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -3947,8 +3610,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyloglink_csharp">
 <a href="#copyloglink_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Link</a>
@@ -3956,8 +3618,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyverboseloglink_csharp">
 <a href="#copyverboseloglink_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Verbose<wbr>Log<wbr>Link</a>
@@ -3965,14 +3626,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -3980,8 +3638,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyloglink_go">
 <a href="#copyloglink_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Link</a>
@@ -3989,8 +3646,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyverboseloglink_go">
 <a href="#copyverboseloglink_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Verbose<wbr>Log<wbr>Link</a>
@@ -3998,14 +3654,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -4013,8 +3666,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyloglink_nodejs">
 <a href="#copyloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Link</a>
@@ -4022,8 +3674,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyverboseloglink_nodejs">
 <a href="#copyverboseloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Verbose<wbr>Log<wbr>Link</a>
@@ -4031,14 +3682,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -4046,8 +3694,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_log_link_python">
 <a href="#copy_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>link</a>
@@ -4055,8 +3702,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_verbose_log_link_python">
 <a href="#copy_verbose_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>verbose_<wbr>log_<wbr>link</a>
@@ -4064,16 +3710,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxdiskcopylogdetailsresponse">Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskserialnumber_csharp">
 <a href="#diskserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Serial<wbr>Number</a>
@@ -4081,8 +3724,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorloglink_csharp">
 <a href="#errorloglink_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Log<wbr>Link</a>
@@ -4090,8 +3732,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verboseloglink_csharp">
 <a href="#verboseloglink_csharp" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Log<wbr>Link</a>
@@ -4099,14 +3740,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskserialnumber_go">
 <a href="#diskserialnumber_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Serial<wbr>Number</a>
@@ -4114,8 +3752,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorloglink_go">
 <a href="#errorloglink_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Log<wbr>Link</a>
@@ -4123,8 +3760,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verboseloglink_go">
 <a href="#verboseloglink_go" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Log<wbr>Link</a>
@@ -4132,14 +3768,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskserialnumber_nodejs">
 <a href="#diskserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Serial<wbr>Number</a>
@@ -4147,8 +3780,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorloglink_nodejs">
 <a href="#errorloglink_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Log<wbr>Link</a>
@@ -4156,8 +3788,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verboseloglink_nodejs">
 <a href="#verboseloglink_nodejs" style="color: inherit; text-decoration: inherit;">verbose<wbr>Log<wbr>Link</a>
@@ -4165,14 +3796,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_serial_number_python">
 <a href="#disk_serial_number_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>serial_<wbr>number</a>
@@ -4180,8 +3808,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk Serial Number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_log_link_python">
 <a href="#error_log_link_python" style="color: inherit; text-decoration: inherit;">error_<wbr>log_<wbr>link</a>
@@ -4189,8 +3816,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy error logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="verbose_log_link_python">
 <a href="#verbose_log_link_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>log_<wbr>link</a>
@@ -4198,16 +3824,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxdiskcopyprogressresponse">Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bytescopied_csharp">
 <a href="#bytescopied_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Copied</a>
@@ -4215,8 +3838,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentcomplete_csharp">
 <a href="#percentcomplete_csharp" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -4224,8 +3846,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -4233,8 +3854,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -4242,14 +3862,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bytescopied_go">
 <a href="#bytescopied_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Copied</a>
@@ -4257,8 +3874,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentcomplete_go">
 <a href="#percentcomplete_go" style="color: inherit; text-decoration: inherit;">Percent<wbr>Complete</a>
@@ -4266,8 +3882,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -4275,8 +3890,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -4284,14 +3898,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bytescopied_nodejs">
 <a href="#bytescopied_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Copied</a>
@@ -4299,8 +3910,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentcomplete_nodejs">
 <a href="#percentcomplete_nodejs" style="color: inherit; text-decoration: inherit;">percent<wbr>Complete</a>
@@ -4308,8 +3918,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -4317,8 +3926,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -4326,14 +3934,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bytes_copied_python">
 <a href="#bytes_copied_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>copied</a>
@@ -4341,8 +3946,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Bytes copied during the copy of disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percent_complete_python">
 <a href="#percent_complete_python" style="color: inherit; text-decoration: inherit;">percent_<wbr>complete</a>
@@ -4350,8 +3954,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the percentage completed for the copy of the disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -4359,8 +3962,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serial number of the disk{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -4368,16 +3970,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Status of the copy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxdiskjobdetails">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -4385,8 +3984,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_csharp">
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -4394,8 +3992,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_csharp">
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -4403,8 +4000,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
 <a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -4412,8 +4008,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -4421,8 +4016,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_csharp">
 <a href="#passkey_csharp" style="color: inherit; text-decoration: inherit;">Passkey</a>
@@ -4430,8 +4024,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -4439,8 +4032,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddisks_csharp">
 <a href="#preferreddisks_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Disks</a>
@@ -4448,8 +4040,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -4457,14 +4048,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -4472,8 +4060,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_go">
 <a href="#dataexportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -4481,8 +4068,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">[]Data<wbr>Export<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_go">
 <a href="#dataimportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -4490,8 +4076,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">[]Data<wbr>Import<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
 <a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -4499,8 +4084,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -4508,8 +4092,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_go">
 <a href="#passkey_go" style="color: inherit; text-decoration: inherit;">Passkey</a>
@@ -4517,8 +4100,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -4526,8 +4108,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddisks_go">
 <a href="#preferreddisks_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Disks</a>
@@ -4535,8 +4116,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -4544,14 +4124,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -4559,8 +4136,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_nodejs">
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
@@ -4568,8 +4144,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">Data<wbr>Export<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_nodejs">
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
@@ -4577,8 +4152,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">Data<wbr>Import<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -4586,8 +4160,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -4595,8 +4168,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_nodejs">
 <a href="#passkey_nodejs" style="color: inherit; text-decoration: inherit;">passkey</a>
@@ -4604,8 +4176,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -4613,8 +4184,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddisks_nodejs">
 <a href="#preferreddisks_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Disks</a>
@@ -4622,8 +4192,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -4631,14 +4200,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -4646,8 +4212,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_export_details_python">
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
@@ -4655,8 +4220,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">Sequence[Data<wbr>Export<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_import_details_python">
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
@@ -4664,8 +4228,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">Sequence[Data<wbr>Import<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_data_size_in_tera_bytes_python">
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
@@ -4673,8 +4236,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -4682,8 +4244,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_python">
 <a href="#passkey_python" style="color: inherit; text-decoration: inherit;">passkey</a>
@@ -4691,8 +4252,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -4700,8 +4260,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_disks_python">
 <a href="#preferred_disks_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>disks</a>
@@ -4709,8 +4268,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, int]</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -4718,16 +4276,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxdiskjobdetailsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_csharp">
 <a href="#chainofcustodysaskey_csharp" style="color: inherit; text-decoration: inherit;">Chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -4735,8 +4290,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -4744,8 +4298,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_csharp">
 <a href="#copylogdetails_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
@@ -4753,8 +4306,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_csharp">
 <a href="#copyprogress_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
@@ -4762,8 +4314,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskcopyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_csharp">
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -4771,8 +4322,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksandsizedetails_csharp">
 <a href="#disksandsizedetails_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>And<wbr>Size<wbr>Details</a>
@@ -4780,8 +4330,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
-    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_csharp">
 <a href="#jobstages_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
@@ -4789,8 +4338,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_csharp">
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -4798,8 +4346,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_csharp">
 <a href="#reverseshipmentlabelsaskey_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -4807,8 +4354,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_csharp">
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -4816,8 +4362,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_csharp">
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -4825,8 +4370,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
 <a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -4834,8 +4378,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -4843,8 +4386,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_csharp">
 <a href="#passkey_csharp" style="color: inherit; text-decoration: inherit;">Passkey</a>
@@ -4852,8 +4394,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -4861,8 +4402,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddisks_csharp">
 <a href="#preferreddisks_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Disks</a>
@@ -4870,8 +4410,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -4879,14 +4418,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_go">
 <a href="#chainofcustodysaskey_go" style="color: inherit; text-decoration: inherit;">Chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -4894,8 +4430,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -4903,8 +4438,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_go">
 <a href="#copylogdetails_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
@@ -4912,8 +4446,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_go">
 <a href="#copyprogress_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
@@ -4921,8 +4454,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskcopyprogressresponse">[]Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_go">
 <a href="#deliverypackage_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -4930,8 +4462,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksandsizedetails_go">
 <a href="#disksandsizedetails_go" style="color: inherit; text-decoration: inherit;">Disks<wbr>And<wbr>Size<wbr>Details</a>
@@ -4939,8 +4470,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
-    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_go">
 <a href="#jobstages_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
@@ -4948,8 +4478,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">[]Job<wbr>Stages<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -4957,8 +4486,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_go">
 <a href="#reverseshipmentlabelsaskey_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -4966,8 +4494,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_go">
 <a href="#dataexportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -4975,8 +4502,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">[]Data<wbr>Export<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_go">
 <a href="#dataimportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -4984,8 +4510,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">[]Data<wbr>Import<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
 <a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -4993,8 +4518,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -5002,8 +4526,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_go">
 <a href="#passkey_go" style="color: inherit; text-decoration: inherit;">Passkey</a>
@@ -5011,8 +4534,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -5020,8 +4542,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddisks_go">
 <a href="#preferreddisks_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Disks</a>
@@ -5029,8 +4550,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -5038,14 +4558,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_nodejs">
 <a href="#chainofcustodysaskey_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -5053,8 +4570,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -5062,8 +4578,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_nodejs">
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
@@ -5071,8 +4586,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_nodejs">
 <a href="#copyprogress_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
@@ -5080,8 +4594,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskcopyprogressresponse">Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_nodejs">
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
@@ -5089,8 +4602,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksandsizedetails_nodejs">
 <a href="#disksandsizedetails_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>And<wbr>Size<wbr>Details</a>
@@ -5098,8 +4610,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
-    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_nodejs">
 <a href="#jobstages_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
@@ -5107,8 +4618,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">Job<wbr>Stages<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
@@ -5116,8 +4626,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_nodejs">
 <a href="#reverseshipmentlabelsaskey_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -5125,8 +4634,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_nodejs">
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
@@ -5134,8 +4642,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_nodejs">
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
@@ -5143,8 +4650,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -5152,8 +4658,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -5161,8 +4666,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_nodejs">
 <a href="#passkey_nodejs" style="color: inherit; text-decoration: inherit;">passkey</a>
@@ -5170,8 +4674,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -5179,8 +4682,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddisks_nodejs">
 <a href="#preferreddisks_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Disks</a>
@@ -5188,8 +4690,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -5197,14 +4698,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chain_of_custody_sas_key_python">
 <a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
@@ -5212,8 +4710,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -5221,8 +4718,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_log_details_python">
 <a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
@@ -5230,8 +4726,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_progress_python">
 <a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
@@ -5239,8 +4734,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databoxdiskcopyprogressresponse">Sequence[Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delivery_package_python">
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
@@ -5248,8 +4742,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disks_and_size_details_python">
 <a href="#disks_and_size_details_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>and_<wbr>size_<wbr>details</a>
@@ -5257,8 +4750,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, int]</span>
     </dt>
-    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_stages_python">
 <a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
@@ -5266,8 +4758,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
@@ -5275,8 +4766,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverse_shipment_label_sas_key_python">
 <a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
@@ -5284,8 +4774,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_export_details_python">
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
@@ -5293,8 +4782,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_import_details_python">
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
@@ -5302,8 +4790,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_data_size_in_tera_bytes_python">
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
@@ -5311,8 +4798,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -5320,8 +4806,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passkey_python">
 <a href="#passkey_python" style="color: inherit; text-decoration: inherit;">passkey</a>
@@ -5329,8 +4814,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User entered passkey for DataBox Disk job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -5338,8 +4822,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_disks_python">
 <a href="#preferred_disks_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>disks</a>
@@ -5347,8 +4830,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, int]</span>
     </dt>
-    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -5356,16 +4838,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxheavyaccountcopylogdetailsresponse">Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -5373,8 +4852,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyloglink_csharp">
 <a href="#copyloglink_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Link</a>
@@ -5382,8 +4860,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyverboseloglink_csharp">
 <a href="#copyverboseloglink_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Verbose<wbr>Log<wbr>Link</a>
@@ -5391,14 +4868,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -5406,8 +4880,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyloglink_go">
 <a href="#copyloglink_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Link</a>
@@ -5415,8 +4888,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyverboseloglink_go">
 <a href="#copyverboseloglink_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Verbose<wbr>Log<wbr>Link</a>
@@ -5424,14 +4896,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -5439,8 +4908,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyloglink_nodejs">
 <a href="#copyloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Link</a>
@@ -5448,8 +4916,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyverboseloglink_nodejs">
 <a href="#copyverboseloglink_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Verbose<wbr>Log<wbr>Link</a>
@@ -5457,14 +4924,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -5472,8 +4936,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_log_link_python">
 <a href="#copy_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>link</a>
@@ -5481,8 +4944,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Link for copy logs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_verbose_log_link_python">
 <a href="#copy_verbose_log_link_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>verbose_<wbr>log_<wbr>link</a>
@@ -5490,16 +4952,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxheavyjobdetails">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -5507,8 +4966,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_csharp">
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -5516,8 +4974,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_csharp">
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -5525,8 +4982,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_csharp">
 <a href="#devicepassword_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -5534,8 +4990,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
 <a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -5543,8 +4998,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -5552,8 +5006,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -5561,8 +5014,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -5570,14 +5022,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -5585,8 +5034,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_go">
 <a href="#dataexportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -5594,8 +5042,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">[]Data<wbr>Export<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_go">
 <a href="#dataimportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -5603,8 +5050,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">[]Data<wbr>Import<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_go">
 <a href="#devicepassword_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -5612,8 +5058,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
 <a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -5621,8 +5066,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -5630,8 +5074,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -5639,8 +5082,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -5648,14 +5090,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -5663,8 +5102,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_nodejs">
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
@@ -5672,8 +5110,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">Data<wbr>Export<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_nodejs">
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
@@ -5681,8 +5118,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">Data<wbr>Import<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_nodejs">
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
@@ -5690,8 +5126,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -5699,8 +5134,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -5708,8 +5142,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -5717,8 +5150,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -5726,14 +5158,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -5741,8 +5170,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_export_details_python">
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
@@ -5750,8 +5178,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">Sequence[Data<wbr>Export<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_import_details_python">
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
@@ -5759,8 +5186,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">Sequence[Data<wbr>Import<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_password_python">
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
@@ -5768,8 +5194,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_data_size_in_tera_bytes_python">
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
@@ -5777,8 +5202,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -5786,8 +5210,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -5795,8 +5218,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -5804,16 +5226,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxheavyjobdetailsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_csharp">
 <a href="#chainofcustodysaskey_csharp" style="color: inherit; text-decoration: inherit;">Chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -5821,8 +5240,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -5830,8 +5248,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_csharp">
 <a href="#copylogdetails_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
@@ -5839,8 +5256,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_csharp">
 <a href="#copyprogress_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
@@ -5848,8 +5264,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_csharp">
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -5857,8 +5272,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_csharp">
 <a href="#jobstages_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
@@ -5866,8 +5280,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_csharp">
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -5875,8 +5288,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_csharp">
 <a href="#reverseshipmentlabelsaskey_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -5884,8 +5296,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_csharp">
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -5893,8 +5304,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_csharp">
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -5902,8 +5312,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_csharp">
 <a href="#devicepassword_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -5911,8 +5320,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
 <a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -5920,8 +5328,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -5929,8 +5336,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -5938,8 +5344,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -5947,14 +5352,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_go">
 <a href="#chainofcustodysaskey_go" style="color: inherit; text-decoration: inherit;">Chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -5962,8 +5364,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -5971,8 +5372,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_go">
 <a href="#copylogdetails_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
@@ -5980,8 +5380,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_go">
 <a href="#copyprogress_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
@@ -5989,8 +5388,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">[]Copy<wbr>Progress<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_go">
 <a href="#deliverypackage_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -5998,8 +5396,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_go">
 <a href="#jobstages_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
@@ -6007,8 +5404,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">[]Job<wbr>Stages<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -6016,8 +5412,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_go">
 <a href="#reverseshipmentlabelsaskey_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -6025,8 +5420,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_go">
 <a href="#dataexportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -6034,8 +5428,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">[]Data<wbr>Export<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_go">
 <a href="#dataimportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -6043,8 +5436,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">[]Data<wbr>Import<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_go">
 <a href="#devicepassword_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -6052,8 +5444,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
 <a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6061,8 +5452,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -6070,8 +5460,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -6079,8 +5468,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -6088,14 +5476,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_nodejs">
 <a href="#chainofcustodysaskey_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -6103,8 +5488,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -6112,8 +5496,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_nodejs">
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
@@ -6121,8 +5504,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_nodejs">
 <a href="#copyprogress_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
@@ -6130,8 +5512,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">Copy<wbr>Progress<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_nodejs">
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
@@ -6139,8 +5520,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_nodejs">
 <a href="#jobstages_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
@@ -6148,8 +5528,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">Job<wbr>Stages<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
@@ -6157,8 +5536,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_nodejs">
 <a href="#reverseshipmentlabelsaskey_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -6166,8 +5544,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_nodejs">
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
@@ -6175,8 +5552,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_nodejs">
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
@@ -6184,8 +5560,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_nodejs">
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
@@ -6193,8 +5568,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6202,8 +5576,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -6211,8 +5584,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -6220,8 +5592,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -6229,14 +5600,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chain_of_custody_sas_key_python">
 <a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
@@ -6244,8 +5612,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -6253,8 +5620,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_log_details_python">
 <a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
@@ -6262,8 +5628,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_progress_python">
 <a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
@@ -6271,8 +5636,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">Sequence[Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delivery_package_python">
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
@@ -6280,8 +5644,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_stages_python">
 <a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
@@ -6289,8 +5652,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
@@ -6298,8 +5660,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverse_shipment_label_sas_key_python">
 <a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
@@ -6307,8 +5668,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_export_details_python">
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
@@ -6316,8 +5676,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_import_details_python">
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
@@ -6325,8 +5684,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_password_python">
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
@@ -6334,8 +5692,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_data_size_in_tera_bytes_python">
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
@@ -6343,8 +5700,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -6352,8 +5708,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -6361,8 +5716,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -6370,16 +5724,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxjobdetails">Data<wbr>Box<wbr>Job<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -6387,8 +5738,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_csharp">
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -6396,8 +5746,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_csharp">
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -6405,8 +5754,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_csharp">
 <a href="#devicepassword_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -6414,8 +5762,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
 <a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6423,8 +5770,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -6432,8 +5778,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -6441,8 +5786,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -6450,14 +5794,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -6465,8 +5806,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_go">
 <a href="#dataexportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -6474,8 +5814,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">[]Data<wbr>Export<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_go">
 <a href="#dataimportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -6483,8 +5822,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">[]Data<wbr>Import<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_go">
 <a href="#devicepassword_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -6492,8 +5830,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
 <a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6501,8 +5838,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -6510,8 +5846,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -6519,8 +5854,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -6528,14 +5862,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -6543,8 +5874,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_nodejs">
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
@@ -6552,8 +5882,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">Data<wbr>Export<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_nodejs">
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
@@ -6561,8 +5890,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">Data<wbr>Import<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_nodejs">
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
@@ -6570,8 +5898,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6579,8 +5906,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -6588,8 +5914,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -6597,8 +5922,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -6606,14 +5930,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -6621,8 +5942,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_export_details_python">
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
@@ -6630,8 +5950,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetails">Sequence[Data<wbr>Export<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_import_details_python">
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
@@ -6639,8 +5958,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetails">Sequence[Data<wbr>Import<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_password_python">
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
@@ -6648,8 +5966,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_data_size_in_tera_bytes_python">
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
@@ -6657,8 +5974,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -6666,8 +5982,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkey">Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -6675,8 +5990,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferences">Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -6684,16 +5998,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databoxjobdetailsresponse">Data<wbr>Box<wbr>Job<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_csharp">
 <a href="#chainofcustodysaskey_csharp" style="color: inherit; text-decoration: inherit;">Chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -6701,8 +6012,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_csharp">
 <a href="#contactdetails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -6710,8 +6020,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_csharp">
 <a href="#copylogdetails_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
@@ -6719,8 +6028,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_csharp">
 <a href="#copyprogress_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
@@ -6728,8 +6036,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Copy<wbr>Progress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_csharp">
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -6737,8 +6044,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_csharp">
 <a href="#jobstages_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
@@ -6746,8 +6052,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Job<wbr>Stages<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_csharp">
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -6755,8 +6060,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_csharp">
 <a href="#reverseshipmentlabelsaskey_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -6764,8 +6068,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_csharp">
 <a href="#dataexportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -6773,8 +6076,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_csharp">
 <a href="#dataimportdetails_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -6782,8 +6084,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_csharp">
 <a href="#devicepassword_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -6791,8 +6092,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
 <a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6800,8 +6100,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_csharp">
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -6809,8 +6108,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_csharp">
 <a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -6818,8 +6116,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_csharp">
 <a href="#shippingaddress_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -6827,14 +6124,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_go">
 <a href="#chainofcustodysaskey_go" style="color: inherit; text-decoration: inherit;">Chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -6842,8 +6136,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_go">
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
@@ -6851,8 +6144,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_go">
 <a href="#copylogdetails_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Log<wbr>Details</a>
@@ -6860,8 +6152,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_go">
 <a href="#copyprogress_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Progress</a>
@@ -6869,8 +6160,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">[]Copy<wbr>Progress<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_go">
 <a href="#deliverypackage_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
@@ -6878,8 +6168,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_go">
 <a href="#jobstages_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Stages</a>
@@ -6887,8 +6176,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">[]Job<wbr>Stages<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_go">
 <a href="#returnpackage_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
@@ -6896,8 +6184,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_go">
 <a href="#reverseshipmentlabelsaskey_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -6905,8 +6192,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_go">
 <a href="#dataexportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export<wbr>Details</a>
@@ -6914,8 +6200,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">[]Data<wbr>Export<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_go">
 <a href="#dataimportdetails_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Import<wbr>Details</a>
@@ -6923,8 +6208,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">[]Data<wbr>Import<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_go">
 <a href="#devicepassword_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Password</a>
@@ -6932,8 +6216,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
 <a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -6941,8 +6224,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_go">
 <a href="#keyencryptionkey_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
@@ -6950,8 +6232,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_go">
 <a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
@@ -6959,8 +6240,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_go">
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
@@ -6968,14 +6248,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chainofcustodysaskey_nodejs">
 <a href="#chainofcustodysaskey_nodejs" style="color: inherit; text-decoration: inherit;">chain<wbr>Of<wbr>Custody<wbr>Sas<wbr>Key</a>
@@ -6983,8 +6260,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contactdetails_nodejs">
 <a href="#contactdetails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Details</a>
@@ -6992,8 +6268,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copylogdetails_nodejs">
 <a href="#copylogdetails_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Log<wbr>Details</a>
@@ -7001,8 +6276,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response | Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copyprogress_nodejs">
 <a href="#copyprogress_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Progress</a>
@@ -7010,8 +6284,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">Copy<wbr>Progress<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deliverypackage_nodejs">
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
@@ -7019,8 +6292,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstages_nodejs">
 <a href="#jobstages_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stages</a>
@@ -7028,8 +6300,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">Job<wbr>Stages<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="returnpackage_nodejs">
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
@@ -7037,8 +6308,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshipmentlabelsaskey_nodejs">
 <a href="#reverseshipmentlabelsaskey_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipment<wbr>Label<wbr>Sas<wbr>Key</a>
@@ -7046,8 +6316,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataexportdetails_nodejs">
 <a href="#dataexportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export<wbr>Details</a>
@@ -7055,8 +6324,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataimportdetails_nodejs">
 <a href="#dataimportdetails_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Import<wbr>Details</a>
@@ -7064,8 +6332,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepassword_nodejs">
 <a href="#devicepassword_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Password</a>
@@ -7073,8 +6340,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
 <a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
@@ -7082,8 +6348,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencryptionkey_nodejs">
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
@@ -7091,8 +6356,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_nodejs">
 <a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -7100,8 +6364,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shippingaddress_nodejs">
 <a href="#shippingaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Address</a>
@@ -7109,14 +6372,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chain_of_custody_sas_key_python">
 <a href="#chain_of_custody_sas_key_python" style="color: inherit; text-decoration: inherit;">chain_<wbr>of_<wbr>custody_<wbr>sas_<wbr>key</a>
@@ -7124,8 +6384,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Shared access key to download the chain of custody logs{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contact_details_python">
 <a href="#contact_details_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>details</a>
@@ -7133,8 +6392,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#contactdetailsresponse">Contact<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Contact details for notification and shipping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_log_details_python">
 <a href="#copy_log_details_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>log_<wbr>details</a>
@@ -7142,8 +6400,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Data<wbr>Box<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args, Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of copy log details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="copy_progress_python">
 <a href="#copy_progress_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>progress</a>
@@ -7151,8 +6408,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#copyprogressresponse">Sequence[Copy<wbr>Progress<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Copy progress per storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delivery_package_python">
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
@@ -7160,8 +6416,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Delivery package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_stages_python">
 <a href="#job_stages_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stages</a>
@@ -7169,8 +6424,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstagesresponse">Sequence[Job<wbr>Stages<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of stages that run in the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="return_package_python">
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
@@ -7178,8 +6432,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Return package shipping details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverse_shipment_label_sas_key_python">
 <a href="#reverse_shipment_label_sas_key_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipment_<wbr>label_<wbr>sas_<wbr>key</a>
@@ -7187,8 +6440,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Shared access key to download the return shipment label{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_export_details_python">
 <a href="#data_export_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export_<wbr>details</a>
@@ -7196,8 +6448,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataexportdetailsresponse">Sequence[Data<wbr>Export<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be exported from azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_import_details_python">
 <a href="#data_import_details_python" style="color: inherit; text-decoration: inherit;">data_<wbr>import_<wbr>details</a>
@@ -7205,8 +6456,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dataimportdetailsresponse">Sequence[Data<wbr>Import<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_password_python">
 <a href="#device_password_python" style="color: inherit; text-decoration: inherit;">device_<wbr>password</a>
@@ -7214,8 +6464,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_data_size_in_tera_bytes_python">
 <a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
@@ -7223,8 +6472,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expected size of the data, which needs to be transferred in this job, in terabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encryption_key_python">
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
@@ -7232,8 +6480,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details about which key encryption type is being used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferences_python">
 <a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
@@ -7241,8 +6488,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferencesresponse">Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences for the order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shipping_address_python">
 <a href="#shipping_address_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>address</a>
@@ -7250,16 +6496,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#shippingaddressresponse">Shipping<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Shipping address of the customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataexportdetails">Data<wbr>Export<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_csharp">
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7267,8 +6510,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferconfiguration_csharp">
 <a href="#transferconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration</a>
@@ -7276,8 +6518,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcollectionlevel_csharp">
 <a href="#logcollectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
@@ -7285,14 +6526,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#logcollectionlevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Log<wbr>Collection<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_go">
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7300,8 +6538,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferconfiguration_go">
 <a href="#transferconfiguration_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration</a>
@@ -7309,8 +6546,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfiguration">Transfer<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcollectionlevel_go">
 <a href="#logcollectionlevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
@@ -7318,14 +6554,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#logcollectionlevel">Log<wbr>Collection<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_nodejs">
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
@@ -7333,8 +6566,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferconfiguration_nodejs">
 <a href="#transferconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration</a>
@@ -7342,8 +6574,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfiguration">Transfer<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcollectionlevel_nodejs">
 <a href="#logcollectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Collection<wbr>Level</a>
@@ -7351,14 +6582,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#logcollectionlevel">Log<wbr>Collection<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_details_python">
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
@@ -7366,8 +6594,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_configuration_python">
 <a href="#transfer_configuration_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration</a>
@@ -7375,8 +6602,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfiguration">Transfer<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_collection_level_python">
 <a href="#log_collection_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>collection_<wbr>level</a>
@@ -7384,16 +6610,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#logcollectionlevel">Log<wbr>Collection<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_csharp">
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7401,8 +6624,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferconfiguration_csharp">
 <a href="#transferconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration</a>
@@ -7410,8 +6632,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcollectionlevel_csharp">
 <a href="#logcollectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
@@ -7419,14 +6640,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_go">
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7434,8 +6652,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferconfiguration_go">
 <a href="#transferconfiguration_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration</a>
@@ -7443,8 +6660,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcollectionlevel_go">
 <a href="#logcollectionlevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Collection<wbr>Level</a>
@@ -7452,14 +6668,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_nodejs">
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
@@ -7467,8 +6680,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferconfiguration_nodejs">
 <a href="#transferconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration</a>
@@ -7476,8 +6688,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logcollectionlevel_nodejs">
 <a href="#logcollectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Collection<wbr>Level</a>
@@ -7485,14 +6696,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_details_python">
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
@@ -7500,8 +6708,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_configuration_python">
 <a href="#transfer_configuration_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration</a>
@@ -7509,8 +6716,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration for the data transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_collection_level_python">
 <a href="#log_collection_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>collection_<wbr>level</a>
@@ -7518,16 +6724,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Level of the logs to be collected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataimportdetails">Data<wbr>Import<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_csharp">
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7535,14 +6738,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_go">
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7550,14 +6750,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_nodejs">
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
@@ -7565,14 +6762,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_details_python">
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
@@ -7580,16 +6774,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetails">Managed<wbr>Disk<wbr>Details<wbr>Args</a> | <a href="#storageaccountdetails">Storage<wbr>Account<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dataimportdetailsresponse">Data<wbr>Import<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_csharp">
 <a href="#accountdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7597,14 +6788,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_go">
 <a href="#accountdetails_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Details</a>
@@ -7612,14 +6800,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountdetails_nodejs">
 <a href="#accountdetails_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Details</a>
@@ -7627,14 +6812,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_details_python">
 <a href="#account_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>details</a>
@@ -7642,54 +6824,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Account details of the data to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="doubleencryption">Double<wbr>Encryption</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Double<wbr>Encryption<wbr>Enabled</dt>
-    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd>
-    <dt>Double<wbr>Encryption<wbr>Disabled</dt>
-    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Double<wbr>Encryption<wbr>Enabled</dt>
+    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd><dt>Double<wbr>Encryption<wbr>Disabled</dt>
+    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd><dt>Disabled</dt>
+    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled{{% md %}}Software-based encryption is enabled.{{% /md %}}</dd><dt>DISABLED</dt>
+    <dd>Disabled{{% md %}}Software-based encryption is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionpreferences">Encryption<wbr>Preferences</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="doubleencryption_csharp">
 <a href="#doubleencryption_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
@@ -7697,14 +6864,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#doubleencryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Double<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="doubleencryption_go">
 <a href="#doubleencryption_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
@@ -7712,14 +6876,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#doubleencryption">Double<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="doubleencryption_nodejs">
 <a href="#doubleencryption_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption</a>
@@ -7727,14 +6888,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#doubleencryption">Double<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="double_encryption_python">
 <a href="#double_encryption_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption</a>
@@ -7742,16 +6900,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#doubleencryption">Double<wbr>Encryption</a></span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="doubleencryption_csharp">
 <a href="#doubleencryption_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
@@ -7759,14 +6914,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="doubleencryption_go">
 <a href="#doubleencryption_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption</a>
@@ -7774,14 +6926,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="doubleencryption_nodejs">
 <a href="#doubleencryption_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption</a>
@@ -7789,14 +6938,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="double_encryption_python">
 <a href="#double_encryption_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption</a>
@@ -7804,16 +6950,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines secondary layer of software-based encryption enablement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filterfiledetails">Filter<wbr>File<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterfilepath_csharp">
 <a href="#filterfilepath_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Path</a>
@@ -7821,8 +6964,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterfiletype_csharp">
 <a href="#filterfiletype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
@@ -7830,14 +6972,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#filterfiletype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Filter<wbr>File<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterfilepath_go">
 <a href="#filterfilepath_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Path</a>
@@ -7845,8 +6984,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterfiletype_go">
 <a href="#filterfiletype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
@@ -7854,14 +6992,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#filterfiletype">Filter<wbr>File<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterfilepath_nodejs">
 <a href="#filterfilepath_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Path</a>
@@ -7869,8 +7004,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterfiletype_nodejs">
 <a href="#filterfiletype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Type</a>
@@ -7878,14 +7012,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#filterfiletype">Filter<wbr>File<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_file_path_python">
 <a href="#filter_file_path_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>path</a>
@@ -7893,8 +7024,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_file_type_python">
 <a href="#filter_file_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>type</a>
@@ -7902,16 +7032,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#filterfiletype">Filter<wbr>File<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filterfiledetailsresponse">Filter<wbr>File<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterfilepath_csharp">
 <a href="#filterfilepath_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Path</a>
@@ -7919,8 +7046,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterfiletype_csharp">
 <a href="#filterfiletype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
@@ -7928,14 +7054,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterfilepath_go">
 <a href="#filterfilepath_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Path</a>
@@ -7943,8 +7066,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterfiletype_go">
 <a href="#filterfiletype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Type</a>
@@ -7952,14 +7074,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterfilepath_nodejs">
 <a href="#filterfilepath_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Path</a>
@@ -7967,8 +7086,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filterfiletype_nodejs">
 <a href="#filterfiletype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Type</a>
@@ -7976,14 +7094,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_file_path_python">
 <a href="#filter_file_path_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>path</a>
@@ -7991,8 +7106,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Path of the file that contains the details of all items to transfer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_file_type_python">
 <a href="#filter_file_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>type</a>
@@ -8000,54 +7114,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the filter file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filterfiletype">Filter<wbr>File<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Blob</dt>
-    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd>
-    <dt>Azure<wbr>File</dt>
-    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Blob</dt>
+    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd><dt>Azure<wbr>File</dt>
+    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Filter<wbr>File<wbr>Type<wbr>Azure<wbr>Blob</dt>
-    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd>
-    <dt>Filter<wbr>File<wbr>Type<wbr>Azure<wbr>File</dt>
-    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Filter<wbr>File<wbr>Type<wbr>Azure<wbr>Blob</dt>
+    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd><dt>Filter<wbr>File<wbr>Type<wbr>Azure<wbr>File</dt>
+    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Blob</dt>
-    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd>
-    <dt>Azure<wbr>File</dt>
-    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Blob</dt>
+    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd><dt>Azure<wbr>File</dt>
+    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AZURE_BLOB</dt>
-    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd>
-    <dt>AZURE_FILE</dt>
-    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>AZURE_BLOB</dt>
+    <dd>AzureBlob{{% md %}}Filter file is of the type AzureBlob.{{% /md %}}</dd><dt>AZURE_FILE</dt>
+    <dd>AzureFile{{% md %}}Filter file is of the type AzureFiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityproperties">Identity<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -8055,8 +7154,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassigned_csharp">
 <a href="#userassigned_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
@@ -8064,14 +7162,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -8079,8 +7174,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassigned_go">
 <a href="#userassigned_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
@@ -8088,14 +7182,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -8103,8 +7194,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassigned_nodejs">
 <a href="#userassigned_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned</a>
@@ -8112,14 +7202,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -8127,8 +7214,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_python">
 <a href="#user_assigned_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned</a>
@@ -8136,16 +7222,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedproperties">User<wbr>Assigned<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -8153,8 +7236,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassigned_csharp">
 <a href="#userassigned_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
@@ -8162,14 +7244,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -8177,8 +7256,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassigned_go">
 <a href="#userassigned_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned</a>
@@ -8186,14 +7264,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -8201,8 +7276,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassigned_nodejs">
 <a href="#userassigned_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned</a>
@@ -8210,14 +7284,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -8225,8 +7296,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed service identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_python">
 <a href="#user_assigned_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned</a>
@@ -8234,16 +7304,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned identity properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobdeliveryinfo">Job<wbr>Delivery<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduleddatetime_csharp">
 <a href="#scheduleddatetime_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Date<wbr>Time</a>
@@ -8251,14 +7318,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduleddatetime_go">
 <a href="#scheduleddatetime_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Date<wbr>Time</a>
@@ -8266,14 +7330,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduleddatetime_nodejs">
 <a href="#scheduleddatetime_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Date<wbr>Time</a>
@@ -8281,14 +7342,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduled_date_time_python">
 <a href="#scheduled_date_time_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>date_<wbr>time</a>
@@ -8296,16 +7354,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobdeliveryinforesponse">Job<wbr>Delivery<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduleddatetime_csharp">
 <a href="#scheduleddatetime_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Date<wbr>Time</a>
@@ -8313,14 +7368,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduleddatetime_go">
 <a href="#scheduleddatetime_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Date<wbr>Time</a>
@@ -8328,14 +7380,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduleddatetime_nodejs">
 <a href="#scheduleddatetime_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Date<wbr>Time</a>
@@ -8343,14 +7392,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scheduled_date_time_python">
 <a href="#scheduled_date_time_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>date_<wbr>time</a>
@@ -8358,54 +7404,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Scheduled date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobdeliverytype">Job<wbr>Delivery<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Non<wbr>Scheduled</dt>
-    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd>
-    <dt>Scheduled</dt>
-    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Non<wbr>Scheduled</dt>
+    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd><dt>Scheduled</dt>
+    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Job<wbr>Delivery<wbr>Type<wbr>Non<wbr>Scheduled</dt>
-    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd>
-    <dt>Job<wbr>Delivery<wbr>Type<wbr>Scheduled</dt>
-    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Job<wbr>Delivery<wbr>Type<wbr>Non<wbr>Scheduled</dt>
+    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd><dt>Job<wbr>Delivery<wbr>Type<wbr>Scheduled</dt>
+    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Non<wbr>Scheduled</dt>
-    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd>
-    <dt>Scheduled</dt>
-    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Non<wbr>Scheduled</dt>
+    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd><dt>Scheduled</dt>
+    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NON_SCHEDULED</dt>
-    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd>
-    <dt>SCHEDULED</dt>
-    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>NON_SCHEDULED</dt>
+    <dd>NonScheduled{{% md %}}Non Scheduled job.{{% /md %}}</dd><dt>SCHEDULED</dt>
+    <dd>Scheduled{{% md %}}Scheduled job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstagesresponse">Job<wbr>Stages<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -8413,8 +7444,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstagedetails_csharp">
 <a href="#jobstagedetails_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Stage<wbr>Details</a>
@@ -8422,8 +7452,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_csharp">
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -8431,8 +7460,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagestatus_csharp">
 <a href="#stagestatus_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Status</a>
@@ -8440,8 +7468,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagetime_csharp">
 <a href="#stagetime_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Time</a>
@@ -8449,14 +7476,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -8464,8 +7488,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstagedetails_go">
 <a href="#jobstagedetails_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Stage<wbr>Details</a>
@@ -8473,8 +7496,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_go">
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -8482,8 +7504,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagestatus_go">
 <a href="#stagestatus_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Status</a>
@@ -8491,8 +7512,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagetime_go">
 <a href="#stagetime_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Time</a>
@@ -8500,14 +7520,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -8515,8 +7532,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstagedetails_nodejs">
 <a href="#jobstagedetails_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Stage<wbr>Details</a>
@@ -8524,8 +7540,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_nodejs">
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
@@ -8533,8 +7548,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagestatus_nodejs">
 <a href="#stagestatus_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Status</a>
@@ -8542,8 +7556,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagetime_nodejs">
 <a href="#stagetime_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Time</a>
@@ -8551,14 +7564,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -8566,8 +7576,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Display name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_stage_details_python">
 <a href="#job_stage_details_python" style="color: inherit; text-decoration: inherit;">job_<wbr>stage_<wbr>details</a>
@@ -8575,8 +7584,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Job Stage Details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_name_python">
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
@@ -8584,8 +7592,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_status_python">
 <a href="#stage_status_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>status</a>
@@ -8593,8 +7600,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Status of the job stage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_time_python">
 <a href="#stage_time_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>time</a>
@@ -8602,54 +7608,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time for the job stage in UTC ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kektype">Kek<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kek<wbr>Type<wbr>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
-    <dt>Kek<wbr>Type<wbr>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Kek<wbr>Type<wbr>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd><dt>Kek<wbr>Type<wbr>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MICROSOFT_MANAGED</dt>
-    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd>
-    <dt>CUSTOMER_MANAGED</dt>
-    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>MICROSOFT_MANAGED</dt>
+    <dd>MicrosoftManaged{{% md %}}Key encryption key is managed by Microsoft.{{% /md %}}</dd><dt>CUSTOMER_MANAGED</dt>
+    <dd>CustomerManaged{{% md %}}Key encryption key is managed by the Customer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyencryptionkey">Key<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kektype_csharp">
 <a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -8657,8 +7648,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kektype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproperties_csharp">
 <a href="#identityproperties_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
@@ -8666,8 +7656,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_csharp">
 <a href="#kekurl_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -8675,8 +7664,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_csharp">
 <a href="#kekvaultresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -8684,14 +7672,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kektype_go">
 <a href="#kektype_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -8699,8 +7684,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kektype">Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproperties_go">
 <a href="#identityproperties_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
@@ -8708,8 +7692,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_go">
 <a href="#kekurl_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -8717,8 +7700,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_go">
 <a href="#kekvaultresourceid_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -8726,14 +7708,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kektype_nodejs">
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
@@ -8741,8 +7720,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#kektype">Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproperties_nodejs">
 <a href="#identityproperties_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Properties</a>
@@ -8750,8 +7728,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_nodejs">
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
@@ -8759,8 +7736,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_nodejs">
 <a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -8768,14 +7744,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kek_type_python">
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
@@ -8783,8 +7756,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#kektype">Kek<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_properties_python">
 <a href="#identity_properties_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>properties</a>
@@ -8792,8 +7764,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_url_python">
 <a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
@@ -8801,8 +7772,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_vault_resource_id_python">
 <a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
@@ -8810,16 +7780,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyencryptionkeyresponse">Key<wbr>Encryption<wbr>Key<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kektype_csharp">
 <a href="#kektype_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -8827,8 +7794,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproperties_csharp">
 <a href="#identityproperties_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
@@ -8836,8 +7802,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_csharp">
 <a href="#kekurl_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -8845,8 +7810,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_csharp">
 <a href="#kekvaultresourceid_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -8854,14 +7818,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kektype_go">
 <a href="#kektype_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Type</a>
@@ -8869,8 +7830,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproperties_go">
 <a href="#identityproperties_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Properties</a>
@@ -8878,8 +7838,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_go">
 <a href="#kekurl_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Url</a>
@@ -8887,8 +7846,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_go">
 <a href="#kekvaultresourceid_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -8896,14 +7854,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kektype_nodejs">
 <a href="#kektype_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Type</a>
@@ -8911,8 +7866,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproperties_nodejs">
 <a href="#identityproperties_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Properties</a>
@@ -8920,8 +7874,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekurl_nodejs">
 <a href="#kekurl_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Url</a>
@@ -8929,8 +7882,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kekvaultresourceid_nodejs">
 <a href="#kekvaultresourceid_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Vault<wbr>Resource<wbr>ID</a>
@@ -8938,14 +7890,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kek_type_python">
 <a href="#kek_type_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>type</a>
@@ -8953,8 +7902,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of encryption key used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_properties_python">
 <a href="#identity_properties_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>properties</a>
@@ -8962,8 +7910,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Managed identity properties used for key encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_url_python">
 <a href="#kek_url_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>url</a>
@@ -8971,8 +7918,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key encryption key. It is required in case of Customer managed KekType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kek_vault_resource_id_python">
 <a href="#kek_vault_resource_id_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>vault_<wbr>resource_<wbr>id</a>
@@ -8980,54 +7926,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kek vault resource id. It is required in case of Customer managed KekType.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logcollectionlevel">Log<wbr>Collection<wbr>Level</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Error</dt>
-    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd>
-    <dt>Verbose</dt>
-    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Error</dt>
+    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd><dt>Verbose</dt>
+    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Log<wbr>Collection<wbr>Level<wbr>Error</dt>
-    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd>
-    <dt>Log<wbr>Collection<wbr>Level<wbr>Verbose</dt>
-    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Log<wbr>Collection<wbr>Level<wbr>Error</dt>
+    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd><dt>Log<wbr>Collection<wbr>Level<wbr>Verbose</dt>
+    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Error</dt>
-    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd>
-    <dt>Verbose</dt>
-    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Error</dt>
+    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd><dt>Verbose</dt>
+    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ERROR</dt>
-    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd>
-    <dt>VERBOSE</dt>
-    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ERROR</dt>
+    <dd>Error{{% md %}}Only Errors will be collected in the logs.{{% /md %}}</dd><dt>VERBOSE</dt>
+    <dd>Verbose{{% md %}}Verbose logging (includes Errors, CRC, size information and others).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="manageddiskdetails">Managed<wbr>Disk<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -9035,8 +7966,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_csharp">
 <a href="#stagingstorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -9044,8 +7974,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_csharp">
 <a href="#sharepassword_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -9053,14 +7982,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -9068,8 +7994,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_go">
 <a href="#stagingstorageaccountid_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -9077,8 +8002,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_go">
 <a href="#sharepassword_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -9086,14 +8010,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -9101,8 +8022,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_nodejs">
 <a href="#stagingstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -9110,8 +8030,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_nodejs">
 <a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
@@ -9119,14 +8038,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -9134,8 +8050,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="staging_storage_account_id_python">
 <a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
@@ -9143,8 +8058,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_password_python">
 <a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
@@ -9152,16 +8066,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="manageddiskdetailsresponse">Managed<wbr>Disk<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -9169,8 +8080,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_csharp">
 <a href="#stagingstorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -9178,8 +8088,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_csharp">
 <a href="#sharepassword_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -9187,14 +8096,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -9202,8 +8108,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_go">
 <a href="#stagingstorageaccountid_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -9211,8 +8116,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_go">
 <a href="#sharepassword_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -9220,14 +8124,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -9235,8 +8136,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_nodejs">
 <a href="#stagingstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -9244,8 +8144,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_nodejs">
 <a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
@@ -9253,14 +8152,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -9268,8 +8164,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Group Id of the compute disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="staging_storage_account_id_python">
 <a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
@@ -9277,8 +8172,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource Id of the storage account that can be used to copy the vhd for staging.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_password_python">
 <a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
@@ -9286,16 +8180,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationpreference">Notification<wbr>Preference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sendnotification_csharp">
 <a href="#sendnotification_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Notification</a>
@@ -9303,8 +8194,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_csharp">
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -9312,14 +8202,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#notificationstagename">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sendnotification_go">
 <a href="#sendnotification_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Notification</a>
@@ -9327,8 +8214,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_go">
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -9336,14 +8222,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#notificationstagename">Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sendnotification_nodejs">
 <a href="#sendnotification_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Notification</a>
@@ -9351,8 +8234,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_nodejs">
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
@@ -9360,14 +8242,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#notificationstagename">Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="send_notification_python">
 <a href="#send_notification_python" style="color: inherit; text-decoration: inherit;">send_<wbr>notification</a>
@@ -9375,8 +8254,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_name_python">
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
@@ -9384,16 +8262,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#notificationstagename">Notification<wbr>Stage<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationpreferenceresponse">Notification<wbr>Preference<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sendnotification_csharp">
 <a href="#sendnotification_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Notification</a>
@@ -9401,8 +8276,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_csharp">
 <a href="#stagename_csharp" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -9410,14 +8284,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sendnotification_go">
 <a href="#sendnotification_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Notification</a>
@@ -9425,8 +8296,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_go">
 <a href="#stagename_go" style="color: inherit; text-decoration: inherit;">Stage<wbr>Name</a>
@@ -9434,14 +8304,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sendnotification_nodejs">
 <a href="#sendnotification_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Notification</a>
@@ -9449,8 +8316,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagename_nodejs">
 <a href="#stagename_nodejs" style="color: inherit; text-decoration: inherit;">stage<wbr>Name</a>
@@ -9458,14 +8324,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="send_notification_python">
 <a href="#send_notification_python" style="color: inherit; text-decoration: inherit;">send_<wbr>notification</a>
@@ -9473,8 +8336,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Notification is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_name_python">
 <a href="#stage_name_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>name</a>
@@ -9482,86 +8344,55 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationstagename">Notification<wbr>Stage<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Device<wbr>Prepared</dt>
-    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd>
-    <dt>Dispatched</dt>
-    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd>
-    <dt>Delivered</dt>
-    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd>
-    <dt>Picked<wbr>Up</dt>
-    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd>
-    <dt>At<wbr>Azure<wbr>DC</dt>
-    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd>
-    <dt>Data<wbr>Copy</dt>
-    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Device<wbr>Prepared</dt>
+    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd><dt>Dispatched</dt>
+    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd><dt>Delivered</dt>
+    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd><dt>Picked<wbr>Up</dt>
+    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd><dt>At<wbr>Azure<wbr>DC</dt>
+    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd><dt>Data<wbr>Copy</dt>
+    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Notification<wbr>Stage<wbr>Name<wbr>Device<wbr>Prepared</dt>
-    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd>
-    <dt>Notification<wbr>Stage<wbr>Name<wbr>Dispatched</dt>
-    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd>
-    <dt>Notification<wbr>Stage<wbr>Name<wbr>Delivered</dt>
-    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd>
-    <dt>Notification<wbr>Stage<wbr>Name<wbr>Picked<wbr>Up</dt>
-    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd>
-    <dt>Notification<wbr>Stage<wbr>Name<wbr>At<wbr>Azure<wbr>DC</dt>
-    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd>
-    <dt>Notification<wbr>Stage<wbr>Name<wbr>Data<wbr>Copy</dt>
-    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Notification<wbr>Stage<wbr>Name<wbr>Device<wbr>Prepared</dt>
+    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd><dt>Notification<wbr>Stage<wbr>Name<wbr>Dispatched</dt>
+    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd><dt>Notification<wbr>Stage<wbr>Name<wbr>Delivered</dt>
+    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd><dt>Notification<wbr>Stage<wbr>Name<wbr>Picked<wbr>Up</dt>
+    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd><dt>Notification<wbr>Stage<wbr>Name<wbr>At<wbr>Azure<wbr>DC</dt>
+    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd><dt>Notification<wbr>Stage<wbr>Name<wbr>Data<wbr>Copy</dt>
+    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Device<wbr>Prepared</dt>
-    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd>
-    <dt>Dispatched</dt>
-    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd>
-    <dt>Delivered</dt>
-    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd>
-    <dt>Picked<wbr>Up</dt>
-    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd>
-    <dt>At<wbr>Azure<wbr>DC</dt>
-    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd>
-    <dt>Data<wbr>Copy</dt>
-    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Device<wbr>Prepared</dt>
+    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd><dt>Dispatched</dt>
+    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd><dt>Delivered</dt>
+    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd><dt>Picked<wbr>Up</dt>
+    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd><dt>At<wbr>Azure<wbr>DC</dt>
+    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd><dt>Data<wbr>Copy</dt>
+    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DEVICE_PREPARED</dt>
-    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd>
-    <dt>DISPATCHED</dt>
-    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd>
-    <dt>DELIVERED</dt>
-    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd>
-    <dt>PICKED_UP</dt>
-    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd>
-    <dt>AT_AZURE_DC</dt>
-    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd>
-    <dt>DATA_COPY</dt>
-    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>DEVICE_PREPARED</dt>
+    <dd>DevicePrepared{{% md %}}Notification at device prepared stage.{{% /md %}}</dd><dt>DISPATCHED</dt>
+    <dd>Dispatched{{% md %}}Notification at device dispatched stage.{{% /md %}}</dd><dt>DELIVERED</dt>
+    <dd>Delivered{{% md %}}Notification at device delivered stage.{{% /md %}}</dd><dt>PICKED_UP</dt>
+    <dd>PickedUp{{% md %}}Notification at device picked up from user stage.{{% /md %}}</dd><dt>AT_AZURE_DC</dt>
+    <dd>AtAzureDC{{% md %}}Notification at device received at Azure datacenter stage.{{% /md %}}</dd><dt>DATA_COPY</dt>
+    <dd>DataCopy{{% md %}}Notification at data copy started stage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_csharp">
 <a href="#carriername_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -9569,8 +8400,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingid_csharp">
 <a href="#trackingid_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
@@ -9578,8 +8408,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingurl_csharp">
 <a href="#trackingurl_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
@@ -9587,14 +8416,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_go">
 <a href="#carriername_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Name</a>
@@ -9602,8 +8428,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingid_go">
 <a href="#trackingid_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Id</a>
@@ -9611,8 +8436,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingurl_go">
 <a href="#trackingurl_go" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Url</a>
@@ -9620,14 +8444,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carriername_nodejs">
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
@@ -9635,8 +8456,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingid_nodejs">
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
@@ -9644,8 +8464,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trackingurl_nodejs">
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
@@ -9653,14 +8472,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="carrier_name_python">
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
@@ -9668,8 +8484,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the carrier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_id_python">
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
@@ -9677,8 +8492,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tracking Id of shipment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tracking_url_python">
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
@@ -9686,16 +8500,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Url where shipment can be tracked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preferences">Preferences</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptionpreferences_csharp">
 <a href="#encryptionpreferences_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
@@ -9703,8 +8514,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferences">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddatacenterregion_csharp">
 <a href="#preferreddatacenterregion_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Data<wbr>Center<wbr>Region</a>
@@ -9712,8 +8522,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportpreferences_csharp">
 <a href="#transportpreferences_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
@@ -9721,14 +8530,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferences">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptionpreferences_go">
 <a href="#encryptionpreferences_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
@@ -9736,8 +8542,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddatacenterregion_go">
 <a href="#preferreddatacenterregion_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Data<wbr>Center<wbr>Region</a>
@@ -9745,8 +8550,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportpreferences_go">
 <a href="#transportpreferences_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
@@ -9754,14 +8558,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptionpreferences_nodejs">
 <a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
@@ -9769,8 +8570,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddatacenterregion_nodejs">
 <a href="#preferreddatacenterregion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Data<wbr>Center<wbr>Region</a>
@@ -9778,8 +8578,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportpreferences_nodejs">
 <a href="#transportpreferences_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
@@ -9787,14 +8586,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryption_preferences_python">
 <a href="#encryption_preferences_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>preferences</a>
@@ -9802,8 +8598,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferences">Encryption<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_data_center_region_python">
 <a href="#preferred_data_center_region_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>data_<wbr>center_<wbr>region</a>
@@ -9811,8 +8606,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transport_preferences_python">
 <a href="#transport_preferences_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>preferences</a>
@@ -9820,16 +8614,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferences">Transport<wbr>Preferences<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preferencesresponse">Preferences<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptionpreferences_csharp">
 <a href="#encryptionpreferences_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
@@ -9837,8 +8628,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferencesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddatacenterregion_csharp">
 <a href="#preferreddatacenterregion_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Data<wbr>Center<wbr>Region</a>
@@ -9846,8 +8636,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportpreferences_csharp">
 <a href="#transportpreferences_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
@@ -9855,14 +8644,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferencesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptionpreferences_go">
 <a href="#encryptionpreferences_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Preferences</a>
@@ -9870,8 +8656,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddatacenterregion_go">
 <a href="#preferreddatacenterregion_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Data<wbr>Center<wbr>Region</a>
@@ -9879,8 +8664,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportpreferences_go">
 <a href="#transportpreferences_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Preferences</a>
@@ -9888,14 +8672,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptionpreferences_nodejs">
 <a href="#encryptionpreferences_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Preferences</a>
@@ -9903,8 +8684,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferreddatacenterregion_nodejs">
 <a href="#preferreddatacenterregion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Data<wbr>Center<wbr>Region</a>
@@ -9912,8 +8692,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportpreferences_nodejs">
 <a href="#transportpreferences_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Preferences</a>
@@ -9921,14 +8700,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryption_preferences_python">
 <a href="#encryption_preferences_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>preferences</a>
@@ -9936,8 +8712,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_data_center_region_python">
 <a href="#preferred_data_center_region_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>data_<wbr>center_<wbr>region</a>
@@ -9945,8 +8720,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Preferred data center region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transport_preferences_python">
 <a href="#transport_preferences_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>preferences</a>
@@ -9954,16 +8728,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Preferences related to the shipment logistics of the sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentity">Resource<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -9971,8 +8742,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -9980,14 +8750,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -9995,8 +8762,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -10004,14 +8770,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -10019,8 +8782,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -10028,14 +8790,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -10043,8 +8802,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -10052,16 +8810,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -10069,8 +8824,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -10078,8 +8832,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -10087,8 +8840,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -10096,14 +8848,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -10111,8 +8860,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -10120,8 +8868,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -10129,8 +8876,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -10138,14 +8884,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -10153,8 +8896,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -10162,8 +8904,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -10171,8 +8912,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -10180,14 +8920,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -10195,8 +8932,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -10204,8 +8940,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -10213,8 +8948,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -10222,16 +8956,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippingaddress">Shipping<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -10239,8 +8970,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -10248,8 +8978,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_csharp">
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -10257,8 +8986,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addresstype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -10266,8 +8994,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_csharp">
 <a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -10275,8 +9002,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -10284,8 +9010,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -10293,8 +9018,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -10302,8 +9026,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_csharp">
 <a href="#streetaddress3_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -10311,8 +9034,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_csharp">
 <a href="#zipextendedcode_csharp" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -10320,14 +9042,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -10335,8 +9054,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -10344,8 +9062,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_go">
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -10353,8 +9070,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -10362,8 +9078,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_go">
 <a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -10371,8 +9086,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -10380,8 +9094,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -10389,8 +9102,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -10398,8 +9110,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_go">
 <a href="#streetaddress3_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -10407,8 +9118,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_go">
 <a href="#zipextendedcode_go" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -10416,14 +9126,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -10431,8 +9138,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -10440,8 +9146,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_nodejs">
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -10449,8 +9154,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -10458,8 +9162,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_nodejs">
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
@@ -10467,8 +9170,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -10476,8 +9178,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -10485,8 +9186,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -10494,8 +9194,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_nodejs">
 <a href="#streetaddress3_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
@@ -10503,8 +9202,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_nodejs">
 <a href="#zipextendedcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
@@ -10512,14 +9210,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -10527,8 +9222,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -10536,8 +9230,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_type_python">
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
@@ -10545,8 +9238,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#addresstype">Address<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -10554,8 +9246,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="company_name_python">
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
@@ -10563,8 +9254,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -10572,8 +9262,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -10581,8 +9270,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -10590,8 +9278,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address3_python">
 <a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
@@ -10599,8 +9286,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zip_extended_code_python">
 <a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
@@ -10608,16 +9294,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippingaddressresponse">Shipping<wbr>Address<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -10625,8 +9308,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_csharp">
 <a href="#streetaddress1_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -10634,8 +9316,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_csharp">
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -10643,8 +9324,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_csharp">
 <a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
@@ -10652,8 +9332,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_csharp">
 <a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -10661,8 +9340,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -10670,8 +9348,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_csharp">
 <a href="#stateorprovince_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -10679,8 +9356,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_csharp">
 <a href="#streetaddress2_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -10688,8 +9364,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_csharp">
 <a href="#streetaddress3_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -10697,8 +9372,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_csharp">
 <a href="#zipextendedcode_csharp" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -10706,14 +9380,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -10721,8 +9392,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_go">
 <a href="#streetaddress1_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address1</a>
@@ -10730,8 +9400,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_go">
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -10739,8 +9408,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_go">
 <a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
@@ -10748,8 +9416,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_go">
 <a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
@@ -10757,8 +9424,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -10766,8 +9432,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_go">
 <a href="#stateorprovince_go" style="color: inherit; text-decoration: inherit;">State<wbr>Or<wbr>Province</a>
@@ -10775,8 +9440,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_go">
 <a href="#streetaddress2_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address2</a>
@@ -10784,8 +9448,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_go">
 <a href="#streetaddress3_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address3</a>
@@ -10793,8 +9456,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_go">
 <a href="#zipextendedcode_go" style="color: inherit; text-decoration: inherit;">Zip<wbr>Extended<wbr>Code</a>
@@ -10802,14 +9464,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -10817,8 +9476,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streetaddress1_nodejs">
 <a href="#streetaddress1_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address1</a>
@@ -10826,8 +9484,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_nodejs">
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -10835,8 +9492,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_nodejs">
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
@@ -10844,8 +9500,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="companyname_nodejs">
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
@@ -10853,8 +9508,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -10862,8 +9516,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateorprovince_nodejs">
 <a href="#stateorprovince_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Or<wbr>Province</a>
@@ -10871,8 +9524,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress2_nodejs">
 <a href="#streetaddress2_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address2</a>
@@ -10880,8 +9532,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress3_nodejs">
 <a href="#streetaddress3_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address3</a>
@@ -10889,8 +9540,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zipextendedcode_nodejs">
 <a href="#zipextendedcode_nodejs" style="color: inherit; text-decoration: inherit;">zip<wbr>Extended<wbr>Code</a>
@@ -10898,14 +9548,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -10913,8 +9560,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Country.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="street_address1_python">
 <a href="#street_address1_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address1</a>
@@ -10922,8 +9568,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_type_python">
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>
@@ -10931,8 +9576,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="city_python">
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
@@ -10940,8 +9584,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the City.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the City.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="company_name_python">
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
@@ -10949,8 +9592,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the company.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the company.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -10958,8 +9600,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Postal code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Postal code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_or_province_python">
 <a href="#state_or_province_python" style="color: inherit; text-decoration: inherit;">state_<wbr>or_<wbr>province</a>
@@ -10967,8 +9608,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the State or Province.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address2_python">
 <a href="#street_address2_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address2</a>
@@ -10976,8 +9616,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address3_python">
 <a href="#street_address3_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address3</a>
@@ -10985,8 +9624,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Street Address line 3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zip_extended_code_python">
 <a href="#zip_extended_code_python" style="color: inherit; text-decoration: inherit;">zip_<wbr>extended_<wbr>code</a>
@@ -10994,16 +9632,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Extended Zip Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11011,8 +9646,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -11020,8 +9654,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -11029,14 +9662,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11044,8 +9674,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -11053,8 +9682,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -11062,14 +9690,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11077,8 +9702,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -11086,8 +9710,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -11095,14 +9718,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11110,8 +9730,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -11119,8 +9738,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -11128,62 +9746,43 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuname">Sku<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Data<wbr>Box</dt>
-    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd>
-    <dt>Data<wbr>Box<wbr>Disk</dt>
-    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd>
-    <dt>Data<wbr>Box<wbr>Heavy</dt>
-    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Data<wbr>Box</dt>
+    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd><dt>Data<wbr>Box<wbr>Disk</dt>
+    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd><dt>Data<wbr>Box<wbr>Heavy</dt>
+    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Name<wbr>Data<wbr>Box</dt>
-    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd>
-    <dt>Sku<wbr>Name<wbr>Data<wbr>Box<wbr>Disk</dt>
-    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd>
-    <dt>Sku<wbr>Name<wbr>Data<wbr>Box<wbr>Heavy</dt>
-    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Name<wbr>Data<wbr>Box</dt>
+    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd><dt>Sku<wbr>Name<wbr>Data<wbr>Box<wbr>Disk</dt>
+    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd><dt>Sku<wbr>Name<wbr>Data<wbr>Box<wbr>Heavy</dt>
+    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Data<wbr>Box</dt>
-    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd>
-    <dt>Data<wbr>Box<wbr>Disk</dt>
-    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd>
-    <dt>Data<wbr>Box<wbr>Heavy</dt>
-    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Data<wbr>Box</dt>
+    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd><dt>Data<wbr>Box<wbr>Disk</dt>
+    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd><dt>Data<wbr>Box<wbr>Heavy</dt>
+    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DATA_BOX</dt>
-    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd>
-    <dt>DATA_BOX_DISK</dt>
-    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd>
-    <dt>DATA_BOX_HEAVY</dt>
-    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>DATA_BOX</dt>
+    <dd>DataBox{{% md %}}Data Box.{{% /md %}}</dd><dt>DATA_BOX_DISK</dt>
+    <dd>DataBoxDisk{{% md %}}Data Box Disk.{{% /md %}}</dd><dt>DATA_BOX_HEAVY</dt>
+    <dd>DataBoxHeavy{{% md %}}Data Box Heavy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11191,8 +9790,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -11200,8 +9798,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -11209,14 +9806,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11224,8 +9818,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -11233,8 +9826,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -11242,14 +9834,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11257,8 +9846,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -11266,8 +9854,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -11275,14 +9862,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11290,8 +9874,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -11299,8 +9882,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -11308,16 +9890,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku family.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku family.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccountdetails">Storage<wbr>Account<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -11325,8 +9904,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_csharp">
 <a href="#sharepassword_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -11334,14 +9912,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -11349,8 +9924,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_go">
 <a href="#sharepassword_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -11358,14 +9932,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -11373,8 +9944,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_nodejs">
 <a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
@@ -11382,14 +9952,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -11397,8 +9964,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_password_python">
 <a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
@@ -11406,16 +9972,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccountdetailsresponse">Storage<wbr>Account<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -11423,8 +9986,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_csharp">
 <a href="#sharepassword_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -11432,14 +9994,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -11447,8 +10006,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_go">
 <a href="#sharepassword_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Password</a>
@@ -11456,14 +10014,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -11471,8 +10026,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharepassword_nodejs">
 <a href="#sharepassword_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Password</a>
@@ -11480,14 +10034,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -11495,8 +10046,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage Account Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_password_python">
 <a href="#share_password_python" style="color: inherit; text-decoration: inherit;">share_<wbr>password</a>
@@ -11504,16 +10054,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -11521,8 +10068,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -11530,8 +10076,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -11539,8 +10084,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -11548,8 +10092,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -11557,8 +10100,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -11566,14 +10108,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -11581,8 +10120,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -11590,8 +10128,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -11599,8 +10136,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -11608,8 +10144,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -11617,8 +10152,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -11626,14 +10160,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -11641,8 +10172,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -11650,8 +10180,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -11659,8 +10188,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -11668,8 +10196,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -11677,8 +10204,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -11686,14 +10212,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -11701,8 +10224,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -11710,8 +10232,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -11719,8 +10240,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -11728,8 +10248,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -11737,8 +10256,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -11746,16 +10264,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferalldetails">Transfer<wbr>All<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_csharp">
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -11763,8 +10278,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallblobs_csharp">
 <a href="#transferallblobs_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Blobs</a>
@@ -11772,8 +10286,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallfiles_csharp">
 <a href="#transferallfiles_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Files</a>
@@ -11781,14 +10294,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_go">
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -11796,8 +10306,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallblobs_go">
 <a href="#transferallblobs_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Blobs</a>
@@ -11805,8 +10314,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallfiles_go">
 <a href="#transferallfiles_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Files</a>
@@ -11814,14 +10322,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_nodejs">
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
@@ -11829,8 +10334,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallblobs_nodejs">
 <a href="#transferallblobs_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Blobs</a>
@@ -11838,8 +10342,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallfiles_nodejs">
 <a href="#transferallfiles_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Files</a>
@@ -11847,14 +10350,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_account_type_python">
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
@@ -11862,8 +10362,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_all_blobs_python">
 <a href="#transfer_all_blobs_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>blobs</a>
@@ -11871,8 +10370,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_all_files_python">
 <a href="#transfer_all_files_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>files</a>
@@ -11880,16 +10378,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_csharp">
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -11897,8 +10392,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallblobs_csharp">
 <a href="#transferallblobs_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Blobs</a>
@@ -11906,8 +10400,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallfiles_csharp">
 <a href="#transferallfiles_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Files</a>
@@ -11915,14 +10408,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_go">
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -11930,8 +10420,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallblobs_go">
 <a href="#transferallblobs_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Blobs</a>
@@ -11939,8 +10428,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallfiles_go">
 <a href="#transferallfiles_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Files</a>
@@ -11948,14 +10436,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_nodejs">
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
@@ -11963,8 +10448,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallblobs_nodejs">
 <a href="#transferallblobs_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Blobs</a>
@@ -11972,8 +10456,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferallfiles_nodejs">
 <a href="#transferallfiles_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Files</a>
@@ -11981,14 +10464,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_account_type_python">
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
@@ -11996,8 +10476,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_all_blobs_python">
 <a href="#transfer_all_blobs_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>blobs</a>
@@ -12005,8 +10484,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}To indicate if all Azure blobs have to be transferred{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_all_files_python">
 <a href="#transfer_all_files_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>files</a>
@@ -12014,16 +10492,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}To indicate if all Azure Files have to be transferred{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfiguration">Transfer<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transferconfigurationtype_csharp">
 <a href="#transferconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
@@ -12031,8 +10506,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transferconfigurationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferalldetails_csharp">
 <a href="#transferalldetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Details</a>
@@ -12040,8 +10514,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferalldetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferfilterdetails_csharp">
 <a href="#transferfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Filter<wbr>Details</a>
@@ -12049,14 +10522,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transferconfigurationtype_go">
 <a href="#transferconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
@@ -12064,8 +10534,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transferconfigurationtype">Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferalldetails_go">
 <a href="#transferalldetails_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Details</a>
@@ -12073,8 +10542,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferalldetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferfilterdetails_go">
 <a href="#transferfilterdetails_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Filter<wbr>Details</a>
@@ -12082,14 +10550,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transferconfigurationtype_nodejs">
 <a href="#transferconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration<wbr>Type</a>
@@ -12097,8 +10562,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transferconfigurationtype">Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferalldetails_nodejs">
 <a href="#transferalldetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Details</a>
@@ -12106,8 +10570,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferalldetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferfilterdetails_nodejs">
 <a href="#transferfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Filter<wbr>Details</a>
@@ -12115,14 +10578,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transfer_configuration_type_python">
 <a href="#transfer_configuration_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration_<wbr>type</a>
@@ -12130,8 +10590,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#transferconfigurationtype">Transfer<wbr>Configuration<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_all_details_python">
 <a href="#transfer_all_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>details</a>
@@ -12139,8 +10598,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferalldetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_filter_details_python">
 <a href="#transfer_filter_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>filter_<wbr>details</a>
@@ -12148,16 +10606,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationtransferfilterdetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfigurationresponse">Transfer<wbr>Configuration<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transferconfigurationtype_csharp">
 <a href="#transferconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
@@ -12165,8 +10620,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferalldetails_csharp">
 <a href="#transferalldetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Details</a>
@@ -12174,8 +10628,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferfilterdetails_csharp">
 <a href="#transferfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Filter<wbr>Details</a>
@@ -12183,14 +10636,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transferconfigurationtype_go">
 <a href="#transferconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Configuration<wbr>Type</a>
@@ -12198,8 +10648,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferalldetails_go">
 <a href="#transferalldetails_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>All<wbr>Details</a>
@@ -12207,8 +10656,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferfilterdetails_go">
 <a href="#transferfilterdetails_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Filter<wbr>Details</a>
@@ -12216,14 +10664,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transferconfigurationtype_nodejs">
 <a href="#transferconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Configuration<wbr>Type</a>
@@ -12231,8 +10676,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferalldetails_nodejs">
 <a href="#transferalldetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>All<wbr>Details</a>
@@ -12240,8 +10684,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferfilterdetails_nodejs">
 <a href="#transferfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Filter<wbr>Details</a>
@@ -12249,14 +10692,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transfer_configuration_type_python">
 <a href="#transfer_configuration_type_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>configuration_<wbr>type</a>
@@ -12264,8 +10704,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the configuration for transfer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_all_details_python">
 <a href="#transfer_all_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>all_<wbr>details</a>
@@ -12273,8 +10712,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_filter_details_python">
 <a href="#transfer_filter_details_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>filter_<wbr>details</a>
@@ -12282,16 +10720,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfigurationresponsetransferalldetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>All<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_csharp">
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12299,14 +10734,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_go">
 <a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12314,14 +10746,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_nodejs">
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12329,14 +10758,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_python">
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12344,16 +10770,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfigurationresponsetransferfilterdetails">Transfer<wbr>Configuration<wbr>Response<wbr>Transfer<wbr>Filter<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_csharp">
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12361,14 +10784,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_go">
 <a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12376,14 +10796,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_nodejs">
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12391,14 +10808,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_python">
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12406,16 +10820,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfigurationtransferalldetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>All<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_csharp">
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12423,14 +10834,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_go">
 <a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12438,14 +10846,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetails">Transfer<wbr>All<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_nodejs">
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12453,14 +10858,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetails">Transfer<wbr>All<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_python">
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12468,16 +10870,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferalldetails">Transfer<wbr>All<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details to transfer all data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfigurationtransferfilterdetails">Transfer<wbr>Configuration<wbr>Transfer<wbr>Filter<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_csharp">
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12485,14 +10884,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_go">
 <a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -12500,14 +10896,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetails">Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_nodejs">
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12515,14 +10908,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetails">Transfer<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_python">
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
@@ -12530,54 +10920,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#transferfilterdetails">Transfer<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filtering the transfer of data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferconfigurationtype">Transfer<wbr>Configuration<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Transfer<wbr>All</dt>
-    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd>
-    <dt>Transfer<wbr>Using<wbr>Filter</dt>
-    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Transfer<wbr>All</dt>
+    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd><dt>Transfer<wbr>Using<wbr>Filter</dt>
+    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Transfer<wbr>Configuration<wbr>Type<wbr>Transfer<wbr>All</dt>
-    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd>
-    <dt>Transfer<wbr>Configuration<wbr>Type<wbr>Transfer<wbr>Using<wbr>Filter</dt>
-    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Transfer<wbr>Configuration<wbr>Type<wbr>Transfer<wbr>All</dt>
+    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd><dt>Transfer<wbr>Configuration<wbr>Type<wbr>Transfer<wbr>Using<wbr>Filter</dt>
+    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Transfer<wbr>All</dt>
-    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd>
-    <dt>Transfer<wbr>Using<wbr>Filter</dt>
-    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Transfer<wbr>All</dt>
+    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd><dt>Transfer<wbr>Using<wbr>Filter</dt>
+    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TRANSFER_ALL</dt>
-    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd>
-    <dt>TRANSFER_USING_FILTER</dt>
-    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>TRANSFER_ALL</dt>
+    <dd>TransferAll{{% md %}}Transfer all the data.{{% /md %}}</dd><dt>TRANSFER_USING_FILTER</dt>
+    <dd>TransferUsingFilter{{% md %}}Transfer using filter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferfilterdetails">Transfer<wbr>Filter<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_csharp">
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -12585,8 +10960,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefilefilterdetails_csharp">
 <a href="#azurefilefilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Filter<wbr>Details</a>
@@ -12594,8 +10968,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobfilterdetails_csharp">
 <a href="#blobfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Filter<wbr>Details</a>
@@ -12603,8 +10976,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Blob<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterfiledetails_csharp">
 <a href="#filterfiledetails_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Details</a>
@@ -12612,14 +10984,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Filter<wbr>File<wbr>Details<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_go">
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -12627,8 +10996,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefilefilterdetails_go">
 <a href="#azurefilefilterdetails_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Filter<wbr>Details</a>
@@ -12636,8 +11004,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetails">Azure<wbr>File<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobfilterdetails_go">
 <a href="#blobfilterdetails_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Filter<wbr>Details</a>
@@ -12645,8 +11012,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetails">Blob<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterfiledetails_go">
 <a href="#filterfiledetails_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Details</a>
@@ -12654,14 +11020,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetails">[]Filter<wbr>File<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_nodejs">
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
@@ -12669,8 +11032,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefilefilterdetails_nodejs">
 <a href="#azurefilefilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Filter<wbr>Details</a>
@@ -12678,8 +11040,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetails">Azure<wbr>File<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobfilterdetails_nodejs">
 <a href="#blobfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Filter<wbr>Details</a>
@@ -12687,8 +11048,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetails">Blob<wbr>Filter<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterfiledetails_nodejs">
 <a href="#filterfiledetails_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Details</a>
@@ -12696,14 +11056,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetails">Filter<wbr>File<wbr>Details[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_account_type_python">
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
@@ -12711,8 +11068,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#dataaccounttype">Data<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_file_filter_details_python">
 <a href="#azure_file_filter_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>filter_<wbr>details</a>
@@ -12720,8 +11076,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetails">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_filter_details_python">
 <a href="#blob_filter_details_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>filter_<wbr>details</a>
@@ -12729,8 +11084,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetails">Blob<wbr>Filter<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_file_details_python">
 <a href="#filter_file_details_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>details</a>
@@ -12738,16 +11092,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetails">Sequence[Filter<wbr>File<wbr>Details<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_csharp">
 <a href="#dataaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -12755,8 +11106,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefilefilterdetails_csharp">
 <a href="#azurefilefilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Filter<wbr>Details</a>
@@ -12764,8 +11114,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobfilterdetails_csharp">
 <a href="#blobfilterdetails_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Filter<wbr>Details</a>
@@ -12773,8 +11122,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterfiledetails_csharp">
 <a href="#filterfiledetails_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Details</a>
@@ -12782,14 +11130,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_go">
 <a href="#dataaccounttype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Account<wbr>Type</a>
@@ -12797,8 +11142,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefilefilterdetails_go">
 <a href="#azurefilefilterdetails_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Filter<wbr>Details</a>
@@ -12806,8 +11150,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobfilterdetails_go">
 <a href="#blobfilterdetails_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Filter<wbr>Details</a>
@@ -12815,8 +11158,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterfiledetails_go">
 <a href="#filterfiledetails_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>File<wbr>Details</a>
@@ -12824,14 +11166,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetailsresponse">[]Filter<wbr>File<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataaccounttype_nodejs">
 <a href="#dataaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Account<wbr>Type</a>
@@ -12839,8 +11178,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefilefilterdetails_nodejs">
 <a href="#azurefilefilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Filter<wbr>Details</a>
@@ -12848,8 +11186,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobfilterdetails_nodejs">
 <a href="#blobfilterdetails_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Filter<wbr>Details</a>
@@ -12857,8 +11194,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filterfiledetails_nodejs">
 <a href="#filterfiledetails_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>File<wbr>Details</a>
@@ -12866,14 +11202,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetailsresponse">Filter<wbr>File<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_account_type_python">
 <a href="#data_account_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>account_<wbr>type</a>
@@ -12881,8 +11214,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the account of data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_file_filter_details_python">
 <a href="#azure_file_filter_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>filter_<wbr>details</a>
@@ -12890,8 +11222,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer Azure files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_filter_details_python">
 <a href="#blob_filter_details_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>filter_<wbr>details</a>
@@ -12899,8 +11230,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobfilterdetailsresponse">Blob<wbr>Filter<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter details to transfer blobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_file_details_python">
 <a href="#filter_file_details_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>file_<wbr>details</a>
@@ -12908,54 +11238,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filterfiledetailsresponse">Sequence[Filter<wbr>File<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details of the filter files to be used for data transfer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transfertype">Transfer<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Import<wbr>To<wbr>Azure</dt>
-    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd>
-    <dt>Export<wbr>From<wbr>Azure</dt>
-    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Import<wbr>To<wbr>Azure</dt>
+    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd><dt>Export<wbr>From<wbr>Azure</dt>
+    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Transfer<wbr>Type<wbr>Import<wbr>To<wbr>Azure</dt>
-    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd>
-    <dt>Transfer<wbr>Type<wbr>Export<wbr>From<wbr>Azure</dt>
-    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Transfer<wbr>Type<wbr>Import<wbr>To<wbr>Azure</dt>
+    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd><dt>Transfer<wbr>Type<wbr>Export<wbr>From<wbr>Azure</dt>
+    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Import<wbr>To<wbr>Azure</dt>
-    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd>
-    <dt>Export<wbr>From<wbr>Azure</dt>
-    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Import<wbr>To<wbr>Azure</dt>
+    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd><dt>Export<wbr>From<wbr>Azure</dt>
+    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>IMPORT_TO_AZURE</dt>
-    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd>
-    <dt>EXPORT_FROM_AZURE</dt>
-    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>IMPORT_TO_AZURE</dt>
+    <dd>ImportToAzure{{% md %}}Import data to azure.{{% /md %}}</dd><dt>EXPORT_FROM_AZURE</dt>
+    <dd>ExportFromAzure{{% md %}}Export data from azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transportpreferences">Transport<wbr>Preferences</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredshipmenttype_csharp">
 <a href="#preferredshipmenttype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
@@ -12963,14 +11278,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transportshipmenttypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredshipmenttype_go">
 <a href="#preferredshipmenttype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
@@ -12978,14 +11290,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transportshipmenttypes">Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredshipmenttype_nodejs">
 <a href="#preferredshipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shipment<wbr>Type</a>
@@ -12993,14 +11302,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#transportshipmenttypes">Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferred_shipment_type_python">
 <a href="#preferred_shipment_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shipment_<wbr>type</a>
@@ -13008,16 +11314,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#transportshipmenttypes">Transport<wbr>Shipment<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transportpreferencesresponse">Transport<wbr>Preferences<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredshipmenttype_csharp">
 <a href="#preferredshipmenttype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
@@ -13025,14 +11328,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredshipmenttype_go">
 <a href="#preferredshipmenttype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shipment<wbr>Type</a>
@@ -13040,14 +11340,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredshipmenttype_nodejs">
 <a href="#preferredshipmenttype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shipment<wbr>Type</a>
@@ -13055,14 +11352,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferred_shipment_type_python">
 <a href="#preferred_shipment_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shipment_<wbr>type</a>
@@ -13070,54 +11364,39 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates Shipment Logistics type that the customer preferred.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transportshipmenttypes">Transport<wbr>Shipment<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd>
-    <dt>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd><dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Transport<wbr>Shipment<wbr>Types<wbr>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd>
-    <dt>Transport<wbr>Shipment<wbr>Types<wbr>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Transport<wbr>Shipment<wbr>Types<wbr>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd><dt>Transport<wbr>Shipment<wbr>Types<wbr>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Customer<wbr>Managed</dt>
-    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd>
-    <dt>Microsoft<wbr>Managed</dt>
-    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Customer<wbr>Managed</dt>
+    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd><dt>Microsoft<wbr>Managed</dt>
+    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CUSTOMER_MANAGED</dt>
-    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd>
-    <dt>MICROSOFT_MANAGED</dt>
-    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>CUSTOMER_MANAGED</dt>
+    <dd>CustomerManaged{{% md %}}Shipment Logistics is handled by the customer.{{% /md %}}</dd><dt>MICROSOFT_MANAGED</dt>
+    <dd>MicrosoftManaged{{% md %}}Shipment Logistics is handled by Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -13125,8 +11404,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -13134,14 +11412,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -13149,8 +11424,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -13158,14 +11432,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -13173,8 +11444,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -13182,14 +11452,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -13197,8 +11464,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -13206,16 +11472,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedproperties">User<wbr>Assigned<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -13223,14 +11486,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -13238,14 +11498,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -13253,14 +11510,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -13268,16 +11522,13 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -13285,14 +11536,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -13300,14 +11548,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -13315,14 +11560,11 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -13330,8 +11572,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

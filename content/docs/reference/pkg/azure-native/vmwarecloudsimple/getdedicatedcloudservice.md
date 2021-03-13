@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dedicatedcloudservicename_csharp">
 <a href="#dedicatedcloudservicename_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Cloud<wbr>Service<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dedicatedcloudservicename_go">
 <a href="#dedicatedcloudservicename_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Cloud<wbr>Service<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dedicatedcloudservicename_nodejs">
 <a href="#dedicatedcloudservicename_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Cloud<wbr>Service<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dedicated_cloud_service_name_python">
 <a href="#dedicated_cloud_service_name_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>cloud_<wbr>service_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}dedicated cloud Service name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gatewaysubnet_csharp">
 <a href="#gatewaysubnet_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Subnet</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isaccountonboarded_csharp">
 <a href="#isaccountonboarded_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Account<wbr>Onboarded</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceurl_csharp">
 <a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>URL</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gatewaysubnet_go">
 <a href="#gatewaysubnet_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Subnet</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isaccountonboarded_go">
 <a href="#isaccountonboarded_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Account<wbr>Onboarded</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceurl_go">
 <a href="#serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>URL</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -325,14 +288,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gatewaysubnet_nodejs">
 <a href="#gatewaysubnet_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Subnet</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isaccountonboarded_nodejs">
 <a href="#isaccountonboarded_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Account<wbr>Onboarded</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceurl_nodejs">
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>URL</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -412,14 +364,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gateway_subnet_python">
 <a href="#gateway_subnet_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>subnet</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}gateway Subnet for the account. It will collect the subnet address and always treat it as /28{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_account_onboarded_python">
 <a href="#is_account_onboarded_python" style="color: inherit; text-decoration: inherit;">is_<wbr>account_<wbr>onboarded</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}indicates whether account onboarded or not in a given region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure region{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure region{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{dedicatedCloudServiceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}total nodes purchased{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_url_python">
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}link to a service management web portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{resourceProviderNamespace}/{resourceType}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The list of tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

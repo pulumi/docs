@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabricname_csharp">
 <a href="#fabricname_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkmappingname_csharp">
 <a href="#networkmappingname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mapping<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkname_csharp">
 <a href="#networkname_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary network name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary network name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabricname_go">
 <a href="#fabricname_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkmappingname_go">
 <a href="#networkmappingname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mapping<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkname_go">
 <a href="#networkname_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary network name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary network name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabricname_nodejs">
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkmappingname_nodejs">
 <a href="#networkmappingname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mapping<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkname_nodejs">
 <a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary network name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary network name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fabric_name_python">
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_mapping_name_python">
 <a href="#network_mapping_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mapping_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Network mapping name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_name_python">
 <a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary network name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary network name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmappingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Network<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmappingpropertiesresponse">Network<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmappingpropertiesresponse">Network<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -412,14 +364,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmappingpropertiesresponse">Network<wbr>Mapping<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Mapping Properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="primaryfabriclocation_csharp">
 <a href="#primaryfabriclocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Location</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabriclocation_csharp">
 <a href="#recoveryfabriclocation_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Location</a>
@@ -497,14 +438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="primaryfabriclocation_go">
 <a href="#primaryfabriclocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Location</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabriclocation_go">
 <a href="#recoveryfabriclocation_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Location</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="primaryfabriclocation_nodejs">
 <a href="#primaryfabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Location</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabriclocation_nodejs">
 <a href="#recoveryfabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Location</a>
@@ -545,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="primary_fabric_location_python">
 <a href="#primary_fabric_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>location</a>
@@ -560,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_fabric_location_python">
 <a href="#recovery_fabric_location_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>location</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkmappingpropertiesresponse">Network<wbr>Mapping<wbr>Properties<wbr>Response</h4>
@@ -578,9 +506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fabricspecificsettings_csharp">
 <a href="#fabricspecificsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Settings</a>
@@ -588,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryfabricfriendlyname_csharp">
 <a href="#primaryfabricfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
@@ -597,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkfriendlyname_csharp">
 <a href="#primarynetworkfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Friendly<wbr>Name</a>
@@ -606,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkid_csharp">
 <a href="#primarynetworkid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Id</a>
@@ -615,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabricarmid_csharp">
 <a href="#recoveryfabricarmid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
@@ -624,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabricfriendlyname_csharp">
 <a href="#recoveryfabricfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
@@ -633,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverynetworkfriendlyname_csharp">
 <a href="#recoverynetworkfriendlyname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
@@ -642,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverynetworkid_csharp">
 <a href="#recoverynetworkid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Id</a>
@@ -651,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -660,14 +578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fabricspecificsettings_go">
 <a href="#fabricspecificsettings_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Settings</a>
@@ -675,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryfabricfriendlyname_go">
 <a href="#primaryfabricfriendlyname_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
@@ -684,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkfriendlyname_go">
 <a href="#primarynetworkfriendlyname_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Friendly<wbr>Name</a>
@@ -693,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkid_go">
 <a href="#primarynetworkid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Network<wbr>Id</a>
@@ -702,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabricarmid_go">
 <a href="#recoveryfabricarmid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
@@ -711,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabricfriendlyname_go">
 <a href="#recoveryfabricfriendlyname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
@@ -720,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverynetworkfriendlyname_go">
 <a href="#recoverynetworkfriendlyname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
@@ -729,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverynetworkid_go">
 <a href="#recoverynetworkid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Network<wbr>Id</a>
@@ -738,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -747,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fabricspecificsettings_nodejs">
 <a href="#fabricspecificsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Specific<wbr>Settings</a>
@@ -762,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryfabricfriendlyname_nodejs">
 <a href="#primaryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
@@ -771,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkfriendlyname_nodejs">
 <a href="#primarynetworkfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Friendly<wbr>Name</a>
@@ -780,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarynetworkid_nodejs">
 <a href="#primarynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Id</a>
@@ -789,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabricarmid_nodejs">
 <a href="#recoveryfabricarmid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
@@ -798,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoveryfabricfriendlyname_nodejs">
 <a href="#recoveryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
@@ -807,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverynetworkfriendlyname_nodejs">
 <a href="#recoverynetworkfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
@@ -816,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverynetworkid_nodejs">
 <a href="#recoverynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Id</a>
@@ -825,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -834,14 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fabric_specific_settings_python">
 <a href="#fabric_specific_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>settings</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_fabric_friendly_name_python">
 <a href="#primary_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>friendly_<wbr>name</a>
@@ -858,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_network_friendly_name_python">
 <a href="#primary_network_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>friendly_<wbr>name</a>
@@ -867,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_network_id_python">
 <a href="#primary_network_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>id</a>
@@ -876,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_fabric_arm_id_python">
 <a href="#recovery_fabric_arm_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>arm_<wbr>id</a>
@@ -885,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_fabric_friendly_name_python">
 <a href="#recovery_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>friendly_<wbr>name</a>
@@ -894,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_network_friendly_name_python">
 <a href="#recovery_network_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>friendly_<wbr>name</a>
@@ -903,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_network_id_python">
 <a href="#recovery_network_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>id</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</h4>
@@ -930,27 +814,19 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 <h4 id="vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</h4>
@@ -958,27 +834,19 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="downloadas_csharp">
 <a href="#downloadas_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>As</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geolocationid_csharp">
 <a href="#geolocationid_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Location<wbr>Id</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamp</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webtestname_csharp">
 <a href="#webtestname_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Name</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuationtoken_csharp">
 <a href="#continuationtoken_csharp" style="color: inherit; text-decoration: inherit;">Continuation<wbr>Token</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testsuccessfulcriteria_csharp">
 <a href="#testsuccessfulcriteria_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Successful<wbr>Criteria</a>
@@ -115,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="downloadas_go">
 <a href="#downloadas_go" style="color: inherit; text-decoration: inherit;">Download<wbr>As</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geolocationid_go">
 <a href="#geolocationid_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Location<wbr>Id</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamp</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webtestname_go">
 <a href="#webtestname_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Name</a>
@@ -166,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuationtoken_go">
 <a href="#continuationtoken_go" style="color: inherit; text-decoration: inherit;">Continuation<wbr>Token</a>
@@ -175,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testsuccessfulcriteria_go">
 <a href="#testsuccessfulcriteria_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Successful<wbr>Criteria</a>
@@ -184,14 +167,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="downloadas_nodejs">
 <a href="#downloadas_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>As</a>
@@ -199,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geolocationid_nodejs">
 <a href="#geolocationid_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Location<wbr>Id</a>
@@ -208,8 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamp</a>
@@ -226,8 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webtestname_nodejs">
 <a href="#webtestname_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Name</a>
@@ -235,8 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuationtoken_nodejs">
 <a href="#continuationtoken_nodejs" style="color: inherit; text-decoration: inherit;">continuation<wbr>Token</a>
@@ -244,8 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testsuccessfulcriteria_nodejs">
 <a href="#testsuccessfulcriteria_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Successful<wbr>Criteria</a>
@@ -253,14 +227,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="download_as_python">
 <a href="#download_as_python" style="color: inherit; text-decoration: inherit;">download_<wbr>as</a>
@@ -268,8 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The format to use when returning the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geo_location_id_python">
 <a href="#geo_location_id_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>location_<wbr>id</a>
@@ -277,8 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The location ID where the webtest was physically run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -286,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_stamp_python">
 <a href="#time_stamp_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamp</a>
@@ -295,8 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The posix (epoch) time stamp for the webtest result.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="web_test_name_python">
 <a href="#web_test_name_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>name</a>
@@ -304,8 +271,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="continuation_token_python">
 <a href="#continuation_token_python" style="color: inherit; text-decoration: inherit;">continuation_<wbr>token</a>
@@ -313,8 +279,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The continuation token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The continuation token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="test_successful_criteria_python">
 <a href="#test_successful_criteria_python" style="color: inherit; text-decoration: inherit;">test_<wbr>successful_<wbr>criteria</a>
@@ -322,8 +287,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The success state criteria for the webtest result.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -336,9 +300,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File contents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File contents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -355,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File contents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File contents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File contents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File contents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -403,14 +356,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File contents.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File contents.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI that can be used to request the next section of the result file in the event the file is too large for a single request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

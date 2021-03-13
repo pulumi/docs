@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitycontactname_csharp">
 <a href="#securitycontactname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Contact<wbr>Name</a>
@@ -61,14 +59,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitycontactname_go">
 <a href="#securitycontactname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Contact<wbr>Name</a>
@@ -76,14 +71,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitycontactname_nodejs">
 <a href="#securitycontactname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Contact<wbr>Name</a>
@@ -91,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="security_contact_name_python">
 <a href="#security_contact_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>contact_<wbr>name</a>
@@ -106,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -120,9 +108,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -130,8 +116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -139,8 +124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -148,8 +132,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alertnotifications_csharp">
 <a href="#alertnotifications_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
@@ -157,8 +140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationsbyrole_csharp">
 <a href="#notificationsbyrole_csharp" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Outputs.<wbr>Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="phone_csharp">
 <a href="#phone_csharp" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -184,14 +164,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -199,8 +176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -208,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -217,8 +192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alertnotifications_go">
 <a href="#alertnotifications_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationsbyrole_go">
 <a href="#notificationsbyrole_go" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="phone_go">
 <a href="#phone_go" style="color: inherit; text-decoration: inherit;">Phone</a>
@@ -253,14 +224,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -268,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -277,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alertnotifications_nodejs">
 <a href="#alertnotifications_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Notifications</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationsbyrole_nodejs">
 <a href="#notificationsbyrole_nodejs" style="color: inherit; text-decoration: inherit;">notifications<wbr>By<wbr>Role</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="phone_nodejs">
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -322,14 +284,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -337,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alert_notifications_python">
 <a href="#alert_notifications_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>notifications</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsealertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Alert<wbr>Notifications</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_by_role_python">
 <a href="#notifications_by_role_python" style="color: inherit; text-decoration: inherit;">notifications_<wbr>by_<wbr>role</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontactpropertiesresponsenotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</a></span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="phone_python">
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_csharp">
 <a href="#minimalseverity_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Severity</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -425,14 +374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_go">
 <a href="#minimalseverity_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Severity</a>
@@ -440,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -449,14 +394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimalseverity_nodejs">
 <a href="#minimalseverity_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Severity</a>
@@ -464,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -473,14 +414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimal_severity_python">
 <a href="#minimal_severity_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>severity</a>
@@ -488,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -497,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontactpropertiesresponsenotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Response<wbr>Notifications<wbr>By<wbr>Role</h4>
@@ -506,9 +442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -516,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -525,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -540,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -549,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -564,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -573,14 +498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -588,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -597,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

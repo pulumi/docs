@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parentresource_csharp">
 <a href="#parentresource_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcetype_csharp">
 <a href="#parentresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Type</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_csharp">
 <a href="#resourceprovidernamespace_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialport_csharp">
 <a href="#serialport_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Port</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parentresource_go">
 <a href="#parentresource_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcetype_go">
 <a href="#parentresourcetype_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Type</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_go">
 <a href="#resourceprovidernamespace_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialport_go">
 <a href="#serialport_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Port</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parentresource_nodejs">
 <a href="#parentresource_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcetype_nodejs">
 <a href="#parentresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Type</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_nodejs">
 <a href="#resourceprovidernamespace_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Namespace</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialport_nodejs">
 <a href="#serialport_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Port</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_resource_python">
 <a href="#parent_resource_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_resource_type_python">
 <a href="#parent_resource_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>type</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_provider_namespace_python">
 <a href="#resource_provider_namespace_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>namespace</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serial_port_python">
 <a href="#serial_port_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>port</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the serial port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -301,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -385,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remediationname_csharp">
 <a href="#remediationname_csharp" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remediationname_go">
 <a href="#remediationname_go" style="color: inherit; text-decoration: inherit;">Remediation<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remediationname_nodejs">
 <a href="#remediationname_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remediation_name_python">
 <a href="#remediation_name_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentstatus_csharp">
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Outputs.<wbr>Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedon_csharp">
 <a href="#lastupdatedon_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>On</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationfiltersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Outputs.<wbr>Remediation<wbr>Filters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyassignmentid_csharp">
 <a href="#policyassignmentid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policydefinitionreferenceid_csharp">
 <a href="#policydefinitionreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcediscoverymode_csharp">
 <a href="#resourcediscoverymode_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Discovery<wbr>Mode</a>
@@ -256,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentstatus_go">
 <a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedon_go">
 <a href="#lastupdatedon_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>On</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationfiltersresponse">Remediation<wbr>Filters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyassignmentid_go">
 <a href="#policyassignmentid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Id</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policydefinitionreferenceid_go">
 <a href="#policydefinitionreferenceid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcediscoverymode_go">
 <a href="#resourcediscoverymode_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Discovery<wbr>Mode</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deploymentstatus_nodejs">
 <a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedon_nodejs">
 <a href="#lastupdatedon_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>On</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationfiltersresponse">Remediation<wbr>Filters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyassignmentid_nodejs">
 <a href="#policyassignmentid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Assignment<wbr>Id</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policydefinitionreferenceid_nodejs">
 <a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcediscoverymode_nodejs">
 <a href="#resourcediscoverymode_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Discovery<wbr>Mode</a>
@@ -466,14 +412,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployment_status_python">
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationdeploymentsummaryresponse">Remediation<wbr>Deployment<wbr>Summary<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deployment status summary for all deployments created by the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_on_python">
 <a href="#last_updated_on_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>on</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time at which the remediation was last updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the remediation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#remediationfiltersresponse">Remediation<wbr>Filters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_assignment_id_python">
 <a href="#policy_assignment_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>assignment_<wbr>id</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_definition_reference_id_python">
 <a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_discovery_mode_python">
 <a href="#resource_discovery_mode_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>discovery_<wbr>mode</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="faileddeployments_csharp">
 <a href="#faileddeployments_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Deployments</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successfuldeployments_csharp">
 <a href="#successfuldeployments_csharp" style="color: inherit; text-decoration: inherit;">Successful<wbr>Deployments</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaldeployments_csharp">
 <a href="#totaldeployments_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Deployments</a>
@@ -614,14 +542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="faileddeployments_go">
 <a href="#faileddeployments_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Deployments</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successfuldeployments_go">
 <a href="#successfuldeployments_go" style="color: inherit; text-decoration: inherit;">Successful<wbr>Deployments</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaldeployments_go">
 <a href="#totaldeployments_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Deployments</a>
@@ -647,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="faileddeployments_nodejs">
 <a href="#faileddeployments_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Deployments</a>
@@ -662,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successfuldeployments_nodejs">
 <a href="#successfuldeployments_nodejs" style="color: inherit; text-decoration: inherit;">successful<wbr>Deployments</a>
@@ -671,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaldeployments_nodejs">
 <a href="#totaldeployments_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Deployments</a>
@@ -680,14 +598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failed_deployments_python">
 <a href="#failed_deployments_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>deployments</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successful_deployments_python">
 <a href="#successful_deployments_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>deployments</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_deployments_python">
 <a href="#total_deployments_python" style="color: inherit; text-decoration: inherit;">total_<wbr>deployments</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="remediationfiltersresponse">Remediation<wbr>Filters<wbr>Response</h4>
@@ -722,9 +634,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -732,14 +642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -747,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -762,14 +666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -777,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

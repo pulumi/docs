@@ -14,11 +14,17 @@ Account resource
 API Version: 2020-12-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Accounts_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -76,9 +85,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -95,9 +107,12 @@ account = azure_native.purview.Account("account",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -115,9 +130,16 @@ const account = new azure_native.purview.Account("account", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Account Resource {#create}
@@ -142,9 +164,7 @@ const account = new azure_native.purview.Account("account", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -152,9 +172,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -162,9 +180,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -172,10 +188,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +214,7 @@ const account = new azure_native.purview.Account("account", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -211,9 +222,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +230,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +238,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,18 +246,13 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +260,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +268,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +276,7 @@ const account = new azure_native.purview.Account("account", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +291,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -308,8 +299,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -317,8 +307,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -326,8 +315,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -335,8 +323,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -344,8 +331,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -353,8 +339,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountsku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Account<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -362,14 +347,11 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -377,8 +359,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -386,8 +367,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -395,8 +375,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
-    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -404,8 +383,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -413,8 +391,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -422,8 +399,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountsku">Account<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -431,14 +407,11 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -446,8 +419,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -455,8 +427,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -464,8 +435,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
-    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -473,8 +443,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -482,8 +451,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -491,8 +459,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountsku">Account<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -500,14 +467,11 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -515,8 +479,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -524,8 +487,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -533,8 +495,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identity Info on the tracked resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -542,8 +503,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -551,8 +511,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -560,8 +519,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountsku">Account<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -569,8 +527,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags on the azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,9 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -591,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -600,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyobjectid_csharp">
 <a href="#createdbyobjectid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Object<wbr>Id</a>
@@ -609,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -618,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponseendpoints">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>Endpoints</a></span>
     </dt>
-    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -627,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedresources_csharp">
 <a href="#managedresources_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resources</a>
@@ -645,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponsemanagedresources">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -654,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -663,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -672,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -681,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudconnectors_csharp">
 <a href="#cloudconnectors_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Connectors</a>
@@ -691,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#cloudconnectorsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Cloud<wbr>Connectors<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud connectors.
-External cloud identifier used as part of scanning configuration.{{% /md %}}</dd>
-</dl>
+External cloud identifier used as part of scanning configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -706,8 +647,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -715,8 +655,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyobjectid_go">
 <a href="#createdbyobjectid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Object<wbr>Id</a>
@@ -724,8 +663,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -733,8 +671,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponseendpoints">Account<wbr>Properties<wbr>Response<wbr>Endpoints</a></span>
     </dt>
-    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -742,8 +679,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -751,8 +687,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedresources_go">
 <a href="#managedresources_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Resources</a>
@@ -760,8 +695,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponsemanagedresources">Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -769,8 +703,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -778,8 +711,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -787,8 +719,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -796,8 +727,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudconnectors_go">
 <a href="#cloudconnectors_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Connectors</a>
@@ -806,14 +736,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type"><a href="#cloudconnectorsresponse">Cloud<wbr>Connectors<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud connectors.
-External cloud identifier used as part of scanning configuration.{{% /md %}}</dd>
-</dl>
+External cloud identifier used as part of scanning configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -821,8 +748,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -830,8 +756,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyobjectid_nodejs">
 <a href="#createdbyobjectid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Object<wbr>Id</a>
@@ -839,8 +764,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -848,8 +772,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponseendpoints">Account<wbr>Properties<wbr>Response<wbr>Endpoints</a></span>
     </dt>
-    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -857,8 +780,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -866,8 +788,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedresources_nodejs">
 <a href="#managedresources_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resources</a>
@@ -875,8 +796,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponsemanagedresources">Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -884,8 +804,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -893,8 +812,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -902,8 +820,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -911,8 +828,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudconnectors_nodejs">
 <a href="#cloudconnectors_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Connectors</a>
@@ -921,14 +837,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type"><a href="#cloudconnectorsresponse">Cloud<wbr>Connectors<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud connectors.
-External cloud identifier used as part of scanning configuration.{{% /md %}}</dd>
-</dl>
+External cloud identifier used as part of scanning configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -936,8 +849,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the time at which the entity was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -945,8 +857,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creator of the entity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_object_id_python">
 <a href="#created_by_object_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>object_<wbr>id</a>
@@ -954,8 +865,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the creators of the entity's object id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -963,8 +873,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponseendpoints">Account<wbr>Properties<wbr>Response<wbr>Endpoints</a></span>
     </dt>
-    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URIs that are the public endpoints of the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -972,8 +881,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the friendly name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -981,8 +889,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_resources_python">
 <a href="#managed_resources_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resources</a>
@@ -990,8 +897,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountpropertiesresponsemanagedresources">Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource identifiers of the managed resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -999,8 +905,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -1008,8 +913,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the private endpoint connections information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1017,8 +921,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1026,8 +929,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloud_connectors_python">
 <a href="#cloud_connectors_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>connectors</a>
@@ -1036,8 +938,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type"><a href="#cloudconnectorsresponse">Cloud<wbr>Connectors<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cloud connectors.
-External cloud identifier used as part of scanning configuration.{{% /md %}}</dd>
-</dl>
+External cloud identifier used as part of scanning configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1053,9 +954,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
 <h4 id="accountpropertiesresponseendpoints">Account<wbr>Properties<wbr>Response<wbr>Endpoints</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_csharp">
 <a href="#catalog_csharp" style="color: inherit; text-decoration: inherit;">Catalog</a>
@@ -1063,8 +962,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="guardian_csharp">
 <a href="#guardian_csharp" style="color: inherit; text-decoration: inherit;">Guardian</a>
@@ -1072,8 +970,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scan_csharp">
 <a href="#scan_csharp" style="color: inherit; text-decoration: inherit;">Scan</a>
@@ -1081,14 +978,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_go">
 <a href="#catalog_go" style="color: inherit; text-decoration: inherit;">Catalog</a>
@@ -1096,8 +990,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="guardian_go">
 <a href="#guardian_go" style="color: inherit; text-decoration: inherit;">Guardian</a>
@@ -1105,8 +998,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scan_go">
 <a href="#scan_go" style="color: inherit; text-decoration: inherit;">Scan</a>
@@ -1114,14 +1006,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_nodejs">
 <a href="#catalog_nodejs" style="color: inherit; text-decoration: inherit;">catalog</a>
@@ -1129,8 +1018,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="guardian_nodejs">
 <a href="#guardian_nodejs" style="color: inherit; text-decoration: inherit;">guardian</a>
@@ -1138,8 +1026,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scan_nodejs">
 <a href="#scan_nodejs" style="color: inherit; text-decoration: inherit;">scan</a>
@@ -1147,14 +1034,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_python">
 <a href="#catalog_python" style="color: inherit; text-decoration: inherit;">catalog</a>
@@ -1162,8 +1046,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the catalog endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="guardian_python">
 <a href="#guardian_python" style="color: inherit; text-decoration: inherit;">guardian</a>
@@ -1171,8 +1054,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the guardian endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scan_python">
 <a href="#scan_python" style="color: inherit; text-decoration: inherit;">scan</a>
@@ -1180,16 +1062,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the scan endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountpropertiesresponsemanagedresources">Account<wbr>Properties<wbr>Response<wbr>Managed<wbr>Resources</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventhubnamespace_csharp">
 <a href="#eventhubnamespace_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Namespace</a>
@@ -1197,8 +1076,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -1206,8 +1084,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_csharp">
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1215,14 +1092,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventhubnamespace_go">
 <a href="#eventhubnamespace_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Namespace</a>
@@ -1230,8 +1104,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -1239,8 +1112,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_go">
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1248,14 +1120,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventhubnamespace_nodejs">
 <a href="#eventhubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Namespace</a>
@@ -1263,8 +1132,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -1272,8 +1140,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_nodejs">
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
@@ -1281,14 +1148,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_hub_namespace_python">
 <a href="#event_hub_namespace_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>namespace</a>
@@ -1296,8 +1160,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed event hub namespace resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -1305,8 +1168,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_python">
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
@@ -1314,16 +1176,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountsku">Account<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1331,8 +1190,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1340,14 +1198,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#name">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1355,8 +1210,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1364,14 +1218,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#name">Name</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1379,8 +1230,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1388,14 +1238,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#name">Name</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1403,8 +1250,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1412,16 +1258,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#name">Name</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountskuresponse">Account<wbr>Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1429,8 +1272,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1438,14 +1280,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1453,8 +1292,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1462,14 +1300,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1477,8 +1312,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1486,14 +1320,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1501,8 +1332,7 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the sku capacity. Possible values include: 4, 16{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1510,16 +1340,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudconnectorsresponse">Cloud<wbr>Connectors<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsexternalid_csharp">
 <a href="#awsexternalid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>External<wbr>Id</a>
@@ -1528,14 +1355,11 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
-</dl>
+Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsexternalid_go">
 <a href="#awsexternalid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>External<wbr>Id</a>
@@ -1544,14 +1368,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
-</dl>
+Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsexternalid_nodejs">
 <a href="#awsexternalid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>External<wbr>Id</a>
@@ -1560,14 +1381,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
-</dl>
+Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aws_external_id_python">
 <a href="#aws_external_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>external_<wbr>id</a>
@@ -1576,16 +1394,13 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS external identifier.
-Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
-</dl>
+Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identity">Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1593,14 +1408,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#type">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1608,14 +1420,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#type">Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1623,14 +1432,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#type">Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1638,16 +1444,13 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#type">Type</a></span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1655,8 +1458,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1664,8 +1466,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1673,14 +1474,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1688,8 +1486,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1697,8 +1494,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1706,14 +1502,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1721,8 +1514,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1730,8 +1522,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1739,14 +1530,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1754,8 +1542,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service principal object Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1763,8 +1550,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1772,46 +1558,35 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="name">Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Name<wbr>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Name<wbr>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1819,8 +1594,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1828,8 +1602,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1837,8 +1610,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1846,8 +1618,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1855,8 +1626,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1864,14 +1634,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1879,8 +1646,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1888,8 +1654,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1897,8 +1662,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1906,8 +1670,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1915,8 +1678,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1924,14 +1686,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1939,8 +1698,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1948,8 +1706,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1957,8 +1714,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1966,8 +1722,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -1975,8 +1730,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1984,14 +1738,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1999,8 +1750,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2008,8 +1758,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Gets or sets the name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2017,8 +1766,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2026,8 +1774,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -2035,8 +1782,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -2044,16 +1790,13 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2061,14 +1804,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2076,14 +1816,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2091,14 +1828,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2106,16 +1840,13 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -2123,8 +1854,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2132,8 +1862,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2141,14 +1870,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -2156,8 +1882,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2165,8 +1890,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2174,14 +1898,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -2189,8 +1910,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The required actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2198,8 +1918,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2207,14 +1926,11 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -2222,8 +1938,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The required actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2231,8 +1946,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2240,84 +1954,59 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publicnetworkaccess">Public<wbr>Network<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Public<wbr>Network<wbr>Access<wbr>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Public<wbr>Network<wbr>Access<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NOT_SPECIFIED</dt>
-    <dd>NotSpecified</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="type">Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Type<wbr>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-</dl>
+<dl class="tabular"><dt>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SYSTEM_ASSIGNED</dt>
-    <dd>SystemAssigned</dd>
-</dl>
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd></dl>
 {{% /choosable %}}
 ## Import
 

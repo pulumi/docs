@@ -45,9 +45,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:authorization:ManagementLockAtResourceLevel myresou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -211,8 +180,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#locklevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Lock<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcepath_csharp">
 <a href="#parentresourcepath_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Path</a>
@@ -220,8 +188,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -229,8 +196,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -238,8 +204,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_csharp">
 <a href="#resourceprovidernamespace_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
@@ -247,8 +212,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -256,8 +220,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockname_csharp">
 <a href="#lockname_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Name</a>
@@ -265,8 +228,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -274,8 +236,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
@@ -283,14 +244,11 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockowner">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Management<wbr>Lock<wbr>Owner<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -298,8 +256,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#locklevel">Lock<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcepath_go">
 <a href="#parentresourcepath_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Path</a>
@@ -307,8 +264,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -316,8 +272,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -325,8 +280,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_go">
 <a href="#resourceprovidernamespace_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
@@ -334,8 +288,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -343,8 +296,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockname_go">
 <a href="#lockname_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Name</a>
@@ -352,8 +304,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -361,8 +312,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
@@ -370,14 +320,11 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockowner">[]Management<wbr>Lock<wbr>Owner</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -385,8 +332,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#locklevel">Lock<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcepath_nodejs">
 <a href="#parentresourcepath_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Path</a>
@@ -394,8 +340,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -403,8 +348,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -412,8 +356,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_nodejs">
 <a href="#resourceprovidernamespace_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Namespace</a>
@@ -421,8 +364,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -430,8 +372,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockname_nodejs">
 <a href="#lockname_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Name</a>
@@ -439,8 +380,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -448,8 +388,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
@@ -457,14 +396,11 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockowner">Management<wbr>Lock<wbr>Owner[]</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -472,8 +408,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#locklevel">Lock<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_resource_path_python">
 <a href="#parent_resource_path_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>path</a>
@@ -481,8 +416,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -490,8 +424,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group containing the resource to lock. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -499,8 +432,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_provider_namespace_python">
 <a href="#resource_provider_namespace_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>namespace</a>
@@ -508,8 +440,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource provider namespace of the resource to lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -517,8 +448,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource type of the resource to lock.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lock_name_python">
 <a href="#lock_name_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>name</a>
@@ -526,8 +456,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -535,8 +464,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
@@ -544,8 +472,7 @@ The ManagementLockAtResourceLevel resource accepts the following [input]({{< rel
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockowner">Sequence[Management<wbr>Lock<wbr>Owner<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -556,9 +483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -566,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -575,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -584,14 +507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -608,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -617,14 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -632,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -641,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -650,14 +563,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -665,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -674,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -683,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -700,55 +607,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="locklevel">Lock<wbr>Level</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Can<wbr>Not<wbr>Delete</dt>
-    <dd>CanNotDelete</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Can<wbr>Not<wbr>Delete</dt>
+    <dd>CanNotDelete</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Lock<wbr>Level<wbr>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Lock<wbr>Level<wbr>Can<wbr>Not<wbr>Delete</dt>
-    <dd>CanNotDelete</dd>
-    <dt>Lock<wbr>Level<wbr>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-</dl>
+<dl class="tabular"><dt>Lock<wbr>Level<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Lock<wbr>Level<wbr>Can<wbr>Not<wbr>Delete</dt>
+    <dd>CanNotDelete</dd><dt>Lock<wbr>Level<wbr>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Can<wbr>Not<wbr>Delete</dt>
-    <dd>CanNotDelete</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Can<wbr>Not<wbr>Delete</dt>
+    <dd>CanNotDelete</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NOT_SPECIFIED</dt>
-    <dd>NotSpecified</dd>
-    <dt>CAN_NOT_DELETE</dt>
-    <dd>CanNotDelete</dd>
-    <dt>READ_ONLY</dt>
-    <dd>ReadOnly</dd>
-</dl>
+<dl class="tabular"><dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd><dt>CAN_NOT_DELETE</dt>
+    <dd>CanNotDelete</dd><dt>READ_ONLY</dt>
+    <dd>ReadOnly</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementlockowner">Management<wbr>Lock<wbr>Owner</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -756,14 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -771,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -786,14 +669,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -801,16 +681,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementlockownerresponse">Management<wbr>Lock<wbr>Owner<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -818,14 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -833,14 +707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -848,14 +719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -863,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

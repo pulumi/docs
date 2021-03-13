@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayconnectionname_csharp">
 <a href="#virtualnetworkgatewayconnectionname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayconnectionname_go">
 <a href="#virtualnetworkgatewayconnectionname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayconnectionname_nodejs">
 <a href="#virtualnetworkgatewayconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_gateway_connection_name_python">
 <a href="#virtual_network_gateway_connection_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>connection_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_csharp">
 <a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectiontype_csharp">
 <a href="#connectiontype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingressbytestransferred_csharp">
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_csharp">
 <a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnelconnectionstatus_csharp">
 <a href="#tunnelconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Connection<wbr>Status</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tunnelconnectionhealthresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Tunnel<wbr>Connection<wbr>Health<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgateway1_csharp">
 <a href="#virtualnetworkgateway1_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway1</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationkey_csharp">
 <a href="#authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionmode_csharp">
 <a href="#connectionmode_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionprotocol_csharp">
 <a href="#connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpdtimeoutseconds_csharp">
 <a href="#dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutegatewaybypass_csharp">
 <a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsecpolicies_csharp">
 <a href="#ipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Ipsec<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localnetworkgateway2_csharp">
 <a href="#localnetworkgateway2_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway2</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewayresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Local<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_csharp">
 <a href="#peer_csharp" style="color: inherit; text-decoration: inherit;">Peer</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingweight_csharp">
 <a href="#routingweight_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The routing weight.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routing weight.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedkey_csharp">
 <a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trafficselectorpolicies_csharp">
 <a href="#trafficselectorpolicies_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficselectorpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uselocalazureipaddress_csharp">
 <a href="#uselocalazureipaddress_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usepolicybasedtrafficselectors_csharp">
 <a href="#usepolicybasedtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -409,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgateway2_csharp">
 <a href="#virtualnetworkgateway2_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway2</a>
@@ -418,14 +372,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_go">
 <a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectiontype_go">
 <a href="#connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingressbytestransferred_go">
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_go">
 <a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnelconnectionstatus_go">
 <a href="#tunnelconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Connection<wbr>Status</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tunnelconnectionhealthresponse">[]Tunnel<wbr>Connection<wbr>Health<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgateway1_go">
 <a href="#virtualnetworkgateway1_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway1</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationkey_go">
 <a href="#authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionmode_go">
 <a href="#connectionmode_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Mode</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionprotocol_go">
 <a href="#connectionprotocol_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpdtimeoutseconds_go">
 <a href="#dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutegatewaybypass_go">
 <a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsecpolicies_go">
 <a href="#ipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">[]Ipsec<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localnetworkgateway2_go">
 <a href="#localnetworkgateway2_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway2</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewayresponse">Local<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -613,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_go">
 <a href="#peer_go" style="color: inherit; text-decoration: inherit;">Peer</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingweight_go">
 <a href="#routingweight_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -631,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The routing weight.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routing weight.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedkey_go">
 <a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -640,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -649,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trafficselectorpolicies_go">
 <a href="#trafficselectorpolicies_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
@@ -658,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficselectorpolicyresponse">[]Traffic<wbr>Selector<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uselocalazureipaddress_go">
 <a href="#uselocalazureipaddress_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
@@ -667,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usepolicybasedtrafficselectors_go">
 <a href="#usepolicybasedtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -676,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgateway2_go">
 <a href="#virtualnetworkgateway2_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway2</a>
@@ -685,14 +608,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_nodejs">
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectiontype_nodejs">
 <a href="#connectiontype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Type</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingressbytestransferred_nodejs">
 <a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceguid_nodejs">
 <a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnelconnectionstatus_nodejs">
 <a href="#tunnelconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Connection<wbr>Status</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tunnelconnectionhealthresponse">Tunnel<wbr>Connection<wbr>Health<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgateway1_nodejs">
 <a href="#virtualnetworkgateway1_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway1</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationkey_nodejs">
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionmode_nodejs">
 <a href="#connectionmode_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Mode</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionprotocol_nodejs">
 <a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpdtimeoutseconds_nodejs">
 <a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expressroutegatewaybypass_nodejs">
 <a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsecpolicies_nodejs">
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="localnetworkgateway2_nodejs">
 <a href="#localnetworkgateway2_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway2</a>
@@ -871,8 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewayresponse">Local<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -880,8 +780,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_nodejs">
 <a href="#peer_nodejs" style="color: inherit; text-decoration: inherit;">peer</a>
@@ -889,8 +788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routingweight_nodejs">
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
@@ -898,8 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The routing weight.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routing weight.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharedkey_nodejs">
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -907,8 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -916,8 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trafficselectorpolicies_nodejs">
 <a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
@@ -925,8 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uselocalazureipaddress_nodejs">
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
@@ -934,8 +828,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usepolicybasedtrafficselectors_nodejs">
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -943,8 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkgateway2_nodejs">
 <a href="#virtualnetworkgateway2_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway2</a>
@@ -952,14 +844,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_status_python">
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_type_python">
 <a href="#connection_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>type</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gateway connection type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The egress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingress_bytes_transferred_python">
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ingress bytes transferred in this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1012,8 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_guid_python">
 <a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway connection resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tunnel_connection_status_python">
 <a href="#tunnel_connection_status_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>connection_<wbr>status</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tunnelconnectionhealthresponse">Sequence[Tunnel<wbr>Connection<wbr>Health<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Collection of all tunnels' connection health status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1048,8 +928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_network_gateway1_python">
 <a href="#virtual_network_gateway1_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway1</a>
@@ -1057,8 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_key_python">
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
@@ -1066,8 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authorizationKey.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_mode_python">
 <a href="#connection_mode_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>mode</a>
@@ -1075,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The connection mode for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_protocol_python">
 <a href="#connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
@@ -1084,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dpd_timeout_seconds_python">
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
@@ -1093,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The dead peer detection timeout of this connection in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
@@ -1102,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="express_route_gateway_bypass_python">
 <a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
@@ -1111,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Bypass ExpressRoute Gateway for data forwarding.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1120,8 +992,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipsec_policies_python">
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
@@ -1129,8 +1000,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="local_network_gateway2_python">
 <a href="#local_network_gateway2_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway2</a>
@@ -1138,8 +1008,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localnetworkgatewayresponse">Local<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1147,8 +1016,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_python">
 <a href="#peer_python" style="color: inherit; text-decoration: inherit;">peer</a>
@@ -1156,8 +1024,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="routing_weight_python">
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
@@ -1165,8 +1032,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The routing weight.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The routing weight.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_key_python">
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -1174,8 +1040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IPSec shared key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1183,8 +1048,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="traffic_selector_policies_python">
 <a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
@@ -1192,8 +1056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficselectorpolicyresponse">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_local_azure_ip_address_python">
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
@@ -1201,8 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Use private local Azure IP for the connection.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_policy_based_traffic_selectors_python">
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
@@ -1210,8 +1072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_network_gateway2_python">
 <a href="#virtual_network_gateway2_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway2</a>
@@ -1219,8 +1080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1234,9 +1094,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1244,14 +1102,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -1259,14 +1114,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
@@ -1274,14 +1126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
@@ -1289,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</h4>
@@ -1298,9 +1146,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asn_csharp">
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
@@ -1308,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_csharp">
 <a href="#bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
@@ -1317,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddresses_csharp">
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
@@ -1326,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerweight_csharp">
 <a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
@@ -1335,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asn_go">
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
@@ -1350,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_go">
 <a href="#bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
@@ -1359,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddresses_go">
 <a href="#bgppeeringaddresses_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
@@ -1368,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">[]IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerweight_go">
 <a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
@@ -1377,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asn_nodejs">
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
@@ -1392,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_nodejs">
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
@@ -1401,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddresses_nodejs">
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
@@ -1410,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerweight_nodejs">
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
@@ -1419,14 +1250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="asn_python">
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
@@ -1434,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_peering_address_python">
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
@@ -1443,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_peering_addresses_python">
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
@@ -1452,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_weight_python">
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
@@ -1461,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
@@ -1470,9 +1294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1480,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1489,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1504,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1513,14 +1330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1528,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1537,14 +1350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1552,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1561,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</h4>
@@ -1570,9 +1378,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultbgpipaddresses_csharp">
 <a href="#defaultbgpipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
@@ -1580,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnelipaddresses_csharp">
 <a href="#tunnelipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
@@ -1589,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custombgpipaddresses_csharp">
 <a href="#custombgpipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
@@ -1598,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_csharp">
 <a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ipconfiguration<wbr>Id</a>
@@ -1607,14 +1410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultbgpipaddresses_go">
 <a href="#defaultbgpipaddresses_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
@@ -1622,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnelipaddresses_go">
 <a href="#tunnelipaddresses_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
@@ -1631,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custombgpipaddresses_go">
 <a href="#custombgpipaddresses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
@@ -1640,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_go">
 <a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ipconfiguration<wbr>Id</a>
@@ -1649,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultbgpipaddresses_nodejs">
 <a href="#defaultbgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
@@ -1664,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnelipaddresses_nodejs">
 <a href="#tunnelipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
@@ -1673,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custombgpipaddresses_nodejs">
 <a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
@@ -1682,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_nodejs">
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
@@ -1691,14 +1482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_bgp_ip_addresses_python">
 <a href="#default_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
@@ -1706,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnel_ip_addresses_python">
 <a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
@@ -1715,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_bgp_ip_addresses_python">
 <a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
@@ -1724,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_id_python">
 <a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
@@ -1733,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response</h4>
@@ -1742,9 +1526,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_csharp">
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1752,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_csharp">
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -1761,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_csharp">
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -1770,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_csharp">
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -1779,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_csharp">
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -1788,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_csharp">
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -1797,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekilobytes_csharp">
 <a href="#sadatasizekilobytes_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
@@ -1806,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimeseconds_csharp">
 <a href="#salifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Life<wbr>Time<wbr>Seconds</a>
@@ -1815,14 +1590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_go">
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1830,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_go">
 <a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -1839,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_go">
 <a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -1848,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_go">
 <a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -1857,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_go">
 <a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -1866,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_go">
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -1875,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekilobytes_go">
 <a href="#sadatasizekilobytes_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
@@ -1884,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimeseconds_go">
 <a href="#salifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Life<wbr>Time<wbr>Seconds</a>
@@ -1893,14 +1658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_nodejs">
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
@@ -1908,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_nodejs">
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
@@ -1917,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_nodejs">
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
@@ -1926,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_nodejs">
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
@@ -1935,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_nodejs">
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
@@ -1944,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_nodejs">
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
@@ -1953,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekilobytes_nodejs">
 <a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
@@ -1962,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimeseconds_nodejs">
 <a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
@@ -1971,14 +1726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dh_group_python">
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
@@ -1986,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_encryption_python">
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
@@ -1995,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_python">
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
@@ -2004,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_encryption_python">
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
@@ -2013,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_integrity_python">
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
@@ -2022,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfs_group_python">
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
@@ -2031,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_data_size_kilobytes_python">
 <a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
@@ -2040,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_life_time_seconds_python">
 <a href="#sa_life_time_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>life_<wbr>time_<wbr>seconds</a>
@@ -2049,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localnetworkgatewayresponse">Local<wbr>Network<wbr>Gateway<wbr>Response</h4>
@@ -2058,9 +1802,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2068,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2077,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2086,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceguid_csharp">
 <a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -2095,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2104,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_csharp">
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -2113,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -2122,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayipaddress_csharp">
 <a href="#gatewayipaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
@@ -2131,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2140,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localnetworkaddressspace_csharp">
 <a href="#localnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Address<wbr>Space</a>
@@ -2149,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2158,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2167,14 +1898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2182,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2191,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2200,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceguid_go">
 <a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -2209,8 +1934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2218,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_go">
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -2227,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -2236,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayipaddress_go">
 <a href="#gatewayipaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Address</a>
@@ -2245,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2254,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localnetworkaddressspace_go">
 <a href="#localnetworkaddressspace_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Address<wbr>Space</a>
@@ -2263,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2272,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2281,14 +1998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2296,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2305,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -2314,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceguid_nodejs">
 <a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
@@ -2323,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2332,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_nodejs">
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
@@ -2341,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -2350,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayipaddress_nodejs">
 <a href="#gatewayipaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Address</a>
@@ -2359,8 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2368,8 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localnetworkaddressspace_nodejs">
 <a href="#localnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Address<wbr>Space</a>
@@ -2377,8 +2082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2386,8 +2090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2395,14 +2098,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2410,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2419,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2428,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_guid_python">
 <a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
@@ -2437,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the local network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2446,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_settings_python">
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
@@ -2455,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -2464,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_ip_address_python">
 <a href="#gateway_ip_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>address</a>
@@ -2473,8 +2166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2482,8 +2174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_network_address_space_python">
 <a href="#local_network_address_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>address_<wbr>space</a>
@@ -2491,8 +2182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2500,8 +2190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2509,8 +2198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="radiusserverresponse">Radius<wbr>Server<wbr>Response</h4>
@@ -2518,9 +2206,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="radiusserveraddress_csharp">
 <a href="#radiusserveraddress_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
@@ -2528,8 +2214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserverscore_csharp">
 <a href="#radiusserverscore_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
@@ -2537,8 +2222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_csharp">
 <a href="#radiusserversecret_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
@@ -2546,14 +2230,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="radiusserveraddress_go">
 <a href="#radiusserveraddress_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
@@ -2561,8 +2242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserverscore_go">
 <a href="#radiusserverscore_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
@@ -2570,8 +2250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_go">
 <a href="#radiusserversecret_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
@@ -2579,14 +2258,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="radiusserveraddress_nodejs">
 <a href="#radiusserveraddress_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
@@ -2594,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserverscore_nodejs">
 <a href="#radiusserverscore_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Score</a>
@@ -2603,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_nodejs">
 <a href="#radiusserversecret_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
@@ -2612,14 +2286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="radius_server_address_python">
 <a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
@@ -2627,8 +2298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_server_score_python">
 <a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
@@ -2636,8 +2306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_server_secret_python">
 <a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
@@ -2645,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret used for this radius server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
@@ -2654,9 +2322,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2664,14 +2330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2679,14 +2342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2694,14 +2354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2709,8 +2366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response</h4>
@@ -2718,9 +2374,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddressranges_csharp">
 <a href="#localaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
@@ -2728,8 +2382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddressranges_csharp">
 <a href="#remoteaddressranges_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
@@ -2737,14 +2390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddressranges_go">
 <a href="#localaddressranges_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Ranges</a>
@@ -2752,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddressranges_go">
 <a href="#remoteaddressranges_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Ranges</a>
@@ -2761,14 +2410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddressranges_nodejs">
 <a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
@@ -2776,8 +2422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddressranges_nodejs">
 <a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
@@ -2785,14 +2430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="local_address_ranges_python">
 <a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
@@ -2800,8 +2442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_address_ranges_python">
 <a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
@@ -2809,8 +2450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tunnelconnectionhealthresponse">Tunnel<wbr>Connection<wbr>Health<wbr>Response</h4>
@@ -2818,9 +2458,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstatus_csharp">
 <a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -2828,8 +2466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
@@ -2837,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ingressbytestransferred_csharp">
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
@@ -2846,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastconnectionestablishedutctime_csharp">
 <a href="#lastconnectionestablishedutctime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Connection<wbr>Established<wbr>Utc<wbr>Time</a>
@@ -2855,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnel_csharp">
 <a href="#tunnel_csharp" style="color: inherit; text-decoration: inherit;">Tunnel</a>
@@ -2864,14 +2498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstatus_go">
 <a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -2879,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
@@ -2888,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ingressbytestransferred_go">
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
@@ -2897,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastconnectionestablishedutctime_go">
 <a href="#lastconnectionestablishedutctime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Connection<wbr>Established<wbr>Utc<wbr>Time</a>
@@ -2906,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnel_go">
 <a href="#tunnel_go" style="color: inherit; text-decoration: inherit;">Tunnel</a>
@@ -2915,14 +2542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstatus_nodejs">
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
@@ -2930,8 +2554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
@@ -2939,8 +2562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ingressbytestransferred_nodejs">
 <a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
@@ -2948,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastconnectionestablishedutctime_nodejs">
 <a href="#lastconnectionestablishedutctime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Connection<wbr>Established<wbr>Utc<wbr>Time</a>
@@ -2957,8 +2578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnel_nodejs">
 <a href="#tunnel_nodejs" style="color: inherit; text-decoration: inherit;">tunnel</a>
@@ -2966,14 +2586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_status_python">
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
@@ -2981,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Virtual Network Gateway connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
@@ -2990,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Egress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ingress_bytes_transferred_python">
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
@@ -2999,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Ingress Bytes Transferred in this connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_connection_established_utc_time_python">
 <a href="#last_connection_established_utc_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>connection_<wbr>established_<wbr>utc_<wbr>time</a>
@@ -3008,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which connection was established in Utc format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tunnel_python">
 <a href="#tunnel_python" style="color: inherit; text-decoration: inherit;">tunnel</a>
@@ -3017,8 +2630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tunnel name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayipconfigurationresponse">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response</h4>
@@ -3026,9 +2638,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -3036,8 +2646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
@@ -3045,8 +2654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3054,8 +2662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3063,8 +2670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3072,8 +2678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipallocationmethod_csharp">
 <a href="#privateipallocationmethod_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
@@ -3081,8 +2686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
@@ -3090,8 +2694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3099,14 +2702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -3114,8 +2714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
@@ -3123,8 +2722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3132,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3141,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3150,8 +2746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipallocationmethod_go">
 <a href="#privateipallocationmethod_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAllocation<wbr>Method</a>
@@ -3159,8 +2754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
@@ -3168,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3177,14 +2770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3192,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
@@ -3201,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -3210,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3219,8 +2806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3228,8 +2814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipallocationmethod_nodejs">
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAllocation<wbr>Method</a>
@@ -3237,8 +2822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
@@ -3246,8 +2830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3255,14 +2838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3270,8 +2850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -3279,8 +2858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address for this gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -3288,8 +2866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway IP configuration resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3297,8 +2874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3306,8 +2882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_allocation_method_python">
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
@@ -3315,8 +2890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -3324,8 +2898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3333,8 +2906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Response</h4>
@@ -3342,9 +2914,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -3352,8 +2922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inbounddnsforwardingendpoint_csharp">
 <a href="#inbounddnsforwardingendpoint_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Dns<wbr>Forwarding<wbr>Endpoint</a>
@@ -3361,8 +2930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3370,8 +2938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3379,8 +2946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceguid_csharp">
 <a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -3388,8 +2954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3397,8 +2962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activeactive_csharp">
 <a href="#activeactive_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Active</a>
@@ -3406,8 +2970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_csharp">
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -3415,8 +2978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customroutes_csharp">
 <a href="#customroutes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
@@ -3424,8 +2986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -3433,8 +2994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablednsforwarding_csharp">
 <a href="#enablednsforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dns<wbr>Forwarding</a>
@@ -3442,8 +3002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivateipaddress_csharp">
 <a href="#enableprivateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Ip<wbr>Address</a>
@@ -3451,8 +3010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedlocation_csharp">
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
@@ -3460,8 +3018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaydefaultsite_csharp">
 <a href="#gatewaydefaultsite_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
@@ -3469,8 +3026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_csharp">
 <a href="#gatewaytype_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -3478,8 +3034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3487,8 +3042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -3496,8 +3050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -3505,8 +3058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -3514,8 +3066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3523,8 +3074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkextendedlocationresourceid_csharp">
 <a href="#virtualnetworkextendedlocationresourceid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location<wbr>Resource<wbr>Id</a>
@@ -3532,8 +3082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_csharp">
 <a href="#vpnclientconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
@@ -3541,8 +3090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngatewaygeneration_csharp">
 <a href="#vpngatewaygeneration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Generation</a>
@@ -3550,8 +3098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpntype_csharp">
 <a href="#vpntype_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
@@ -3559,14 +3106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -3574,8 +3118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inbounddnsforwardingendpoint_go">
 <a href="#inbounddnsforwardingendpoint_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Dns<wbr>Forwarding<wbr>Endpoint</a>
@@ -3583,8 +3126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3592,8 +3134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3601,8 +3142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceguid_go">
 <a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
@@ -3610,8 +3150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3619,8 +3158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activeactive_go">
 <a href="#activeactive_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Active</a>
@@ -3628,8 +3166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_go">
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
@@ -3637,8 +3174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customroutes_go">
 <a href="#customroutes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
@@ -3646,8 +3182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -3655,8 +3190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablednsforwarding_go">
 <a href="#enablednsforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Dns<wbr>Forwarding</a>
@@ -3664,8 +3198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivateipaddress_go">
 <a href="#enableprivateipaddress_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Ip<wbr>Address</a>
@@ -3673,8 +3206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedlocation_go">
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
@@ -3682,8 +3214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaydefaultsite_go">
 <a href="#gatewaydefaultsite_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
@@ -3691,8 +3222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_go">
 <a href="#gatewaytype_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Type</a>
@@ -3700,8 +3230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3709,8 +3238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_go">
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
@@ -3718,8 +3246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">[]Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -3727,8 +3254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -3736,8 +3262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3745,8 +3270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkextendedlocationresourceid_go">
 <a href="#virtualnetworkextendedlocationresourceid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Extended<wbr>Location<wbr>Resource<wbr>Id</a>
@@ -3754,8 +3278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_go">
 <a href="#vpnclientconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
@@ -3763,8 +3286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngatewaygeneration_go">
 <a href="#vpngatewaygeneration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Generation</a>
@@ -3772,8 +3294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpntype_go">
 <a href="#vpntype_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Type</a>
@@ -3781,14 +3302,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3796,8 +3314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inbounddnsforwardingendpoint_nodejs">
 <a href="#inbounddnsforwardingendpoint_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Dns<wbr>Forwarding<wbr>Endpoint</a>
@@ -3805,8 +3322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3814,8 +3330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -3823,8 +3338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceguid_nodejs">
 <a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
@@ -3832,8 +3346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3841,8 +3354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activeactive_nodejs">
 <a href="#activeactive_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Active</a>
@@ -3850,8 +3362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpsettings_nodejs">
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
@@ -3859,8 +3370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customroutes_nodejs">
 <a href="#customroutes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Routes</a>
@@ -3868,8 +3378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
@@ -3877,8 +3386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablednsforwarding_nodejs">
 <a href="#enablednsforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dns<wbr>Forwarding</a>
@@ -3886,8 +3394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivateipaddress_nodejs">
 <a href="#enableprivateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Ip<wbr>Address</a>
@@ -3895,8 +3402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedlocation_nodejs">
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
@@ -3904,8 +3410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaydefaultsite_nodejs">
 <a href="#gatewaydefaultsite_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Default<wbr>Site</a>
@@ -3913,8 +3418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewaytype_nodejs">
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
@@ -3922,8 +3426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3931,8 +3434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
@@ -3940,8 +3442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3949,8 +3450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -3958,8 +3458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3967,8 +3466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkextendedlocationresourceid_nodejs">
 <a href="#virtualnetworkextendedlocationresourceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Extended<wbr>Location<wbr>Resource<wbr>Id</a>
@@ -3976,8 +3474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientconfiguration_nodejs">
 <a href="#vpnclientconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configuration</a>
@@ -3985,8 +3482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpngatewaygeneration_nodejs">
 <a href="#vpngatewaygeneration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Generation</a>
@@ -3994,8 +3490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpntype_nodejs">
 <a href="#vpntype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Type</a>
@@ -4003,14 +3498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -4018,8 +3510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="inbound_dns_forwarding_endpoint_python">
 <a href="#inbound_dns_forwarding_endpoint_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>dns_<wbr>forwarding_<wbr>endpoint</a>
@@ -4027,8 +3518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address allocated by the gateway to which dns requests can be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4036,8 +3526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -4045,8 +3534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_guid_python">
 <a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
@@ -4054,8 +3542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource GUID property of the virtual network gateway resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4063,8 +3550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_active_python">
 <a href="#active_active_python" style="color: inherit; text-decoration: inherit;">active_<wbr>active</a>
@@ -4072,8 +3558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ActiveActive flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_settings_python">
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
@@ -4081,8 +3566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_routes_python">
 <a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
@@ -4090,8 +3574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
@@ -4099,8 +3582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether BGP is enabled for this virtual network gateway or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_dns_forwarding_python">
 <a href="#enable_dns_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dns_<wbr>forwarding</a>
@@ -4108,8 +3590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether dns forwarding is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_private_ip_address_python">
 <a href="#enable_private_ip_address_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>ip_<wbr>address</a>
@@ -4117,8 +3598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether private IP needs to be enabled on this gateway for connections or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_location_python">
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
@@ -4126,8 +3606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_default_site_python">
 <a href="#gateway_default_site_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>default_<wbr>site</a>
@@ -4135,8 +3614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_type_python">
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
@@ -4144,8 +3622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4153,8 +3630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_configurations_python">
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
@@ -4162,8 +3638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -4171,8 +3646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -4180,8 +3654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4189,8 +3662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_extended_location_resource_id_python">
 <a href="#virtual_network_extended_location_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>extended_<wbr>location_<wbr>resource_<wbr>id</a>
@@ -4198,8 +3670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_configuration_python">
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
@@ -4207,8 +3678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_gateway_generation_python">
 <a href="#vpn_gateway_generation_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>generation</a>
@@ -4216,8 +3686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_type_python">
 <a href="#vpn_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>type</a>
@@ -4225,8 +3694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</h4>
@@ -4234,9 +3702,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -4244,8 +3710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4253,8 +3718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -4262,14 +3726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -4277,8 +3738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4286,8 +3746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -4295,14 +3754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -4310,8 +3766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4319,8 +3774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -4328,14 +3782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -4343,8 +3794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The capacity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4352,8 +3802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gateway SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -4361,8 +3810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gateway SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</h4>
@@ -4370,9 +3818,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadaudience_csharp">
 <a href="#aadaudience_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
@@ -4380,8 +3826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadissuer_csharp">
 <a href="#aadissuer_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
@@ -4389,8 +3834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenant_csharp">
 <a href="#aadtenant_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
@@ -4398,8 +3842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserveraddress_csharp">
 <a href="#radiusserveraddress_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
@@ -4407,8 +3850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_csharp">
 <a href="#radiusserversecret_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
@@ -4416,8 +3858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusservers_csharp">
 <a href="#radiusservers_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
@@ -4425,8 +3866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#radiusserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientaddresspool_csharp">
 <a href="#vpnclientaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
@@ -4434,8 +3874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientipsecpolicies_csharp">
 <a href="#vpnclientipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
@@ -4443,8 +3882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientprotocols_csharp">
 <a href="#vpnclientprotocols_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
@@ -4452,8 +3890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientrevokedcertificates_csharp">
 <a href="#vpnclientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
@@ -4461,8 +3898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientrootcertificates_csharp">
 <a href="#vpnclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
@@ -4470,14 +3906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadaudience_go">
 <a href="#aadaudience_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Audience</a>
@@ -4485,8 +3918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadissuer_go">
 <a href="#aadissuer_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Issuer</a>
@@ -4494,8 +3926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenant_go">
 <a href="#aadtenant_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Tenant</a>
@@ -4503,8 +3934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserveraddress_go">
 <a href="#radiusserveraddress_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Address</a>
@@ -4512,8 +3942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_go">
 <a href="#radiusserversecret_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Secret</a>
@@ -4521,8 +3950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusservers_go">
 <a href="#radiusservers_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
@@ -4530,8 +3958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#radiusserverresponse">[]Radius<wbr>Server<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientaddresspool_go">
 <a href="#vpnclientaddresspool_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
@@ -4539,8 +3966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientipsecpolicies_go">
 <a href="#vpnclientipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
@@ -4548,8 +3974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">[]Ipsec<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientprotocols_go">
 <a href="#vpnclientprotocols_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Protocols</a>
@@ -4557,8 +3982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientrevokedcertificates_go">
 <a href="#vpnclientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
@@ -4566,8 +3990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">[]Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientrootcertificates_go">
 <a href="#vpnclientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
@@ -4575,14 +3998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrootcertificateresponse">[]Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aadaudience_nodejs">
 <a href="#aadaudience_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Audience</a>
@@ -4590,8 +4010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadissuer_nodejs">
 <a href="#aadissuer_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Issuer</a>
@@ -4599,8 +4018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadtenant_nodejs">
 <a href="#aadtenant_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant</a>
@@ -4608,8 +4026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserveraddress_nodejs">
 <a href="#radiusserveraddress_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
@@ -4617,8 +4034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusserversecret_nodejs">
 <a href="#radiusserversecret_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
@@ -4626,8 +4042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radiusservers_nodejs">
 <a href="#radiusservers_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Servers</a>
@@ -4635,8 +4050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#radiusserverresponse">Radius<wbr>Server<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientaddresspool_nodejs">
 <a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
@@ -4644,8 +4058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientipsecpolicies_nodejs">
 <a href="#vpnclientipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
@@ -4653,8 +4066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientprotocols_nodejs">
 <a href="#vpnclientprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
@@ -4662,8 +4074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientrevokedcertificates_nodejs">
 <a href="#vpnclientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
@@ -4671,8 +4082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpnclientrootcertificates_nodejs">
 <a href="#vpnclientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
@@ -4680,14 +4090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aad_audience_python">
 <a href="#aad_audience_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>audience</a>
@@ -4695,8 +4102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_issuer_python">
 <a href="#aad_issuer_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>issuer</a>
@@ -4704,8 +4110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_tenant_python">
 <a href="#aad_tenant_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant</a>
@@ -4713,8 +4118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_server_address_python">
 <a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
@@ -4722,8 +4126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius server address property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_server_secret_python">
 <a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
@@ -4731,8 +4134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radius secret property of the VirtualNetworkGateway resource for vpn client connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="radius_servers_python">
 <a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
@@ -4740,8 +4142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#radiusserverresponse">Sequence[Radius<wbr>Server<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_address_pool_python">
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
@@ -4749,8 +4150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_ipsec_policies_python">
 <a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
@@ -4758,8 +4158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_protocols_python">
 <a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
@@ -4767,8 +4166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientProtocols for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_revoked_certificates_python">
 <a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
@@ -4776,8 +4174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpn_client_root_certificates_python">
 <a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
@@ -4785,8 +4182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientrootcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnclientrevokedcertificateresponse">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response</h4>
@@ -4794,9 +4190,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -4804,8 +4198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4813,8 +4206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4822,8 +4214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4831,8 +4222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -4840,14 +4230,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -4855,8 +4242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4864,8 +4250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4873,8 +4258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4882,8 +4266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -4891,14 +4274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -4906,8 +4286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -4915,8 +4294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4924,8 +4302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4933,8 +4310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -4942,14 +4318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -4957,8 +4330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -4966,8 +4338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning state of the VPN client revoked certificate resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4975,8 +4346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4984,8 +4354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -4993,8 +4362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The revoked VPN client certificate thumbprint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response</h4>
@@ -5002,9 +4370,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -5012,8 +4378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -5021,8 +4386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_csharp">
 <a href="#publiccertdata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -5030,8 +4394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5039,8 +4402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5048,14 +4410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -5063,8 +4422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -5072,8 +4430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_go">
 <a href="#publiccertdata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Cert<wbr>Data</a>
@@ -5081,8 +4438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5090,8 +4446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5099,14 +4454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -5114,8 +4466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -5123,8 +4474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publiccertdata_nodejs">
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
@@ -5132,8 +4482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5141,8 +4490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5150,14 +4498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -5165,8 +4510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -5174,8 +4518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning state of the VPN client root certificate resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_cert_data_python">
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
@@ -5183,8 +4526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The certificate public data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5192,8 +4534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5201,8 +4542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

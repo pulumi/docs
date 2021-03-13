@@ -14,11 +14,17 @@ The build task that has the resource properties and all build items. The build t
 API Version: 2018-02-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### BuildTasks_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -59,9 +65,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -104,9 +113,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -136,9 +148,12 @@ build_task = azure_native.containerregistry.BuildTask("buildTask",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -169,9 +184,16 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BuildTask Resource {#create}
@@ -196,9 +218,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +226,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +234,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,10 +242,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -255,9 +268,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -265,9 +276,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +284,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +292,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,18 +300,13 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -314,9 +314,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -324,9 +322,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -334,10 +330,7 @@ const buildTask = new azure_native.containerregistry.BuildTask("buildTask", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -352,9 +345,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -362,8 +353,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -371,8 +361,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -380,8 +369,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -389,8 +377,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_csharp">
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -398,8 +385,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcerepositoryproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Repository<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtaskname_csharp">
 <a href="#buildtaskname_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Task<wbr>Name</a>
@@ -407,8 +393,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -416,8 +401,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -425,8 +409,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#buildtaskstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Build<wbr>Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -434,8 +417,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -443,14 +425,11 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -458,8 +437,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -467,8 +445,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -476,8 +453,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -485,8 +461,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_go">
 <a href="#sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -494,8 +469,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcerepositoryproperties">Source<wbr>Repository<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtaskname_go">
 <a href="#buildtaskname_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Task<wbr>Name</a>
@@ -503,8 +477,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -512,8 +485,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -521,8 +493,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#buildtaskstatus">Build<wbr>Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -530,8 +501,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -539,14 +509,11 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -554,8 +521,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -563,8 +529,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
@@ -572,8 +537,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -581,8 +545,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerepository_nodejs">
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
@@ -590,8 +553,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcerepositoryproperties">Source<wbr>Repository<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtaskname_nodejs">
 <a href="#buildtaskname_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Task<wbr>Name</a>
@@ -599,8 +561,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -608,8 +569,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -617,8 +577,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#buildtaskstatus">Build<wbr>Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -626,8 +585,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -635,14 +593,11 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -650,8 +605,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alternative updatable name for a build task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -659,8 +613,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The platform properties against which the build has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -668,8 +621,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -677,8 +629,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
@@ -686,8 +637,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcerepositoryproperties">Source<wbr>Repository<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties that describes the source(code) for the build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_task_name_python">
 <a href="#build_task_name_python" style="color: inherit; text-decoration: inherit;">build_<wbr>task_<wbr>name</a>
@@ -695,8 +645,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the container registry build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -704,8 +653,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -713,8 +661,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#buildtaskstatus">Build<wbr>Task<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current status of build task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -722,8 +669,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -731,8 +677,7 @@ The BuildTask resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Build timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -743,9 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -753,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -762,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -771,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -780,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -789,14 +728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -804,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -813,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -822,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -831,8 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -840,14 +772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -855,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -864,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -873,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -882,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -891,14 +816,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -906,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -915,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -924,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -933,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the build task.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -942,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -959,147 +876,97 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="architecture">Architecture</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Amd64</dt>
-    <dd>amd64</dd>
-    <dt>X86</dt>
-    <dd>x86</dd>
-    <dt>Architecture_386</dt>
-    <dd>386</dd>
-    <dt>Arm</dt>
-    <dd>arm</dd>
-    <dt>Arm64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>Amd64</dt>
+    <dd>amd64</dd><dt>X86</dt>
+    <dd>x86</dd><dt>Architecture_386</dt>
+    <dd>386</dd><dt>Arm</dt>
+    <dd>arm</dd><dt>Arm64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Architecture<wbr>Amd64</dt>
-    <dd>amd64</dd>
-    <dt>Architecture<wbr>X86</dt>
-    <dd>x86</dd>
-    <dt>Architecture_386</dt>
-    <dd>386</dd>
-    <dt>Architecture<wbr>Arm</dt>
-    <dd>arm</dd>
-    <dt>Architecture<wbr>Arm64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>Architecture<wbr>Amd64</dt>
+    <dd>amd64</dd><dt>Architecture<wbr>X86</dt>
+    <dd>x86</dd><dt>Architecture_386</dt>
+    <dd>386</dd><dt>Architecture<wbr>Arm</dt>
+    <dd>arm</dd><dt>Architecture<wbr>Arm64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Amd64</dt>
-    <dd>amd64</dd>
-    <dt>X86</dt>
-    <dd>x86</dd>
-    <dt>Architecture_386</dt>
-    <dd>386</dd>
-    <dt>Arm</dt>
-    <dd>arm</dd>
-    <dt>Arm64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>Amd64</dt>
+    <dd>amd64</dd><dt>X86</dt>
+    <dd>x86</dd><dt>Architecture_386</dt>
+    <dd>386</dd><dt>Arm</dt>
+    <dd>arm</dd><dt>Arm64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AMD64</dt>
-    <dd>amd64</dd>
-    <dt>X86</dt>
-    <dd>x86</dd>
-    <dt>ARCHITECTURE_386</dt>
-    <dd>386</dd>
-    <dt>ARM</dt>
-    <dd>arm</dd>
-    <dt>ARM64</dt>
-    <dd>arm64</dd>
-</dl>
+<dl class="tabular"><dt>AMD64</dt>
+    <dd>amd64</dd><dt>X86</dt>
+    <dd>x86</dd><dt>ARCHITECTURE_386</dt>
+    <dd>386</dd><dt>ARM</dt>
+    <dd>arm</dd><dt>ARM64</dt>
+    <dd>arm64</dd></dl>
 {{% /choosable %}}
 
 <h4 id="buildtaskstatus">Build<wbr>Task<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Build<wbr>Task<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Build<wbr>Task<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Build<wbr>Task<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Build<wbr>Task<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="os">OS</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>OSWindows</dt>
-    <dd>Windows</dd>
-    <dt>OSLinux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>OSWindows</dt>
+    <dd>Windows</dd><dt>OSLinux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WINDOWS</dt>
-    <dd>Windows</dd>
-    <dt>LINUX</dt>
-    <dd>Linux</dd>
-</dl>
+<dl class="tabular"><dt>WINDOWS</dt>
+    <dd>Windows</dd><dt>LINUX</dt>
+    <dd>Linux</dd></dl>
 {{% /choosable %}}
 
 <h4 id="platformproperties">Platform<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_csharp">
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -1107,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#os">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_csharp">
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -1116,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#architecture">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_csharp">
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -1125,14 +990,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#variant">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_go">
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -1140,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_go">
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -1149,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_go">
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -1158,14 +1018,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#variant">Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_nodejs">
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
@@ -1173,8 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_nodejs">
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -1182,8 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_nodejs">
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -1191,14 +1046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#variant">Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_python">
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
@@ -1206,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#os">OS</a></span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_python">
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -1215,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#architecture">Architecture</a></span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_python">
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -1224,16 +1074,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#variant">Variant</a></span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_csharp">
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -1241,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_csharp">
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -1250,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_csharp">
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -1259,14 +1104,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_go">
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
@@ -1274,8 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_go">
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
@@ -1283,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_go">
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
@@ -1292,14 +1132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_nodejs">
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
@@ -1307,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_nodejs">
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -1316,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_nodejs">
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -1325,14 +1160,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_python">
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
@@ -1340,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="architecture_python">
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
@@ -1349,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variant_python">
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
@@ -1358,16 +1188,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcecontrolauthinfo">Source<wbr>Control<wbr>Auth<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1375,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_csharp">
 <a href="#expiresin_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -1384,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_csharp">
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -1393,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1402,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1411,14 +1234,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#tokentype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1426,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_go">
 <a href="#expiresin_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -1435,8 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_go">
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -1444,8 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1453,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1462,14 +1278,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1477,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_nodejs">
 <a href="#expiresin_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
@@ -1486,8 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_nodejs">
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
@@ -1495,8 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1504,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -1513,14 +1322,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1528,8 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_in_python">
 <a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
@@ -1537,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_python">
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
@@ -1546,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1555,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -1564,16 +1366,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#tokentype">Token<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1581,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_csharp">
 <a href="#expiresin_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -1590,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_csharp">
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -1599,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1608,8 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1617,14 +1412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1632,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_go">
 <a href="#expiresin_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>In</a>
@@ -1641,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_go">
 <a href="#refreshtoken_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
@@ -1650,8 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1659,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1668,14 +1456,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1683,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresin_nodejs">
 <a href="#expiresin_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>In</a>
@@ -1692,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtoken_nodejs">
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
@@ -1701,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1710,8 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -1719,14 +1500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1734,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access token used to access the source control provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_in_python">
 <a href="#expires_in_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>in</a>
@@ -1743,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Time in seconds that the token remains valid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_python">
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
@@ -1752,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh token used to refresh the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1761,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the access token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -1770,54 +1544,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Auth token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcecontroltype">Source<wbr>Control<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Github</dt>
-    <dd>Github</dd>
-    <dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>Github</dt>
+    <dd>Github</dd><dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Source<wbr>Control<wbr>Type<wbr>Github</dt>
-    <dd>Github</dd>
-    <dt>Source<wbr>Control<wbr>Type<wbr>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>Source<wbr>Control<wbr>Type<wbr>Github</dt>
+    <dd>Github</dd><dt>Source<wbr>Control<wbr>Type<wbr>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Github</dt>
-    <dd>Github</dd>
-    <dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>Github</dt>
+    <dd>Github</dd><dt>Visual<wbr>Studio<wbr>Team<wbr>Service</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GITHUB</dt>
-    <dd>Github</dd>
-    <dt>VISUAL_STUDIO_TEAM_SERVICE</dt>
-    <dd>VisualStudioTeamService</dd>
-</dl>
+<dl class="tabular"><dt>GITHUB</dt>
+    <dd>Github</dd><dt>VISUAL_STUDIO_TEAM_SERVICE</dt>
+    <dd>VisualStudioTeamService</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcerepositoryproperties">Source<wbr>Repository<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_csharp">
 <a href="#repositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -1825,8 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_csharp">
 <a href="#sourcecontroltype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -1834,8 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcecontroltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscommittriggerenabled_csharp">
 <a href="#iscommittriggerenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Commit<wbr>Trigger<wbr>Enabled</a>
@@ -1843,8 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_csharp">
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -1852,14 +1608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_go">
 <a href="#repositoryurl_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -1867,8 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_go">
 <a href="#sourcecontroltype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -1876,8 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcecontroltype">Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscommittriggerenabled_go">
 <a href="#iscommittriggerenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Commit<wbr>Trigger<wbr>Enabled</a>
@@ -1885,8 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_go">
 <a href="#sourcecontrolauthproperties_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -1894,14 +1644,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinfo">Source<wbr>Control<wbr>Auth<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_nodejs">
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
@@ -1909,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_nodejs">
 <a href="#sourcecontroltype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
@@ -1918,8 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcecontroltype">Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscommittriggerenabled_nodejs">
 <a href="#iscommittriggerenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Commit<wbr>Trigger<wbr>Enabled</a>
@@ -1927,8 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_nodejs">
 <a href="#sourcecontrolauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -1936,14 +1680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinfo">Source<wbr>Control<wbr>Auth<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_url_python">
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
@@ -1951,8 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_control_type_python">
 <a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
@@ -1960,8 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sourcecontroltype">Source<wbr>Control<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_commit_trigger_enabled_python">
 <a href="#is_commit_trigger_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>commit_<wbr>trigger_<wbr>enabled</a>
@@ -1969,8 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_control_auth_properties_python">
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
@@ -1978,16 +1716,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinfo">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcerepositorypropertiesresponse">Source<wbr>Repository<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_csharp">
 <a href="#repositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -1995,8 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_csharp">
 <a href="#sourcecontroltype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -2004,8 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscommittriggerenabled_csharp">
 <a href="#iscommittriggerenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Commit<wbr>Trigger<wbr>Enabled</a>
@@ -2013,8 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_csharp">
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -2022,14 +1754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_go">
 <a href="#repositoryurl_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -2037,8 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_go">
 <a href="#sourcecontroltype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Type</a>
@@ -2046,8 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscommittriggerenabled_go">
 <a href="#iscommittriggerenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Commit<wbr>Trigger<wbr>Enabled</a>
@@ -2055,8 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_go">
 <a href="#sourcecontrolauthproperties_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -2064,14 +1790,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_nodejs">
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
@@ -2079,8 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcecontroltype_nodejs">
 <a href="#sourcecontroltype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Type</a>
@@ -2088,8 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscommittriggerenabled_nodejs">
 <a href="#iscommittriggerenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Commit<wbr>Trigger<wbr>Enabled</a>
@@ -2097,8 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecontrolauthproperties_nodejs">
 <a href="#sourcecontrolauthproperties_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Auth<wbr>Properties</a>
@@ -2106,14 +1826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_url_python">
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
@@ -2121,8 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The full URL to the source code repository{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_control_type_python">
 <a href="#source_control_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>type</a>
@@ -2130,8 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source control service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_commit_trigger_enabled_python">
 <a href="#is_commit_trigger_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>commit_<wbr>trigger_<wbr>enabled</a>
@@ -2139,8 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of this property indicates whether the source control commit trigger is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_control_auth_properties_python">
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
@@ -2148,92 +1862,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcecontrolauthinforesponse">Source<wbr>Control<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization properties for accessing the source code repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tokentype">Token<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>PAT</dt>
-    <dd>PAT</dd>
-    <dt>OAuth</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>PAT</dt>
+    <dd>PAT</dd><dt>OAuth</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Token<wbr>Type<wbr>PAT</dt>
-    <dd>PAT</dd>
-    <dt>Token<wbr>Type<wbr>OAuth</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>Token<wbr>Type<wbr>PAT</dt>
+    <dd>PAT</dd><dt>Token<wbr>Type<wbr>OAuth</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>PAT</dt>
-    <dd>PAT</dd>
-    <dt>OAuth</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>PAT</dt>
+    <dd>PAT</dd><dt>OAuth</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PAT</dt>
-    <dd>PAT</dd>
-    <dt>O_AUTH</dt>
-    <dd>OAuth</dd>
-</dl>
+<dl class="tabular"><dt>PAT</dt>
+    <dd>PAT</dd><dt>O_AUTH</dt>
+    <dd>OAuth</dd></dl>
 {{% /choosable %}}
 
 <h4 id="variant">Variant</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>V6</dt>
-    <dd>v6</dd>
-    <dt>V7</dt>
-    <dd>v7</dd>
-    <dt>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>V6</dt>
+    <dd>v6</dd><dt>V7</dt>
+    <dd>v7</dd><dt>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Variant<wbr>V6</dt>
-    <dd>v6</dd>
-    <dt>Variant<wbr>V7</dt>
-    <dd>v7</dd>
-    <dt>Variant<wbr>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>Variant<wbr>V6</dt>
+    <dd>v6</dd><dt>Variant<wbr>V7</dt>
+    <dd>v7</dd><dt>Variant<wbr>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>V6</dt>
-    <dd>v6</dd>
-    <dt>V7</dt>
-    <dd>v7</dd>
-    <dt>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>V6</dt>
+    <dd>v6</dd><dt>V7</dt>
+    <dd>v7</dd><dt>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>V6</dt>
-    <dd>v6</dd>
-    <dt>V7</dt>
-    <dd>v7</dd>
-    <dt>V8</dt>
-    <dd>v8</dd>
-</dl>
+<dl class="tabular"><dt>V6</dt>
+    <dd>v6</dd><dt>V7</dt>
+    <dd>v7</dd><dt>V8</dt>
+    <dd>v8</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ Single Namespace item in List or Get Operation
 API Version: 2017-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### NamespaceCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -49,9 +55,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -85,9 +94,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -108,9 +120,12 @@ namespace = azure_native.eventhub.Namespace("namespace",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -132,9 +147,16 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Namespace Resource {#create}
@@ -159,9 +181,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +189,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +197,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +205,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -218,9 +231,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -228,9 +239,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -238,9 +247,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,9 +255,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -258,18 +263,13 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -277,9 +277,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -287,9 +285,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -297,10 +293,7 @@ const namespace = new azure_native.eventhub.Namespace("namespace", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -315,9 +308,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -325,8 +316,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isautoinflateenabled_csharp">
 <a href="#isautoinflateenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Auto<wbr>Inflate<wbr>Enabled</a>
@@ -334,8 +324,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaenabled_csharp">
 <a href="#kafkaenabled_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Enabled</a>
@@ -343,8 +332,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -352,8 +340,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumthroughputunits_csharp">
 <a href="#maximumthroughputunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
@@ -361,8 +348,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -370,8 +356,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -379,8 +364,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -388,14 +372,11 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -403,8 +384,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isautoinflateenabled_go">
 <a href="#isautoinflateenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Auto<wbr>Inflate<wbr>Enabled</a>
@@ -412,8 +392,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaenabled_go">
 <a href="#kafkaenabled_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Enabled</a>
@@ -421,8 +400,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -430,8 +408,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumthroughputunits_go">
 <a href="#maximumthroughputunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Throughput<wbr>Units</a>
@@ -439,8 +416,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -448,8 +424,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -457,8 +432,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -466,14 +440,11 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -481,8 +452,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isautoinflateenabled_nodejs">
 <a href="#isautoinflateenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Auto<wbr>Inflate<wbr>Enabled</a>
@@ -490,8 +460,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaenabled_nodejs">
 <a href="#kafkaenabled_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Enabled</a>
@@ -499,8 +468,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -508,8 +476,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumthroughputunits_nodejs">
 <a href="#maximumthroughputunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Throughput<wbr>Units</a>
@@ -517,8 +484,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -526,8 +492,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -535,8 +500,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -544,14 +508,11 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -559,8 +520,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group within the azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_auto_inflate_enabled_python">
 <a href="#is_auto_inflate_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>auto_<wbr>inflate_<wbr>enabled</a>
@@ -568,8 +528,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether AutoInflate is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_enabled_python">
 <a href="#kafka_enabled_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>enabled</a>
@@ -577,8 +536,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether Kafka is enabled for eventhub namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -586,8 +544,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_throughput_units_python">
 <a href="#maximum_throughput_units_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>throughput_<wbr>units</a>
@@ -595,8 +552,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -604,8 +560,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Namespace name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Namespace name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -613,8 +568,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of sku resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -622,8 +576,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -634,9 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -644,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -653,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metricid_csharp">
 <a href="#metricid_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Id</a>
@@ -662,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -671,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -680,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusendpoint_csharp">
 <a href="#servicebusendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Endpoint</a>
@@ -689,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -698,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -707,14 +651,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -722,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -731,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metricid_go">
 <a href="#metricid_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Id</a>
@@ -740,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -749,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -758,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusendpoint_go">
 <a href="#servicebusendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Endpoint</a>
@@ -767,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -776,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -785,14 +719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -800,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -809,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metricid_nodejs">
 <a href="#metricid_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Id</a>
@@ -818,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -827,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -836,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusendpoint_nodejs">
 <a href="#servicebusendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Endpoint</a>
@@ -845,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -854,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -863,14 +787,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -878,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the Namespace was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -887,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metric_id_python">
 <a href="#metric_id_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>id</a>
@@ -896,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifier for Azure Insights metrics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -905,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -914,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the Namespace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_bus_endpoint_python">
 <a href="#service_bus_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>endpoint</a>
@@ -923,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Endpoint you can use to perform Service Bus operations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -932,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -941,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time the Namespace was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -958,9 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -968,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -977,8 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -986,14 +895,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1001,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1010,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1019,14 +923,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1034,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1043,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1052,14 +951,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1067,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1076,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1085,54 +979,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuname">Sku<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Basic</dt>
+    <dd>Basic</dd><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Name<wbr>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Sku<wbr>Name<wbr>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Name<wbr>Basic</dt>
+    <dd>Basic</dd><dt>Sku<wbr>Name<wbr>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Basic</dt>
+    <dd>Basic</dd><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BASIC</dt>
-    <dd>Basic</dd>
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>BASIC</dt>
+    <dd>Basic</dd><dt>STANDARD</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1140,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1149,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1158,14 +1035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1173,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1182,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1191,14 +1063,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1206,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1215,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1224,14 +1091,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1239,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of this SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1248,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Event Hubs throughput units, value should be 0 to 20 throughput units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1257,46 +1119,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The billing tier of this particular SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skutier">Sku<wbr>Tier</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Basic</dt>
+    <dd>Basic</dd><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Tier<wbr>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Sku<wbr>Tier<wbr>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Sku<wbr>Tier<wbr>Basic</dt>
+    <dd>Basic</dd><dt>Sku<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>Basic</dt>
+    <dd>Basic</dd><dt>Standard</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BASIC</dt>
-    <dd>Basic</dd>
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-</dl>
+<dl class="tabular"><dt>BASIC</dt>
+    <dd>Basic</dd><dt>STANDARD</dt>
+    <dd>Standard</dd></dl>
 {{% /choosable %}}
 ## Import
 

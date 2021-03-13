@@ -14,11 +14,17 @@ The policy assignment.
 API Version: 2020-09-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a policy assignment
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -63,13 +69,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -98,9 +110,12 @@ policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignmen
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -130,10 +145,17 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a policy assignment with a managed identity
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -177,13 +199,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -214,9 +242,12 @@ policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignmen
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -248,10 +279,17 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a policy assignment with multiple non-compliance messages
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -290,9 +328,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -332,9 +373,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -361,9 +405,12 @@ policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignmen
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -391,10 +438,17 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create or update a policy assignment without enforcing policy effect during resource creation or update.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -433,13 +487,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -466,9 +526,12 @@ policy_assignment = azure_native.authorization.PolicyAssignment("policyAssignmen
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -496,9 +559,16 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PolicyAssignment Resource {#create}
@@ -523,9 +593,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -533,9 +601,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -543,9 +609,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -553,10 +617,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -582,9 +643,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -592,9 +651,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -602,9 +659,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -612,9 +667,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -622,18 +675,13 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -641,9 +689,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -651,9 +697,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -661,10 +705,7 @@ const policyAssignment = new azure_native.authorization.PolicyAssignment("policy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -679,9 +720,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -689,8 +728,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -698,8 +736,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -707,8 +744,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcementmode_csharp">
 <a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -716,8 +752,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enforcementmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Enforcement<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -725,8 +760,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -734,8 +768,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -743,8 +776,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncompliancemessages_csharp">
 <a href="#noncompliancemessages_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Compliance<wbr>Messages</a>
@@ -752,8 +784,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noncompliancemessage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Non<wbr>Compliance<wbr>Message<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notscopes_csharp">
 <a href="#notscopes_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Scopes</a>
@@ -761,8 +792,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -770,8 +800,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyassignmentname_csharp">
 <a href="#policyassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Name</a>
@@ -779,8 +808,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionid_csharp">
 <a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
@@ -788,14 +816,11 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -803,8 +828,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -812,8 +836,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -821,8 +844,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcementmode_go">
 <a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -830,8 +852,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enforcementmode">Enforcement<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -839,8 +860,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
-    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -848,8 +868,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -857,8 +876,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncompliancemessages_go">
 <a href="#noncompliancemessages_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Compliance<wbr>Messages</a>
@@ -866,8 +884,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noncompliancemessage">[]Non<wbr>Compliance<wbr>Message</a></span>
     </dt>
-    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notscopes_go">
 <a href="#notscopes_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Scopes</a>
@@ -875,8 +892,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -884,8 +900,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Parameter<wbr>Values<wbr>Value</span>
     </dt>
-    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyassignmentname_go">
 <a href="#policyassignmentname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Name</a>
@@ -893,8 +908,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionid_go">
 <a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
@@ -902,14 +916,11 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -917,8 +928,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -926,8 +936,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -935,8 +944,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcementmode_nodejs">
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
@@ -944,8 +952,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enforcementmode">Enforcement<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -953,8 +960,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity</a></span>
     </dt>
-    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -962,8 +968,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -971,8 +976,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncompliancemessages_nodejs">
 <a href="#noncompliancemessages_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Compliance<wbr>Messages</a>
@@ -980,8 +984,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noncompliancemessage">Non<wbr>Compliance<wbr>Message[]</a></span>
     </dt>
-    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notscopes_nodejs">
 <a href="#notscopes_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Scopes</a>
@@ -989,8 +992,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -998,8 +1000,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Parameter<wbr>Values<wbr>Value}</span>
     </dt>
-    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyassignmentname_nodejs">
 <a href="#policyassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Assignment<wbr>Name</a>
@@ -1007,8 +1008,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionid_nodejs">
 <a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
@@ -1016,14 +1016,11 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1031,8 +1028,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1040,8 +1036,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This message will be part of response in case of policy violation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1049,8 +1044,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforcement_mode_python">
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
@@ -1058,8 +1052,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enforcementmode">Enforcement<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1067,8 +1060,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1076,8 +1068,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the policy assignment. Only required when utilizing managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1085,8 +1076,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="non_compliance_messages_python">
 <a href="#non_compliance_messages_python" style="color: inherit; text-decoration: inherit;">non_<wbr>compliance_<wbr>messages</a>
@@ -1094,8 +1084,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noncompliancemessage">Sequence[Non<wbr>Compliance<wbr>Message<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_scopes_python">
 <a href="#not_scopes_python" style="color: inherit; text-decoration: inherit;">not_<wbr>scopes</a>
@@ -1103,8 +1092,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The policy's excluded scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1112,8 +1100,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_assignment_name_python">
 <a href="#policy_assignment_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>assignment_<wbr>name</a>
@@ -1121,8 +1108,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_definition_id_python">
 <a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
@@ -1130,8 +1116,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the policy definition or policy set definition being assigned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1142,9 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1152,8 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1161,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1170,14 +1151,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1185,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1194,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1203,14 +1179,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1218,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1227,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1236,14 +1207,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1251,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1260,8 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1269,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1286,47 +1251,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="enforcementmode">Enforcement<wbr>Mode</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Default</dt>
-    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd>
-    <dt>Do<wbr>Not<wbr>Enforce</dt>
-    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd><dt>Do<wbr>Not<wbr>Enforce</dt>
+    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Enforcement<wbr>Mode<wbr>Default</dt>
-    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd>
-    <dt>Enforcement<wbr>Mode<wbr>Do<wbr>Not<wbr>Enforce</dt>
-    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Enforcement<wbr>Mode<wbr>Default</dt>
+    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd><dt>Enforcement<wbr>Mode<wbr>Do<wbr>Not<wbr>Enforce</dt>
+    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Default</dt>
-    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd>
-    <dt>Do<wbr>Not<wbr>Enforce</dt>
-    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Default</dt>
+    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd><dt>Do<wbr>Not<wbr>Enforce</dt>
+    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DEFAULT</dt>
-    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd>
-    <dt>DO_NOT_ENFORCE</dt>
-    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>DEFAULT</dt>
+    <dd>Default{{% md %}}The policy effect is enforced during resource creation or update.{{% /md %}}</dd><dt>DO_NOT_ENFORCE</dt>
+    <dd>DoNotEnforce{{% md %}}The policy effect is not enforced during resource creation or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identity">Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1334,14 +1285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1349,14 +1297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1364,14 +1309,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1379,16 +1321,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1396,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1405,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1414,14 +1351,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1429,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1438,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1447,14 +1379,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1462,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1471,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1480,14 +1407,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1495,8 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1504,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of the resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1513,16 +1435,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="noncompliancemessage">Non<wbr>Compliance<wbr>Message</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1530,8 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_csharp">
 <a href="#policydefinitionreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -1539,14 +1457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1554,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_go">
 <a href="#policydefinitionreferenceid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -1563,14 +1477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1578,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_nodejs">
 <a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -1587,14 +1497,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1602,8 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_definition_reference_id_python">
 <a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
@@ -1611,16 +1517,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="noncompliancemessageresponse">Non<wbr>Compliance<wbr>Message<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1628,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_csharp">
 <a href="#policydefinitionreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -1637,14 +1539,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1652,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_go">
 <a href="#policydefinitionreferenceid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -1661,14 +1559,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1676,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_nodejs">
 <a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -1685,14 +1579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1700,8 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_definition_reference_id_python">
 <a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
@@ -1709,16 +1599,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parametervaluesvalue">Parameter<wbr>Values<wbr>Value</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1726,14 +1613,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1741,14 +1625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1756,14 +1637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1771,16 +1649,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parametervaluesvalueresponse">Parameter<wbr>Values<wbr>Value<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1788,14 +1663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1803,14 +1675,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1818,14 +1687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1833,46 +1699,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd>
-    <dt>None</dt>
-    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd><dt>None</dt>
+    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
-    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
-    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd>
-    <dt>None</dt>
-    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd><dt>None</dt>
+    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SYSTEM_ASSIGNED</dt>
-    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd>
-    <dt>NONE</dt>
-    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned{{% md %}}Indicates that a system assigned identity is associated with the resource.{{% /md %}}</dd><dt>NONE</dt>
+    <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

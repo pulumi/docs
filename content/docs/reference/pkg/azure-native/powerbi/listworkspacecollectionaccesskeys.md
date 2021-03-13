@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -60,8 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacecollectionname_csharp">
 <a href="#workspacecollectionname_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Collection<wbr>Name</a>
@@ -69,14 +66,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -84,8 +78,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacecollectionname_go">
 <a href="#workspacecollectionname_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Collection<wbr>Name</a>
@@ -93,14 +86,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -108,8 +98,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacecollectionname_nodejs">
 <a href="#workspacecollectionname_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Collection<wbr>Name</a>
@@ -117,14 +106,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -132,8 +118,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_collection_name_python">
 <a href="#workspace_collection_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>collection_<wbr>name</a>
@@ -141,8 +126,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Power BI Embedded Workspace Collection name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -155,9 +139,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key1_csharp">
 <a href="#key1_csharp" style="color: inherit; text-decoration: inherit;">Key1</a>
@@ -165,8 +147,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access key 1{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access key 1{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key2_csharp">
 <a href="#key2_csharp" style="color: inherit; text-decoration: inherit;">Key2</a>
@@ -174,14 +155,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access key 2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Access key 2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key1_go">
 <a href="#key1_go" style="color: inherit; text-decoration: inherit;">Key1</a>
@@ -189,8 +167,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access key 1{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access key 1{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key2_go">
 <a href="#key2_go" style="color: inherit; text-decoration: inherit;">Key2</a>
@@ -198,14 +175,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access key 2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Access key 2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key1_nodejs">
 <a href="#key1_nodejs" style="color: inherit; text-decoration: inherit;">key1</a>
@@ -213,8 +187,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access key 1{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access key 1{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key2_nodejs">
 <a href="#key2_nodejs" style="color: inherit; text-decoration: inherit;">key2</a>
@@ -222,14 +195,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access key 2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Access key 2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key1_python">
 <a href="#key1_python" style="color: inherit; text-decoration: inherit;">key1</a>
@@ -237,8 +207,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access key 1{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access key 1{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key2_python">
 <a href="#key2_python" style="color: inherit; text-decoration: inherit;">key2</a>
@@ -246,8 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access key 2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Access key 2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

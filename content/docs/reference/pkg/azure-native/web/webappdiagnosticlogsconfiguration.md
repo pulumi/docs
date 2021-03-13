@@ -45,9 +45,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:web:WebAppDiagnosticLogsConfiguration myresource1 /
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +180,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -220,8 +188,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationlogs_csharp">
 <a href="#applicationlogs_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
@@ -229,8 +196,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detailederrormessages_csharp">
 <a href="#detailederrormessages_csharp" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages</a>
@@ -238,8 +204,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failedrequeststracing_csharp">
 <a href="#failedrequeststracing_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Requests<wbr>Tracing</a>
@@ -247,8 +212,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httplogs_csharp">
 <a href="#httplogs_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
@@ -256,8 +220,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -265,14 +228,11 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -280,8 +240,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -289,8 +248,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationlogs_go">
 <a href="#applicationlogs_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
@@ -298,8 +256,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detailederrormessages_go">
 <a href="#detailederrormessages_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages</a>
@@ -307,8 +264,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failedrequeststracing_go">
 <a href="#failedrequeststracing_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Requests<wbr>Tracing</a>
@@ -316,8 +272,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httplogs_go">
 <a href="#httplogs_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
@@ -325,8 +280,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -334,14 +288,11 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -349,8 +300,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -358,8 +308,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationlogs_nodejs">
 <a href="#applicationlogs_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Logs</a>
@@ -367,8 +316,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detailederrormessages_nodejs">
 <a href="#detailederrormessages_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Error<wbr>Messages</a>
@@ -376,8 +324,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failedrequeststracing_nodejs">
 <a href="#failedrequeststracing_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Requests<wbr>Tracing</a>
@@ -385,8 +332,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httplogs_nodejs">
 <a href="#httplogs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logs</a>
@@ -394,8 +340,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -403,14 +348,11 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +360,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -427,8 +368,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_logs_python">
 <a href="#application_logs_python" style="color: inherit; text-decoration: inherit;">application_<wbr>logs</a>
@@ -436,8 +376,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detailed_error_messages_python">
 <a href="#detailed_error_messages_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>error_<wbr>messages</a>
@@ -445,8 +384,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failed_requests_tracing_python">
 <a href="#failed_requests_tracing_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>requests_<wbr>tracing</a>
@@ -454,8 +392,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_logs_python">
 <a href="#http_logs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>logs</a>
@@ -463,8 +400,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -472,8 +408,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -484,9 +419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -494,8 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -503,8 +435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -512,14 +443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -527,8 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -536,8 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -545,14 +471,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -560,8 +483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -569,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -578,14 +499,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,8 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -602,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -611,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -628,9 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="applicationlogsconfig">Application<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_csharp">
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -638,8 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablestorage_csharp">
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
@@ -647,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_csharp">
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -656,14 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_go">
 <a href="#azureblobstorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -671,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablestorage_go">
 <a href="#azuretablestorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
@@ -680,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_go">
 <a href="#filesystem_go" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -689,14 +595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_nodejs">
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
@@ -704,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablestorage_nodejs">
 <a href="#azuretablestorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Storage</a>
@@ -713,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_nodejs">
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
@@ -722,14 +623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_storage_python">
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
@@ -737,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_table_storage_python">
 <a href="#azure_table_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>table_<wbr>storage</a>
@@ -746,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_system_python">
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
@@ -755,16 +651,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationlogsconfigresponse">Application<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_csharp">
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -772,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablestorage_csharp">
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
@@ -781,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_csharp">
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -790,14 +681,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_go">
 <a href="#azureblobstorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -805,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablestorage_go">
 <a href="#azuretablestorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
@@ -814,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_go">
 <a href="#filesystem_go" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -823,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_nodejs">
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
@@ -838,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablestorage_nodejs">
 <a href="#azuretablestorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Storage</a>
@@ -847,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_nodejs">
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
@@ -856,14 +737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_storage_python">
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
@@ -871,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_table_storage_python">
 <a href="#azure_table_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>table_<wbr>storage</a>
@@ -880,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_system_python">
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
@@ -889,16 +765,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -906,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -917,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -926,14 +797,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -941,8 +809,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -952,8 +819,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -961,14 +827,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -976,8 +839,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -987,8 +849,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -996,14 +857,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1011,8 +869,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1022,8 +879,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -1031,16 +887,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1048,8 +901,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1059,8 +911,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1068,14 +919,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1083,8 +931,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1094,8 +941,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1103,14 +949,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1118,8 +961,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -1129,8 +971,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -1138,14 +979,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1153,8 +991,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1164,8 +1001,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -1173,16 +1009,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1190,8 +1023,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1201,8 +1033,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1210,14 +1041,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1225,8 +1053,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1236,8 +1063,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1245,14 +1071,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1260,8 +1083,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -1271,8 +1093,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -1280,14 +1101,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1295,8 +1113,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1306,8 +1123,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -1315,16 +1131,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1332,8 +1145,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1343,8 +1155,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1352,14 +1163,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1367,8 +1175,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1378,8 +1185,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1387,14 +1193,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1402,8 +1205,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -1413,8 +1215,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -1422,14 +1223,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1437,8 +1235,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1448,8 +1245,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove blobs older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -1457,16 +1253,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SAS url to a azure blob container with read/write/list/delete permissions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1474,8 +1267,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1483,14 +1275,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1498,8 +1287,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1507,14 +1295,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -1522,8 +1307,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1531,14 +1315,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -1546,8 +1327,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1555,16 +1335,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sasurl_csharp">
 <a href="#sasurl_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1572,8 +1349,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1581,14 +1357,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sasurl_go">
 <a href="#sasurl_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Url</a>
@@ -1596,8 +1369,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1605,14 +1377,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sasurl_nodejs">
 <a href="#sasurl_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
@@ -1620,8 +1389,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1629,14 +1397,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sas_url_python">
 <a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
@@ -1644,8 +1409,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SAS URL to an Azure table with add/query/delete permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1653,16 +1417,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enabledconfig">Enabled<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1670,14 +1431,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1685,14 +1443,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1700,14 +1455,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1715,16 +1467,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="enabledconfigresponse">Enabled<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1732,14 +1481,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1747,14 +1493,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1762,14 +1505,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1777,16 +1517,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1794,14 +1531,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1809,14 +1543,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1824,14 +1555,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1839,16 +1567,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1856,14 +1581,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1871,14 +1593,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1886,14 +1605,11 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1901,16 +1617,13 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log level.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1918,8 +1631,7 @@ Remove blobs older than X days.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1929,8 +1641,7 @@ Remove blobs older than X days.
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentioninmb_csharp">
 <a href="#retentioninmb_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Mb</a>
@@ -1940,14 +1651,11 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1955,8 +1663,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1966,8 +1673,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentioninmb_go">
 <a href="#retentioninmb_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Mb</a>
@@ -1977,14 +1683,11 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1992,8 +1695,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -2003,8 +1705,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentioninmb_nodejs">
 <a href="#retentioninmb_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Mb</a>
@@ -2014,14 +1715,11 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2029,8 +1727,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -2040,8 +1737,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_mb_python">
 <a href="#retention_in_mb_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>mb</a>
@@ -2051,16 +1747,13 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2068,8 +1761,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -2079,8 +1771,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentioninmb_csharp">
 <a href="#retentioninmb_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Mb</a>
@@ -2090,14 +1781,11 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2105,8 +1793,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -2116,8 +1803,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentioninmb_go">
 <a href="#retentioninmb_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Mb</a>
@@ -2127,14 +1813,11 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2142,8 +1825,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -2153,8 +1835,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentioninmb_nodejs">
 <a href="#retentioninmb_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Mb</a>
@@ -2164,14 +1845,11 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2179,8 +1857,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}True if configuration is enabled, false if it is disabled and null if configuration is not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -2190,8 +1867,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Retention in days.
 Remove files older than X days.
-0 or lower means no retention.{{% /md %}}</dd>
-    <dt class="property-optional"
+0 or lower means no retention.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_mb_python">
 <a href="#retention_in_mb_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>mb</a>
@@ -2201,16 +1877,13 @@ Remove files older than X days.
     </dt>
     <dd>{{% md %}}Maximum size in megabytes that http log files can use.
 When reached old log files will be removed to make space for new ones.
-Value can range between 25 and 100.{{% /md %}}</dd>
-</dl>
+Value can range between 25 and 100.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httplogsconfig">Http<wbr>Logs<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_csharp">
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -2218,8 +1891,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_csharp">
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -2227,14 +1899,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_go">
 <a href="#azureblobstorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -2242,8 +1911,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_go">
 <a href="#filesystem_go" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -2251,14 +1919,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_nodejs">
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
@@ -2266,8 +1931,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_nodejs">
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
@@ -2275,14 +1939,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_storage_python">
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
@@ -2290,8 +1951,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_system_python">
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
@@ -2299,16 +1959,13 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httplogsconfigresponse">Http<wbr>Logs<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_csharp">
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -2316,8 +1973,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_csharp">
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -2325,14 +1981,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_go">
 <a href="#azureblobstorage_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
@@ -2340,8 +1993,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_go">
 <a href="#filesystem_go" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
@@ -2349,14 +2001,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azureblobstorage_nodejs">
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
@@ -2364,8 +2013,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystem_nodejs">
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
@@ -2373,14 +2021,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="azure_blob_storage_python">
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
@@ -2388,8 +2033,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_system_python">
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
@@ -2397,78 +2041,51 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loglevel">Log<wbr>Level</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Off</dt>
-    <dd>Off</dd>
-    <dt>Verbose</dt>
-    <dd>Verbose</dd>
-    <dt>Information</dt>
-    <dd>Information</dd>
-    <dt>Warning</dt>
-    <dd>Warning</dd>
-    <dt>Error</dt>
-    <dd>Error</dd>
-</dl>
+<dl class="tabular"><dt>Off</dt>
+    <dd>Off</dd><dt>Verbose</dt>
+    <dd>Verbose</dd><dt>Information</dt>
+    <dd>Information</dd><dt>Warning</dt>
+    <dd>Warning</dd><dt>Error</dt>
+    <dd>Error</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Log<wbr>Level<wbr>Off</dt>
-    <dd>Off</dd>
-    <dt>Log<wbr>Level<wbr>Verbose</dt>
-    <dd>Verbose</dd>
-    <dt>Log<wbr>Level<wbr>Information</dt>
-    <dd>Information</dd>
-    <dt>Log<wbr>Level<wbr>Warning</dt>
-    <dd>Warning</dd>
-    <dt>Log<wbr>Level<wbr>Error</dt>
-    <dd>Error</dd>
-</dl>
+<dl class="tabular"><dt>Log<wbr>Level<wbr>Off</dt>
+    <dd>Off</dd><dt>Log<wbr>Level<wbr>Verbose</dt>
+    <dd>Verbose</dd><dt>Log<wbr>Level<wbr>Information</dt>
+    <dd>Information</dd><dt>Log<wbr>Level<wbr>Warning</dt>
+    <dd>Warning</dd><dt>Log<wbr>Level<wbr>Error</dt>
+    <dd>Error</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Off</dt>
-    <dd>Off</dd>
-    <dt>Verbose</dt>
-    <dd>Verbose</dd>
-    <dt>Information</dt>
-    <dd>Information</dd>
-    <dt>Warning</dt>
-    <dd>Warning</dd>
-    <dt>Error</dt>
-    <dd>Error</dd>
-</dl>
+<dl class="tabular"><dt>Off</dt>
+    <dd>Off</dd><dt>Verbose</dt>
+    <dd>Verbose</dd><dt>Information</dt>
+    <dd>Information</dd><dt>Warning</dt>
+    <dd>Warning</dd><dt>Error</dt>
+    <dd>Error</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>OFF</dt>
-    <dd>Off</dd>
-    <dt>VERBOSE</dt>
-    <dd>Verbose</dd>
-    <dt>INFORMATION</dt>
-    <dd>Information</dd>
-    <dt>WARNING</dt>
-    <dd>Warning</dd>
-    <dt>ERROR</dt>
-    <dd>Error</dd>
-</dl>
+<dl class="tabular"><dt>OFF</dt>
+    <dd>Off</dd><dt>VERBOSE</dt>
+    <dd>Verbose</dd><dt>INFORMATION</dt>
+    <dd>Information</dd><dt>WARNING</dt>
+    <dd>Warning</dd><dt>ERROR</dt>
+    <dd>Error</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2476,8 +2093,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2485,8 +2101,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2494,8 +2109,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2503,8 +2117,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2512,8 +2125,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2521,14 +2133,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2536,8 +2145,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2545,8 +2153,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2554,8 +2161,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2563,8 +2169,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2572,8 +2177,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2581,14 +2185,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2596,8 +2197,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2605,8 +2205,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2614,8 +2213,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2623,8 +2221,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2632,8 +2229,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2641,14 +2237,11 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2656,8 +2249,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2665,8 +2257,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2674,8 +2265,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2683,8 +2273,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2692,8 +2281,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2701,8 +2289,7 @@ Value can range between 25 and 100.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

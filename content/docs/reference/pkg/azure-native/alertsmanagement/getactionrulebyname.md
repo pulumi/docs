@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionrulename_csharp">
 <a href="#actionrulename_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rule<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionrulename_go">
 <a href="#actionrulename_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rule<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionrulename_nodejs">
 <a href="#actionrulename_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rule<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_rule_name_python">
 <a href="#action_rule_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rule_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of action rule that needs to be fetched{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name where the resource is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Action<wbr>Group<wbr>Response</a> | <a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Diagnostics<wbr>Response</a> | <a href="#suppressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Outputs.<wbr>Suppression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}action rule properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}action rule properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response</a> | <a href="#diagnosticsresponse">Diagnostics<wbr>Response</a> | <a href="#suppressionresponse">Suppression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}action rule properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}action rule properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response</a> | <a href="#diagnosticsresponse">Diagnostics<wbr>Response</a> | <a href="#suppressionresponse">Suppression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}action rule properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}action rule properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -331,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response</a> | <a href="#diagnosticsresponse">Diagnostics<wbr>Response</a> | <a href="#suppressionresponse">Suppression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}action rule properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}action rule properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroupid_csharp">
 <a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -434,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -443,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -470,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -479,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -488,14 +430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroupid_go">
 <a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -521,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -539,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -548,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -557,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -575,14 +506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroupid_nodejs">
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -599,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -608,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -617,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -626,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -635,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -644,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -653,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -662,14 +582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_group_id_python">
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Action group to trigger if action rule matches{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -686,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -722,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -731,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="conditionresponse">Condition<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -777,14 +682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -792,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -801,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -816,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -825,14 +722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}operator for a given condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of values to match for a given condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="conditionsresponse">Conditions<wbr>Response</h4>
@@ -858,9 +750,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertcontext_csharp">
 <a href="#alertcontext_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
@@ -868,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruleid_csharp">
 <a href="#alertruleid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
@@ -877,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -886,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorcondition_csharp">
 <a href="#monitorcondition_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
@@ -895,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorservice_csharp">
 <a href="#monitorservice_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
@@ -904,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -913,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourcetype_csharp">
 <a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
@@ -922,14 +806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertcontext_go">
 <a href="#alertcontext_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
@@ -937,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruleid_go">
 <a href="#alertruleid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
@@ -946,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -955,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorcondition_go">
 <a href="#monitorcondition_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
@@ -964,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorservice_go">
 <a href="#monitorservice_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
@@ -973,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -982,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourcetype_go">
 <a href="#targetresourcetype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
@@ -991,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertcontext_nodejs">
 <a href="#alertcontext_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
@@ -1006,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruleid_nodejs">
 <a href="#alertruleid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
@@ -1015,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1024,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorcondition_nodejs">
 <a href="#monitorcondition_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Condition</a>
@@ -1033,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorservice_nodejs">
 <a href="#monitorservice_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
@@ -1042,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1051,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourcetype_nodejs">
 <a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
@@ -1060,14 +926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alert_context_python">
 <a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
@@ -1075,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_rule_id_python">
 <a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
@@ -1084,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1093,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_condition_python">
 <a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
@@ -1102,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_service_python">
 <a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
@@ -1111,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1120,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resource_type_python">
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
@@ -1129,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diagnosticsresponse">Diagnostics<wbr>Response</h4>
@@ -1138,9 +994,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1148,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1157,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1166,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1175,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1184,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1193,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1202,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1211,14 +1058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1226,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1235,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1244,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1253,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1262,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1271,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1280,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1289,14 +1126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1304,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1313,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1322,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1331,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1340,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1349,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1358,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1367,14 +1194,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1382,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1391,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1400,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1409,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1418,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1427,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1436,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1445,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scoperesponse">Scope<wbr>Response</h4>
@@ -1454,9 +1270,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopetype_csharp">
 <a href="#scopetype_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Type</a>
@@ -1464,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of target scope{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type of target scope{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1473,14 +1286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopetype_go">
 <a href="#scopetype_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Type</a>
@@ -1488,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of target scope{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type of target scope{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1497,14 +1306,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scopetype_nodejs">
 <a href="#scopetype_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Type</a>
@@ -1512,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of target scope{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type of target scope{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1521,14 +1326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scope_type_python">
 <a href="#scope_type_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>type</a>
@@ -1536,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type of target scope{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}type of target scope{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1545,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}list of ARM IDs of the given scope type which will be the target of the given action rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="suppressionconfigresponse">Suppression<wbr>Config<wbr>Response</h4>
@@ -1554,9 +1354,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_csharp">
 <a href="#recurrencetype_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
@@ -1564,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1573,14 +1370,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_go">
 <a href="#recurrencetype_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Type</a>
@@ -1588,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1597,14 +1390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrencetype_nodejs">
 <a href="#recurrencetype_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Type</a>
@@ -1612,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1621,14 +1410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_type_python">
 <a href="#recurrence_type_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>type</a>
@@ -1636,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when the suppression should be applied{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1645,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="suppressionresponse">Suppression<wbr>Response</h4>
@@ -1654,9 +1438,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1664,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1673,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1682,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1691,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suppressionconfig_csharp">
 <a href="#suppressionconfig_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
@@ -1700,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1709,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1718,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1727,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1736,14 +1510,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1751,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1760,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1769,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1778,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suppressionconfig_go">
 <a href="#suppressionconfig_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
@@ -1787,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1796,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1805,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1814,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1823,14 +1586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1838,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1847,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1856,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1865,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suppressionconfig_nodejs">
 <a href="#suppressionconfig_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Config</a>
@@ -1874,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1883,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1892,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1901,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1910,14 +1662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1925,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creation time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1934,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Created by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Created by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1943,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last updated time of action rule. Date-Time in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1952,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last modified by user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suppression_config_python">
 <a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
@@ -1961,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1970,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1979,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of action rule{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1988,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1997,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates if the given action rule is enabled or disabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response</h4>
@@ -2006,9 +1746,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddate_csharp">
 <a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -2016,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2025,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrencevalues_csharp">
 <a href="#recurrencevalues_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Values</a>
@@ -2034,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_csharp">
 <a href="#startdate_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -2043,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2052,14 +1786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddate_go">
 <a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -2067,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2076,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrencevalues_go">
 <a href="#recurrencevalues_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Values</a>
@@ -2085,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_go">
 <a href="#startdate_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -2094,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2103,14 +1830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddate_nodejs">
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
@@ -2118,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2127,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrencevalues_nodejs">
 <a href="#recurrencevalues_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Values</a>
@@ -2136,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_nodejs">
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
@@ -2145,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2154,14 +1874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_date_python">
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
@@ -2169,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2178,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}End date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurrence_values_python">
 <a href="#recurrence_values_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>values</a>
@@ -2187,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the values for recurrence pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_date_python">
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
@@ -2196,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start date for suppression{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2205,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for suppression{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

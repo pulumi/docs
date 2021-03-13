@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activitylogalertname_csharp">
 <a href="#activitylogalertname_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Log<wbr>Alert<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activitylogalertname_go">
 <a href="#activitylogalertname_go" style="color: inherit; text-decoration: inherit;">Activity<wbr>Log<wbr>Alert<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activitylogalertname_nodejs">
 <a href="#activitylogalertname_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Log<wbr>Alert<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activity_log_alert_name_python">
 <a href="#activity_log_alert_name_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>log_<wbr>alert_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actionlistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Action<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleallofconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actionlistresponse">Action<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleallofconditionresponse">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actionlistresponse">Action<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleallofconditionresponse">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -439,14 +388,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actionlistresponse">Action<wbr>List<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleallofconditionresponse">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,9 +486,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroupid_csharp">
 <a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_csharp">
 <a href="#webhookproperties_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Properties</a>
@@ -569,14 +502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroupid_go">
 <a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -584,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_go">
 <a href="#webhookproperties_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Properties</a>
@@ -593,14 +522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiongroupid_nodejs">
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
@@ -608,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_nodejs">
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
@@ -617,14 +542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_group_id_python">
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_properties_python">
 <a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actionlistresponse">Action<wbr>List<wbr>Response</h4>
@@ -650,9 +570,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroups_csharp">
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
@@ -660,14 +578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroups_go">
 <a href="#actiongroups_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
@@ -675,14 +590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">[]Action<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroups_nodejs">
 <a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
@@ -690,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_groups_python">
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
@@ -705,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#actiongroupresponse">Sequence[Action<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertruleallofconditionresponse">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Response</h4>
@@ -714,9 +622,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_csharp">
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -724,14 +630,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_go">
 <a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -739,14 +642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">[]Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allof_nodejs">
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
@@ -754,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="all_of_python">
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
@@ -769,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertruleanyoforleafconditionresponse">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response</h4>
@@ -778,9 +674,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyof_csharp">
 <a href="#anyof_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
@@ -788,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containsany_csharp">
 <a href="#containsany_csharp" style="color: inherit; text-decoration: inherit;">Contains<wbr>Any</a>
@@ -797,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_csharp">
 <a href="#equals_csharp" style="color: inherit; text-decoration: inherit;">Equals</a>
@@ -806,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -816,14 +707,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyof_go">
 <a href="#anyof_go" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
@@ -831,8 +719,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleleafconditionresponse">[]Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containsany_go">
 <a href="#containsany_go" style="color: inherit; text-decoration: inherit;">Contains<wbr>Any</a>
@@ -840,8 +727,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_go">
 <a href="#equals_go" style="color: inherit; text-decoration: inherit;">Equals</a>
@@ -849,8 +735,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -859,14 +744,11 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyof_nodejs">
 <a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
@@ -874,8 +756,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleleafconditionresponse">Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containsany_nodejs">
 <a href="#containsany_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Any</a>
@@ -883,8 +764,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_nodejs">
 <a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
@@ -892,8 +772,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -902,14 +781,11 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="any_of_python">
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
@@ -917,8 +793,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertruleleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contains_any_python">
 <a href="#contains_any_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>any</a>
@@ -926,8 +801,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_python">
 <a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
@@ -935,8 +809,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -945,8 +818,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertruleleafconditionresponse">Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response</h4>
@@ -954,9 +826,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containsany_csharp">
 <a href="#containsany_csharp" style="color: inherit; text-decoration: inherit;">Contains<wbr>Any</a>
@@ -964,8 +834,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_csharp">
 <a href="#equals_csharp" style="color: inherit; text-decoration: inherit;">Equals</a>
@@ -973,8 +842,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -983,14 +851,11 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containsany_go">
 <a href="#containsany_go" style="color: inherit; text-decoration: inherit;">Contains<wbr>Any</a>
@@ -998,8 +863,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_go">
 <a href="#equals_go" style="color: inherit; text-decoration: inherit;">Equals</a>
@@ -1007,8 +871,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1017,14 +880,11 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containsany_nodejs">
 <a href="#containsany_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Any</a>
@@ -1032,8 +892,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_nodejs">
 <a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
@@ -1041,8 +900,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1051,14 +909,11 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contains_any_python">
 <a href="#contains_any_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>any</a>
@@ -1066,8 +921,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="equals_python">
 <a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
@@ -1075,8 +929,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1085,8 +938,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
-The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd>
-</dl>
+The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

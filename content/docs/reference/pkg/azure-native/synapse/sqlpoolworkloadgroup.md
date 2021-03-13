@@ -14,11 +14,17 @@ Workload group operations for a sql pool
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a workload group with all properties specified.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -81,9 +90,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -103,9 +115,12 @@ sql_pool_workload_group = azure_native.synapse.SqlPoolWorkloadGroup("sqlPoolWork
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,10 +141,17 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a workload group with the required properties specified.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -154,9 +176,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -186,9 +211,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -205,9 +233,12 @@ sql_pool_workload_group = azure_native.synapse.SqlPoolWorkloadGroup("sqlPoolWork
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -225,9 +256,16 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SqlPoolWorkloadGroup Resource {#create}
@@ -252,9 +290,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +298,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +306,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,10 +314,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +340,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -321,9 +348,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -331,9 +356,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -341,9 +364,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -351,18 +372,13 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -370,9 +386,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -380,9 +394,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -390,10 +402,7 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -408,9 +417,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxresourcepercent_csharp">
 <a href="#maxresourcepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Resource<wbr>Percent</a>
@@ -418,8 +425,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minresourcepercent_csharp">
 <a href="#minresourcepercent_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Resource<wbr>Percent</a>
@@ -427,8 +433,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minresourcepercentperrequest_csharp">
 <a href="#minresourcepercentperrequest_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
@@ -436,8 +441,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -445,8 +449,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlpoolname_csharp">
 <a href="#sqlpoolname_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Pool<wbr>Name</a>
@@ -454,8 +457,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -463,8 +465,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importance_csharp">
 <a href="#importance_csharp" style="color: inherit; text-decoration: inherit;">Importance</a>
@@ -472,8 +473,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxresourcepercentperrequest_csharp">
 <a href="#maxresourcepercentperrequest_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
@@ -481,8 +481,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryexecutiontimeout_csharp">
 <a href="#queryexecutiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Execution<wbr>Timeout</a>
@@ -490,8 +489,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadgroupname_csharp">
 <a href="#workloadgroupname_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Group<wbr>Name</a>
@@ -499,14 +497,11 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxresourcepercent_go">
 <a href="#maxresourcepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Resource<wbr>Percent</a>
@@ -514,8 +509,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minresourcepercent_go">
 <a href="#minresourcepercent_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Resource<wbr>Percent</a>
@@ -523,8 +517,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minresourcepercentperrequest_go">
 <a href="#minresourcepercentperrequest_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
@@ -532,8 +525,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -541,8 +533,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlpoolname_go">
 <a href="#sqlpoolname_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Pool<wbr>Name</a>
@@ -550,8 +541,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -559,8 +549,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importance_go">
 <a href="#importance_go" style="color: inherit; text-decoration: inherit;">Importance</a>
@@ -568,8 +557,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxresourcepercentperrequest_go">
 <a href="#maxresourcepercentperrequest_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
@@ -577,8 +565,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryexecutiontimeout_go">
 <a href="#queryexecutiontimeout_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Execution<wbr>Timeout</a>
@@ -586,8 +573,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadgroupname_go">
 <a href="#workloadgroupname_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Group<wbr>Name</a>
@@ -595,14 +581,11 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxresourcepercent_nodejs">
 <a href="#maxresourcepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Resource<wbr>Percent</a>
@@ -610,8 +593,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minresourcepercent_nodejs">
 <a href="#minresourcepercent_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Resource<wbr>Percent</a>
@@ -619,8 +601,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minresourcepercentperrequest_nodejs">
 <a href="#minresourcepercentperrequest_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
@@ -628,8 +609,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -637,8 +617,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlpoolname_nodejs">
 <a href="#sqlpoolname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Pool<wbr>Name</a>
@@ -646,8 +625,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -655,8 +633,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importance_nodejs">
 <a href="#importance_nodejs" style="color: inherit; text-decoration: inherit;">importance</a>
@@ -664,8 +641,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxresourcepercentperrequest_nodejs">
 <a href="#maxresourcepercentperrequest_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
@@ -673,8 +649,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryexecutiontimeout_nodejs">
 <a href="#queryexecutiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Execution<wbr>Timeout</a>
@@ -682,8 +657,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadgroupname_nodejs">
 <a href="#workloadgroupname_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Group<wbr>Name</a>
@@ -691,14 +665,11 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_resource_percent_python">
 <a href="#max_resource_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>resource_<wbr>percent</a>
@@ -706,8 +677,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_resource_percent_python">
 <a href="#min_resource_percent_python" style="color: inherit; text-decoration: inherit;">min_<wbr>resource_<wbr>percent</a>
@@ -715,8 +685,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_resource_percent_per_request_python">
 <a href="#min_resource_percent_per_request_python" style="color: inherit; text-decoration: inherit;">min_<wbr>resource_<wbr>percent_<wbr>per_<wbr>request</a>
@@ -724,8 +693,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -733,8 +701,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_pool_name_python">
 <a href="#sql_pool_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>pool_<wbr>name</a>
@@ -742,8 +709,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -751,8 +717,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importance_python">
 <a href="#importance_python" style="color: inherit; text-decoration: inherit;">importance</a>
@@ -760,8 +725,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_resource_percent_per_request_python">
 <a href="#max_resource_percent_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>resource_<wbr>percent_<wbr>per_<wbr>request</a>
@@ -769,8 +733,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_execution_timeout_python">
 <a href="#query_execution_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>execution_<wbr>timeout</a>
@@ -778,8 +741,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_group_name_python">
 <a href="#workload_group_name_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>group_<wbr>name</a>
@@ -787,8 +749,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -799,9 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -809,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -818,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -827,14 +784,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -842,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -851,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -860,14 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -875,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -884,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -893,14 +840,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -908,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -917,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -926,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

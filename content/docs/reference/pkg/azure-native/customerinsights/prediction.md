@@ -14,11 +14,17 @@ The prediction resource format.
 API Version: 2017-04-26.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Predictions_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -63,9 +69,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -112,9 +121,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -148,9 +160,12 @@ prediction = azure_native.customerinsights.Prediction("prediction",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -185,9 +200,16 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Prediction Resource {#create}
@@ -212,9 +234,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -222,9 +242,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -232,9 +250,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,10 +258,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -271,9 +284,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -281,9 +292,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -291,9 +300,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -301,9 +308,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -311,18 +316,13 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -330,9 +330,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -340,9 +338,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -350,10 +346,7 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -368,9 +361,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoanalyze_csharp">
 <a href="#autoanalyze_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Analyze</a>
@@ -378,8 +369,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -387,8 +377,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappings_csharp">
 <a href="#mappings_csharp" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -396,8 +385,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionmappings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Prediction<wbr>Mappings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="negativeoutcomeexpression_csharp">
 <a href="#negativeoutcomeexpression_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Outcome<wbr>Expression</a>
@@ -405,8 +393,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positiveoutcomeexpression_csharp">
 <a href="#positiveoutcomeexpression_csharp" style="color: inherit; text-decoration: inherit;">Positive<wbr>Outcome<wbr>Expression</a>
@@ -414,8 +401,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primaryprofiletype_csharp">
 <a href="#primaryprofiletype_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Profile<wbr>Type</a>
@@ -423,8 +409,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -432,8 +417,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopeexpression_csharp">
 <a href="#scopeexpression_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Expression</a>
@@ -441,8 +425,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scorelabel_csharp">
 <a href="#scorelabel_csharp" style="color: inherit; text-decoration: inherit;">Score<wbr>Label</a>
@@ -450,8 +433,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Score label.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Score label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -459,8 +441,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -468,8 +449,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grades_csharp">
 <a href="#grades_csharp" style="color: inherit; text-decoration: inherit;">Grades</a>
@@ -477,8 +457,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiongrades">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Prediction<wbr>Grades<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedinteractiontypes_csharp">
 <a href="#involvedinteractiontypes_csharp" style="color: inherit; text-decoration: inherit;">Involved<wbr>Interaction<wbr>Types</a>
@@ -486,8 +465,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedkpitypes_csharp">
 <a href="#involvedkpitypes_csharp" style="color: inherit; text-decoration: inherit;">Involved<wbr>Kpi<wbr>Types</a>
@@ -495,8 +473,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedrelationships_csharp">
 <a href="#involvedrelationships_csharp" style="color: inherit; text-decoration: inherit;">Involved<wbr>Relationships</a>
@@ -504,8 +481,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictionname_csharp">
 <a href="#predictionname_csharp" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Name</a>
@@ -513,14 +489,11 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoanalyze_go">
 <a href="#autoanalyze_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Analyze</a>
@@ -528,8 +501,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -537,8 +509,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappings_go">
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
@@ -546,8 +517,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings</a></span>
     </dt>
-    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="negativeoutcomeexpression_go">
 <a href="#negativeoutcomeexpression_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Outcome<wbr>Expression</a>
@@ -555,8 +525,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positiveoutcomeexpression_go">
 <a href="#positiveoutcomeexpression_go" style="color: inherit; text-decoration: inherit;">Positive<wbr>Outcome<wbr>Expression</a>
@@ -564,8 +533,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primaryprofiletype_go">
 <a href="#primaryprofiletype_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Profile<wbr>Type</a>
@@ -573,8 +541,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -582,8 +549,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopeexpression_go">
 <a href="#scopeexpression_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Expression</a>
@@ -591,8 +557,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scorelabel_go">
 <a href="#scorelabel_go" style="color: inherit; text-decoration: inherit;">Score<wbr>Label</a>
@@ -600,8 +565,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Score label.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Score label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -609,8 +573,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -618,8 +581,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grades_go">
 <a href="#grades_go" style="color: inherit; text-decoration: inherit;">Grades</a>
@@ -627,8 +589,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiongrades">[]Prediction<wbr>Grades</a></span>
     </dt>
-    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedinteractiontypes_go">
 <a href="#involvedinteractiontypes_go" style="color: inherit; text-decoration: inherit;">Involved<wbr>Interaction<wbr>Types</a>
@@ -636,8 +597,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedkpitypes_go">
 <a href="#involvedkpitypes_go" style="color: inherit; text-decoration: inherit;">Involved<wbr>Kpi<wbr>Types</a>
@@ -645,8 +605,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedrelationships_go">
 <a href="#involvedrelationships_go" style="color: inherit; text-decoration: inherit;">Involved<wbr>Relationships</a>
@@ -654,8 +613,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictionname_go">
 <a href="#predictionname_go" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Name</a>
@@ -663,14 +621,11 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoanalyze_nodejs">
 <a href="#autoanalyze_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Analyze</a>
@@ -678,8 +633,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -687,8 +641,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappings_nodejs">
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -696,8 +649,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings</a></span>
     </dt>
-    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="negativeoutcomeexpression_nodejs">
 <a href="#negativeoutcomeexpression_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Outcome<wbr>Expression</a>
@@ -705,8 +657,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positiveoutcomeexpression_nodejs">
 <a href="#positiveoutcomeexpression_nodejs" style="color: inherit; text-decoration: inherit;">positive<wbr>Outcome<wbr>Expression</a>
@@ -714,8 +665,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primaryprofiletype_nodejs">
 <a href="#primaryprofiletype_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Profile<wbr>Type</a>
@@ -723,8 +673,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -732,8 +681,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopeexpression_nodejs">
 <a href="#scopeexpression_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Expression</a>
@@ -741,8 +689,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scorelabel_nodejs">
 <a href="#scorelabel_nodejs" style="color: inherit; text-decoration: inherit;">score<wbr>Label</a>
@@ -750,8 +697,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Score label.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Score label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -759,8 +705,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -768,8 +713,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grades_nodejs">
 <a href="#grades_nodejs" style="color: inherit; text-decoration: inherit;">grades</a>
@@ -777,8 +721,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiongrades">Prediction<wbr>Grades[]</a></span>
     </dt>
-    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedinteractiontypes_nodejs">
 <a href="#involvedinteractiontypes_nodejs" style="color: inherit; text-decoration: inherit;">involved<wbr>Interaction<wbr>Types</a>
@@ -786,8 +729,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedkpitypes_nodejs">
 <a href="#involvedkpitypes_nodejs" style="color: inherit; text-decoration: inherit;">involved<wbr>Kpi<wbr>Types</a>
@@ -795,8 +737,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involvedrelationships_nodejs">
 <a href="#involvedrelationships_nodejs" style="color: inherit; text-decoration: inherit;">involved<wbr>Relationships</a>
@@ -804,8 +745,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predictionname_nodejs">
 <a href="#predictionname_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Name</a>
@@ -813,14 +753,11 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_analyze_python">
 <a href="#auto_analyze_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>analyze</a>
@@ -828,8 +765,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -837,8 +773,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mappings_python">
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
@@ -846,8 +781,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="negative_outcome_expression_python">
 <a href="#negative_outcome_expression_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>outcome_<wbr>expression</a>
@@ -855,8 +789,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positive_outcome_expression_python">
 <a href="#positive_outcome_expression_python" style="color: inherit; text-decoration: inherit;">positive_<wbr>outcome_<wbr>expression</a>
@@ -864,8 +797,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primary_profile_type_python">
 <a href="#primary_profile_type_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>profile_<wbr>type</a>
@@ -873,8 +805,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Primary profile type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -882,8 +813,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_expression_python">
 <a href="#scope_expression_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>expression</a>
@@ -891,8 +821,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scope expression.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_label_python">
 <a href="#score_label_python" style="color: inherit; text-decoration: inherit;">score_<wbr>label</a>
@@ -900,8 +829,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Score label.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Score label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -909,8 +837,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -918,8 +845,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grades_python">
 <a href="#grades_python" style="color: inherit; text-decoration: inherit;">grades</a>
@@ -927,8 +853,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiongrades">Sequence[Prediction<wbr>Grades<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involved_interaction_types_python">
 <a href="#involved_interaction_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>interaction_<wbr>types</a>
@@ -936,8 +861,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involved_kpi_types_python">
 <a href="#involved_kpi_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>kpi_<wbr>types</a>
@@ -945,8 +869,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="involved_relationships_python">
 <a href="#involved_relationships_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>relationships</a>
@@ -954,8 +877,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prediction_name_python">
 <a href="#prediction_name_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>name</a>
@@ -963,8 +885,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -975,9 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -985,8 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -994,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1003,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemgeneratedentities_csharp">
 <a href="#systemgeneratedentities_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Generated<wbr>Entities</a>
@@ -1012,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
-    <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}System generated entities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1021,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1030,14 +944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1045,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1054,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1063,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemgeneratedentities_go">
 <a href="#systemgeneratedentities_go" style="color: inherit; text-decoration: inherit;">System<wbr>Generated<wbr>Entities</a>
@@ -1072,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
-    <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}System generated entities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1081,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1090,14 +996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1105,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1114,8 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1123,8 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemgeneratedentities_nodejs">
 <a href="#systemgeneratedentities_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Generated<wbr>Entities</a>
@@ -1132,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
-    <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}System generated entities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1141,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1150,14 +1048,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1165,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1174,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1183,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_generated_entities_python">
 <a href="#system_generated_entities_python" style="color: inherit; text-decoration: inherit;">system_<wbr>generated_<wbr>entities</a>
@@ -1192,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictionresponsesystemgeneratedentities">Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</a></span>
     </dt>
-    <dd>{{% md %}}System generated entities.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}System generated entities.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1201,8 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1210,8 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1227,9 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="predictiongrades">Prediction<wbr>Grades</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gradename_csharp">
 <a href="#gradename_csharp" style="color: inherit; text-decoration: inherit;">Grade<wbr>Name</a>
@@ -1237,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscorethreshold_csharp">
 <a href="#maxscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Score<wbr>Threshold</a>
@@ -1246,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minscorethreshold_csharp">
 <a href="#minscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Score<wbr>Threshold</a>
@@ -1255,14 +1140,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gradename_go">
 <a href="#gradename_go" style="color: inherit; text-decoration: inherit;">Grade<wbr>Name</a>
@@ -1270,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscorethreshold_go">
 <a href="#maxscorethreshold_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Score<wbr>Threshold</a>
@@ -1279,8 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minscorethreshold_go">
 <a href="#minscorethreshold_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Score<wbr>Threshold</a>
@@ -1288,14 +1168,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gradename_nodejs">
 <a href="#gradename_nodejs" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
@@ -1303,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscorethreshold_nodejs">
 <a href="#maxscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
@@ -1312,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minscorethreshold_nodejs">
 <a href="#minscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
@@ -1321,14 +1196,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grade_name_python">
 <a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
@@ -1336,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_score_threshold_python">
 <a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
@@ -1345,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_score_threshold_python">
 <a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
@@ -1354,16 +1224,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="predictionmappings">Prediction<wbr>Mappings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_csharp">
 <a href="#grade_csharp" style="color: inherit; text-decoration: inherit;">Grade</a>
@@ -1371,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1380,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_csharp">
 <a href="#score_csharp" style="color: inherit; text-decoration: inherit;">Score</a>
@@ -1389,14 +1254,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_go">
 <a href="#grade_go" style="color: inherit; text-decoration: inherit;">Grade</a>
@@ -1404,8 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1413,8 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_go">
 <a href="#score_go" style="color: inherit; text-decoration: inherit;">Score</a>
@@ -1422,14 +1282,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_nodejs">
 <a href="#grade_nodejs" style="color: inherit; text-decoration: inherit;">grade</a>
@@ -1437,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1446,8 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_nodejs">
 <a href="#score_nodejs" style="color: inherit; text-decoration: inherit;">score</a>
@@ -1455,14 +1310,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_python">
 <a href="#grade_python" style="color: inherit; text-decoration: inherit;">grade</a>
@@ -1470,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1479,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_python">
 <a href="#score_python" style="color: inherit; text-decoration: inherit;">score</a>
@@ -1488,16 +1338,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="predictionresponsegrades">Prediction<wbr>Response<wbr>Grades</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gradename_csharp">
 <a href="#gradename_csharp" style="color: inherit; text-decoration: inherit;">Grade<wbr>Name</a>
@@ -1505,8 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscorethreshold_csharp">
 <a href="#maxscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Score<wbr>Threshold</a>
@@ -1514,8 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minscorethreshold_csharp">
 <a href="#minscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Score<wbr>Threshold</a>
@@ -1523,14 +1368,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gradename_go">
 <a href="#gradename_go" style="color: inherit; text-decoration: inherit;">Grade<wbr>Name</a>
@@ -1538,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscorethreshold_go">
 <a href="#maxscorethreshold_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Score<wbr>Threshold</a>
@@ -1547,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minscorethreshold_go">
 <a href="#minscorethreshold_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Score<wbr>Threshold</a>
@@ -1556,14 +1396,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="gradename_nodejs">
 <a href="#gradename_nodejs" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
@@ -1571,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxscorethreshold_nodejs">
 <a href="#maxscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
@@ -1580,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minscorethreshold_nodejs">
 <a href="#minscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
@@ -1589,14 +1424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grade_name_python">
 <a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
@@ -1604,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_score_threshold_python">
 <a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
@@ -1613,8 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_score_threshold_python">
 <a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
@@ -1622,16 +1452,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="predictionresponsemappings">Prediction<wbr>Response<wbr>Mappings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_csharp">
 <a href="#grade_csharp" style="color: inherit; text-decoration: inherit;">Grade</a>
@@ -1639,8 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1648,8 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_csharp">
 <a href="#score_csharp" style="color: inherit; text-decoration: inherit;">Score</a>
@@ -1657,14 +1482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_go">
 <a href="#grade_go" style="color: inherit; text-decoration: inherit;">Grade</a>
@@ -1672,8 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1681,8 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_go">
 <a href="#score_go" style="color: inherit; text-decoration: inherit;">Score</a>
@@ -1690,14 +1510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_nodejs">
 <a href="#grade_nodejs" style="color: inherit; text-decoration: inherit;">grade</a>
@@ -1705,8 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1714,8 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_nodejs">
 <a href="#score_nodejs" style="color: inherit; text-decoration: inherit;">score</a>
@@ -1723,14 +1538,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="grade_python">
 <a href="#grade_python" style="color: inherit; text-decoration: inherit;">grade</a>
@@ -1738,8 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1747,8 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="score_python">
 <a href="#score_python" style="color: inherit; text-decoration: inherit;">score</a>
@@ -1756,16 +1566,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="predictionresponsesystemgeneratedentities">Prediction<wbr>Response<wbr>System<wbr>Generated<wbr>Entities</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="generatedinteractiontypes_csharp">
 <a href="#generatedinteractiontypes_csharp" style="color: inherit; text-decoration: inherit;">Generated<wbr>Interaction<wbr>Types</a>
@@ -1773,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatedkpis_csharp">
 <a href="#generatedkpis_csharp" style="color: inherit; text-decoration: inherit;">Generated<wbr>Kpis</a>
@@ -1782,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatedlinks_csharp">
 <a href="#generatedlinks_csharp" style="color: inherit; text-decoration: inherit;">Generated<wbr>Links</a>
@@ -1791,14 +1596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Generated links.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Generated links.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="generatedinteractiontypes_go">
 <a href="#generatedinteractiontypes_go" style="color: inherit; text-decoration: inherit;">Generated<wbr>Interaction<wbr>Types</a>
@@ -1806,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatedkpis_go">
 <a href="#generatedkpis_go" style="color: inherit; text-decoration: inherit;">Generated<wbr>Kpis</a>
@@ -1815,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatedlinks_go">
 <a href="#generatedlinks_go" style="color: inherit; text-decoration: inherit;">Generated<wbr>Links</a>
@@ -1824,14 +1624,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Generated links.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Generated links.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="generatedinteractiontypes_nodejs">
 <a href="#generatedinteractiontypes_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Interaction<wbr>Types</a>
@@ -1839,8 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatedkpis_nodejs">
 <a href="#generatedkpis_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Kpis</a>
@@ -1848,8 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatedlinks_nodejs">
 <a href="#generatedlinks_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Links</a>
@@ -1857,14 +1652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Generated links.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Generated links.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="generated_interaction_types_python">
 <a href="#generated_interaction_types_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>interaction_<wbr>types</a>
@@ -1872,8 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generated_kpis_python">
 <a href="#generated_kpis_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>kpis</a>
@@ -1881,8 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generated_links_python">
 <a href="#generated_links_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>links</a>
@@ -1890,8 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Generated links.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Generated links.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

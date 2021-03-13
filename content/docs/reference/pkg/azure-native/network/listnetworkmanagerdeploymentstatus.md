@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkmanagername_csharp">
 <a href="#networkmanagername_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttypes_csharp">
 <a href="#deploymenttypes_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Types</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Deployment<wbr>Type&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_csharp">
 <a href="#skiptoken_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_csharp">
 <a href="#top_csharp" style="color: inherit; text-decoration: inherit;">Top</a>
@@ -106,14 +99,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkmanagername_go">
 <a href="#networkmanagername_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Manager<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttypes_go">
 <a href="#deploymenttypes_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Types</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_go">
 <a href="#skiptoken_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Token</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_go">
 <a href="#top_go" style="color: inherit; text-decoration: inherit;">Top</a>
@@ -166,14 +151,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkmanagername_nodejs">
 <a href="#networkmanagername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Manager<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttypes_nodejs">
 <a href="#deploymenttypes_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Types</a>
@@ -199,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | Deployment<wbr>Type[]</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -208,8 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptoken_nodejs">
 <a href="#skiptoken_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Token</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_nodejs">
 <a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
@@ -226,14 +203,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_manager_name_python">
 <a href="#network_manager_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>manager_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_types_python">
 <a href="#deployment_types_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>types</a>
@@ -259,8 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Deployment<wbr>Type]]</span>
     </dt>
-    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configurations' deployment types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -268,8 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of locations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_token_python">
 <a href="#skip_token_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>token</a>
@@ -277,8 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SkipToken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="top_python">
 <a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
@@ -286,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional query parameter which specifies the maximum number of records to be returned by the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -300,9 +268,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -319,14 +284,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmanagerdeploymentstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Network<wbr>Manager<wbr>Deployment<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmanagerdeploymentstatusresponse">[]Network<wbr>Manager<wbr>Deployment<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -367,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmanagerdeploymentstatusresponse">Network<wbr>Manager<wbr>Deployment<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the URL to get the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkmanagerdeploymentstatusresponse">Sequence[Network<wbr>Manager<wbr>Deployment<wbr>Status<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a page of Network Manager Deployment Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -410,9 +362,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="committime_csharp">
 <a href="#committime_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Time</a>
@@ -420,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Commit Time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Commit Time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationids_csharp">
 <a href="#configurationids_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Ids</a>
@@ -429,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_csharp">
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
@@ -438,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_csharp">
 <a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
@@ -447,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -456,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -465,14 +410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Region Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="committime_go">
 <a href="#committime_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Time</a>
@@ -480,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Commit Time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Commit Time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationids_go">
 <a href="#configurationids_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Ids</a>
@@ -489,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_go">
 <a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
@@ -498,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_go">
 <a href="#deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
@@ -507,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -516,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -525,14 +462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Region Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="committime_nodejs">
 <a href="#committime_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Time</a>
@@ -540,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Commit Time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Commit Time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationids_nodejs">
 <a href="#configurationids_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Ids</a>
@@ -549,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_nodejs">
 <a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
@@ -558,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymenttype_nodejs">
 <a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
@@ -567,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -576,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -585,14 +514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Region Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commit_time_python">
 <a href="#commit_time_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>time</a>
@@ -600,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Commit Time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Commit Time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_ids_python">
 <a href="#configuration_ids_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>ids</a>
@@ -609,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of configuration ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_status_python">
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
@@ -618,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Deployment Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_type_python">
 <a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
@@ -627,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Configuration Deployment Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -636,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error Message.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Error Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -645,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region Name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Region Name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

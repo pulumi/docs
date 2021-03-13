@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningservicename_csharp">
 <a href="#provisioningservicename_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Service<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningservicename_go">
 <a href="#provisioningservicename_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Service<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningservicename_nodejs">
 <a href="#provisioningservicename_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Service<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_service_name_python">
 <a href="#provisioning_service_name_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>service_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the provisioning service to retrieve.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpspropertiesdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Outputs.<wbr>Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpsskuinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Outputs.<wbr>Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -229,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpspropertiesdescriptionresponse">Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpsskuinforesponse">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpspropertiesdescriptionresponse">Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpsskuinforesponse">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -385,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpspropertiesdescriptionresponse">Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iotdpsskuinforesponse">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceprovisioninghostname_csharp">
 <a href="#deviceprovisioninghostname_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Provisioning<wbr>Host<wbr>Name</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idscope_csharp">
 <a href="#idscope_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Scope</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceoperationshostname_csharp">
 <a href="#serviceoperationshostname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Operations<wbr>Host<wbr>Name</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationpolicy_csharp">
 <a href="#allocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Policy</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_csharp">
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iothubs_csharp">
 <a href="#iothubs_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_csharp">
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
@@ -542,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -551,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -569,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -578,14 +510,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceprovisioninghostname_go">
 <a href="#deviceprovisioninghostname_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Provisioning<wbr>Host<wbr>Name</a>
@@ -593,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idscope_go">
 <a href="#idscope_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Scope</a>
@@ -602,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceoperationshostname_go">
 <a href="#serviceoperationshostname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Operations<wbr>Host<wbr>Name</a>
@@ -611,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationpolicy_go">
 <a href="#allocationpolicy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Policy</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_go">
 <a href="#authorizationpolicies_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">[]Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iothubs_go">
 <a href="#iothubs_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">[]Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_go">
 <a href="#ipfilterrules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
@@ -647,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">[]Ip<wbr>Filter<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -683,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceprovisioninghostname_nodejs">
 <a href="#deviceprovisioninghostname_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Provisioning<wbr>Host<wbr>Name</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idscope_nodejs">
 <a href="#idscope_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Scope</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceoperationshostname_nodejs">
 <a href="#serviceoperationshostname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Operations<wbr>Host<wbr>Name</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationpolicy_nodejs">
 <a href="#allocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Policy</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicies_nodejs">
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
@@ -734,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iothubs_nodejs">
 <a href="#iothubs_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hubs</a>
@@ -743,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterrules_nodejs">
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
@@ -752,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -761,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -770,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -779,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -788,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_provisioning_host_name_python">
 <a href="#device_provisioning_host_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>provisioning_<wbr>host_<wbr>name</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Device endpoint for this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_scope_python">
 <a href="#id_scope_python" style="color: inherit; text-decoration: inherit;">id_<wbr>scope</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of this provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_operations_host_name_python">
 <a href="#service_operations_host_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>operations_<wbr>host_<wbr>name</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Service endpoint for provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocation_policy_python">
 <a href="#allocation_policy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>policy</a>
@@ -830,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allocation policy to be used by this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_policies_python">
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
@@ -839,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iot_hubs_python">
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filter_rules_python">
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM provisioning state of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Current state of the provisioning service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iotdpsskuinforesponse">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Response</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -912,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -921,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -930,14 +818,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -945,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -954,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -963,14 +846,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -987,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -996,14 +874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pricing tier name of the provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of units to provision{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sku name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iothubdefinitiondescriptionresponse">Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response</h4>
@@ -1038,9 +910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1048,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1057,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1066,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationweight_csharp">
 <a href="#allocationweight_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Weight</a>
@@ -1075,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyallocationpolicy_csharp">
 <a href="#applyallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Allocation<wbr>Policy</a>
@@ -1084,14 +950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1099,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1108,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1117,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationweight_go">
 <a href="#allocationweight_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Weight</a>
@@ -1126,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyallocationpolicy_go">
 <a href="#applyallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Allocation<wbr>Policy</a>
@@ -1135,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1150,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1159,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1168,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationweight_nodejs">
 <a href="#allocationweight_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Weight</a>
@@ -1177,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyallocationpolicy_nodejs">
 <a href="#applyallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Allocation<wbr>Policy</a>
@@ -1186,14 +1038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1201,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Connection string of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1210,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ARM region of the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1219,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Host name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocation_weight_python">
 <a href="#allocation_weight_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>weight</a>
@@ -1228,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}weight to apply for a given iot h.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_allocation_policy_python">
 <a href="#apply_allocation_policy_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>allocation_<wbr>policy</a>
@@ -1237,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}flag for applying allocationPolicy or not for a given iot hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response</h4>
@@ -1246,9 +1090,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1256,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_csharp">
 <a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -1265,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_csharp">
 <a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -1274,14 +1114,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1289,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_go">
 <a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
@@ -1298,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_go">
 <a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
@@ -1307,14 +1142,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1322,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtername_nodejs">
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
@@ -1331,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipmask_nodejs">
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
@@ -1340,14 +1170,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1355,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The desired action for requests captured by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_name_python">
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
@@ -1364,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the IP filter rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_mask_python">
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
@@ -1373,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</h4>
@@ -1382,9 +1206,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1392,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1401,14 +1222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1416,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1425,14 +1242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1440,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -1449,14 +1262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1464,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -1473,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
@@ -1482,9 +1290,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1492,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1501,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1510,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1519,14 +1322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1534,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1543,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1552,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1561,14 +1358,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1576,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1585,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1594,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1603,14 +1394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1618,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1627,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1636,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1645,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
@@ -1654,9 +1438,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1664,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1679,14 +1458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1694,14 +1470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1709,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
@@ -1718,9 +1490,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1728,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1737,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1746,14 +1514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1761,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1770,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
@@ -1779,14 +1542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1794,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1803,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
@@ -1812,14 +1570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1827,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description for the current state of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1836,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
@@ -1845,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Actions required for a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response</h4>
@@ -1854,9 +1606,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1864,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_csharp">
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -1873,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -1882,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -1891,14 +1638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -1906,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_go">
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -1915,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -1924,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -1933,14 +1674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -1948,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_nodejs">
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -1957,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -1966,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -1975,14 +1710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -1990,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the key.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_python">
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -1999,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Rights that this key has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -2008,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary SAS key value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -2017,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary SAS key value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumecontainername_csharp">
 <a href="#volumecontainername_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The volume container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The volume name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumecontainername_go">
 <a href="#volumecontainername_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The volume container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The volume name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumecontainername_nodejs">
 <a href="#volumecontainername_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Container<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The volume container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The volume name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_container_name_python">
 <a href="#volume_container_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>container_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The volume container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The volume name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesscontrolrecordids_csharp">
 <a href="#accesscontrolrecordids_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Record<wbr>Ids</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backuppolicyids_csharp">
 <a href="#backuppolicyids_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Ids</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backupstatus_csharp">
 <a href="#backupstatus_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Status</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operationstatus_csharp">
 <a href="#operationstatus_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_csharp">
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecontainerid_csharp">
 <a href="#volumecontainerid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Id</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumestatus_csharp">
 <a href="#volumestatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The volume status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -382,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesscontrolrecordids_go">
 <a href="#accesscontrolrecordids_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Record<wbr>Ids</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backuppolicyids_go">
 <a href="#backuppolicyids_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Ids</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backupstatus_go">
 <a href="#backupstatus_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Status</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operationstatus_go">
 <a href="#operationstatus_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_go">
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecontainerid_go">
 <a href="#volumecontainerid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Id</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumestatus_go">
 <a href="#volumestatus_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The volume status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -505,14 +448,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesscontrolrecordids_nodejs">
 <a href="#accesscontrolrecordids_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Record<wbr>Ids</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backuppolicyids_nodejs">
 <a href="#backuppolicyids_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Ids</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backupstatus_nodejs">
 <a href="#backupstatus_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Status</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operationstatus_nodejs">
 <a href="#operationstatus_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Status</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_nodejs">
 <a href="#sizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Bytes</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecontainerid_nodejs">
 <a href="#volumecontainerid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Container<wbr>Id</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumestatus_nodejs">
 <a href="#volumestatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Status</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The volume status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -628,14 +556,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_control_record_ids_python">
 <a href="#access_control_record_ids_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>record_<wbr>ids</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backup_policy_ids_python">
 <a href="#backup_policy_ids_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>ids</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backup_status_python">
 <a href="#backup_status_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>status</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_status_python">
 <a href="#operation_status_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>status</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_in_bytes_python">
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_container_id_python">
 <a href="#volume_container_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>container_<wbr>id</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_status_python">
 <a href="#volume_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>status</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The volume status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the volume.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

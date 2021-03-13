@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webtestname_csharp">
 <a href="#webtestname_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webtestname_go">
 <a href="#webtestname_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webtestname_nodejs">
 <a href="#webtestname_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="web_test_name_python">
 <a href="#web_test_name_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights webtest resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestgeolocationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Web<wbr>Test<wbr>Geolocation<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticmonitorid_csharp">
 <a href="#syntheticmonitorid_csharp" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webtestkind_csharp">
 <a href="#webtestkind_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Kind</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webtestname_csharp">
 <a href="#webtestname_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Name</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryenabled_csharp">
 <a href="#retryenabled_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestgeolocationresponse">[]Web<wbr>Test<wbr>Geolocation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticmonitorid_go">
 <a href="#syntheticmonitorid_go" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webtestkind_go">
 <a href="#webtestkind_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Kind</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webtestname_go">
 <a href="#webtestname_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test<wbr>Name</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryenabled_go">
 <a href="#retryenabled_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -469,14 +416,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestgeolocationresponse">Web<wbr>Test<wbr>Geolocation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticmonitorid_nodejs">
 <a href="#syntheticmonitorid_nodejs" style="color: inherit; text-decoration: inherit;">synthetic<wbr>Monitor<wbr>Id</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webtestkind_nodejs">
 <a href="#webtestkind_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Kind</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="webtestname_nodejs">
 <a href="#webtestname_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Name</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryenabled_nodejs">
 <a href="#retryenabled_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Enabled</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -628,14 +556,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestgeolocationresponse">Sequence[Web<wbr>Test<wbr>Geolocation<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="synthetic_monitor_id_python">
 <a href="#synthetic_monitor_id_python" style="color: inherit; text-decoration: inherit;">synthetic_<wbr>monitor_<wbr>id</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Unique ID of this WebTest. This is typically the same value as the Name field.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="web_test_kind_python">
 <a href="#web_test_kind_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>kind</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test this is, valid choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="web_test_name_python">
 <a href="#web_test_name_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>name</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User defined name if this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webtestpropertiesresponseconfiguration">Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the test actively being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default value is 300.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_enabled_python">
 <a href="#retry_enabled_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>enabled</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Allow for retries should this WebTest fail.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default value is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -802,9 +710,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -812,14 +718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -827,14 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -842,14 +742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Location ID for the webtest to run from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webtestpropertiesresponseconfiguration">Web<wbr>Test<wbr>Properties<wbr>Response<wbr>Configuration</h4>
@@ -866,9 +762,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="webtest_csharp">
 <a href="#webtest_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Test</a>
@@ -876,14 +770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="webtest_go">
 <a href="#webtest_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Test</a>
@@ -891,14 +782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="webtest_nodejs">
 <a href="#webtest_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test</a>
@@ -906,14 +794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="web_test_python">
 <a href="#web_test_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_csharp">
 <a href="#privatecloudname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_go">
 <a href="#privatecloudname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_nodejs">
 <a href="#privatecloudname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_cloud_name_python">
 <a href="#private_cloud_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The endpoints{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementcluster_csharp">
 <a href="#managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementclusterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Management<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementnetwork_csharp">
 <a href="#managementnetwork_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Network</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkblock_csharp">
 <a href="#networkblock_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Block</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_csharp">
 <a href="#nsxtcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningnetwork_csharp">
 <a href="#provisioningnetwork_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Network</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_csharp">
 <a href="#vcentercertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotionnetwork_csharp">
 <a href="#vmotionnetwork_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Network</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="circuit_csharp">
 <a href="#circuit_csharp" style="color: inherit; text-decoration: inherit;">Circuit</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Circuit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identitysources_csharp">
 <a href="#identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Identity<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internet_csharp">
 <a href="#internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtpassword_csharp">
 <a href="#nsxtpassword_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterpassword_csharp">
 <a href="#vcenterpassword_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -337,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The endpoints{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementcluster_go">
 <a href="#managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementclusterresponse">Management<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementnetwork_go">
 <a href="#managementnetwork_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Network</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkblock_go">
 <a href="#networkblock_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Block</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_go">
 <a href="#nsxtcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningnetwork_go">
 <a href="#provisioningnetwork_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Network</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_go">
 <a href="#vcentercertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotionnetwork_go">
 <a href="#vmotionnetwork_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Network</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="circuit_go">
 <a href="#circuit_go" style="color: inherit; text-decoration: inherit;">Circuit</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identitysources_go">
 <a href="#identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysourceresponse">[]Identity<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internet_go">
 <a href="#internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtpassword_go">
 <a href="#nsxtpassword_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterpassword_go">
 <a href="#vcenterpassword_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -523,14 +464,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The endpoints{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementcluster_nodejs">
 <a href="#managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementclusterresponse">Management<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementnetwork_nodejs">
 <a href="#managementnetwork_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Network</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkblock_nodejs">
 <a href="#networkblock_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Block</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_nodejs">
 <a href="#nsxtcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningnetwork_nodejs">
 <a href="#provisioningnetwork_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Network</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_nodejs">
 <a href="#vcentercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotionnetwork_nodejs">
 <a href="#vmotionnetwork_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Network</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="circuit_nodejs">
 <a href="#circuit_nodejs" style="color: inherit; text-decoration: inherit;">circuit</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identitysources_nodejs">
 <a href="#identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysourceresponse">Identity<wbr>Source<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internet_nodejs">
 <a href="#internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtpassword_nodejs">
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterpassword_nodejs">
 <a href="#vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
@@ -709,14 +628,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The endpoints{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_cluster_python">
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementclusterresponse">Management<wbr>Cluster<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_network_python">
 <a href="#management_network_python" style="color: inherit; text-decoration: inherit;">management_<wbr>network</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_block_python">
 <a href="#network_block_python" style="color: inherit; text-decoration: inherit;">network_<wbr>block</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxt_certificate_thumbprint_python">
 <a href="#nsxt_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>certificate_<wbr>thumbprint</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_network_python">
 <a href="#provisioning_network_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>network</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenter_certificate_thumbprint_python">
 <a href="#vcenter_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>certificate_<wbr>thumbprint</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotion_network_python">
 <a href="#vmotion_network_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>network</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="circuit_python">
 <a href="#circuit_python" style="color: inherit; text-decoration: inherit;">circuit</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_sources_python">
 <a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysourceresponse">Sequence[Identity<wbr>Source<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internet_python">
 <a href="#internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxt_password_python">
 <a href="#nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenter_password_python">
 <a href="#vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressrouteid_csharp">
 <a href="#expressrouteid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>ID</a>
@@ -920,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expressrouteprivatepeeringid_csharp">
 <a href="#expressrouteprivatepeeringid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
@@ -929,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarysubnet_csharp">
 <a href="#primarysubnet_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Subnet</a>
@@ -938,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarysubnet_csharp">
 <a href="#secondarysubnet_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Subnet</a>
@@ -947,14 +838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressrouteid_go">
 <a href="#expressrouteid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>ID</a>
@@ -962,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expressrouteprivatepeeringid_go">
 <a href="#expressrouteprivatepeeringid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
@@ -971,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarysubnet_go">
 <a href="#primarysubnet_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Subnet</a>
@@ -980,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarysubnet_go">
 <a href="#secondarysubnet_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Subnet</a>
@@ -989,14 +874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressrouteid_nodejs">
 <a href="#expressrouteid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>ID</a>
@@ -1004,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expressrouteprivatepeeringid_nodejs">
 <a href="#expressrouteprivatepeeringid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
@@ -1013,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarysubnet_nodejs">
 <a href="#primarysubnet_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Subnet</a>
@@ -1022,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarysubnet_nodejs">
 <a href="#secondarysubnet_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Subnet</a>
@@ -1031,14 +910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="express_route_id_python">
 <a href="#express_route_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>id</a>
@@ -1046,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="express_route_private_peering_id_python">
 <a href="#express_route_private_peering_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>private_<wbr>peering_<wbr>id</a>
@@ -1055,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primary_subnet_python">
 <a href="#primary_subnet_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>subnet</a>
@@ -1064,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondary_subnet_python">
 <a href="#secondary_subnet_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>subnet</a>
@@ -1073,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointsresponse">Endpoints<wbr>Response</h4>
@@ -1082,9 +954,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hcxcloudmanager_csharp">
 <a href="#hcxcloudmanager_csharp" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager</a>
@@ -1092,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nsxtmanager_csharp">
 <a href="#nsxtmanager_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager</a>
@@ -1101,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcsa_csharp">
 <a href="#vcsa_csharp" style="color: inherit; text-decoration: inherit;">Vcsa</a>
@@ -1110,14 +978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hcxcloudmanager_go">
 <a href="#hcxcloudmanager_go" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager</a>
@@ -1125,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nsxtmanager_go">
 <a href="#nsxtmanager_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager</a>
@@ -1134,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcsa_go">
 <a href="#vcsa_go" style="color: inherit; text-decoration: inherit;">Vcsa</a>
@@ -1143,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hcxcloudmanager_nodejs">
 <a href="#hcxcloudmanager_nodejs" style="color: inherit; text-decoration: inherit;">hcx<wbr>Cloud<wbr>Manager</a>
@@ -1158,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nsxtmanager_nodejs">
 <a href="#nsxtmanager_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Manager</a>
@@ -1167,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcsa_nodejs">
 <a href="#vcsa_nodejs" style="color: inherit; text-decoration: inherit;">vcsa</a>
@@ -1176,14 +1034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hcx_cloud_manager_python">
 <a href="#hcx_cloud_manager_python" style="color: inherit; text-decoration: inherit;">hcx_<wbr>cloud_<wbr>manager</a>
@@ -1191,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nsxt_manager_python">
 <a href="#nsxt_manager_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>manager</a>
@@ -1200,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcsa_python">
 <a href="#vcsa_python" style="color: inherit; text-decoration: inherit;">vcsa</a>
@@ -1209,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identitysourceresponse">Identity<wbr>Source<wbr>Response</h4>
@@ -1218,9 +1070,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1228,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_csharp">
 <a href="#basegroupdn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Group<wbr>DN</a>
@@ -1237,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_csharp">
 <a href="#baseuserdn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>User<wbr>DN</a>
@@ -1246,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1255,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1264,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1273,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryserver_csharp">
 <a href="#primaryserver_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Server</a>
@@ -1282,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_csharp">
 <a href="#secondaryserver_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Server</a>
@@ -1291,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -1300,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1309,14 +1150,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1324,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_go">
 <a href="#basegroupdn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Group<wbr>DN</a>
@@ -1333,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_go">
 <a href="#baseuserdn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>User<wbr>DN</a>
@@ -1342,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1351,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1360,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1369,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryserver_go">
 <a href="#primaryserver_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Server</a>
@@ -1378,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_go">
 <a href="#secondaryserver_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Server</a>
@@ -1387,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -1396,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1405,14 +1234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1420,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_nodejs">
 <a href="#basegroupdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
@@ -1429,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_nodejs">
 <a href="#baseuserdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
@@ -1438,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1447,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1456,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1465,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryserver_nodejs">
 <a href="#primaryserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
@@ -1474,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_nodejs">
 <a href="#secondaryserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
@@ -1483,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -1492,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1501,14 +1318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1516,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_group_dn_python">
 <a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
@@ -1525,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_user_dn_python">
 <a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
@@ -1534,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1543,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain's dns name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1552,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the identity source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1561,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_server_python">
 <a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
@@ -1570,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_server_python">
 <a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
@@ -1579,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary server URL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -1588,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1597,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementclusterresponse">Management<wbr>Cluster<wbr>Response</h4>
@@ -1606,9 +1410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1616,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustersize_csharp">
 <a href="#clustersize_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Size</a>
@@ -1625,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The cluster size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -1634,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The hosts{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hosts{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1643,14 +1442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1658,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustersize_go">
 <a href="#clustersize_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Size</a>
@@ -1667,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The cluster size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -1676,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The hosts{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hosts{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1685,14 +1478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1700,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustersize_nodejs">
 <a href="#clustersize_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Size</a>
@@ -1709,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The cluster size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -1718,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The hosts{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hosts{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1727,14 +1514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1742,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_size_python">
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
@@ -1751,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The cluster size{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -1760,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The hosts{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The hosts{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1769,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -1778,9 +1558,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1788,14 +1566,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1803,14 +1578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1818,14 +1590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1833,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

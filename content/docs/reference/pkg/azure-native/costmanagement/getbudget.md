@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="budgetname_csharp">
 <a href="#budgetname_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Budget Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Budget Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="budgetname_go">
 <a href="#budgetname_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Budget Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Budget Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="budgetname_nodejs">
 <a href="#budgetname_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Budget Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Budget Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="budget_name_python">
 <a href="#budget_name_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Budget Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Budget Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="amount_csharp">
 <a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentspend_csharp">
 <a href="#currentspend_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Spend</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#currentspendresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Current<wbr>Spend<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timegrain_csharp">
 <a href="#timegrain_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Grain</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeperiod_csharp">
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgettimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_csharp">
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -256,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Notification<wbr>Response&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="amount_go">
 <a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentspend_go">
 <a href="#currentspend_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Spend</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timegrain_go">
 <a href="#timegrain_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Grain</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeperiod_go">
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgettimeperiodresponse">Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_go">
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Notification<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="amount_nodejs">
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentspend_nodejs">
 <a href="#currentspend_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Spend</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timegrain_nodejs">
 <a href="#timegrain_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeperiod_nodejs">
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgettimeperiodresponse">Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_nodejs">
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -466,14 +412,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Notification<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="amount_python">
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_spend_python">
 <a href="#current_spend_python" style="color: inherit; text-decoration: inherit;">current_<wbr>spend</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#currentspendresponse">Current<wbr>Spend<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current amount of cost which is being tracked for a budget.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_grain_python">
 <a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_period_python">
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgettimeperiodresponse">Budget<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than three months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}May be used to filter budgets.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_python">
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Notification<wbr>Response]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="startdate_csharp">
 <a href="#startdate_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddate_csharp">
 <a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -605,14 +534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="startdate_go">
 <a href="#startdate_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddate_go">
 <a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -629,14 +554,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="startdate_nodejs">
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
@@ -644,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enddate_nodejs">
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
@@ -653,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="start_date_python">
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_date_python">
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="currentspendresponse">Current<wbr>Spend<wbr>Response</h4>
@@ -686,9 +602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_csharp">
 <a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -696,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -705,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_go">
 <a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -720,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -729,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_nodejs">
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -744,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -753,14 +658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_python">
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -768,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -777,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationresponse">Notification<wbr>Response</h4>
@@ -786,9 +686,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactemails_csharp">
 <a href="#contactemails_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Emails</a>
@@ -796,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -805,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -814,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -823,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactgroups_csharp">
 <a href="#contactgroups_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Groups</a>
@@ -832,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactroles_csharp">
 <a href="#contactroles_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Roles</a>
@@ -841,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactemails_go">
 <a href="#contactemails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Emails</a>
@@ -856,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -865,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -874,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -883,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactgroups_go">
 <a href="#contactgroups_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Groups</a>
@@ -892,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactroles_go">
 <a href="#contactroles_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Roles</a>
@@ -901,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactemails_nodejs">
 <a href="#contactemails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
@@ -916,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -925,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -934,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -943,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactgroups_nodejs">
 <a href="#contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
@@ -952,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contactroles_nodejs">
 <a href="#contactroles_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
@@ -961,14 +838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_emails_python">
 <a href="#contact_emails_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>emails</a>
@@ -976,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -985,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -994,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1003,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contact_groups_python">
 <a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
@@ -1012,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contact_roles_python">
 <a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
@@ -1021,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</h4>
@@ -1030,9 +898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1040,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1049,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1058,14 +922,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1073,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1082,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1091,14 +950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1106,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1115,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1124,14 +978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1139,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1148,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1157,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</h4>
@@ -1166,9 +1014,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and_csharp">
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
@@ -1176,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1185,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or_csharp">
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
@@ -1194,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagkey_csharp">
 <a href="#tagkey_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
@@ -1203,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagvalue_csharp">
 <a href="#tagvalue_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Value</a>
@@ -1212,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1221,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and_go">
 <a href="#and_go" style="color: inherit; text-decoration: inherit;">And</a>
@@ -1236,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">[]Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1245,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or_go">
 <a href="#or_go" style="color: inherit; text-decoration: inherit;">Or</a>
@@ -1254,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">[]Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagkey_go">
 <a href="#tagkey_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
@@ -1263,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagvalue_go">
 <a href="#tagvalue_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Value</a>
@@ -1272,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1281,14 +1114,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and_nodejs">
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
@@ -1296,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1305,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or_nodejs">
 <a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
@@ -1314,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagkey_nodejs">
 <a href="#tagkey_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
@@ -1323,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagvalue_nodejs">
 <a href="#tagvalue_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Value</a>
@@ -1332,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1341,14 +1166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and__python">
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
@@ -1356,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1365,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or__python">
 <a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
@@ -1374,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_key_python">
 <a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
@@ -1383,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_value_python">
 <a href="#tag_value_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>value</a>
@@ -1392,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1401,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

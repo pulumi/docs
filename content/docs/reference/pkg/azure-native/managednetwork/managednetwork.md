@@ -14,11 +14,17 @@ The Managed Network resource
 API Version: 2019-06-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ManagedNetworksPut
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -87,9 +93,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -150,9 +159,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -200,9 +212,12 @@ managed_network = azure_native.managednetwork.ManagedNetwork("managedNetwork",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -251,9 +266,16 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagedNetwork Resource {#create}
@@ -278,9 +300,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -288,9 +308,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -298,9 +316,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -308,10 +324,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -337,9 +350,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -347,9 +358,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -357,9 +366,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -367,9 +374,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -377,18 +382,13 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -396,9 +396,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -406,9 +404,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -416,10 +412,7 @@ const managedNetwork = new azure_native.managednetwork.ManagedNetwork("managedNe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -434,9 +427,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -444,8 +435,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -453,8 +443,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednetworkname_csharp">
 <a href="#managednetworkname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Network<wbr>Name</a>
@@ -462,8 +451,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -471,8 +459,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -480,14 +467,11 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -495,8 +479,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -504,8 +487,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednetworkname_go">
 <a href="#managednetworkname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Network<wbr>Name</a>
@@ -513,8 +495,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -522,8 +503,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -531,14 +511,11 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -546,8 +523,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -555,8 +531,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednetworkname_nodejs">
 <a href="#managednetworkname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Network<wbr>Name</a>
@@ -564,8 +539,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -573,8 +547,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -582,14 +555,11 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -597,8 +567,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -606,8 +575,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_network_name_python">
 <a href="#managed_network_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>network_<wbr>name</a>
@@ -615,8 +583,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the Managed Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -624,8 +591,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -633,8 +599,7 @@ The ManagedNetwork resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -645,9 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivity_csharp">
 <a href="#connectivity_csharp" style="color: inherit; text-decoration: inherit;">Connectivity</a>
@@ -655,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitycollectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Outputs.<wbr>Connectivity<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -664,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -673,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -682,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -691,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -700,14 +658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivity_go">
 <a href="#connectivity_go" style="color: inherit; text-decoration: inherit;">Connectivity</a>
@@ -715,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitycollectionresponse">Connectivity<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -724,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -733,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -742,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -751,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -760,14 +710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivity_nodejs">
 <a href="#connectivity_nodejs" style="color: inherit; text-decoration: inherit;">connectivity</a>
@@ -775,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitycollectionresponse">Connectivity<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -784,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -793,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -802,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -811,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -820,14 +762,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectivity_python">
 <a href="#connectivity_python" style="color: inherit; text-decoration: inherit;">connectivity</a>
@@ -835,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitycollectionresponse">Connectivity<wbr>Collection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The collection of groups and policies concerned with connectivity{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -844,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -853,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -862,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -871,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -880,8 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -897,9 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="connectivitycollectionresponse">Connectivity<wbr>Collection<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -907,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerings_csharp">
 <a href="#peerings_csharp" style="color: inherit; text-decoration: inherit;">Peerings</a>
@@ -916,14 +846,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -931,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkgroupresponse">[]Managed<wbr>Network<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerings_go">
 <a href="#peerings_go" style="color: inherit; text-decoration: inherit;">Peerings</a>
@@ -940,14 +866,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">[]Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -955,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkgroupresponse">Managed<wbr>Network<wbr>Group<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerings_nodejs">
 <a href="#peerings_nodejs" style="color: inherit; text-decoration: inherit;">peerings</a>
@@ -964,14 +886,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -979,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkgroupresponse">Sequence[Managed<wbr>Network<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The collection of connectivity related Managed Network Groups within the Managed Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerings_python">
 <a href="#peerings_python" style="color: inherit; text-decoration: inherit;">peerings</a>
@@ -988,16 +906,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicyresponse">Sequence[Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of Managed Network Peering Policies within the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managednetworkgroupresponse">Managed<wbr>Network<wbr>Group<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1005,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1014,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1023,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1032,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1041,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1050,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1059,8 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_csharp">
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
@@ -1068,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1077,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_csharp">
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
@@ -1086,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_csharp">
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -1095,14 +1000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1110,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1119,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1128,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1137,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1146,8 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1155,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1164,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_go">
 <a href="#managementgroups_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
@@ -1173,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1182,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_go">
 <a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
@@ -1191,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_go">
 <a href="#virtualnetworks_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -1200,14 +1092,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1215,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1224,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1233,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1242,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1251,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1260,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1269,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_nodejs">
 <a href="#managementgroups_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Groups</a>
@@ -1278,8 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1287,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_nodejs">
 <a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
@@ -1296,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_nodejs">
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
@@ -1305,14 +1184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1320,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1329,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1338,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1347,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1356,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1365,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Responsibility role under which this Managed Network Group will be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1374,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="management_groups_python">
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
@@ -1383,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1392,8 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_python">
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
@@ -1401,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_networks_python">
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
@@ -1410,16 +1276,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1427,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1436,8 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1445,8 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_csharp">
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
@@ -1454,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_csharp">
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
@@ -1463,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_csharp">
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
@@ -1472,14 +1330,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1487,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1496,8 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1505,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_go">
 <a href="#hub_go" style="color: inherit; text-decoration: inherit;">Hub</a>
@@ -1514,8 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_go">
 <a href="#mesh_go" style="color: inherit; text-decoration: inherit;">Mesh</a>
@@ -1523,8 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_go">
 <a href="#spokes_go" style="color: inherit; text-decoration: inherit;">Spokes</a>
@@ -1532,14 +1382,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1547,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1556,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1565,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_nodejs">
 <a href="#hub_nodejs" style="color: inherit; text-decoration: inherit;">hub</a>
@@ -1574,8 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_nodejs">
 <a href="#mesh_nodejs" style="color: inherit; text-decoration: inherit;">mesh</a>
@@ -1583,8 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_nodejs">
 <a href="#spokes_nodejs" style="color: inherit; text-decoration: inherit;">spokes</a>
@@ -1592,14 +1434,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1607,8 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1616,8 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning state of the ManagedNetwork resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1625,8 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the connectivity type of a network structure policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hub_python">
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
@@ -1634,8 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_python">
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
@@ -1643,8 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spokes_python">
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
@@ -1652,16 +1486,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managednetworkpeeringpolicyresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1669,8 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1678,8 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1687,8 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1696,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1705,14 +1532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1720,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1729,8 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1738,8 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1747,8 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1756,14 +1576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1771,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1780,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1789,8 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1798,8 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1807,14 +1620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1822,8 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1831,8 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1840,8 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1849,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1858,16 +1664,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managednetworkpeeringpolicypropertiesresponse">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceid">Resource<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1875,14 +1678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1890,14 +1690,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1905,14 +1702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1920,16 +1714,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1937,14 +1728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1952,14 +1740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1967,14 +1752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1982,16 +1764,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scope">Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_csharp">
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
@@ -1999,8 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2008,8 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_csharp">
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
@@ -2017,8 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_csharp">
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -2026,14 +1802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_go">
 <a href="#managementgroups_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
@@ -2041,8 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2050,8 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_go">
 <a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
@@ -2059,8 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_go">
 <a href="#virtualnetworks_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -2068,14 +1838,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_nodejs">
 <a href="#managementgroups_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Groups</a>
@@ -2083,8 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2092,8 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_nodejs">
 <a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
@@ -2101,8 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_nodejs">
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
@@ -2110,14 +1874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="management_groups_python">
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
@@ -2125,8 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2134,8 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_python">
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
@@ -2143,8 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_networks_python">
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
@@ -2152,16 +1910,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scoperesponse">Scope<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_csharp">
 <a href="#managementgroups_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
@@ -2169,8 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2178,8 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_csharp">
 <a href="#subscriptions_csharp" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
@@ -2187,8 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_csharp">
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -2196,14 +1948,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_go">
 <a href="#managementgroups_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
@@ -2211,8 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -2220,8 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_go">
 <a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
@@ -2229,8 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_go">
 <a href="#virtualnetworks_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -2238,14 +1984,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">[]Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="managementgroups_nodejs">
 <a href="#managementgroups_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Groups</a>
@@ -2253,8 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2262,8 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_nodejs">
 <a href="#subscriptions_nodejs" style="color: inherit; text-decoration: inherit;">subscriptions</a>
@@ -2271,8 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_nodejs">
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
@@ -2280,14 +2020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="management_groups_python">
 <a href="#management_groups_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups</a>
@@ -2295,8 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -2304,8 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptions_python">
 <a href="#subscriptions_python" style="color: inherit; text-decoration: inherit;">subscriptions</a>
@@ -2313,8 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_networks_python">
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
@@ -2322,8 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

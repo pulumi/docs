@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatezonename_csharp">
 <a href="#privatezonename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordtype_csharp">
 <a href="#recordtype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativerecordsetname_csharp">
 <a href="#relativerecordsetname_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Record<wbr>Set<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatezonename_go">
 <a href="#privatezonename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordtype_go">
 <a href="#recordtype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativerecordsetname_go">
 <a href="#relativerecordsetname_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Record<wbr>Set<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatezonename_nodejs">
 <a href="#privatezonename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Zone<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordtype_nodejs">
 <a href="#recordtype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativerecordsetname_nodejs">
 <a href="#relativerecordsetname_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Record<wbr>Set<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_zone_name_python">
 <a href="#private_zone_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="record_type_python">
 <a href="#record_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>type</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of DNS record in this record set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_record_set_name_python">
 <a href="#relative_record_set_name_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>record_<wbr>set_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the record set, relative to the name of the zone.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isautoregistered_csharp">
 <a href="#isautoregistered_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Auto<wbr>Registered</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arecords_csharp">
 <a href="#arecords_csharp" style="color: inherit; text-decoration: inherit;">ARecords</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#arecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>ARecord<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aaaarecords_csharp">
 <a href="#aaaarecords_csharp" style="color: inherit; text-decoration: inherit;">Aaaa<wbr>Records</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aaaarecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Aaaa<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cnamerecord_csharp">
 <a href="#cnamerecord_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Record</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cnamerecordresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Cname<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mxrecords_csharp">
 <a href="#mxrecords_csharp" style="color: inherit; text-decoration: inherit;">Mx<wbr>Records</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mxrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Mx<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ptrrecords_csharp">
 <a href="#ptrrecords_csharp" style="color: inherit; text-decoration: inherit;">Ptr<wbr>Records</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ptrrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Ptr<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="soarecord_csharp">
 <a href="#soarecord_csharp" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#soarecordresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Soa<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srvrecords_csharp">
 <a href="#srvrecords_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Records</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#srvrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Srv<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="txtrecords_csharp">
 <a href="#txtrecords_csharp" style="color: inherit; text-decoration: inherit;">Txt<wbr>Records</a>
@@ -373,14 +332,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#txtrecordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Txt<wbr>Record<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isautoregistered_go">
 <a href="#isautoregistered_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Auto<wbr>Registered</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arecords_go">
 <a href="#arecords_go" style="color: inherit; text-decoration: inherit;">ARecords</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#arecordresponse">[]ARecord<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aaaarecords_go">
 <a href="#aaaarecords_go" style="color: inherit; text-decoration: inherit;">Aaaa<wbr>Records</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aaaarecordresponse">[]Aaaa<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cnamerecord_go">
 <a href="#cnamerecord_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Record</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cnamerecordresponse">Cname<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mxrecords_go">
 <a href="#mxrecords_go" style="color: inherit; text-decoration: inherit;">Mx<wbr>Records</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mxrecordresponse">[]Mx<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ptrrecords_go">
 <a href="#ptrrecords_go" style="color: inherit; text-decoration: inherit;">Ptr<wbr>Records</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ptrrecordresponse">[]Ptr<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="soarecord_go">
 <a href="#soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#soarecordresponse">Soa<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srvrecords_go">
 <a href="#srvrecords_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Records</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#srvrecordresponse">[]Srv<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="txtrecords_go">
 <a href="#txtrecords_go" style="color: inherit; text-decoration: inherit;">Txt<wbr>Records</a>
@@ -523,14 +464,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#txtrecordresponse">[]Txt<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isautoregistered_nodejs">
 <a href="#isautoregistered_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Auto<wbr>Registered</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arecords_nodejs">
 <a href="#arecords_nodejs" style="color: inherit; text-decoration: inherit;">a<wbr>Records</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#arecordresponse">ARecord<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aaaarecords_nodejs">
 <a href="#aaaarecords_nodejs" style="color: inherit; text-decoration: inherit;">aaaa<wbr>Records</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aaaarecordresponse">Aaaa<wbr>Record<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cnamerecord_nodejs">
 <a href="#cnamerecord_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Record</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cnamerecordresponse">Cname<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mxrecords_nodejs">
 <a href="#mxrecords_nodejs" style="color: inherit; text-decoration: inherit;">mx<wbr>Records</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mxrecordresponse">Mx<wbr>Record<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ptrrecords_nodejs">
 <a href="#ptrrecords_nodejs" style="color: inherit; text-decoration: inherit;">ptr<wbr>Records</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ptrrecordresponse">Ptr<wbr>Record<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="soarecord_nodejs">
 <a href="#soarecord_nodejs" style="color: inherit; text-decoration: inherit;">soa<wbr>Record</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#soarecordresponse">Soa<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srvrecords_nodejs">
 <a href="#srvrecords_nodejs" style="color: inherit; text-decoration: inherit;">srv<wbr>Records</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#srvrecordresponse">Srv<wbr>Record<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="txtrecords_nodejs">
 <a href="#txtrecords_nodejs" style="color: inherit; text-decoration: inherit;">txt<wbr>Records</a>
@@ -673,14 +596,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#txtrecordresponse">Txt<wbr>Record<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified domain name of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_auto_registered_python">
 <a href="#is_auto_registered_python" style="color: inherit; text-decoration: inherit;">is_<wbr>auto_<wbr>registered</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is the record set auto-registered in the Private DNS zone through a virtual network link?{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="a_records_python">
 <a href="#a_records_python" style="color: inherit; text-decoration: inherit;">a_<wbr>records</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#arecordresponse">Sequence[ARecord<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aaaa_records_python">
 <a href="#aaaa_records_python" style="color: inherit; text-decoration: inherit;">aaaa_<wbr>records</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aaaarecordresponse">Sequence[Aaaa<wbr>Record<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cname_record_python">
 <a href="#cname_record_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>record</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cnamerecordresponse">Cname<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata attached to the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mx_records_python">
 <a href="#mx_records_python" style="color: inherit; text-decoration: inherit;">mx_<wbr>records</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mxrecordresponse">Sequence[Mx<wbr>Record<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ptr_records_python">
 <a href="#ptr_records_python" style="color: inherit; text-decoration: inherit;">ptr_<wbr>records</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ptrrecordresponse">Sequence[Ptr<wbr>Record<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="soa_record_python">
 <a href="#soa_record_python" style="color: inherit; text-decoration: inherit;">soa_<wbr>record</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#soarecordresponse">Soa<wbr>Record<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srv_records_python">
 <a href="#srv_records_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>records</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#srvrecordresponse">Sequence[Srv<wbr>Record<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="txt_records_python">
 <a href="#txt_records_python" style="color: inherit; text-decoration: inherit;">txt_<wbr>records</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#txtrecordresponse">Sequence[Txt<wbr>Record<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -838,9 +742,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -848,14 +750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -863,14 +762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -878,14 +774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv4 address of this A record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aaaarecordresponse">Aaaa<wbr>Record<wbr>Response</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -912,14 +802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -927,14 +814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -942,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -957,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The IPv6 address of this AAAA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cnamerecordresponse">Cname<wbr>Record<wbr>Response</h4>
@@ -966,9 +846,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cname_csharp">
 <a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -976,14 +854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cname_go">
 <a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -991,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cname_nodejs">
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -1006,14 +878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cname_python">
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -1021,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The canonical name for this CNAME record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mxrecordresponse">Mx<wbr>Record<wbr>Response</h4>
@@ -1030,9 +898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exchange_csharp">
 <a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
@@ -1040,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preference_csharp">
 <a href="#preference_csharp" style="color: inherit; text-decoration: inherit;">Preference</a>
@@ -1049,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exchange_go">
 <a href="#exchange_go" style="color: inherit; text-decoration: inherit;">Exchange</a>
@@ -1064,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preference_go">
 <a href="#preference_go" style="color: inherit; text-decoration: inherit;">Preference</a>
@@ -1073,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exchange_nodejs">
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
@@ -1088,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preference_nodejs">
 <a href="#preference_nodejs" style="color: inherit; text-decoration: inherit;">preference</a>
@@ -1097,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exchange_python">
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
@@ -1112,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the mail host for this MX record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preference_python">
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
@@ -1121,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The preference value for this MX record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ptrrecordresponse">Ptr<wbr>Record<wbr>Response</h4>
@@ -1130,9 +982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ptrdname_csharp">
 <a href="#ptrdname_csharp" style="color: inherit; text-decoration: inherit;">Ptrdname</a>
@@ -1140,14 +990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ptrdname_go">
 <a href="#ptrdname_go" style="color: inherit; text-decoration: inherit;">Ptrdname</a>
@@ -1155,14 +1002,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ptrdname_nodejs">
 <a href="#ptrdname_nodejs" style="color: inherit; text-decoration: inherit;">ptrdname</a>
@@ -1170,14 +1014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ptrdname_python">
 <a href="#ptrdname_python" style="color: inherit; text-decoration: inherit;">ptrdname</a>
@@ -1185,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The PTR target domain name for this PTR record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="soarecordresponse">Soa<wbr>Record<wbr>Response</h4>
@@ -1194,9 +1034,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1204,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -1213,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1222,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumttl_csharp">
 <a href="#minimumttl_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
@@ -1231,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtime_csharp">
 <a href="#refreshtime_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
@@ -1240,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrytime_csharp">
 <a href="#retrytime_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
@@ -1249,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1258,14 +1090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1273,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -1282,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1291,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumttl_go">
 <a href="#minimumttl_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
@@ -1300,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtime_go">
 <a href="#refreshtime_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
@@ -1309,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrytime_go">
 <a href="#retrytime_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
@@ -1318,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1327,14 +1150,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1342,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
@@ -1351,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1360,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumttl_nodejs">
 <a href="#minimumttl_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ttl</a>
@@ -1369,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtime_nodejs">
 <a href="#refreshtime_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Time</a>
@@ -1378,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrytime_nodejs">
 <a href="#retrytime_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Time</a>
@@ -1387,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -1396,14 +1210,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1411,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email contact for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
@@ -1420,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1429,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The domain name of the authoritative name server for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_ttl_python">
 <a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
@@ -1438,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_time_python">
 <a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
@@ -1447,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_time_python">
 <a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
@@ -1456,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -1465,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="srvrecordresponse">Srv<wbr>Record<wbr>Response</h4>
@@ -1474,9 +1278,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1484,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1493,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1502,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1511,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1526,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1535,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1544,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1553,14 +1346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1568,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1577,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1586,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1595,14 +1382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1610,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1619,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The priority value for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1628,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target domain name for this SRV record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1637,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The weight value for this SRV record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="txtrecordresponse">Txt<wbr>Record<wbr>Response</h4>
@@ -1646,9 +1426,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1656,14 +1434,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1671,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1686,14 +1458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1701,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

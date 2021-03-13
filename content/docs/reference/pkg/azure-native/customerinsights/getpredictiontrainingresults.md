@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="predictionname_csharp">
 <a href="#predictionname_csharp" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="predictionname_go">
 <a href="#predictionname_go" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="predictionname_nodejs">
 <a href="#predictionname_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prediction_name_python">
 <a href="#prediction_name_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canonicalprofiles_csharp">
 <a href="#canonicalprofiles_csharp" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Profiles</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Canonical<wbr>Profile<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="predictiondistribution_csharp">
 <a href="#predictiondistribution_csharp" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Distribution</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryprofileinstancecount_csharp">
 <a href="#primaryprofileinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Profile<wbr>Instance<wbr>Count</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scorename_csharp">
 <a href="#scorename_csharp" style="color: inherit; text-decoration: inherit;">Score<wbr>Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Score name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Score name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canonicalprofiles_go">
 <a href="#canonicalprofiles_go" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Profiles</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponse">[]Canonical<wbr>Profile<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="predictiondistribution_go">
 <a href="#predictiondistribution_go" style="color: inherit; text-decoration: inherit;">Prediction<wbr>Distribution</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryprofileinstancecount_go">
 <a href="#primaryprofileinstancecount_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Profile<wbr>Instance<wbr>Count</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scorename_go">
 <a href="#scorename_go" style="color: inherit; text-decoration: inherit;">Score<wbr>Name</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Score name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Score name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canonicalprofiles_nodejs">
 <a href="#canonicalprofiles_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Profiles</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponse">Canonical<wbr>Profile<wbr>Definition<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="predictiondistribution_nodejs">
 <a href="#predictiondistribution_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Distribution</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryprofileinstancecount_nodejs">
 <a href="#primaryprofileinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Profile<wbr>Instance<wbr>Count</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scorename_nodejs">
 <a href="#scorename_nodejs" style="color: inherit; text-decoration: inherit;">score<wbr>Name</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Score name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Score name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -340,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="canonical_profiles_python">
 <a href="#canonical_profiles_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>profiles</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponse">Sequence[Canonical<wbr>Profile<wbr>Definition<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Canonical profiles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prediction_distribution_python">
 <a href="#prediction_distribution_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>distribution</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponse">Prediction<wbr>Distribution<wbr>Definition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Prediction distribution.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_profile_instance_count_python">
 <a href="#primary_profile_instance_count_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>profile_<wbr>instance_<wbr>count</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Instance count of the primary profile.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="score_name_python">
 <a href="#score_name_python" style="color: inherit; text-decoration: inherit;">score_<wbr>name</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Score name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Score name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="canonicalprofileid_csharp">
 <a href="#canonicalprofileid_csharp" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Profile<wbr>Id</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -425,14 +374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="canonicalprofileid_go">
 <a href="#canonicalprofileid_go" style="color: inherit; text-decoration: inherit;">Canonical<wbr>Profile<wbr>Id</a>
@@ -440,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -449,14 +394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">[]Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="canonicalprofileid_nodejs">
 <a href="#canonicalprofileid_nodejs" style="color: inherit; text-decoration: inherit;">canonical<wbr>Profile<wbr>Id</a>
@@ -464,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -473,14 +414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties[]</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="canonical_profile_id_python">
 <a href="#canonical_profile_id_python" style="color: inherit; text-decoration: inherit;">canonical_<wbr>profile_<wbr>id</a>
@@ -488,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Canonical profile ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -497,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#canonicalprofiledefinitionresponseproperties">Sequence[Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of the canonical profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="canonicalprofiledefinitionresponseproperties">Canonical<wbr>Profile<wbr>Definition<wbr>Response<wbr>Properties</h4>
@@ -506,9 +442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -516,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Profile name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilepropertyname_csharp">
 <a href="#profilepropertyname_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
@@ -525,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_csharp">
 <a href="#rank_csharp" style="color: inherit; text-decoration: inherit;">Rank</a>
@@ -534,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The rank.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rank.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -543,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -552,14 +482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -567,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Profile name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilepropertyname_go">
 <a href="#profilepropertyname_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>Name</a>
@@ -576,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_go">
 <a href="#rank_go" style="color: inherit; text-decoration: inherit;">Rank</a>
@@ -585,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The rank.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rank.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -594,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -603,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -618,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Profile name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilepropertyname_nodejs">
 <a href="#profilepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Property<wbr>Name</a>
@@ -627,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_nodejs">
 <a href="#rank_nodejs" style="color: inherit; text-decoration: inherit;">rank</a>
@@ -636,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The rank.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rank.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -645,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -654,14 +570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -669,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Profile name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_property_name_python">
 <a href="#profile_property_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>property_<wbr>name</a>
@@ -678,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Property name of profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_python">
 <a href="#rank_python" style="color: inherit; text-decoration: inherit;">rank</a>
@@ -687,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The rank.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rank.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -696,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of canonical property value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -705,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the canonical property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="predictiondistributiondefinitionresponse">Prediction<wbr>Distribution<wbr>Definition<wbr>Response</h4>
@@ -714,9 +622,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributions_csharp">
 <a href="#distributions_csharp" style="color: inherit; text-decoration: inherit;">Distributions</a>
@@ -724,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalnegatives_csharp">
 <a href="#totalnegatives_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Negatives</a>
@@ -733,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalpositives_csharp">
 <a href="#totalpositives_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Positives</a>
@@ -742,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributions_go">
 <a href="#distributions_go" style="color: inherit; text-decoration: inherit;">Distributions</a>
@@ -757,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">[]Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions</a></span>
     </dt>
-    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalnegatives_go">
 <a href="#totalnegatives_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Negatives</a>
@@ -766,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalpositives_go">
 <a href="#totalpositives_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Positives</a>
@@ -775,14 +674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributions_nodejs">
 <a href="#distributions_nodejs" style="color: inherit; text-decoration: inherit;">distributions</a>
@@ -790,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions[]</a></span>
     </dt>
-    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalnegatives_nodejs">
 <a href="#totalnegatives_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Negatives</a>
@@ -799,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalpositives_nodejs">
 <a href="#totalpositives_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Positives</a>
@@ -808,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributions_python">
 <a href="#distributions_python" style="color: inherit; text-decoration: inherit;">distributions</a>
@@ -823,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#predictiondistributiondefinitionresponsedistributions">Sequence[Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Distributions of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="total_negatives_python">
 <a href="#total_negatives_python" style="color: inherit; text-decoration: inherit;">total_<wbr>negatives</a>
@@ -832,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total negatives in the distribution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="total_positives_python">
 <a href="#total_positives_python" style="color: inherit; text-decoration: inherit;">total_<wbr>positives</a>
@@ -841,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Total positive in the distribution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="predictiondistributiondefinitionresponsedistributions">Prediction<wbr>Distribution<wbr>Definition<wbr>Response<wbr>Distributions</h4>
@@ -850,9 +738,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="negatives_csharp">
 <a href="#negatives_csharp" style="color: inherit; text-decoration: inherit;">Negatives</a>
@@ -860,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativesabovethreshold_csharp">
 <a href="#negativesabovethreshold_csharp" style="color: inherit; text-decoration: inherit;">Negatives<wbr>Above<wbr>Threshold</a>
@@ -869,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positives_csharp">
 <a href="#positives_csharp" style="color: inherit; text-decoration: inherit;">Positives</a>
@@ -878,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positivesabovethreshold_csharp">
 <a href="#positivesabovethreshold_csharp" style="color: inherit; text-decoration: inherit;">Positives<wbr>Above<wbr>Threshold</a>
@@ -887,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scorethreshold_csharp">
 <a href="#scorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Score<wbr>Threshold</a>
@@ -896,14 +778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="negatives_go">
 <a href="#negatives_go" style="color: inherit; text-decoration: inherit;">Negatives</a>
@@ -911,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativesabovethreshold_go">
 <a href="#negativesabovethreshold_go" style="color: inherit; text-decoration: inherit;">Negatives<wbr>Above<wbr>Threshold</a>
@@ -920,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positives_go">
 <a href="#positives_go" style="color: inherit; text-decoration: inherit;">Positives</a>
@@ -929,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positivesabovethreshold_go">
 <a href="#positivesabovethreshold_go" style="color: inherit; text-decoration: inherit;">Positives<wbr>Above<wbr>Threshold</a>
@@ -938,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scorethreshold_go">
 <a href="#scorethreshold_go" style="color: inherit; text-decoration: inherit;">Score<wbr>Threshold</a>
@@ -947,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="negatives_nodejs">
 <a href="#negatives_nodejs" style="color: inherit; text-decoration: inherit;">negatives</a>
@@ -962,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negativesabovethreshold_nodejs">
 <a href="#negativesabovethreshold_nodejs" style="color: inherit; text-decoration: inherit;">negatives<wbr>Above<wbr>Threshold</a>
@@ -971,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positives_nodejs">
 <a href="#positives_nodejs" style="color: inherit; text-decoration: inherit;">positives</a>
@@ -980,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positivesabovethreshold_nodejs">
 <a href="#positivesabovethreshold_nodejs" style="color: inherit; text-decoration: inherit;">positives<wbr>Above<wbr>Threshold</a>
@@ -989,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scorethreshold_nodejs">
 <a href="#scorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">score<wbr>Threshold</a>
@@ -998,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="negatives_python">
 <a href="#negatives_python" style="color: inherit; text-decoration: inherit;">negatives</a>
@@ -1013,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatives_above_threshold_python">
 <a href="#negatives_above_threshold_python" style="color: inherit; text-decoration: inherit;">negatives_<wbr>above_<wbr>threshold</a>
@@ -1022,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of negatives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positives_python">
 <a href="#positives_python" style="color: inherit; text-decoration: inherit;">positives</a>
@@ -1031,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of positives.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="positives_above_threshold_python">
 <a href="#positives_above_threshold_python" style="color: inherit; text-decoration: inherit;">positives_<wbr>above_<wbr>threshold</a>
@@ -1040,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of positives above threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="score_threshold_python">
 <a href="#score_threshold_python" style="color: inherit; text-decoration: inherit;">score_<wbr>threshold</a>
@@ -1049,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Score threshold.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

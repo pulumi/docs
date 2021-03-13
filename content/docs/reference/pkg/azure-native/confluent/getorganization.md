@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organizationname_csharp">
 <a href="#organizationname_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organization resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Organization resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organizationname_go">
 <a href="#organizationname_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organization resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Organization resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organizationname_nodejs">
 <a href="#organizationname_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organization resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Organization resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_name_python">
 <a href="#organization_name_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Organization resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Organization resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="organizationid_csharp">
 <a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offerdetail_csharp">
 <a href="#offerdetail_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Detail</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Pulumi.<wbr>Azure<wbr>Native.<wbr>Confluent.<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdetail_csharp">
 <a href="#userdetail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Detail</a>
@@ -256,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseuserdetail">Pulumi.<wbr>Azure<wbr>Native.<wbr>Confluent.<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="organizationid_go">
 <a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssourl_go">
 <a href="#ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offerdetail_go">
 <a href="#offerdetail_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Detail</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdetail_go">
 <a href="#userdetail_go" style="color: inherit; text-decoration: inherit;">User<wbr>Detail</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="organizationid_nodejs">
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offerdetail_nodejs">
 <a href="#offerdetail_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Detail</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdetail_nodejs">
 <a href="#userdetail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Detail</a>
@@ -466,14 +412,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation time of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="organization_id_python">
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sso_url_python">
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSO url for the Confluent organization.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of Organization resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offer_detail_python">
 <a href="#offer_detail_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>detail</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Organization resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_detail_python">
 <a href="#user_detail_python" style="color: inherit; text-decoration: inherit;">user_<wbr>detail</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationresourcepropertiesresponseuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</a></span>
     </dt>
-    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Subscriber detail{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planid_csharp">
 <a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planname_csharp">
 <a href="#planname_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Name</a>
@@ -614,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_csharp">
 <a href="#publisherid_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Id</a>
@@ -623,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_csharp">
 <a href="#termunit_csharp" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
@@ -641,14 +566,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planid_go">
 <a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planname_go">
 <a href="#planname_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Name</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_go">
 <a href="#publisherid_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Id</a>
@@ -683,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -692,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_go">
 <a href="#termunit_go" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
@@ -701,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planid_nodejs">
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planname_nodejs">
 <a href="#planname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Name</a>
@@ -734,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_nodejs">
 <a href="#publisherid_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Id</a>
@@ -743,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -752,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_nodejs">
 <a href="#termunit_nodejs" style="color: inherit; text-decoration: inherit;">term<wbr>Unit</a>
@@ -761,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offer Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_id_python">
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_name_python">
 <a href="#plan_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>name</a>
@@ -794,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer Plan Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_id_python">
 <a href="#publisher_id_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>id</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Publisher Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SaaS Offer Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_unit_python">
 <a href="#term_unit_python" style="color: inherit; text-decoration: inherit;">term_<wbr>unit</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offer Plan Term unit{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="organizationresourcepropertiesresponseuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</h4>
@@ -830,9 +730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstname_csharp">
 <a href="#firstname_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
@@ -849,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastname_csharp">
 <a href="#lastname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
@@ -858,14 +754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -873,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstname_go">
 <a href="#firstname_go" style="color: inherit; text-decoration: inherit;">First<wbr>Name</a>
@@ -882,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastname_go">
 <a href="#lastname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
@@ -891,14 +782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -906,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstname_nodejs">
 <a href="#firstname_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Name</a>
@@ -915,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}First name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastname_nodejs">
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
@@ -924,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -939,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Email address{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="first_name_python">
 <a href="#first_name_python" style="color: inherit; text-decoration: inherit;">first_<wbr>name</a>
@@ -948,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}First name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}First name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_name_python">
 <a href="#last_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>name</a>
@@ -957,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

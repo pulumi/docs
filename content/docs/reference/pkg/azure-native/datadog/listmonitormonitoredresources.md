@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="monitorname_csharp">
 <a href="#monitorname_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="monitorname_go">
 <a href="#monitorname_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="monitorname_nodejs">
 <a href="#monitorname_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="monitor_name_python">
 <a href="#monitor_name_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Outputs.<wbr>Monitored<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">[]Monitored<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">Monitored<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitoredresourceresponse">Sequence[Monitored<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasonforlogsstatus_csharp">
 <a href="#reasonforlogsstatus_csharp" style="color: inherit; text-decoration: inherit;">Reason<wbr>For<wbr>Logs<wbr>Status</a>
@@ -281,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasonformetricsstatus_csharp">
 <a href="#reasonformetricsstatus_csharp" style="color: inherit; text-decoration: inherit;">Reason<wbr>For<wbr>Metrics<wbr>Status</a>
@@ -290,8 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendinglogs_csharp">
 <a href="#sendinglogs_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Logs</a>
@@ -299,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendingmetrics_csharp">
 <a href="#sendingmetrics_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Metrics</a>
@@ -308,14 +270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -323,8 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasonforlogsstatus_go">
 <a href="#reasonforlogsstatus_go" style="color: inherit; text-decoration: inherit;">Reason<wbr>For<wbr>Logs<wbr>Status</a>
@@ -332,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasonformetricsstatus_go">
 <a href="#reasonformetricsstatus_go" style="color: inherit; text-decoration: inherit;">Reason<wbr>For<wbr>Metrics<wbr>Status</a>
@@ -341,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendinglogs_go">
 <a href="#sendinglogs_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Logs</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendingmetrics_go">
 <a href="#sendingmetrics_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Metrics</a>
@@ -359,14 +314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -374,8 +326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasonforlogsstatus_nodejs">
 <a href="#reasonforlogsstatus_nodejs" style="color: inherit; text-decoration: inherit;">reason<wbr>For<wbr>Logs<wbr>Status</a>
@@ -383,8 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reasonformetricsstatus_nodejs">
 <a href="#reasonformetricsstatus_nodejs" style="color: inherit; text-decoration: inherit;">reason<wbr>For<wbr>Metrics<wbr>Status</a>
@@ -392,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendinglogs_nodejs">
 <a href="#sendinglogs_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Logs</a>
@@ -401,8 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendingmetrics_nodejs">
 <a href="#sendingmetrics_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Metrics</a>
@@ -410,14 +358,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -425,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_for_logs_status_python">
 <a href="#reason_for_logs_status_python" style="color: inherit; text-decoration: inherit;">reason_<wbr>for_<wbr>logs_<wbr>status</a>
@@ -434,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending logs (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_for_metrics_status_python">
 <a href="#reason_for_metrics_status_python" style="color: inherit; text-decoration: inherit;">reason_<wbr>for_<wbr>metrics_<wbr>status</a>
@@ -443,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reason for why the resource is sending metrics (or why it is not sending).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sending_logs_python">
 <a href="#sending_logs_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>logs</a>
@@ -452,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating if resource is sending logs to Datadog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sending_metrics_python">
 <a href="#sending_metrics_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>metrics</a>
@@ -461,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating if resource is sending metrics to Datadog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

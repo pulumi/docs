@@ -14,11 +14,17 @@ A manifest file that defines the custom resource provider resources.
 API Version: 2018-09-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update the custom resource provider
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -57,9 +63,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -99,9 +108,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -124,9 +136,12 @@ custom_resource_provider = azure_native.customproviders.CustomResourceProvider("
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -150,9 +165,16 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CustomResourceProvider Resource {#create}
@@ -177,9 +199,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -187,9 +207,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -197,9 +215,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -207,10 +223,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -236,9 +249,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -246,9 +257,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -256,9 +265,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -266,9 +273,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -276,18 +281,13 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -295,9 +295,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -305,9 +303,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -315,10 +311,7 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -333,9 +326,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -343,8 +334,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -352,8 +342,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpactionroutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -361,8 +350,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_csharp">
 <a href="#resourceprovidername_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
@@ -370,8 +358,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_csharp">
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -379,8 +366,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpresourcetyperoutedefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -388,8 +374,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validations_csharp">
 <a href="#validations_csharp" style="color: inherit; text-decoration: inherit;">Validations</a>
@@ -397,14 +382,11 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpvalidations">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Custom<wbr>Providers.<wbr>Inputs.<wbr>Custom<wbr>RPValidations<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -412,8 +394,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -421,8 +402,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpactionroutedefinition">[]Custom<wbr>RPAction<wbr>Route<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -430,8 +410,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_go">
 <a href="#resourceprovidername_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
@@ -439,8 +418,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_go">
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -448,8 +426,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpresourcetyperoutedefinition">[]Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -457,8 +434,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validations_go">
 <a href="#validations_go" style="color: inherit; text-decoration: inherit;">Validations</a>
@@ -466,14 +442,11 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpvalidations">[]Custom<wbr>RPValidations</a></span>
     </dt>
-    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -481,8 +454,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -490,8 +462,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpactionroutedefinition">Custom<wbr>RPAction<wbr>Route<wbr>Definition[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -499,8 +470,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_nodejs">
 <a href="#resourceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
@@ -508,8 +478,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_nodejs">
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
@@ -517,8 +486,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpresourcetyperoutedefinition">Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -526,8 +494,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validations_nodejs">
 <a href="#validations_nodejs" style="color: inherit; text-decoration: inherit;">validations</a>
@@ -535,14 +502,11 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpvalidations">Custom<wbr>RPValidations[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -550,8 +514,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -559,8 +522,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpactionroutedefinition">Sequence[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -568,8 +530,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_provider_name_python">
 <a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
@@ -577,8 +538,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_types_python">
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
@@ -586,8 +546,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpresourcetyperoutedefinition">Sequence[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -595,8 +554,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validations_python">
 <a href="#validations_python" style="color: inherit; text-decoration: inherit;">validations</a>
@@ -604,8 +562,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customrpvalidations">Sequence[Custom<wbr>RPValidations<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -616,9 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -626,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -635,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -644,8 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -653,14 +605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -668,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -677,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -686,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -695,14 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -710,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -719,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -728,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -737,14 +677,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -752,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -761,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -770,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource provider.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -779,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -796,39 +729,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="actionrouting">Action<wbr>Routing</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Proxy</dt>
-    <dd>Proxy</dd>
-</dl>
+<dl class="tabular"><dt>Proxy</dt>
+    <dd>Proxy</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Action<wbr>Routing<wbr>Proxy</dt>
-    <dd>Proxy</dd>
-</dl>
+<dl class="tabular"><dt>Action<wbr>Routing<wbr>Proxy</dt>
+    <dd>Proxy</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Proxy</dt>
-    <dd>Proxy</dd>
-</dl>
+<dl class="tabular"><dt>Proxy</dt>
+    <dd>Proxy</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PROXY</dt>
-    <dd>Proxy</dd>
-</dl>
+<dl class="tabular"><dt>PROXY</dt>
+    <dd>Proxy</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customrpactionroutedefinition">Custom<wbr>RPAction<wbr>Route<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -836,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -845,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_csharp">
 <a href="#routingtype_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -854,14 +775,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#actionrouting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Custom<wbr>Providers.<wbr>Action<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -869,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -878,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_go">
 <a href="#routingtype_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -887,14 +803,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#actionrouting">Action<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -902,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -911,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_nodejs">
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
@@ -920,14 +831,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#actionrouting">Action<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -935,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -944,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_type_python">
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
@@ -953,16 +859,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#actionrouting">Action<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customrpactionroutedefinitionresponse">Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -970,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -979,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_csharp">
 <a href="#routingtype_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -988,14 +889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1003,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1012,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_go">
 <a href="#routingtype_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -1021,14 +917,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1036,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1045,8 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_nodejs">
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
@@ -1054,14 +945,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1069,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1078,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_type_python">
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
@@ -1087,16 +973,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customrpresourcetyperoutedefinition">Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1104,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1113,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_csharp">
 <a href="#routingtype_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -1122,14 +1003,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#resourcetyperouting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Custom<wbr>Providers.<wbr>Resource<wbr>Type<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1137,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1146,8 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_go">
 <a href="#routingtype_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -1155,14 +1031,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#resourcetyperouting">Resource<wbr>Type<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1170,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1179,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_nodejs">
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
@@ -1188,14 +1059,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#resourcetyperouting">Resource<wbr>Type<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1203,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1212,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_type_python">
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
@@ -1221,16 +1087,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#resourcetyperouting">Resource<wbr>Type<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customrpresourcetyperoutedefinitionresponse">Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1238,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1247,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_csharp">
 <a href="#routingtype_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -1256,14 +1117,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1271,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1280,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_go">
 <a href="#routingtype_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Type</a>
@@ -1289,14 +1145,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1304,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1313,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingtype_nodejs">
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
@@ -1322,14 +1173,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1337,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1346,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_type_python">
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
@@ -1355,16 +1201,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customrpvalidations">Custom<wbr>RPValidations</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_csharp">
 <a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1372,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationtype_csharp">
 <a href="#validationtype_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Type</a>
@@ -1381,14 +1223,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#validationtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Custom<wbr>Providers.<wbr>Validation<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_go">
 <a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1396,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationtype_go">
 <a href="#validationtype_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Type</a>
@@ -1405,14 +1243,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#validationtype">Validation<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_nodejs">
 <a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1420,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationtype_nodejs">
 <a href="#validationtype_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
@@ -1429,14 +1263,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#validationtype">Validation<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_python">
 <a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1444,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validation_type_python">
 <a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
@@ -1453,16 +1283,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#validationtype">Validation<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customrpvalidationsresponse">Custom<wbr>RPValidations<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_csharp">
 <a href="#specification_csharp" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1470,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationtype_csharp">
 <a href="#validationtype_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Type</a>
@@ -1479,14 +1305,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_go">
 <a href="#specification_go" style="color: inherit; text-decoration: inherit;">Specification</a>
@@ -1494,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationtype_go">
 <a href="#validationtype_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Type</a>
@@ -1503,14 +1325,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_nodejs">
 <a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1518,8 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationtype_nodejs">
 <a href="#validationtype_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
@@ -1527,14 +1345,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="specification_python">
 <a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
@@ -1542,8 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validation_type_python">
 <a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
@@ -1551,76 +1365,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcetyperouting">Resource<wbr>Type<wbr>Routing</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Proxy</dt>
-    <dd>Proxy</dd>
-    <dt>Proxy_Cache</dt>
-    <dd>Proxy,Cache</dd>
-</dl>
+<dl class="tabular"><dt>Proxy</dt>
+    <dd>Proxy</dd><dt>Proxy_Cache</dt>
+    <dd>Proxy,Cache</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Resource<wbr>Type<wbr>Routing<wbr>Proxy</dt>
-    <dd>Proxy</dd>
-    <dt>Resource<wbr>Type<wbr>Routing_Proxy_Cache</dt>
-    <dd>Proxy,Cache</dd>
-</dl>
+<dl class="tabular"><dt>Resource<wbr>Type<wbr>Routing<wbr>Proxy</dt>
+    <dd>Proxy</dd><dt>Resource<wbr>Type<wbr>Routing_Proxy_Cache</dt>
+    <dd>Proxy,Cache</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Proxy</dt>
-    <dd>Proxy</dd>
-    <dt>Proxy_Cache</dt>
-    <dd>Proxy,Cache</dd>
-</dl>
+<dl class="tabular"><dt>Proxy</dt>
+    <dd>Proxy</dd><dt>Proxy_Cache</dt>
+    <dd>Proxy,Cache</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PROXY</dt>
-    <dd>Proxy</dd>
-    <dt>PROXY_CACHE</dt>
-    <dd>Proxy,Cache</dd>
-</dl>
+<dl class="tabular"><dt>PROXY</dt>
+    <dd>Proxy</dd><dt>PROXY_CACHE</dt>
+    <dd>Proxy,Cache</dd></dl>
 {{% /choosable %}}
 
 <h4 id="validationtype">Validation<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Swagger</dt>
-    <dd>Swagger</dd>
-</dl>
+<dl class="tabular"><dt>Swagger</dt>
+    <dd>Swagger</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Validation<wbr>Type<wbr>Swagger</dt>
-    <dd>Swagger</dd>
-</dl>
+<dl class="tabular"><dt>Validation<wbr>Type<wbr>Swagger</dt>
+    <dd>Swagger</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Swagger</dt>
-    <dd>Swagger</dd>
-</dl>
+<dl class="tabular"><dt>Swagger</dt>
+    <dd>Swagger</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SWAGGER</dt>
-    <dd>Swagger</dd>
-</dl>
+<dl class="tabular"><dt>SWAGGER</dt>
+    <dd>Swagger</dd></dl>
 {{% /choosable %}}
 ## Import
 

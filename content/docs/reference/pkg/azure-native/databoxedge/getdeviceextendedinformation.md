@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="devicesecrets_csharp">
 <a href="#devicesecrets_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Secrets</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicesecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Device<wbr>Secrets<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcekey_csharp">
 <a href="#resourcekey_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Key</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channelintegritykeyname_csharp">
 <a href="#channelintegritykeyname_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channelintegritykeyversion_csharp">
 <a href="#channelintegritykeyversion_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Version</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretstoreid_csharp">
 <a href="#clientsecretstoreid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Id</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretstoreurl_csharp">
 <a href="#clientsecretstoreurl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Url</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeythumbprint_csharp">
 <a href="#encryptionkeythumbprint_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Thumbprint</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultsyncstatus_csharp">
 <a href="#keyvaultsyncstatus_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Sync<wbr>Status</a>
@@ -265,14 +236,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="devicesecrets_go">
 <a href="#devicesecrets_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Secrets</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicesecretsresponse">Device<wbr>Secrets<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcekey_go">
 <a href="#resourcekey_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Key</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channelintegritykeyname_go">
 <a href="#channelintegritykeyname_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channelintegritykeyversion_go">
 <a href="#channelintegritykeyversion_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Version</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretstoreid_go">
 <a href="#clientsecretstoreid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Id</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretstoreurl_go">
 <a href="#clientsecretstoreurl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Url</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeythumbprint_go">
 <a href="#encryptionkeythumbprint_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Thumbprint</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultsyncstatus_go">
 <a href="#keyvaultsyncstatus_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Sync<wbr>Status</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="devicesecrets_nodejs">
 <a href="#devicesecrets_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Secrets</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicesecretsresponse">Device<wbr>Secrets<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcekey_nodejs">
 <a href="#resourcekey_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Key</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channelintegritykeyname_nodejs">
 <a href="#channelintegritykeyname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Integrity<wbr>Key<wbr>Name</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channelintegritykeyversion_nodejs">
 <a href="#channelintegritykeyversion_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Integrity<wbr>Key<wbr>Version</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretstoreid_nodejs">
 <a href="#clientsecretstoreid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Store<wbr>Id</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretstoreurl_nodejs">
 <a href="#clientsecretstoreurl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Store<wbr>Url</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeythumbprint_nodejs">
 <a href="#encryptionkeythumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Thumbprint</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultsyncstatus_nodejs">
 <a href="#keyvaultsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Sync<wbr>Status</a>
@@ -493,14 +436,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="device_secrets_python">
 <a href="#device_secrets_python" style="color: inherit; text-decoration: inherit;">device_<wbr>secrets</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicesecretsresponse">Device<wbr>Secrets<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Device secrets, will be returned only with ODataFilter $expand=deviceSecrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_key_python">
 <a href="#resource_key_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>key</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Resource ID of the Resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channel_integrity_key_name_python">
 <a href="#channel_integrity_key_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>integrity_<wbr>key_<wbr>name</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="channel_integrity_key_version_python">
 <a href="#channel_integrity_key_version_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>integrity_<wbr>key_<wbr>version</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_store_id_python">
 <a href="#client_secret_store_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>store_<wbr>id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_store_url_python">
 <a href="#client_secret_store_url_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>store_<wbr>url</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public part of the encryption certificate. Client uses this to encrypt any secret.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_key_thumbprint_python">
 <a href="#encryption_key_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>thumbprint</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The digital signature of encrypted certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_vault_sync_status_python">
 <a href="#key_vault_sync_status_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>sync_<wbr>status</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key vault sync status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_csharp">
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -641,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_csharp">
 <a href="#encryptioncertthumbprint_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -650,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_go">
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_go">
 <a href="#encryptioncertthumbprint_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -683,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_nodejs">
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertthumbprint_nodejs">
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
@@ -716,14 +630,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="encryption_algorithm_python">
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -731,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_cert_thumbprint_python">
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicesecretsresponse">Device<wbr>Secrets<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bmcdefaultuserpassword_csharp">
 <a href="#bmcdefaultuserpassword_csharp" style="color: inherit; text-decoration: inherit;">Bmc<wbr>Default<wbr>User<wbr>Password</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcsdatavolumebitlockerexternalkey_csharp">
 <a href="#hcsdatavolumebitlockerexternalkey_csharp" style="color: inherit; text-decoration: inherit;">Hcs<wbr>Data<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcsinternalvolumebitlockerexternalkey_csharp">
 <a href="#hcsinternalvolumebitlockerexternalkey_csharp" style="color: inherit; text-decoration: inherit;">Hcs<wbr>Internal<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
@@ -786,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotatekeyfordatavolumebitlocker_csharp">
 <a href="#rotatekeyfordatavolumebitlocker_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Key<wbr>For<wbr>Data<wbr>Volume<wbr>Bitlocker</a>
@@ -795,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotatekeysforseddrivesserialized_csharp">
 <a href="#rotatekeysforseddrivesserialized_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Keys<wbr>For<wbr>Sed<wbr>Drives<wbr>Serialized</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sedencryptionexternalkey_csharp">
 <a href="#sedencryptionexternalkey_csharp" style="color: inherit; text-decoration: inherit;">Sed<wbr>Encryption<wbr>External<wbr>Key</a>
@@ -813,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sedencryptionexternalkeyid_csharp">
 <a href="#sedencryptionexternalkeyid_csharp" style="color: inherit; text-decoration: inherit;">Sed<wbr>Encryption<wbr>External<wbr>Key<wbr>Id</a>
@@ -822,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemvolumebitlockerrecoverykey_csharp">
 <a href="#systemvolumebitlockerrecoverykey_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Volume<wbr>Bit<wbr>Locker<wbr>Recovery<wbr>Key</a>
@@ -831,14 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bmcdefaultuserpassword_go">
 <a href="#bmcdefaultuserpassword_go" style="color: inherit; text-decoration: inherit;">Bmc<wbr>Default<wbr>User<wbr>Password</a>
@@ -846,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcsdatavolumebitlockerexternalkey_go">
 <a href="#hcsdatavolumebitlockerexternalkey_go" style="color: inherit; text-decoration: inherit;">Hcs<wbr>Data<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
@@ -855,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcsinternalvolumebitlockerexternalkey_go">
 <a href="#hcsinternalvolumebitlockerexternalkey_go" style="color: inherit; text-decoration: inherit;">Hcs<wbr>Internal<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
@@ -864,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotatekeyfordatavolumebitlocker_go">
 <a href="#rotatekeyfordatavolumebitlocker_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Key<wbr>For<wbr>Data<wbr>Volume<wbr>Bitlocker</a>
@@ -873,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotatekeysforseddrivesserialized_go">
 <a href="#rotatekeysforseddrivesserialized_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Keys<wbr>For<wbr>Sed<wbr>Drives<wbr>Serialized</a>
@@ -882,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sedencryptionexternalkey_go">
 <a href="#sedencryptionexternalkey_go" style="color: inherit; text-decoration: inherit;">Sed<wbr>Encryption<wbr>External<wbr>Key</a>
@@ -891,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sedencryptionexternalkeyid_go">
 <a href="#sedencryptionexternalkeyid_go" style="color: inherit; text-decoration: inherit;">Sed<wbr>Encryption<wbr>External<wbr>Key<wbr>Id</a>
@@ -900,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemvolumebitlockerrecoverykey_go">
 <a href="#systemvolumebitlockerrecoverykey_go" style="color: inherit; text-decoration: inherit;">System<wbr>Volume<wbr>Bit<wbr>Locker<wbr>Recovery<wbr>Key</a>
@@ -909,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bmcdefaultuserpassword_nodejs">
 <a href="#bmcdefaultuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">bmc<wbr>Default<wbr>User<wbr>Password</a>
@@ -924,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcsdatavolumebitlockerexternalkey_nodejs">
 <a href="#hcsdatavolumebitlockerexternalkey_nodejs" style="color: inherit; text-decoration: inherit;">hcs<wbr>Data<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
@@ -933,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcsinternalvolumebitlockerexternalkey_nodejs">
 <a href="#hcsinternalvolumebitlockerexternalkey_nodejs" style="color: inherit; text-decoration: inherit;">hcs<wbr>Internal<wbr>Volume<wbr>Bit<wbr>Locker<wbr>External<wbr>Key</a>
@@ -942,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotatekeyfordatavolumebitlocker_nodejs">
 <a href="#rotatekeyfordatavolumebitlocker_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>Key<wbr>For<wbr>Data<wbr>Volume<wbr>Bitlocker</a>
@@ -951,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotatekeysforseddrivesserialized_nodejs">
 <a href="#rotatekeysforseddrivesserialized_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>Keys<wbr>For<wbr>Sed<wbr>Drives<wbr>Serialized</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sedencryptionexternalkey_nodejs">
 <a href="#sedencryptionexternalkey_nodejs" style="color: inherit; text-decoration: inherit;">sed<wbr>Encryption<wbr>External<wbr>Key</a>
@@ -969,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sedencryptionexternalkeyid_nodejs">
 <a href="#sedencryptionexternalkeyid_nodejs" style="color: inherit; text-decoration: inherit;">sed<wbr>Encryption<wbr>External<wbr>Key<wbr>Id</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="systemvolumebitlockerrecoverykey_nodejs">
 <a href="#systemvolumebitlockerrecoverykey_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Volume<wbr>Bit<wbr>Locker<wbr>Recovery<wbr>Key</a>
@@ -987,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bmc_default_user_password_python">
 <a href="#bmc_default_user_password_python" style="color: inherit; text-decoration: inherit;">bmc_<wbr>default_<wbr>user_<wbr>password</a>
@@ -1002,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of BMCDefaultUserPassword{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcs_data_volume_bit_locker_external_key_python">
 <a href="#hcs_data_volume_bit_locker_external_key_python" style="color: inherit; text-decoration: inherit;">hcs_<wbr>data_<wbr>volume_<wbr>bit_<wbr>locker_<wbr>external_<wbr>key</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsDataVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hcs_internal_volume_bit_locker_external_key_python">
 <a href="#hcs_internal_volume_bit_locker_external_key_python" style="color: inherit; text-decoration: inherit;">hcs_<wbr>internal_<wbr>volume_<wbr>bit_<wbr>locker_<wbr>external_<wbr>key</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of HcsInternalVolumeBitLockerExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotate_key_for_data_volume_bitlocker_python">
 <a href="#rotate_key_for_data_volume_bitlocker_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>key_<wbr>for_<wbr>data_<wbr>volume_<wbr>bitlocker</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeyForDataVolumeBitlocker{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotate_keys_for_sed_drives_serialized_python">
 <a href="#rotate_keys_for_sed_drives_serialized_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>keys_<wbr>for_<wbr>sed_<wbr>drives_<wbr>serialized</a>
@@ -1038,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of RotateKeysForSedDrivesSerialized{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sed_encryption_external_key_python">
 <a href="#sed_encryption_external_key_python" style="color: inherit; text-decoration: inherit;">sed_<wbr>encryption_<wbr>external_<wbr>key</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKey{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sed_encryption_external_key_id_python">
 <a href="#sed_encryption_external_key_id_python" style="color: inherit; text-decoration: inherit;">sed_<wbr>encryption_<wbr>external_<wbr>key_<wbr>id</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keyvault Id of SEDEncryptionExternalKeyId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="system_volume_bit_locker_recovery_key_python">
 <a href="#system_volume_bit_locker_recovery_key_python" style="color: inherit; text-decoration: inherit;">system_<wbr>volume_<wbr>bit_<wbr>locker_<wbr>recovery_<wbr>key</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretresponse">Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Keyvault Id of SystemVolumeBitLockerRecoveryKey{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretresponse">Secret<wbr>Response</h4>
@@ -1074,9 +942,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptedsecret_csharp">
 <a href="#encryptedsecret_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Secret</a>
@@ -1084,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1093,14 +958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptedsecret_go">
 <a href="#encryptedsecret_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Secret</a>
@@ -1108,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1117,14 +978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encryptedsecret_nodejs">
 <a href="#encryptedsecret_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Secret</a>
@@ -1132,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -1141,14 +998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="encrypted_secret_python">
 <a href="#encrypted_secret_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>secret</a>
@@ -1156,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Encrypted (using device public key) secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -1165,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Id of the Key-Vault where secret is stored (ex: secrets/AuthClientSecret/82ef4346187a4033a10d629cde07d740).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

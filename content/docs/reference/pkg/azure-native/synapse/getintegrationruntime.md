@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationruntimename_csharp">
 <a href="#integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationruntimename_go">
 <a href="#integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationruntimename_nodejs">
 <a href="#integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_runtime_name_python">
 <a href="#integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Integration runtime name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedintegrationruntimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Outputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Response</a> | <a href="#selfhostedintegrationruntimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Outputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedintegrationruntimeresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Response</a> | <a href="#selfhostedintegrationruntimeresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedintegrationruntimeresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Response</a> | <a href="#selfhostedintegrationruntimeresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -340,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedintegrationruntimeresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Response</a> | <a href="#selfhostedintegrationruntimeresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetname_csharp">
 <a href="#targetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -434,14 +382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -449,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetname_go">
 <a href="#targetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
@@ -458,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -467,14 +410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -482,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetname_nodejs">
 <a href="#targetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
@@ -491,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -500,14 +438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -515,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_name_python">
 <a href="#target_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name</a>
@@ -524,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The server name of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -533,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user name of data source access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="componentsetupresponse">Component<wbr>Setup<wbr>Response</h4>
@@ -542,9 +474,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentname_csharp">
 <a href="#componentname_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Name</a>
@@ -552,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensekey_csharp">
 <a href="#licensekey_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
@@ -561,14 +490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentname_go">
 <a href="#componentname_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Name</a>
@@ -576,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensekey_go">
 <a href="#licensekey_go" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
@@ -585,14 +510,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentname_nodejs">
 <a href="#componentname_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
@@ -600,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensekey_nodejs">
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
@@ -609,14 +530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_name_python">
 <a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
@@ -624,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_key_python">
 <a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
@@ -633,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entityreferenceresponse">Entity<wbr>Reference<wbr>Response</h4>
@@ -642,9 +558,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="referencename_csharp">
 <a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -652,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -661,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="referencename_go">
 <a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -676,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -685,14 +594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="referencename_nodejs">
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -700,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -709,14 +614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="reference_name_python">
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -724,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -733,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentvariablesetupresponse">Environment<wbr>Variable<wbr>Setup<wbr>Response</h4>
@@ -742,9 +642,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variablename_csharp">
 <a href="#variablename_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
@@ -752,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="variablevalue_csharp">
 <a href="#variablevalue_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Value</a>
@@ -761,14 +658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variablename_go">
 <a href="#variablename_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Name</a>
@@ -776,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="variablevalue_go">
 <a href="#variablevalue_go" style="color: inherit; text-decoration: inherit;">Variable<wbr>Value</a>
@@ -785,14 +678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variablename_nodejs">
 <a href="#variablename_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
@@ -800,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="variablevalue_nodejs">
 <a href="#variablevalue_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Value</a>
@@ -809,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="variable_name_python">
 <a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
@@ -824,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="variable_value_python">
 <a href="#variable_value_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>value</a>
@@ -833,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</h4>
@@ -842,9 +726,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataflowproperties_csharp">
 <a href="#dataflowproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
@@ -852,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -861,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelexecutionspernode_csharp">
 <a href="#maxparallelexecutionspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -870,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesize_csharp">
 <a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -879,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_csharp">
 <a href="#numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -888,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetproperties_csharp">
 <a href="#vnetproperties_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
@@ -897,14 +774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataflowproperties_go">
 <a href="#dataflowproperties_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
@@ -912,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -921,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelexecutionspernode_go">
 <a href="#maxparallelexecutionspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -930,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesize_go">
 <a href="#nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -939,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_go">
 <a href="#numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -948,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetproperties_go">
 <a href="#vnetproperties_go" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
@@ -957,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dataflowproperties_nodejs">
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
@@ -972,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -981,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelexecutionspernode_nodejs">
 <a href="#maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -990,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesize_nodejs">
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
@@ -999,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_nodejs">
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
@@ -1008,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetproperties_nodejs">
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
@@ -1017,14 +878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_flow_properties_python">
 <a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
@@ -1032,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1041,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_parallel_executions_per_node_python">
 <a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
@@ -1050,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_size_python">
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
@@ -1059,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_nodes_python">
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
@@ -1068,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="v_net_properties_python">
 <a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
@@ -1077,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</h4>
@@ -1086,9 +938,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobcontaineruri_csharp">
 <a href="#blobcontaineruri_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Uri</a>
@@ -1096,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sastoken_csharp">
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
@@ -1105,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobcontaineruri_go">
 <a href="#blobcontaineruri_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Uri</a>
@@ -1120,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sastoken_go">
 <a href="#sastoken_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
@@ -1129,14 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blobcontaineruri_nodejs">
 <a href="#blobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
@@ -1144,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sastoken_nodejs">
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
@@ -1153,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_container_uri_python">
 <a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
@@ -1168,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
@@ -1177,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</h4>
@@ -1186,9 +1022,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="computetype_csharp">
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
@@ -1196,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corecount_csharp">
 <a href="#corecount_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
@@ -1205,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetolive_csharp">
 <a href="#timetolive_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live</a>
@@ -1214,14 +1046,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="computetype_go">
 <a href="#computetype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
@@ -1229,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corecount_go">
 <a href="#corecount_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
@@ -1238,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetolive_go">
 <a href="#timetolive_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live</a>
@@ -1247,14 +1074,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="computetype_nodejs">
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
@@ -1262,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corecount_nodejs">
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
@@ -1271,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetolive_nodejs">
 <a href="#timetolive_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live</a>
@@ -1280,14 +1102,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="compute_type_python">
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
@@ -1295,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="core_count_python">
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
@@ -1304,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_to_live_python">
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
@@ -1313,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</h4>
@@ -1322,9 +1138,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectvia_csharp">
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
@@ -1332,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1341,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staginglinkedservice_csharp">
 <a href="#staginglinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
@@ -1350,14 +1162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectvia_go">
 <a href="#connectvia_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
@@ -1365,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1374,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staginglinkedservice_go">
 <a href="#staginglinkedservice_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
@@ -1383,14 +1190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectvia_nodejs">
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
@@ -1398,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1407,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staginglinkedservice_nodejs">
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
@@ -1416,14 +1218,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connect_via_python">
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
@@ -1431,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1440,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staging_linked_service_python">
 <a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
@@ -1449,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</h4>
@@ -1458,9 +1254,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalogadminpassword_csharp">
 <a href="#catalogadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
@@ -1468,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogadminusername_csharp">
 <a href="#catalogadminusername_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>User<wbr>Name</a>
@@ -1477,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogpricingtier_csharp">
 <a href="#catalogpricingtier_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Pricing<wbr>Tier</a>
@@ -1486,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogserverendpoint_csharp">
 <a href="#catalogserverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Server<wbr>Endpoint</a>
@@ -1495,14 +1286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalogadminpassword_go">
 <a href="#catalogadminpassword_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
@@ -1510,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogadminusername_go">
 <a href="#catalogadminusername_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>User<wbr>Name</a>
@@ -1519,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogpricingtier_go">
 <a href="#catalogpricingtier_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Pricing<wbr>Tier</a>
@@ -1528,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogserverendpoint_go">
 <a href="#catalogserverendpoint_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Server<wbr>Endpoint</a>
@@ -1537,14 +1322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalogadminpassword_nodejs">
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
@@ -1552,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogadminusername_nodejs">
 <a href="#catalogadminusername_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>User<wbr>Name</a>
@@ -1561,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogpricingtier_nodejs">
 <a href="#catalogpricingtier_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Pricing<wbr>Tier</a>
@@ -1570,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogserverendpoint_nodejs">
 <a href="#catalogserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Server<wbr>Endpoint</a>
@@ -1579,14 +1358,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalog_admin_password_python">
 <a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
@@ -1594,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_admin_user_name_python">
 <a href="#catalog_admin_user_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>user_<wbr>name</a>
@@ -1603,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_pricing_tier_python">
 <a href="#catalog_pricing_tier_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>pricing_<wbr>tier</a>
@@ -1612,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_server_endpoint_python">
 <a href="#catalog_server_endpoint_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>server_<wbr>endpoint</a>
@@ -1621,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</h4>
@@ -1630,9 +1402,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cataloginfo_csharp">
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
@@ -1640,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsetupscriptproperties_csharp">
 <a href="#customsetupscriptproperties_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
@@ -1649,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxyproperties_csharp">
 <a href="#dataproxyproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
@@ -1658,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_csharp">
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -1667,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expresscustomsetupproperties_csharp">
 <a href="#expresscustomsetupproperties_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup<wbr>Properties</a>
@@ -1676,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1685,14 +1450,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cataloginfo_go">
 <a href="#cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
@@ -1700,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsetupscriptproperties_go">
 <a href="#customsetupscriptproperties_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
@@ -1709,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxyproperties_go">
 <a href="#dataproxyproperties_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
@@ -1718,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_go">
 <a href="#edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -1727,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expresscustomsetupproperties_go">
 <a href="#expresscustomsetupproperties_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup<wbr>Properties</a>
@@ -1736,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1745,14 +1502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cataloginfo_nodejs">
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
@@ -1760,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsetupscriptproperties_nodejs">
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
@@ -1769,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxyproperties_nodejs">
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
@@ -1778,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_nodejs">
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -1787,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expresscustomsetupproperties_nodejs">
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
@@ -1796,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -1805,14 +1554,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalog_info_python">
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
@@ -1820,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_setup_script_properties_python">
 <a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
@@ -1829,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_proxy_properties_python">
 <a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
@@ -1838,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_python">
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -1847,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="express_custom_setup_properties_python">
 <a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
@@ -1856,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Component<wbr>Setup<wbr>Response<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -1865,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</h4>
@@ -1874,9 +1614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_csharp">
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
@@ -1884,8 +1622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1893,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_csharp">
 <a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Id</a>
@@ -1902,14 +1638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_go">
 <a href="#publicips_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
@@ -1917,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1926,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_go">
 <a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">VNet<wbr>Id</a>
@@ -1935,14 +1666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_nodejs">
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
@@ -1950,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1959,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_nodejs">
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Id</a>
@@ -1968,14 +1694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_ips_python">
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
@@ -1983,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1992,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="v_net_id_python">
 <a href="#v_net_id_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>id</a>
@@ -2001,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</h4>
@@ -2010,9 +1730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2020,14 +1738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2035,14 +1750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2050,14 +1762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2065,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</h4>
@@ -2074,9 +1782,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2084,14 +1790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2099,14 +1802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -2114,14 +1814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -2129,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedintegrationruntimeresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Response</h4>
@@ -2138,9 +1834,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2148,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeproperties_csharp">
 <a href="#computeproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
@@ -2157,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2166,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssisproperties_csharp">
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
@@ -2175,14 +1866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2190,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeproperties_go">
 <a href="#computeproperties_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
@@ -2199,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2208,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssisproperties_go">
 <a href="#ssisproperties_go" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
@@ -2217,14 +1902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2232,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeproperties_nodejs">
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
@@ -2241,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2250,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssisproperties_nodejs">
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
@@ -2259,14 +1938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2274,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_properties_python">
 <a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
@@ -2283,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2292,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssis_properties_python">
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
@@ -2301,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securestringresponse">Secure<wbr>String<wbr>Response</h4>
@@ -2310,9 +1982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2320,14 +1990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2335,14 +2002,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2350,14 +2014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2365,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selfhostedintegrationruntimeresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response</h4>
@@ -2374,9 +2034,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2384,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedinfo_csharp">
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
@@ -2393,14 +2050,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2408,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedinfo_go">
 <a href="#linkedinfo_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
@@ -2417,14 +2070,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2432,8 +2082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkedinfo_nodejs">
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
@@ -2441,14 +2090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2456,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linked_info_python">
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
@@ -2465,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

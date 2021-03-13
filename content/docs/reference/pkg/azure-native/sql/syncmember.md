@@ -14,11 +14,17 @@ An Azure SQL Database sync member.
 API Version: 2020-08-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a new sync member
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -81,9 +90,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -103,9 +115,12 @@ sync_member = azure_native.sql.SyncMember("syncMember",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,10 +141,17 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Update a sync member
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -157,9 +179,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -192,9 +217,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -214,9 +242,12 @@ sync_member = azure_native.sql.SyncMember("syncMember",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -237,9 +268,16 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SyncMember Resource {#create}
@@ -264,9 +302,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +310,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +318,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,10 +326,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -323,9 +352,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -333,9 +360,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -343,9 +368,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -353,9 +376,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -363,18 +384,13 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -382,9 +398,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -392,9 +406,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -402,10 +414,7 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -420,9 +429,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -430,8 +437,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -439,8 +445,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -448,8 +453,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_csharp">
 <a href="#syncgroupname_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
@@ -457,8 +461,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasetype_csharp">
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -466,8 +469,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#syncmemberdbtype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -475,8 +477,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserverdatabaseid_csharp">
 <a href="#sqlserverdatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Database<wbr>Id</a>
@@ -484,8 +485,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncagentid_csharp">
 <a href="#syncagentid_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Agent<wbr>Id</a>
@@ -493,8 +493,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncdirection_csharp">
 <a href="#syncdirection_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
@@ -502,8 +501,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#syncdirection">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Sync<wbr>Direction</a></span>
     </dt>
-    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmemberazuredatabaseresourceid_csharp">
 <a href="#syncmemberazuredatabaseresourceid_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
@@ -511,8 +509,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmembername_csharp">
 <a href="#syncmembername_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Name</a>
@@ -520,8 +517,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivatelinkconnection_csharp">
 <a href="#useprivatelinkconnection_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Link<wbr>Connection</a>
@@ -529,8 +525,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -538,14 +533,11 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -553,8 +545,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -562,8 +553,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -571,8 +561,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_go">
 <a href="#syncgroupname_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
@@ -580,8 +569,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasetype_go">
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -589,8 +577,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -598,8 +585,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserverdatabaseid_go">
 <a href="#sqlserverdatabaseid_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Server<wbr>Database<wbr>Id</a>
@@ -607,8 +593,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncagentid_go">
 <a href="#syncagentid_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Agent<wbr>Id</a>
@@ -616,8 +601,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncdirection_go">
 <a href="#syncdirection_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
@@ -625,8 +609,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#syncdirection">Sync<wbr>Direction</a></span>
     </dt>
-    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmemberazuredatabaseresourceid_go">
 <a href="#syncmemberazuredatabaseresourceid_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
@@ -634,8 +617,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmembername_go">
 <a href="#syncmembername_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Member<wbr>Name</a>
@@ -643,8 +625,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivatelinkconnection_go">
 <a href="#useprivatelinkconnection_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Link<wbr>Connection</a>
@@ -652,8 +633,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -661,14 +641,11 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -676,8 +653,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -685,8 +661,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -694,8 +669,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_nodejs">
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
@@ -703,8 +677,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasetype_nodejs">
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
@@ -712,8 +685,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -721,8 +693,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserverdatabaseid_nodejs">
 <a href="#sqlserverdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>Database<wbr>Id</a>
@@ -730,8 +701,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncagentid_nodejs">
 <a href="#syncagentid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Agent<wbr>Id</a>
@@ -739,8 +709,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncdirection_nodejs">
 <a href="#syncdirection_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Direction</a>
@@ -748,8 +717,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#syncdirection">Sync<wbr>Direction</a></span>
     </dt>
-    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmemberazuredatabaseresourceid_nodejs">
 <a href="#syncmemberazuredatabaseresourceid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
@@ -757,8 +725,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmembername_nodejs">
 <a href="#syncmembername_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Member<wbr>Name</a>
@@ -766,8 +733,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useprivatelinkconnection_nodejs">
 <a href="#useprivatelinkconnection_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Link<wbr>Connection</a>
@@ -775,8 +741,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -784,14 +749,11 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -799,8 +761,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -808,8 +769,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -817,8 +777,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sync_group_name_python">
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
@@ -826,8 +785,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_type_python">
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
@@ -835,8 +793,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -844,8 +801,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_server_database_id_python">
 <a href="#sql_server_database_id_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>database_<wbr>id</a>
@@ -853,8 +809,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_agent_id_python">
 <a href="#sync_agent_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>agent_<wbr>id</a>
@@ -862,8 +817,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_direction_python">
 <a href="#sync_direction_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>direction</a>
@@ -871,8 +825,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#syncdirection">Sync<wbr>Direction</a></span>
     </dt>
-    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_member_azure_database_resource_id_python">
 <a href="#sync_member_azure_database_resource_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>member_<wbr>azure_<wbr>database_<wbr>resource_<wbr>id</a>
@@ -880,8 +833,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_member_name_python">
 <a href="#sync_member_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>member_<wbr>name</a>
@@ -889,8 +841,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_private_link_connection_python">
 <a href="#use_private_link_connection_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>link_<wbr>connection</a>
@@ -898,8 +849,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -907,8 +857,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -919,9 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -929,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -938,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointname_csharp">
 <a href="#privateendpointname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
@@ -947,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncstate_csharp">
 <a href="#syncstate_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>State</a>
@@ -956,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -965,14 +908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -980,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -989,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointname_go">
 <a href="#privateendpointname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Name</a>
@@ -998,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncstate_go">
 <a href="#syncstate_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>State</a>
@@ -1007,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1016,14 +952,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1031,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1040,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointname_nodejs">
 <a href="#privateendpointname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Name</a>
@@ -1049,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncstate_nodejs">
 <a href="#syncstate_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>State</a>
@@ -1058,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1067,14 +996,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1082,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1091,8 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoint_name_python">
 <a href="#private_endpoint_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>name</a>
@@ -1100,8 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sync_state_python">
 <a href="#sync_state_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>state</a>
@@ -1109,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sync state of the sync member.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1118,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1135,85 +1056,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="syncdirection">Sync<wbr>Direction</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Bidirectional</dt>
-    <dd>Bidirectional</dd>
-    <dt>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
-    <dd>OneWayMemberToHub</dd>
-    <dt>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
-    <dd>OneWayHubToMember</dd>
-</dl>
+<dl class="tabular"><dt>Bidirectional</dt>
+    <dd>Bidirectional</dd><dt>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
+    <dd>OneWayMemberToHub</dd><dt>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
+    <dd>OneWayHubToMember</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sync<wbr>Direction<wbr>Bidirectional</dt>
-    <dd>Bidirectional</dd>
-    <dt>Sync<wbr>Direction<wbr>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
-    <dd>OneWayMemberToHub</dd>
-    <dt>Sync<wbr>Direction<wbr>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
-    <dd>OneWayHubToMember</dd>
-</dl>
+<dl class="tabular"><dt>Sync<wbr>Direction<wbr>Bidirectional</dt>
+    <dd>Bidirectional</dd><dt>Sync<wbr>Direction<wbr>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
+    <dd>OneWayMemberToHub</dd><dt>Sync<wbr>Direction<wbr>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
+    <dd>OneWayHubToMember</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Bidirectional</dt>
-    <dd>Bidirectional</dd>
-    <dt>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
-    <dd>OneWayMemberToHub</dd>
-    <dt>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
-    <dd>OneWayHubToMember</dd>
-</dl>
+<dl class="tabular"><dt>Bidirectional</dt>
+    <dd>Bidirectional</dd><dt>One<wbr>Way<wbr>Member<wbr>To<wbr>Hub</dt>
+    <dd>OneWayMemberToHub</dd><dt>One<wbr>Way<wbr>Hub<wbr>To<wbr>Member</dt>
+    <dd>OneWayHubToMember</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BIDIRECTIONAL</dt>
-    <dd>Bidirectional</dd>
-    <dt>ONE_WAY_MEMBER_TO_HUB</dt>
-    <dd>OneWayMemberToHub</dd>
-    <dt>ONE_WAY_HUB_TO_MEMBER</dt>
-    <dd>OneWayHubToMember</dd>
-</dl>
+<dl class="tabular"><dt>BIDIRECTIONAL</dt>
+    <dd>Bidirectional</dd><dt>ONE_WAY_MEMBER_TO_HUB</dt>
+    <dd>OneWayMemberToHub</dd><dt>ONE_WAY_HUB_TO_MEMBER</dt>
+    <dd>OneWayHubToMember</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Sql<wbr>Database</dt>
-    <dd>AzureSqlDatabase</dd>
-    <dt>Sql<wbr>Server<wbr>Database</dt>
-    <dd>SqlServerDatabase</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Sql<wbr>Database</dt>
+    <dd>AzureSqlDatabase</dd><dt>Sql<wbr>Server<wbr>Database</dt>
+    <dd>SqlServerDatabase</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sync<wbr>Member<wbr>Db<wbr>Type<wbr>Azure<wbr>Sql<wbr>Database</dt>
-    <dd>AzureSqlDatabase</dd>
-    <dt>Sync<wbr>Member<wbr>Db<wbr>Type<wbr>Sql<wbr>Server<wbr>Database</dt>
-    <dd>SqlServerDatabase</dd>
-</dl>
+<dl class="tabular"><dt>Sync<wbr>Member<wbr>Db<wbr>Type<wbr>Azure<wbr>Sql<wbr>Database</dt>
+    <dd>AzureSqlDatabase</dd><dt>Sync<wbr>Member<wbr>Db<wbr>Type<wbr>Sql<wbr>Server<wbr>Database</dt>
+    <dd>SqlServerDatabase</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Sql<wbr>Database</dt>
-    <dd>AzureSqlDatabase</dd>
-    <dt>Sql<wbr>Server<wbr>Database</dt>
-    <dd>SqlServerDatabase</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Sql<wbr>Database</dt>
+    <dd>AzureSqlDatabase</dd><dt>Sql<wbr>Server<wbr>Database</dt>
+    <dd>SqlServerDatabase</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AZURE_SQL_DATABASE</dt>
-    <dd>AzureSqlDatabase</dd>
-    <dt>SQL_SERVER_DATABASE</dt>
-    <dd>SqlServerDatabase</dd>
-</dl>
+<dl class="tabular"><dt>AZURE_SQL_DATABASE</dt>
+    <dd>AzureSqlDatabase</dd><dt>SQL_SERVER_DATABASE</dt>
+    <dd>SqlServerDatabase</dd></dl>
 {{% /choosable %}}
 ## Import
 

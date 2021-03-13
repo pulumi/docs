@@ -14,11 +14,17 @@ A Big Data pool
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a Big Data pool
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -66,9 +72,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -117,9 +126,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -155,9 +167,12 @@ big_data_pool = azure_native.synapse.BigDataPool("bigDataPool",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -194,9 +209,16 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BigDataPool Resource {#create}
@@ -221,9 +243,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -231,9 +251,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -241,9 +259,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -251,10 +267,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -280,9 +293,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -290,9 +301,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -300,9 +309,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -310,9 +317,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -320,18 +325,13 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -339,9 +339,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -349,9 +347,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -359,10 +355,7 @@ const bigDataPool = new azure_native.synapse.BigDataPool("bigDataPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -377,9 +370,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -387,8 +378,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -396,8 +386,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopause_csharp">
 <a href="#autopause_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
@@ -405,8 +394,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopauseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Auto<wbr>Pause<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_csharp">
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -414,8 +402,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigdatapoolname_csharp">
 <a href="#bigdatapoolname_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Data<wbr>Pool<wbr>Name</a>
@@ -423,8 +410,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachesize_csharp">
 <a href="#cachesize_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
@@ -432,8 +418,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cache size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cache size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -441,8 +426,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlibraries_csharp">
 <a href="#customlibraries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
@@ -450,8 +434,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryinfo">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsparklogfolder_csharp">
 <a href="#defaultsparklogfolder_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Spark<wbr>Log<wbr>Folder</a>
@@ -459,8 +442,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicexecutorallocation_csharp">
 <a href="#dynamicexecutorallocation_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
@@ -468,8 +450,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dynamicexecutorallocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -477,8 +458,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscomputeisolationenabled_csharp">
 <a href="#iscomputeisolationenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compute<wbr>Isolation<wbr>Enabled</a>
@@ -486,8 +466,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="libraryrequirements_csharp">
 <a href="#libraryrequirements_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirements</a>
@@ -495,8 +474,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Library version requirements{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -504,8 +482,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -513,8 +490,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesize_csharp">
 <a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -522,8 +498,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#nodesize">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Node<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesizefamily_csharp">
 <a href="#nodesizefamily_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
@@ -531,8 +506,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#nodesizefamily">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Node<wbr>Size<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -540,8 +514,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlevelpackagesenabled_csharp">
 <a href="#sessionlevelpackagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
@@ -549,8 +522,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkconfigproperties_csharp">
 <a href="#sparkconfigproperties_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
@@ -558,8 +530,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_csharp">
 <a href="#sparkeventsfolder_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
@@ -567,8 +538,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkversion_csharp">
 <a href="#sparkversion_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Version</a>
@@ -576,8 +546,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -585,14 +554,11 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -600,8 +566,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -609,8 +574,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopause_go">
 <a href="#autopause_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
@@ -618,8 +582,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopauseproperties">Auto<wbr>Pause<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_go">
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -627,8 +590,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleproperties">Auto<wbr>Scale<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigdatapoolname_go">
 <a href="#bigdatapoolname_go" style="color: inherit; text-decoration: inherit;">Big<wbr>Data<wbr>Pool<wbr>Name</a>
@@ -636,8 +598,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachesize_go">
 <a href="#cachesize_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
@@ -645,8 +606,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cache size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cache size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -654,8 +614,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlibraries_go">
 <a href="#customlibraries_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
@@ -663,8 +622,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryinfo">[]Library<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsparklogfolder_go">
 <a href="#defaultsparklogfolder_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Spark<wbr>Log<wbr>Folder</a>
@@ -672,8 +630,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicexecutorallocation_go">
 <a href="#dynamicexecutorallocation_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
@@ -681,8 +638,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</a></span>
     </dt>
-    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -690,8 +646,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscomputeisolationenabled_go">
 <a href="#iscomputeisolationenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compute<wbr>Isolation<wbr>Enabled</a>
@@ -699,8 +654,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="libraryrequirements_go">
 <a href="#libraryrequirements_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirements</a>
@@ -708,8 +662,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Library version requirements{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -717,8 +670,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -726,8 +678,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesize_go">
 <a href="#nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -735,8 +686,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#nodesize">Node<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesizefamily_go">
 <a href="#nodesizefamily_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
@@ -744,8 +694,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#nodesizefamily">Node<wbr>Size<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -753,8 +702,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlevelpackagesenabled_go">
 <a href="#sessionlevelpackagesenabled_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Level<wbr>Packages<wbr>Enabled</a>
@@ -762,8 +710,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkconfigproperties_go">
 <a href="#sparkconfigproperties_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
@@ -771,8 +718,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_go">
 <a href="#sparkeventsfolder_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
@@ -780,8 +726,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkversion_go">
 <a href="#sparkversion_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Version</a>
@@ -789,8 +734,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -798,14 +742,11 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -813,8 +754,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -822,8 +762,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopause_nodejs">
 <a href="#autopause_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause</a>
@@ -831,8 +770,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopauseproperties">Auto<wbr>Pause<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_nodejs">
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
@@ -840,8 +778,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleproperties">Auto<wbr>Scale<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigdatapoolname_nodejs">
 <a href="#bigdatapoolname_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Data<wbr>Pool<wbr>Name</a>
@@ -849,8 +786,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachesize_nodejs">
 <a href="#cachesize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size</a>
@@ -858,8 +794,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The cache size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cache size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -867,8 +802,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customlibraries_nodejs">
 <a href="#customlibraries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Libraries</a>
@@ -876,8 +810,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryinfo">Library<wbr>Info[]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsparklogfolder_nodejs">
 <a href="#defaultsparklogfolder_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Spark<wbr>Log<wbr>Folder</a>
@@ -885,8 +818,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicexecutorallocation_nodejs">
 <a href="#dynamicexecutorallocation_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Executor<wbr>Allocation</a>
@@ -894,8 +826,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</a></span>
     </dt>
-    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
@@ -903,8 +834,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscomputeisolationenabled_nodejs">
 <a href="#iscomputeisolationenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compute<wbr>Isolation<wbr>Enabled</a>
@@ -912,8 +842,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="libraryrequirements_nodejs">
 <a href="#libraryrequirements_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Requirements</a>
@@ -921,8 +850,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Library version requirements{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -930,8 +858,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -939,8 +866,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesize_nodejs">
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
@@ -948,8 +874,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#nodesize">Node<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodesizefamily_nodejs">
 <a href="#nodesizefamily_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size<wbr>Family</a>
@@ -957,8 +882,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#nodesizefamily">Node<wbr>Size<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -966,8 +890,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlevelpackagesenabled_nodejs">
 <a href="#sessionlevelpackagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Level<wbr>Packages<wbr>Enabled</a>
@@ -975,8 +898,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkconfigproperties_nodejs">
 <a href="#sparkconfigproperties_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config<wbr>Properties</a>
@@ -984,8 +906,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_nodejs">
 <a href="#sparkeventsfolder_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Events<wbr>Folder</a>
@@ -993,8 +914,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkversion_nodejs">
 <a href="#sparkversion_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Version</a>
@@ -1002,8 +922,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1011,14 +930,11 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1026,8 +942,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -1035,8 +950,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_pause_python">
 <a href="#auto_pause_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause</a>
@@ -1044,8 +958,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autopauseproperties">Auto<wbr>Pause<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scale_python">
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
@@ -1053,8 +966,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscaleproperties">Auto<wbr>Scale<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="big_data_pool_name_python">
 <a href="#big_data_pool_name_python" style="color: inherit; text-decoration: inherit;">big_<wbr>data_<wbr>pool_<wbr>name</a>
@@ -1062,8 +974,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Big Data pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_size_python">
 <a href="#cache_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size</a>
@@ -1071,8 +982,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cache size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cache size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -1080,8 +990,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_libraries_python">
 <a href="#custom_libraries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>libraries</a>
@@ -1089,8 +998,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryinfo">Sequence[Library<wbr>Info<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_spark_log_folder_python">
 <a href="#default_spark_log_folder_python" style="color: inherit; text-decoration: inherit;">default_<wbr>spark_<wbr>log_<wbr>folder</a>
@@ -1098,8 +1006,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamic_executor_allocation_python">
 <a href="#dynamic_executor_allocation_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>executor_<wbr>allocation</a>
@@ -1107,8 +1014,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
@@ -1116,8 +1022,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_compute_isolation_enabled_python">
 <a href="#is_compute_isolation_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compute_<wbr>isolation_<wbr>enabled</a>
@@ -1125,8 +1030,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether compute isolation is required or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="library_requirements_python">
 <a href="#library_requirements_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirements</a>
@@ -1134,8 +1038,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Library version requirements{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Library version requirements{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1143,8 +1046,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1152,8 +1054,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes in the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_size_python">
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
@@ -1161,8 +1062,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#nodesize">Node<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level of compute power that each node in the Big Data pool has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_size_family_python">
 <a href="#node_size_family_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size_<wbr>family</a>
@@ -1170,8 +1070,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#nodesizefamily">Node<wbr>Size<wbr>Family</a></span>
     </dt>
-    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of nodes that the Big Data pool provides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1179,8 +1078,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_level_packages_enabled_python">
 <a href="#session_level_packages_enabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>level_<wbr>packages_<wbr>enabled</a>
@@ -1188,8 +1086,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether session level packages enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_config_properties_python">
 <a href="#spark_config_properties_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config_<wbr>properties</a>
@@ -1197,8 +1094,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_events_folder_python">
 <a href="#spark_events_folder_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>events_<wbr>folder</a>
@@ -1206,8 +1102,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Spark events folder{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_version_python">
 <a href="#spark_version_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>version</a>
@@ -1215,8 +1110,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Apache Spark version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1224,8 +1118,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1236,9 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1246,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastsucceededtimestamp_csharp">
 <a href="#lastsucceededtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Succeeded<wbr>Timestamp</a>
@@ -1255,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1264,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1273,14 +1161,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1288,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastsucceededtimestamp_go">
 <a href="#lastsucceededtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Succeeded<wbr>Timestamp</a>
@@ -1297,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1306,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1315,14 +1197,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1330,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastsucceededtimestamp_nodejs">
 <a href="#lastsucceededtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Succeeded<wbr>Timestamp</a>
@@ -1339,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1348,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1357,14 +1233,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1372,8 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_succeeded_timestamp_python">
 <a href="#last_succeeded_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>succeeded_<wbr>timestamp</a>
@@ -1381,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1390,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1399,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1416,9 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="autopauseproperties">Auto<wbr>Pause<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delayinminutes_csharp">
 <a href="#delayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Delay<wbr>In<wbr>Minutes</a>
@@ -1426,8 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1435,14 +1301,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delayinminutes_go">
 <a href="#delayinminutes_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>In<wbr>Minutes</a>
@@ -1450,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1459,14 +1321,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delayinminutes_nodejs">
 <a href="#delayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>In<wbr>Minutes</a>
@@ -1474,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1483,14 +1341,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delay_in_minutes_python">
 <a href="#delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>in_<wbr>minutes</a>
@@ -1498,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1507,16 +1361,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autopausepropertiesresponse">Auto<wbr>Pause<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delayinminutes_csharp">
 <a href="#delayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Delay<wbr>In<wbr>Minutes</a>
@@ -1524,8 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1533,14 +1383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delayinminutes_go">
 <a href="#delayinminutes_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>In<wbr>Minutes</a>
@@ -1548,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1557,14 +1403,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delayinminutes_nodejs">
 <a href="#delayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>In<wbr>Minutes</a>
@@ -1572,8 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1581,14 +1423,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delay_in_minutes_python">
 <a href="#delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>in_<wbr>minutes</a>
@@ -1596,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes of idle time before the Big Data pool is automatically paused.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1605,16 +1443,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether auto-pausing is enabled for the Big Data pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscaleproperties">Auto<wbr>Scale<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1622,8 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodecount_csharp">
 <a href="#maxnodecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -1631,8 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -1640,14 +1473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1655,8 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodecount_go">
 <a href="#maxnodecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -1664,8 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -1673,14 +1501,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1688,8 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodecount_nodejs">
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
@@ -1697,8 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -1706,14 +1529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1721,8 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_node_count_python">
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
@@ -1730,8 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -1739,16 +1557,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalepropertiesresponse">Auto<wbr>Scale<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1756,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodecount_csharp">
 <a href="#maxnodecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -1765,8 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -1774,14 +1587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1789,8 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodecount_go">
 <a href="#maxnodecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -1798,8 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -1807,14 +1615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1822,8 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodecount_nodejs">
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
@@ -1831,8 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -1840,14 +1643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1855,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether automatic scaling is enabled for the Big Data pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_node_count_python">
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
@@ -1864,8 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of nodes the Big Data pool can support.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -1873,16 +1671,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The minimum number of nodes the Big Data pool can support.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1890,14 +1685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1905,14 +1697,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1920,14 +1709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1935,16 +1721,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dynamicexecutorallocationresponse">Dynamic<wbr>Executor<wbr>Allocation<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1952,14 +1735,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1967,14 +1747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1982,14 +1759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1997,16 +1771,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="libraryinfo">Library<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -2014,8 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2023,8 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2032,8 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2041,14 +1809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -2056,8 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2065,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2074,8 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2083,14 +1845,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -2098,8 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2107,8 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2116,8 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2125,14 +1881,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -2140,8 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2149,8 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2158,8 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2167,16 +1917,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="libraryinforesponse">Library<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="creatorid_csharp">
 <a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -2184,8 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstatus_csharp">
 <a href="#provisioningstatus_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
@@ -2193,8 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadedtimestamp_csharp">
 <a href="#uploadedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Uploaded<wbr>Timestamp</a>
@@ -2202,8 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -2211,8 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2220,8 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2229,8 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2238,14 +1979,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="creatorid_go">
 <a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -2253,8 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstatus_go">
 <a href="#provisioningstatus_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
@@ -2262,8 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadedtimestamp_go">
 <a href="#uploadedtimestamp_go" style="color: inherit; text-decoration: inherit;">Uploaded<wbr>Timestamp</a>
@@ -2271,8 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -2280,8 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2289,8 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2298,8 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2307,14 +2039,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="creatorid_nodejs">
 <a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -2322,8 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstatus_nodejs">
 <a href="#provisioningstatus_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Status</a>
@@ -2331,8 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploadedtimestamp_nodejs">
 <a href="#uploadedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">uploaded<wbr>Timestamp</a>
@@ -2340,8 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -2349,8 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2358,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2367,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2376,14 +2099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="creator_id_python">
 <a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -2391,8 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_status_python">
 <a href="#provisioning_status_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>status</a>
@@ -2400,8 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uploaded_timestamp_python">
 <a href="#uploaded_timestamp_python" style="color: inherit; text-decoration: inherit;">uploaded_<wbr>timestamp</a>
@@ -2409,8 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -2418,8 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2427,8 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2436,8 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2445,16 +2159,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="libraryrequirements">Library<wbr>Requirements</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -2462,8 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -2471,14 +2181,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -2486,8 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -2495,14 +2201,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2510,8 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -2519,14 +2221,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2534,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -2543,16 +2241,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="libraryrequirementsresponse">Library<wbr>Requirements<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -2560,8 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -2569,8 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -2578,14 +2271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -2593,8 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -2602,8 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -2611,14 +2299,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -2626,8 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2635,8 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -2644,14 +2327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -2659,8 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last update time of the library requirements file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2668,8 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The library requirements.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The library requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -2677,124 +2355,79 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The filename of the library requirements file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodesize">Node<wbr>Size</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Small</dt>
-    <dd>Small</dd>
-    <dt>Medium</dt>
-    <dd>Medium</dd>
-    <dt>Large</dt>
-    <dd>Large</dd>
-    <dt>XLarge</dt>
-    <dd>XLarge</dd>
-    <dt>XXLarge</dt>
-    <dd>XXLarge</dd>
-    <dt>XXXLarge</dt>
-    <dd>XXXLarge</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Small</dt>
+    <dd>Small</dd><dt>Medium</dt>
+    <dd>Medium</dd><dt>Large</dt>
+    <dd>Large</dd><dt>XLarge</dt>
+    <dd>XLarge</dd><dt>XXLarge</dt>
+    <dd>XXLarge</dd><dt>XXXLarge</dt>
+    <dd>XXXLarge</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Node<wbr>Size<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Node<wbr>Size<wbr>Small</dt>
-    <dd>Small</dd>
-    <dt>Node<wbr>Size<wbr>Medium</dt>
-    <dd>Medium</dd>
-    <dt>Node<wbr>Size<wbr>Large</dt>
-    <dd>Large</dd>
-    <dt>Node<wbr>Size<wbr>XLarge</dt>
-    <dd>XLarge</dd>
-    <dt>Node<wbr>Size<wbr>XXLarge</dt>
-    <dd>XXLarge</dd>
-    <dt>Node<wbr>Size<wbr>XXXLarge</dt>
-    <dd>XXXLarge</dd>
-</dl>
+<dl class="tabular"><dt>Node<wbr>Size<wbr>None</dt>
+    <dd>None</dd><dt>Node<wbr>Size<wbr>Small</dt>
+    <dd>Small</dd><dt>Node<wbr>Size<wbr>Medium</dt>
+    <dd>Medium</dd><dt>Node<wbr>Size<wbr>Large</dt>
+    <dd>Large</dd><dt>Node<wbr>Size<wbr>XLarge</dt>
+    <dd>XLarge</dd><dt>Node<wbr>Size<wbr>XXLarge</dt>
+    <dd>XXLarge</dd><dt>Node<wbr>Size<wbr>XXXLarge</dt>
+    <dd>XXXLarge</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Small</dt>
-    <dd>Small</dd>
-    <dt>Medium</dt>
-    <dd>Medium</dd>
-    <dt>Large</dt>
-    <dd>Large</dd>
-    <dt>XLarge</dt>
-    <dd>XLarge</dd>
-    <dt>XXLarge</dt>
-    <dd>XXLarge</dd>
-    <dt>XXXLarge</dt>
-    <dd>XXXLarge</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Small</dt>
+    <dd>Small</dd><dt>Medium</dt>
+    <dd>Medium</dd><dt>Large</dt>
+    <dd>Large</dd><dt>XLarge</dt>
+    <dd>XLarge</dd><dt>XXLarge</dt>
+    <dd>XXLarge</dd><dt>XXXLarge</dt>
+    <dd>XXXLarge</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>SMALL</dt>
-    <dd>Small</dd>
-    <dt>MEDIUM</dt>
-    <dd>Medium</dd>
-    <dt>LARGE</dt>
-    <dd>Large</dd>
-    <dt>X_LARGE</dt>
-    <dd>XLarge</dd>
-    <dt>XX_LARGE</dt>
-    <dd>XXLarge</dd>
-    <dt>XXX_LARGE</dt>
-    <dd>XXXLarge</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>SMALL</dt>
+    <dd>Small</dd><dt>MEDIUM</dt>
+    <dd>Medium</dd><dt>LARGE</dt>
+    <dd>Large</dd><dt>X_LARGE</dt>
+    <dd>XLarge</dd><dt>XX_LARGE</dt>
+    <dd>XXLarge</dd><dt>XXX_LARGE</dt>
+    <dd>XXXLarge</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodesizefamily">Node<wbr>Size<wbr>Family</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Memory<wbr>Optimized</dt>
-    <dd>MemoryOptimized</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Memory<wbr>Optimized</dt>
+    <dd>MemoryOptimized</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Node<wbr>Size<wbr>Family<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Node<wbr>Size<wbr>Family<wbr>Memory<wbr>Optimized</dt>
-    <dd>MemoryOptimized</dd>
-</dl>
+<dl class="tabular"><dt>Node<wbr>Size<wbr>Family<wbr>None</dt>
+    <dd>None</dd><dt>Node<wbr>Size<wbr>Family<wbr>Memory<wbr>Optimized</dt>
+    <dd>MemoryOptimized</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Memory<wbr>Optimized</dt>
-    <dd>MemoryOptimized</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Memory<wbr>Optimized</dt>
+    <dd>MemoryOptimized</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>MEMORY_OPTIMIZED</dt>
-    <dd>MemoryOptimized</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>MEMORY_OPTIMIZED</dt>
+    <dd>MemoryOptimized</dd></dl>
 {{% /choosable %}}
 ## Import
 

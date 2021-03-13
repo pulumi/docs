@@ -45,9 +45,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:devtestlab:Policy myresource1 /subscriptions/{subsc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -211,8 +180,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policysetname_csharp">
 <a href="#policysetname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Set<wbr>Name</a>
@@ -220,8 +188,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -229,8 +196,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -238,8 +204,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluatortype_csharp">
 <a href="#evaluatortype_csharp" style="color: inherit; text-decoration: inherit;">Evaluator<wbr>Type</a>
@@ -247,8 +212,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policyevaluatortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Policy<wbr>Evaluator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="factdata_csharp">
 <a href="#factdata_csharp" style="color: inherit; text-decoration: inherit;">Fact<wbr>Data</a>
@@ -256,8 +220,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="factname_csharp">
 <a href="#factname_csharp" style="color: inherit; text-decoration: inherit;">Fact<wbr>Name</a>
@@ -265,8 +228,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policyfactname">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Policy<wbr>Fact<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +236,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +244,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -292,8 +252,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policystatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Policy<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -301,8 +260,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -310,14 +268,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -325,8 +280,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policysetname_go">
 <a href="#policysetname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Set<wbr>Name</a>
@@ -334,8 +288,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -343,8 +296,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -352,8 +304,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluatortype_go">
 <a href="#evaluatortype_go" style="color: inherit; text-decoration: inherit;">Evaluator<wbr>Type</a>
@@ -361,8 +312,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policyevaluatortype">Policy<wbr>Evaluator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="factdata_go">
 <a href="#factdata_go" style="color: inherit; text-decoration: inherit;">Fact<wbr>Data</a>
@@ -370,8 +320,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="factname_go">
 <a href="#factname_go" style="color: inherit; text-decoration: inherit;">Fact<wbr>Name</a>
@@ -379,8 +328,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policyfactname">Policy<wbr>Fact<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -388,8 +336,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +344,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -406,8 +352,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policystatus">Policy<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -415,8 +360,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -424,14 +368,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
@@ -439,8 +380,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policysetname_nodejs">
 <a href="#policysetname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Set<wbr>Name</a>
@@ -448,8 +388,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -457,8 +396,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -466,8 +404,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluatortype_nodejs">
 <a href="#evaluatortype_nodejs" style="color: inherit; text-decoration: inherit;">evaluator<wbr>Type</a>
@@ -475,8 +412,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policyevaluatortype">Policy<wbr>Evaluator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="factdata_nodejs">
 <a href="#factdata_nodejs" style="color: inherit; text-decoration: inherit;">fact<wbr>Data</a>
@@ -484,8 +420,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="factname_nodejs">
 <a href="#factname_nodejs" style="color: inherit; text-decoration: inherit;">fact<wbr>Name</a>
@@ -493,8 +428,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policyfactname">Policy<wbr>Fact<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -502,8 +436,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -511,8 +444,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -520,8 +452,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#policystatus">Policy<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -529,8 +460,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -538,14 +468,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
@@ -553,8 +480,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_set_name_python">
 <a href="#policy_set_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>set_<wbr>name</a>
@@ -562,8 +488,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the policy set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -571,8 +496,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -580,8 +504,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluator_type_python">
 <a href="#evaluator_type_python" style="color: inherit; text-decoration: inherit;">evaluator_<wbr>type</a>
@@ -589,8 +512,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#policyevaluatortype">Policy<wbr>Evaluator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fact_data_python">
 <a href="#fact_data_python" style="color: inherit; text-decoration: inherit;">fact_<wbr>data</a>
@@ -598,8 +520,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact data of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fact_name_python">
 <a href="#fact_name_python" style="color: inherit; text-decoration: inherit;">fact_<wbr>name</a>
@@ -607,8 +528,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#policyfactname">Policy<wbr>Fact<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -616,8 +536,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +544,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -634,8 +552,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#policystatus">Policy<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -643,8 +560,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -652,8 +568,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -664,9 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -674,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -683,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -692,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -701,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -710,14 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -725,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -734,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -743,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -752,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -761,14 +663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -776,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -794,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -803,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -812,14 +707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -827,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the policy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -836,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -845,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -854,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -863,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -880,179 +767,111 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="policyevaluatortype">Policy<wbr>Evaluator<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Allowed<wbr>Values<wbr>Policy</dt>
-    <dd>AllowedValuesPolicy</dd>
-    <dt>Max<wbr>Value<wbr>Policy</dt>
-    <dd>MaxValuePolicy</dd>
-</dl>
+<dl class="tabular"><dt>Allowed<wbr>Values<wbr>Policy</dt>
+    <dd>AllowedValuesPolicy</dd><dt>Max<wbr>Value<wbr>Policy</dt>
+    <dd>MaxValuePolicy</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Policy<wbr>Evaluator<wbr>Type<wbr>Allowed<wbr>Values<wbr>Policy</dt>
-    <dd>AllowedValuesPolicy</dd>
-    <dt>Policy<wbr>Evaluator<wbr>Type<wbr>Max<wbr>Value<wbr>Policy</dt>
-    <dd>MaxValuePolicy</dd>
-</dl>
+<dl class="tabular"><dt>Policy<wbr>Evaluator<wbr>Type<wbr>Allowed<wbr>Values<wbr>Policy</dt>
+    <dd>AllowedValuesPolicy</dd><dt>Policy<wbr>Evaluator<wbr>Type<wbr>Max<wbr>Value<wbr>Policy</dt>
+    <dd>MaxValuePolicy</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Allowed<wbr>Values<wbr>Policy</dt>
-    <dd>AllowedValuesPolicy</dd>
-    <dt>Max<wbr>Value<wbr>Policy</dt>
-    <dd>MaxValuePolicy</dd>
-</dl>
+<dl class="tabular"><dt>Allowed<wbr>Values<wbr>Policy</dt>
+    <dd>AllowedValuesPolicy</dd><dt>Max<wbr>Value<wbr>Policy</dt>
+    <dd>MaxValuePolicy</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALLOWED_VALUES_POLICY</dt>
-    <dd>AllowedValuesPolicy</dd>
-    <dt>MAX_VALUE_POLICY</dt>
-    <dd>MaxValuePolicy</dd>
-</dl>
+<dl class="tabular"><dt>ALLOWED_VALUES_POLICY</dt>
+    <dd>AllowedValuesPolicy</dd><dt>MAX_VALUE_POLICY</dt>
+    <dd>MaxValuePolicy</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyfactname">Policy<wbr>Fact<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count</dt>
-    <dd>UserOwnedLabVmCount</dd>
-    <dt>User<wbr>Owned<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
-    <dd>UserOwnedLabPremiumVmCount</dd>
-    <dt>Lab<wbr>Vm<wbr>Count</dt>
-    <dd>LabVmCount</dd>
-    <dt>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
-    <dd>LabPremiumVmCount</dd>
-    <dt>Lab<wbr>Vm<wbr>Size</dt>
-    <dd>LabVmSize</dd>
-    <dt>Gallery<wbr>Image</dt>
-    <dd>GalleryImage</dd>
-    <dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count<wbr>In<wbr>Subnet</dt>
-    <dd>UserOwnedLabVmCountInSubnet</dd>
-    <dt>Lab<wbr>Target<wbr>Cost</dt>
-    <dd>LabTargetCost</dd>
-    <dt>Environment<wbr>Template</dt>
-    <dd>EnvironmentTemplate</dd>
-    <dt>Schedule<wbr>Edit<wbr>Permission</dt>
-    <dd>ScheduleEditPermission</dd>
-</dl>
+<dl class="tabular"><dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count</dt>
+    <dd>UserOwnedLabVmCount</dd><dt>User<wbr>Owned<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
+    <dd>UserOwnedLabPremiumVmCount</dd><dt>Lab<wbr>Vm<wbr>Count</dt>
+    <dd>LabVmCount</dd><dt>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
+    <dd>LabPremiumVmCount</dd><dt>Lab<wbr>Vm<wbr>Size</dt>
+    <dd>LabVmSize</dd><dt>Gallery<wbr>Image</dt>
+    <dd>GalleryImage</dd><dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count<wbr>In<wbr>Subnet</dt>
+    <dd>UserOwnedLabVmCountInSubnet</dd><dt>Lab<wbr>Target<wbr>Cost</dt>
+    <dd>LabTargetCost</dd><dt>Environment<wbr>Template</dt>
+    <dd>EnvironmentTemplate</dd><dt>Schedule<wbr>Edit<wbr>Permission</dt>
+    <dd>ScheduleEditPermission</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count</dt>
-    <dd>UserOwnedLabVmCount</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>User<wbr>Owned<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
-    <dd>UserOwnedLabPremiumVmCount</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Vm<wbr>Count</dt>
-    <dd>LabVmCount</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
-    <dd>LabPremiumVmCount</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Vm<wbr>Size</dt>
-    <dd>LabVmSize</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Gallery<wbr>Image</dt>
-    <dd>GalleryImage</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count<wbr>In<wbr>Subnet</dt>
-    <dd>UserOwnedLabVmCountInSubnet</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Target<wbr>Cost</dt>
-    <dd>LabTargetCost</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Environment<wbr>Template</dt>
-    <dd>EnvironmentTemplate</dd>
-    <dt>Policy<wbr>Fact<wbr>Name<wbr>Schedule<wbr>Edit<wbr>Permission</dt>
-    <dd>ScheduleEditPermission</dd>
-</dl>
+<dl class="tabular"><dt>Policy<wbr>Fact<wbr>Name<wbr>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count</dt>
+    <dd>UserOwnedLabVmCount</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>User<wbr>Owned<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
+    <dd>UserOwnedLabPremiumVmCount</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Vm<wbr>Count</dt>
+    <dd>LabVmCount</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
+    <dd>LabPremiumVmCount</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Vm<wbr>Size</dt>
+    <dd>LabVmSize</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Gallery<wbr>Image</dt>
+    <dd>GalleryImage</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count<wbr>In<wbr>Subnet</dt>
+    <dd>UserOwnedLabVmCountInSubnet</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Lab<wbr>Target<wbr>Cost</dt>
+    <dd>LabTargetCost</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Environment<wbr>Template</dt>
+    <dd>EnvironmentTemplate</dd><dt>Policy<wbr>Fact<wbr>Name<wbr>Schedule<wbr>Edit<wbr>Permission</dt>
+    <dd>ScheduleEditPermission</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count</dt>
-    <dd>UserOwnedLabVmCount</dd>
-    <dt>User<wbr>Owned<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
-    <dd>UserOwnedLabPremiumVmCount</dd>
-    <dt>Lab<wbr>Vm<wbr>Count</dt>
-    <dd>LabVmCount</dd>
-    <dt>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
-    <dd>LabPremiumVmCount</dd>
-    <dt>Lab<wbr>Vm<wbr>Size</dt>
-    <dd>LabVmSize</dd>
-    <dt>Gallery<wbr>Image</dt>
-    <dd>GalleryImage</dd>
-    <dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count<wbr>In<wbr>Subnet</dt>
-    <dd>UserOwnedLabVmCountInSubnet</dd>
-    <dt>Lab<wbr>Target<wbr>Cost</dt>
-    <dd>LabTargetCost</dd>
-    <dt>Environment<wbr>Template</dt>
-    <dd>EnvironmentTemplate</dd>
-    <dt>Schedule<wbr>Edit<wbr>Permission</dt>
-    <dd>ScheduleEditPermission</dd>
-</dl>
+<dl class="tabular"><dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count</dt>
+    <dd>UserOwnedLabVmCount</dd><dt>User<wbr>Owned<wbr>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
+    <dd>UserOwnedLabPremiumVmCount</dd><dt>Lab<wbr>Vm<wbr>Count</dt>
+    <dd>LabVmCount</dd><dt>Lab<wbr>Premium<wbr>Vm<wbr>Count</dt>
+    <dd>LabPremiumVmCount</dd><dt>Lab<wbr>Vm<wbr>Size</dt>
+    <dd>LabVmSize</dd><dt>Gallery<wbr>Image</dt>
+    <dd>GalleryImage</dd><dt>User<wbr>Owned<wbr>Lab<wbr>Vm<wbr>Count<wbr>In<wbr>Subnet</dt>
+    <dd>UserOwnedLabVmCountInSubnet</dd><dt>Lab<wbr>Target<wbr>Cost</dt>
+    <dd>LabTargetCost</dd><dt>Environment<wbr>Template</dt>
+    <dd>EnvironmentTemplate</dd><dt>Schedule<wbr>Edit<wbr>Permission</dt>
+    <dd>ScheduleEditPermission</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>USER_OWNED_LAB_VM_COUNT</dt>
-    <dd>UserOwnedLabVmCount</dd>
-    <dt>USER_OWNED_LAB_PREMIUM_VM_COUNT</dt>
-    <dd>UserOwnedLabPremiumVmCount</dd>
-    <dt>LAB_VM_COUNT</dt>
-    <dd>LabVmCount</dd>
-    <dt>LAB_PREMIUM_VM_COUNT</dt>
-    <dd>LabPremiumVmCount</dd>
-    <dt>LAB_VM_SIZE</dt>
-    <dd>LabVmSize</dd>
-    <dt>GALLERY_IMAGE</dt>
-    <dd>GalleryImage</dd>
-    <dt>USER_OWNED_LAB_VM_COUNT_IN_SUBNET</dt>
-    <dd>UserOwnedLabVmCountInSubnet</dd>
-    <dt>LAB_TARGET_COST</dt>
-    <dd>LabTargetCost</dd>
-    <dt>ENVIRONMENT_TEMPLATE</dt>
-    <dd>EnvironmentTemplate</dd>
-    <dt>SCHEDULE_EDIT_PERMISSION</dt>
-    <dd>ScheduleEditPermission</dd>
-</dl>
+<dl class="tabular"><dt>USER_OWNED_LAB_VM_COUNT</dt>
+    <dd>UserOwnedLabVmCount</dd><dt>USER_OWNED_LAB_PREMIUM_VM_COUNT</dt>
+    <dd>UserOwnedLabPremiumVmCount</dd><dt>LAB_VM_COUNT</dt>
+    <dd>LabVmCount</dd><dt>LAB_PREMIUM_VM_COUNT</dt>
+    <dd>LabPremiumVmCount</dd><dt>LAB_VM_SIZE</dt>
+    <dd>LabVmSize</dd><dt>GALLERY_IMAGE</dt>
+    <dd>GalleryImage</dd><dt>USER_OWNED_LAB_VM_COUNT_IN_SUBNET</dt>
+    <dd>UserOwnedLabVmCountInSubnet</dd><dt>LAB_TARGET_COST</dt>
+    <dd>LabTargetCost</dd><dt>ENVIRONMENT_TEMPLATE</dt>
+    <dd>EnvironmentTemplate</dd><dt>SCHEDULE_EDIT_PERMISSION</dt>
+    <dd>ScheduleEditPermission</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policystatus">Policy<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Policy<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Policy<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Policy<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Policy<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 

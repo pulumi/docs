@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configuredroletypes_csharp">
 <a href="#configuredroletypes_csharp" style="color: inherit; text-decoration: inherit;">Configured<wbr>Role<wbr>Types</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="culture_csharp">
 <a href="#culture_csharp" style="color: inherit; text-decoration: inherit;">Culture</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicehcsversion_csharp">
 <a href="#devicehcsversion_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Hcs<wbr>Version</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicelocalcapacity_csharp">
 <a href="#devicelocalcapacity_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Local<wbr>Capacity</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicemodel_csharp">
 <a href="#devicemodel_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Model</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicesoftwareversion_csharp">
 <a href="#devicesoftwareversion_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Software<wbr>Version</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicetype_csharp">
 <a href="#devicetype_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="edgeprofile_csharp">
 <a href="#edgeprofile_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Edge<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modeldescription_csharp">
 <a href="#modeldescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcemovedetails_csharp">
 <a href="#resourcemovedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemovedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databoxedgedevicestatus_csharp">
 <a href="#databoxedgedevicestatus_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Status</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configuredroletypes_go">
 <a href="#configuredroletypes_go" style="color: inherit; text-decoration: inherit;">Configured<wbr>Role<wbr>Types</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="culture_go">
 <a href="#culture_go" style="color: inherit; text-decoration: inherit;">Culture</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicehcsversion_go">
 <a href="#devicehcsversion_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Hcs<wbr>Version</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicelocalcapacity_go">
 <a href="#devicelocalcapacity_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Local<wbr>Capacity</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicemodel_go">
 <a href="#devicemodel_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Model</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicesoftwareversion_go">
 <a href="#devicesoftwareversion_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Software<wbr>Version</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicetype_go">
 <a href="#devicetype_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="edgeprofile_go">
 <a href="#edgeprofile_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modeldescription_go">
 <a href="#modeldescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcemovedetails_go">
 <a href="#resourcemovedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databoxedgedevicestatus_go">
 <a href="#databoxedgedevicestatus_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Box<wbr>Edge<wbr>Device<wbr>Status</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -613,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -631,14 +560,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configuredroletypes_nodejs">
 <a href="#configuredroletypes_nodejs" style="color: inherit; text-decoration: inherit;">configured<wbr>Role<wbr>Types</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="culture_nodejs">
 <a href="#culture_nodejs" style="color: inherit; text-decoration: inherit;">culture</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicehcsversion_nodejs">
 <a href="#devicehcsversion_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Hcs<wbr>Version</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicelocalcapacity_nodejs">
 <a href="#devicelocalcapacity_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Local<wbr>Capacity</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicemodel_nodejs">
 <a href="#devicemodel_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Model</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicesoftwareversion_nodejs">
 <a href="#devicesoftwareversion_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Software<wbr>Version</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devicetype_nodejs">
 <a href="#devicetype_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="edgeprofile_nodejs">
 <a href="#edgeprofile_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Profile</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modeldescription_nodejs">
 <a href="#modeldescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Description</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcemovedetails_nodejs">
 <a href="#resourcemovedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Move<wbr>Details</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databoxedgedevicestatus_nodejs">
 <a href="#databoxedgedevicestatus_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Box<wbr>Edge<wbr>Device<wbr>Status</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -871,14 +772,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="configured_role_types_python">
 <a href="#configured_role_types_python" style="color: inherit; text-decoration: inherit;">configured_<wbr>role_<wbr>types</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of compute roles configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="culture_python">
 <a href="#culture_python" style="color: inherit; text-decoration: inherit;">culture</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_hcs_version_python">
 <a href="#device_hcs_version_python" style="color: inherit; text-decoration: inherit;">device_<wbr>hcs_<wbr>version</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The device software version number of the device (eg: 1.2.18105.6).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_local_capacity_python">
 <a href="#device_local_capacity_python" style="color: inherit; text-decoration: inherit;">device_<wbr>local_<wbr>capacity</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_model_python">
 <a href="#device_model_python" style="color: inherit; text-decoration: inherit;">device_<wbr>model</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_software_version_python">
 <a href="#device_software_version_python" style="color: inherit; text-decoration: inherit;">device_<wbr>software_<wbr>version</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device software version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_type_python">
 <a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="edge_profile_python">
 <a href="#edge_profile_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>profile</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="model_description_python">
 <a href="#model_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>description</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1012,8 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The object name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_move_details_python">
 <a href="#resource_move_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>move_<wbr>details</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1048,8 +928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -1057,8 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Data Box Edge/Gateway device timezone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1066,8 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_box_edge_device_status_python">
 <a href="#data_box_edge_device_status_python" style="color: inherit; text-decoration: inherit;">data_<wbr>box_<wbr>edge_<wbr>device_<wbr>status</a>
@@ -1075,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1084,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1093,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1102,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The SKU type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The SKU type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1111,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1126,9 +998,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subscription_csharp">
 <a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
@@ -1136,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subscription_go">
 <a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
@@ -1151,14 +1018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subscription_nodejs">
 <a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
@@ -1166,14 +1030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subscription_python">
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
@@ -1181,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</h4>
@@ -1190,9 +1050,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1200,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationplacementid_csharp">
 <a href="#locationplacementid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Placement<wbr>Id</a>
@@ -1209,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotaid_csharp">
 <a href="#quotaid_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Id</a>
@@ -1218,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredfeatures_csharp">
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
@@ -1227,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationdate_csharp">
 <a href="#registrationdate_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Date</a>
@@ -1236,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationid_csharp">
 <a href="#registrationid_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Id</a>
@@ -1245,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serializeddetails_csharp">
 <a href="#serializeddetails_csharp" style="color: inherit; text-decoration: inherit;">Serialized<wbr>Details</a>
@@ -1254,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1263,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1272,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1281,14 +1130,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1296,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationplacementid_go">
 <a href="#locationplacementid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Placement<wbr>Id</a>
@@ -1305,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotaid_go">
 <a href="#quotaid_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Id</a>
@@ -1314,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredfeatures_go">
 <a href="#registeredfeatures_go" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
@@ -1323,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">[]Subscription<wbr>Registered<wbr>Features<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationdate_go">
 <a href="#registrationdate_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Date</a>
@@ -1332,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationid_go">
 <a href="#registrationid_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Id</a>
@@ -1341,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serializeddetails_go">
 <a href="#serializeddetails_go" style="color: inherit; text-decoration: inherit;">Serialized<wbr>Details</a>
@@ -1350,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1359,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1368,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1377,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1392,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationplacementid_nodejs">
 <a href="#locationplacementid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Placement<wbr>Id</a>
@@ -1401,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotaid_nodejs">
 <a href="#quotaid_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Id</a>
@@ -1410,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registeredfeatures_nodejs">
 <a href="#registeredfeatures_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>Features</a>
@@ -1419,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Subscription<wbr>Registered<wbr>Features<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationdate_nodejs">
 <a href="#registrationdate_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Date</a>
@@ -1428,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationid_nodejs">
 <a href="#registrationid_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Id</a>
@@ -1437,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serializeddetails_nodejs">
 <a href="#serializeddetails_nodejs" style="color: inherit; text-decoration: inherit;">serialized<wbr>Details</a>
@@ -1446,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1455,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -1464,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1473,14 +1298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1488,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_placement_id_python">
 <a href="#location_placement_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>placement_<wbr>id</a>
@@ -1497,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quota_id_python">
 <a href="#quota_id_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>id</a>
@@ -1506,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registered_features_python">
 <a href="#registered_features_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>features</a>
@@ -1515,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Sequence[Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_date_python">
 <a href="#registration_date_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>date</a>
@@ -1524,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_id_python">
 <a href="#registration_id_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>id</a>
@@ -1533,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialized_details_python">
 <a href="#serialized_details_python" style="color: inherit; text-decoration: inherit;">serialized_<wbr>details</a>
@@ -1542,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1551,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -1560,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1569,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
@@ -1578,9 +1390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1588,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1597,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1606,14 +1414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1621,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1630,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1639,14 +1442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1654,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1663,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1672,14 +1470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1687,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1696,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1705,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</h4>
@@ -1714,9 +1506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operationinprogress_csharp">
 <a href="#operationinprogress_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress</a>
@@ -1724,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationinprogresslocktimeoutinutc_csharp">
 <a href="#operationinprogresslocktimeoutinutc_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress<wbr>Lock<wbr>Timeout<wbr>In<wbr>UTC</a>
@@ -1733,14 +1522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operationinprogress_go">
 <a href="#operationinprogress_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress</a>
@@ -1748,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationinprogresslocktimeoutinutc_go">
 <a href="#operationinprogresslocktimeoutinutc_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress<wbr>Lock<wbr>Timeout<wbr>In<wbr>UTC</a>
@@ -1757,14 +1542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operationinprogress_nodejs">
 <a href="#operationinprogress_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>In<wbr>Progress</a>
@@ -1772,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationinprogresslocktimeoutinutc_nodejs">
 <a href="#operationinprogresslocktimeoutinutc_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>In<wbr>Progress<wbr>Lock<wbr>Timeout<wbr>In<wbr>UTC</a>
@@ -1781,14 +1562,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operation_in_progress_python">
 <a href="#operation_in_progress_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>in_<wbr>progress</a>
@@ -1796,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_in_progress_lock_timeout_in_utc_python">
 <a href="#operation_in_progress_lock_timeout_in_utc_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>in_<wbr>progress_<wbr>lock_<wbr>timeout_<wbr>in_<wbr>utc</a>
@@ -1805,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -1814,9 +1590,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1824,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1833,14 +1606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1848,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1857,14 +1626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1872,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1881,14 +1646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1896,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SKU name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1905,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subscriptionregisteredfeaturesresponse">Subscription<wbr>Registered<wbr>Features<wbr>Response</h4>
@@ -1914,9 +1674,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1924,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1933,14 +1690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1948,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1957,14 +1710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1972,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1981,14 +1730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1996,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2005,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -2014,9 +1758,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2024,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2033,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2042,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2051,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2060,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2069,14 +1806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2084,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2093,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2102,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2111,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2120,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2129,14 +1858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2144,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2153,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2162,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2171,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2180,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2189,14 +1910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2204,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2213,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2222,8 +1938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2231,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2240,8 +1954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2249,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

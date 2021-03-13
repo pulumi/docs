@@ -14,11 +14,17 @@ A Job resource type. The progress and state can be obtained by polling a Job or 
 API Version: 2020-05-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a Job
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -58,13 +64,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -90,9 +102,12 @@ job = azure_native.media.Job("job",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,9 +134,16 @@ const job = new azure_native.media.Job("job", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Job Resource {#create}
@@ -146,9 +168,7 @@ const job = new azure_native.media.Job("job", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -156,9 +176,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -166,9 +184,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -176,10 +192,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -205,9 +218,7 @@ const job = new azure_native.media.Job("job", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -215,9 +226,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,9 +234,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -235,9 +242,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -245,18 +250,13 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,9 +264,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,9 +272,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,10 +280,7 @@ const job = new azure_native.media.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -302,9 +295,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -312,8 +303,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="input_csharp">
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -321,8 +311,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputasset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Args</a> | <a href="#jobinputclip">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Args</a> | <a href="#jobinputhttp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Args</a> | <a href="#jobinputsequence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Sequence<wbr>Args</a> | <a href="#jobinputs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Inputs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -330,8 +319,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joboutputasset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Asset<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -339,8 +327,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transformname_csharp">
 <a href="#transformname_csharp" style="color: inherit; text-decoration: inherit;">Transform<wbr>Name</a>
@@ -348,8 +335,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Transform name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Transform name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="correlationdata_csharp">
 <a href="#correlationdata_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Data</a>
@@ -357,8 +343,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -366,8 +351,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -375,8 +359,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Job name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Job name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -384,14 +367,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#priority">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Priority</a></span>
     </dt>
-    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -399,8 +379,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="input_go">
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
@@ -408,8 +387,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset</a> | <a href="#jobinputclip">Job<wbr>Input<wbr>Clip</a> | <a href="#jobinputhttp">Job<wbr>Input<wbr>Http</a> | <a href="#jobinputsequence">Job<wbr>Input<wbr>Sequence</a> | <a href="#jobinputs">Job<wbr>Inputs</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -417,8 +395,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joboutputasset">[]Job<wbr>Output<wbr>Asset</a></span>
     </dt>
-    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -426,8 +403,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transformname_go">
 <a href="#transformname_go" style="color: inherit; text-decoration: inherit;">Transform<wbr>Name</a>
@@ -435,8 +411,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Transform name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Transform name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="correlationdata_go">
 <a href="#correlationdata_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Data</a>
@@ -444,8 +419,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -453,8 +427,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -462,8 +435,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Job name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Job name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -471,14 +443,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#priority">Priority</a></span>
     </dt>
-    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -486,8 +455,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="input_nodejs">
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
@@ -495,8 +463,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset</a> | <a href="#jobinputclip">Job<wbr>Input<wbr>Clip</a> | <a href="#jobinputhttp">Job<wbr>Input<wbr>Http</a> | <a href="#jobinputsequence">Job<wbr>Input<wbr>Sequence</a> | <a href="#jobinputs">Job<wbr>Inputs</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -504,8 +471,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joboutputasset">Job<wbr>Output<wbr>Asset[]</a></span>
     </dt>
-    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -513,8 +479,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transformname_nodejs">
 <a href="#transformname_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Name</a>
@@ -522,8 +487,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Transform name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Transform name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="correlationdata_nodejs">
 <a href="#correlationdata_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Data</a>
@@ -531,8 +495,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -540,8 +503,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
@@ -549,8 +511,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Job name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Job name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -558,14 +519,11 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#priority">Priority</a></span>
     </dt>
-    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -573,8 +531,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="input_python">
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
@@ -582,8 +539,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset<wbr>Args</a> | <a href="#jobinputclip">Job<wbr>Input<wbr>Clip<wbr>Args</a> | <a href="#jobinputhttp">Job<wbr>Input<wbr>Http<wbr>Args</a> | <a href="#jobinputsequence">Job<wbr>Input<wbr>Sequence<wbr>Args</a> | <a href="#jobinputs">Job<wbr>Inputs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -591,8 +547,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joboutputasset">Sequence[Job<wbr>Output<wbr>Asset<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The outputs for the Job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -600,8 +555,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transform_name_python">
 <a href="#transform_name_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>name</a>
@@ -609,8 +563,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Transform name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Transform name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="correlation_data_python">
 <a href="#correlation_data_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>data</a>
@@ -618,8 +571,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer provided key, value pairs that will be returned in Job and JobOutput state events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -627,8 +579,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional customer supplied description of the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
@@ -636,8 +587,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Job name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Job name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -645,8 +595,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#priority">Priority</a></span>
     </dt>
-    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -657,9 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -667,8 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -676,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -685,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -694,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -703,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -712,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -721,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -730,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -739,14 +678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -754,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -763,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -772,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -781,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -790,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -799,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -808,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -817,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -826,14 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -841,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -850,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -859,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -868,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -877,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -886,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -895,8 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -904,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -913,14 +830,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -928,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -937,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job finished processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -946,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -955,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -964,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -973,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The UTC date and time at which this Job began processing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -982,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the job.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -991,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1000,8 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1017,9 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="absolutecliptime">Absolute<wbr>Clip<wbr>Time</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1027,14 +930,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1042,14 +942,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1057,14 +954,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1072,16 +966,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1089,14 +980,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1104,14 +992,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1119,14 +1004,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1134,70 +1016,47 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="attributefilter">Attribute<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd>
-    <dt>Top</dt>
-    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd>
-    <dt>Bottom</dt>
-    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd>
-    <dt>Value<wbr>Equals</dt>
-    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd><dt>Top</dt>
+    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd><dt>Bottom</dt>
+    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd><dt>Value<wbr>Equals</dt>
+    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Attribute<wbr>Filter<wbr>All</dt>
-    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd>
-    <dt>Attribute<wbr>Filter<wbr>Top</dt>
-    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd>
-    <dt>Attribute<wbr>Filter<wbr>Bottom</dt>
-    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd>
-    <dt>Attribute<wbr>Filter<wbr>Value<wbr>Equals</dt>
-    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Attribute<wbr>Filter<wbr>All</dt>
+    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd><dt>Attribute<wbr>Filter<wbr>Top</dt>
+    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd><dt>Attribute<wbr>Filter<wbr>Bottom</dt>
+    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd><dt>Attribute<wbr>Filter<wbr>Value<wbr>Equals</dt>
+    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd>
-    <dt>Top</dt>
-    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd>
-    <dt>Bottom</dt>
-    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd>
-    <dt>Value<wbr>Equals</dt>
-    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd><dt>Top</dt>
+    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd><dt>Bottom</dt>
+    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd><dt>Value<wbr>Equals</dt>
+    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL</dt>
-    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd>
-    <dt>TOP</dt>
-    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd>
-    <dt>BOTTOM</dt>
-    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd>
-    <dt>VALUE_EQUALS</dt>
-    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>ALL</dt>
+    <dd>All{{% md %}}All tracks will be included.{{% /md %}}</dd><dt>TOP</dt>
+    <dd>Top{{% md %}}The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.{{% /md %}}</dd><dt>BOTTOM</dt>
+    <dd>Bottom{{% md %}}The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.{{% /md %}}</dd><dt>VALUE_EQUALS</dt>
+    <dd>ValueEquals{{% md %}}Any tracks that have an attribute equal to the value given will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="audiotrackdescriptor">Audio<wbr>Track<wbr>Descriptor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_csharp">
 <a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -1205,14 +1064,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_go">
 <a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -1220,14 +1076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_nodejs">
 <a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
@@ -1235,14 +1088,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channel_mapping_python">
 <a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
@@ -1250,16 +1100,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="audiotrackdescriptorresponse">Audio<wbr>Track<wbr>Descriptor<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_csharp">
 <a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -1267,14 +1114,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_go">
 <a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -1282,14 +1126,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_nodejs">
 <a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
@@ -1297,14 +1138,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="channel_mapping_python">
 <a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
@@ -1312,102 +1150,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="channelmapping">Channel<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Front<wbr>Left</dt>
-    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd>
-    <dt>Front<wbr>Right</dt>
-    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd>
-    <dt>Center</dt>
-    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd>
-    <dt>Low<wbr>Frequency<wbr>Effects</dt>
-    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd>
-    <dt>Back<wbr>Left</dt>
-    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd>
-    <dt>Back<wbr>Right</dt>
-    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd>
-    <dt>Stereo<wbr>Left</dt>
-    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd>
-    <dt>Stereo<wbr>Right</dt>
-    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Front<wbr>Left</dt>
+    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd><dt>Front<wbr>Right</dt>
+    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd><dt>Center</dt>
+    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd><dt>Low<wbr>Frequency<wbr>Effects</dt>
+    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd><dt>Back<wbr>Left</dt>
+    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd><dt>Back<wbr>Right</dt>
+    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd><dt>Stereo<wbr>Left</dt>
+    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd><dt>Stereo<wbr>Right</dt>
+    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Channel<wbr>Mapping<wbr>Front<wbr>Left</dt>
-    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Front<wbr>Right</dt>
-    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Center</dt>
-    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Low<wbr>Frequency<wbr>Effects</dt>
-    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Back<wbr>Left</dt>
-    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Back<wbr>Right</dt>
-    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Stereo<wbr>Left</dt>
-    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd>
-    <dt>Channel<wbr>Mapping<wbr>Stereo<wbr>Right</dt>
-    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Channel<wbr>Mapping<wbr>Front<wbr>Left</dt>
+    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Front<wbr>Right</dt>
+    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Center</dt>
+    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Low<wbr>Frequency<wbr>Effects</dt>
+    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Back<wbr>Left</dt>
+    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Back<wbr>Right</dt>
+    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Stereo<wbr>Left</dt>
+    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd><dt>Channel<wbr>Mapping<wbr>Stereo<wbr>Right</dt>
+    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Front<wbr>Left</dt>
-    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd>
-    <dt>Front<wbr>Right</dt>
-    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd>
-    <dt>Center</dt>
-    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd>
-    <dt>Low<wbr>Frequency<wbr>Effects</dt>
-    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd>
-    <dt>Back<wbr>Left</dt>
-    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd>
-    <dt>Back<wbr>Right</dt>
-    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd>
-    <dt>Stereo<wbr>Left</dt>
-    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd>
-    <dt>Stereo<wbr>Right</dt>
-    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Front<wbr>Left</dt>
+    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd><dt>Front<wbr>Right</dt>
+    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd><dt>Center</dt>
+    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd><dt>Low<wbr>Frequency<wbr>Effects</dt>
+    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd><dt>Back<wbr>Left</dt>
+    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd><dt>Back<wbr>Right</dt>
+    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd><dt>Stereo<wbr>Left</dt>
+    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd><dt>Stereo<wbr>Right</dt>
+    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>FRONT_LEFT</dt>
-    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd>
-    <dt>FRONT_RIGHT</dt>
-    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd>
-    <dt>CENTER</dt>
-    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd>
-    <dt>LOW_FREQUENCY_EFFECTS</dt>
-    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd>
-    <dt>BACK_LEFT</dt>
-    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd>
-    <dt>BACK_RIGHT</dt>
-    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd>
-    <dt>STEREO_LEFT</dt>
-    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd>
-    <dt>STEREO_RIGHT</dt>
-    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>FRONT_LEFT</dt>
+    <dd>FrontLeft{{% md %}}The Front Left Channel.{{% /md %}}</dd><dt>FRONT_RIGHT</dt>
+    <dd>FrontRight{{% md %}}The Front Right Channel.{{% /md %}}</dd><dt>CENTER</dt>
+    <dd>Center{{% md %}}The Center Channel.{{% /md %}}</dd><dt>LOW_FREQUENCY_EFFECTS</dt>
+    <dd>LowFrequencyEffects{{% md %}}Low Frequency Effects Channel.  Sometimes referred to as the Subwoofer.{{% /md %}}</dd><dt>BACK_LEFT</dt>
+    <dd>BackLeft{{% md %}}The Back Left Channel.  Sometimes referred to as the Left Surround Channel.{{% /md %}}</dd><dt>BACK_RIGHT</dt>
+    <dd>BackRight{{% md %}}The Back Right Channel.  Sometimes referred to as the Right Surround Channel.{{% /md %}}</dd><dt>STEREO_LEFT</dt>
+    <dd>StereoLeft{{% md %}}The Left Stereo channel.  Sometimes referred to as Down Mix Left.{{% /md %}}</dd><dt>STEREO_RIGHT</dt>
+    <dd>StereoRight{{% md %}}The Right Stereo channel.  Sometimes referred to as Down Mix Right.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fromallinputfile">From<wbr>All<wbr>Input<wbr>File</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_csharp">
 <a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1415,14 +1214,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_go">
 <a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1430,14 +1226,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_nodejs">
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
@@ -1445,14 +1238,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor[]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="included_tracks_python">
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
@@ -1460,16 +1250,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fromallinputfileresponse">From<wbr>All<wbr>Input<wbr>File<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_csharp">
 <a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1477,14 +1264,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_go">
 <a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1492,14 +1276,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_nodejs">
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
@@ -1507,14 +1288,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="included_tracks_python">
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
@@ -1522,16 +1300,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fromeachinputfile">From<wbr>Each<wbr>Input<wbr>File</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_csharp">
 <a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1539,14 +1314,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_go">
 <a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1554,14 +1326,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_nodejs">
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
@@ -1569,14 +1338,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor[]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="included_tracks_python">
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
@@ -1584,16 +1350,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fromeachinputfileresponse">From<wbr>Each<wbr>Input<wbr>File<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_csharp">
 <a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1601,14 +1364,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_go">
 <a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1616,14 +1376,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_nodejs">
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
@@ -1631,14 +1388,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="included_tracks_python">
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
@@ -1646,16 +1400,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inputfile">Input<wbr>File</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1663,8 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_csharp">
 <a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1672,14 +1422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1687,8 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_go">
 <a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1696,14 +1442,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1711,8 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_nodejs">
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
@@ -1720,14 +1462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Audio<wbr>Track<wbr>Descriptor | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id | Video<wbr>Track<wbr>Descriptor[]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1735,8 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_tracks_python">
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
@@ -1744,16 +1482,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inputfileresponse">Input<wbr>File<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1761,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_csharp">
 <a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1770,14 +1504,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1785,8 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_go">
 <a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
@@ -1794,14 +1524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1809,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedtracks_nodejs">
 <a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
@@ -1818,14 +1544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1833,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_tracks_python">
 <a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
@@ -1842,16 +1564,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="joberrordetailresponse">Job<wbr>Error<wbr>Detail<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1859,8 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1868,14 +1586,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1883,8 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1892,14 +1606,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1907,8 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1916,14 +1626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1931,8 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Code describing the error detail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1940,16 +1646,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A human-readable representation of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="joberrorresponse">Job<wbr>Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -1957,8 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1966,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1975,8 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1984,8 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retry_csharp">
 <a href="#retry_csharp" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -1993,14 +1692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -2008,8 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -2017,8 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -2026,8 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrordetailresponse">[]Job<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2035,8 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retry_go">
 <a href="#retry_go" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -2044,14 +1736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -2059,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2068,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2077,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrordetailresponse">Job<wbr>Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2086,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retry_nodejs">
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -2095,14 +1780,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -2110,8 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Helps with categorization of errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -2119,8 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code describing the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -2128,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrordetailresponse">Sequence[Job<wbr>Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of details about specific errors that led to this reported error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2137,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A human-readable language-dependent representation of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retry_python">
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -2146,16 +1824,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputasset">Job<wbr>Input<wbr>Asset</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -2163,8 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2172,8 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2181,8 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_csharp">
 <a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2190,8 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2199,8 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2208,14 +1878,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -2223,8 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2232,8 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2241,8 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_go">
 <a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2250,8 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2259,8 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2268,14 +1930,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -2283,8 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2292,8 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2301,8 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_nodejs">
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
@@ -2310,8 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File[]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2319,8 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2328,14 +1982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -2343,8 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2352,8 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2361,8 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_definitions_python">
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
@@ -2370,8 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Args, Input<wbr>File<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2379,8 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2388,16 +2034,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -2405,8 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2414,8 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2423,8 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_csharp">
 <a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2432,8 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2441,8 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2450,14 +2088,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -2465,8 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2474,8 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2483,8 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_go">
 <a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2492,8 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2501,8 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2510,14 +2140,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -2525,8 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2534,8 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2543,8 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_nodejs">
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
@@ -2552,8 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2561,8 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2570,14 +2192,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -2585,8 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2594,8 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2603,8 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_definitions_python">
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
@@ -2612,8 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2621,8 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2630,16 +2244,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputclip">Job<wbr>Input<wbr>Clip</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2647,8 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2656,8 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_csharp">
 <a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2665,8 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2674,8 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2683,14 +2290,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2698,8 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2707,8 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_go">
 <a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2716,8 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2725,8 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2734,14 +2334,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2749,8 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2758,8 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_nodejs">
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
@@ -2767,8 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File[]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2776,8 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2785,14 +2378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2800,8 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2809,8 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_definitions_python">
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
@@ -2818,8 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Args, Input<wbr>File<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2827,8 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2836,16 +2422,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2853,8 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2862,8 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_csharp">
 <a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2871,8 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2880,8 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2889,14 +2468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2904,8 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -2913,8 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_go">
 <a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -2922,8 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2931,8 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2940,14 +2512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2955,8 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
@@ -2964,8 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_nodejs">
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
@@ -2973,8 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2982,8 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2991,14 +2556,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -3006,8 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
@@ -3015,8 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_definitions_python">
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
@@ -3024,8 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3033,8 +2592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -3042,16 +2600,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputhttp">Job<wbr>Input<wbr>Http</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseuri_csharp">
 <a href="#baseuri_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Uri</a>
@@ -3059,8 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -3068,8 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -3077,8 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_csharp">
 <a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -3086,8 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3095,8 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -3104,14 +2654,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseuri_go">
 <a href="#baseuri_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Uri</a>
@@ -3119,8 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -3128,8 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -3137,8 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_go">
 <a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -3146,8 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3155,8 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -3164,14 +2706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseuri_nodejs">
 <a href="#baseuri_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Uri</a>
@@ -3179,8 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -3188,8 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
@@ -3197,8 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_nodejs">
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
@@ -3206,8 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">From<wbr>All<wbr>Input<wbr>File | From<wbr>Each<wbr>Input<wbr>File | Input<wbr>File[]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3215,8 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -3224,14 +2758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base_uri_python">
 <a href="#base_uri_python" style="color: inherit; text-decoration: inherit;">base_<wbr>uri</a>
@@ -3239,8 +2770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -3248,8 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
@@ -3257,8 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_definitions_python">
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
@@ -3266,8 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Args, Input<wbr>File<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3275,8 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -3284,16 +2810,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptime">Absolute<wbr>Clip<wbr>Time<wbr>Args</a> | <a href="#utccliptime">Utc<wbr>Clip<wbr>Time<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseuri_csharp">
 <a href="#baseuri_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Uri</a>
@@ -3301,8 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -3310,8 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -3319,8 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_csharp">
 <a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -3328,8 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3337,8 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -3346,14 +2864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseuri_go">
 <a href="#baseuri_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Uri</a>
@@ -3361,8 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -3370,8 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
@@ -3379,8 +2892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_go">
 <a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
@@ -3388,8 +2900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3397,8 +2908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -3406,14 +2916,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="baseuri_nodejs">
 <a href="#baseuri_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Uri</a>
@@ -3421,8 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -3430,8 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
@@ -3439,8 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputdefinitions_nodejs">
 <a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
@@ -3448,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3457,8 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -3466,14 +2968,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base_uri_python">
 <a href="#base_uri_python" style="color: inherit; text-decoration: inherit;">base_<wbr>uri</a>
@@ -3481,8 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -3490,8 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
@@ -3499,8 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="input_definitions_python">
 <a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
@@ -3508,8 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3517,8 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -3526,16 +3020,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputsequence">Job<wbr>Input<wbr>Sequence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3543,14 +3034,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclip">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3558,14 +3046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclip">[]Job<wbr>Input<wbr>Clip</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3573,14 +3058,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclip">Job<wbr>Input<wbr>Clip[]</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3588,16 +3070,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclip">Sequence[Job<wbr>Input<wbr>Clip<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputsequenceresponse">Job<wbr>Input<wbr>Sequence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3605,14 +3084,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclipresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3620,14 +3096,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclipresponse">[]Job<wbr>Input<wbr>Clip<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3635,14 +3108,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3650,16 +3120,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobinputclipresponse">Sequence[Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputs">Job<wbr>Inputs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3667,14 +3134,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3682,14 +3146,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3697,14 +3158,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Job<wbr>Input<wbr>Asset | Job<wbr>Input<wbr>Clip | Job<wbr>Input<wbr>Http | Job<wbr>Input<wbr>Sequence | Job<wbr>Inputs[]</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3712,16 +3170,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Args, Job<wbr>Input<wbr>Clip<wbr>Args, Job<wbr>Input<wbr>Http<wbr>Args, Job<wbr>Input<wbr>Sequence<wbr>Args, Job<wbr>Inputs<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobinputsresponse">Job<wbr>Inputs<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3729,14 +3184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -3744,14 +3196,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3759,14 +3208,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Job<wbr>Input<wbr>Asset<wbr>Response | Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Input<wbr>Http<wbr>Response | Job<wbr>Input<wbr>Sequence<wbr>Response | Job<wbr>Inputs<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -3774,16 +3220,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Http<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Sequence<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="joboutputasset">Job<wbr>Output<wbr>Asset</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -3791,8 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3800,14 +3242,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -3815,8 +3254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3824,14 +3262,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -3839,8 +3274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3848,14 +3282,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -3863,8 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3872,16 +3302,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="joboutputassetresponse">Job<wbr>Output<wbr>Asset<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -3889,8 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -3898,8 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -3907,8 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_csharp">
 <a href="#progress_csharp" style="color: inherit; text-decoration: inherit;">Progress</a>
@@ -3916,8 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3925,8 +3348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3934,8 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3943,14 +3364,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -3958,8 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -3967,8 +3384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -3976,8 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_go">
 <a href="#progress_go" style="color: inherit; text-decoration: inherit;">Progress</a>
@@ -3985,8 +3400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3994,8 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -4003,8 +3416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -4012,14 +3424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -4027,8 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -4036,8 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -4045,8 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_nodejs">
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
@@ -4054,8 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -4063,8 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4072,8 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -4081,14 +3484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -4096,8 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the output Asset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -4105,8 +3504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output finished processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -4114,8 +3512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#joberrorresponse">Job<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in the Error state, it contains the details of the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="progress_python">
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
@@ -4123,8 +3520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -4132,8 +3528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC date and time at which this Job Output began processing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4141,8 +3536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the state of the JobOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -4150,62 +3544,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '{presetName}_{outputIndex}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="priority">Priority</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd>
-    <dt>Normal</dt>
-    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd>
-    <dt>High</dt>
-    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd><dt>High</dt>
+    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Priority<wbr>Low</dt>
-    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd>
-    <dt>Priority<wbr>Normal</dt>
-    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd>
-    <dt>Priority<wbr>High</dt>
-    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Priority<wbr>Low</dt>
+    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd><dt>Priority<wbr>Normal</dt>
+    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd><dt>Priority<wbr>High</dt>
+    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Low</dt>
-    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd>
-    <dt>Normal</dt>
-    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd>
-    <dt>High</dt>
-    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Low</dt>
+    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd><dt>Normal</dt>
+    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd><dt>High</dt>
+    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>LOW</dt>
-    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd>
-    <dt>NORMAL</dt>
-    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd>
-    <dt>HIGH</dt>
-    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>LOW</dt>
+    <dd>Low{{% md %}}Used for TransformOutputs that can be generated after Normal and High priority TransformOutputs.{{% /md %}}</dd><dt>NORMAL</dt>
+    <dd>Normal{{% md %}}Used for TransformOutputs that can be generated at Normal priority.{{% /md %}}</dd><dt>HIGH</dt>
+    <dd>High{{% md %}}Used for TransformOutputs that should take precedence over others.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectaudiotrackbyattribute">Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_csharp">
 <a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4213,8 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trackattribute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4222,8 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#attributefilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_csharp">
 <a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4231,8 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_csharp">
 <a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4240,14 +3612,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_go">
 <a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4255,8 +3624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trackattribute">Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4264,8 +3632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#attributefilter">Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_go">
 <a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4273,8 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_go">
 <a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4282,14 +3648,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_nodejs">
 <a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4297,8 +3660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trackattribute">Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4306,8 +3668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#attributefilter">Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_nodejs">
 <a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
@@ -4315,8 +3676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_nodejs">
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
@@ -4324,14 +3684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_python">
 <a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4339,8 +3696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#trackattribute">Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4348,8 +3704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#attributefilter">Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_mapping_python">
 <a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
@@ -4357,8 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_value_python">
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
@@ -4366,16 +3720,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectaudiotrackbyattributeresponse">Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_csharp">
 <a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4383,8 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4392,8 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_csharp">
 <a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4401,8 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_csharp">
 <a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4410,14 +3758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_go">
 <a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4425,8 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4434,8 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_go">
 <a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4443,8 +3786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_go">
 <a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4452,14 +3794,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_nodejs">
 <a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4467,8 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4476,8 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_nodejs">
 <a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
@@ -4485,8 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_nodejs">
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
@@ -4494,14 +3830,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_python">
 <a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4509,8 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4518,8 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_mapping_python">
 <a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
@@ -4527,8 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_value_python">
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
@@ -4536,16 +3866,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectaudiotrackbyid">Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_csharp">
 <a href="#trackid_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -4553,8 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_csharp">
 <a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4562,14 +3888,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_go">
 <a href="#trackid_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -4577,8 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_go">
 <a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4586,14 +3908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_nodejs">
 <a href="#trackid_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Id</a>
@@ -4601,8 +3920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_nodejs">
 <a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
@@ -4610,14 +3928,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="track_id_python">
 <a href="#track_id_python" style="color: inherit; text-decoration: inherit;">track_<wbr>id</a>
@@ -4625,8 +3940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_mapping_python">
 <a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
@@ -4634,16 +3948,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#channelmapping">Channel<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectaudiotrackbyidresponse">Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_csharp">
 <a href="#trackid_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -4651,8 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_csharp">
 <a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4660,14 +3970,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_go">
 <a href="#trackid_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -4675,8 +3982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_go">
 <a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
@@ -4684,14 +3990,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_nodejs">
 <a href="#trackid_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Id</a>
@@ -4699,8 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelmapping_nodejs">
 <a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
@@ -4708,14 +4010,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="track_id_python">
 <a href="#track_id_python" style="color: inherit; text-decoration: inherit;">track_<wbr>id</a>
@@ -4723,8 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channel_mapping_python">
 <a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
@@ -4732,16 +4030,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectvideotrackbyattribute">Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_csharp">
 <a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4749,8 +4044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trackattribute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4758,8 +4052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#attributefilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_csharp">
 <a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4767,14 +4060,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_go">
 <a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4782,8 +4072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trackattribute">Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4791,8 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#attributefilter">Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_go">
 <a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4800,14 +4088,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_nodejs">
 <a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4815,8 +4100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#trackattribute">Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4824,8 +4108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#attributefilter">Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_nodejs">
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
@@ -4833,14 +4116,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_python">
 <a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4848,8 +4128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#trackattribute">Track<wbr>Attribute</a></span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4857,8 +4136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#attributefilter">Attribute<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_value_python">
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
@@ -4866,16 +4144,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectvideotrackbyattributeresponse">Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_csharp">
 <a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4883,8 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4892,8 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_csharp">
 <a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4901,14 +4174,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_go">
 <a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
@@ -4916,8 +4186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -4925,8 +4194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_go">
 <a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4934,14 +4202,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_nodejs">
 <a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4949,8 +4214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4958,8 +4222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_nodejs">
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
@@ -4967,14 +4230,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_python">
 <a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
@@ -4982,8 +4242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -4991,8 +4250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_value_python">
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
@@ -5000,16 +4258,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectvideotrackbyid">Select<wbr>Video<wbr>Track<wbr>By<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_csharp">
 <a href="#trackid_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -5017,14 +4272,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_go">
 <a href="#trackid_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -5032,14 +4284,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_nodejs">
 <a href="#trackid_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Id</a>
@@ -5047,14 +4296,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="track_id_python">
 <a href="#track_id_python" style="color: inherit; text-decoration: inherit;">track_<wbr>id</a>
@@ -5062,16 +4308,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selectvideotrackbyidresponse">Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_csharp">
 <a href="#trackid_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -5079,14 +4322,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_go">
 <a href="#trackid_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
@@ -5094,14 +4334,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trackid_nodejs">
 <a href="#trackid_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Id</a>
@@ -5109,14 +4346,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="track_id_python">
 <a href="#track_id_python" style="color: inherit; text-decoration: inherit;">track_<wbr>id</a>
@@ -5124,16 +4358,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -5141,8 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -5150,8 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -5159,8 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -5168,8 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -5177,8 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -5186,14 +4412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -5201,8 +4424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -5210,8 +4432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -5219,8 +4440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -5228,8 +4448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -5237,8 +4456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -5246,14 +4464,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -5261,8 +4476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -5270,8 +4484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -5279,8 +4492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -5288,8 +4500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -5297,8 +4508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -5306,14 +4516,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -5321,8 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -5330,8 +4536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -5339,8 +4544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -5348,8 +4552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -5357,8 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -5366,54 +4568,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trackattribute">Track<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Bitrate</dt>
-    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd>
-    <dt>Language</dt>
-    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Bitrate</dt>
+    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd><dt>Language</dt>
+    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Track<wbr>Attribute<wbr>Bitrate</dt>
-    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd>
-    <dt>Track<wbr>Attribute<wbr>Language</dt>
-    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Track<wbr>Attribute<wbr>Bitrate</dt>
+    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd><dt>Track<wbr>Attribute<wbr>Language</dt>
+    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Bitrate</dt>
-    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd>
-    <dt>Language</dt>
-    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Bitrate</dt>
+    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd><dt>Language</dt>
+    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BITRATE</dt>
-    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd>
-    <dt>LANGUAGE</dt>
-    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>BITRATE</dt>
+    <dd>Bitrate{{% md %}}The bitrate of the track.{{% /md %}}</dd><dt>LANGUAGE</dt>
+    <dd>Language{{% md %}}The language of the track.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="utccliptime">Utc<wbr>Clip<wbr>Time</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -5421,14 +4608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -5436,14 +4620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -5451,14 +4632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -5466,16 +4644,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -5483,14 +4658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -5498,14 +4670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -5513,14 +4682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -5528,60 +4694,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="videotrackdescriptor">Video<wbr>Track<wbr>Descriptor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 <h4 id="videotrackdescriptorresponse">Video<wbr>Track<wbr>Descriptor<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-</dl>
+<dl class="resources-properties"></dl>
 {{% /choosable %}}
 ## Import
 

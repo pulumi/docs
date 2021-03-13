@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreementname_csharp">
 <a href="#agreementname_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_csharp">
 <a href="#integrationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreementname_go">
 <a href="#agreementname_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_go">
 <a href="#integrationaccountname_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreementname_nodejs">
 <a href="#agreementname_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_nodejs">
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="agreement_name_python">
 <a href="#agreement_name_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_account_name_python">
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agreementtype_csharp">
 <a href="#agreementtype_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changedtime_csharp">
 <a href="#changedtime_csharp" style="color: inherit; text-decoration: inherit;">Changed<wbr>Time</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestidentity_csharp">
 <a href="#guestidentity_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Identity</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestpartner_csharp">
 <a href="#guestpartner_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Partner</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostidentity_csharp">
 <a href="#hostidentity_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Identity</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostpartner_csharp">
 <a href="#hostpartner_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Partner</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -319,14 +284,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agreementtype_go">
 <a href="#agreementtype_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changedtime_go">
 <a href="#changedtime_go" style="color: inherit; text-decoration: inherit;">Changed<wbr>Time</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agreementcontentresponse">Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestidentity_go">
 <a href="#guestidentity_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Identity</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestpartner_go">
 <a href="#guestpartner_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Partner</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostidentity_go">
 <a href="#hostidentity_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Identity</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostpartner_go">
 <a href="#hostpartner_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Partner</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agreementtype_nodejs">
 <a href="#agreementtype_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Type</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changedtime_nodejs">
 <a href="#changedtime_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Time</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agreementcontentresponse">Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestidentity_nodejs">
 <a href="#guestidentity_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Identity</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestpartner_nodejs">
 <a href="#guestpartner_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Partner</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostidentity_nodejs">
 <a href="#hostidentity_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Identity</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostpartner_nodejs">
 <a href="#hostpartner_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Partner</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -583,14 +516,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agreement_type_python">
 <a href="#agreement_type_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>type</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The agreement type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changed_time_python">
 <a href="#changed_time_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>time</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agreementcontentresponse">Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The agreement content.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guest_identity_python">
 <a href="#guest_identity_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>identity</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guest_partner_python">
 <a href="#guest_partner_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>partner</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_identity_python">
 <a href="#host_identity_python" style="color: inherit; text-decoration: inherit;">host_<wbr>identity</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_partner_python">
 <a href="#host_partner_python" style="color: inherit; text-decoration: inherit;">host_<wbr>partner</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,9 +646,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignorecertificatenamemismatch_csharp">
 <a href="#ignorecertificatenamemismatch_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
@@ -740,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keephttpconnectionalive_csharp">
 <a href="#keephttpconnectionalive_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Http<wbr>Connection<wbr>Alive</a>
@@ -749,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporthttpstatuscodecontinue_csharp">
 <a href="#supporthttpstatuscodecontinue_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
@@ -758,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfoldhttpheaders_csharp">
 <a href="#unfoldhttpheaders_csharp" style="color: inherit; text-decoration: inherit;">Unfold<wbr>Http<wbr>Headers</a>
@@ -767,14 +678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignorecertificatenamemismatch_go">
 <a href="#ignorecertificatenamemismatch_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
@@ -782,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keephttpconnectionalive_go">
 <a href="#keephttpconnectionalive_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Http<wbr>Connection<wbr>Alive</a>
@@ -791,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporthttpstatuscodecontinue_go">
 <a href="#supporthttpstatuscodecontinue_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
@@ -800,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfoldhttpheaders_go">
 <a href="#unfoldhttpheaders_go" style="color: inherit; text-decoration: inherit;">Unfold<wbr>Http<wbr>Headers</a>
@@ -809,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignorecertificatenamemismatch_nodejs">
 <a href="#ignorecertificatenamemismatch_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keephttpconnectionalive_nodejs">
 <a href="#keephttpconnectionalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Http<wbr>Connection<wbr>Alive</a>
@@ -833,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporthttpstatuscodecontinue_nodejs">
 <a href="#supporthttpstatuscodecontinue_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
@@ -842,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfoldhttpheaders_nodejs">
 <a href="#unfoldhttpheaders_nodejs" style="color: inherit; text-decoration: inherit;">unfold<wbr>Http<wbr>Headers</a>
@@ -851,14 +750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignore_certificate_name_mismatch_python">
 <a href="#ignore_certificate_name_mismatch_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>certificate_<wbr>name_<wbr>mismatch</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keep_http_connection_alive_python">
 <a href="#keep_http_connection_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>http_<wbr>connection_<wbr>alive</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="support_http_status_code_continue_python">
 <a href="#support_http_status_code_continue_python" style="color: inherit; text-decoration: inherit;">support_<wbr>http_<wbr>status_<wbr>code_<wbr>continue</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfold_http_headers_python">
 <a href="#unfold_http_headers_python" style="color: inherit; text-decoration: inherit;">unfold_<wbr>http_<wbr>headers</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_csharp">
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
@@ -912,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_csharp">
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
@@ -921,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_go">
 <a href="#receiveagreement_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
@@ -936,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_go">
 <a href="#sendagreement_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
@@ -945,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_nodejs">
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_nodejs">
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
@@ -969,14 +850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receive_agreement_python">
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
@@ -984,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_agreement_python">
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
@@ -993,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</h4>
@@ -1002,9 +878,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autogeneratefilename_csharp">
 <a href="#autogeneratefilename_csharp" style="color: inherit; text-decoration: inherit;">Autogenerate<wbr>File<wbr>Name</a>
@@ -1012,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filenametemplate_csharp">
 <a href="#filenametemplate_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Template</a>
@@ -1021,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The template for file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagecontenttype_csharp">
 <a href="#messagecontenttype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Content<wbr>Type</a>
@@ -1030,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message content type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendmessageonfilenamegenerationerror_csharp">
 <a href="#suspendmessageonfilenamegenerationerror_csharp" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Message<wbr>On<wbr>File<wbr>Name<wbr>Generation<wbr>Error</a>
@@ -1039,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmitfilenameinmimeheader_csharp">
 <a href="#transmitfilenameinmimeheader_csharp" style="color: inherit; text-decoration: inherit;">Transmit<wbr>File<wbr>Name<wbr>In<wbr>Mime<wbr>Header</a>
@@ -1048,14 +918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autogeneratefilename_go">
 <a href="#autogeneratefilename_go" style="color: inherit; text-decoration: inherit;">Autogenerate<wbr>File<wbr>Name</a>
@@ -1063,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filenametemplate_go">
 <a href="#filenametemplate_go" style="color: inherit; text-decoration: inherit;">File<wbr>Name<wbr>Template</a>
@@ -1072,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The template for file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagecontenttype_go">
 <a href="#messagecontenttype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Content<wbr>Type</a>
@@ -1081,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message content type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendmessageonfilenamegenerationerror_go">
 <a href="#suspendmessageonfilenamegenerationerror_go" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Message<wbr>On<wbr>File<wbr>Name<wbr>Generation<wbr>Error</a>
@@ -1090,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmitfilenameinmimeheader_go">
 <a href="#transmitfilenameinmimeheader_go" style="color: inherit; text-decoration: inherit;">Transmit<wbr>File<wbr>Name<wbr>In<wbr>Mime<wbr>Header</a>
@@ -1099,14 +962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autogeneratefilename_nodejs">
 <a href="#autogeneratefilename_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>File<wbr>Name</a>
@@ -1114,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filenametemplate_nodejs">
 <a href="#filenametemplate_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Template</a>
@@ -1123,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The template for file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagecontenttype_nodejs">
 <a href="#messagecontenttype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Content<wbr>Type</a>
@@ -1132,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message content type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendmessageonfilenamegenerationerror_nodejs">
 <a href="#suspendmessageonfilenamegenerationerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Message<wbr>On<wbr>File<wbr>Name<wbr>Generation<wbr>Error</a>
@@ -1141,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmitfilenameinmimeheader_nodejs">
 <a href="#transmitfilenameinmimeheader_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>File<wbr>Name<wbr>In<wbr>Mime<wbr>Header</a>
@@ -1150,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autogenerate_file_name_python">
 <a href="#autogenerate_file_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>file_<wbr>name</a>
@@ -1165,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_name_template_python">
 <a href="#file_name_template_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>template</a>
@@ -1174,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The template for file name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_content_type_python">
 <a href="#message_content_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>content_<wbr>type</a>
@@ -1183,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message content type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspend_message_on_file_name_generation_error_python">
 <a href="#suspend_message_on_file_name_generation_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>message_<wbr>on_<wbr>file_<wbr>name_<wbr>generation_<wbr>error</a>
@@ -1192,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transmit_file_name_in_mime_header_python">
 <a href="#transmit_file_name_in_mime_header_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>file_<wbr>name_<wbr>in_<wbr>mime_<wbr>header</a>
@@ -1201,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response</h4>
@@ -1210,9 +1058,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resendifmdnnotreceived_csharp">
 <a href="#resendifmdnnotreceived_csharp" style="color: inherit; text-decoration: inherit;">Resend<wbr>If<wbr>MDNNot<wbr>Received</a>
@@ -1220,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendduplicatemessage_csharp">
 <a href="#suspendduplicatemessage_csharp" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Duplicate<wbr>Message</a>
@@ -1229,14 +1074,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resendifmdnnotreceived_go">
 <a href="#resendifmdnnotreceived_go" style="color: inherit; text-decoration: inherit;">Resend<wbr>If<wbr>MDNNot<wbr>Received</a>
@@ -1244,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendduplicatemessage_go">
 <a href="#suspendduplicatemessage_go" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Duplicate<wbr>Message</a>
@@ -1253,14 +1094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resendifmdnnotreceived_nodejs">
 <a href="#resendifmdnnotreceived_nodejs" style="color: inherit; text-decoration: inherit;">resend<wbr>If<wbr>MDNNot<wbr>Received</a>
@@ -1268,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendduplicatemessage_nodejs">
 <a href="#suspendduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Duplicate<wbr>Message</a>
@@ -1277,14 +1114,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resend_if_mdn_not_received_python">
 <a href="#resend_if_mdn_not_received_python" style="color: inherit; text-decoration: inherit;">resend_<wbr>if_<wbr>mdn_<wbr>not_<wbr>received</a>
@@ -1292,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspend_duplicate_message_python">
 <a href="#suspend_duplicate_message_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>duplicate_<wbr>message</a>
@@ -1301,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</h4>
@@ -1310,9 +1142,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="michashingalgorithm_csharp">
 <a href="#michashingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Mic<wbr>Hashing<wbr>Algorithm</a>
@@ -1320,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needmdn_csharp">
 <a href="#needmdn_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>MDN</a>
@@ -1329,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendinboundmdntomessagebox_csharp">
 <a href="#sendinboundmdntomessagebox_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Inbound<wbr>MDNTo<wbr>Message<wbr>Box</a>
@@ -1338,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendmdnasynchronously_csharp">
 <a href="#sendmdnasynchronously_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>MDNAsynchronously</a>
@@ -1347,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signmdn_csharp">
 <a href="#signmdn_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>MDN</a>
@@ -1356,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signoutboundmdnifoptional_csharp">
 <a href="#signoutboundmdnifoptional_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Outbound<wbr>MDNIf<wbr>Optional</a>
@@ -1365,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispositionnotificationto_csharp">
 <a href="#dispositionnotificationto_csharp" style="color: inherit; text-decoration: inherit;">Disposition<wbr>Notification<wbr>To</a>
@@ -1374,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdntext_csharp">
 <a href="#mdntext_csharp" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Text</a>
@@ -1383,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDN text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiptdeliveryurl_csharp">
 <a href="#receiptdeliveryurl_csharp" style="color: inherit; text-decoration: inherit;">Receipt<wbr>Delivery<wbr>Url</a>
@@ -1392,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="michashingalgorithm_go">
 <a href="#michashingalgorithm_go" style="color: inherit; text-decoration: inherit;">Mic<wbr>Hashing<wbr>Algorithm</a>
@@ -1407,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needmdn_go">
 <a href="#needmdn_go" style="color: inherit; text-decoration: inherit;">Need<wbr>MDN</a>
@@ -1416,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendinboundmdntomessagebox_go">
 <a href="#sendinboundmdntomessagebox_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Inbound<wbr>MDNTo<wbr>Message<wbr>Box</a>
@@ -1425,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendmdnasynchronously_go">
 <a href="#sendmdnasynchronously_go" style="color: inherit; text-decoration: inherit;">Send<wbr>MDNAsynchronously</a>
@@ -1434,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signmdn_go">
 <a href="#signmdn_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>MDN</a>
@@ -1443,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signoutboundmdnifoptional_go">
 <a href="#signoutboundmdnifoptional_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Outbound<wbr>MDNIf<wbr>Optional</a>
@@ -1452,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispositionnotificationto_go">
 <a href="#dispositionnotificationto_go" style="color: inherit; text-decoration: inherit;">Disposition<wbr>Notification<wbr>To</a>
@@ -1461,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdntext_go">
 <a href="#mdntext_go" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Text</a>
@@ -1470,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDN text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiptdeliveryurl_go">
 <a href="#receiptdeliveryurl_go" style="color: inherit; text-decoration: inherit;">Receipt<wbr>Delivery<wbr>Url</a>
@@ -1479,14 +1290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="michashingalgorithm_nodejs">
 <a href="#michashingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">mic<wbr>Hashing<wbr>Algorithm</a>
@@ -1494,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needmdn_nodejs">
 <a href="#needmdn_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>MDN</a>
@@ -1503,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendinboundmdntomessagebox_nodejs">
 <a href="#sendinboundmdntomessagebox_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Inbound<wbr>MDNTo<wbr>Message<wbr>Box</a>
@@ -1512,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendmdnasynchronously_nodejs">
 <a href="#sendmdnasynchronously_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>MDNAsynchronously</a>
@@ -1521,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signmdn_nodejs">
 <a href="#signmdn_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>MDN</a>
@@ -1530,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signoutboundmdnifoptional_nodejs">
 <a href="#signoutboundmdnifoptional_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Outbound<wbr>MDNIf<wbr>Optional</a>
@@ -1539,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispositionnotificationto_nodejs">
 <a href="#dispositionnotificationto_nodejs" style="color: inherit; text-decoration: inherit;">disposition<wbr>Notification<wbr>To</a>
@@ -1548,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdntext_nodejs">
 <a href="#mdntext_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Text</a>
@@ -1557,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MDN text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiptdeliveryurl_nodejs">
 <a href="#receiptdeliveryurl_nodejs" style="color: inherit; text-decoration: inherit;">receipt<wbr>Delivery<wbr>Url</a>
@@ -1566,14 +1366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mic_hashing_algorithm_python">
 <a href="#mic_hashing_algorithm_python" style="color: inherit; text-decoration: inherit;">mic_<wbr>hashing_<wbr>algorithm</a>
@@ -1581,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_mdn_python">
 <a href="#need_mdn_python" style="color: inherit; text-decoration: inherit;">need_<wbr>mdn</a>
@@ -1590,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_inbound_mdn_to_message_box_python">
 <a href="#send_inbound_mdn_to_message_box_python" style="color: inherit; text-decoration: inherit;">send_<wbr>inbound_<wbr>mdn_<wbr>to_<wbr>message_<wbr>box</a>
@@ -1599,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_mdnasynchronously_python">
 <a href="#send_mdnasynchronously_python" style="color: inherit; text-decoration: inherit;">send_<wbr>mdnasynchronously</a>
@@ -1608,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sign_mdn_python">
 <a href="#sign_mdn_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>mdn</a>
@@ -1617,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sign_outbound_mdn_if_optional_python">
 <a href="#sign_outbound_mdn_if_optional_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>outbound_<wbr>mdn_<wbr>if_<wbr>optional</a>
@@ -1626,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disposition_notification_to_python">
 <a href="#disposition_notification_to_python" style="color: inherit; text-decoration: inherit;">disposition_<wbr>notification_<wbr>to</a>
@@ -1635,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mdn_text_python">
 <a href="#mdn_text_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>text</a>
@@ -1644,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MDN text.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receipt_delivery_url_python">
 <a href="#receipt_delivery_url_python" style="color: inherit; text-decoration: inherit;">receipt_<wbr>delivery_<wbr>url</a>
@@ -1653,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response</h4>
@@ -1662,9 +1450,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignorecertificatenamemismatch_csharp">
 <a href="#ignorecertificatenamemismatch_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
@@ -1672,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keephttpconnectionalive_csharp">
 <a href="#keephttpconnectionalive_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Http<wbr>Connection<wbr>Alive</a>
@@ -1681,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporthttpstatuscodecontinue_csharp">
 <a href="#supporthttpstatuscodecontinue_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
@@ -1690,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfoldhttpheaders_csharp">
 <a href="#unfoldhttpheaders_csharp" style="color: inherit; text-decoration: inherit;">Unfold<wbr>Http<wbr>Headers</a>
@@ -1699,14 +1482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignorecertificatenamemismatch_go">
 <a href="#ignorecertificatenamemismatch_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
@@ -1714,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keephttpconnectionalive_go">
 <a href="#keephttpconnectionalive_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Http<wbr>Connection<wbr>Alive</a>
@@ -1723,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporthttpstatuscodecontinue_go">
 <a href="#supporthttpstatuscodecontinue_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
@@ -1732,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfoldhttpheaders_go">
 <a href="#unfoldhttpheaders_go" style="color: inherit; text-decoration: inherit;">Unfold<wbr>Http<wbr>Headers</a>
@@ -1741,14 +1518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignorecertificatenamemismatch_nodejs">
 <a href="#ignorecertificatenamemismatch_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
@@ -1756,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keephttpconnectionalive_nodejs">
 <a href="#keephttpconnectionalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Http<wbr>Connection<wbr>Alive</a>
@@ -1765,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporthttpstatuscodecontinue_nodejs">
 <a href="#supporthttpstatuscodecontinue_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
@@ -1774,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfoldhttpheaders_nodejs">
 <a href="#unfoldhttpheaders_nodejs" style="color: inherit; text-decoration: inherit;">unfold<wbr>Http<wbr>Headers</a>
@@ -1783,14 +1554,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ignore_certificate_name_mismatch_python">
 <a href="#ignore_certificate_name_mismatch_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>certificate_<wbr>name_<wbr>mismatch</a>
@@ -1798,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keep_http_connection_alive_python">
 <a href="#keep_http_connection_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>http_<wbr>connection_<wbr>alive</a>
@@ -1807,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="support_http_status_code_continue_python">
 <a href="#support_http_status_code_continue_python" style="color: inherit; text-decoration: inherit;">support_<wbr>http_<wbr>status_<wbr>code_<wbr>continue</a>
@@ -1816,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unfold_http_headers_python">
 <a href="#unfold_http_headers_python" style="color: inherit; text-decoration: inherit;">unfold_<wbr>http_<wbr>headers</a>
@@ -1825,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</h4>
@@ -1834,9 +1598,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_csharp">
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -1844,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_csharp">
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
@@ -1853,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_csharp">
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
@@ -1862,14 +1622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_go">
 <a href="#protocolsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -1877,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_go">
 <a href="#receiverbusinessidentity_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
@@ -1886,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_go">
 <a href="#senderbusinessidentity_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
@@ -1895,14 +1650,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_nodejs">
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
@@ -1910,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_nodejs">
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
@@ -1919,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_nodejs">
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
@@ -1928,14 +1678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_settings_python">
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
@@ -1943,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiver_business_identity_python">
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
@@ -1952,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sender_business_identity_python">
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
@@ -1961,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</h4>
@@ -1970,9 +1714,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementconnectionsettings_csharp">
 <a href="#acknowledgementconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Connection<wbr>Settings</a>
@@ -1980,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_csharp">
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
@@ -1989,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorsettings_csharp">
 <a href="#errorsettings_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Settings</a>
@@ -1998,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdnsettings_csharp">
 <a href="#mdnsettings_csharp" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Settings</a>
@@ -2007,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageconnectionsettings_csharp">
 <a href="#messageconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Connection<wbr>Settings</a>
@@ -2016,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitysettings_csharp">
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
@@ -2025,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_csharp">
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
@@ -2034,14 +1770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementconnectionsettings_go">
 <a href="#acknowledgementconnectionsettings_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Connection<wbr>Settings</a>
@@ -2049,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_go">
 <a href="#envelopesettings_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
@@ -2058,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorsettings_go">
 <a href="#errorsettings_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Settings</a>
@@ -2067,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdnsettings_go">
 <a href="#mdnsettings_go" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Settings</a>
@@ -2076,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageconnectionsettings_go">
 <a href="#messageconnectionsettings_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Connection<wbr>Settings</a>
@@ -2085,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitysettings_go">
 <a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
@@ -2094,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_go">
 <a href="#validationsettings_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
@@ -2103,14 +1830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementconnectionsettings_nodejs">
 <a href="#acknowledgementconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Connection<wbr>Settings</a>
@@ -2118,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_nodejs">
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
@@ -2127,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errorsettings_nodejs">
 <a href="#errorsettings_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Settings</a>
@@ -2136,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdnsettings_nodejs">
 <a href="#mdnsettings_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Settings</a>
@@ -2145,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageconnectionsettings_nodejs">
 <a href="#messageconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Connection<wbr>Settings</a>
@@ -2154,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitysettings_nodejs">
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
@@ -2163,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_nodejs">
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
@@ -2172,14 +1890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgement_connection_settings_python">
 <a href="#acknowledgement_connection_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>connection_<wbr>settings</a>
@@ -2187,8 +1902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelope_settings_python">
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
@@ -2196,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_settings_python">
 <a href="#error_settings_python" style="color: inherit; text-decoration: inherit;">error_<wbr>settings</a>
@@ -2205,8 +1918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mdn_settings_python">
 <a href="#mdn_settings_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>settings</a>
@@ -2214,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_connection_settings_python">
 <a href="#message_connection_settings_python" style="color: inherit; text-decoration: inherit;">message_<wbr>connection_<wbr>settings</a>
@@ -2223,8 +1934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_settings_python">
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
@@ -2232,8 +1942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validation_settings_python">
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
@@ -2241,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The validation settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</h4>
@@ -2250,9 +1958,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablenrrforinbounddecodedmessages_csharp">
 <a href="#enablenrrforinbounddecodedmessages_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Inbound<wbr>Decoded<wbr>Messages</a>
@@ -2260,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforinboundencodedmessages_csharp">
 <a href="#enablenrrforinboundencodedmessages_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Inbound<wbr>Encoded<wbr>Messages</a>
@@ -2269,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforinboundmdn_csharp">
 <a href="#enablenrrforinboundmdn_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Inbound<wbr>MDN</a>
@@ -2278,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutbounddecodedmessages_csharp">
 <a href="#enablenrrforoutbounddecodedmessages_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Outbound<wbr>Decoded<wbr>Messages</a>
@@ -2287,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutboundencodedmessages_csharp">
 <a href="#enablenrrforoutboundencodedmessages_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Outbound<wbr>Encoded<wbr>Messages</a>
@@ -2296,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutboundmdn_csharp">
 <a href="#enablenrrforoutboundmdn_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Outbound<wbr>MDN</a>
@@ -2305,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridegroupsigningcertificate_csharp">
 <a href="#overridegroupsigningcertificate_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Group<wbr>Signing<wbr>Certificate</a>
@@ -2314,8 +2014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertificatename_csharp">
 <a href="#encryptioncertificatename_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Name</a>
@@ -2323,8 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha2algorithmformat_csharp">
 <a href="#sha2algorithmformat_csharp" style="color: inherit; text-decoration: inherit;">Sha2Algorithm<wbr>Format</a>
@@ -2332,8 +2030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificatename_csharp">
 <a href="#signingcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Name</a>
@@ -2341,14 +2038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablenrrforinbounddecodedmessages_go">
 <a href="#enablenrrforinbounddecodedmessages_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Inbound<wbr>Decoded<wbr>Messages</a>
@@ -2356,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforinboundencodedmessages_go">
 <a href="#enablenrrforinboundencodedmessages_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Inbound<wbr>Encoded<wbr>Messages</a>
@@ -2365,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforinboundmdn_go">
 <a href="#enablenrrforinboundmdn_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Inbound<wbr>MDN</a>
@@ -2374,8 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutbounddecodedmessages_go">
 <a href="#enablenrrforoutbounddecodedmessages_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Outbound<wbr>Decoded<wbr>Messages</a>
@@ -2383,8 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutboundencodedmessages_go">
 <a href="#enablenrrforoutboundencodedmessages_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Outbound<wbr>Encoded<wbr>Messages</a>
@@ -2392,8 +2082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutboundmdn_go">
 <a href="#enablenrrforoutboundmdn_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>NRRFor<wbr>Outbound<wbr>MDN</a>
@@ -2401,8 +2090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridegroupsigningcertificate_go">
 <a href="#overridegroupsigningcertificate_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Group<wbr>Signing<wbr>Certificate</a>
@@ -2410,8 +2098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertificatename_go">
 <a href="#encryptioncertificatename_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Certificate<wbr>Name</a>
@@ -2419,8 +2106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha2algorithmformat_go">
 <a href="#sha2algorithmformat_go" style="color: inherit; text-decoration: inherit;">Sha2Algorithm<wbr>Format</a>
@@ -2428,8 +2114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificatename_go">
 <a href="#signingcertificatename_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate<wbr>Name</a>
@@ -2437,14 +2122,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablenrrforinbounddecodedmessages_nodejs">
 <a href="#enablenrrforinbounddecodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>Decoded<wbr>Messages</a>
@@ -2452,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforinboundencodedmessages_nodejs">
 <a href="#enablenrrforinboundencodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>Encoded<wbr>Messages</a>
@@ -2461,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforinboundmdn_nodejs">
 <a href="#enablenrrforinboundmdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>MDN</a>
@@ -2470,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutbounddecodedmessages_nodejs">
 <a href="#enablenrrforoutbounddecodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>Decoded<wbr>Messages</a>
@@ -2479,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutboundencodedmessages_nodejs">
 <a href="#enablenrrforoutboundencodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>Encoded<wbr>Messages</a>
@@ -2488,8 +2166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablenrrforoutboundmdn_nodejs">
 <a href="#enablenrrforoutboundmdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>MDN</a>
@@ -2497,8 +2174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridegroupsigningcertificate_nodejs">
 <a href="#overridegroupsigningcertificate_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Group<wbr>Signing<wbr>Certificate</a>
@@ -2506,8 +2182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptioncertificatename_nodejs">
 <a href="#encryptioncertificatename_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate<wbr>Name</a>
@@ -2515,8 +2190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha2algorithmformat_nodejs">
 <a href="#sha2algorithmformat_nodejs" style="color: inherit; text-decoration: inherit;">sha2Algorithm<wbr>Format</a>
@@ -2524,8 +2198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificatename_nodejs">
 <a href="#signingcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate<wbr>Name</a>
@@ -2533,14 +2206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_nrr_for_inbound_decoded_messages_python">
 <a href="#enable_nrr_for_inbound_decoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>decoded_<wbr>messages</a>
@@ -2548,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_nrr_for_inbound_encoded_messages_python">
 <a href="#enable_nrr_for_inbound_encoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>encoded_<wbr>messages</a>
@@ -2557,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_nrr_for_inbound_mdn_python">
 <a href="#enable_nrr_for_inbound_mdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>mdn</a>
@@ -2566,8 +2234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_nrr_for_outbound_decoded_messages_python">
 <a href="#enable_nrr_for_outbound_decoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>decoded_<wbr>messages</a>
@@ -2575,8 +2242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_nrr_for_outbound_encoded_messages_python">
 <a href="#enable_nrr_for_outbound_encoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>encoded_<wbr>messages</a>
@@ -2584,8 +2250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_nrr_for_outbound_mdn_python">
 <a href="#enable_nrr_for_outbound_mdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>mdn</a>
@@ -2593,8 +2258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="override_group_signing_certificate_python">
 <a href="#override_group_signing_certificate_python" style="color: inherit; text-decoration: inherit;">override_<wbr>group_<wbr>signing_<wbr>certificate</a>
@@ -2602,8 +2266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_certificate_name_python">
 <a href="#encryption_certificate_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate_<wbr>name</a>
@@ -2611,8 +2274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha2_algorithm_format_python">
 <a href="#sha2_algorithm_format_python" style="color: inherit; text-decoration: inherit;">sha2_<wbr>algorithm_<wbr>format</a>
@@ -2620,8 +2282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signing_certificate_name_python">
 <a href="#signing_certificate_name_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate_<wbr>name</a>
@@ -2629,8 +2290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response</h4>
@@ -2638,9 +2298,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checkcertificaterevocationlistonreceive_csharp">
 <a href="#checkcertificaterevocationlistonreceive_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Receive</a>
@@ -2648,8 +2306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkcertificaterevocationlistonsend_csharp">
 <a href="#checkcertificaterevocationlistonsend_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Send</a>
@@ -2657,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatemessage_csharp">
 <a href="#checkduplicatemessage_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Message</a>
@@ -2666,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compressmessage_csharp">
 <a href="#compressmessage_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Message</a>
@@ -2675,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptmessage_csharp">
 <a href="#encryptmessage_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Message</a>
@@ -2684,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_csharp">
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -2693,8 +2346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangeduplicatesvaliditydays_csharp">
 <a href="#interchangeduplicatesvaliditydays_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Duplicates<wbr>Validity<wbr>Days</a>
@@ -2702,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridemessageproperties_csharp">
 <a href="#overridemessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Message<wbr>Properties</a>
@@ -2711,8 +2362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signmessage_csharp">
 <a href="#signmessage_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Message</a>
@@ -2720,8 +2370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingalgorithm_csharp">
 <a href="#signingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Algorithm</a>
@@ -2729,14 +2378,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checkcertificaterevocationlistonreceive_go">
 <a href="#checkcertificaterevocationlistonreceive_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Receive</a>
@@ -2744,8 +2390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkcertificaterevocationlistonsend_go">
 <a href="#checkcertificaterevocationlistonsend_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Send</a>
@@ -2753,8 +2398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatemessage_go">
 <a href="#checkduplicatemessage_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Message</a>
@@ -2762,8 +2406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compressmessage_go">
 <a href="#compressmessage_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Message</a>
@@ -2771,8 +2414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptmessage_go">
 <a href="#encryptmessage_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Message</a>
@@ -2780,8 +2422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_go">
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -2789,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangeduplicatesvaliditydays_go">
 <a href="#interchangeduplicatesvaliditydays_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Duplicates<wbr>Validity<wbr>Days</a>
@@ -2798,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridemessageproperties_go">
 <a href="#overridemessageproperties_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Message<wbr>Properties</a>
@@ -2807,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signmessage_go">
 <a href="#signmessage_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Message</a>
@@ -2816,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingalgorithm_go">
 <a href="#signingalgorithm_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Algorithm</a>
@@ -2825,14 +2462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="checkcertificaterevocationlistonreceive_nodejs">
 <a href="#checkcertificaterevocationlistonreceive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Receive</a>
@@ -2840,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkcertificaterevocationlistonsend_nodejs">
 <a href="#checkcertificaterevocationlistonsend_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Send</a>
@@ -2849,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatemessage_nodejs">
 <a href="#checkduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Message</a>
@@ -2858,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compressmessage_nodejs">
 <a href="#compressmessage_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Message</a>
@@ -2867,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptmessage_nodejs">
 <a href="#encryptmessage_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Message</a>
@@ -2876,8 +2506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_nodejs">
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -2885,8 +2514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangeduplicatesvaliditydays_nodejs">
 <a href="#interchangeduplicatesvaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Duplicates<wbr>Validity<wbr>Days</a>
@@ -2894,8 +2522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridemessageproperties_nodejs">
 <a href="#overridemessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Message<wbr>Properties</a>
@@ -2903,8 +2530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="signmessage_nodejs">
 <a href="#signmessage_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Message</a>
@@ -2912,8 +2538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingalgorithm_nodejs">
 <a href="#signingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Algorithm</a>
@@ -2921,14 +2546,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="check_certificate_revocation_list_on_receive_python">
 <a href="#check_certificate_revocation_list_on_receive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>certificate_<wbr>revocation_<wbr>list_<wbr>on_<wbr>receive</a>
@@ -2936,8 +2558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_certificate_revocation_list_on_send_python">
 <a href="#check_certificate_revocation_list_on_send_python" style="color: inherit; text-decoration: inherit;">check_<wbr>certificate_<wbr>revocation_<wbr>list_<wbr>on_<wbr>send</a>
@@ -2945,8 +2566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_message_python">
 <a href="#check_duplicate_message_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>message</a>
@@ -2954,8 +2574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compress_message_python">
 <a href="#compress_message_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>message</a>
@@ -2963,8 +2582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypt_message_python">
 <a href="#encrypt_message_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>message</a>
@@ -2972,8 +2590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryption_algorithm_python">
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -2981,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_duplicates_validity_days_python">
 <a href="#interchange_duplicates_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>duplicates_<wbr>validity_<wbr>days</a>
@@ -2990,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="override_message_properties_python">
 <a href="#override_message_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>message_<wbr>properties</a>
@@ -2999,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sign_message_python">
 <a href="#sign_message_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>message</a>
@@ -3008,8 +2622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signing_algorithm_python">
 <a href="#signing_algorithm_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>algorithm</a>
@@ -3017,8 +2630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="agreementcontentresponse">Agreement<wbr>Content<wbr>Response</h4>
@@ -3026,9 +2638,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="as2_csharp">
 <a href="#as2_csharp" style="color: inherit; text-decoration: inherit;">AS2</a>
@@ -3036,8 +2646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifact_csharp">
 <a href="#edifact_csharp" style="color: inherit; text-decoration: inherit;">Edifact</a>
@@ -3045,8 +2654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12_csharp">
 <a href="#x12_csharp" style="color: inherit; text-decoration: inherit;">X12</a>
@@ -3054,14 +2662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="as2_go">
 <a href="#as2_go" style="color: inherit; text-decoration: inherit;">AS2</a>
@@ -3069,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifact_go">
 <a href="#edifact_go" style="color: inherit; text-decoration: inherit;">Edifact</a>
@@ -3078,8 +2682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12_go">
 <a href="#x12_go" style="color: inherit; text-decoration: inherit;">X12</a>
@@ -3087,14 +2690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="as2_nodejs">
 <a href="#as2_nodejs" style="color: inherit; text-decoration: inherit;">a<wbr>S2</a>
@@ -3102,8 +2702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifact_nodejs">
 <a href="#edifact_nodejs" style="color: inherit; text-decoration: inherit;">edifact</a>
@@ -3111,8 +2710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12_nodejs">
 <a href="#x12_nodejs" style="color: inherit; text-decoration: inherit;">x12</a>
@@ -3120,14 +2718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="a_s2_python">
 <a href="#a_s2_python" style="color: inherit; text-decoration: inherit;">a_<wbr>s2</a>
@@ -3135,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifact_python">
 <a href="#edifact_python" style="color: inherit; text-decoration: inherit;">edifact</a>
@@ -3144,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12_python">
 <a href="#x12_python" style="color: inherit; text-decoration: inherit;">x12</a>
@@ -3153,8 +2746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="businessidentityresponse">Business<wbr>Identity<wbr>Response</h4>
@@ -3162,9 +2754,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -3172,8 +2762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3181,14 +2770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -3196,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3205,14 +2790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -3220,8 +2802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3229,14 +2810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -3244,8 +2822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3253,8 +2830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</h4>
@@ -3262,9 +2838,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberlowerbound_csharp">
 <a href="#acknowledgementcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -3272,8 +2846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberupperbound_csharp">
 <a href="#acknowledgementcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -3281,8 +2854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchfunctionalacknowledgements_csharp">
 <a href="#batchfunctionalacknowledgements_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Functional<wbr>Acknowledgements</a>
@@ -3290,8 +2862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchtechnicalacknowledgements_csharp">
 <a href="#batchtechnicalacknowledgements_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Technical<wbr>Acknowledgements</a>
@@ -3299,8 +2870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needfunctionalacknowledgement_csharp">
 <a href="#needfunctionalacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Functional<wbr>Acknowledgement</a>
@@ -3308,8 +2878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needloopforvalidmessages_csharp">
 <a href="#needloopforvalidmessages_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
@@ -3317,8 +2886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needtechnicalacknowledgement_csharp">
 <a href="#needtechnicalacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Technical<wbr>Acknowledgement</a>
@@ -3326,8 +2894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloveracknowledgementcontrolnumber_csharp">
 <a href="#rolloveracknowledgementcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
@@ -3335,8 +2902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendsynchronousacknowledgement_csharp">
 <a href="#sendsynchronousacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Synchronous<wbr>Acknowledgement</a>
@@ -3344,8 +2910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumberprefix_csharp">
 <a href="#acknowledgementcontrolnumberprefix_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -3353,8 +2918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumbersuffix_csharp">
 <a href="#acknowledgementcontrolnumbersuffix_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -3362,14 +2926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberlowerbound_go">
 <a href="#acknowledgementcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -3377,8 +2938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberupperbound_go">
 <a href="#acknowledgementcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -3386,8 +2946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchfunctionalacknowledgements_go">
 <a href="#batchfunctionalacknowledgements_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Functional<wbr>Acknowledgements</a>
@@ -3395,8 +2954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchtechnicalacknowledgements_go">
 <a href="#batchtechnicalacknowledgements_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Technical<wbr>Acknowledgements</a>
@@ -3404,8 +2962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needfunctionalacknowledgement_go">
 <a href="#needfunctionalacknowledgement_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Functional<wbr>Acknowledgement</a>
@@ -3413,8 +2970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needloopforvalidmessages_go">
 <a href="#needloopforvalidmessages_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
@@ -3422,8 +2978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needtechnicalacknowledgement_go">
 <a href="#needtechnicalacknowledgement_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Technical<wbr>Acknowledgement</a>
@@ -3431,8 +2986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloveracknowledgementcontrolnumber_go">
 <a href="#rolloveracknowledgementcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
@@ -3440,8 +2994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendsynchronousacknowledgement_go">
 <a href="#sendsynchronousacknowledgement_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Synchronous<wbr>Acknowledgement</a>
@@ -3449,8 +3002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumberprefix_go">
 <a href="#acknowledgementcontrolnumberprefix_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -3458,8 +3010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumbersuffix_go">
 <a href="#acknowledgementcontrolnumbersuffix_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -3467,14 +3018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberlowerbound_nodejs">
 <a href="#acknowledgementcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -3482,8 +3030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberupperbound_nodejs">
 <a href="#acknowledgementcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -3491,8 +3038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchfunctionalacknowledgements_nodejs">
 <a href="#batchfunctionalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Functional<wbr>Acknowledgements</a>
@@ -3500,8 +3046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchtechnicalacknowledgements_nodejs">
 <a href="#batchtechnicalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Technical<wbr>Acknowledgements</a>
@@ -3509,8 +3054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needfunctionalacknowledgement_nodejs">
 <a href="#needfunctionalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Functional<wbr>Acknowledgement</a>
@@ -3518,8 +3062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needloopforvalidmessages_nodejs">
 <a href="#needloopforvalidmessages_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
@@ -3527,8 +3070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needtechnicalacknowledgement_nodejs">
 <a href="#needtechnicalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Technical<wbr>Acknowledgement</a>
@@ -3536,8 +3078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloveracknowledgementcontrolnumber_nodejs">
 <a href="#rolloveracknowledgementcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
@@ -3545,8 +3086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendsynchronousacknowledgement_nodejs">
 <a href="#sendsynchronousacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Synchronous<wbr>Acknowledgement</a>
@@ -3554,8 +3094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumberprefix_nodejs">
 <a href="#acknowledgementcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -3563,8 +3102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumbersuffix_nodejs">
 <a href="#acknowledgementcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -3572,14 +3110,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgement_control_number_lower_bound_python">
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -3587,8 +3122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgement_control_number_upper_bound_python">
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -3596,8 +3130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batch_functional_acknowledgements_python">
 <a href="#batch_functional_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>functional_<wbr>acknowledgements</a>
@@ -3605,8 +3138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batch_technical_acknowledgements_python">
 <a href="#batch_technical_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>technical_<wbr>acknowledgements</a>
@@ -3614,8 +3146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_functional_acknowledgement_python">
 <a href="#need_functional_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>functional_<wbr>acknowledgement</a>
@@ -3623,8 +3154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_loop_for_valid_messages_python">
 <a href="#need_loop_for_valid_messages_python" style="color: inherit; text-decoration: inherit;">need_<wbr>loop_<wbr>for_<wbr>valid_<wbr>messages</a>
@@ -3632,8 +3162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_technical_acknowledgement_python">
 <a href="#need_technical_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>technical_<wbr>acknowledgement</a>
@@ -3641,8 +3170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_acknowledgement_control_number_python">
 <a href="#rollover_acknowledgement_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>acknowledgement_<wbr>control_<wbr>number</a>
@@ -3650,8 +3178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_synchronous_acknowledgement_python">
 <a href="#send_synchronous_acknowledgement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>synchronous_<wbr>acknowledgement</a>
@@ -3659,8 +3186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgement_control_number_prefix_python">
 <a href="#acknowledgement_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>prefix</a>
@@ -3668,8 +3194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgement_control_number_suffix_python">
 <a href="#acknowledgement_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>suffix</a>
@@ -3677,8 +3202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response</h4>
@@ -3686,9 +3210,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_csharp">
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
@@ -3696,8 +3218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_csharp">
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
@@ -3705,14 +3226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_go">
 <a href="#receiveagreement_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
@@ -3720,8 +3238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_go">
 <a href="#sendagreement_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
@@ -3729,14 +3246,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_nodejs">
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
@@ -3744,8 +3258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_nodejs">
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
@@ -3753,14 +3266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receive_agreement_python">
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
@@ -3768,8 +3278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_agreement_python">
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
@@ -3777,8 +3286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactdelimiteroverrideresponse">Edifact<wbr>Delimiter<wbr>Override<wbr>Response</h4>
@@ -3786,9 +3294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentseparator_csharp">
 <a href="#componentseparator_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -3796,8 +3302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_csharp">
 <a href="#dataelementseparator_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -3805,8 +3310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimalpointindicator_csharp">
 <a href="#decimalpointindicator_csharp" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
@@ -3814,8 +3318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="releaseindicator_csharp">
 <a href="#releaseindicator_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Indicator</a>
@@ -3823,8 +3326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionseparator_csharp">
 <a href="#repetitionseparator_csharp" style="color: inherit; text-decoration: inherit;">Repetition<wbr>Separator</a>
@@ -3832,8 +3334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_csharp">
 <a href="#segmentterminator_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -3841,8 +3342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_csharp">
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -3850,8 +3350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageassociationassignedcode_csharp">
 <a href="#messageassociationassignedcode_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -3859,8 +3358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -3868,8 +3366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagerelease_csharp">
 <a href="#messagerelease_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Release</a>
@@ -3877,8 +3374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageversion_csharp">
 <a href="#messageversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
@@ -3886,8 +3382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_csharp">
 <a href="#targetnamespace_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -3895,14 +3390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentseparator_go">
 <a href="#componentseparator_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -3910,8 +3402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_go">
 <a href="#dataelementseparator_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -3919,8 +3410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimalpointindicator_go">
 <a href="#decimalpointindicator_go" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
@@ -3928,8 +3418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="releaseindicator_go">
 <a href="#releaseindicator_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Indicator</a>
@@ -3937,8 +3426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionseparator_go">
 <a href="#repetitionseparator_go" style="color: inherit; text-decoration: inherit;">Repetition<wbr>Separator</a>
@@ -3946,8 +3434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_go">
 <a href="#segmentterminator_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -3955,8 +3442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_go">
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -3964,8 +3450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageassociationassignedcode_go">
 <a href="#messageassociationassignedcode_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -3973,8 +3458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -3982,8 +3466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagerelease_go">
 <a href="#messagerelease_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Release</a>
@@ -3991,8 +3474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageversion_go">
 <a href="#messageversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
@@ -4000,8 +3482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_go">
 <a href="#targetnamespace_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -4009,14 +3490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentseparator_nodejs">
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
@@ -4024,8 +3502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_nodejs">
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
@@ -4033,8 +3510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimalpointindicator_nodejs">
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
@@ -4042,8 +3518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="releaseindicator_nodejs">
 <a href="#releaseindicator_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Indicator</a>
@@ -4051,8 +3526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionseparator_nodejs">
 <a href="#repetitionseparator_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Separator</a>
@@ -4060,8 +3534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_nodejs">
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
@@ -4069,8 +3542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_nodejs">
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
@@ -4078,8 +3550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageassociationassignedcode_nodejs">
 <a href="#messageassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -4087,8 +3558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -4096,8 +3566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagerelease_nodejs">
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
@@ -4105,8 +3574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageversion_nodejs">
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
@@ -4114,8 +3582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_nodejs">
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
@@ -4123,14 +3590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_separator_python">
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
@@ -4138,8 +3602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_element_separator_python">
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
@@ -4147,8 +3610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimal_point_indicator_python">
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
@@ -4156,8 +3618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="release_indicator_python">
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
@@ -4165,8 +3626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetition_separator_python">
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
@@ -4174,8 +3634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_python">
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
@@ -4183,8 +3642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_suffix_python">
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
@@ -4192,8 +3650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_association_assigned_code_python">
 <a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
@@ -4201,8 +3658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -4210,8 +3666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_release_python">
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
@@ -4219,8 +3674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_version_python">
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
@@ -4228,8 +3682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_namespace_python">
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
@@ -4237,8 +3690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactenvelopeoverrideresponse">Edifact<wbr>Envelope<wbr>Override<wbr>Response</h4>
@@ -4246,9 +3698,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationpassword_csharp">
 <a href="#applicationpassword_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Password</a>
@@ -4256,8 +3706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associationassignedcode_csharp">
 <a href="#associationassignedcode_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Assigned<wbr>Code</a>
@@ -4265,8 +3714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllingagencycode_csharp">
 <a href="#controllingagencycode_csharp" style="color: inherit; text-decoration: inherit;">Controlling<wbr>Agency<wbr>Code</a>
@@ -4274,8 +3722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_csharp">
 <a href="#functionalgroupid_csharp" style="color: inherit; text-decoration: inherit;">Functional<wbr>Group<wbr>Id</a>
@@ -4283,8 +3730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupheadermessagerelease_csharp">
 <a href="#groupheadermessagerelease_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Message<wbr>Release</a>
@@ -4292,8 +3738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupheadermessageversion_csharp">
 <a href="#groupheadermessageversion_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Message<wbr>Version</a>
@@ -4301,8 +3746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageassociationassignedcode_csharp">
 <a href="#messageassociationassignedcode_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -4310,8 +3754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -4319,8 +3762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagerelease_csharp">
 <a href="#messagerelease_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Release</a>
@@ -4328,8 +3770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageversion_csharp">
 <a href="#messageversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
@@ -4337,8 +3778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverapplicationid_csharp">
 <a href="#receiverapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Id</a>
@@ -4346,8 +3786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverapplicationqualifier_csharp">
 <a href="#receiverapplicationqualifier_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Qualifier</a>
@@ -4355,8 +3794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_csharp">
 <a href="#senderapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -4364,8 +3802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationqualifier_csharp">
 <a href="#senderapplicationqualifier_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Qualifier</a>
@@ -4373,8 +3810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_csharp">
 <a href="#targetnamespace_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -4382,14 +3818,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationpassword_go">
 <a href="#applicationpassword_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Password</a>
@@ -4397,8 +3830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associationassignedcode_go">
 <a href="#associationassignedcode_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Assigned<wbr>Code</a>
@@ -4406,8 +3838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllingagencycode_go">
 <a href="#controllingagencycode_go" style="color: inherit; text-decoration: inherit;">Controlling<wbr>Agency<wbr>Code</a>
@@ -4415,8 +3846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_go">
 <a href="#functionalgroupid_go" style="color: inherit; text-decoration: inherit;">Functional<wbr>Group<wbr>Id</a>
@@ -4424,8 +3854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupheadermessagerelease_go">
 <a href="#groupheadermessagerelease_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Message<wbr>Release</a>
@@ -4433,8 +3862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupheadermessageversion_go">
 <a href="#groupheadermessageversion_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Message<wbr>Version</a>
@@ -4442,8 +3870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageassociationassignedcode_go">
 <a href="#messageassociationassignedcode_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -4451,8 +3878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -4460,8 +3886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagerelease_go">
 <a href="#messagerelease_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Release</a>
@@ -4469,8 +3894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageversion_go">
 <a href="#messageversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
@@ -4478,8 +3902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverapplicationid_go">
 <a href="#receiverapplicationid_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Id</a>
@@ -4487,8 +3910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverapplicationqualifier_go">
 <a href="#receiverapplicationqualifier_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Qualifier</a>
@@ -4496,8 +3918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_go">
 <a href="#senderapplicationid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -4505,8 +3926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationqualifier_go">
 <a href="#senderapplicationqualifier_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Qualifier</a>
@@ -4514,8 +3934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_go">
 <a href="#targetnamespace_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -4523,14 +3942,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationpassword_nodejs">
 <a href="#applicationpassword_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Password</a>
@@ -4538,8 +3954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associationassignedcode_nodejs">
 <a href="#associationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
@@ -4547,8 +3962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controllingagencycode_nodejs">
 <a href="#controllingagencycode_nodejs" style="color: inherit; text-decoration: inherit;">controlling<wbr>Agency<wbr>Code</a>
@@ -4556,8 +3970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_nodejs">
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
@@ -4565,8 +3978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupheadermessagerelease_nodejs">
 <a href="#groupheadermessagerelease_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Release</a>
@@ -4574,8 +3986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupheadermessageversion_nodejs">
 <a href="#groupheadermessageversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Version</a>
@@ -4583,8 +3994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageassociationassignedcode_nodejs">
 <a href="#messageassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -4592,8 +4002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -4601,8 +4010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagerelease_nodejs">
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
@@ -4610,8 +4018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageversion_nodejs">
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
@@ -4619,8 +4026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverapplicationid_nodejs">
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
@@ -4628,8 +4034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverapplicationqualifier_nodejs">
 <a href="#receiverapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Qualifier</a>
@@ -4637,8 +4042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_nodejs">
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
@@ -4646,8 +4050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationqualifier_nodejs">
 <a href="#senderapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
@@ -4655,8 +4058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_nodejs">
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
@@ -4664,14 +4066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_password_python">
 <a href="#application_password_python" style="color: inherit; text-decoration: inherit;">application_<wbr>password</a>
@@ -4679,8 +4078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="association_assigned_code_python">
 <a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
@@ -4688,8 +4086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="controlling_agency_code_python">
 <a href="#controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">controlling_<wbr>agency_<wbr>code</a>
@@ -4697,8 +4094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functional_group_id_python">
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
@@ -4706,8 +4102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_header_message_release_python">
 <a href="#group_header_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>release</a>
@@ -4715,8 +4110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group header message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_header_message_version_python">
 <a href="#group_header_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>version</a>
@@ -4724,8 +4118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group header message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_association_assigned_code_python">
 <a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
@@ -4733,8 +4126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -4742,8 +4134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_release_python">
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
@@ -4751,8 +4142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_version_python">
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
@@ -4760,8 +4150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiver_application_id_python">
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
@@ -4769,8 +4158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiver_application_qualifier_python">
 <a href="#receiver_application_qualifier_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>qualifier</a>
@@ -4778,8 +4166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_application_id_python">
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
@@ -4787,8 +4174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_application_qualifier_python">
 <a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
@@ -4796,8 +4182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_namespace_python">
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
@@ -4805,8 +4190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</h4>
@@ -4814,9 +4198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applydelimiterstringadvice_csharp">
 <a href="#applydelimiterstringadvice_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Delimiter<wbr>String<wbr>Advice</a>
@@ -4824,8 +4206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creategroupingsegments_csharp">
 <a href="#creategroupingsegments_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Grouping<wbr>Segments</a>
@@ -4833,8 +4214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledefaultgroupheaders_csharp">
 <a href="#enabledefaultgroupheaders_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Default<wbr>Group<wbr>Headers</a>
@@ -4842,8 +4222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberlowerbound_csharp">
 <a href="#groupcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -4851,8 +4230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberupperbound_csharp">
 <a href="#groupcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -4860,8 +4238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberlowerbound_csharp">
 <a href="#interchangecontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -4869,8 +4246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberupperbound_csharp">
 <a href="#interchangecontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -4878,8 +4254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="istestinterchange_csharp">
 <a href="#istestinterchange_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Test<wbr>Interchange</a>
@@ -4887,8 +4262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwriteexistingtransactionsetcontrolnumber_csharp">
 <a href="#overwriteexistingtransactionsetcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -4896,8 +4270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovergroupcontrolnumber_csharp">
 <a href="#rollovergroupcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Group<wbr>Control<wbr>Number</a>
@@ -4905,8 +4278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloverinterchangecontrolnumber_csharp">
 <a href="#rolloverinterchangecontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -4914,8 +4286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovertransactionsetcontrolnumber_csharp">
 <a href="#rollovertransactionsetcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -4923,8 +4294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberlowerbound_csharp">
 <a href="#transactionsetcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -4932,8 +4302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberupperbound_csharp">
 <a href="#transactionsetcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -4941,8 +4310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationreferenceid_csharp">
 <a href="#applicationreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Reference<wbr>Id</a>
@@ -4950,8 +4318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application reference id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="communicationagreementid_csharp">
 <a href="#communicationagreementid_csharp" style="color: inherit; text-decoration: inherit;">Communication<wbr>Agreement<wbr>Id</a>
@@ -4959,8 +4326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_csharp">
 <a href="#functionalgroupid_csharp" style="color: inherit; text-decoration: inherit;">Functional<wbr>Group<wbr>Id</a>
@@ -4968,8 +4334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationpassword_csharp">
 <a href="#groupapplicationpassword_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Password</a>
@@ -4977,8 +4342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationreceiverid_csharp">
 <a href="#groupapplicationreceiverid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Receiver<wbr>Id</a>
@@ -4986,8 +4350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationreceiverqualifier_csharp">
 <a href="#groupapplicationreceiverqualifier_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Receiver<wbr>Qualifier</a>
@@ -4995,8 +4358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationsenderid_csharp">
 <a href="#groupapplicationsenderid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Sender<wbr>Id</a>
@@ -5004,8 +4366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationsenderqualifier_csharp">
 <a href="#groupapplicationsenderqualifier_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Sender<wbr>Qualifier</a>
@@ -5013,8 +4374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupassociationassignedcode_csharp">
 <a href="#groupassociationassignedcode_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -5022,8 +4382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrolnumberprefix_csharp">
 <a href="#groupcontrolnumberprefix_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5031,8 +4390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrolnumbersuffix_csharp">
 <a href="#groupcontrolnumbersuffix_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5040,8 +4398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrollingagencycode_csharp">
 <a href="#groupcontrollingagencycode_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Controlling<wbr>Agency<wbr>Code</a>
@@ -5049,8 +4406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmessagerelease_csharp">
 <a href="#groupmessagerelease_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Message<wbr>Release</a>
@@ -5058,8 +4414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmessageversion_csharp">
 <a href="#groupmessageversion_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Message<wbr>Version</a>
@@ -5067,8 +4422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchangecontrolnumberprefix_csharp">
 <a href="#interchangecontrolnumberprefix_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5076,8 +4430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchangecontrolnumbersuffix_csharp">
 <a href="#interchangecontrolnumbersuffix_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5085,8 +4438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingprioritycode_csharp">
 <a href="#processingprioritycode_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Priority<wbr>Code</a>
@@ -5094,8 +4446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverinternalidentification_csharp">
 <a href="#receiverinternalidentification_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Internal<wbr>Identification</a>
@@ -5103,8 +4454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverinternalsubidentification_csharp">
 <a href="#receiverinternalsubidentification_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Internal<wbr>Sub<wbr>Identification</a>
@@ -5112,8 +4462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverreverseroutingaddress_csharp">
 <a href="#receiverreverseroutingaddress_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Reverse<wbr>Routing<wbr>Address</a>
@@ -5121,8 +4470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientreferencepasswordqualifier_csharp">
 <a href="#recipientreferencepasswordqualifier_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Reference<wbr>Password<wbr>Qualifier</a>
@@ -5130,8 +4478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientreferencepasswordvalue_csharp">
 <a href="#recipientreferencepasswordvalue_csharp" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Reference<wbr>Password<wbr>Value</a>
@@ -5139,8 +4486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderinternalidentification_csharp">
 <a href="#senderinternalidentification_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Internal<wbr>Identification</a>
@@ -5148,8 +4494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderinternalsubidentification_csharp">
 <a href="#senderinternalsubidentification_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Internal<wbr>Sub<wbr>Identification</a>
@@ -5157,8 +4502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderreverseroutingaddress_csharp">
 <a href="#senderreverseroutingaddress_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Reverse<wbr>Routing<wbr>Address</a>
@@ -5166,8 +4510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumberprefix_csharp">
 <a href="#transactionsetcontrolnumberprefix_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5175,8 +4518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumbersuffix_csharp">
 <a href="#transactionsetcontrolnumbersuffix_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5184,14 +4526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applydelimiterstringadvice_go">
 <a href="#applydelimiterstringadvice_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Delimiter<wbr>String<wbr>Advice</a>
@@ -5199,8 +4538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creategroupingsegments_go">
 <a href="#creategroupingsegments_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Grouping<wbr>Segments</a>
@@ -5208,8 +4546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledefaultgroupheaders_go">
 <a href="#enabledefaultgroupheaders_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Default<wbr>Group<wbr>Headers</a>
@@ -5217,8 +4554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberlowerbound_go">
 <a href="#groupcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -5226,8 +4562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberupperbound_go">
 <a href="#groupcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -5235,8 +4570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberlowerbound_go">
 <a href="#interchangecontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -5244,8 +4578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberupperbound_go">
 <a href="#interchangecontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -5253,8 +4586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="istestinterchange_go">
 <a href="#istestinterchange_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Test<wbr>Interchange</a>
@@ -5262,8 +4594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwriteexistingtransactionsetcontrolnumber_go">
 <a href="#overwriteexistingtransactionsetcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -5271,8 +4602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovergroupcontrolnumber_go">
 <a href="#rollovergroupcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Group<wbr>Control<wbr>Number</a>
@@ -5280,8 +4610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloverinterchangecontrolnumber_go">
 <a href="#rolloverinterchangecontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -5289,8 +4618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovertransactionsetcontrolnumber_go">
 <a href="#rollovertransactionsetcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -5298,8 +4626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberlowerbound_go">
 <a href="#transactionsetcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -5307,8 +4634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberupperbound_go">
 <a href="#transactionsetcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -5316,8 +4642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationreferenceid_go">
 <a href="#applicationreferenceid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Reference<wbr>Id</a>
@@ -5325,8 +4650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application reference id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="communicationagreementid_go">
 <a href="#communicationagreementid_go" style="color: inherit; text-decoration: inherit;">Communication<wbr>Agreement<wbr>Id</a>
@@ -5334,8 +4658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_go">
 <a href="#functionalgroupid_go" style="color: inherit; text-decoration: inherit;">Functional<wbr>Group<wbr>Id</a>
@@ -5343,8 +4666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationpassword_go">
 <a href="#groupapplicationpassword_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Password</a>
@@ -5352,8 +4674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationreceiverid_go">
 <a href="#groupapplicationreceiverid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Receiver<wbr>Id</a>
@@ -5361,8 +4682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationreceiverqualifier_go">
 <a href="#groupapplicationreceiverqualifier_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Receiver<wbr>Qualifier</a>
@@ -5370,8 +4690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationsenderid_go">
 <a href="#groupapplicationsenderid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Sender<wbr>Id</a>
@@ -5379,8 +4698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationsenderqualifier_go">
 <a href="#groupapplicationsenderqualifier_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Application<wbr>Sender<wbr>Qualifier</a>
@@ -5388,8 +4706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupassociationassignedcode_go">
 <a href="#groupassociationassignedcode_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -5397,8 +4714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrolnumberprefix_go">
 <a href="#groupcontrolnumberprefix_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5406,8 +4722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrolnumbersuffix_go">
 <a href="#groupcontrolnumbersuffix_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5415,8 +4730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrollingagencycode_go">
 <a href="#groupcontrollingagencycode_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Controlling<wbr>Agency<wbr>Code</a>
@@ -5424,8 +4738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmessagerelease_go">
 <a href="#groupmessagerelease_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Message<wbr>Release</a>
@@ -5433,8 +4746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmessageversion_go">
 <a href="#groupmessageversion_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Message<wbr>Version</a>
@@ -5442,8 +4754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchangecontrolnumberprefix_go">
 <a href="#interchangecontrolnumberprefix_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5451,8 +4762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchangecontrolnumbersuffix_go">
 <a href="#interchangecontrolnumbersuffix_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5460,8 +4770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingprioritycode_go">
 <a href="#processingprioritycode_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Priority<wbr>Code</a>
@@ -5469,8 +4778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverinternalidentification_go">
 <a href="#receiverinternalidentification_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Internal<wbr>Identification</a>
@@ -5478,8 +4786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverinternalsubidentification_go">
 <a href="#receiverinternalsubidentification_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Internal<wbr>Sub<wbr>Identification</a>
@@ -5487,8 +4794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverreverseroutingaddress_go">
 <a href="#receiverreverseroutingaddress_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Reverse<wbr>Routing<wbr>Address</a>
@@ -5496,8 +4802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientreferencepasswordqualifier_go">
 <a href="#recipientreferencepasswordqualifier_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Reference<wbr>Password<wbr>Qualifier</a>
@@ -5505,8 +4810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientreferencepasswordvalue_go">
 <a href="#recipientreferencepasswordvalue_go" style="color: inherit; text-decoration: inherit;">Recipient<wbr>Reference<wbr>Password<wbr>Value</a>
@@ -5514,8 +4818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderinternalidentification_go">
 <a href="#senderinternalidentification_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Internal<wbr>Identification</a>
@@ -5523,8 +4826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderinternalsubidentification_go">
 <a href="#senderinternalsubidentification_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Internal<wbr>Sub<wbr>Identification</a>
@@ -5532,8 +4834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderreverseroutingaddress_go">
 <a href="#senderreverseroutingaddress_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Reverse<wbr>Routing<wbr>Address</a>
@@ -5541,8 +4842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumberprefix_go">
 <a href="#transactionsetcontrolnumberprefix_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5550,8 +4850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumbersuffix_go">
 <a href="#transactionsetcontrolnumbersuffix_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5559,14 +4858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applydelimiterstringadvice_nodejs">
 <a href="#applydelimiterstringadvice_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Delimiter<wbr>String<wbr>Advice</a>
@@ -5574,8 +4870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creategroupingsegments_nodejs">
 <a href="#creategroupingsegments_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Grouping<wbr>Segments</a>
@@ -5583,8 +4878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledefaultgroupheaders_nodejs">
 <a href="#enabledefaultgroupheaders_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Default<wbr>Group<wbr>Headers</a>
@@ -5592,8 +4886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberlowerbound_nodejs">
 <a href="#groupcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -5601,8 +4894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberupperbound_nodejs">
 <a href="#groupcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -5610,8 +4902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberlowerbound_nodejs">
 <a href="#interchangecontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -5619,8 +4910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberupperbound_nodejs">
 <a href="#interchangecontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -5628,8 +4918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="istestinterchange_nodejs">
 <a href="#istestinterchange_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Test<wbr>Interchange</a>
@@ -5637,8 +4926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwriteexistingtransactionsetcontrolnumber_nodejs">
 <a href="#overwriteexistingtransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -5646,8 +4934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovergroupcontrolnumber_nodejs">
 <a href="#rollovergroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Group<wbr>Control<wbr>Number</a>
@@ -5655,8 +4942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloverinterchangecontrolnumber_nodejs">
 <a href="#rolloverinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -5664,8 +4950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovertransactionsetcontrolnumber_nodejs">
 <a href="#rollovertransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -5673,8 +4958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberlowerbound_nodejs">
 <a href="#transactionsetcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -5682,8 +4966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberupperbound_nodejs">
 <a href="#transactionsetcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -5691,8 +4974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationreferenceid_nodejs">
 <a href="#applicationreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Reference<wbr>Id</a>
@@ -5700,8 +4982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application reference id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="communicationagreementid_nodejs">
 <a href="#communicationagreementid_nodejs" style="color: inherit; text-decoration: inherit;">communication<wbr>Agreement<wbr>Id</a>
@@ -5709,8 +4990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_nodejs">
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
@@ -5718,8 +4998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationpassword_nodejs">
 <a href="#groupapplicationpassword_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Password</a>
@@ -5727,8 +5006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationreceiverid_nodejs">
 <a href="#groupapplicationreceiverid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Receiver<wbr>Id</a>
@@ -5736,8 +5014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationreceiverqualifier_nodejs">
 <a href="#groupapplicationreceiverqualifier_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Receiver<wbr>Qualifier</a>
@@ -5745,8 +5022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationsenderid_nodejs">
 <a href="#groupapplicationsenderid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Sender<wbr>Id</a>
@@ -5754,8 +5030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupapplicationsenderqualifier_nodejs">
 <a href="#groupapplicationsenderqualifier_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Sender<wbr>Qualifier</a>
@@ -5763,8 +5038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupassociationassignedcode_nodejs">
 <a href="#groupassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Association<wbr>Assigned<wbr>Code</a>
@@ -5772,8 +5046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrolnumberprefix_nodejs">
 <a href="#groupcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5781,8 +5054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrolnumbersuffix_nodejs">
 <a href="#groupcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5790,8 +5062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupcontrollingagencycode_nodejs">
 <a href="#groupcontrollingagencycode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Controlling<wbr>Agency<wbr>Code</a>
@@ -5799,8 +5070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmessagerelease_nodejs">
 <a href="#groupmessagerelease_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Message<wbr>Release</a>
@@ -5808,8 +5078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupmessageversion_nodejs">
 <a href="#groupmessageversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Message<wbr>Version</a>
@@ -5817,8 +5086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchangecontrolnumberprefix_nodejs">
 <a href="#interchangecontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5826,8 +5094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchangecontrolnumbersuffix_nodejs">
 <a href="#interchangecontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5835,8 +5102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processingprioritycode_nodejs">
 <a href="#processingprioritycode_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Priority<wbr>Code</a>
@@ -5844,8 +5110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverinternalidentification_nodejs">
 <a href="#receiverinternalidentification_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Internal<wbr>Identification</a>
@@ -5853,8 +5118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverinternalsubidentification_nodejs">
 <a href="#receiverinternalsubidentification_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Internal<wbr>Sub<wbr>Identification</a>
@@ -5862,8 +5126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiverreverseroutingaddress_nodejs">
 <a href="#receiverreverseroutingaddress_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Reverse<wbr>Routing<wbr>Address</a>
@@ -5871,8 +5134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientreferencepasswordqualifier_nodejs">
 <a href="#recipientreferencepasswordqualifier_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Reference<wbr>Password<wbr>Qualifier</a>
@@ -5880,8 +5142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipientreferencepasswordvalue_nodejs">
 <a href="#recipientreferencepasswordvalue_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Reference<wbr>Password<wbr>Value</a>
@@ -5889,8 +5150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderinternalidentification_nodejs">
 <a href="#senderinternalidentification_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Internal<wbr>Identification</a>
@@ -5898,8 +5158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderinternalsubidentification_nodejs">
 <a href="#senderinternalsubidentification_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Internal<wbr>Sub<wbr>Identification</a>
@@ -5907,8 +5166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderreverseroutingaddress_nodejs">
 <a href="#senderreverseroutingaddress_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Reverse<wbr>Routing<wbr>Address</a>
@@ -5916,8 +5174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumberprefix_nodejs">
 <a href="#transactionsetcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -5925,8 +5182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumbersuffix_nodejs">
 <a href="#transactionsetcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -5934,14 +5190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apply_delimiter_string_advice_python">
 <a href="#apply_delimiter_string_advice_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>delimiter_<wbr>string_<wbr>advice</a>
@@ -5949,8 +5202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_grouping_segments_python">
 <a href="#create_grouping_segments_python" style="color: inherit; text-decoration: inherit;">create_<wbr>grouping_<wbr>segments</a>
@@ -5958,8 +5210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_default_group_headers_python">
 <a href="#enable_default_group_headers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>default_<wbr>group_<wbr>headers</a>
@@ -5967,8 +5218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_control_number_lower_bound_python">
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -5976,8 +5226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_control_number_upper_bound_python">
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -5985,8 +5234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_control_number_lower_bound_python">
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -5994,8 +5242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_control_number_upper_bound_python">
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -6003,8 +5250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_test_interchange_python">
 <a href="#is_test_interchange_python" style="color: inherit; text-decoration: inherit;">is_<wbr>test_<wbr>interchange</a>
@@ -6012,8 +5258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwrite_existing_transaction_set_control_number_python">
 <a href="#overwrite_existing_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
@@ -6021,8 +5266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_group_control_number_python">
 <a href="#rollover_group_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>group_<wbr>control_<wbr>number</a>
@@ -6030,8 +5274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_interchange_control_number_python">
 <a href="#rollover_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>interchange_<wbr>control_<wbr>number</a>
@@ -6039,8 +5282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_transaction_set_control_number_python">
 <a href="#rollover_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
@@ -6048,8 +5290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transaction_set_control_number_lower_bound_python">
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -6057,8 +5298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transaction_set_control_number_upper_bound_python">
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -6066,8 +5306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_reference_id_python">
 <a href="#application_reference_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>reference_<wbr>id</a>
@@ -6075,8 +5314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application reference id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="communication_agreement_id_python">
 <a href="#communication_agreement_id_python" style="color: inherit; text-decoration: inherit;">communication_<wbr>agreement_<wbr>id</a>
@@ -6084,8 +5322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functional_group_id_python">
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
@@ -6093,8 +5330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_application_password_python">
 <a href="#group_application_password_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>password</a>
@@ -6102,8 +5338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group application password.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_application_receiver_id_python">
 <a href="#group_application_receiver_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>receiver_<wbr>id</a>
@@ -6111,8 +5346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_application_receiver_qualifier_python">
 <a href="#group_application_receiver_qualifier_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>receiver_<wbr>qualifier</a>
@@ -6120,8 +5354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_application_sender_id_python">
 <a href="#group_application_sender_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>sender_<wbr>id</a>
@@ -6129,8 +5362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_application_sender_qualifier_python">
 <a href="#group_application_sender_qualifier_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>sender_<wbr>qualifier</a>
@@ -6138,8 +5370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_association_assigned_code_python">
 <a href="#group_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>association_<wbr>assigned_<wbr>code</a>
@@ -6147,8 +5378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_control_number_prefix_python">
 <a href="#group_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>prefix</a>
@@ -6156,8 +5386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_control_number_suffix_python">
 <a href="#group_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>suffix</a>
@@ -6165,8 +5394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_controlling_agency_code_python">
 <a href="#group_controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>controlling_<wbr>agency_<wbr>code</a>
@@ -6174,8 +5402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_message_release_python">
 <a href="#group_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>message_<wbr>release</a>
@@ -6183,8 +5410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group message release.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_message_version_python">
 <a href="#group_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>message_<wbr>version</a>
@@ -6192,8 +5418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group message version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchange_control_number_prefix_python">
 <a href="#interchange_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>prefix</a>
@@ -6201,8 +5426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interchange_control_number_suffix_python">
 <a href="#interchange_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>suffix</a>
@@ -6210,8 +5434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processing_priority_code_python">
 <a href="#processing_priority_code_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>priority_<wbr>code</a>
@@ -6219,8 +5442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiver_internal_identification_python">
 <a href="#receiver_internal_identification_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>internal_<wbr>identification</a>
@@ -6228,8 +5450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiver_internal_sub_identification_python">
 <a href="#receiver_internal_sub_identification_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>internal_<wbr>sub_<wbr>identification</a>
@@ -6237,8 +5458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="receiver_reverse_routing_address_python">
 <a href="#receiver_reverse_routing_address_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>reverse_<wbr>routing_<wbr>address</a>
@@ -6246,8 +5466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_reference_password_qualifier_python">
 <a href="#recipient_reference_password_qualifier_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>reference_<wbr>password_<wbr>qualifier</a>
@@ -6255,8 +5474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_reference_password_value_python">
 <a href="#recipient_reference_password_value_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>reference_<wbr>password_<wbr>value</a>
@@ -6264,8 +5482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_internal_identification_python">
 <a href="#sender_internal_identification_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>internal_<wbr>identification</a>
@@ -6273,8 +5490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_internal_sub_identification_python">
 <a href="#sender_internal_sub_identification_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>internal_<wbr>sub_<wbr>identification</a>
@@ -6282,8 +5498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_reverse_routing_address_python">
 <a href="#sender_reverse_routing_address_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>reverse_<wbr>routing_<wbr>address</a>
@@ -6291,8 +5506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_set_control_number_prefix_python">
 <a href="#transaction_set_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>prefix</a>
@@ -6300,8 +5514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_set_control_number_suffix_python">
 <a href="#transaction_set_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>suffix</a>
@@ -6309,8 +5522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response</h4>
@@ -6318,9 +5530,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="characterset_csharp">
 <a href="#characterset_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
@@ -6328,8 +5538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="componentseparator_csharp">
 <a href="#componentseparator_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -6337,8 +5546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_csharp">
 <a href="#dataelementseparator_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -6346,8 +5554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimalpointindicator_csharp">
 <a href="#decimalpointindicator_csharp" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
@@ -6355,8 +5562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolversion_csharp">
 <a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -6364,8 +5570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="releaseindicator_csharp">
 <a href="#releaseindicator_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Indicator</a>
@@ -6373,8 +5578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionseparator_csharp">
 <a href="#repetitionseparator_csharp" style="color: inherit; text-decoration: inherit;">Repetition<wbr>Separator</a>
@@ -6382,8 +5586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_csharp">
 <a href="#segmentterminator_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -6391,8 +5594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_csharp">
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -6400,8 +5602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="characterencoding_csharp">
 <a href="#characterencoding_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Encoding</a>
@@ -6409,8 +5610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecodelistdirectoryversion_csharp">
 <a href="#servicecodelistdirectoryversion_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Code<wbr>List<wbr>Directory<wbr>Version</a>
@@ -6418,14 +5618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="characterset_go">
 <a href="#characterset_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
@@ -6433,8 +5630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="componentseparator_go">
 <a href="#componentseparator_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -6442,8 +5638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_go">
 <a href="#dataelementseparator_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -6451,8 +5646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimalpointindicator_go">
 <a href="#decimalpointindicator_go" style="color: inherit; text-decoration: inherit;">Decimal<wbr>Point<wbr>Indicator</a>
@@ -6460,8 +5654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolversion_go">
 <a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -6469,8 +5662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="releaseindicator_go">
 <a href="#releaseindicator_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Indicator</a>
@@ -6478,8 +5670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionseparator_go">
 <a href="#repetitionseparator_go" style="color: inherit; text-decoration: inherit;">Repetition<wbr>Separator</a>
@@ -6487,8 +5678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_go">
 <a href="#segmentterminator_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -6496,8 +5686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_go">
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -6505,8 +5694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="characterencoding_go">
 <a href="#characterencoding_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Encoding</a>
@@ -6514,8 +5702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecodelistdirectoryversion_go">
 <a href="#servicecodelistdirectoryversion_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Code<wbr>List<wbr>Directory<wbr>Version</a>
@@ -6523,14 +5710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="characterset_nodejs">
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
@@ -6538,8 +5722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="componentseparator_nodejs">
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
@@ -6547,8 +5730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_nodejs">
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
@@ -6556,8 +5738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimalpointindicator_nodejs">
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
@@ -6565,8 +5746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolversion_nodejs">
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
@@ -6574,8 +5754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="releaseindicator_nodejs">
 <a href="#releaseindicator_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Indicator</a>
@@ -6583,8 +5762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetitionseparator_nodejs">
 <a href="#repetitionseparator_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Separator</a>
@@ -6592,8 +5770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_nodejs">
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
@@ -6601,8 +5778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_nodejs">
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
@@ -6610,8 +5786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="characterencoding_nodejs">
 <a href="#characterencoding_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Encoding</a>
@@ -6619,8 +5794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The character encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecodelistdirectoryversion_nodejs">
 <a href="#servicecodelistdirectoryversion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Code<wbr>List<wbr>Directory<wbr>Version</a>
@@ -6628,14 +5802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="character_set_python">
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
@@ -6643,8 +5814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="component_separator_python">
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
@@ -6652,8 +5822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_element_separator_python">
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
@@ -6661,8 +5830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decimal_point_indicator_python">
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
@@ -6670,8 +5838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_version_python">
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
@@ -6679,8 +5846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="release_indicator_python">
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
@@ -6688,8 +5854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The release indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repetition_separator_python">
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
@@ -6697,8 +5862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_python">
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
@@ -6706,8 +5870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_suffix_python">
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
@@ -6715,8 +5878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="character_encoding_python">
 <a href="#character_encoding_python" style="color: inherit; text-decoration: inherit;">character_<wbr>encoding</a>
@@ -6724,8 +5886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The character encoding.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_code_list_directory_version_python">
 <a href="#service_code_list_directory_version_python" style="color: inherit; text-decoration: inherit;">service_<wbr>code_<wbr>list_<wbr>directory_<wbr>version</a>
@@ -6733,8 +5894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response</h4>
@@ -6742,9 +5902,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messagefiltertype_csharp">
 <a href="#messagefiltertype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
@@ -6752,14 +5910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messagefiltertype_go">
 <a href="#messagefiltertype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
@@ -6767,14 +5922,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messagefiltertype_nodejs">
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
@@ -6782,14 +5934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_filter_type_python">
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
@@ -6797,8 +5946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactmessageidentifierresponse">Edifact<wbr>Message<wbr>Identifier<wbr>Response</h4>
@@ -6806,9 +5954,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -6816,14 +5962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -6831,14 +5974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -6846,14 +5986,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -6861,8 +5998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</h4>
@@ -6870,9 +6006,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_csharp">
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -6880,8 +6014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_csharp">
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
@@ -6889,8 +6022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_csharp">
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
@@ -6898,14 +6030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_go">
 <a href="#protocolsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -6913,8 +6042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_go">
 <a href="#receiverbusinessidentity_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
@@ -6922,8 +6050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_go">
 <a href="#senderbusinessidentity_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
@@ -6931,14 +6058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_nodejs">
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
@@ -6946,8 +6070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_nodejs">
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
@@ -6955,8 +6078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_nodejs">
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
@@ -6964,14 +6086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_settings_python">
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
@@ -6979,8 +6098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiver_business_identity_python">
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
@@ -6988,8 +6106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sender_business_identity_python">
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
@@ -6997,8 +6114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</h4>
@@ -7006,9 +6122,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createemptyxmltagsfortrailingseparators_csharp">
 <a href="#createemptyxmltagsfortrailingseparators_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
@@ -7016,8 +6130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masksecurityinfo_csharp">
 <a href="#masksecurityinfo_csharp" style="color: inherit; text-decoration: inherit;">Mask<wbr>Security<wbr>Info</a>
@@ -7025,8 +6138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserveinterchange_csharp">
 <a href="#preserveinterchange_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Interchange</a>
@@ -7034,8 +6146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendinterchangeonerror_csharp">
 <a href="#suspendinterchangeonerror_csharp" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Interchange<wbr>On<wbr>Error</a>
@@ -7043,8 +6154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedotasdecimalseparator_csharp">
 <a href="#usedotasdecimalseparator_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
@@ -7052,14 +6162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createemptyxmltagsfortrailingseparators_go">
 <a href="#createemptyxmltagsfortrailingseparators_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
@@ -7067,8 +6174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masksecurityinfo_go">
 <a href="#masksecurityinfo_go" style="color: inherit; text-decoration: inherit;">Mask<wbr>Security<wbr>Info</a>
@@ -7076,8 +6182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserveinterchange_go">
 <a href="#preserveinterchange_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Interchange</a>
@@ -7085,8 +6190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendinterchangeonerror_go">
 <a href="#suspendinterchangeonerror_go" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Interchange<wbr>On<wbr>Error</a>
@@ -7094,8 +6198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedotasdecimalseparator_go">
 <a href="#usedotasdecimalseparator_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
@@ -7103,14 +6206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createemptyxmltagsfortrailingseparators_nodejs">
 <a href="#createemptyxmltagsfortrailingseparators_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
@@ -7118,8 +6218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masksecurityinfo_nodejs">
 <a href="#masksecurityinfo_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Security<wbr>Info</a>
@@ -7127,8 +6226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserveinterchange_nodejs">
 <a href="#preserveinterchange_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Interchange</a>
@@ -7136,8 +6234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendinterchangeonerror_nodejs">
 <a href="#suspendinterchangeonerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Interchange<wbr>On<wbr>Error</a>
@@ -7145,8 +6242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedotasdecimalseparator_nodejs">
 <a href="#usedotasdecimalseparator_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
@@ -7154,14 +6250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="create_empty_xml_tags_for_trailing_separators_python">
 <a href="#create_empty_xml_tags_for_trailing_separators_python" style="color: inherit; text-decoration: inherit;">create_<wbr>empty_<wbr>xml_<wbr>tags_<wbr>for_<wbr>trailing_<wbr>separators</a>
@@ -7169,8 +6262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mask_security_info_python">
 <a href="#mask_security_info_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>security_<wbr>info</a>
@@ -7178,8 +6270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserve_interchange_python">
 <a href="#preserve_interchange_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>interchange</a>
@@ -7187,8 +6278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspend_interchange_on_error_python">
 <a href="#suspend_interchange_on_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>interchange_<wbr>on_<wbr>error</a>
@@ -7196,8 +6286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use_dot_as_decimal_separator_python">
 <a href="#use_dot_as_decimal_separator_python" style="color: inherit; text-decoration: inherit;">use_<wbr>dot_<wbr>as_<wbr>decimal_<wbr>separator</a>
@@ -7205,8 +6294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</h4>
@@ -7214,9 +6302,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementsettings_csharp">
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
@@ -7224,8 +6310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_csharp">
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
@@ -7233,8 +6318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framingsettings_csharp">
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
@@ -7242,8 +6326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagefilter_csharp">
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
@@ -7251,8 +6334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processingsettings_csharp">
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
@@ -7260,8 +6342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemareferences_csharp">
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
@@ -7269,8 +6350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_csharp">
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
@@ -7278,8 +6358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifactdelimiteroverrides_csharp">
 <a href="#edifactdelimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Edifact<wbr>Delimiter<wbr>Overrides</a>
@@ -7287,8 +6366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopeoverrides_csharp">
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
@@ -7296,8 +6374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagefilterlist_csharp">
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
@@ -7305,8 +6382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationoverrides_csharp">
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
@@ -7314,14 +6390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementsettings_go">
 <a href="#acknowledgementsettings_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
@@ -7329,8 +6402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_go">
 <a href="#envelopesettings_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
@@ -7338,8 +6410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framingsettings_go">
 <a href="#framingsettings_go" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
@@ -7347,8 +6418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagefilter_go">
 <a href="#messagefilter_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
@@ -7356,8 +6426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processingsettings_go">
 <a href="#processingsettings_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
@@ -7365,8 +6434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemareferences_go">
 <a href="#schemareferences_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
@@ -7374,8 +6442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactschemareferenceresponse">[]Edifact<wbr>Schema<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_go">
 <a href="#validationsettings_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
@@ -7383,8 +6450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifactdelimiteroverrides_go">
 <a href="#edifactdelimiteroverrides_go" style="color: inherit; text-decoration: inherit;">Edifact<wbr>Delimiter<wbr>Overrides</a>
@@ -7392,8 +6458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactdelimiteroverrideresponse">[]Edifact<wbr>Delimiter<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopeoverrides_go">
 <a href="#envelopeoverrides_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
@@ -7401,8 +6466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopeoverrideresponse">[]Edifact<wbr>Envelope<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagefilterlist_go">
 <a href="#messagefilterlist_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
@@ -7410,8 +6474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessageidentifierresponse">[]Edifact<wbr>Message<wbr>Identifier<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationoverrides_go">
 <a href="#validationoverrides_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
@@ -7419,14 +6482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationoverrideresponse">[]Edifact<wbr>Validation<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementsettings_nodejs">
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
@@ -7434,8 +6494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_nodejs">
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
@@ -7443,8 +6502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framingsettings_nodejs">
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
@@ -7452,8 +6510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagefilter_nodejs">
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
@@ -7461,8 +6518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processingsettings_nodejs">
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
@@ -7470,8 +6526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemareferences_nodejs">
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
@@ -7479,8 +6534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactschemareferenceresponse">Edifact<wbr>Schema<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_nodejs">
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
@@ -7488,8 +6542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifactdelimiteroverrides_nodejs">
 <a href="#edifactdelimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">edifact<wbr>Delimiter<wbr>Overrides</a>
@@ -7497,8 +6550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Edifact<wbr>Delimiter<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopeoverrides_nodejs">
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
@@ -7506,8 +6558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Edifact<wbr>Envelope<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagefilterlist_nodejs">
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
@@ -7515,8 +6566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessageidentifierresponse">Edifact<wbr>Message<wbr>Identifier<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationoverrides_nodejs">
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
@@ -7524,14 +6574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationoverrideresponse">Edifact<wbr>Validation<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgement_settings_python">
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
@@ -7539,8 +6586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelope_settings_python">
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
@@ -7548,8 +6594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framing_settings_python">
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
@@ -7557,8 +6602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_filter_python">
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
@@ -7566,8 +6610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processing_settings_python">
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
@@ -7575,8 +6618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_references_python">
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
@@ -7584,8 +6626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactschemareferenceresponse">Sequence[Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validation_settings_python">
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
@@ -7593,8 +6634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edifact_delimiter_overrides_python">
 <a href="#edifact_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">edifact_<wbr>delimiter_<wbr>overrides</a>
@@ -7602,8 +6642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Sequence[Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelope_overrides_python">
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
@@ -7611,8 +6650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Sequence[Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_filter_list_python">
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
@@ -7620,8 +6658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactmessageidentifierresponse">Sequence[Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validation_overrides_python">
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
@@ -7629,8 +6666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edifactvalidationoverrideresponse">Sequence[Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactschemareferenceresponse">Edifact<wbr>Schema<wbr>Reference<wbr>Response</h4>
@@ -7638,9 +6674,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -7648,8 +6682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagerelease_csharp">
 <a href="#messagerelease_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Release</a>
@@ -7657,8 +6690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageversion_csharp">
 <a href="#messageversion_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
@@ -7666,8 +6698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_csharp">
 <a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -7675,8 +6706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associationassignedcode_csharp">
 <a href="#associationassignedcode_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Assigned<wbr>Code</a>
@@ -7684,8 +6714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_csharp">
 <a href="#senderapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -7693,8 +6722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationqualifier_csharp">
 <a href="#senderapplicationqualifier_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Qualifier</a>
@@ -7702,14 +6730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -7717,8 +6742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagerelease_go">
 <a href="#messagerelease_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Release</a>
@@ -7726,8 +6750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageversion_go">
 <a href="#messageversion_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Version</a>
@@ -7735,8 +6758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_go">
 <a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -7744,8 +6766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associationassignedcode_go">
 <a href="#associationassignedcode_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Assigned<wbr>Code</a>
@@ -7753,8 +6774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_go">
 <a href="#senderapplicationid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -7762,8 +6782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationqualifier_go">
 <a href="#senderapplicationqualifier_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Qualifier</a>
@@ -7771,14 +6790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -7786,8 +6802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagerelease_nodejs">
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
@@ -7795,8 +6810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message release version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageversion_nodejs">
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
@@ -7804,8 +6818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_nodejs">
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
@@ -7813,8 +6826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associationassignedcode_nodejs">
 <a href="#associationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
@@ -7822,8 +6834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_nodejs">
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
@@ -7831,8 +6842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationqualifier_nodejs">
 <a href="#senderapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
@@ -7840,14 +6850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -7855,8 +6862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_release_python">
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
@@ -7864,8 +6870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message release version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_version_python">
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
@@ -7873,8 +6878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_name_python">
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
@@ -7882,8 +6886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="association_assigned_code_python">
 <a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
@@ -7891,8 +6894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_application_id_python">
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
@@ -7900,8 +6902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_application_qualifier_python">
 <a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
@@ -7909,8 +6910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactvalidationoverrideresponse">Edifact<wbr>Validation<wbr>Override<wbr>Response</h4>
@@ -7918,9 +6918,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_csharp">
 <a href="#allowleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -7928,8 +6926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcecharacterset_csharp">
 <a href="#enforcecharacterset_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Character<wbr>Set</a>
@@ -7937,8 +6934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -7946,8 +6942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_csharp">
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -7955,8 +6950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_csharp">
 <a href="#trimleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -7964,8 +6958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_csharp">
 <a href="#validateeditypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -7973,8 +6966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_csharp">
 <a href="#validatexsdtypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -7982,14 +6974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_go">
 <a href="#allowleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -7997,8 +6986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcecharacterset_go">
 <a href="#enforcecharacterset_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Character<wbr>Set</a>
@@ -8006,8 +6994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -8015,8 +7002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_go">
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -8024,8 +7010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_go">
 <a href="#trimleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8033,8 +7018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_go">
 <a href="#validateeditypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -8042,8 +7026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_go">
 <a href="#validatexsdtypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -8051,14 +7034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_nodejs">
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8066,8 +7046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcecharacterset_nodejs">
 <a href="#enforcecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Character<wbr>Set</a>
@@ -8075,8 +7054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -8084,8 +7062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_nodejs">
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
@@ -8093,8 +7070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_nodejs">
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8102,8 +7078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_nodejs">
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
@@ -8111,8 +7086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_nodejs">
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
@@ -8120,14 +7094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allow_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -8135,8 +7106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforce_character_set_python">
 <a href="#enforce_character_set_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>character_<wbr>set</a>
@@ -8144,8 +7114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -8153,8 +7122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailing_separator_policy_python">
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
@@ -8162,8 +7130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trim_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -8171,8 +7138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_edi_types_python">
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
@@ -8180,8 +7146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_xsd_types_python">
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
@@ -8189,8 +7154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</h4>
@@ -8198,9 +7162,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_csharp">
 <a href="#allowleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8208,8 +7170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicategroupcontrolnumber_csharp">
 <a href="#checkduplicategroupcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
@@ -8217,8 +7178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicateinterchangecontrolnumber_csharp">
 <a href="#checkduplicateinterchangecontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -8226,8 +7186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatetransactionsetcontrolnumber_csharp">
 <a href="#checkduplicatetransactionsetcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -8235,8 +7194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumbervaliditydays_csharp">
 <a href="#interchangecontrolnumbervaliditydays_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
@@ -8244,8 +7202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_csharp">
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -8253,8 +7210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_csharp">
 <a href="#trimleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8262,8 +7218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_csharp">
 <a href="#validatecharacterset_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Character<wbr>Set</a>
@@ -8271,8 +7226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_csharp">
 <a href="#validateeditypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -8280,8 +7234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_csharp">
 <a href="#validatexsdtypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -8289,14 +7242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_go">
 <a href="#allowleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8304,8 +7254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicategroupcontrolnumber_go">
 <a href="#checkduplicategroupcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
@@ -8313,8 +7262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicateinterchangecontrolnumber_go">
 <a href="#checkduplicateinterchangecontrolnumber_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -8322,8 +7270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatetransactionsetcontrolnumber_go">
 <a href="#checkduplicatetransactionsetcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -8331,8 +7278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumbervaliditydays_go">
 <a href="#interchangecontrolnumbervaliditydays_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
@@ -8340,8 +7286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_go">
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -8349,8 +7294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_go">
 <a href="#trimleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8358,8 +7302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_go">
 <a href="#validatecharacterset_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Character<wbr>Set</a>
@@ -8367,8 +7310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_go">
 <a href="#validateeditypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -8376,8 +7318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_go">
 <a href="#validatexsdtypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -8385,14 +7326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_nodejs">
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8400,8 +7338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicategroupcontrolnumber_nodejs">
 <a href="#checkduplicategroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
@@ -8409,8 +7346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicateinterchangecontrolnumber_nodejs">
 <a href="#checkduplicateinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -8418,8 +7354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatetransactionsetcontrolnumber_nodejs">
 <a href="#checkduplicatetransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -8427,8 +7362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumbervaliditydays_nodejs">
 <a href="#interchangecontrolnumbervaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
@@ -8436,8 +7370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_nodejs">
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
@@ -8445,8 +7378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_nodejs">
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -8454,8 +7386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_nodejs">
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
@@ -8463,8 +7394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_nodejs">
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
@@ -8472,8 +7402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_nodejs">
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
@@ -8481,14 +7410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allow_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -8496,8 +7422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_group_control_number_python">
 <a href="#check_duplicate_group_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>group_<wbr>control_<wbr>number</a>
@@ -8505,8 +7430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_interchange_control_number_python">
 <a href="#check_duplicate_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>interchange_<wbr>control_<wbr>number</a>
@@ -8514,8 +7438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_transaction_set_control_number_python">
 <a href="#check_duplicate_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
@@ -8523,8 +7446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_control_number_validity_days_python">
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
@@ -8532,8 +7454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailing_separator_policy_python">
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
@@ -8541,8 +7462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trim_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -8550,8 +7470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_character_set_python">
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
@@ -8559,8 +7478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_edi_types_python">
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
@@ -8568,8 +7486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_xsd_types_python">
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
@@ -8577,8 +7494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</h4>
@@ -8586,9 +7502,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberlowerbound_csharp">
 <a href="#acknowledgementcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -8596,8 +7510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberupperbound_csharp">
 <a href="#acknowledgementcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -8605,8 +7518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchfunctionalacknowledgements_csharp">
 <a href="#batchfunctionalacknowledgements_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Functional<wbr>Acknowledgements</a>
@@ -8614,8 +7526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchimplementationacknowledgements_csharp">
 <a href="#batchimplementationacknowledgements_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Implementation<wbr>Acknowledgements</a>
@@ -8623,8 +7534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchtechnicalacknowledgements_csharp">
 <a href="#batchtechnicalacknowledgements_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Technical<wbr>Acknowledgements</a>
@@ -8632,8 +7542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needfunctionalacknowledgement_csharp">
 <a href="#needfunctionalacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Functional<wbr>Acknowledgement</a>
@@ -8641,8 +7550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needimplementationacknowledgement_csharp">
 <a href="#needimplementationacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Implementation<wbr>Acknowledgement</a>
@@ -8650,8 +7558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needloopforvalidmessages_csharp">
 <a href="#needloopforvalidmessages_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
@@ -8659,8 +7566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needtechnicalacknowledgement_csharp">
 <a href="#needtechnicalacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Need<wbr>Technical<wbr>Acknowledgement</a>
@@ -8668,8 +7574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloveracknowledgementcontrolnumber_csharp">
 <a href="#rolloveracknowledgementcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
@@ -8677,8 +7582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendsynchronousacknowledgement_csharp">
 <a href="#sendsynchronousacknowledgement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Synchronous<wbr>Acknowledgement</a>
@@ -8686,8 +7590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumberprefix_csharp">
 <a href="#acknowledgementcontrolnumberprefix_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -8695,8 +7598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumbersuffix_csharp">
 <a href="#acknowledgementcontrolnumbersuffix_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -8704,8 +7606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalacknowledgementversion_csharp">
 <a href="#functionalacknowledgementversion_csharp" style="color: inherit; text-decoration: inherit;">Functional<wbr>Acknowledgement<wbr>Version</a>
@@ -8713,8 +7614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationacknowledgementversion_csharp">
 <a href="#implementationacknowledgementversion_csharp" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Acknowledgement<wbr>Version</a>
@@ -8722,14 +7622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberlowerbound_go">
 <a href="#acknowledgementcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -8737,8 +7634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberupperbound_go">
 <a href="#acknowledgementcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -8746,8 +7642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchfunctionalacknowledgements_go">
 <a href="#batchfunctionalacknowledgements_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Functional<wbr>Acknowledgements</a>
@@ -8755,8 +7650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchimplementationacknowledgements_go">
 <a href="#batchimplementationacknowledgements_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Implementation<wbr>Acknowledgements</a>
@@ -8764,8 +7658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchtechnicalacknowledgements_go">
 <a href="#batchtechnicalacknowledgements_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Technical<wbr>Acknowledgements</a>
@@ -8773,8 +7666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needfunctionalacknowledgement_go">
 <a href="#needfunctionalacknowledgement_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Functional<wbr>Acknowledgement</a>
@@ -8782,8 +7674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needimplementationacknowledgement_go">
 <a href="#needimplementationacknowledgement_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Implementation<wbr>Acknowledgement</a>
@@ -8791,8 +7682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needloopforvalidmessages_go">
 <a href="#needloopforvalidmessages_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
@@ -8800,8 +7690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needtechnicalacknowledgement_go">
 <a href="#needtechnicalacknowledgement_go" style="color: inherit; text-decoration: inherit;">Need<wbr>Technical<wbr>Acknowledgement</a>
@@ -8809,8 +7698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloveracknowledgementcontrolnumber_go">
 <a href="#rolloveracknowledgementcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
@@ -8818,8 +7706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendsynchronousacknowledgement_go">
 <a href="#sendsynchronousacknowledgement_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Synchronous<wbr>Acknowledgement</a>
@@ -8827,8 +7714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumberprefix_go">
 <a href="#acknowledgementcontrolnumberprefix_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -8836,8 +7722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumbersuffix_go">
 <a href="#acknowledgementcontrolnumbersuffix_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -8845,8 +7730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalacknowledgementversion_go">
 <a href="#functionalacknowledgementversion_go" style="color: inherit; text-decoration: inherit;">Functional<wbr>Acknowledgement<wbr>Version</a>
@@ -8854,8 +7738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationacknowledgementversion_go">
 <a href="#implementationacknowledgementversion_go" style="color: inherit; text-decoration: inherit;">Implementation<wbr>Acknowledgement<wbr>Version</a>
@@ -8863,14 +7746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberlowerbound_nodejs">
 <a href="#acknowledgementcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -8878,8 +7758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgementcontrolnumberupperbound_nodejs">
 <a href="#acknowledgementcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -8887,8 +7766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchfunctionalacknowledgements_nodejs">
 <a href="#batchfunctionalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Functional<wbr>Acknowledgements</a>
@@ -8896,8 +7774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchimplementationacknowledgements_nodejs">
 <a href="#batchimplementationacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Implementation<wbr>Acknowledgements</a>
@@ -8905,8 +7782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batchtechnicalacknowledgements_nodejs">
 <a href="#batchtechnicalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Technical<wbr>Acknowledgements</a>
@@ -8914,8 +7790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needfunctionalacknowledgement_nodejs">
 <a href="#needfunctionalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Functional<wbr>Acknowledgement</a>
@@ -8923,8 +7798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needimplementationacknowledgement_nodejs">
 <a href="#needimplementationacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Implementation<wbr>Acknowledgement</a>
@@ -8932,8 +7806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needloopforvalidmessages_nodejs">
 <a href="#needloopforvalidmessages_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
@@ -8941,8 +7814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="needtechnicalacknowledgement_nodejs">
 <a href="#needtechnicalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Technical<wbr>Acknowledgement</a>
@@ -8950,8 +7822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloveracknowledgementcontrolnumber_nodejs">
 <a href="#rolloveracknowledgementcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
@@ -8959,8 +7830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendsynchronousacknowledgement_nodejs">
 <a href="#sendsynchronousacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Synchronous<wbr>Acknowledgement</a>
@@ -8968,8 +7838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumberprefix_nodejs">
 <a href="#acknowledgementcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -8977,8 +7846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgementcontrolnumbersuffix_nodejs">
 <a href="#acknowledgementcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -8986,8 +7854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalacknowledgementversion_nodejs">
 <a href="#functionalacknowledgementversion_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Acknowledgement<wbr>Version</a>
@@ -8995,8 +7862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementationacknowledgementversion_nodejs">
 <a href="#implementationacknowledgementversion_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Acknowledgement<wbr>Version</a>
@@ -9004,14 +7870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgement_control_number_lower_bound_python">
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -9019,8 +7882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acknowledgement_control_number_upper_bound_python">
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -9028,8 +7890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batch_functional_acknowledgements_python">
 <a href="#batch_functional_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>functional_<wbr>acknowledgements</a>
@@ -9037,8 +7898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batch_implementation_acknowledgements_python">
 <a href="#batch_implementation_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>implementation_<wbr>acknowledgements</a>
@@ -9046,8 +7906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="batch_technical_acknowledgements_python">
 <a href="#batch_technical_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>technical_<wbr>acknowledgements</a>
@@ -9055,8 +7914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_functional_acknowledgement_python">
 <a href="#need_functional_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>functional_<wbr>acknowledgement</a>
@@ -9064,8 +7922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_implementation_acknowledgement_python">
 <a href="#need_implementation_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>implementation_<wbr>acknowledgement</a>
@@ -9073,8 +7930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_loop_for_valid_messages_python">
 <a href="#need_loop_for_valid_messages_python" style="color: inherit; text-decoration: inherit;">need_<wbr>loop_<wbr>for_<wbr>valid_<wbr>messages</a>
@@ -9082,8 +7938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="need_technical_acknowledgement_python">
 <a href="#need_technical_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>technical_<wbr>acknowledgement</a>
@@ -9091,8 +7946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_acknowledgement_control_number_python">
 <a href="#rollover_acknowledgement_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>acknowledgement_<wbr>control_<wbr>number</a>
@@ -9100,8 +7954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_synchronous_acknowledgement_python">
 <a href="#send_synchronous_acknowledgement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>synchronous_<wbr>acknowledgement</a>
@@ -9109,8 +7962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgement_control_number_prefix_python">
 <a href="#acknowledgement_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>prefix</a>
@@ -9118,8 +7970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acknowledgement_control_number_suffix_python">
 <a href="#acknowledgement_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>suffix</a>
@@ -9127,8 +7978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functional_acknowledgement_version_python">
 <a href="#functional_acknowledgement_version_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>acknowledgement_<wbr>version</a>
@@ -9136,8 +7986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implementation_acknowledgement_version_python">
 <a href="#implementation_acknowledgement_version_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>acknowledgement_<wbr>version</a>
@@ -9145,8 +7994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response</h4>
@@ -9154,9 +8002,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_csharp">
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
@@ -9164,8 +8010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_csharp">
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
@@ -9173,14 +8018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_go">
 <a href="#receiveagreement_go" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
@@ -9188,8 +8030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_go">
 <a href="#sendagreement_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
@@ -9197,14 +8038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receiveagreement_nodejs">
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
@@ -9212,8 +8050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sendagreement_nodejs">
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
@@ -9221,14 +8058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="receive_agreement_python">
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
@@ -9236,8 +8070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="send_agreement_python">
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
@@ -9245,8 +8078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12delimiteroverridesresponse">X12Delimiter<wbr>Overrides<wbr>Response</h4>
@@ -9254,9 +8086,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentseparator_csharp">
 <a href="#componentseparator_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -9264,8 +8094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_csharp">
 <a href="#dataelementseparator_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -9273,8 +8102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacecharacter_csharp">
 <a href="#replacecharacter_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Character</a>
@@ -9282,8 +8110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replaceseparatorsinpayload_csharp">
 <a href="#replaceseparatorsinpayload_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Separators<wbr>In<wbr>Payload</a>
@@ -9291,8 +8118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_csharp">
 <a href="#segmentterminator_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -9300,8 +8126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_csharp">
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -9309,8 +8134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -9318,8 +8142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_csharp">
 <a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -9327,8 +8150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_csharp">
 <a href="#targetnamespace_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -9336,14 +8158,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentseparator_go">
 <a href="#componentseparator_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -9351,8 +8170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_go">
 <a href="#dataelementseparator_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -9360,8 +8178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacecharacter_go">
 <a href="#replacecharacter_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Character</a>
@@ -9369,8 +8186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replaceseparatorsinpayload_go">
 <a href="#replaceseparatorsinpayload_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Separators<wbr>In<wbr>Payload</a>
@@ -9378,8 +8194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_go">
 <a href="#segmentterminator_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -9387,8 +8202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_go">
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -9396,8 +8210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -9405,8 +8218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_go">
 <a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -9414,8 +8226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_go">
 <a href="#targetnamespace_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -9423,14 +8234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="componentseparator_nodejs">
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
@@ -9438,8 +8246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_nodejs">
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
@@ -9447,8 +8254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacecharacter_nodejs">
 <a href="#replacecharacter_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Character</a>
@@ -9456,8 +8262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replaceseparatorsinpayload_nodejs">
 <a href="#replaceseparatorsinpayload_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Separators<wbr>In<wbr>Payload</a>
@@ -9465,8 +8270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_nodejs">
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
@@ -9474,8 +8278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_nodejs">
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
@@ -9483,8 +8286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -9492,8 +8294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_nodejs">
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
@@ -9501,8 +8302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnamespace_nodejs">
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
@@ -9510,14 +8310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_separator_python">
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
@@ -9525,8 +8322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_element_separator_python">
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
@@ -9534,8 +8330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_character_python">
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
@@ -9543,8 +8338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_separators_in_payload_python">
 <a href="#replace_separators_in_payload_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>separators_<wbr>in_<wbr>payload</a>
@@ -9552,8 +8346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_python">
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
@@ -9561,8 +8354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_suffix_python">
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
@@ -9570,8 +8362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -9579,8 +8370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_version_python">
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
@@ -9588,8 +8378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_namespace_python">
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
@@ -9597,8 +8386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12envelopeoverrideresponse">X12Envelope<wbr>Override<wbr>Response</h4>
@@ -9606,9 +8394,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dateformat_csharp">
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
@@ -9616,8 +8402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headerversion_csharp">
 <a href="#headerversion_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Version</a>
@@ -9625,8 +8410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -9634,8 +8418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolversion_csharp">
 <a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -9643,8 +8426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverapplicationid_csharp">
 <a href="#receiverapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Id</a>
@@ -9652,8 +8434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsibleagencycode_csharp">
 <a href="#responsibleagencycode_csharp" style="color: inherit; text-decoration: inherit;">Responsible<wbr>Agency<wbr>Code</a>
@@ -9661,8 +8442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderapplicationid_csharp">
 <a href="#senderapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -9670,8 +8450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnamespace_csharp">
 <a href="#targetnamespace_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -9679,8 +8458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeformat_csharp">
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
@@ -9688,8 +8466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalidentifiercode_csharp">
 <a href="#functionalidentifiercode_csharp" style="color: inherit; text-decoration: inherit;">Functional<wbr>Identifier<wbr>Code</a>
@@ -9697,14 +8474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dateformat_go">
 <a href="#dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
@@ -9712,8 +8486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headerversion_go">
 <a href="#headerversion_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Version</a>
@@ -9721,8 +8494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -9730,8 +8502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolversion_go">
 <a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -9739,8 +8510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverapplicationid_go">
 <a href="#receiverapplicationid_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Id</a>
@@ -9748,8 +8518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsibleagencycode_go">
 <a href="#responsibleagencycode_go" style="color: inherit; text-decoration: inherit;">Responsible<wbr>Agency<wbr>Code</a>
@@ -9757,8 +8526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderapplicationid_go">
 <a href="#senderapplicationid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -9766,8 +8534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnamespace_go">
 <a href="#targetnamespace_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace</a>
@@ -9775,8 +8542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeformat_go">
 <a href="#timeformat_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
@@ -9784,8 +8550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalidentifiercode_go">
 <a href="#functionalidentifiercode_go" style="color: inherit; text-decoration: inherit;">Functional<wbr>Identifier<wbr>Code</a>
@@ -9793,14 +8558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dateformat_nodejs">
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
@@ -9808,8 +8570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headerversion_nodejs">
 <a href="#headerversion_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Version</a>
@@ -9817,8 +8578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -9826,8 +8586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolversion_nodejs">
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
@@ -9835,8 +8594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverapplicationid_nodejs">
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
@@ -9844,8 +8602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsibleagencycode_nodejs">
 <a href="#responsibleagencycode_nodejs" style="color: inherit; text-decoration: inherit;">responsible<wbr>Agency<wbr>Code</a>
@@ -9853,8 +8610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderapplicationid_nodejs">
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
@@ -9862,8 +8618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnamespace_nodejs">
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
@@ -9871,8 +8626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeformat_nodejs">
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
@@ -9880,8 +8634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalidentifiercode_nodejs">
 <a href="#functionalidentifiercode_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Identifier<wbr>Code</a>
@@ -9889,14 +8642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="date_format_python">
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
@@ -9904,8 +8654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_version_python">
 <a href="#header_version_python" style="color: inherit; text-decoration: inherit;">header_<wbr>version</a>
@@ -9913,8 +8662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -9922,8 +8670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_version_python">
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
@@ -9931,8 +8678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiver_application_id_python">
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
@@ -9940,8 +8686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsible_agency_code_python">
 <a href="#responsible_agency_code_python" style="color: inherit; text-decoration: inherit;">responsible_<wbr>agency_<wbr>code</a>
@@ -9949,8 +8694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sender_application_id_python">
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
@@ -9958,8 +8702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_namespace_python">
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
@@ -9967,8 +8710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_format_python">
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
@@ -9976,8 +8718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time format.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functional_identifier_code_python">
 <a href="#functional_identifier_code_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>identifier_<wbr>code</a>
@@ -9985,8 +8726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</h4>
@@ -9994,9 +8734,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controlstandardsid_csharp">
 <a href="#controlstandardsid_csharp" style="color: inherit; text-decoration: inherit;">Control<wbr>Standards<wbr>Id</a>
@@ -10004,8 +8742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="controlversionnumber_csharp">
 <a href="#controlversionnumber_csharp" style="color: inherit; text-decoration: inherit;">Control<wbr>Version<wbr>Number</a>
@@ -10013,8 +8750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The control version number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledefaultgroupheaders_csharp">
 <a href="#enabledefaultgroupheaders_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Default<wbr>Group<wbr>Headers</a>
@@ -10022,8 +8758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberlowerbound_csharp">
 <a href="#groupcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10031,8 +8766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberupperbound_csharp">
 <a href="#groupcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10040,8 +8774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderagencycode_csharp">
 <a href="#groupheaderagencycode_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Agency<wbr>Code</a>
@@ -10049,8 +8782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderdateformat_csharp">
 <a href="#groupheaderdateformat_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Date<wbr>Format</a>
@@ -10058,8 +8790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheadertimeformat_csharp">
 <a href="#groupheadertimeformat_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Time<wbr>Format</a>
@@ -10067,8 +8798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderversion_csharp">
 <a href="#groupheaderversion_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Version</a>
@@ -10076,8 +8806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberlowerbound_csharp">
 <a href="#interchangecontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10085,8 +8814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberupperbound_csharp">
 <a href="#interchangecontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10094,8 +8822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwriteexistingtransactionsetcontrolnumber_csharp">
 <a href="#overwriteexistingtransactionsetcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -10103,8 +8830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverapplicationid_csharp">
 <a href="#receiverapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Id</a>
@@ -10112,8 +8838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovergroupcontrolnumber_csharp">
 <a href="#rollovergroupcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Group<wbr>Control<wbr>Number</a>
@@ -10121,8 +8846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloverinterchangecontrolnumber_csharp">
 <a href="#rolloverinterchangecontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -10130,8 +8854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovertransactionsetcontrolnumber_csharp">
 <a href="#rollovertransactionsetcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -10139,8 +8862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderapplicationid_csharp">
 <a href="#senderapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -10148,8 +8870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberlowerbound_csharp">
 <a href="#transactionsetcontrolnumberlowerbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10157,8 +8878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberupperbound_csharp">
 <a href="#transactionsetcontrolnumberupperbound_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10166,8 +8886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usageindicator_csharp">
 <a href="#usageindicator_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Indicator</a>
@@ -10175,8 +8894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usecontrolstandardsidasrepetitioncharacter_csharp">
 <a href="#usecontrolstandardsidasrepetitioncharacter_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Control<wbr>Standards<wbr>Id<wbr>As<wbr>Repetition<wbr>Character</a>
@@ -10184,8 +8902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_csharp">
 <a href="#functionalgroupid_csharp" style="color: inherit; text-decoration: inherit;">Functional<wbr>Group<wbr>Id</a>
@@ -10193,8 +8910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumberprefix_csharp">
 <a href="#transactionsetcontrolnumberprefix_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -10202,8 +8918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumbersuffix_csharp">
 <a href="#transactionsetcontrolnumbersuffix_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -10211,14 +8926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controlstandardsid_go">
 <a href="#controlstandardsid_go" style="color: inherit; text-decoration: inherit;">Control<wbr>Standards<wbr>Id</a>
@@ -10226,8 +8938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="controlversionnumber_go">
 <a href="#controlversionnumber_go" style="color: inherit; text-decoration: inherit;">Control<wbr>Version<wbr>Number</a>
@@ -10235,8 +8946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The control version number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledefaultgroupheaders_go">
 <a href="#enabledefaultgroupheaders_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Default<wbr>Group<wbr>Headers</a>
@@ -10244,8 +8954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberlowerbound_go">
 <a href="#groupcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10253,8 +8962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberupperbound_go">
 <a href="#groupcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10262,8 +8970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderagencycode_go">
 <a href="#groupheaderagencycode_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Agency<wbr>Code</a>
@@ -10271,8 +8978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderdateformat_go">
 <a href="#groupheaderdateformat_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Date<wbr>Format</a>
@@ -10280,8 +8986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheadertimeformat_go">
 <a href="#groupheadertimeformat_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Time<wbr>Format</a>
@@ -10289,8 +8994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderversion_go">
 <a href="#groupheaderversion_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Header<wbr>Version</a>
@@ -10298,8 +9002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberlowerbound_go">
 <a href="#interchangecontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10307,8 +9010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberupperbound_go">
 <a href="#interchangecontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10316,8 +9018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwriteexistingtransactionsetcontrolnumber_go">
 <a href="#overwriteexistingtransactionsetcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -10325,8 +9026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverapplicationid_go">
 <a href="#receiverapplicationid_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Application<wbr>Id</a>
@@ -10334,8 +9034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovergroupcontrolnumber_go">
 <a href="#rollovergroupcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Group<wbr>Control<wbr>Number</a>
@@ -10343,8 +9042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloverinterchangecontrolnumber_go">
 <a href="#rolloverinterchangecontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -10352,8 +9050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovertransactionsetcontrolnumber_go">
 <a href="#rollovertransactionsetcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -10361,8 +9058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderapplicationid_go">
 <a href="#senderapplicationid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -10370,8 +9066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberlowerbound_go">
 <a href="#transactionsetcontrolnumberlowerbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10379,8 +9074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberupperbound_go">
 <a href="#transactionsetcontrolnumberupperbound_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10388,8 +9082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usageindicator_go">
 <a href="#usageindicator_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Indicator</a>
@@ -10397,8 +9090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usecontrolstandardsidasrepetitioncharacter_go">
 <a href="#usecontrolstandardsidasrepetitioncharacter_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Control<wbr>Standards<wbr>Id<wbr>As<wbr>Repetition<wbr>Character</a>
@@ -10406,8 +9098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_go">
 <a href="#functionalgroupid_go" style="color: inherit; text-decoration: inherit;">Functional<wbr>Group<wbr>Id</a>
@@ -10415,8 +9106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumberprefix_go">
 <a href="#transactionsetcontrolnumberprefix_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -10424,8 +9114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumbersuffix_go">
 <a href="#transactionsetcontrolnumbersuffix_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -10433,14 +9122,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controlstandardsid_nodejs">
 <a href="#controlstandardsid_nodejs" style="color: inherit; text-decoration: inherit;">control<wbr>Standards<wbr>Id</a>
@@ -10448,8 +9134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="controlversionnumber_nodejs">
 <a href="#controlversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">control<wbr>Version<wbr>Number</a>
@@ -10457,8 +9142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The control version number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledefaultgroupheaders_nodejs">
 <a href="#enabledefaultgroupheaders_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Default<wbr>Group<wbr>Headers</a>
@@ -10466,8 +9150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberlowerbound_nodejs">
 <a href="#groupcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10475,8 +9158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupcontrolnumberupperbound_nodejs">
 <a href="#groupcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10484,8 +9166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderagencycode_nodejs">
 <a href="#groupheaderagencycode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Agency<wbr>Code</a>
@@ -10493,8 +9174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderdateformat_nodejs">
 <a href="#groupheaderdateformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Date<wbr>Format</a>
@@ -10502,8 +9182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheadertimeformat_nodejs">
 <a href="#groupheadertimeformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Time<wbr>Format</a>
@@ -10511,8 +9190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupheaderversion_nodejs">
 <a href="#groupheaderversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Version</a>
@@ -10520,8 +9198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberlowerbound_nodejs">
 <a href="#interchangecontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10529,8 +9206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumberupperbound_nodejs">
 <a href="#interchangecontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10538,8 +9214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwriteexistingtransactionsetcontrolnumber_nodejs">
 <a href="#overwriteexistingtransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -10547,8 +9222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverapplicationid_nodejs">
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
@@ -10556,8 +9230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovergroupcontrolnumber_nodejs">
 <a href="#rollovergroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Group<wbr>Control<wbr>Number</a>
@@ -10565,8 +9238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloverinterchangecontrolnumber_nodejs">
 <a href="#rolloverinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -10574,8 +9246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollovertransactionsetcontrolnumber_nodejs">
 <a href="#rollovertransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -10583,8 +9254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderapplicationid_nodejs">
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
@@ -10592,8 +9262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberlowerbound_nodejs">
 <a href="#transactionsetcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
@@ -10601,8 +9270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transactionsetcontrolnumberupperbound_nodejs">
 <a href="#transactionsetcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
@@ -10610,8 +9278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usageindicator_nodejs">
 <a href="#usageindicator_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Indicator</a>
@@ -10619,8 +9286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usecontrolstandardsidasrepetitioncharacter_nodejs">
 <a href="#usecontrolstandardsidasrepetitioncharacter_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Control<wbr>Standards<wbr>Id<wbr>As<wbr>Repetition<wbr>Character</a>
@@ -10628,8 +9294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionalgroupid_nodejs">
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
@@ -10637,8 +9302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumberprefix_nodejs">
 <a href="#transactionsetcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
@@ -10646,8 +9310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transactionsetcontrolnumbersuffix_nodejs">
 <a href="#transactionsetcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
@@ -10655,14 +9318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="control_standards_id_python">
 <a href="#control_standards_id_python" style="color: inherit; text-decoration: inherit;">control_<wbr>standards_<wbr>id</a>
@@ -10670,8 +9330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="control_version_number_python">
 <a href="#control_version_number_python" style="color: inherit; text-decoration: inherit;">control_<wbr>version_<wbr>number</a>
@@ -10679,8 +9338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The control version number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_default_group_headers_python">
 <a href="#enable_default_group_headers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>default_<wbr>group_<wbr>headers</a>
@@ -10688,8 +9346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_control_number_lower_bound_python">
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -10697,8 +9354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_control_number_upper_bound_python">
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -10706,8 +9362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_header_agency_code_python">
 <a href="#group_header_agency_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>agency_<wbr>code</a>
@@ -10715,8 +9370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_header_date_format_python">
 <a href="#group_header_date_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>date_<wbr>format</a>
@@ -10724,8 +9378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group header date format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_header_time_format_python">
 <a href="#group_header_time_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>time_<wbr>format</a>
@@ -10733,8 +9386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group header time format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_header_version_python">
 <a href="#group_header_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>version</a>
@@ -10742,8 +9394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group header version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_control_number_lower_bound_python">
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -10751,8 +9402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_control_number_upper_bound_python">
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -10760,8 +9410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overwrite_existing_transaction_set_control_number_python">
 <a href="#overwrite_existing_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
@@ -10769,8 +9418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiver_application_id_python">
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
@@ -10778,8 +9426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_group_control_number_python">
 <a href="#rollover_group_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>group_<wbr>control_<wbr>number</a>
@@ -10787,8 +9434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_interchange_control_number_python">
 <a href="#rollover_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>interchange_<wbr>control_<wbr>number</a>
@@ -10796,8 +9442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollover_transaction_set_control_number_python">
 <a href="#rollover_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
@@ -10805,8 +9450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sender_application_id_python">
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
@@ -10814,8 +9458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transaction_set_control_number_lower_bound_python">
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
@@ -10823,8 +9466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transaction_set_control_number_upper_bound_python">
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
@@ -10832,8 +9474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_indicator_python">
 <a href="#usage_indicator_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>indicator</a>
@@ -10841,8 +9482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use_control_standards_id_as_repetition_character_python">
 <a href="#use_control_standards_id_as_repetition_character_python" style="color: inherit; text-decoration: inherit;">use_<wbr>control_<wbr>standards_<wbr>id_<wbr>as_<wbr>repetition_<wbr>character</a>
@@ -10850,8 +9490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functional_group_id_python">
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
@@ -10859,8 +9498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The functional group id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_set_control_number_prefix_python">
 <a href="#transaction_set_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>prefix</a>
@@ -10868,8 +9506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transaction_set_control_number_suffix_python">
 <a href="#transaction_set_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>suffix</a>
@@ -10877,8 +9514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response</h4>
@@ -10886,9 +9522,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="characterset_csharp">
 <a href="#characterset_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
@@ -10896,8 +9530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="componentseparator_csharp">
 <a href="#componentseparator_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -10905,8 +9538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_csharp">
 <a href="#dataelementseparator_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -10914,8 +9546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacecharacter_csharp">
 <a href="#replacecharacter_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Character</a>
@@ -10923,8 +9554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replaceseparatorsinpayload_csharp">
 <a href="#replaceseparatorsinpayload_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Separators<wbr>In<wbr>Payload</a>
@@ -10932,8 +9562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_csharp">
 <a href="#segmentterminator_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -10941,8 +9570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_csharp">
 <a href="#segmentterminatorsuffix_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -10950,14 +9578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="characterset_go">
 <a href="#characterset_go" style="color: inherit; text-decoration: inherit;">Character<wbr>Set</a>
@@ -10965,8 +9590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="componentseparator_go">
 <a href="#componentseparator_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Separator</a>
@@ -10974,8 +9598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_go">
 <a href="#dataelementseparator_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Element<wbr>Separator</a>
@@ -10983,8 +9606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacecharacter_go">
 <a href="#replacecharacter_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Character</a>
@@ -10992,8 +9614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replaceseparatorsinpayload_go">
 <a href="#replaceseparatorsinpayload_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Separators<wbr>In<wbr>Payload</a>
@@ -11001,8 +9622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_go">
 <a href="#segmentterminator_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -11010,8 +9630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_go">
 <a href="#segmentterminatorsuffix_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator<wbr>Suffix</a>
@@ -11019,14 +9638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="characterset_nodejs">
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
@@ -11034,8 +9650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="componentseparator_nodejs">
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
@@ -11043,8 +9658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataelementseparator_nodejs">
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
@@ -11052,8 +9666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replacecharacter_nodejs">
 <a href="#replacecharacter_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Character</a>
@@ -11061,8 +9674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replaceseparatorsinpayload_nodejs">
 <a href="#replaceseparatorsinpayload_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Separators<wbr>In<wbr>Payload</a>
@@ -11070,8 +9682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminator_nodejs">
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
@@ -11079,8 +9690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentterminatorsuffix_nodejs">
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
@@ -11088,14 +9698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="character_set_python">
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
@@ -11103,8 +9710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="component_separator_python">
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
@@ -11112,8 +9718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The component separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_element_separator_python">
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
@@ -11121,8 +9726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The data element separator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_character_python">
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
@@ -11130,8 +9734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The replacement character.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_separators_in_payload_python">
 <a href="#replace_separators_in_payload_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>separators_<wbr>in_<wbr>payload</a>
@@ -11139,8 +9742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_python">
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
@@ -11148,8 +9750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segment_terminator_suffix_python">
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
@@ -11157,8 +9758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response</h4>
@@ -11166,9 +9766,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messagefiltertype_csharp">
 <a href="#messagefiltertype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
@@ -11176,14 +9774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messagefiltertype_go">
 <a href="#messagefiltertype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>Type</a>
@@ -11191,14 +9786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messagefiltertype_nodejs">
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
@@ -11206,14 +9798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_filter_type_python">
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
@@ -11221,8 +9810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message filter type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12messageidentifierresponse">X12Message<wbr>Identifier<wbr>Response</h4>
@@ -11230,9 +9818,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -11240,14 +9826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -11255,14 +9838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -11270,14 +9850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -11285,8 +9862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</h4>
@@ -11294,9 +9870,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_csharp">
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -11304,8 +9878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_csharp">
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
@@ -11313,8 +9886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_csharp">
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
@@ -11322,14 +9894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_go">
 <a href="#protocolsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
@@ -11337,8 +9906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_go">
 <a href="#receiverbusinessidentity_go" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
@@ -11346,8 +9914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_go">
 <a href="#senderbusinessidentity_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
@@ -11355,14 +9922,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocolsettings_nodejs">
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
@@ -11370,8 +9934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiverbusinessidentity_nodejs">
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
@@ -11379,8 +9942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="senderbusinessidentity_nodejs">
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
@@ -11388,14 +9950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_settings_python">
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
@@ -11403,8 +9962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="receiver_business_identity_python">
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
@@ -11412,8 +9970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sender_business_identity_python">
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
@@ -11421,8 +9978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sender business identity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</h4>
@@ -11430,9 +9986,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="convertimplieddecimal_csharp">
 <a href="#convertimplieddecimal_csharp" style="color: inherit; text-decoration: inherit;">Convert<wbr>Implied<wbr>Decimal</a>
@@ -11440,8 +9994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createemptyxmltagsfortrailingseparators_csharp">
 <a href="#createemptyxmltagsfortrailingseparators_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
@@ -11449,8 +10002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masksecurityinfo_csharp">
 <a href="#masksecurityinfo_csharp" style="color: inherit; text-decoration: inherit;">Mask<wbr>Security<wbr>Info</a>
@@ -11458,8 +10010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserveinterchange_csharp">
 <a href="#preserveinterchange_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Interchange</a>
@@ -11467,8 +10018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendinterchangeonerror_csharp">
 <a href="#suspendinterchangeonerror_csharp" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Interchange<wbr>On<wbr>Error</a>
@@ -11476,8 +10026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedotasdecimalseparator_csharp">
 <a href="#usedotasdecimalseparator_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
@@ -11485,14 +10034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="convertimplieddecimal_go">
 <a href="#convertimplieddecimal_go" style="color: inherit; text-decoration: inherit;">Convert<wbr>Implied<wbr>Decimal</a>
@@ -11500,8 +10046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createemptyxmltagsfortrailingseparators_go">
 <a href="#createemptyxmltagsfortrailingseparators_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
@@ -11509,8 +10054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masksecurityinfo_go">
 <a href="#masksecurityinfo_go" style="color: inherit; text-decoration: inherit;">Mask<wbr>Security<wbr>Info</a>
@@ -11518,8 +10062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserveinterchange_go">
 <a href="#preserveinterchange_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Interchange</a>
@@ -11527,8 +10070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendinterchangeonerror_go">
 <a href="#suspendinterchangeonerror_go" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Interchange<wbr>On<wbr>Error</a>
@@ -11536,8 +10078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedotasdecimalseparator_go">
 <a href="#usedotasdecimalseparator_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
@@ -11545,14 +10086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="convertimplieddecimal_nodejs">
 <a href="#convertimplieddecimal_nodejs" style="color: inherit; text-decoration: inherit;">convert<wbr>Implied<wbr>Decimal</a>
@@ -11560,8 +10098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createemptyxmltagsfortrailingseparators_nodejs">
 <a href="#createemptyxmltagsfortrailingseparators_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
@@ -11569,8 +10106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masksecurityinfo_nodejs">
 <a href="#masksecurityinfo_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Security<wbr>Info</a>
@@ -11578,8 +10114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserveinterchange_nodejs">
 <a href="#preserveinterchange_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Interchange</a>
@@ -11587,8 +10122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendinterchangeonerror_nodejs">
 <a href="#suspendinterchangeonerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Interchange<wbr>On<wbr>Error</a>
@@ -11596,8 +10130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedotasdecimalseparator_nodejs">
 <a href="#usedotasdecimalseparator_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
@@ -11605,14 +10138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="convert_implied_decimal_python">
 <a href="#convert_implied_decimal_python" style="color: inherit; text-decoration: inherit;">convert_<wbr>implied_<wbr>decimal</a>
@@ -11620,8 +10150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="create_empty_xml_tags_for_trailing_separators_python">
 <a href="#create_empty_xml_tags_for_trailing_separators_python" style="color: inherit; text-decoration: inherit;">create_<wbr>empty_<wbr>xml_<wbr>tags_<wbr>for_<wbr>trailing_<wbr>separators</a>
@@ -11629,8 +10158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mask_security_info_python">
 <a href="#mask_security_info_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>security_<wbr>info</a>
@@ -11638,8 +10166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preserve_interchange_python">
 <a href="#preserve_interchange_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>interchange</a>
@@ -11647,8 +10174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspend_interchange_on_error_python">
 <a href="#suspend_interchange_on_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>interchange_<wbr>on_<wbr>error</a>
@@ -11656,8 +10182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use_dot_as_decimal_separator_python">
 <a href="#use_dot_as_decimal_separator_python" style="color: inherit; text-decoration: inherit;">use_<wbr>dot_<wbr>as_<wbr>decimal_<wbr>separator</a>
@@ -11665,8 +10190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</h4>
@@ -11674,9 +10198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementsettings_csharp">
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
@@ -11684,8 +10206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_csharp">
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
@@ -11693,8 +10214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framingsettings_csharp">
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
@@ -11702,8 +10222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagefilter_csharp">
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
@@ -11711,8 +10230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processingsettings_csharp">
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
@@ -11720,8 +10238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemareferences_csharp">
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
@@ -11729,8 +10246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitysettings_csharp">
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
@@ -11738,8 +10254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_csharp">
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
@@ -11747,8 +10262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopeoverrides_csharp">
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
@@ -11756,8 +10270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagefilterlist_csharp">
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
@@ -11765,8 +10278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationoverrides_csharp">
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
@@ -11774,8 +10286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12delimiteroverrides_csharp">
 <a href="#x12delimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">X12Delimiter<wbr>Overrides</a>
@@ -11783,14 +10294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementsettings_go">
 <a href="#acknowledgementsettings_go" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
@@ -11798,8 +10306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_go">
 <a href="#envelopesettings_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
@@ -11807,8 +10314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framingsettings_go">
 <a href="#framingsettings_go" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
@@ -11816,8 +10322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagefilter_go">
 <a href="#messagefilter_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
@@ -11825,8 +10330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processingsettings_go">
 <a href="#processingsettings_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
@@ -11834,8 +10338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemareferences_go">
 <a href="#schemareferences_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
@@ -11843,8 +10346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12schemareferenceresponse">[]X12Schema<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitysettings_go">
 <a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
@@ -11852,8 +10354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_go">
 <a href="#validationsettings_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
@@ -11861,8 +10362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopeoverrides_go">
 <a href="#envelopeoverrides_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
@@ -11870,8 +10370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopeoverrideresponse">[]X12Envelope<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagefilterlist_go">
 <a href="#messagefilterlist_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
@@ -11879,8 +10378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messageidentifierresponse">[]X12Message<wbr>Identifier<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationoverrides_go">
 <a href="#validationoverrides_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
@@ -11888,8 +10386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationoverrideresponse">[]X12Validation<wbr>Override<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12delimiteroverrides_go">
 <a href="#x12delimiteroverrides_go" style="color: inherit; text-decoration: inherit;">X12Delimiter<wbr>Overrides</a>
@@ -11897,14 +10394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12delimiteroverridesresponse">[]X12Delimiter<wbr>Overrides<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgementsettings_nodejs">
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
@@ -11912,8 +10406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelopesettings_nodejs">
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
@@ -11921,8 +10414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framingsettings_nodejs">
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
@@ -11930,8 +10422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagefilter_nodejs">
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
@@ -11939,8 +10430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processingsettings_nodejs">
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
@@ -11948,8 +10438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemareferences_nodejs">
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
@@ -11957,8 +10446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12schemareferenceresponse">X12Schema<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitysettings_nodejs">
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
@@ -11966,8 +10454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validationsettings_nodejs">
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
@@ -11975,8 +10462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelopeoverrides_nodejs">
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
@@ -11984,8 +10470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopeoverrideresponse">X12Envelope<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagefilterlist_nodejs">
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
@@ -11993,8 +10478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messageidentifierresponse">X12Message<wbr>Identifier<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationoverrides_nodejs">
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
@@ -12002,8 +10486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationoverrideresponse">X12Validation<wbr>Override<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12delimiteroverrides_nodejs">
 <a href="#x12delimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">x12Delimiter<wbr>Overrides</a>
@@ -12011,14 +10494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12delimiteroverridesresponse">X12Delimiter<wbr>Overrides<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgement_settings_python">
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
@@ -12026,8 +10506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envelope_settings_python">
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
@@ -12035,8 +10514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="framing_settings_python">
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
@@ -12044,8 +10522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_filter_python">
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
@@ -12053,8 +10530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="processing_settings_python">
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
@@ -12062,8 +10538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_references_python">
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
@@ -12071,8 +10546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12schemareferenceresponse">Sequence[X12Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_settings_python">
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
@@ -12080,8 +10554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validation_settings_python">
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
@@ -12089,8 +10562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envelope_overrides_python">
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
@@ -12098,8 +10570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12envelopeoverrideresponse">Sequence[X12Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_filter_list_python">
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
@@ -12107,8 +10578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12messageidentifierresponse">Sequence[X12Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validation_overrides_python">
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
@@ -12116,8 +10586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12validationoverrideresponse">Sequence[X12Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x12_delimiter_overrides_python">
 <a href="#x12_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">x12_<wbr>delimiter_<wbr>overrides</a>
@@ -12125,8 +10594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x12delimiteroverridesresponse">Sequence[X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12schemareferenceresponse">X12Schema<wbr>Reference<wbr>Response</h4>
@@ -12134,9 +10602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -12144,8 +10610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_csharp">
 <a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -12153,8 +10618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaversion_csharp">
 <a href="#schemaversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version</a>
@@ -12162,8 +10626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_csharp">
 <a href="#senderapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -12171,14 +10634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -12186,8 +10646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_go">
 <a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -12195,8 +10654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaversion_go">
 <a href="#schemaversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version</a>
@@ -12204,8 +10662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_go">
 <a href="#senderapplicationid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Application<wbr>Id</a>
@@ -12213,14 +10670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -12228,8 +10682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_nodejs">
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
@@ -12237,8 +10690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaversion_nodejs">
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
@@ -12246,8 +10698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderapplicationid_nodejs">
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
@@ -12255,14 +10706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -12270,8 +10718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_name_python">
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
@@ -12279,8 +10726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_version_python">
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
@@ -12288,8 +10734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_application_id_python">
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
@@ -12297,8 +10742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sender application id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response</h4>
@@ -12306,9 +10750,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationqualifier_csharp">
 <a href="#authorizationqualifier_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Qualifier</a>
@@ -12316,8 +10758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securityqualifier_csharp">
 <a href="#securityqualifier_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Qualifier</a>
@@ -12325,8 +10766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationvalue_csharp">
 <a href="#authorizationvalue_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Value</a>
@@ -12334,8 +10774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordvalue_csharp">
 <a href="#passwordvalue_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Value</a>
@@ -12343,14 +10782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationqualifier_go">
 <a href="#authorizationqualifier_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Qualifier</a>
@@ -12358,8 +10794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securityqualifier_go">
 <a href="#securityqualifier_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Qualifier</a>
@@ -12367,8 +10802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationvalue_go">
 <a href="#authorizationvalue_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Value</a>
@@ -12376,8 +10810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordvalue_go">
 <a href="#passwordvalue_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Value</a>
@@ -12385,14 +10818,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationqualifier_nodejs">
 <a href="#authorizationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Qualifier</a>
@@ -12400,8 +10830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securityqualifier_nodejs">
 <a href="#securityqualifier_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Qualifier</a>
@@ -12409,8 +10838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationvalue_nodejs">
 <a href="#authorizationvalue_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Value</a>
@@ -12418,8 +10846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordvalue_nodejs">
 <a href="#passwordvalue_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Value</a>
@@ -12427,14 +10854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_qualifier_python">
 <a href="#authorization_qualifier_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>qualifier</a>
@@ -12442,8 +10866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_qualifier_python">
 <a href="#security_qualifier_python" style="color: inherit; text-decoration: inherit;">security_<wbr>qualifier</a>
@@ -12451,8 +10874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_value_python">
 <a href="#authorization_value_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>value</a>
@@ -12460,8 +10882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_value_python">
 <a href="#password_value_python" style="color: inherit; text-decoration: inherit;">password_<wbr>value</a>
@@ -12469,8 +10890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12validationoverrideresponse">X12Validation<wbr>Override<wbr>Response</h4>
@@ -12478,9 +10898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_csharp">
 <a href="#allowleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12488,8 +10906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_csharp">
 <a href="#messageid_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -12497,8 +10914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_csharp">
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -12506,8 +10922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_csharp">
 <a href="#trimleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12515,8 +10930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_csharp">
 <a href="#validatecharacterset_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Character<wbr>Set</a>
@@ -12524,8 +10938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_csharp">
 <a href="#validateeditypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -12533,8 +10946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_csharp">
 <a href="#validatexsdtypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -12542,14 +10954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_go">
 <a href="#allowleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12557,8 +10966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_go">
 <a href="#messageid_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Id</a>
@@ -12566,8 +10974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_go">
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -12575,8 +10982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_go">
 <a href="#trimleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12584,8 +10990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_go">
 <a href="#validatecharacterset_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Character<wbr>Set</a>
@@ -12593,8 +10998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_go">
 <a href="#validateeditypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -12602,8 +11006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_go">
 <a href="#validatexsdtypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -12611,14 +11014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_nodejs">
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12626,8 +11026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messageid_nodejs">
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
@@ -12635,8 +11034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_nodejs">
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
@@ -12644,8 +11042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_nodejs">
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12653,8 +11050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_nodejs">
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
@@ -12662,8 +11058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_nodejs">
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
@@ -12671,8 +11066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_nodejs">
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
@@ -12680,14 +11074,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allow_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -12695,8 +11086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_id_python">
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
@@ -12704,8 +11094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailing_separator_policy_python">
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
@@ -12713,8 +11102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trim_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -12722,8 +11110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_character_set_python">
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
@@ -12731,8 +11118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_edi_types_python">
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
@@ -12740,8 +11126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_xsd_types_python">
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
@@ -12749,8 +11134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</h4>
@@ -12758,9 +11142,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_csharp">
 <a href="#allowleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12768,8 +11150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicategroupcontrolnumber_csharp">
 <a href="#checkduplicategroupcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
@@ -12777,8 +11158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicateinterchangecontrolnumber_csharp">
 <a href="#checkduplicateinterchangecontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -12786,8 +11166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatetransactionsetcontrolnumber_csharp">
 <a href="#checkduplicatetransactionsetcontrolnumber_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -12795,8 +11174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumbervaliditydays_csharp">
 <a href="#interchangecontrolnumbervaliditydays_csharp" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
@@ -12804,8 +11182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_csharp">
 <a href="#trailingseparatorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -12813,8 +11190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_csharp">
 <a href="#trimleadingandtrailingspacesandzeroes_csharp" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12822,8 +11198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_csharp">
 <a href="#validatecharacterset_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Character<wbr>Set</a>
@@ -12831,8 +11206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_csharp">
 <a href="#validateeditypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -12840,8 +11214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_csharp">
 <a href="#validatexsdtypes_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -12849,14 +11222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_go">
 <a href="#allowleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12864,8 +11234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicategroupcontrolnumber_go">
 <a href="#checkduplicategroupcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
@@ -12873,8 +11242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicateinterchangecontrolnumber_go">
 <a href="#checkduplicateinterchangecontrolnumber_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -12882,8 +11250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatetransactionsetcontrolnumber_go">
 <a href="#checkduplicatetransactionsetcontrolnumber_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -12891,8 +11258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumbervaliditydays_go">
 <a href="#interchangecontrolnumbervaliditydays_go" style="color: inherit; text-decoration: inherit;">Interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
@@ -12900,8 +11266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_go">
 <a href="#trailingseparatorpolicy_go" style="color: inherit; text-decoration: inherit;">Trailing<wbr>Separator<wbr>Policy</a>
@@ -12909,8 +11274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_go">
 <a href="#trimleadingandtrailingspacesandzeroes_go" style="color: inherit; text-decoration: inherit;">Trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12918,8 +11282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_go">
 <a href="#validatecharacterset_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Character<wbr>Set</a>
@@ -12927,8 +11290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_go">
 <a href="#validateeditypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>EDITypes</a>
@@ -12936,8 +11298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_go">
 <a href="#validatexsdtypes_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>XSDTypes</a>
@@ -12945,14 +11306,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowleadingandtrailingspacesandzeroes_nodejs">
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -12960,8 +11318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicategroupcontrolnumber_nodejs">
 <a href="#checkduplicategroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
@@ -12969,8 +11326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicateinterchangecontrolnumber_nodejs">
 <a href="#checkduplicateinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
@@ -12978,8 +11334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="checkduplicatetransactionsetcontrolnumber_nodejs">
 <a href="#checkduplicatetransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
@@ -12987,8 +11342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchangecontrolnumbervaliditydays_nodejs">
 <a href="#interchangecontrolnumbervaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
@@ -12996,8 +11350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailingseparatorpolicy_nodejs">
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
@@ -13005,8 +11358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trimleadingandtrailingspacesandzeroes_nodejs">
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
@@ -13014,8 +11366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatecharacterset_nodejs">
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
@@ -13023,8 +11374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validateeditypes_nodejs">
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
@@ -13032,8 +11382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validatexsdtypes_nodejs">
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
@@ -13041,14 +11390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allow_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -13056,8 +11402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_group_control_number_python">
 <a href="#check_duplicate_group_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>group_<wbr>control_<wbr>number</a>
@@ -13065,8 +11410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_interchange_control_number_python">
 <a href="#check_duplicate_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>interchange_<wbr>control_<wbr>number</a>
@@ -13074,8 +11418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="check_duplicate_transaction_set_control_number_python">
 <a href="#check_duplicate_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
@@ -13083,8 +11426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interchange_control_number_validity_days_python">
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
@@ -13092,8 +11434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trailing_separator_policy_python">
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
@@ -13101,8 +11442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trim_leading_and_trailing_spaces_and_zeroes_python">
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
@@ -13110,8 +11450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_character_set_python">
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
@@ -13119,8 +11458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_edi_types_python">
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
@@ -13128,8 +11466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validate_xsd_types_python">
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
@@ -13137,8 +11474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

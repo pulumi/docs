@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peeringname_csharp">
 <a href="#peeringname_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peeringname_go">
 <a href="#peeringname_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peeringname_nodejs">
 <a href="#peeringname_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peering_name_python">
 <a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the workspace vNet peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringstate_csharp">
 <a href="#peeringstate_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remotevirtualnetwork_csharp">
 <a href="#remotevirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowforwardedtraffic_csharp">
 <a href="#allowforwardedtraffic_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowgatewaytransit_csharp">
 <a href="#allowgatewaytransit_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowvirtualnetworkaccess_csharp">
 <a href="#allowvirtualnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricksaddressspace_csharp">
 <a href="#databricksaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Address<wbr>Space</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricksvirtualnetwork_csharp">
 <a href="#databricksvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Virtual<wbr>Network</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remoteaddressspace_csharp">
 <a href="#remoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useremotegateways_csharp">
 <a href="#useremotegateways_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringstate_go">
 <a href="#peeringstate_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>State</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remotevirtualnetwork_go">
 <a href="#remotevirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowforwardedtraffic_go">
 <a href="#allowforwardedtraffic_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Forwarded<wbr>Traffic</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowgatewaytransit_go">
 <a href="#allowgatewaytransit_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Gateway<wbr>Transit</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowvirtualnetworkaccess_go">
 <a href="#allowvirtualnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricksaddressspace_go">
 <a href="#databricksaddressspace_go" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Address<wbr>Space</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricksvirtualnetwork_go">
 <a href="#databricksvirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Virtual<wbr>Network</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remoteaddressspace_go">
 <a href="#remoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useremotegateways_go">
 <a href="#useremotegateways_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Remote<wbr>Gateways</a>
@@ -433,14 +384,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringstate_nodejs">
 <a href="#peeringstate_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>State</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remotevirtualnetwork_nodejs">
 <a href="#remotevirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowforwardedtraffic_nodejs">
 <a href="#allowforwardedtraffic_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forwarded<wbr>Traffic</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowgatewaytransit_nodejs">
 <a href="#allowgatewaytransit_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Gateway<wbr>Transit</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowvirtualnetworkaccess_nodejs">
 <a href="#allowvirtualnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Virtual<wbr>Network<wbr>Access</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricksaddressspace_nodejs">
 <a href="#databricksaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">databricks<wbr>Address<wbr>Space</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricksvirtualnetwork_nodejs">
 <a href="#databricksvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">databricks<wbr>Virtual<wbr>Network</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remoteaddressspace_nodejs">
 <a href="#remoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Space</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useremotegateways_nodejs">
 <a href="#useremotegateways_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Remote<wbr>Gateways</a>
@@ -556,14 +492,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_state_python">
 <a href="#peering_state_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>state</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the virtual network peering.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the virtual network peering resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remote_virtual_network_python">
 <a href="#remote_virtual_network_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}type of the virtual network peering resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allow_forwarded_traffic_python">
 <a href="#allow_forwarded_traffic_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forwarded_<wbr>traffic</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allow_gateway_transit_python">
 <a href="#allow_gateway_transit_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>gateway_<wbr>transit</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If gateway links can be used in remote virtual networking to link to this virtual network.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allow_virtual_network_access_python">
 <a href="#allow_virtual_network_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>virtual_<wbr>network_<wbr>access</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricks_address_space_python">
 <a href="#databricks_address_space_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>address_<wbr>space</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databricks_virtual_network_python">
 <a href="#databricks_virtual_network_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>virtual_<wbr>network</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remote_address_space_python">
 <a href="#remote_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>space</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_remote_gateways_python">
 <a href="#use_remote_gateways_python" style="color: inherit; text-decoration: inherit;">use_<wbr>remote_<wbr>gateways</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -704,14 +622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
@@ -719,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
@@ -734,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkpeeringpropertiesformatresponsedatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Databricks<wbr>Virtual<wbr>Network</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -768,14 +674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -783,14 +686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -798,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -813,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the databricks virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkpeeringpropertiesformatresponseremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Response<wbr>Remote<wbr>Virtual<wbr>Network</h4>
@@ -822,9 +718,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -832,14 +726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -847,14 +738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -862,14 +750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -877,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

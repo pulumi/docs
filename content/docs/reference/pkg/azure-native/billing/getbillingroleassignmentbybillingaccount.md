@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_csharp">
 <a href="#billingaccountname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingroleassignmentname_csharp">
 <a href="#billingroleassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Role<wbr>Assignment<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_go">
 <a href="#billingaccountname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingroleassignmentname_go">
 <a href="#billingroleassignmentname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Role<wbr>Assignment<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_nodejs">
 <a href="#billingaccountname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingroleassignmentname_nodejs">
 <a href="#billingroleassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Role<wbr>Assignment<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_account_name_python">
 <a href="#billing_account_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_role_assignment_name_python">
 <a href="#billing_role_assignment_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>role_<wbr>assignment_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a role assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdbyprincipalid_csharp">
 <a href="#createdbyprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Principal<wbr>Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyprincipaltenantid_csharp">
 <a href="#createdbyprincipaltenantid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Principal<wbr>Tenant<wbr>Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyuseremailaddress_csharp">
 <a href="#createdbyuseremailaddress_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Email<wbr>Address</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltenantid_csharp">
 <a href="#principaltenantid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Tenant<wbr>Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_csharp">
 <a href="#roledefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userauthenticationtype_csharp">
 <a href="#userauthenticationtype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Authentication<wbr>Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useremailaddress_csharp">
 <a href="#useremailaddress_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email<wbr>Address</a>
@@ -274,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdbyprincipalid_go">
 <a href="#createdbyprincipalid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Principal<wbr>Id</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyprincipaltenantid_go">
 <a href="#createdbyprincipaltenantid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Principal<wbr>Tenant<wbr>Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyuseremailaddress_go">
 <a href="#createdbyuseremailaddress_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Email<wbr>Address</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltenantid_go">
 <a href="#principaltenantid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Tenant<wbr>Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_go">
 <a href="#roledefinitionid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition<wbr>Id</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userauthenticationtype_go">
 <a href="#userauthenticationtype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Authentication<wbr>Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useremailaddress_go">
 <a href="#useremailaddress_go" style="color: inherit; text-decoration: inherit;">User<wbr>Email<wbr>Address</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdbyprincipalid_nodejs">
 <a href="#createdbyprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Principal<wbr>Id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyprincipaltenantid_nodejs">
 <a href="#createdbyprincipaltenantid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Principal<wbr>Tenant<wbr>Id</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyuseremailaddress_nodejs">
 <a href="#createdbyuseremailaddress_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User<wbr>Email<wbr>Address</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principaltenantid_nodejs">
 <a href="#principaltenantid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Tenant<wbr>Id</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roledefinitionid_nodejs">
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userauthenticationtype_nodejs">
 <a href="#userauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Authentication<wbr>Type</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useremailaddress_nodejs">
 <a href="#useremailaddress_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email<wbr>Address</a>
@@ -520,14 +460,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_by_principal_id_python">
 <a href="#created_by_principal_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>principal_<wbr>id</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_principal_tenant_id_python">
 <a href="#created_by_principal_tenant_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>principal_<wbr>tenant_<wbr>id</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tenant Id of the user who created the role assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_user_email_address_python">
 <a href="#created_by_user_email_address_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user_<wbr>email_<wbr>address</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date the role assignment was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The scope at which the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_tenant_id_python">
 <a href="#principal_tenant_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>tenant_<wbr>id</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principal tenant id of the user to whom the role was assigned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_definition_id_python">
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_authentication_type_python">
 <a href="#user_authentication_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>authentication_<wbr>type</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_email_address_python">
 <a href="#user_email_address_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email_<wbr>address</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

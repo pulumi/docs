@@ -14,11 +14,17 @@ An attestation resource.
 API Version: 2021-01-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create attestation at subscription scope
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -39,9 +45,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -67,9 +76,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -82,9 +94,12 @@ attestation_at_subscription = azure_native.policyinsights.AttestationAtSubscript
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,10 +113,17 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create attestation at subscription scope with all properties
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -134,9 +156,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -172,9 +197,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -195,9 +223,12 @@ attestation_at_subscription = azure_native.policyinsights.AttestationAtSubscript
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -219,9 +250,16 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AttestationAtSubscription Resource {#create}
@@ -246,9 +284,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -256,9 +292,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -266,9 +300,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -276,10 +308,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -305,9 +334,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -315,9 +342,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -325,9 +350,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -335,9 +358,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -345,18 +366,13 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -364,9 +380,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -374,9 +388,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -384,10 +396,7 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -402,9 +411,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyassignmentid_csharp">
 <a href="#policyassignmentid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Id</a>
@@ -412,8 +419,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationname_csharp">
 <a href="#attestationname_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Name</a>
@@ -421,8 +427,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_csharp">
 <a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -430,8 +435,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliancestate_csharp">
 <a href="#compliancestate_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>State</a>
@@ -439,8 +443,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#compliancestate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Compliance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evidence_csharp">
 <a href="#evidence_csharp" style="color: inherit; text-decoration: inherit;">Evidence</a>
@@ -448,8 +451,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationevidence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Inputs.<wbr>Attestation<wbr>Evidence<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expireson_csharp">
 <a href="#expireson_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>On</a>
@@ -457,8 +459,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -466,8 +467,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_csharp">
 <a href="#policydefinitionreferenceid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -475,14 +475,11 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyassignmentid_go">
 <a href="#policyassignmentid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Assignment<wbr>Id</a>
@@ -490,8 +487,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationname_go">
 <a href="#attestationname_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Name</a>
@@ -499,8 +495,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_go">
 <a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
@@ -508,8 +503,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliancestate_go">
 <a href="#compliancestate_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>State</a>
@@ -517,8 +511,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#compliancestate">Compliance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evidence_go">
 <a href="#evidence_go" style="color: inherit; text-decoration: inherit;">Evidence</a>
@@ -526,8 +519,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationevidence">[]Attestation<wbr>Evidence</a></span>
     </dt>
-    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expireson_go">
 <a href="#expireson_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>On</a>
@@ -535,8 +527,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -544,8 +535,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_go">
 <a href="#policydefinitionreferenceid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -553,14 +543,11 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyassignmentid_nodejs">
 <a href="#policyassignmentid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Assignment<wbr>Id</a>
@@ -568,8 +555,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestationname_nodejs">
 <a href="#attestationname_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Name</a>
@@ -577,8 +563,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_nodejs">
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -586,8 +571,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliancestate_nodejs">
 <a href="#compliancestate_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>State</a>
@@ -595,8 +579,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#compliancestate">Compliance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evidence_nodejs">
 <a href="#evidence_nodejs" style="color: inherit; text-decoration: inherit;">evidence</a>
@@ -604,8 +587,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationevidence">Attestation<wbr>Evidence[]</a></span>
     </dt>
-    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expireson_nodejs">
 <a href="#expireson_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>On</a>
@@ -613,8 +595,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -622,8 +603,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferenceid_nodejs">
 <a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
@@ -631,14 +611,11 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_assignment_id_python">
 <a href="#policy_assignment_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>assignment_<wbr>id</a>
@@ -646,8 +623,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attestation_name_python">
 <a href="#attestation_name_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>name</a>
@@ -655,8 +631,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comments_python">
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
@@ -664,8 +639,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliance_state_python">
 <a href="#compliance_state_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>state</a>
@@ -673,8 +647,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#compliancestate">Compliance<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evidence_python">
 <a href="#evidence_python" style="color: inherit; text-decoration: inherit;">evidence</a>
@@ -682,8 +655,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationevidence">Sequence[Attestation<wbr>Evidence<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_on_python">
 <a href="#expires_on_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>on</a>
@@ -691,8 +663,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -700,8 +671,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_definition_reference_id_python">
 <a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
@@ -709,8 +679,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -721,9 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -731,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastcompliancestatechangeat_csharp">
 <a href="#lastcompliancestatechangeat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Compliance<wbr>State<wbr>Change<wbr>At</a>
@@ -740,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -749,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -758,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -767,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Policy<wbr>Insights.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -776,14 +738,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -791,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastcompliancestatechangeat_go">
 <a href="#lastcompliancestatechangeat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Compliance<wbr>State<wbr>Change<wbr>At</a>
@@ -800,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -809,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -818,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -827,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -836,14 +790,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -851,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastcompliancestatechangeat_nodejs">
 <a href="#lastcompliancestatechangeat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Compliance<wbr>State<wbr>Change<wbr>At</a>
@@ -860,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -869,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -878,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -887,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -896,14 +842,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_compliance_state_change_at_python">
 <a href="#last_compliance_state_change_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>compliance_<wbr>state_<wbr>change_<wbr>at</a>
@@ -920,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the compliance state was last changed in this attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -929,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -938,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the attestation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -947,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -956,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -973,9 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="attestationevidence">Attestation<wbr>Evidence</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -983,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -992,14 +926,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1007,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1016,14 +946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1031,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
@@ -1040,14 +966,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1055,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
@@ -1064,16 +986,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="attestationevidenceresponse">Attestation<wbr>Evidence<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1081,8 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1090,14 +1008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1105,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1114,14 +1028,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1129,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
@@ -1138,14 +1048,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1153,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
@@ -1162,62 +1068,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="compliancestate">Compliance<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Compliant</dt>
-    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd>
-    <dt>Non<wbr>Compliant</dt>
-    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Compliant</dt>
+    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd><dt>Non<wbr>Compliant</dt>
+    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Compliance<wbr>State<wbr>Compliant</dt>
-    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd>
-    <dt>Compliance<wbr>State<wbr>Non<wbr>Compliant</dt>
-    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd>
-    <dt>Compliance<wbr>State<wbr>Unknown</dt>
-    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Compliance<wbr>State<wbr>Compliant</dt>
+    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd><dt>Compliance<wbr>State<wbr>Non<wbr>Compliant</dt>
+    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd><dt>Compliance<wbr>State<wbr>Unknown</dt>
+    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Compliant</dt>
-    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd>
-    <dt>Non<wbr>Compliant</dt>
-    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Compliant</dt>
+    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd><dt>Non<wbr>Compliant</dt>
+    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd><dt>Unknown</dt>
+    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>COMPLIANT</dt>
-    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd>
-    <dt>NON_COMPLIANT</dt>
-    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd>
-    <dt>UNKNOWN</dt>
-    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>COMPLIANT</dt>
+    <dd>Compliant{{% md %}}The resource is in compliance with the policy.{{% /md %}}</dd><dt>NON_COMPLIANT</dt>
+    <dd>NonCompliant{{% md %}}The resource is not in compliance with the policy.{{% /md %}}</dd><dt>UNKNOWN</dt>
+    <dd>Unknown{{% md %}}The compliance state of the resource is not known.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1225,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1234,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1243,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1252,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1261,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1270,14 +1152,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1285,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1294,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1303,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1312,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1321,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1330,14 +1204,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1345,8 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1354,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1363,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1372,8 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1381,8 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1390,14 +1256,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1405,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1414,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1423,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1432,8 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1441,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -1450,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

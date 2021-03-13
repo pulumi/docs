@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_csharp">
 <a href="#datastorename_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudname_csharp">
 <a href="#privatecloudname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_go">
 <a href="#datastorename_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudname_go">
 <a href="#privatecloudname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_nodejs">
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatecloudname_nodejs">
 <a href="#privatecloudname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the cluster in the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastore_name_python">
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the datastore in the private cloud cluster{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_cloud_name_python">
 <a href="#private_cloud_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskpoolvolume_csharp">
 <a href="#diskpoolvolume_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Pool<wbr>Volume</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskpoolvolumeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Disk<wbr>Pool<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netappvolume_csharp">
 <a href="#netappvolume_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>App<wbr>Volume</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#netappvolumeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>AVS.<wbr>Outputs.<wbr>Net<wbr>App<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskpoolvolume_go">
 <a href="#diskpoolvolume_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Pool<wbr>Volume</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskpoolvolumeresponse">Disk<wbr>Pool<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netappvolume_go">
 <a href="#netappvolume_go" style="color: inherit; text-decoration: inherit;">Net<wbr>App<wbr>Volume</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#netappvolumeresponse">Net<wbr>App<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskpoolvolume_nodejs">
 <a href="#diskpoolvolume_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Pool<wbr>Volume</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskpoolvolumeresponse">Disk<wbr>Pool<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netappvolume_nodejs">
 <a href="#netappvolume_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>App<wbr>Volume</a>
@@ -403,14 +356,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#netappvolumeresponse">Net<wbr>App<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the datastore provisioning{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_pool_volume_python">
 <a href="#disk_pool_volume_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>pool_<wbr>volume</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskpoolvolumeresponse">Disk<wbr>Pool<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="net_app_volume_python">
 <a href="#net_app_volume_python" style="color: inherit; text-decoration: inherit;">net_<wbr>app_<wbr>volume</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#netappvolumeresponse">Net<wbr>App<wbr>Volume<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lunname_csharp">
 <a href="#lunname_csharp" style="color: inherit; text-decoration: inherit;">Lun<wbr>Name</a>
@@ -497,14 +438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lunname_go">
 <a href="#lunname_go" style="color: inherit; text-decoration: inherit;">Lun<wbr>Name</a>
@@ -521,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lunname_nodejs">
 <a href="#lunname_nodejs" style="color: inherit; text-decoration: inherit;">lun<wbr>Name</a>
@@ -545,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -560,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}iSCSI provider target IP address list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_name_python">
 <a href="#lun_name_python" style="color: inherit; text-decoration: inherit;">lun_<wbr>name</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the LUN to be used{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="netappvolumeresponse">Net<wbr>App<wbr>Volume<wbr>Response</h4>
@@ -578,9 +506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nfsfilepath_csharp">
 <a href="#nfsfilepath_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Path</a>
@@ -588,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsproviderip_csharp">
 <a href="#nfsproviderip_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Provider<wbr>Ip</a>
@@ -597,14 +522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nfsfilepath_go">
 <a href="#nfsfilepath_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>File<wbr>Path</a>
@@ -612,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsproviderip_go">
 <a href="#nfsproviderip_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Provider<wbr>Ip</a>
@@ -621,14 +542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nfsfilepath_nodejs">
 <a href="#nfsfilepath_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>File<wbr>Path</a>
@@ -636,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsproviderip_nodejs">
 <a href="#nfsproviderip_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Provider<wbr>Ip</a>
@@ -645,14 +562,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nfs_file_path_python">
 <a href="#nfs_file_path_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>file_<wbr>path</a>
@@ -660,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}File path through which the NFS volume is exposed by the provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_provider_ip_python">
 <a href="#nfs_provider_ip_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>provider_<wbr>ip</a>
@@ -669,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of the NFS provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

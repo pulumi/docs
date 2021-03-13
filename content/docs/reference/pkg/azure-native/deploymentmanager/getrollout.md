@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloutname_csharp">
 <a href="#rolloutname_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempt_csharp">
 <a href="#retryattempt_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempt</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloutname_go">
 <a href="#rolloutname_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempt_go">
 <a href="#retryattempt_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempt</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolloutname_nodejs">
 <a href="#rolloutname_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryattempt_nodejs">
 <a href="#retryattempt_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Attempt</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollout_name_python">
 <a href="#rollout_name_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The rollout name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rollout name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_attempt_python">
 <a href="#retry_attempt_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>attempt</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="buildversion_csharp">
 <a href="#buildversion_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Version</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operationinfo_csharp">
 <a href="#operationinfo_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutoperationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Service<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stepgroups_csharp">
 <a href="#stepgroups_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Step<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetservicetopologyid_csharp">
 <a href="#targetservicetopologyid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Topology<wbr>Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalretryattempts_csharp">
 <a href="#totalretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Retry<wbr>Attempts</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifactsourceid_csharp">
 <a href="#artifactsourceid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Source<wbr>Id</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -319,14 +284,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="buildversion_go">
 <a href="#buildversion_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Version</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operationinfo_go">
 <a href="#operationinfo_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutoperationinforesponse">Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceresponse">[]Service<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stepgroups_go">
 <a href="#stepgroups_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroupresponse">[]Step<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetservicetopologyid_go">
 <a href="#targetservicetopologyid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Topology<wbr>Id</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalretryattempts_go">
 <a href="#totalretryattempts_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Retry<wbr>Attempts</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifactsourceid_go">
 <a href="#artifactsourceid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Source<wbr>Id</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="buildversion_nodejs">
 <a href="#buildversion_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Version</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operationinfo_nodejs">
 <a href="#operationinfo_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Info</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutoperationinforesponse">Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceresponse">Service<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stepgroups_nodejs">
 <a href="#stepgroups_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Groups</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroupresponse">Step<wbr>Group<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetservicetopologyid_nodejs">
 <a href="#targetservicetopologyid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Topology<wbr>Id</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalretryattempts_nodejs">
 <a href="#totalretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Retry<wbr>Attempts</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifactsourceid_nodejs">
 <a href="#artifactsourceid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Source<wbr>Id</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -583,14 +516,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="build_version_python">
 <a href="#build_version_python" style="color: inherit; text-decoration: inherit;">build_<wbr>version</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The version of the build being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_info_python">
 <a href="#operation_info_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>info</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutoperationinforesponse">Rollout<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Operational information of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceresponse">Sequence[Service<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The detailed information on the services being deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current status of the rollout.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="step_groups_python">
 <a href="#step_groups_python" style="color: inherit; text-decoration: inherit;">step_<wbr>groups</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepgroupresponse">Sequence[Step<wbr>Group<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_service_topology_id_python">
 <a href="#target_service_topology_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>topology_<wbr>id</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id of the service topology from which service units are being referenced in step groups to be deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="total_retry_attempts_python">
 <a href="#total_retry_attempts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>retry_<wbr>attempts</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The cardinal count of total number of retries performed on the rollout at a given time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="artifact_source_id_python">
 <a href="#artifact_source_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>source_<wbr>id</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reference to the artifact source resource Id where the payload is located.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,9 +646,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -740,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code string.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -749,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -758,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -767,14 +678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error target{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error target{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -782,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code string.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -791,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -800,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">[]Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -809,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error target{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error target{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code string.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -833,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -842,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -851,14 +750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error target{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error target{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code string.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code string.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}More detailed error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error target{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error target{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_csharp">
 <a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -912,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -921,14 +810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_go">
 <a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -936,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -945,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identityids_nodejs">
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -969,14 +850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_ids_python">
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
@@ -984,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of identities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of identities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -993,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="messageresponse">Message<wbr>Response</h4>
@@ -1002,9 +878,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1012,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actual message text.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actual message text.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamp</a>
@@ -1021,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1036,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actual message text.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actual message text.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamp</a>
@@ -1045,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1060,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actual message text.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actual message text.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamp</a>
@@ -1069,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1084,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The actual message text.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The actual message text.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_stamp_python">
 <a href="#time_stamp_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamp</a>
@@ -1093,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time in UTC this message was provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response</h4>
@@ -1102,9 +962,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_csharp">
 <a href="#stepid_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -1112,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_go">
 <a href="#stepid_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Id</a>
@@ -1127,14 +982,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stepid_nodejs">
 <a href="#stepid_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Id</a>
@@ -1142,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="step_id_python">
 <a href="#step_id_python" style="color: inherit; text-decoration: inherit;">step_<wbr>id</a>
@@ -1157,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource Id of the step to be run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceoperationresponse">Resource<wbr>Operation<wbr>Response</h4>
@@ -1166,9 +1014,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operationid_csharp">
 <a href="#operationid_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Id</a>
@@ -1176,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1185,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -1194,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_csharp">
 <a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
@@ -1203,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -1212,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1221,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operationid_go">
 <a href="#operationid_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Id</a>
@@ -1236,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1245,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -1254,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_go">
 <a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
@@ -1263,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -1272,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1281,14 +1114,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operationid_nodejs">
 <a href="#operationid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Id</a>
@@ -1296,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1305,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -1314,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_nodejs">
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
@@ -1323,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -1332,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1341,14 +1166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operation_id_python">
 <a href="#operation_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>id</a>
@@ -1356,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1365,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -1374,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Http status code of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_message_python">
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
@@ -1383,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Descriptive information of the resource operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -1392,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -1401,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rolloutoperationinforesponse">Rollout<wbr>Operation<wbr>Info<wbr>Response</h4>
@@ -1410,9 +1226,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1420,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1429,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retryattempt_csharp">
 <a href="#retryattempt_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempt</a>
@@ -1438,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skipsucceededonretry_csharp">
 <a href="#skipsucceededonretry_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Succeeded<wbr>On<wbr>Retry</a>
@@ -1447,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1456,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1471,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1480,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retryattempt_go">
 <a href="#retryattempt_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Attempt</a>
@@ -1489,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skipsucceededonretry_go">
 <a href="#skipsucceededonretry_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Succeeded<wbr>On<wbr>Retry</a>
@@ -1498,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1507,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1522,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1531,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retryattempt_nodejs">
 <a href="#retryattempt_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Attempt</a>
@@ -1540,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skipsucceededonretry_nodejs">
 <a href="#skipsucceededonretry_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Succeeded<wbr>On<wbr>Retry</a>
@@ -1549,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1558,14 +1354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1573,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1582,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retry_attempt_python">
 <a href="#retry_attempt_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>attempt</a>
@@ -1591,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skip_succeeded_on_retry_python">
 <a href="#skip_succeeded_on_retry_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>succeeded_<wbr>on_<wbr>retry</a>
@@ -1600,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1609,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The start time of the rollout in UTC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rolloutstepresponse">Rollout<wbr>Step<wbr>Response</h4>
@@ -1618,9 +1406,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
@@ -1628,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1637,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationinfo_csharp">
 <a href="#operationinfo_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
@@ -1646,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepoperationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceoperations_csharp">
 <a href="#resourceoperations_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Operations</a>
@@ -1655,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceoperationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Resource<wbr>Operation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1664,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepgroup_csharp">
 <a href="#stepgroup_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Group</a>
@@ -1673,14 +1454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
@@ -1688,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messageresponse">[]Message<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1697,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationinfo_go">
 <a href="#operationinfo_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
@@ -1706,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceoperations_go">
 <a href="#resourceoperations_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Operations</a>
@@ -1715,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceoperationresponse">[]Resource<wbr>Operation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1724,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepgroup_go">
 <a href="#stepgroup_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Group</a>
@@ -1733,14 +1506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
@@ -1748,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messageresponse">Message<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1757,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationinfo_nodejs">
 <a href="#operationinfo_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Info</a>
@@ -1766,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceoperations_nodejs">
 <a href="#resourceoperations_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Operations</a>
@@ -1775,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceoperationresponse">Resource<wbr>Operation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1784,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stepgroup_nodejs">
 <a href="#stepgroup_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Group</a>
@@ -1793,14 +1558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
@@ -1808,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messageresponse">Sequence[Message<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1817,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_info_python">
 <a href="#operation_info_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>info</a>
@@ -1826,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_operations_python">
 <a href="#resource_operations_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>operations</a>
@@ -1835,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceoperationresponse">Sequence[Resource<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1844,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current state of the step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="step_group_python">
 <a href="#step_group_python" style="color: inherit; text-decoration: inherit;">step_<wbr>group</a>
@@ -1853,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The step group the current step is part of.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceresponse">Service<wbr>Response</h4>
@@ -1862,9 +1618,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetlocation_csharp">
 <a href="#targetlocation_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Location</a>
@@ -1872,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsubscriptionid_csharp">
 <a href="#targetsubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Subscription<wbr>Id</a>
@@ -1881,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1890,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceunits_csharp">
 <a href="#serviceunits_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Units</a>
@@ -1899,14 +1650,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetlocation_go">
 <a href="#targetlocation_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Location</a>
@@ -1914,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsubscriptionid_go">
 <a href="#targetsubscriptionid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Subscription<wbr>Id</a>
@@ -1923,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1932,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceunits_go">
 <a href="#serviceunits_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Units</a>
@@ -1941,14 +1686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitresponse">[]Service<wbr>Unit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetlocation_nodejs">
 <a href="#targetlocation_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Location</a>
@@ -1956,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetsubscriptionid_nodejs">
 <a href="#targetsubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Subscription<wbr>Id</a>
@@ -1965,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1974,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceunits_nodejs">
 <a href="#serviceunits_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Units</a>
@@ -1983,14 +1722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitresponse">Service<wbr>Unit<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_location_python">
 <a href="#target_location_python" style="color: inherit; text-decoration: inherit;">target_<wbr>location</a>
@@ -1998,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure location to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_subscription_id_python">
 <a href="#target_subscription_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>subscription_<wbr>id</a>
@@ -2007,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The subscription to which the resources in the service belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2016,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_units_python">
 <a href="#service_units_python" style="color: inherit; text-decoration: inherit;">service_<wbr>units</a>
@@ -2025,8 +1758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitresponse">Sequence[Service<wbr>Unit<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</h4>
@@ -2034,9 +1766,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parametersartifactsourcerelativepath_csharp">
 <a href="#parametersartifactsourcerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -2044,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersuri_csharp">
 <a href="#parametersuri_csharp" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Uri</a>
@@ -2053,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateartifactsourcerelativepath_csharp">
 <a href="#templateartifactsourcerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -2062,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateuri_csharp">
 <a href="#templateuri_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Uri</a>
@@ -2071,14 +1798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parametersartifactsourcerelativepath_go">
 <a href="#parametersartifactsourcerelativepath_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -2086,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersuri_go">
 <a href="#parametersuri_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Uri</a>
@@ -2095,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateartifactsourcerelativepath_go">
 <a href="#templateartifactsourcerelativepath_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -2104,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateuri_go">
 <a href="#templateuri_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Uri</a>
@@ -2113,14 +1834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parametersartifactsourcerelativepath_nodejs">
 <a href="#parametersartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -2128,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametersuri_nodejs">
 <a href="#parametersuri_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Uri</a>
@@ -2137,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateartifactsourcerelativepath_nodejs">
 <a href="#templateartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
@@ -2146,8 +1862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateuri_nodejs">
 <a href="#templateuri_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uri</a>
@@ -2155,14 +1870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_artifact_source_relative_path_python">
 <a href="#parameters_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
@@ -2170,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_uri_python">
 <a href="#parameters_uri_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>uri</a>
@@ -2179,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_artifact_source_relative_path_python">
 <a href="#template_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
@@ -2188,8 +1898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_uri_python">
 <a href="#template_uri_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uri</a>
@@ -2197,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceunitresponse">Service<wbr>Unit<wbr>Response</h4>
@@ -2206,9 +1914,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentmode_csharp">
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -2216,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroup_csharp">
 <a href="#targetresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group</a>
@@ -2225,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -2234,8 +1938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2243,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_csharp">
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
@@ -2252,14 +1954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutstepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentmode_go">
 <a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -2267,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroup_go">
 <a href="#targetresourcegroup_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group</a>
@@ -2276,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
@@ -2285,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2294,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_go">
 <a href="#steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
@@ -2303,14 +1998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutstepresponse">[]Rollout<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentmode_nodejs">
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -2318,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroup_nodejs">
 <a href="#targetresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group</a>
@@ -2327,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -2336,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2345,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_nodejs">
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
@@ -2354,14 +2042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutstepresponse">Rollout<wbr>Step<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_mode_python">
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -2369,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_group_python">
 <a href="#target_resource_group_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group</a>
@@ -2378,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
@@ -2387,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2396,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_python">
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
@@ -2405,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutstepresponse">Sequence[Rollout<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stepgroupresponse">Step<wbr>Group<wbr>Response</h4>
@@ -2414,9 +2094,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_csharp">
 <a href="#deploymenttargetid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Target<wbr>Id</a>
@@ -2424,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2433,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_csharp">
 <a href="#dependsonstepgroups_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -2442,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_csharp">
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
@@ -2451,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_csharp">
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
@@ -2460,14 +2134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_go">
 <a href="#deploymenttargetid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Target<wbr>Id</a>
@@ -2475,8 +2146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2484,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_go">
 <a href="#dependsonstepgroups_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -2493,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_go">
 <a href="#postdeploymentsteps_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
@@ -2502,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">[]Pre<wbr>Post<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_go">
 <a href="#predeploymentsteps_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
@@ -2511,14 +2178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">[]Pre<wbr>Post<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymenttargetid_nodejs">
 <a href="#deploymenttargetid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Target<wbr>Id</a>
@@ -2526,8 +2190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2535,8 +2198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependsonstepgroups_nodejs">
 <a href="#dependsonstepgroups_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Step<wbr>Groups</a>
@@ -2544,8 +2206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postdeploymentsteps_nodejs">
 <a href="#postdeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
@@ -2553,8 +2214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predeploymentsteps_nodejs">
 <a href="#predeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
@@ -2562,14 +2222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_target_id_python">
 <a href="#deployment_target_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>target_<wbr>id</a>
@@ -2577,8 +2234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2586,8 +2242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the step group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="depends_on_step_groups_python">
 <a href="#depends_on_step_groups_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>step_<wbr>groups</a>
@@ -2595,8 +2250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of step group names on which this step group depends on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_deployment_steps_python">
 <a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
@@ -2604,8 +2258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_deployment_steps_python">
 <a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
@@ -2613,8 +2266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response</h4>
@@ -2622,9 +2274,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlationid_csharp">
 <a href="#correlationid_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -2632,8 +2282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentname_csharp">
 <a href="#deploymentname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -2641,8 +2290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2650,8 +2298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -2659,8 +2306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2668,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -2677,14 +2322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlationid_go">
 <a href="#correlationid_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -2692,8 +2334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentname_go">
 <a href="#deploymentname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Name</a>
@@ -2701,8 +2342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2710,8 +2350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -2719,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2728,8 +2366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -2737,14 +2374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlationid_nodejs">
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
@@ -2752,8 +2386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentname_nodejs">
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
@@ -2761,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2770,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
@@ -2779,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2788,8 +2418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -2797,14 +2426,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="correlation_id_python">
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
@@ -2812,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique identifier to track the request for ARM-based resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deployment_name_python">
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
@@ -2821,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the ARM deployment initiated as part of the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2830,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}End time of the action in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
@@ -2839,8 +2462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last time in UTC this operation was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2848,8 +2470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start time of the action in UTC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -2857,8 +2478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionmonitorname_csharp">
 <a href="#connectionmonitorname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Monitor<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatchername_csharp">
 <a href="#networkwatchername_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionmonitorname_go">
 <a href="#connectionmonitorname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Monitor<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatchername_go">
 <a href="#networkwatchername_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionmonitorname_nodejs">
 <a href="#connectionmonitorname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Monitor<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatchername_nodejs">
 <a href="#networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_monitor_name_python">
 <a href="#connection_monitor_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>monitor_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_watcher_name_python">
 <a href="#network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Network Watcher resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group containing Network Watcher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionmonitortype_csharp">
 <a href="#connectionmonitortype_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Monitor<wbr>Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autostart_csharp">
 <a href="#autostart_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitordestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringintervalinseconds_csharp">
 <a href="#monitoringintervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval<wbr>In<wbr>Seconds</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoroutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="testconfigurations_csharp">
 <a href="#testconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="testgroups_csharp">
 <a href="#testgroups_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
@@ -364,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionmonitortype_go">
 <a href="#connectionmonitortype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Monitor<wbr>Type</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autostart_go">
 <a href="#autostart_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitordestinationresponse">Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointresponse">[]Connection<wbr>Monitor<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringintervalinseconds_go">
 <a href="#monitoringintervalinseconds_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval<wbr>In<wbr>Seconds</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoroutputresponse">[]Connection<wbr>Monitor<wbr>Output<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsourceresponse">Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="testconfigurations_go">
 <a href="#testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">[]Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="testgroups_go">
 <a href="#testgroups_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
@@ -541,14 +480,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestgroupresponse">[]Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionmonitortype_nodejs">
 <a href="#connectionmonitortype_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Monitor<wbr>Type</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autostart_nodejs">
 <a href="#autostart_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitordestinationresponse">Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringintervalinseconds_nodejs">
 <a href="#monitoringintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval<wbr>In<wbr>Seconds</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoroutputresponse">Connection<wbr>Monitor<wbr>Output<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsourceresponse">Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="testconfigurations_nodejs">
 <a href="#testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="testgroups_nodejs">
 <a href="#testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
@@ -718,14 +636,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestgroupresponse">Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_monitor_type_python">
 <a href="#connection_monitor_type_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>monitor_<wbr>type</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The monitoring status of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The date and time when the connection monitor was started.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_start_python">
 <a href="#auto_start_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the connection monitor will start automatically once created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitordestinationresponse">Connection<wbr>Monitor<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_interval_in_seconds_python">
 <a href="#monitoring_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval_<wbr>in_<wbr>seconds</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring interval in seconds.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional notes to be associated with the connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoroutputresponse">Sequence[Connection<wbr>Monitor<wbr>Output<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsourceresponse">Connection<wbr>Monitor<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connection monitor tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="test_configurations_python">
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestconfigurationresponse">Sequence[Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="test_groups_python">
 <a href="#test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortestgroupresponse">Sequence[Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -920,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -929,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -938,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -953,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -962,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -971,14 +858,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -986,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -995,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1004,14 +886,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1019,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor destination (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1028,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The destination port used by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1037,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource used as the destination by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorendpointfilteritemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response</h4>
@@ -1046,9 +922,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1056,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1065,14 +938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1080,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1089,14 +958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1104,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1113,14 +978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1128,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The address of the filter item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1137,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of item included in the filter. Currently only 'AgentAddress' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</h4>
@@ -1146,9 +1006,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1156,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1165,14 +1022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1180,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">[]Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1189,14 +1042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1204,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1213,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1228,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1237,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The behavior of the endpoint filter. Currently only 'Include' is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorendpointresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Response</h4>
@@ -1246,9 +1090,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1256,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1265,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coveragelevel_csharp">
 <a href="#coveragelevel_csharp" style="color: inherit; text-decoration: inherit;">Coverage<wbr>Level</a>
@@ -1274,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1283,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1292,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1301,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1310,14 +1146,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1325,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1334,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coveragelevel_go">
 <a href="#coveragelevel_go" style="color: inherit; text-decoration: inherit;">Coverage<wbr>Level</a>
@@ -1343,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1352,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1361,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1370,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1379,14 +1206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1394,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1403,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coveragelevel_nodejs">
 <a href="#coveragelevel_nodejs" style="color: inherit; text-decoration: inherit;">coverage<wbr>Level</a>
@@ -1412,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1421,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1430,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1439,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1448,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1463,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1472,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Address of the connection monitor endpoint (IP or domain name).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coverage_level_python">
 <a href="#coverage_level_python" style="color: inherit; text-decoration: inherit;">coverage_<wbr>level</a>
@@ -1481,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Test coverage for the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1490,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1499,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID of the connection monitor endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1508,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1517,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The endpoint type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response</h4>
@@ -1526,9 +1334,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1536,14 +1342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1551,14 +1354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1566,14 +1366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1581,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</h4>
@@ -1590,9 +1386,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclude_csharp">
 <a href="#exclude_csharp" style="color: inherit; text-decoration: inherit;">Exclude</a>
@@ -1600,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_csharp">
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -1609,14 +1402,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclude_go">
 <a href="#exclude_go" style="color: inherit; text-decoration: inherit;">Exclude</a>
@@ -1624,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">[]Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_go">
 <a href="#include_go" style="color: inherit; text-decoration: inherit;">Include</a>
@@ -1633,14 +1422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">[]Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclude_nodejs">
 <a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
@@ -1648,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_nodejs">
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
@@ -1657,14 +1442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclude_python">
 <a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
@@ -1672,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_python">
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
@@ -1681,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</h4>
@@ -1690,9 +1470,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1700,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1709,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1718,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferhttps_csharp">
 <a href="#preferhttps_csharp" style="color: inherit; text-decoration: inherit;">Prefer<wbr>HTTPS</a>
@@ -1727,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_csharp">
 <a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
@@ -1736,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>HTTPHeader<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validstatuscoderanges_csharp">
 <a href="#validstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -1745,14 +1518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1760,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1769,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1778,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferhttps_go">
 <a href="#preferhttps_go" style="color: inherit; text-decoration: inherit;">Prefer<wbr>HTTPS</a>
@@ -1787,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_go">
 <a href="#requestheaders_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
@@ -1796,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">[]HTTPHeader<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validstatuscoderanges_go">
 <a href="#validstatuscoderanges_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -1805,14 +1570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1820,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1829,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1838,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferhttps_nodejs">
 <a href="#preferhttps_nodejs" style="color: inherit; text-decoration: inherit;">prefer<wbr>HTTPS</a>
@@ -1847,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_nodejs">
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
@@ -1856,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validstatuscoderanges_nodejs">
 <a href="#validstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -1865,14 +1622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1880,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP method to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1889,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path component of the URI. For instance, "/dir1/dir2".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1898,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefer_https_python">
 <a href="#prefer_https_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>https</a>
@@ -1907,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_python">
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
@@ -1916,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">Sequence[HTTPHeader<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_status_code_ranges_python">
 <a href="#valid_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>status_<wbr>code_<wbr>ranges</a>
@@ -1925,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}HTTP status codes to consider successful. For instance, "2xx,301-304,418".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</h4>
@@ -1934,9 +1682,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabletraceroute_csharp">
 <a href="#disabletraceroute_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Trace<wbr>Route</a>
@@ -1944,14 +1690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabletraceroute_go">
 <a href="#disabletraceroute_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Trace<wbr>Route</a>
@@ -1959,14 +1702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabletraceroute_nodejs">
 <a href="#disabletraceroute_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
@@ -1974,14 +1714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disable_trace_route_python">
 <a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
@@ -1989,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitoroutputresponse">Connection<wbr>Monitor<wbr>Output<wbr>Response</h4>
@@ -1998,9 +1734,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2008,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacesettings_csharp">
 <a href="#workspacesettings_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Settings</a>
@@ -2017,14 +1750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2032,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacesettings_go">
 <a href="#workspacesettings_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Settings</a>
@@ -2041,14 +1770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2056,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspacesettings_nodejs">
 <a href="#workspacesettings_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
@@ -2065,14 +1790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2080,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Connection monitor output destination type. Currently, only "Workspace" is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_settings_python">
 <a href="#workspace_settings_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>settings</a>
@@ -2089,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorsourceresponse">Connection<wbr>Monitor<wbr>Source<wbr>Response</h4>
@@ -2098,9 +1818,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2108,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2117,14 +1834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2132,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2141,14 +1854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -2156,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2165,14 +1874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -2180,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID of the resource used as the source by connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2189,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source port used by connection monitor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</h4>
@@ -2198,9 +1902,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checksfailedpercent_csharp">
 <a href="#checksfailedpercent_csharp" style="color: inherit; text-decoration: inherit;">Checks<wbr>Failed<wbr>Percent</a>
@@ -2208,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roundtriptimems_csharp">
 <a href="#roundtriptimems_csharp" style="color: inherit; text-decoration: inherit;">Round<wbr>Trip<wbr>Time<wbr>Ms</a>
@@ -2217,14 +1918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checksfailedpercent_go">
 <a href="#checksfailedpercent_go" style="color: inherit; text-decoration: inherit;">Checks<wbr>Failed<wbr>Percent</a>
@@ -2232,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roundtriptimems_go">
 <a href="#roundtriptimems_go" style="color: inherit; text-decoration: inherit;">Round<wbr>Trip<wbr>Time<wbr>Ms</a>
@@ -2241,14 +1938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checksfailedpercent_nodejs">
 <a href="#checksfailedpercent_nodejs" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
@@ -2256,8 +1950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roundtriptimems_nodejs">
 <a href="#roundtriptimems_nodejs" style="color: inherit; text-decoration: inherit;">round<wbr>Trip<wbr>Time<wbr>Ms</a>
@@ -2265,14 +1958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checks_failed_percent_python">
 <a href="#checks_failed_percent_python" style="color: inherit; text-decoration: inherit;">checks_<wbr>failed_<wbr>percent</a>
@@ -2280,8 +1970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to evaluate as successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="round_trip_time_ms_python">
 <a href="#round_trip_time_ms_python" style="color: inherit; text-decoration: inherit;">round_<wbr>trip_<wbr>time_<wbr>ms</a>
@@ -2289,8 +1978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to evaluate as successful.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</h4>
@@ -2298,9 +1986,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationportbehavior_csharp">
 <a href="#destinationportbehavior_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Behavior</a>
@@ -2308,8 +1994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabletraceroute_csharp">
 <a href="#disabletraceroute_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Trace<wbr>Route</a>
@@ -2317,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2326,14 +2010,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationportbehavior_go">
 <a href="#destinationportbehavior_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port<wbr>Behavior</a>
@@ -2341,8 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabletraceroute_go">
 <a href="#disabletraceroute_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Trace<wbr>Route</a>
@@ -2350,8 +2030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2359,14 +2038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationportbehavior_nodejs">
 <a href="#destinationportbehavior_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Behavior</a>
@@ -2374,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabletraceroute_nodejs">
 <a href="#disabletraceroute_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Route</a>
@@ -2383,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2392,14 +2066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_port_behavior_python">
 <a href="#destination_port_behavior_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>behavior</a>
@@ -2407,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Destination port behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_trace_route_python">
 <a href="#disable_trace_route_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>route</a>
@@ -2416,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value indicating whether path evaluation with trace route should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2425,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The port to connect to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitortestconfigurationresponse">Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Response</h4>
@@ -2434,9 +2102,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2444,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2453,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfiguration_csharp">
 <a href="#httpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
@@ -2462,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpconfiguration_csharp">
 <a href="#icmpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
@@ -2471,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredipversion_csharp">
 <a href="#preferredipversion_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>IPVersion</a>
@@ -2480,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_csharp">
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -2489,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpconfiguration_csharp">
 <a href="#tcpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
@@ -2498,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testfrequencysec_csharp">
 <a href="#testfrequencysec_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Frequency<wbr>Sec</a>
@@ -2507,14 +2166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2522,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2531,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfiguration_go">
 <a href="#httpconfiguration_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
@@ -2540,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpconfiguration_go">
 <a href="#icmpconfiguration_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
@@ -2549,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredipversion_go">
 <a href="#preferredipversion_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>IPVersion</a>
@@ -2558,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_go">
 <a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -2567,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpconfiguration_go">
 <a href="#tcpconfiguration_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
@@ -2576,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testfrequencysec_go">
 <a href="#testfrequencysec_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Frequency<wbr>Sec</a>
@@ -2585,14 +2234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2600,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2609,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfiguration_nodejs">
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
@@ -2618,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpconfiguration_nodejs">
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
@@ -2627,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredipversion_nodejs">
 <a href="#preferredipversion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>IPVersion</a>
@@ -2636,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_nodejs">
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
@@ -2645,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpconfiguration_nodejs">
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
@@ -2654,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testfrequencysec_nodejs">
 <a href="#testfrequencysec_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>Sec</a>
@@ -2663,14 +2302,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2678,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2687,8 +2322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The protocol to use in test evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_configuration_python">
 <a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
@@ -2696,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmp_configuration_python">
 <a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
@@ -2705,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_ip_version_python">
 <a href="#preferred_ip_version_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>ip_<wbr>version</a>
@@ -2714,8 +2346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="success_threshold_python">
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
@@ -2723,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_configuration_python">
 <a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
@@ -2732,8 +2362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="test_frequency_sec_python">
 <a href="#test_frequency_sec_python" style="color: inherit; text-decoration: inherit;">test_<wbr>frequency_<wbr>sec</a>
@@ -2741,8 +2370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The frequency of test evaluation, in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitortestgroupresponse">Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Response</h4>
@@ -2750,9 +2378,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinations_csharp">
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -2760,8 +2386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2769,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -2778,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurations_csharp">
 <a href="#testconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -2787,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_csharp">
 <a href="#disable_csharp" style="color: inherit; text-decoration: inherit;">Disable</a>
@@ -2796,14 +2418,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinations_go">
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -2811,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2820,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -2829,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurations_go">
 <a href="#testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -2838,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_go">
 <a href="#disable_go" style="color: inherit; text-decoration: inherit;">Disable</a>
@@ -2847,14 +2462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinations_nodejs">
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -2862,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2871,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -2880,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurations_nodejs">
 <a href="#testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
@@ -2889,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_nodejs">
 <a href="#disable_nodejs" style="color: inherit; text-decoration: inherit;">disable</a>
@@ -2898,14 +2506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinations_python">
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -2913,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of destination endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2922,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connection monitor test group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -2931,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of source endpoint names.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="test_configurations_python">
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
@@ -2940,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of test configuration names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_python">
 <a href="#disable_python" style="color: inherit; text-decoration: inherit;">disable</a>
@@ -2949,8 +2550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value indicating whether test group is disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</h4>
@@ -2958,9 +2558,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_csharp">
 <a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -2968,14 +2566,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_go">
 <a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -2983,14 +2578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_nodejs">
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
@@ -2998,14 +2590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="workspace_resource_id_python">
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
@@ -3013,8 +2602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Log analytics workspace resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpheaderresponse">HTTPHeader<wbr>Response</h4>
@@ -3022,9 +2610,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3032,8 +2618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3041,14 +2626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3056,8 +2638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3065,14 +2646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3080,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3089,14 +2666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3104,8 +2678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name in HTTP header.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3113,8 +2686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value in HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -14,11 +14,17 @@ A user-defined logical grouping of machines.
 API Version: 2015-11-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### SMMachineGroupsUpdatePut
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -51,9 +57,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -89,9 +98,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -112,9 +124,12 @@ machine_group = azure_native.operationalinsights.MachineGroup("machineGroup",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -136,9 +151,16 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a MachineGroup Resource {#create}
@@ -163,9 +185,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -173,9 +193,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -183,9 +201,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -193,10 +209,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -222,9 +235,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -232,9 +243,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -242,9 +251,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -252,9 +259,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -262,18 +267,13 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -281,9 +281,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -291,9 +289,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -301,10 +297,7 @@ const machineGroup = new azure_native.operationalinsights.MachineGroup("machineG
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -319,9 +312,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -329,8 +320,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -338,8 +328,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -347,8 +336,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -356,8 +344,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -365,8 +352,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouptype_csharp">
 <a href="#grouptype_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Type</a>
@@ -374,8 +360,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#machinegrouptype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Machine<wbr>Group<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinegroupname_csharp">
 <a href="#machinegroupname_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Group<wbr>Name</a>
@@ -383,8 +368,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machines_csharp">
 <a href="#machines_csharp" style="color: inherit; text-decoration: inherit;">Machines</a>
@@ -392,14 +376,11 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinereferencewithhints">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -407,8 +388,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -416,8 +396,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -425,8 +404,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -434,8 +412,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -443,8 +420,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouptype_go">
 <a href="#grouptype_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Type</a>
@@ -452,8 +428,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#machinegrouptype">Machine<wbr>Group<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinegroupname_go">
 <a href="#machinegroupname_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Group<wbr>Name</a>
@@ -461,8 +436,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machines_go">
 <a href="#machines_go" style="color: inherit; text-decoration: inherit;">Machines</a>
@@ -470,14 +444,11 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinereferencewithhints">[]Machine<wbr>Reference<wbr>With<wbr>Hints</a></span>
     </dt>
-    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -485,8 +456,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -494,8 +464,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -503,8 +472,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -512,8 +480,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -521,8 +488,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouptype_nodejs">
 <a href="#grouptype_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Type</a>
@@ -530,8 +496,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#machinegrouptype">Machine<wbr>Group<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinegroupname_nodejs">
 <a href="#machinegroupname_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Group<wbr>Name</a>
@@ -539,8 +504,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machines_nodejs">
 <a href="#machines_nodejs" style="color: inherit; text-decoration: inherit;">machines</a>
@@ -548,14 +512,11 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinereferencewithhints">Machine<wbr>Reference<wbr>With<wbr>Hints[]</a></span>
     </dt>
-    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -563,8 +524,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User defined name for the group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -572,8 +532,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group name within the specified subscriptionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -581,8 +540,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OMS workspace containing the resources of interest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -590,8 +548,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -599,8 +556,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ETAG.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_type_python">
 <a href="#group_type_python" style="color: inherit; text-decoration: inherit;">group_<wbr>type</a>
@@ -608,8 +564,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#machinegrouptype">Machine<wbr>Group<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machine_group_name_python">
 <a href="#machine_group_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>group_<wbr>name</a>
@@ -617,8 +572,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Machine Group resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machines_python">
 <a href="#machines_python" style="color: inherit; text-decoration: inherit;">machines</a>
@@ -626,8 +580,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinereferencewithhints">Sequence[Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -638,9 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -648,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -657,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -666,14 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -681,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -690,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -699,14 +643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -714,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -723,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -732,14 +671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -747,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -756,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -765,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -782,71 +715,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="machinegrouptype">Machine<wbr>Group<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>unknown</dd>
-    <dt>Azure_<wbr>cs</dt>
-    <dd>azure-cs</dd>
-    <dt>Azure_<wbr>sf</dt>
-    <dd>azure-sf</dd>
-    <dt>Azure_<wbr>vmss</dt>
-    <dd>azure-vmss</dd>
-    <dt>User_<wbr>static</dt>
-    <dd>user-static</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>unknown</dd><dt>Azure_<wbr>cs</dt>
+    <dd>azure-cs</dd><dt>Azure_<wbr>sf</dt>
+    <dd>azure-sf</dd><dt>Azure_<wbr>vmss</dt>
+    <dd>azure-vmss</dd><dt>User_<wbr>static</dt>
+    <dd>user-static</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Machine<wbr>Group<wbr>Type<wbr>Unknown</dt>
-    <dd>unknown</dd>
-    <dt>Machine<wbr>Group<wbr>Type_Azure_<wbr>cs</dt>
-    <dd>azure-cs</dd>
-    <dt>Machine<wbr>Group<wbr>Type_Azure_<wbr>sf</dt>
-    <dd>azure-sf</dd>
-    <dt>Machine<wbr>Group<wbr>Type_Azure_<wbr>vmss</dt>
-    <dd>azure-vmss</dd>
-    <dt>Machine<wbr>Group<wbr>Type_User_<wbr>static</dt>
-    <dd>user-static</dd>
-</dl>
+<dl class="tabular"><dt>Machine<wbr>Group<wbr>Type<wbr>Unknown</dt>
+    <dd>unknown</dd><dt>Machine<wbr>Group<wbr>Type_Azure_<wbr>cs</dt>
+    <dd>azure-cs</dd><dt>Machine<wbr>Group<wbr>Type_Azure_<wbr>sf</dt>
+    <dd>azure-sf</dd><dt>Machine<wbr>Group<wbr>Type_Azure_<wbr>vmss</dt>
+    <dd>azure-vmss</dd><dt>Machine<wbr>Group<wbr>Type_User_<wbr>static</dt>
+    <dd>user-static</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>unknown</dd>
-    <dt>Azure_<wbr>cs</dt>
-    <dd>azure-cs</dd>
-    <dt>Azure_<wbr>sf</dt>
-    <dd>azure-sf</dd>
-    <dt>Azure_<wbr>vmss</dt>
-    <dd>azure-vmss</dd>
-    <dt>User_<wbr>static</dt>
-    <dd>user-static</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>unknown</dd><dt>Azure_<wbr>cs</dt>
+    <dd>azure-cs</dd><dt>Azure_<wbr>sf</dt>
+    <dd>azure-sf</dd><dt>Azure_<wbr>vmss</dt>
+    <dd>azure-vmss</dd><dt>User_<wbr>static</dt>
+    <dd>user-static</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>unknown</dd>
-    <dt>AZURE_CS</dt>
-    <dd>azure-cs</dd>
-    <dt>AZURE_SF</dt>
-    <dd>azure-sf</dd>
-    <dt>AZURE_VMSS</dt>
-    <dd>azure-vmss</dd>
-    <dt>USER_STATIC</dt>
-    <dd>user-static</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>unknown</dd><dt>AZURE_CS</dt>
+    <dd>azure-cs</dd><dt>AZURE_SF</dt>
+    <dd>azure-sf</dd><dt>AZURE_VMSS</dt>
+    <dd>azure-vmss</dd><dt>USER_STATIC</dt>
+    <dd>user-static</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machinereferencewithhints">Machine<wbr>Reference<wbr>With<wbr>Hints</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -854,14 +761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -869,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -884,14 +785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -899,16 +797,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machinereferencewithhintsresponse">Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displaynamehint_csharp">
 <a href="#displaynamehint_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Hint</a>
@@ -916,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known display name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known display name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -925,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -934,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osfamilyhint_csharp">
 <a href="#osfamilyhint_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Family<wbr>Hint</a>
@@ -943,8 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -952,14 +843,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displaynamehint_go">
 <a href="#displaynamehint_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Hint</a>
@@ -967,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known display name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known display name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -976,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -985,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osfamilyhint_go">
 <a href="#osfamilyhint_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Family<wbr>Hint</a>
@@ -994,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1003,14 +887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displaynamehint_nodejs">
 <a href="#displaynamehint_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Hint</a>
@@ -1018,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known display name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known display name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1027,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1036,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="osfamilyhint_nodejs">
 <a href="#osfamilyhint_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Family<wbr>Hint</a>
@@ -1045,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1054,14 +931,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_hint_python">
 <a href="#display_name_hint_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>hint</a>
@@ -1069,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last known display name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known display name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1078,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource URI.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource URI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1087,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="os_family_hint_python">
 <a href="#os_family_hint_python" style="color: inherit; text-decoration: inherit;">os_<wbr>family_<wbr>hint</a>
@@ -1096,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known operating system family.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1105,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

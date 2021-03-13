@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="streaminglocators_csharp">
 <a href="#streaminglocators_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locators</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetstreaminglocatorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Outputs.<wbr>Asset<wbr>Streaming<wbr>Locator<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="streaminglocators_go">
 <a href="#streaminglocators_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locators</a>
@@ -217,14 +192,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetstreaminglocatorresponse">[]Asset<wbr>Streaming<wbr>Locator<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="streaminglocators_nodejs">
 <a href="#streaminglocators_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Locators</a>
@@ -232,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetstreaminglocatorresponse">Asset<wbr>Streaming<wbr>Locator<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="streaming_locators_python">
 <a href="#streaming_locators_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>locators</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetstreaminglocatorresponse">Sequence[Asset<wbr>Streaming<wbr>Locator<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of Streaming Locators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Asset Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Asset Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -281,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultcontentkeypolicyname_csharp">
 <a href="#defaultcontentkeypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -290,8 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -299,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaminglocatorid_csharp">
 <a href="#streaminglocatorid_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Id</a>
@@ -326,8 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_csharp">
 <a href="#streamingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
@@ -335,14 +294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Asset Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Asset Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -359,8 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultcontentkeypolicyname_go">
 <a href="#defaultcontentkeypolicyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -368,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -377,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -386,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -395,8 +346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaminglocatorid_go">
 <a href="#streaminglocatorid_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Id</a>
@@ -404,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_go">
 <a href="#streamingpolicyname_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
@@ -413,14 +362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -428,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Asset Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Asset Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -437,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultcontentkeypolicyname_nodejs">
 <a href="#defaultcontentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -446,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -455,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -464,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -473,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaminglocatorid_nodejs">
 <a href="#streaminglocatorid_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Locator<wbr>Id</a>
@@ -482,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_nodejs">
 <a href="#streamingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Policy<wbr>Name</a>
@@ -491,14 +430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -506,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Asset Name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Asset Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -515,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The creation time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="default_content_key_policy_name_python">
 <a href="#default_content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key_<wbr>policy_<wbr>name</a>
@@ -524,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default ContentKeyPolicy used by this Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -533,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -542,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Streaming Locator name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -551,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaming_locator_id_python">
 <a href="#streaming_locator_id_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>locator_<wbr>id</a>
@@ -560,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}StreamingLocatorId of the Streaming Locator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaming_policy_name_python">
 <a href="#streaming_policy_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>policy_<wbr>name</a>
@@ -569,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

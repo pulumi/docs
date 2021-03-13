@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botpropertiesresponse">Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -325,14 +288,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botpropertiesresponse">Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -412,14 +364,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botpropertiesresponse">Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Entity Tag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,9 +454,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuredchannels_csharp">
 <a href="#configuredchannels_csharp" style="color: inherit; text-decoration: inherit;">Configured<wbr>Channels</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledchannels_csharp">
 <a href="#enabledchannels_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Channels</a>
@@ -542,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -551,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointversion_csharp">
 <a href="#endpointversion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Version</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msaappid_csharp">
 <a href="#msaappid_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
@@ -569,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_csharp">
 <a href="#cmekkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -578,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -587,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_csharp">
 <a href="#developerappinsightkey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insight<wbr>Key</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_csharp">
 <a href="#developerappinsightsapikey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_csharp">
 <a href="#developerappinsightsapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -614,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconurl_csharp">
 <a href="#iconurl_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
@@ -623,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscmekenabled_csharp">
 <a href="#iscmekenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cmek<wbr>Enabled</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -641,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luiskey_csharp">
 <a href="#luiskey_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
@@ -650,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuredchannels_go">
 <a href="#configuredchannels_go" style="color: inherit; text-decoration: inherit;">Configured<wbr>Channels</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledchannels_go">
 <a href="#enabledchannels_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Channels</a>
@@ -683,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -692,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointversion_go">
 <a href="#endpointversion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Version</a>
@@ -701,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msaappid_go">
 <a href="#msaappid_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
@@ -710,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_go">
 <a href="#cmekkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -719,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -728,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_go">
 <a href="#developerappinsightkey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insight<wbr>Key</a>
@@ -737,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_go">
 <a href="#developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -746,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_go">
 <a href="#developerappinsightsapplicationid_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -755,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconurl_go">
 <a href="#iconurl_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
@@ -764,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscmekenabled_go">
 <a href="#iscmekenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Cmek<wbr>Enabled</a>
@@ -773,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -782,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luiskey_go">
 <a href="#luiskey_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
@@ -791,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuredchannels_nodejs">
 <a href="#configuredchannels_nodejs" style="color: inherit; text-decoration: inherit;">configured<wbr>Channels</a>
@@ -806,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -815,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabledchannels_nodejs">
 <a href="#enabledchannels_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Channels</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -833,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointversion_nodejs">
 <a href="#endpointversion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Version</a>
@@ -842,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msaappid_nodejs">
 <a href="#msaappid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Id</a>
@@ -851,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmekkeyvaulturl_nodejs">
 <a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
@@ -860,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -869,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_nodejs">
 <a href="#developerappinsightkey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insight<wbr>Key</a>
@@ -878,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_nodejs">
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -887,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_nodejs">
 <a href="#developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -896,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconurl_nodejs">
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
@@ -905,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscmekenabled_nodejs">
 <a href="#iscmekenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cmek<wbr>Enabled</a>
@@ -914,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
@@ -923,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luiskey_nodejs">
 <a href="#luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
@@ -932,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configured_channels_python">
 <a href="#configured_channels_python" style="color: inherit; text-decoration: inherit;">configured_<wbr>channels</a>
@@ -947,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -956,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Name of the bot{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_channels_python">
 <a href="#enabled_channels_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>channels</a>
@@ -965,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -974,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_version_python">
 <a href="#endpoint_version_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>version</a>
@@ -983,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msa_app_id_python">
 <a href="#msa_app_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>id</a>
@@ -992,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cmek_key_vault_url_python">
 <a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
@@ -1001,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1010,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_app_insight_key_python">
 <a href="#developer_app_insight_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insight_<wbr>key</a>
@@ -1019,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_api_key_python">
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
@@ -1028,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_application_id_python">
 <a href="#developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
@@ -1037,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_url_python">
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
@@ -1046,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_cmek_enabled_python">
 <a href="#is_cmek_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cmek_<wbr>enabled</a>
@@ -1055,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
@@ -1064,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luis_key_python">
 <a href="#luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
@@ -1073,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The LUIS Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -1082,9 +954,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1092,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1101,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1116,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1125,14 +990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1140,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1149,14 +1010,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1164,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The sku name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1173,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

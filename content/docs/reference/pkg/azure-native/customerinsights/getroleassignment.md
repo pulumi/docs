@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignmentname_csharp">
 <a href="#assignmentname_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignmentname_go">
 <a href="#assignmentname_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignmentname_nodejs">
 <a href="#assignmentname_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assignment_name_python">
 <a href="#assignment_name_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the role assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assignmentname_csharp">
 <a href="#assignmentname_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_csharp">
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Assignment<wbr>Principal<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of roles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conflationpolicies_csharp">
 <a href="#conflationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectors_csharp">
 <a href="#connectors_csharp" style="color: inherit; text-decoration: inherit;">Connectors</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interactions_csharp">
 <a href="#interactions_csharp" style="color: inherit; text-decoration: inherit;">Interactions</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_csharp">
 <a href="#kpis_csharp" style="color: inherit; text-decoration: inherit;">Kpis</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_csharp">
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profiles_csharp">
 <a href="#profiles_csharp" style="color: inherit; text-decoration: inherit;">Profiles</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationshiplinks_csharp">
 <a href="#relationshiplinks_csharp" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationships_csharp">
 <a href="#relationships_csharp" style="color: inherit; text-decoration: inherit;">Relationships</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roleassignments_csharp">
 <a href="#roleassignments_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="saspolicies_csharp">
 <a href="#saspolicies_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segments_csharp">
 <a href="#segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="views_csharp">
 <a href="#views_csharp" style="color: inherit; text-decoration: inherit;">Views</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="widgettypes_csharp">
 <a href="#widgettypes_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
@@ -400,14 +356,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assignmentname_go">
 <a href="#assignmentname_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Name</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_go">
 <a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipalresponse">[]Assignment<wbr>Principal<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of roles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conflationpolicies_go">
 <a href="#conflationpolicies_go" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectors_go">
 <a href="#connectors_go" style="color: inherit; text-decoration: inherit;">Connectors</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interactions_go">
 <a href="#interactions_go" style="color: inherit; text-decoration: inherit;">Interactions</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_go">
 <a href="#kpis_go" style="color: inherit; text-decoration: inherit;">Kpis</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_go">
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profiles_go">
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationshiplinks_go">
 <a href="#relationshiplinks_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationships_go">
 <a href="#relationships_go" style="color: inherit; text-decoration: inherit;">Relationships</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roleassignments_go">
 <a href="#roleassignments_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="saspolicies_go">
 <a href="#saspolicies_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segments_go">
 <a href="#segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="views_go">
 <a href="#views_go" style="color: inherit; text-decoration: inherit;">Views</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="widgettypes_go">
 <a href="#widgettypes_go" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
@@ -613,14 +544,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assignmentname_nodejs">
 <a href="#assignmentname_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Name</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_nodejs">
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipalresponse">Assignment<wbr>Principal<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of roles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conflationpolicies_nodejs">
 <a href="#conflationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">conflation<wbr>Policies</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectors_nodejs">
 <a href="#connectors_nodejs" style="color: inherit; text-decoration: inherit;">connectors</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interactions_nodejs">
 <a href="#interactions_nodejs" style="color: inherit; text-decoration: inherit;">interactions</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_nodejs">
 <a href="#kpis_nodejs" style="color: inherit; text-decoration: inherit;">kpis</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_nodejs">
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profiles_nodejs">
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationshiplinks_nodejs">
 <a href="#relationshiplinks_nodejs" style="color: inherit; text-decoration: inherit;">relationship<wbr>Links</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationships_nodejs">
 <a href="#relationships_nodejs" style="color: inherit; text-decoration: inherit;">relationships</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="roleassignments_nodejs">
 <a href="#roleassignments_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Assignments</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="saspolicies_nodejs">
 <a href="#saspolicies_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Policies</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segments_nodejs">
 <a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="views_nodejs">
 <a href="#views_nodejs" style="color: inherit; text-decoration: inherit;">views</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="widgettypes_nodejs">
 <a href="#widgettypes_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Types</a>
@@ -826,14 +732,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assignment_name_python">
 <a href="#assignment_name_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>name</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the metadata object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_python">
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assignmentprincipalresponse">Sequence[Assignment<wbr>Principal<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of roles.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of roles.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hub name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conflation_policies_python">
 <a href="#conflation_policies_python" style="color: inherit; text-decoration: inherit;">conflation_<wbr>policies</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectors_python">
 <a href="#connectors_python" style="color: inherit; text-decoration: inherit;">connectors</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized description for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Localized display names for the metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interactions_python">
 <a href="#interactions_python" style="color: inherit; text-decoration: inherit;">interactions</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_python">
 <a href="#kpis_python" style="color: inherit; text-decoration: inherit;">kpis</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="links_python">
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profiles_python">
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationship_links_python">
 <a href="#relationship_links_python" style="color: inherit; text-decoration: inherit;">relationship_<wbr>links</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relationships_python">
 <a href="#relationships_python" style="color: inherit; text-decoration: inherit;">relationships</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_assignments_python">
 <a href="#role_assignments_python" style="color: inherit; text-decoration: inherit;">role_<wbr>assignments</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sas_policies_python">
 <a href="#sas_policies_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>policies</a>
@@ -1012,8 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="segments_python">
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="views_python">
 <a href="#views_python" style="color: inherit; text-decoration: inherit;">views</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="widget_types_python">
 <a href="#widget_types_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>types</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1054,9 +934,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1064,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principaltype_csharp">
 <a href="#principaltype_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -1073,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_csharp">
 <a href="#principalmetadata_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Metadata</a>
@@ -1082,14 +958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1097,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principaltype_go">
 <a href="#principaltype_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Type</a>
@@ -1106,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_go">
 <a href="#principalmetadata_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Metadata</a>
@@ -1115,14 +986,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1130,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principaltype_nodejs">
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
@@ -1139,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalmetadata_nodejs">
 <a href="#principalmetadata_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Metadata</a>
@@ -1148,14 +1014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1163,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id being assigned to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_type_python">
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
@@ -1172,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Type of the principal ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_metadata_python">
 <a href="#principal_metadata_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>metadata</a>
@@ -1181,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Other metadata for the principal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcesetdescriptionresponse">Resource<wbr>Set<wbr>Description<wbr>Response</h4>
@@ -1190,9 +1050,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elements_csharp">
 <a href="#elements_csharp" style="color: inherit; text-decoration: inherit;">Elements</a>
@@ -1200,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceptions_csharp">
 <a href="#exceptions_csharp" style="color: inherit; text-decoration: inherit;">Exceptions</a>
@@ -1209,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elements_go">
 <a href="#elements_go" style="color: inherit; text-decoration: inherit;">Elements</a>
@@ -1224,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceptions_go">
 <a href="#exceptions_go" style="color: inherit; text-decoration: inherit;">Exceptions</a>
@@ -1233,14 +1086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elements_nodejs">
 <a href="#elements_nodejs" style="color: inherit; text-decoration: inherit;">elements</a>
@@ -1248,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceptions_nodejs">
 <a href="#exceptions_nodejs" style="color: inherit; text-decoration: inherit;">exceptions</a>
@@ -1257,14 +1106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elements_python">
 <a href="#elements_python" style="color: inherit; text-decoration: inherit;">elements</a>
@@ -1272,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The elements included in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exceptions_python">
 <a href="#exceptions_python" style="color: inherit; text-decoration: inherit;">exceptions</a>
@@ -1281,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The elements that are not included in the set, in case elements contains '*' indicating 'all'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

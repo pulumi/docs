@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="computepolicies_csharp">
 <a href="#computepolicies_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Policies</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computepolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Compute<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currenttier_csharp">
 <a href="#currenttier_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Tier</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datalakestoreaccounts_csharp">
 <a href="#datalakestoreaccounts_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="debugdataaccesslevel_csharp">
 <a href="#debugdataaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Data<wbr>Access<wbr>Level</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultdatalakestoreaccount_csharp">
 <a href="#defaultdatalakestoreaccount_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Data<wbr>Lake<wbr>Store<wbr>Account</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallrules_csharp">
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Firewall<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hivemetastores_csharp">
 <a href="#hivemetastores_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hivemetastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Hive<wbr>Metastore<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minpriorityperjob_csharp">
 <a href="#minpriorityperjob_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Priority<wbr>Per<wbr>Job</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Storage<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemmaxdegreeofparallelism_csharp">
 <a href="#systemmaxdegreeofparallelism_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Max<wbr>Degree<wbr>Of<wbr>Parallelism</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemmaxjobcount_csharp">
 <a href="#systemmaxjobcount_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Max<wbr>Job<wbr>Count</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallallowazureips_csharp">
 <a href="#firewallallowazureips_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallstate_csharp">
 <a href="#firewallstate_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdegreeofparallelism_csharp">
 <a href="#maxdegreeofparallelism_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Degree<wbr>Of<wbr>Parallelism</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdegreeofparallelismperjob_csharp">
 <a href="#maxdegreeofparallelismperjob_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Degree<wbr>Of<wbr>Parallelism<wbr>Per<wbr>Job</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxjobcount_csharp">
 <a href="#maxjobcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Count</a>
@@ -409,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="newtier_csharp">
 <a href="#newtier_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
@@ -418,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdatalakestoreaccounts_csharp">
 <a href="#publicdatalakestoreaccounts_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
@@ -427,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="querystoreretention_csharp">
 <a href="#querystoreretention_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Store<wbr>Retention</a>
@@ -436,14 +388,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="computepolicies_go">
 <a href="#computepolicies_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Policies</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computepolicyresponse">[]Compute<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currenttier_go">
 <a href="#currenttier_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Tier</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datalakestoreaccounts_go">
 <a href="#datalakestoreaccounts_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">[]Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="debugdataaccesslevel_go">
 <a href="#debugdataaccesslevel_go" style="color: inherit; text-decoration: inherit;">Debug<wbr>Data<wbr>Access<wbr>Level</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultdatalakestoreaccount_go">
 <a href="#defaultdatalakestoreaccount_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Data<wbr>Lake<wbr>Store<wbr>Account</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallrules_go">
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">[]Firewall<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hivemetastores_go">
 <a href="#hivemetastores_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hivemetastoreresponse">[]Hive<wbr>Metastore<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minpriorityperjob_go">
 <a href="#minpriorityperjob_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Priority<wbr>Per<wbr>Job</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountinformationresponse">[]Storage<wbr>Account<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemmaxdegreeofparallelism_go">
 <a href="#systemmaxdegreeofparallelism_go" style="color: inherit; text-decoration: inherit;">System<wbr>Max<wbr>Degree<wbr>Of<wbr>Parallelism</a>
@@ -613,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemmaxjobcount_go">
 <a href="#systemmaxjobcount_go" style="color: inherit; text-decoration: inherit;">System<wbr>Max<wbr>Job<wbr>Count</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -631,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -640,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkrules_go">
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
@@ -649,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">[]Virtual<wbr>Network<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallallowazureips_go">
 <a href="#firewallallowazureips_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
@@ -658,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallstate_go">
 <a href="#firewallstate_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
@@ -667,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdegreeofparallelism_go">
 <a href="#maxdegreeofparallelism_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Degree<wbr>Of<wbr>Parallelism</a>
@@ -676,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdegreeofparallelismperjob_go">
 <a href="#maxdegreeofparallelismperjob_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Degree<wbr>Of<wbr>Parallelism<wbr>Per<wbr>Job</a>
@@ -685,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxjobcount_go">
 <a href="#maxjobcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Count</a>
@@ -694,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="newtier_go">
 <a href="#newtier_go" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
@@ -703,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdatalakestoreaccounts_go">
 <a href="#publicdatalakestoreaccounts_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
@@ -712,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">[]Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="querystoreretention_go">
 <a href="#querystoreretention_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Store<wbr>Retention</a>
@@ -721,14 +640,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="computepolicies_nodejs">
 <a href="#computepolicies_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Policies</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computepolicyresponse">Compute<wbr>Policy<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currenttier_nodejs">
 <a href="#currenttier_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Tier</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datalakestoreaccounts_nodejs">
 <a href="#datalakestoreaccounts_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Lake<wbr>Store<wbr>Accounts</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="debugdataaccesslevel_nodejs">
 <a href="#debugdataaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Data<wbr>Access<wbr>Level</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultdatalakestoreaccount_nodejs">
 <a href="#defaultdatalakestoreaccount_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Data<wbr>Lake<wbr>Store<wbr>Account</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallrules_nodejs">
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">Firewall<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hivemetastores_nodejs">
 <a href="#hivemetastores_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Metastores</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hivemetastoreresponse">Hive<wbr>Metastore<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minpriorityperjob_nodejs">
 <a href="#minpriorityperjob_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Priority<wbr>Per<wbr>Job</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -871,8 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -880,8 +780,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
@@ -889,8 +788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountinformationresponse">Storage<wbr>Account<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemmaxdegreeofparallelism_nodejs">
 <a href="#systemmaxdegreeofparallelism_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Max<wbr>Degree<wbr>Of<wbr>Parallelism</a>
@@ -898,8 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemmaxjobcount_nodejs">
 <a href="#systemmaxjobcount_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Max<wbr>Job<wbr>Count</a>
@@ -907,8 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -916,8 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -925,8 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
@@ -934,8 +828,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallallowazureips_nodejs">
 <a href="#firewallallowazureips_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
@@ -943,8 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallstate_nodejs">
 <a href="#firewallstate_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>State</a>
@@ -952,8 +844,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdegreeofparallelism_nodejs">
 <a href="#maxdegreeofparallelism_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Degree<wbr>Of<wbr>Parallelism</a>
@@ -961,8 +852,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdegreeofparallelismperjob_nodejs">
 <a href="#maxdegreeofparallelismperjob_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Degree<wbr>Of<wbr>Parallelism<wbr>Per<wbr>Job</a>
@@ -970,8 +860,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxjobcount_nodejs">
 <a href="#maxjobcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Job<wbr>Count</a>
@@ -979,8 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="newtier_nodejs">
 <a href="#newtier_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Tier</a>
@@ -988,8 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdatalakestoreaccounts_nodejs">
 <a href="#publicdatalakestoreaccounts_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
@@ -997,8 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="querystoreretention_nodejs">
 <a href="#querystoreretention_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Store<wbr>Retention</a>
@@ -1006,14 +892,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique identifier associated with this Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="compute_policies_python">
 <a href="#compute_policies_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>policies</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computepolicyresponse">Sequence[Compute<wbr>Policy<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account creation time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account creation time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_tier_python">
 <a href="#current_tier_python" style="color: inherit; text-decoration: inherit;">current_<wbr>tier</a>
@@ -1048,8 +928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_lake_store_accounts_python">
 <a href="#data_lake_store_accounts_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>accounts</a>
@@ -1057,8 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">Sequence[Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="debug_data_access_level_python">
 <a href="#debug_data_access_level_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>data_<wbr>access_<wbr>level</a>
@@ -1066,8 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_data_lake_store_account_python">
 <a href="#default_data_lake_store_account_python" style="color: inherit; text-decoration: inherit;">default_<wbr>data_<wbr>lake_<wbr>store_<wbr>account</a>
@@ -1075,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The default Data Lake Store account associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1084,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewall_rules_python">
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
@@ -1093,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hive_metastores_python">
 <a href="#hive_metastores_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>metastores</a>
@@ -1102,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hivemetastoreresponse">Sequence[Hive<wbr>Metastore<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1111,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1120,8 +992,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account last modified time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1129,8 +1000,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_priority_per_job_python">
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
@@ -1138,8 +1008,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The minimum supported priority per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1147,8 +1016,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1156,8 +1024,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1165,8 +1032,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The state of the Data Lake Analytics account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
@@ -1174,8 +1040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountinformationresponse">Sequence[Storage<wbr>Account<wbr>Information<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_max_degree_of_parallelism_python">
 <a href="#system_max_degree_of_parallelism_python" style="color: inherit; text-decoration: inherit;">system_<wbr>max_<wbr>degree_<wbr>of_<wbr>parallelism</a>
@@ -1183,8 +1048,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_max_job_count_python">
 <a href="#system_max_job_count_python" style="color: inherit; text-decoration: inherit;">system_<wbr>max_<wbr>job_<wbr>count</a>
@@ -1192,8 +1056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1201,8 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1210,8 +1072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_network_rules_python">
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
@@ -1219,8 +1080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewall_allow_azure_ips_python">
 <a href="#firewall_allow_azure_ips_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>allow_<wbr>azure_<wbr>ips</a>
@@ -1228,8 +1088,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewall_state_python">
 <a href="#firewall_state_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>state</a>
@@ -1237,8 +1096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_degree_of_parallelism_python">
 <a href="#max_degree_of_parallelism_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism</a>
@@ -1246,8 +1104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_degree_of_parallelism_per_job_python">
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
@@ -1255,8 +1112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported degree of parallelism per job for this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_job_count_python">
 <a href="#max_job_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>count</a>
@@ -1264,8 +1120,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum supported jobs running under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="new_tier_python">
 <a href="#new_tier_python" style="color: inherit; text-decoration: inherit;">new_<wbr>tier</a>
@@ -1273,8 +1128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_data_lake_store_accounts_python">
 <a href="#public_data_lake_store_accounts_python" style="color: inherit; text-decoration: inherit;">public_<wbr>data_<wbr>lake_<wbr>store_<wbr>accounts</a>
@@ -1282,8 +1136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakestoreaccountinformationresponse">Sequence[Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="query_store_retention_python">
 <a href="#query_store_retention_python" style="color: inherit; text-decoration: inherit;">query_<wbr>store_<wbr>retention</a>
@@ -1291,8 +1144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of days that job metadata is retained.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1306,9 +1158,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1316,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxdegreeofparallelismperjob_csharp">
 <a href="#maxdegreeofparallelismperjob_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Degree<wbr>Of<wbr>Parallelism<wbr>Per<wbr>Job</a>
@@ -1325,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minpriorityperjob_csharp">
 <a href="#minpriorityperjob_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Priority<wbr>Per<wbr>Job</a>
@@ -1334,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1343,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1352,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objecttype_csharp">
 <a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
@@ -1361,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1370,14 +1214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1385,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxdegreeofparallelismperjob_go">
 <a href="#maxdegreeofparallelismperjob_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Degree<wbr>Of<wbr>Parallelism<wbr>Per<wbr>Job</a>
@@ -1394,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minpriorityperjob_go">
 <a href="#minpriorityperjob_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Priority<wbr>Per<wbr>Job</a>
@@ -1403,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1412,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1421,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objecttype_go">
 <a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
@@ -1430,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1439,14 +1274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1454,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxdegreeofparallelismperjob_nodejs">
 <a href="#maxdegreeofparallelismperjob_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Degree<wbr>Of<wbr>Parallelism<wbr>Per<wbr>Job</a>
@@ -1463,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minpriorityperjob_nodejs">
 <a href="#minpriorityperjob_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Priority<wbr>Per<wbr>Job</a>
@@ -1472,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1481,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1490,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objecttype_nodejs">
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
@@ -1499,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1508,14 +1334,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1523,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_degree_of_parallelism_per_job_python">
 <a href="#max_degree_of_parallelism_per_job_python" style="color: inherit; text-decoration: inherit;">max_<wbr>degree_<wbr>of_<wbr>parallelism_<wbr>per_<wbr>job</a>
@@ -1532,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum degree of parallelism per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_priority_per_job_python">
 <a href="#min_priority_per_job_python" style="color: inherit; text-decoration: inherit;">min_<wbr>priority_<wbr>per_<wbr>job</a>
@@ -1541,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum priority per job this user can use to submit jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1550,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1559,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The AAD object identifier for the entity to create a policy for.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_type_python">
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
@@ -1568,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of AAD object the object identifier refers to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1577,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datalakestoreaccountinformationresponse">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response</h4>
@@ -1586,9 +1402,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1596,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1605,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_csharp">
 <a href="#suffix_csharp" style="color: inherit; text-decoration: inherit;">Suffix</a>
@@ -1614,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1623,14 +1434,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1638,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1647,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_go">
 <a href="#suffix_go" style="color: inherit; text-decoration: inherit;">Suffix</a>
@@ -1656,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1665,14 +1470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1680,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1689,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_nodejs">
 <a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
@@ -1698,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1707,14 +1506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1722,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1731,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_python">
 <a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
@@ -1740,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1749,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallruleresponse">Firewall<wbr>Rule<wbr>Response</h4>
@@ -1758,9 +1550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endipaddress_csharp">
 <a href="#endipaddress_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
@@ -1768,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1777,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1786,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startipaddress_csharp">
 <a href="#startipaddress_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
@@ -1795,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1804,14 +1590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endipaddress_go">
 <a href="#endipaddress_go" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
@@ -1819,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1828,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1837,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startipaddress_go">
 <a href="#startipaddress_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
@@ -1846,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1855,14 +1634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endipaddress_nodejs">
 <a href="#endipaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Ip<wbr>Address</a>
@@ -1870,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1879,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1888,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startipaddress_nodejs">
 <a href="#startipaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Ip<wbr>Address</a>
@@ -1897,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1906,14 +1678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_ip_address_python">
 <a href="#end_ip_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>ip_<wbr>address</a>
@@ -1921,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1930,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1939,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_ip_address_python">
 <a href="#start_ip_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>ip_<wbr>address</a>
@@ -1948,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1957,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hivemetastoreresponse">Hive<wbr>Metastore<wbr>Response</h4>
@@ -1966,9 +1730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1976,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1985,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1994,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nestedresourceprovisioningstate_csharp">
 <a href="#nestedresourceprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Resource<wbr>Provisioning<wbr>State</a>
@@ -2003,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2012,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimeversion_csharp">
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -2021,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serveruri_csharp">
 <a href="#serveruri_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Uri</a>
@@ -2030,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2039,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -2048,14 +1802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -2063,8 +1814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2072,8 +1822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2081,8 +1830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nestedresourceprovisioningstate_go">
 <a href="#nestedresourceprovisioningstate_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Resource<wbr>Provisioning<wbr>State</a>
@@ -2090,8 +1838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2099,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimeversion_go">
 <a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -2108,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serveruri_go">
 <a href="#serveruri_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Uri</a>
@@ -2117,8 +1862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2126,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -2135,14 +1878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -2150,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2159,8 +1898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2168,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nestedresourceprovisioningstate_nodejs">
 <a href="#nestedresourceprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Resource<wbr>Provisioning<wbr>State</a>
@@ -2177,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2186,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimeversion_nodejs">
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
@@ -2195,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serveruri_nodejs">
 <a href="#serveruri_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Uri</a>
@@ -2204,8 +1938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2213,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -2222,14 +1954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -2237,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2246,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2255,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nested_resource_provisioning_state_python">
 <a href="#nested_resource_provisioning_state_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>resource_<wbr>provisioning_<wbr>state</a>
@@ -2264,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2273,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_version_python">
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
@@ -2282,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_uri_python">
 <a href="#server_uri_python" style="color: inherit; text-decoration: inherit;">server_<wbr>uri</a>
@@ -2291,8 +2014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2300,8 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -2309,8 +2030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccountinformationresponse">Storage<wbr>Account<wbr>Information<wbr>Response</h4>
@@ -2318,9 +2038,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2328,8 +2046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2337,8 +2054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_csharp">
 <a href="#suffix_csharp" style="color: inherit; text-decoration: inherit;">Suffix</a>
@@ -2346,8 +2062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2355,14 +2070,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2370,8 +2082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2379,8 +2090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_go">
 <a href="#suffix_go" style="color: inherit; text-decoration: inherit;">Suffix</a>
@@ -2388,8 +2098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2397,14 +2106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2412,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2421,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_nodejs">
 <a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
@@ -2430,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2439,14 +2142,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2454,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2463,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suffix_python">
 <a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
@@ -2472,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The optional suffix for the storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2481,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response</h4>
@@ -2490,9 +2186,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2500,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2509,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2518,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2527,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkrulestate_csharp">
 <a href="#virtualnetworkrulestate_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rule<wbr>State</a>
@@ -2536,14 +2226,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2551,8 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2560,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2569,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2578,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkrulestate_go">
 <a href="#virtualnetworkrulestate_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rule<wbr>State</a>
@@ -2587,14 +2270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2602,8 +2282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2611,8 +2290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2620,8 +2298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2629,8 +2306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkrulestate_nodejs">
 <a href="#virtualnetworkrulestate_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rule<wbr>State</a>
@@ -2638,14 +2314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2653,8 +2326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2662,8 +2334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -2671,8 +2342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2680,8 +2350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_rule_state_python">
 <a href="#virtual_network_rule_state_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rule_<wbr>state</a>
@@ -2689,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

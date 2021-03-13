@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azureportalfqdn_csharp">
 <a href="#azureportalfqdn_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Portal<wbr>FQDN</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxagentpools_csharp">
 <a href="#maxagentpools_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Agent<wbr>Pools</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="powerstate_csharp">
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_csharp">
 <a href="#privatefqdn_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>FQDN</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aadprofile_csharp">
 <a href="#aadprofile_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraadprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addonprofiles_csharp">
 <a href="#addonprofiles_csharp" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profiles</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response&gt;</span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_csharp">
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteragentpoolprofileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiserveraccessprofile_csharp">
 <a href="#apiserveraccessprofile_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Access<wbr>Profile</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterapiserveraccessprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscalerprofile_csharp">
 <a href="#autoscalerprofile_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpropertiesresponseautoscalerprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoupgradeprofile_csharp">
 <a href="#autoupgradeprofile_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Profile</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterautoupgradeprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionsetid_csharp">
 <a href="#diskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>ID</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablepodsecuritypolicy_csharp">
 <a href="#enablepodsecuritypolicy_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablerbac_csharp">
 <a href="#enablerbac_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>RBAC</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdnsubdomain_csharp">
 <a href="#fqdnsubdomain_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Subdomain</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteridentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identityprofile_csharp">
 <a href="#identityprofile_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Profile</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile&gt;</span>
     </dt>
-    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetesversion_csharp">
 <a href="#kubernetesversion_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofile_csharp">
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicenetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noderesourcegroup_csharp">
 <a href="#noderesourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="podidentityprofile_csharp">
 <a href="#podidentityprofile_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Identity<wbr>Profile</a>
@@ -409,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_csharp">
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
@@ -418,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterserviceprincipalprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -427,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -436,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofile_csharp">
 <a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
@@ -445,14 +396,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterwindowsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azureportalfqdn_go">
 <a href="#azureportalfqdn_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Portal<wbr>FQDN</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxagentpools_go">
 <a href="#maxagentpools_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Agent<wbr>Pools</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="powerstate_go">
 <a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_go">
 <a href="#privatefqdn_go" style="color: inherit; text-decoration: inherit;">Private<wbr>FQDN</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aadprofile_go">
 <a href="#aadprofile_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraadprofileresponse">Managed<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addonprofiles_go">
 <a href="#addonprofiles_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profiles</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_go">
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteragentpoolprofileresponse">[]Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiserveraccessprofile_go">
 <a href="#apiserveraccessprofile_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Access<wbr>Profile</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterapiserveraccessprofileresponse">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscalerprofile_go">
 <a href="#autoscalerprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpropertiesresponseautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoupgradeprofile_go">
 <a href="#autoupgradeprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Profile</a>
@@ -595,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterautoupgradeprofileresponse">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionsetid_go">
 <a href="#diskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set<wbr>ID</a>
@@ -604,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
@@ -613,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablepodsecuritypolicy_go">
 <a href="#enablepodsecuritypolicy_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Pod<wbr>Security<wbr>Policy</a>
@@ -622,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablerbac_go">
 <a href="#enablerbac_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>RBAC</a>
@@ -631,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdnsubdomain_go">
 <a href="#fqdnsubdomain_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Subdomain</a>
@@ -640,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -649,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteridentityresponse">Managed<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identityprofile_go">
 <a href="#identityprofile_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Profile</a>
@@ -658,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile</span>
     </dt>
-    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetesversion_go">
 <a href="#kubernetesversion_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version</a>
@@ -667,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofile_go">
 <a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
@@ -676,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
@@ -685,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicenetworkprofileresponse">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noderesourcegroup_go">
 <a href="#noderesourcegroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Resource<wbr>Group</a>
@@ -694,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="podidentityprofile_go">
 <a href="#podidentityprofile_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Identity<wbr>Profile</a>
@@ -703,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_go">
 <a href="#serviceprincipalprofile_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
@@ -712,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterserviceprincipalprofileresponse">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -721,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterskuresponse">Managed<wbr>Cluster<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -730,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofile_go">
 <a href="#windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
@@ -739,14 +656,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterwindowsprofileresponse">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azureportalfqdn_nodejs">
 <a href="#azureportalfqdn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Portal<wbr>FQDN</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxagentpools_nodejs">
 <a href="#maxagentpools_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Agent<wbr>Pools</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="powerstate_nodejs">
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatefqdn_nodejs">
 <a href="#privatefqdn_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>FQDN</a>
@@ -817,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -826,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -835,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aadprofile_nodejs">
 <a href="#aadprofile_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Profile</a>
@@ -844,8 +748,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraadprofileresponse">Managed<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addonprofiles_nodejs">
 <a href="#addonprofiles_nodejs" style="color: inherit; text-decoration: inherit;">addon<wbr>Profiles</a>
@@ -853,8 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agentpoolprofiles_nodejs">
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
@@ -862,8 +764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteragentpoolprofileresponse">Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="apiserveraccessprofile_nodejs">
 <a href="#apiserveraccessprofile_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Server<wbr>Access<wbr>Profile</a>
@@ -871,8 +772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterapiserveraccessprofileresponse">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscalerprofile_nodejs">
 <a href="#autoscalerprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler<wbr>Profile</a>
@@ -880,8 +780,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpropertiesresponseautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoupgradeprofile_nodejs">
 <a href="#autoupgradeprofile_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Profile</a>
@@ -889,8 +788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterautoupgradeprofileresponse">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="diskencryptionsetid_nodejs">
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>ID</a>
@@ -898,8 +796,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
@@ -907,8 +804,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablepodsecuritypolicy_nodejs">
 <a href="#enablepodsecuritypolicy_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Pod<wbr>Security<wbr>Policy</a>
@@ -916,8 +812,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablerbac_nodejs">
 <a href="#enablerbac_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>RBAC</a>
@@ -925,8 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdnsubdomain_nodejs">
 <a href="#fqdnsubdomain_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Subdomain</a>
@@ -934,8 +828,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -943,8 +836,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteridentityresponse">Managed<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identityprofile_nodejs">
 <a href="#identityprofile_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Profile</a>
@@ -952,8 +844,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile}</span>
     </dt>
-    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetesversion_nodejs">
 <a href="#kubernetesversion_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version</a>
@@ -961,8 +852,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linuxprofile_nodejs">
 <a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
@@ -970,8 +860,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
@@ -979,8 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicenetworkprofileresponse">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noderesourcegroup_nodejs">
 <a href="#noderesourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Resource<wbr>Group</a>
@@ -988,8 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="podidentityprofile_nodejs">
 <a href="#podidentityprofile_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Identity<wbr>Profile</a>
@@ -997,8 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceprincipalprofile_nodejs">
 <a href="#serviceprincipalprofile_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Profile</a>
@@ -1006,8 +892,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterserviceprincipalprofileresponse">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1015,8 +900,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterskuresponse">Managed<wbr>Cluster<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1024,8 +908,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windowsprofile_nodejs">
 <a href="#windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
@@ -1033,14 +916,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterwindowsprofileresponse">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azure_portal_fqdn_python">
 <a href="#azure_portal_fqdn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>portal_<wbr>fqdn</a>
@@ -1048,8 +928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool which used by proxy config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1057,8 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN for the master pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1066,8 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1075,8 +952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_agent_pools_python">
 <a href="#max_agent_pools_python" style="color: inherit; text-decoration: inherit;">max_<wbr>agent_<wbr>pools</a>
@@ -1084,8 +960,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The max number of agent pools for the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1093,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="power_state_python">
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
@@ -1102,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Power State of the cluster{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_fqdn_python">
 <a href="#private_fqdn_python" style="color: inherit; text-decoration: inherit;">private_<wbr>fqdn</a>
@@ -1111,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN of private cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1120,8 +992,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1129,8 +1000,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aad_profile_python">
 <a href="#aad_profile_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>profile</a>
@@ -1138,8 +1008,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraadprofileresponse">Managed<wbr>Cluster<wbr>AADProfile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addon_profiles_python">
 <a href="#addon_profiles_python" style="color: inherit; text-decoration: inherit;">addon_<wbr>profiles</a>
@@ -1147,8 +1016,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response]</span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="agent_pool_profiles_python">
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
@@ -1156,8 +1024,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteragentpoolprofileresponse">Sequence[Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="api_server_access_profile_python">
 <a href="#api_server_access_profile_python" style="color: inherit; text-decoration: inherit;">api_<wbr>server_<wbr>access_<wbr>profile</a>
@@ -1165,8 +1032,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterapiserveraccessprofileresponse">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_scaler_profile_python">
 <a href="#auto_scaler_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler_<wbr>profile</a>
@@ -1174,8 +1040,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpropertiesresponseautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_upgrade_profile_python">
 <a href="#auto_upgrade_profile_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>profile</a>
@@ -1183,8 +1048,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterautoupgradeprofileresponse">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_encryption_set_id_python">
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
@@ -1192,8 +1056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
@@ -1201,8 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}DNS prefix specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_pod_security_policy_python">
 <a href="#enable_pod_security_policy_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>pod_<wbr>security_<wbr>policy</a>
@@ -1210,8 +1072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}(DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_rbac_python">
 <a href="#enable_rbac_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac</a>
@@ -1219,8 +1080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether to enable Kubernetes Role-Based Access Control.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fqdn_subdomain_python">
 <a href="#fqdn_subdomain_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>subdomain</a>
@@ -1228,8 +1088,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}FQDN subdomain specified when creating private cluster with custom private dns zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1237,8 +1096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteridentityresponse">Managed<wbr>Cluster<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_profile_python">
 <a href="#identity_profile_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>profile</a>
@@ -1246,8 +1104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile]</span>
     </dt>
-    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetes_version_python">
 <a href="#kubernetes_version_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version</a>
@@ -1255,8 +1112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of Kubernetes specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="linux_profile_python">
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
@@ -1264,8 +1120,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
@@ -1273,8 +1128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicenetworkprofileresponse">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_resource_group_python">
 <a href="#node_resource_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>resource_<wbr>group</a>
@@ -1282,8 +1136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource group containing agent pool nodes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pod_identity_profile_python">
 <a href="#pod_identity_profile_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>identity_<wbr>profile</a>
@@ -1291,8 +1144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_principal_profile_python">
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
@@ -1300,8 +1152,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterserviceprincipalprofileresponse">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1309,8 +1160,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterskuresponse">Managed<wbr>Cluster<wbr>SKUResponse</a></span>
     </dt>
-    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1318,8 +1168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="windows_profile_python">
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
@@ -1327,8 +1176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterwindowsprofileresponse">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1342,9 +1190,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxsurge_csharp">
 <a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -1352,14 +1198,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxsurge_go">
 <a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
@@ -1367,14 +1210,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxsurge_nodejs">
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
@@ -1382,14 +1222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_surge_python">
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
@@ -1397,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</h4>
@@ -1406,9 +1242,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1416,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1425,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1434,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1443,14 +1274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1458,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -1467,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">[]Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1476,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1485,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1500,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1509,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1518,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1527,14 +1346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1542,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -1551,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1560,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1569,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clouderrorresponse">Cloud<wbr>Error<wbr>Response</h4>
@@ -1578,9 +1390,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1588,14 +1398,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1603,14 +1410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1618,14 +1422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1633,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details about the error.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</h4>
@@ -1642,9 +1442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1652,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_csharp">
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -1661,14 +1458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1676,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_go">
 <a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
@@ -1685,14 +1478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -1700,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_nodejs">
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -1709,14 +1498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -1724,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_python">
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
@@ -1733,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicenetworkprofileresponse">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</h4>
@@ -1742,9 +1526,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_csharp">
 <a href="#dnsserviceip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>IP</a>
@@ -1752,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerbridgecidr_csharp">
 <a href="#dockerbridgecidr_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
@@ -1761,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerprofile_csharp">
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
@@ -1770,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancersku_csharp">
 <a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
@@ -1779,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkmode_csharp">
 <a href="#networkmode_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
@@ -1788,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkplugin_csharp">
 <a href="#networkplugin_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
@@ -1797,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkpolicy_csharp">
 <a href="#networkpolicy_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
@@ -1806,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundtype_csharp">
 <a href="#outboundtype_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
@@ -1815,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podcidr_csharp">
 <a href="#podcidr_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
@@ -1824,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_csharp">
 <a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1833,14 +1606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_go">
 <a href="#dnsserviceip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>IP</a>
@@ -1848,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerbridgecidr_go">
 <a href="#dockerbridgecidr_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
@@ -1857,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerprofile_go">
 <a href="#loadbalancerprofile_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
@@ -1866,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancersku_go">
 <a href="#loadbalancersku_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
@@ -1875,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkmode_go">
 <a href="#networkmode_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Mode</a>
@@ -1884,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkplugin_go">
 <a href="#networkplugin_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Plugin</a>
@@ -1893,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkpolicy_go">
 <a href="#networkpolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
@@ -1902,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundtype_go">
 <a href="#outboundtype_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Type</a>
@@ -1911,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podcidr_go">
 <a href="#podcidr_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Cidr</a>
@@ -1920,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_go">
 <a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1929,14 +1690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_nodejs">
 <a href="#dnsserviceip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>IP</a>
@@ -1944,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerbridgecidr_nodejs">
 <a href="#dockerbridgecidr_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
@@ -1953,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancerprofile_nodejs">
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
@@ -1962,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancersku_nodejs">
 <a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
@@ -1971,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkmode_nodejs">
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
@@ -1980,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkplugin_nodejs">
 <a href="#networkplugin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Plugin</a>
@@ -1989,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkpolicy_nodejs">
 <a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
@@ -1998,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundtype_nodejs">
 <a href="#outboundtype_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Type</a>
@@ -2007,8 +1758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podcidr_nodejs">
 <a href="#podcidr_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Cidr</a>
@@ -2016,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_nodejs">
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
@@ -2025,14 +1774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_service_ip_python">
 <a href="#dns_service_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>ip</a>
@@ -2040,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_bridge_cidr_python">
 <a href="#docker_bridge_cidr_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>bridge_<wbr>cidr</a>
@@ -2049,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancer_profile_python">
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
@@ -2058,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancer_sku_python">
 <a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
@@ -2067,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The load balancer sku for the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_mode_python">
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
@@ -2076,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network mode used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_plugin_python">
 <a href="#network_plugin_python" style="color: inherit; text-decoration: inherit;">network_<wbr>plugin</a>
@@ -2085,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network plugin used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_policy_python">
 <a href="#network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
@@ -2094,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network policy used for building Kubernetes network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbound_type_python">
 <a href="#outbound_type_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>type</a>
@@ -2103,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The outbound (egress) routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_cidr_python">
 <a href="#pod_cidr_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>cidr</a>
@@ -2112,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign pod IPs when kubenet is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_cidr_python">
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
@@ -2121,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</h4>
@@ -2130,9 +1866,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -2140,14 +1874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -2155,14 +1886,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">[]Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -2170,14 +1898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -2185,8 +1910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
@@ -2194,9 +1918,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -2204,14 +1926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
@@ -2219,14 +1938,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
@@ -2234,14 +1950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
@@ -2249,8 +1962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</h4>
@@ -2258,9 +1970,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedunsafesysctls_csharp">
 <a href="#allowedunsafesysctls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
@@ -2268,8 +1978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxfiles_csharp">
 <a href="#containerlogmaxfiles_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
@@ -2277,8 +1986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxsizemb_csharp">
 <a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
@@ -2286,8 +1994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_csharp">
 <a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
@@ -2295,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquotaperiod_csharp">
 <a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
@@ -2304,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpumanagerpolicy_csharp">
 <a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
@@ -2313,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failswapon_csharp">
 <a href="#failswapon_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
@@ -2322,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegchighthreshold_csharp">
 <a href="#imagegchighthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
@@ -2331,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegclowthreshold_csharp">
 <a href="#imagegclowthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
@@ -2340,8 +2042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podmaxpids_csharp">
 <a href="#podmaxpids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
@@ -2349,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topologymanagerpolicy_csharp">
 <a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
@@ -2358,14 +2058,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedunsafesysctls_go">
 <a href="#allowedunsafesysctls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
@@ -2373,8 +2070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxfiles_go">
 <a href="#containerlogmaxfiles_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
@@ -2382,8 +2078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxsizemb_go">
 <a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
@@ -2391,8 +2086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_go">
 <a href="#cpucfsquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
@@ -2400,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquotaperiod_go">
 <a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
@@ -2409,8 +2102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpumanagerpolicy_go">
 <a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
@@ -2418,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failswapon_go">
 <a href="#failswapon_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
@@ -2427,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegchighthreshold_go">
 <a href="#imagegchighthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
@@ -2436,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegclowthreshold_go">
 <a href="#imagegclowthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
@@ -2445,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podmaxpids_go">
 <a href="#podmaxpids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
@@ -2454,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topologymanagerpolicy_go">
 <a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
@@ -2463,14 +2150,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedunsafesysctls_nodejs">
 <a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
@@ -2478,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxfiles_nodejs">
 <a href="#containerlogmaxfiles_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Files</a>
@@ -2487,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerlogmaxsizemb_nodejs">
 <a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
@@ -2496,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_nodejs">
 <a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
@@ -2505,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpucfsquotaperiod_nodejs">
 <a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
@@ -2514,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpumanagerpolicy_nodejs">
 <a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
@@ -2523,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failswapon_nodejs">
 <a href="#failswapon_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Swap<wbr>On</a>
@@ -2532,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegchighthreshold_nodejs">
 <a href="#imagegchighthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>High<wbr>Threshold</a>
@@ -2541,8 +2218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagegclowthreshold_nodejs">
 <a href="#imagegclowthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>Low<wbr>Threshold</a>
@@ -2550,8 +2226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podmaxpids_nodejs">
 <a href="#podmaxpids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pids</a>
@@ -2559,8 +2234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topologymanagerpolicy_nodejs">
 <a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
@@ -2568,14 +2242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_unsafe_sysctls_python">
 <a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
@@ -2583,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_log_max_files_python">
 <a href="#container_log_max_files_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>files</a>
@@ -2592,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_log_max_size_mb_python">
 <a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
@@ -2601,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_python">
 <a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
@@ -2610,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_period_python">
 <a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
@@ -2619,8 +2286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_manager_policy_python">
 <a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
@@ -2628,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fail_swap_on_python">
 <a href="#fail_swap_on_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>swap_<wbr>on</a>
@@ -2637,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_gc_high_threshold_python">
 <a href="#image_gc_high_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>high_<wbr>threshold</a>
@@ -2646,8 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_gc_low_threshold_python">
 <a href="#image_gc_low_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>low_<wbr>threshold</a>
@@ -2655,8 +2318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_max_pids_python">
 <a href="#pod_max_pids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pids</a>
@@ -2664,8 +2326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="topology_manager_policy_python">
 <a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
@@ -2673,8 +2334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</h4>
@@ -2682,9 +2342,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swapfilesizemb_csharp">
 <a href="#swapfilesizemb_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
@@ -2692,8 +2350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_csharp">
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -2701,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepagedefrag_csharp">
 <a href="#transparenthugepagedefrag_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
@@ -2710,8 +2366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepageenabled_csharp">
 <a href="#transparenthugepageenabled_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
@@ -2719,14 +2374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swapfilesizemb_go">
 <a href="#swapfilesizemb_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
@@ -2734,8 +2386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_go">
 <a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -2743,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepagedefrag_go">
 <a href="#transparenthugepagedefrag_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
@@ -2752,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepageenabled_go">
 <a href="#transparenthugepageenabled_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
@@ -2761,14 +2410,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swapfilesizemb_nodejs">
 <a href="#swapfilesizemb_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>File<wbr>Size<wbr>MB</a>
@@ -2776,8 +2422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_nodejs">
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -2785,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepagedefrag_nodejs">
 <a href="#transparenthugepagedefrag_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
@@ -2794,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparenthugepageenabled_nodejs">
 <a href="#transparenthugepageenabled_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
@@ -2803,14 +2446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="swap_file_size_mb_python">
 <a href="#swap_file_size_mb_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>file_<wbr>size_<wbr>mb</a>
@@ -2818,8 +2458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysctls_python">
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -2827,8 +2466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparent_huge_page_defrag_python">
 <a href="#transparent_huge_page_defrag_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>defrag</a>
@@ -2836,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparent_huge_page_enabled_python">
 <a href="#transparent_huge_page_enabled_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>enabled</a>
@@ -2845,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusteraadprofileresponse">Managed<wbr>Cluster<wbr>AADProfile<wbr>Response</h4>
@@ -2854,9 +2490,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admingroupobjectids_csharp">
 <a href="#admingroupobjectids_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>IDs</a>
@@ -2864,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_csharp">
 <a href="#clientappid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>ID</a>
@@ -2873,8 +2506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableazurerbac_csharp">
 <a href="#enableazurerbac_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Azure<wbr>RBAC</a>
@@ -2882,8 +2514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_csharp">
 <a href="#managed_csharp" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -2891,8 +2522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverappid_csharp">
 <a href="#serverappid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>ID</a>
@@ -2900,8 +2530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverappsecret_csharp">
 <a href="#serverappsecret_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Secret</a>
@@ -2909,8 +2538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>ID</a>
@@ -2918,14 +2546,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admingroupobjectids_go">
 <a href="#admingroupobjectids_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Group<wbr>Object<wbr>IDs</a>
@@ -2933,8 +2558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_go">
 <a href="#clientappid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>App<wbr>ID</a>
@@ -2942,8 +2566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableazurerbac_go">
 <a href="#enableazurerbac_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Azure<wbr>RBAC</a>
@@ -2951,8 +2574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_go">
 <a href="#managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
@@ -2960,8 +2582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverappid_go">
 <a href="#serverappid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>ID</a>
@@ -2969,8 +2590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverappsecret_go">
 <a href="#serverappsecret_go" style="color: inherit; text-decoration: inherit;">Server<wbr>App<wbr>Secret</a>
@@ -2978,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>ID</a>
@@ -2987,14 +2606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admingroupobjectids_nodejs">
 <a href="#admingroupobjectids_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Group<wbr>Object<wbr>IDs</a>
@@ -3002,8 +2618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientappid_nodejs">
 <a href="#clientappid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>App<wbr>ID</a>
@@ -3011,8 +2626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableazurerbac_nodejs">
 <a href="#enableazurerbac_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Azure<wbr>RBAC</a>
@@ -3020,8 +2634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_nodejs">
 <a href="#managed_nodejs" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -3029,8 +2642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverappid_nodejs">
 <a href="#serverappid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>ID</a>
@@ -3038,8 +2650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverappsecret_nodejs">
 <a href="#serverappsecret_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>App<wbr>Secret</a>
@@ -3047,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>ID</a>
@@ -3056,14 +2666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_group_object_ids_python">
 <a href="#admin_group_object_ids_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>group_<wbr>object_<wbr>ids</a>
@@ -3071,8 +2678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AAD group object IDs that will have admin role of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_app_id_python">
 <a href="#client_app_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>app_<wbr>id</a>
@@ -3080,8 +2686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_azure_rbac_python">
 <a href="#enable_azure_rbac_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>azure_<wbr>rbac</a>
@@ -3089,8 +2694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable Azure RBAC for Kubernetes authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_python">
 <a href="#managed_python" style="color: inherit; text-decoration: inherit;">managed</a>
@@ -3098,8 +2702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable managed AAD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_app_id_python">
 <a href="#server_app_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>id</a>
@@ -3107,8 +2710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_app_secret_python">
 <a href="#server_app_secret_python" style="color: inherit; text-decoration: inherit;">server_<wbr>app_<wbr>secret</a>
@@ -3116,8 +2718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The server AAD application secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -3125,8 +2726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterapiserveraccessprofileresponse">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Response</h4>
@@ -3134,9 +2734,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizedipranges_csharp">
 <a href="#authorizedipranges_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>IPRanges</a>
@@ -3144,8 +2742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivatecluster_csharp">
 <a href="#enableprivatecluster_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Cluster</a>
@@ -3153,8 +2750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednszone_csharp">
 <a href="#privatednszone_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>DNSZone</a>
@@ -3162,14 +2758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizedipranges_go">
 <a href="#authorizedipranges_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>IPRanges</a>
@@ -3177,8 +2770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivatecluster_go">
 <a href="#enableprivatecluster_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Cluster</a>
@@ -3186,8 +2778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednszone_go">
 <a href="#privatednszone_go" style="color: inherit; text-decoration: inherit;">Private<wbr>DNSZone</a>
@@ -3195,14 +2786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizedipranges_nodejs">
 <a href="#authorizedipranges_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>IPRanges</a>
@@ -3210,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivatecluster_nodejs">
 <a href="#enableprivatecluster_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Cluster</a>
@@ -3219,8 +2806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednszone_nodejs">
 <a href="#privatednszone_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>DNSZone</a>
@@ -3228,14 +2814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorized_ip_ranges_python">
 <a href="#authorized_ip_ranges_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>ip_<wbr>ranges</a>
@@ -3243,8 +2826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorized IP Ranges to kubernetes API server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_private_cluster_python">
 <a href="#enable_private_cluster_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>cluster</a>
@@ -3252,8 +2834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to create the cluster as a private cluster or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_dns_zone_python">
 <a href="#private_dns_zone_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone</a>
@@ -3261,8 +2842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Private dns zone mode for private cluster. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusteraddonprofileresponse">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response</h4>
@@ -3270,9 +2850,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3280,8 +2858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3289,8 +2866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -3298,14 +2874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3313,8 +2886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3322,8 +2894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -3331,14 +2902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3346,8 +2914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3355,8 +2922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -3364,14 +2930,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3379,8 +2942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether the add-on is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3388,8 +2950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -3397,8 +2958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs for configuring an add-on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</h4>
@@ -3406,9 +2966,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3416,8 +2974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -3425,8 +2982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3434,14 +2990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3449,8 +3002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -3458,8 +3010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3467,14 +3018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -3482,8 +3030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -3491,8 +3038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -3500,14 +3046,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -3515,8 +3058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -3524,8 +3066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -3533,8 +3074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusteragentpoolprofileresponse">Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</h4>
@@ -3542,9 +3082,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3552,8 +3090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeimageversion_csharp">
 <a href="#nodeimageversion_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Image<wbr>Version</a>
@@ -3561,8 +3098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="powerstate_csharp">
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -3570,8 +3106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3579,8 +3114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -3588,8 +3122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -3597,8 +3130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautoscaling_csharp">
 <a href="#enableautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -3606,8 +3138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableencryptionathost_csharp">
 <a href="#enableencryptionathost_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
@@ -3615,8 +3146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
@@ -3624,8 +3154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_csharp">
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -3633,8 +3162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletdisktype_csharp">
 <a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
@@ -3642,8 +3170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_csharp">
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
@@ -3651,8 +3178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -3660,8 +3186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpods_csharp">
 <a href="#maxpods_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -3669,8 +3194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincount_csharp">
 <a href="#mincount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -3678,8 +3202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3687,8 +3210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodelabels_csharp">
 <a href="#nodelabels_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -3696,8 +3218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublicipprefixid_csharp">
 <a href="#nodepublicipprefixid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>IPPrefix<wbr>ID</a>
@@ -3705,8 +3226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_csharp">
 <a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -3714,8 +3234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestratorversion_csharp">
 <a href="#orchestratorversion_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -3723,8 +3242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_csharp">
 <a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -3732,8 +3250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisktype_csharp">
 <a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -3741,8 +3258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -3750,8 +3266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsubnetid_csharp">
 <a href="#podsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>ID</a>
@@ -3759,8 +3274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_csharp">
 <a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>ID</a>
@@ -3768,8 +3282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesetevictionpolicy_csharp">
 <a href="#scalesetevictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
@@ -3777,8 +3290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesetpriority_csharp">
 <a href="#scalesetpriority_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
@@ -3786,8 +3298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_csharp">
 <a href="#spotmaxprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -3795,8 +3306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3804,8 +3314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3813,8 +3322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_csharp">
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -3822,8 +3330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -3831,8 +3338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetid_csharp">
 <a href="#vnetsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
@@ -3840,14 +3346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3855,8 +3358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeimageversion_go">
 <a href="#nodeimageversion_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Image<wbr>Version</a>
@@ -3864,8 +3366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="powerstate_go">
 <a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -3873,8 +3374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3882,8 +3382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -3891,8 +3390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -3900,8 +3398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautoscaling_go">
 <a href="#enableautoscaling_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Scaling</a>
@@ -3909,8 +3406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableencryptionathost_go">
 <a href="#enableencryptionathost_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
@@ -3918,8 +3414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
@@ -3927,8 +3422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_go">
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -3936,8 +3430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletdisktype_go">
 <a href="#kubeletdisktype_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
@@ -3945,8 +3438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_go">
 <a href="#linuxosconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
@@ -3954,8 +3446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_go">
 <a href="#maxcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
@@ -3963,8 +3454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpods_go">
 <a href="#maxpods_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods</a>
@@ -3972,8 +3462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincount_go">
 <a href="#mincount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Count</a>
@@ -3981,8 +3470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3990,8 +3478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodelabels_go">
 <a href="#nodelabels_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Labels</a>
@@ -3999,8 +3486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublicipprefixid_go">
 <a href="#nodepublicipprefixid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Public<wbr>IPPrefix<wbr>ID</a>
@@ -4008,8 +3494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_go">
 <a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
@@ -4017,8 +3502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestratorversion_go">
 <a href="#orchestratorversion_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Version</a>
@@ -4026,8 +3510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_go">
 <a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -4035,8 +3518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisktype_go">
 <a href="#osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
@@ -4044,8 +3526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -4053,8 +3534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsubnetid_go">
 <a href="#podsubnetid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>ID</a>
@@ -4062,8 +3542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_go">
 <a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>ID</a>
@@ -4071,8 +3550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesetevictionpolicy_go">
 <a href="#scalesetevictionpolicy_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
@@ -4080,8 +3558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesetpriority_go">
 <a href="#scalesetpriority_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Set<wbr>Priority</a>
@@ -4089,8 +3566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_go">
 <a href="#spotmaxprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Max<wbr>Price</a>
@@ -4098,8 +3574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4107,8 +3582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4116,8 +3590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_go">
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
@@ -4125,8 +3598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -4134,8 +3606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetid_go">
 <a href="#vnetsubnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Subnet<wbr>ID</a>
@@ -4143,14 +3614,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4158,8 +3626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeimageversion_nodejs">
 <a href="#nodeimageversion_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Image<wbr>Version</a>
@@ -4167,8 +3634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="powerstate_nodejs">
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
@@ -4176,8 +3642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -4185,8 +3650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -4194,8 +3658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -4203,8 +3666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableautoscaling_nodejs">
 <a href="#enableautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Scaling</a>
@@ -4212,8 +3674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableencryptionathost_nodejs">
 <a href="#enableencryptionathost_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption<wbr>At<wbr>Host</a>
@@ -4221,8 +3682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
@@ -4230,8 +3690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletconfig_nodejs">
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
@@ -4239,8 +3698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeletdisktype_nodejs">
 <a href="#kubeletdisktype_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Disk<wbr>Type</a>
@@ -4248,8 +3706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_nodejs">
 <a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
@@ -4257,8 +3714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_nodejs">
 <a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
@@ -4266,8 +3722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpods_nodejs">
 <a href="#maxpods_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods</a>
@@ -4275,8 +3730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mincount_nodejs">
 <a href="#mincount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Count</a>
@@ -4284,8 +3738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -4293,8 +3746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodelabels_nodejs">
 <a href="#nodelabels_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Labels</a>
@@ -4302,8 +3754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodepublicipprefixid_nodejs">
 <a href="#nodepublicipprefixid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Public<wbr>IPPrefix<wbr>ID</a>
@@ -4311,8 +3762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodetaints_nodejs">
 <a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
@@ -4320,8 +3770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestratorversion_nodejs">
 <a href="#orchestratorversion_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Version</a>
@@ -4329,8 +3778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_nodejs">
 <a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -4338,8 +3786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisktype_nodejs">
 <a href="#osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
@@ -4347,8 +3794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -4356,8 +3802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podsubnetid_nodejs">
 <a href="#podsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Subnet<wbr>ID</a>
@@ -4365,8 +3810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_nodejs">
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>ID</a>
@@ -4374,8 +3818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesetevictionpolicy_nodejs">
 <a href="#scalesetevictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Set<wbr>Eviction<wbr>Policy</a>
@@ -4383,8 +3826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesetpriority_nodejs">
 <a href="#scalesetpriority_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Set<wbr>Priority</a>
@@ -4392,8 +3834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaxprice_nodejs">
 <a href="#spotmaxprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Max<wbr>Price</a>
@@ -4401,8 +3842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4410,8 +3850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4419,8 +3858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_nodejs">
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
@@ -4428,8 +3866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -4437,8 +3874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetsubnetid_nodejs">
 <a href="#vnetsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>ID</a>
@@ -4446,14 +3882,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4461,8 +3894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_image_version_python">
 <a href="#node_image_version_python" style="color: inherit; text-decoration: inherit;">node_<wbr>image_<wbr>version</a>
@@ -4470,8 +3902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of node image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Version of node image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="power_state_python">
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
@@ -4479,8 +3910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -4488,8 +3918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -4497,8 +3926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -4506,8 +3934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_auto_scaling_python">
 <a href="#enable_auto_scaling_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>scaling</a>
@@ -4515,8 +3942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_encryption_at_host_python">
 <a href="#enable_encryption_at_host_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption_<wbr>at_<wbr>host</a>
@@ -4524,8 +3950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
@@ -4533,8 +3958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubelet_config_python">
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
@@ -4542,8 +3966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubelet_disk_type_python">
 <a href="#kubelet_disk_type_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>disk_<wbr>type</a>
@@ -4551,8 +3974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linux_os_config_python">
 <a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
@@ -4560,8 +3982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_count_python">
 <a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
@@ -4569,8 +3990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_pods_python">
 <a href="#max_pods_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods</a>
@@ -4578,8 +3998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of pods that can run on a node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_count_python">
 <a href="#min_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>count</a>
@@ -4587,8 +4006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum number of nodes for auto-scaling{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -4596,8 +4014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolMode represents mode of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_labels_python">
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
@@ -4605,8 +4022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool node labels to be persisted across all nodes in agent pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_public_ip_prefix_id_python">
 <a href="#node_public_ip_prefix_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>public_<wbr>ip_<wbr>prefix_<wbr>id</a>
@@ -4614,8 +4030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_taints_python">
 <a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
@@ -4623,8 +4038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orchestrator_version_python">
 <a href="#orchestrator_version_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>version</a>
@@ -4632,8 +4046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Version of orchestrator specified when creating the managed cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_size_gb_python">
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -4641,8 +4054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_type_python">
 <a href="#os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
@@ -4650,8 +4062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -4659,8 +4070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_subnet_id_python">
 <a href="#pod_subnet_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>subnet_<wbr>id</a>
@@ -4668,8 +4078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proximity_placement_group_id_python">
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
@@ -4677,8 +4086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_set_eviction_policy_python">
 <a href="#scale_set_eviction_policy_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>set_<wbr>eviction_<wbr>policy</a>
@@ -4686,8 +4094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_set_priority_python">
 <a href="#scale_set_priority_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>set_<wbr>priority</a>
@@ -4695,8 +4102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_max_price_python">
 <a href="#spot_max_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>max_<wbr>price</a>
@@ -4704,8 +4110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4713,8 +4118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent pool tags to be persisted on the agent pool virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4722,8 +4126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AgentPoolType represents types of an agent pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_settings_python">
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
@@ -4731,8 +4134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -4740,8 +4142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_subnet_id_python">
 <a href="#vnet_subnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>id</a>
@@ -4749,8 +4150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterautoupgradeprofileresponse">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Response</h4>
@@ -4758,9 +4158,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="upgradechannel_csharp">
 <a href="#upgradechannel_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Channel</a>
@@ -4768,14 +4166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="upgradechannel_go">
 <a href="#upgradechannel_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Channel</a>
@@ -4783,14 +4178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="upgradechannel_nodejs">
 <a href="#upgradechannel_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Channel</a>
@@ -4798,14 +4190,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="upgrade_channel_python">
 <a href="#upgrade_channel_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>channel</a>
@@ -4813,8 +4202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}upgrade channel for auto upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusteridentityresponse">Managed<wbr>Cluster<wbr>Identity<wbr>Response</h4>
@@ -4822,9 +4210,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4832,8 +4218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4841,8 +4226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4850,8 +4234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -4859,14 +4242,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4874,8 +4254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4883,8 +4262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4892,8 +4270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -4901,14 +4278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
     </dt>
-    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -4916,8 +4290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -4925,8 +4298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4934,8 +4306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -4943,14 +4314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
-    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -4958,8 +4326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4967,8 +4334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant id of the system assigned identity which is used by master components.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4976,8 +4342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -4985,8 +4350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusteridentityresponseuserassignedidentities">Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
@@ -4994,9 +4358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -5004,8 +4366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -5013,14 +4374,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -5028,8 +4386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -5037,14 +4394,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -5052,8 +4406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -5061,14 +4414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -5076,8 +4426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -5085,8 +4434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</h4>
@@ -5094,9 +4442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatedoutboundports_csharp">
 <a href="#allocatedoutboundports_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Outbound<wbr>Ports</a>
@@ -5104,8 +4450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effectiveoutboundips_csharp">
 <a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
@@ -5113,8 +4458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeoutinminutes_csharp">
 <a href="#idletimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
@@ -5122,8 +4466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedoutboundips_csharp">
 <a href="#managedoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
@@ -5131,8 +4474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundipprefixes_csharp">
 <a href="#outboundipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
@@ -5140,8 +4482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundips_csharp">
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
@@ -5149,14 +4490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatedoutboundports_go">
 <a href="#allocatedoutboundports_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Outbound<wbr>Ports</a>
@@ -5164,8 +4502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effectiveoutboundips_go">
 <a href="#effectiveoutboundips_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
@@ -5173,8 +4510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">[]Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeoutinminutes_go">
 <a href="#idletimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
@@ -5182,8 +4518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedoutboundips_go">
 <a href="#managedoutboundips_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
@@ -5191,8 +4526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
-    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundipprefixes_go">
 <a href="#outboundipprefixes_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
@@ -5200,8 +4534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundips_go">
 <a href="#outboundips_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
@@ -5209,14 +4542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocatedoutboundports_nodejs">
 <a href="#allocatedoutboundports_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Outbound<wbr>Ports</a>
@@ -5224,8 +4554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effectiveoutboundips_nodejs">
 <a href="#effectiveoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>IPs</a>
@@ -5233,8 +4562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idletimeoutinminutes_nodejs">
 <a href="#idletimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout<wbr>In<wbr>Minutes</a>
@@ -5242,8 +4570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedoutboundips_nodejs">
 <a href="#managedoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>IPs</a>
@@ -5251,8 +4578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
-    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundipprefixes_nodejs">
 <a href="#outboundipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPPrefixes</a>
@@ -5260,8 +4586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundips_nodejs">
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
@@ -5269,14 +4594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allocated_outbound_ports_python">
 <a href="#allocated_outbound_ports_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>outbound_<wbr>ports</a>
@@ -5284,8 +4606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effective_outbound_ips_python">
 <a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
@@ -5293,8 +4614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idle_timeout_in_minutes_python">
 <a href="#idle_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout_<wbr>in_<wbr>minutes</a>
@@ -5302,8 +4622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_outbound_ips_python">
 <a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
@@ -5311,8 +4630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbound_ip_prefixes_python">
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
@@ -5320,8 +4638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbound_ips_python">
 <a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
@@ -5329,8 +4646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</h4>
@@ -5338,9 +4654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -5348,14 +4662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -5363,14 +4674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -5378,14 +4686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -5393,8 +4698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</h4>
@@ -5402,9 +4706,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicipprefixes_csharp">
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
@@ -5412,14 +4714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicipprefixes_go">
 <a href="#publicipprefixes_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
@@ -5427,14 +4726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">[]Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicipprefixes_nodejs">
 <a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefixes</a>
@@ -5442,14 +4738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_ip_prefixes_python">
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
@@ -5457,8 +4750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</h4>
@@ -5466,9 +4758,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_csharp">
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
@@ -5476,14 +4766,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_go">
 <a href="#publicips_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
@@ -5491,14 +4778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">[]Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="publicips_nodejs">
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
@@ -5506,14 +4790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="public_ips_python">
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
@@ -5521,8 +4802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityexceptionresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response</h4>
@@ -5530,9 +4810,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5540,8 +4818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -5549,8 +4826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podlabels_csharp">
 <a href="#podlabels_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Labels</a>
@@ -5558,14 +4834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5573,8 +4846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -5582,8 +4854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podlabels_go">
 <a href="#podlabels_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Labels</a>
@@ -5591,14 +4862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5606,8 +4874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -5615,8 +4882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="podlabels_nodejs">
 <a href="#podlabels_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Labels</a>
@@ -5624,14 +4890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5639,8 +4902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -5648,8 +4910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity exception.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pod_labels_python">
 <a href="#pod_labels_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>labels</a>
@@ -5657,8 +4918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod labels to match.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityprofileresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Response</h4>
@@ -5666,9 +4926,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allownetworkpluginkubenet_csharp">
 <a href="#allownetworkpluginkubenet_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Network<wbr>Plugin<wbr>Kubenet</a>
@@ -5676,8 +4934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5685,8 +4942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -5694,8 +4950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityexceptions_csharp">
 <a href="#userassignedidentityexceptions_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
@@ -5703,14 +4958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allownetworkpluginkubenet_go">
 <a href="#allownetworkpluginkubenet_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Network<wbr>Plugin<wbr>Kubenet</a>
@@ -5718,8 +4970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5727,8 +4978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -5736,8 +4986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponse">[]Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityexceptions_go">
 <a href="#userassignedidentityexceptions_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
@@ -5745,14 +4994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">[]Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allownetworkpluginkubenet_nodejs">
 <a href="#allownetworkpluginkubenet_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Network<wbr>Plugin<wbr>Kubenet</a>
@@ -5760,8 +5006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5769,8 +5014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -5778,8 +5022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityexceptions_nodejs">
 <a href="#userassignedidentityexceptions_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
@@ -5787,14 +5030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_network_plugin_kubenet_python">
 <a href="#allow_network_plugin_kubenet_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>network_<wbr>plugin_<wbr>kubenet</a>
@@ -5802,8 +5042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5811,8 +5050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the pod identity addon is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -5820,8 +5058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identity_exceptions_python">
 <a href="#user_assigned_identity_exceptions_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>exceptions</a>
@@ -5829,8 +5066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response</h4>
@@ -5838,9 +5074,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -5848,8 +5082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5857,8 +5090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -5866,8 +5098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioninginfo_csharp">
 <a href="#provisioninginfo_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Info</a>
@@ -5875,8 +5106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -5884,14 +5114,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -5899,8 +5126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5908,8 +5134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -5917,8 +5142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioninginfo_go">
 <a href="#provisioninginfo_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Info</a>
@@ -5926,8 +5150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -5935,14 +5158,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -5950,8 +5170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5959,8 +5178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -5968,8 +5186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioninginfo_nodejs">
 <a href="#provisioninginfo_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Info</a>
@@ -5977,8 +5194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -5986,14 +5202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -6001,8 +5214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6010,8 +5222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -6019,8 +5230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Namespace of the pod identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_info_python">
 <a href="#provisioning_info_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>info</a>
@@ -6028,8 +5238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -6037,8 +5246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current provisioning state of the pod identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</h4>
@@ -6046,9 +5254,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -6056,14 +5262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -6071,14 +5274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -6086,14 +5286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -6101,8 +5298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpropertiesresponseautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Profile</h4>
@@ -6110,9 +5306,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="balancesimilarnodegroups_csharp">
 <a href="#balancesimilarnodegroups_csharp" style="color: inherit; text-decoration: inherit;">Balance<wbr>Similar<wbr>Node<wbr>Groups</a>
@@ -6120,8 +5314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expander_csharp">
 <a href="#expander_csharp" style="color: inherit; text-decoration: inherit;">Expander</a>
@@ -6129,8 +5322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxemptybulkdelete_csharp">
 <a href="#maxemptybulkdelete_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Empty<wbr>Bulk<wbr>Delete</a>
@@ -6138,8 +5330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_csharp">
 <a href="#maxgracefulterminationsec_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
@@ -6147,8 +5338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodeprovisiontime_csharp">
 <a href="#maxnodeprovisiontime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provision<wbr>Time</a>
@@ -6156,8 +5346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotalunreadypercentage_csharp">
 <a href="#maxtotalunreadypercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Unready<wbr>Percentage</a>
@@ -6165,8 +5354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newpodscaleupdelay_csharp">
 <a href="#newpodscaleupdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Pod<wbr>Scale<wbr>Up<wbr>Delay</a>
@@ -6174,8 +5362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktotalunreadycount_csharp">
 <a href="#oktotalunreadycount_csharp" style="color: inherit; text-decoration: inherit;">Ok<wbr>Total<wbr>Unready<wbr>Count</a>
@@ -6183,8 +5370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafteradd_csharp">
 <a href="#scaledowndelayafteradd_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
@@ -6192,8 +5378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafterdelete_csharp">
 <a href="#scaledowndelayafterdelete_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
@@ -6201,8 +5386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafterfailure_csharp">
 <a href="#scaledowndelayafterfailure_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
@@ -6210,8 +5394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownunneededtime_csharp">
 <a href="#scaledownunneededtime_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unneeded<wbr>Time</a>
@@ -6219,8 +5402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownunreadytime_csharp">
 <a href="#scaledownunreadytime_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unready<wbr>Time</a>
@@ -6228,8 +5410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownutilizationthreshold_csharp">
 <a href="#scaledownutilizationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
@@ -6237,8 +5418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaninterval_csharp">
 <a href="#scaninterval_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Interval</a>
@@ -6246,8 +5426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipnodeswithlocalstorage_csharp">
 <a href="#skipnodeswithlocalstorage_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>Local<wbr>Storage</a>
@@ -6255,8 +5434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipnodeswithsystempods_csharp">
 <a href="#skipnodeswithsystempods_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>System<wbr>Pods</a>
@@ -6264,14 +5442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="balancesimilarnodegroups_go">
 <a href="#balancesimilarnodegroups_go" style="color: inherit; text-decoration: inherit;">Balance<wbr>Similar<wbr>Node<wbr>Groups</a>
@@ -6279,8 +5454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expander_go">
 <a href="#expander_go" style="color: inherit; text-decoration: inherit;">Expander</a>
@@ -6288,8 +5462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxemptybulkdelete_go">
 <a href="#maxemptybulkdelete_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Empty<wbr>Bulk<wbr>Delete</a>
@@ -6297,8 +5470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_go">
 <a href="#maxgracefulterminationsec_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
@@ -6306,8 +5478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodeprovisiontime_go">
 <a href="#maxnodeprovisiontime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provision<wbr>Time</a>
@@ -6315,8 +5486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotalunreadypercentage_go">
 <a href="#maxtotalunreadypercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Unready<wbr>Percentage</a>
@@ -6324,8 +5494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newpodscaleupdelay_go">
 <a href="#newpodscaleupdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Pod<wbr>Scale<wbr>Up<wbr>Delay</a>
@@ -6333,8 +5502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktotalunreadycount_go">
 <a href="#oktotalunreadycount_go" style="color: inherit; text-decoration: inherit;">Ok<wbr>Total<wbr>Unready<wbr>Count</a>
@@ -6342,8 +5510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafteradd_go">
 <a href="#scaledowndelayafteradd_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
@@ -6351,8 +5518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafterdelete_go">
 <a href="#scaledowndelayafterdelete_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
@@ -6360,8 +5526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafterfailure_go">
 <a href="#scaledowndelayafterfailure_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
@@ -6369,8 +5534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownunneededtime_go">
 <a href="#scaledownunneededtime_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unneeded<wbr>Time</a>
@@ -6378,8 +5542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownunreadytime_go">
 <a href="#scaledownunreadytime_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Unready<wbr>Time</a>
@@ -6387,8 +5550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownutilizationthreshold_go">
 <a href="#scaledownutilizationthreshold_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
@@ -6396,8 +5558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaninterval_go">
 <a href="#scaninterval_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Interval</a>
@@ -6405,8 +5566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipnodeswithlocalstorage_go">
 <a href="#skipnodeswithlocalstorage_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>Local<wbr>Storage</a>
@@ -6414,8 +5574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipnodeswithsystempods_go">
 <a href="#skipnodeswithsystempods_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Nodes<wbr>With<wbr>System<wbr>Pods</a>
@@ -6423,14 +5582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="balancesimilarnodegroups_nodejs">
 <a href="#balancesimilarnodegroups_nodejs" style="color: inherit; text-decoration: inherit;">balance<wbr>Similar<wbr>Node<wbr>Groups</a>
@@ -6438,8 +5594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expander_nodejs">
 <a href="#expander_nodejs" style="color: inherit; text-decoration: inherit;">expander</a>
@@ -6447,8 +5602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxemptybulkdelete_nodejs">
 <a href="#maxemptybulkdelete_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Empty<wbr>Bulk<wbr>Delete</a>
@@ -6456,8 +5610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxgracefulterminationsec_nodejs">
 <a href="#maxgracefulterminationsec_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
@@ -6465,8 +5618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodeprovisiontime_nodejs">
 <a href="#maxnodeprovisiontime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Provision<wbr>Time</a>
@@ -6474,8 +5626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotalunreadypercentage_nodejs">
 <a href="#maxtotalunreadypercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Unready<wbr>Percentage</a>
@@ -6483,8 +5634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="newpodscaleupdelay_nodejs">
 <a href="#newpodscaleupdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Pod<wbr>Scale<wbr>Up<wbr>Delay</a>
@@ -6492,8 +5642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktotalunreadycount_nodejs">
 <a href="#oktotalunreadycount_nodejs" style="color: inherit; text-decoration: inherit;">ok<wbr>Total<wbr>Unready<wbr>Count</a>
@@ -6501,8 +5650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafteradd_nodejs">
 <a href="#scaledowndelayafteradd_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
@@ -6510,8 +5658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafterdelete_nodejs">
 <a href="#scaledowndelayafterdelete_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Delete</a>
@@ -6519,8 +5666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledowndelayafterfailure_nodejs">
 <a href="#scaledowndelayafterfailure_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Failure</a>
@@ -6528,8 +5674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownunneededtime_nodejs">
 <a href="#scaledownunneededtime_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unneeded<wbr>Time</a>
@@ -6537,8 +5682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownunreadytime_nodejs">
 <a href="#scaledownunreadytime_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Unready<wbr>Time</a>
@@ -6546,8 +5690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownutilizationthreshold_nodejs">
 <a href="#scaledownutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Utilization<wbr>Threshold</a>
@@ -6555,8 +5698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaninterval_nodejs">
 <a href="#scaninterval_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Interval</a>
@@ -6564,8 +5706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipnodeswithlocalstorage_nodejs">
 <a href="#skipnodeswithlocalstorage_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Nodes<wbr>With<wbr>Local<wbr>Storage</a>
@@ -6573,8 +5714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipnodeswithsystempods_nodejs">
 <a href="#skipnodeswithsystempods_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Nodes<wbr>With<wbr>System<wbr>Pods</a>
@@ -6582,14 +5722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="balance_similar_node_groups_python">
 <a href="#balance_similar_node_groups_python" style="color: inherit; text-decoration: inherit;">balance_<wbr>similar_<wbr>node_<wbr>groups</a>
@@ -6597,8 +5734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expander_python">
 <a href="#expander_python" style="color: inherit; text-decoration: inherit;">expander</a>
@@ -6606,8 +5742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_empty_bulk_delete_python">
 <a href="#max_empty_bulk_delete_python" style="color: inherit; text-decoration: inherit;">max_<wbr>empty_<wbr>bulk_<wbr>delete</a>
@@ -6615,8 +5750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_graceful_termination_sec_python">
 <a href="#max_graceful_termination_sec_python" style="color: inherit; text-decoration: inherit;">max_<wbr>graceful_<wbr>termination_<wbr>sec</a>
@@ -6624,8 +5758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_node_provision_time_python">
 <a href="#max_node_provision_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>provision_<wbr>time</a>
@@ -6633,8 +5766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_total_unready_percentage_python">
 <a href="#max_total_unready_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>unready_<wbr>percentage</a>
@@ -6642,8 +5774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="new_pod_scale_up_delay_python">
 <a href="#new_pod_scale_up_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>pod_<wbr>scale_<wbr>up_<wbr>delay</a>
@@ -6651,8 +5782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ok_total_unready_count_python">
 <a href="#ok_total_unready_count_python" style="color: inherit; text-decoration: inherit;">ok_<wbr>total_<wbr>unready_<wbr>count</a>
@@ -6660,8 +5790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_delay_after_add_python">
 <a href="#scale_down_delay_after_add_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>delay_<wbr>after_<wbr>add</a>
@@ -6669,8 +5798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_delay_after_delete_python">
 <a href="#scale_down_delay_after_delete_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>delay_<wbr>after_<wbr>delete</a>
@@ -6678,8 +5806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_delay_after_failure_python">
 <a href="#scale_down_delay_after_failure_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>delay_<wbr>after_<wbr>failure</a>
@@ -6687,8 +5814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_unneeded_time_python">
 <a href="#scale_down_unneeded_time_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>unneeded_<wbr>time</a>
@@ -6696,8 +5822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_unready_time_python">
 <a href="#scale_down_unready_time_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>unready_<wbr>time</a>
@@ -6705,8 +5830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_utilization_threshold_python">
 <a href="#scale_down_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>utilization_<wbr>threshold</a>
@@ -6714,8 +5838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scan_interval_python">
 <a href="#scan_interval_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>interval</a>
@@ -6723,8 +5846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_nodes_with_local_storage_python">
 <a href="#skip_nodes_with_local_storage_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>nodes_<wbr>with_<wbr>local_<wbr>storage</a>
@@ -6732,8 +5854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_nodes_with_system_pods_python">
 <a href="#skip_nodes_with_system_pods_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>nodes_<wbr>with_<wbr>system_<wbr>pods</a>
@@ -6741,8 +5862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterpropertiesresponseidentityprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Identity<wbr>Profile</h4>
@@ -6750,9 +5870,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6760,8 +5878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -6769,8 +5886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -6778,14 +5894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6793,8 +5906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -6802,8 +5914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -6811,14 +5922,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -6826,8 +5934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -6835,8 +5942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -6844,14 +5950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -6859,8 +5962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -6868,8 +5970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -6877,8 +5978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterskuresponse">Managed<wbr>Cluster<wbr>SKUResponse</h4>
@@ -6886,9 +5986,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6896,8 +5994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -6905,14 +6002,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6920,8 +6014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -6929,14 +6022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6944,8 +6034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -6953,14 +6042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6968,8 +6054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a managed cluster SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -6977,8 +6062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of a managed cluster SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterserviceprincipalprofileresponse">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</h4>
@@ -6986,9 +6070,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -6996,8 +6078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -7005,14 +6086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7020,8 +6098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -7029,14 +6106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -7044,8 +6118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -7053,14 +6126,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -7068,8 +6138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -7077,8 +6146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The secret password associated with the service principal in plain text.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedclusterwindowsprofileresponse">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Response</h4>
@@ -7086,9 +6154,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -7096,8 +6162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -7105,8 +6170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -7114,14 +6178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -7129,8 +6190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -7138,8 +6198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -7147,14 +6206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -7162,8 +6218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -7171,8 +6226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -7180,14 +6234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -7195,8 +6246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -7204,8 +6254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -7213,8 +6262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="powerstateresponse">Power<wbr>State<wbr>Response</h4>
@@ -7222,9 +6270,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -7232,14 +6278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -7247,14 +6290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -7262,14 +6302,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -7277,8 +6314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tells whether the cluster is Running or Stopped{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</h4>
@@ -7286,9 +6322,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7296,14 +6330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7311,14 +6342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7326,14 +6354,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7341,8 +6366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The fully qualified Azure resource id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</h4>
@@ -7350,9 +6374,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fsaiomaxnr_csharp">
 <a href="#fsaiomaxnr_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
@@ -7360,8 +6382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsfilemax_csharp">
 <a href="#fsfilemax_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
@@ -7369,8 +6390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsinotifymaxuserwatches_csharp">
 <a href="#fsinotifymaxuserwatches_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
@@ -7378,8 +6398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsnropen_csharp">
 <a href="#fsnropen_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
@@ -7387,8 +6406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelthreadsmax_csharp">
 <a href="#kernelthreadsmax_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
@@ -7396,8 +6414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorenetdevmaxbacklog_csharp">
 <a href="#netcorenetdevmaxbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
@@ -7405,8 +6422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoreoptmemmax_csharp">
 <a href="#netcoreoptmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
@@ -7414,8 +6430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemdefault_csharp">
 <a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
@@ -7423,8 +6438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemmax_csharp">
 <a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
@@ -7432,8 +6446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoresomaxconn_csharp">
 <a href="#netcoresomaxconn_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
@@ -7441,8 +6454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemdefault_csharp">
 <a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
@@ -7450,8 +6462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_csharp">
 <a href="#netcorewmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
@@ -7459,8 +6470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4iplocalportrange_csharp">
 <a href="#netipv4iplocalportrange_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
@@ -7468,8 +6478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh1_csharp">
 <a href="#netipv4neighdefaultgcthresh1_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
@@ -7477,8 +6486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh2_csharp">
 <a href="#netipv4neighdefaultgcthresh2_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
@@ -7486,8 +6494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh3_csharp">
 <a href="#netipv4neighdefaultgcthresh3_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
@@ -7495,8 +6502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpfintimeout_csharp">
 <a href="#netipv4tcpfintimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
@@ -7504,8 +6510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveprobes_csharp">
 <a href="#netipv4tcpkeepaliveprobes_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
@@ -7513,8 +6518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepalivetime_csharp">
 <a href="#netipv4tcpkeepalivetime_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
@@ -7522,8 +6526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxsynbacklog_csharp">
 <a href="#netipv4tcpmaxsynbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
@@ -7531,8 +6534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxtwbuckets_csharp">
 <a href="#netipv4tcpmaxtwbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
@@ -7540,8 +6542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcptwreuse_csharp">
 <a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
@@ -7549,8 +6550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_csharp">
 <a href="#netipv4tcpkeepaliveintvl_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
@@ -7558,8 +6558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackbuckets_csharp">
 <a href="#netnetfilternfconntrackbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
@@ -7567,8 +6566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackmax_csharp">
 <a href="#netnetfilternfconntrackmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
@@ -7576,8 +6574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmmaxmapcount_csharp">
 <a href="#vmmaxmapcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
@@ -7585,8 +6582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswappiness_csharp">
 <a href="#vmswappiness_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
@@ -7594,8 +6590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmvfscachepressure_csharp">
 <a href="#vmvfscachepressure_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
@@ -7603,14 +6598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fsaiomaxnr_go">
 <a href="#fsaiomaxnr_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
@@ -7618,8 +6610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsfilemax_go">
 <a href="#fsfilemax_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
@@ -7627,8 +6618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsinotifymaxuserwatches_go">
 <a href="#fsinotifymaxuserwatches_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
@@ -7636,8 +6626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsnropen_go">
 <a href="#fsnropen_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
@@ -7645,8 +6634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelthreadsmax_go">
 <a href="#kernelthreadsmax_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
@@ -7654,8 +6642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorenetdevmaxbacklog_go">
 <a href="#netcorenetdevmaxbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
@@ -7663,8 +6650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoreoptmemmax_go">
 <a href="#netcoreoptmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
@@ -7672,8 +6658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemdefault_go">
 <a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
@@ -7681,8 +6666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemmax_go">
 <a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
@@ -7690,8 +6674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoresomaxconn_go">
 <a href="#netcoresomaxconn_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
@@ -7699,8 +6682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemdefault_go">
 <a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
@@ -7708,8 +6690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_go">
 <a href="#netcorewmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
@@ -7717,8 +6698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4iplocalportrange_go">
 <a href="#netipv4iplocalportrange_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
@@ -7726,8 +6706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh1_go">
 <a href="#netipv4neighdefaultgcthresh1_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
@@ -7735,8 +6714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh2_go">
 <a href="#netipv4neighdefaultgcthresh2_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
@@ -7744,8 +6722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh3_go">
 <a href="#netipv4neighdefaultgcthresh3_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
@@ -7753,8 +6730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpfintimeout_go">
 <a href="#netipv4tcpfintimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
@@ -7762,8 +6738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveprobes_go">
 <a href="#netipv4tcpkeepaliveprobes_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
@@ -7771,8 +6746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepalivetime_go">
 <a href="#netipv4tcpkeepalivetime_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
@@ -7780,8 +6754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxsynbacklog_go">
 <a href="#netipv4tcpmaxsynbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
@@ -7789,8 +6762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxtwbuckets_go">
 <a href="#netipv4tcpmaxtwbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
@@ -7798,8 +6770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcptwreuse_go">
 <a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
@@ -7807,8 +6778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_go">
 <a href="#netipv4tcpkeepaliveintvl_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
@@ -7816,8 +6786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackbuckets_go">
 <a href="#netnetfilternfconntrackbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
@@ -7825,8 +6794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackmax_go">
 <a href="#netnetfilternfconntrackmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
@@ -7834,8 +6802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmmaxmapcount_go">
 <a href="#vmmaxmapcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
@@ -7843,8 +6810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswappiness_go">
 <a href="#vmswappiness_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
@@ -7852,8 +6818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmvfscachepressure_go">
 <a href="#vmvfscachepressure_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
@@ -7861,14 +6826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fsaiomaxnr_nodejs">
 <a href="#fsaiomaxnr_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Aio<wbr>Max<wbr>Nr</a>
@@ -7876,8 +6838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsfilemax_nodejs">
 <a href="#fsfilemax_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>File<wbr>Max</a>
@@ -7885,8 +6846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsinotifymaxuserwatches_nodejs">
 <a href="#fsinotifymaxuserwatches_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
@@ -7894,8 +6854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fsnropen_nodejs">
 <a href="#fsnropen_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Nr<wbr>Open</a>
@@ -7903,8 +6862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelthreadsmax_nodejs">
 <a href="#kernelthreadsmax_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Threads<wbr>Max</a>
@@ -7912,8 +6870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorenetdevmaxbacklog_nodejs">
 <a href="#netcorenetdevmaxbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
@@ -7921,8 +6878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoreoptmemmax_nodejs">
 <a href="#netcoreoptmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Optmem<wbr>Max</a>
@@ -7930,8 +6886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemdefault_nodejs">
 <a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
@@ -7939,8 +6894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorermemmax_nodejs">
 <a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
@@ -7948,8 +6902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcoresomaxconn_nodejs">
 <a href="#netcoresomaxconn_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Somaxconn</a>
@@ -7957,8 +6910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemdefault_nodejs">
 <a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
@@ -7966,8 +6918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_nodejs">
 <a href="#netcorewmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Max</a>
@@ -7975,8 +6926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4iplocalportrange_nodejs">
 <a href="#netipv4iplocalportrange_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
@@ -7984,8 +6934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh1_nodejs">
 <a href="#netipv4neighdefaultgcthresh1_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
@@ -7993,8 +6942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh2_nodejs">
 <a href="#netipv4neighdefaultgcthresh2_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
@@ -8002,8 +6950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4neighdefaultgcthresh3_nodejs">
 <a href="#netipv4neighdefaultgcthresh3_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
@@ -8011,8 +6958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpfintimeout_nodejs">
 <a href="#netipv4tcpfintimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
@@ -8020,8 +6966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveprobes_nodejs">
 <a href="#netipv4tcpkeepaliveprobes_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
@@ -8029,8 +6974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepalivetime_nodejs">
 <a href="#netipv4tcpkeepalivetime_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
@@ -8038,8 +6982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxsynbacklog_nodejs">
 <a href="#netipv4tcpmaxsynbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
@@ -8047,8 +6990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpmaxtwbuckets_nodejs">
 <a href="#netipv4tcpmaxtwbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
@@ -8056,8 +6998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcptwreuse_nodejs">
 <a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
@@ -8065,8 +7006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_nodejs">
 <a href="#netipv4tcpkeepaliveintvl_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
@@ -8074,8 +7014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackbuckets_nodejs">
 <a href="#netnetfilternfconntrackbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
@@ -8083,8 +7022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netnetfilternfconntrackmax_nodejs">
 <a href="#netnetfilternfconntrackmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
@@ -8092,8 +7030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmmaxmapcount_nodejs">
 <a href="#vmmaxmapcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Max<wbr>Map<wbr>Count</a>
@@ -8101,8 +7038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmswappiness_nodejs">
 <a href="#vmswappiness_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Swappiness</a>
@@ -8110,8 +7046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmvfscachepressure_nodejs">
 <a href="#vmvfscachepressure_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
@@ -8119,14 +7054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fs_aio_max_nr_python">
 <a href="#fs_aio_max_nr_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>aio_<wbr>max_<wbr>nr</a>
@@ -8134,8 +7066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_file_max_python">
 <a href="#fs_file_max_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>file_<wbr>max</a>
@@ -8143,8 +7074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_inotify_max_user_watches_python">
 <a href="#fs_inotify_max_user_watches_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>inotify_<wbr>max_<wbr>user_<wbr>watches</a>
@@ -8152,8 +7082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fs_nr_open_python">
 <a href="#fs_nr_open_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>nr_<wbr>open</a>
@@ -8161,8 +7090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_threads_max_python">
 <a href="#kernel_threads_max_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>threads_<wbr>max</a>
@@ -8170,8 +7098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_netdev_max_backlog_python">
 <a href="#net_core_netdev_max_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>netdev_<wbr>max_<wbr>backlog</a>
@@ -8179,8 +7106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_optmem_max_python">
 <a href="#net_core_optmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>optmem_<wbr>max</a>
@@ -8188,8 +7114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_rmem_default_python">
 <a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
@@ -8197,8 +7122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_rmem_max_python">
 <a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
@@ -8206,8 +7130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_somaxconn_python">
 <a href="#net_core_somaxconn_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>somaxconn</a>
@@ -8215,8 +7138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_default_python">
 <a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
@@ -8224,8 +7146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_max_python">
 <a href="#net_core_wmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>max</a>
@@ -8233,8 +7154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_ip_local_port_range_python">
 <a href="#net_ipv4_ip_local_port_range_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>ip_<wbr>local_<wbr>port_<wbr>range</a>
@@ -8242,8 +7162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_neigh_default_gc_thresh1_python">
 <a href="#net_ipv4_neigh_default_gc_thresh1_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh1</a>
@@ -8251,8 +7170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_neigh_default_gc_thresh2_python">
 <a href="#net_ipv4_neigh_default_gc_thresh2_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh2</a>
@@ -8260,8 +7178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_neigh_default_gc_thresh3_python">
 <a href="#net_ipv4_neigh_default_gc_thresh3_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh3</a>
@@ -8269,8 +7186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_fin_timeout_python">
 <a href="#net_ipv4_tcp_fin_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>fin_<wbr>timeout</a>
@@ -8278,8 +7194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_keepalive_probes_python">
 <a href="#net_ipv4_tcp_keepalive_probes_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>probes</a>
@@ -8287,8 +7202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_keepalive_time_python">
 <a href="#net_ipv4_tcp_keepalive_time_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>time</a>
@@ -8296,8 +7210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_max_syn_backlog_python">
 <a href="#net_ipv4_tcp_max_syn_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>syn_<wbr>backlog</a>
@@ -8305,8 +7218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_max_tw_buckets_python">
 <a href="#net_ipv4_tcp_max_tw_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>tw_<wbr>buckets</a>
@@ -8314,8 +7226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcp_tw_reuse_python">
 <a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
@@ -8323,8 +7234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcpkeepalive_intvl_python">
 <a href="#net_ipv4_tcpkeepalive_intvl_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcpkeepalive_<wbr>intvl</a>
@@ -8332,8 +7242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_netfilter_nf_conntrack_buckets_python">
 <a href="#net_netfilter_nf_conntrack_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>buckets</a>
@@ -8341,8 +7250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_netfilter_nf_conntrack_max_python">
 <a href="#net_netfilter_nf_conntrack_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>max</a>
@@ -8350,8 +7258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_max_map_count_python">
 <a href="#vm_max_map_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>max_<wbr>map_<wbr>count</a>
@@ -8359,8 +7266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_swappiness_python">
 <a href="#vm_swappiness_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>swappiness</a>
@@ -8368,8 +7274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_vfs_cache_pressure_python">
 <a href="#vm_vfs_cache_pressure_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>vfs_<wbr>cache_<wbr>pressure</a>
@@ -8377,8 +7282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
@@ -8386,9 +7290,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -8396,8 +7298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -8405,8 +7306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -8414,14 +7314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -8429,8 +7326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -8438,8 +7334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -8447,14 +7342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -8462,8 +7354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -8471,8 +7362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -8480,14 +7370,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -8495,8 +7382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -8504,8 +7390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -8513,8 +7398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

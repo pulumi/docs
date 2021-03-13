@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessresourcepath_csharp">
 <a href="#accessresourcepath_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Resource<wbr>Path</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -115,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessresourcepath_go">
 <a href="#accessresourcepath_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Resource<wbr>Path</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -166,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -175,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -184,14 +167,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -199,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -208,8 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessresourcepath_nodejs">
 <a href="#accessresourcepath_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Resource<wbr>Path</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
@@ -226,8 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -235,8 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -244,8 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -253,14 +227,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -268,8 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -277,8 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_resource_path_python">
 <a href="#access_resource_path_python" style="color: inherit; text-decoration: inherit;">access_<wbr>resource_<wbr>path</a>
@@ -286,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
@@ -295,8 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -304,8 +271,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -313,8 +279,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -322,8 +287,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -336,9 +300,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataplaneurl_csharp">
 <a href="#dataplaneurl_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Url</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -364,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccesspolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>User<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The user access policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user access policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataplaneurl_go">
 <a href="#dataplaneurl_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Url</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccesspolicyresponse">User<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The user access policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user access policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataplaneurl_nodejs">
 <a href="#dataplaneurl_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Plane<wbr>Url</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -430,14 +380,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccesspolicyresponse">User<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The user access policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user access policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane read only access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_plane_url_python">
 <a href="#data_plane_url_python" style="color: inherit; text-decoration: inherit;">data_<wbr>plane_<wbr>url</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Data Plane service base URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccesspolicyresponse">User<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The user access policy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user access policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessresourcepath_csharp">
 <a href="#accessresourcepath_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Resource<wbr>Path</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_csharp">
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -524,14 +462,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessresourcepath_go">
 <a href="#accessresourcepath_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Resource<wbr>Path</a>
@@ -539,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_go">
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
@@ -548,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -557,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -575,14 +506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessresourcepath_nodejs">
 <a href="#accessresourcepath_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Resource<wbr>Path</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiretime_nodejs">
 <a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
@@ -599,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -608,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -617,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -626,14 +550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_resource_path_python">
 <a href="#access_resource_path_python" style="color: inherit; text-decoration: inherit;">access_<wbr>resource_<wbr>path</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expire_time_python">
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
@@ -650,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -659,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the profile. Currently only the default is supported. The default value is DefaultProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time for the token. If not specified the current time will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

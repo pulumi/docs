@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolname_csharp">
 <a href="#hostpoolname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msixpackagefullname_csharp">
 <a href="#msixpackagefullname_csharp" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Full<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolname_go">
 <a href="#hostpoolname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msixpackagefullname_go">
 <a href="#msixpackagefullname_go" style="color: inherit; text-decoration: inherit;">Msix<wbr>Package<wbr>Full<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostpoolname_nodejs">
 <a href="#hostpoolname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msixpackagefullname_nodejs">
 <a href="#msixpackagefullname_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Full<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_pool_name_python">
 <a href="#host_pool_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="msix_package_full_name_python">
 <a href="#msix_package_full_name_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>full_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The version specific package full name of the MSIX package within specified hostpool{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imagepath_csharp">
 <a href="#imagepath_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Path</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isactive_csharp">
 <a href="#isactive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Active</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isregularregistration_csharp">
 <a href="#isregularregistration_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Regular<wbr>Registration</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdated_csharp">
 <a href="#lastupdated_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packageapplications_csharp">
 <a href="#packageapplications_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Applications</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackageapplicationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Msix<wbr>Package<wbr>Applications<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of package applications. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagedependencies_csharp">
 <a href="#packagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Dependencies</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackagedependenciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Msix<wbr>Package<wbr>Dependencies<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagefamilyname_csharp">
 <a href="#packagefamilyname_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Family<wbr>Name</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagename_csharp">
 <a href="#packagename_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Name</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagerelativepath_csharp">
 <a href="#packagerelativepath_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Relative<wbr>Path</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -319,14 +284,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imagepath_go">
 <a href="#imagepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Path</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isactive_go">
 <a href="#isactive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Active</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isregularregistration_go">
 <a href="#isregularregistration_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Regular<wbr>Registration</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdated_go">
 <a href="#lastupdated_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packageapplications_go">
 <a href="#packageapplications_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Applications</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackageapplicationsresponse">[]Msix<wbr>Package<wbr>Applications<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of package applications. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagedependencies_go">
 <a href="#packagedependencies_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Dependencies</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackagedependenciesresponse">[]Msix<wbr>Package<wbr>Dependencies<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagefamilyname_go">
 <a href="#packagefamilyname_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Family<wbr>Name</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagename_go">
 <a href="#packagename_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Name</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagerelativepath_go">
 <a href="#packagerelativepath_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Relative<wbr>Path</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imagepath_nodejs">
 <a href="#imagepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Path</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isactive_nodejs">
 <a href="#isactive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Active</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isregularregistration_nodejs">
 <a href="#isregularregistration_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Regular<wbr>Registration</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdated_nodejs">
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packageapplications_nodejs">
 <a href="#packageapplications_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Applications</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackageapplicationsresponse">Msix<wbr>Package<wbr>Applications<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of package applications. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagedependencies_nodejs">
 <a href="#packagedependencies_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Dependencies</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackagedependenciesresponse">Msix<wbr>Package<wbr>Dependencies<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagefamilyname_nodejs">
 <a href="#packagefamilyname_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Family<wbr>Name</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagename_nodejs">
 <a href="#packagename_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Name</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="packagerelativepath_nodejs">
 <a href="#packagerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Relative<wbr>Path</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -583,14 +516,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User friendly Name to be displayed in the portal. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_path_python">
 <a href="#image_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>path</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}VHD/CIM image path on Network Share.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_active_python">
 <a href="#is_active_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Make this version of the package the active one across the hostpool. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_regular_registration_python">
 <a href="#is_regular_registration_python" style="color: inherit; text-decoration: inherit;">is_<wbr>regular_<wbr>registration</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies how to register Package in feed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_python">
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date Package was last updated, found in the appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="package_applications_python">
 <a href="#package_applications_python" style="color: inherit; text-decoration: inherit;">package_<wbr>applications</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackageapplicationsresponse">Sequence[Msix<wbr>Package<wbr>Applications<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of package applications. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="package_dependencies_python">
 <a href="#package_dependencies_python" style="color: inherit; text-decoration: inherit;">package_<wbr>dependencies</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#msixpackagedependenciesresponse">Sequence[Msix<wbr>Package<wbr>Dependencies<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="package_family_name_python">
 <a href="#package_family_name_python" style="color: inherit; text-decoration: inherit;">package_<wbr>family_<wbr>name</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="package_name_python">
 <a href="#package_name_python" style="color: inherit; text-decoration: inherit;">package_<wbr>name</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Package Name from appxmanifest.xml. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="package_relative_path_python">
 <a href="#package_relative_path_python" style="color: inherit; text-decoration: inherit;">package_<wbr>relative_<wbr>path</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Relative Path to the package inside the image. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Package Version found in the appxmanifest.xml. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,9 +646,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -740,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appusermodelid_csharp">
 <a href="#appusermodelid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>User<wbr>Model<wbr>ID</a>
@@ -749,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -758,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -767,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconimagename_csharp">
 <a href="#iconimagename_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Image<wbr>Name</a>
@@ -776,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawicon_csharp">
 <a href="#rawicon_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Icon</a>
@@ -785,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawpng_csharp">
 <a href="#rawpng_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Png</a>
@@ -794,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -809,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appusermodelid_go">
 <a href="#appusermodelid_go" style="color: inherit; text-decoration: inherit;">App<wbr>User<wbr>Model<wbr>ID</a>
@@ -818,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -827,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -836,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconimagename_go">
 <a href="#iconimagename_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Image<wbr>Name</a>
@@ -845,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawicon_go">
 <a href="#rawicon_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Icon</a>
@@ -854,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawpng_go">
 <a href="#rawpng_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Png</a>
@@ -863,14 +762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -878,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appusermodelid_nodejs">
 <a href="#appusermodelid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>User<wbr>Model<wbr>ID</a>
@@ -887,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -896,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -905,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconimagename_nodejs">
 <a href="#iconimagename_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Image<wbr>Name</a>
@@ -914,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawicon_nodejs">
 <a href="#rawicon_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Icon</a>
@@ -923,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawpng_nodejs">
 <a href="#rawpng_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Png</a>
@@ -932,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -947,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Package Application Id, found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_user_model_id_python">
 <a href="#app_user_model_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>user_<wbr>model_<wbr>id</a>
@@ -956,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -965,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of Package Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -974,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_image_name_python">
 <a href="#icon_image_name_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>image_<wbr>name</a>
@@ -983,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_icon_python">
 <a href="#raw_icon_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>icon</a>
@@ -992,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_png_python">
 <a href="#raw_png_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>png</a>
@@ -1001,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the icon a 64 bit string as a byte array.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="msixpackagedependenciesresponse">Msix<wbr>Package<wbr>Dependencies<wbr>Response</h4>
@@ -1010,9 +890,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependencyname_csharp">
 <a href="#dependencyname_csharp" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Name</a>
@@ -1020,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minversion_csharp">
 <a href="#minversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Version</a>
@@ -1029,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1038,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependencyname_go">
 <a href="#dependencyname_go" style="color: inherit; text-decoration: inherit;">Dependency<wbr>Name</a>
@@ -1053,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minversion_go">
 <a href="#minversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Version</a>
@@ -1062,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1071,14 +942,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependencyname_nodejs">
 <a href="#dependencyname_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Name</a>
@@ -1086,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minversion_nodejs">
 <a href="#minversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Version</a>
@@ -1095,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1104,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dependency_name_python">
 <a href="#dependency_name_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>name</a>
@@ -1119,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of package dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_version_python">
 <a href="#min_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>version</a>
@@ -1128,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dependency version required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1137,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

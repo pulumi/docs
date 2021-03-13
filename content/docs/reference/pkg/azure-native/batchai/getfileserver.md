@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileservername_csharp">
 <a href="#fileservername_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileservername_go">
 <a href="#fileservername_go" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileservername_nodejs">
 <a href="#fileservername_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_server_name_python">
 <a href="#file_server_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the file server within the specified resource group. File server names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mountsettings_csharp">
 <a href="#mountsettings_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Settings</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_csharp">
 <a href="#provisioningstatetransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State<wbr>Transition<wbr>Time</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datadisks_csharp">
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Data<wbr>Disks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshconfiguration_csharp">
 <a href="#sshconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Configuration</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Outputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mountsettings_go">
 <a href="#mountsettings_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Settings</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountsettingsresponse">Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_go">
 <a href="#provisioningstatetransitiontime_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State<wbr>Transition<wbr>Time</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datadisks_go">
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksresponse">Data<wbr>Disks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshconfiguration_go">
 <a href="#sshconfiguration_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Configuration</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -397,14 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mountsettings_nodejs">
 <a href="#mountsettings_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Settings</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountsettingsresponse">Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstatetransitiontime_nodejs">
 <a href="#provisioningstatetransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State<wbr>Transition<wbr>Time</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datadisks_nodejs">
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksresponse">Data<wbr>Disks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshconfiguration_nodejs">
 <a href="#sshconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Configuration</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -502,14 +444,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the FileServer was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mount_settings_python">
 <a href="#mount_settings_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>settings</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountsettingsresponse">Mount<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server mount settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the File Server. Possible values: creating - The File Server is getting created; updating - The File Server creation has been accepted and it is getting updated; deleting - The user has requested that the File Server be deleted, and it is in the process of being deleted; failed - The File Server creation has failed with the specified error code. Details about the error code are specified in the message field; succeeded - The File Server creation has succeeded.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_transition_time_python">
 <a href="#provisioning_state_transition_time_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state_<wbr>transition_<wbr>time</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the provisioning state was changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_disks_python">
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadisksresponse">Data<wbr>Disks<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Information about disks attached to File Server VM.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssh_configuration_python">
 <a href="#ssh_configuration_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>configuration</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}SSH configuration for accessing the File Server node.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}File Server virtual network subnet resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}VM size of the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskcount_csharp">
 <a href="#diskcount_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksizeingb_csharp">
 <a href="#disksizeingb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>In<wbr>GB</a>
@@ -641,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -650,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachingtype_csharp">
 <a href="#cachingtype_csharp" style="color: inherit; text-decoration: inherit;">Caching<wbr>Type</a>
@@ -659,14 +582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskcount_go">
 <a href="#diskcount_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Count</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksizeingb_go">
 <a href="#disksizeingb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>In<wbr>GB</a>
@@ -683,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -692,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachingtype_go">
 <a href="#cachingtype_go" style="color: inherit; text-decoration: inherit;">Caching<wbr>Type</a>
@@ -701,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskcount_nodejs">
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disksizeingb_nodejs">
 <a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -734,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachingtype_nodejs">
 <a href="#cachingtype_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Type</a>
@@ -743,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_count_python">
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
@@ -758,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of data disks attached to the File Server. If multiple disks attached, they will be configured in RAID level 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_size_in_gb_python">
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
@@ -767,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Disk size in GB for the blank data disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage account to be used on the disk. Possible values are: Standard_LRS or Premium_LRS. Premium storage account type can only be used with VM sizes supporting premium storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_type_python">
 <a href="#caching_type_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>type</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Caching type for the disks. Available values are none (default), readonly, readwrite. Caching type can be set only for VM sizes supporting premium storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mountsettingsresponse">Mount<wbr>Settings<wbr>Response</h4>
@@ -794,9 +698,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fileserverinternalip_csharp">
 <a href="#fileserverinternalip_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Internal<wbr>IP</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileserverpublicip_csharp">
 <a href="#fileserverpublicip_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Public<wbr>IP</a>
@@ -813,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountpoint_csharp">
 <a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
@@ -822,14 +722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fileserverinternalip_go">
 <a href="#fileserverinternalip_go" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Internal<wbr>IP</a>
@@ -837,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileserverpublicip_go">
 <a href="#fileserverpublicip_go" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Public<wbr>IP</a>
@@ -846,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountpoint_go">
 <a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
@@ -855,14 +750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fileserverinternalip_nodejs">
 <a href="#fileserverinternalip_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Internal<wbr>IP</a>
@@ -870,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileserverpublicip_nodejs">
 <a href="#fileserverpublicip_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Public<wbr>IP</a>
@@ -879,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mountpoint_nodejs">
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
@@ -888,14 +778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_server_internal_ip_python">
 <a href="#file_server_internal_ip_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>internal_<wbr>ip</a>
@@ -903,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Internal IP address of the File Server which can be used to access the File Server from within the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_server_public_ip_python">
 <a href="#file_server_public_ip_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>public_<wbr>ip</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the File Server which can be used to SSH to the node from outside of the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mount_point_python">
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path where the data disks are mounted on the File Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
@@ -930,9 +814,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -940,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -955,14 +834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -970,14 +846,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -985,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</h4>
@@ -994,9 +866,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="useraccountsettings_csharp">
 <a href="#useraccountsettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
@@ -1004,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipstoallow_csharp">
 <a href="#publicipstoallow_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs<wbr>To<wbr>Allow</a>
@@ -1013,14 +882,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="useraccountsettings_go">
 <a href="#useraccountsettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Settings</a>
@@ -1028,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipstoallow_go">
 <a href="#publicipstoallow_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs<wbr>To<wbr>Allow</a>
@@ -1037,14 +902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="useraccountsettings_nodejs">
 <a href="#useraccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Settings</a>
@@ -1052,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipstoallow_nodejs">
 <a href="#publicipstoallow_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs<wbr>To<wbr>Allow</a>
@@ -1061,14 +922,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_account_settings_python">
 <a href="#user_account_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>settings</a>
@@ -1076,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for administrator user account to be created on a node. The account can be used to establish SSH connection to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ips_to_allow_python">
 <a href="#public_ips_to_allow_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips_<wbr>to_<wbr>allow</a>
@@ -1085,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of source IP ranges to allow SSH connection from. The default value is '*' (all source IPs are allowed). Maximum number of IP ranges that can be specified is 400.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useraccountsettingsresponse">User<wbr>Account<wbr>Settings<wbr>Response</h4>
@@ -1094,9 +950,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -1104,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_csharp">
 <a href="#adminuserpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Password</a>
@@ -1113,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_csharp">
 <a href="#adminusersshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -1122,14 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -1137,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_go">
 <a href="#adminuserpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Password</a>
@@ -1146,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_go">
 <a href="#adminusersshpublickey_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -1155,14 +1002,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Name</a>
@@ -1170,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_nodejs">
 <a href="#adminuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Password</a>
@@ -1179,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_nodejs">
 <a href="#adminusersshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -1188,14 +1030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_user_name_python">
 <a href="#admin_user_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>name</a>
@@ -1203,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_user_password_python">
 <a href="#admin_user_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>password</a>
@@ -1212,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_user_ssh_public_key_python">
 <a href="#admin_user_ssh_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>ssh_<wbr>public_<wbr>key</a>
@@ -1221,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -45,9 +45,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:devtestlab:CustomImage myresource1 /subscriptions/{
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -211,8 +180,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -220,8 +188,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_csharp">
 <a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -229,8 +196,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customimageplan_csharp">
 <a href="#customimageplan_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Plan</a>
@@ -238,8 +204,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromplan">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadiskstorageinfo_csharp">
 <a href="#datadiskstorageinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Storage<wbr>Info</a>
@@ -247,8 +212,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskstoragetypeinfo">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +220,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isplanauthorized_csharp">
 <a href="#isplanauthorized_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Plan<wbr>Authorized</a>
@@ -265,8 +228,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +236,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedimageid_csharp">
 <a href="#managedimageid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Image<wbr>Id</a>
@@ -283,8 +244,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedsnapshotid_csharp">
 <a href="#managedsnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Snapshot<wbr>Id</a>
@@ -292,8 +252,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -301,8 +260,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -310,8 +268,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_csharp">
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
@@ -319,8 +276,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiescustom">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_csharp">
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
@@ -328,14 +284,11 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromvm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -343,8 +296,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -352,8 +304,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_go">
 <a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
@@ -361,8 +312,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customimageplan_go">
 <a href="#customimageplan_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Plan</a>
@@ -370,8 +320,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadiskstorageinfo_go">
 <a href="#datadiskstorageinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Storage<wbr>Info</a>
@@ -379,8 +328,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskstoragetypeinfo">[]Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -388,8 +336,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isplanauthorized_go">
 <a href="#isplanauthorized_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Plan<wbr>Authorized</a>
@@ -397,8 +344,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -406,8 +352,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedimageid_go">
 <a href="#managedimageid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Image<wbr>Id</a>
@@ -415,8 +360,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedsnapshotid_go">
 <a href="#managedsnapshotid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Snapshot<wbr>Id</a>
@@ -424,8 +368,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +376,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -442,8 +384,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_go">
 <a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
@@ -451,8 +392,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom</a></span>
     </dt>
-    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_go">
 <a href="#vm_go" style="color: inherit; text-decoration: inherit;">Vm</a>
@@ -460,14 +400,11 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
@@ -475,8 +412,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -484,8 +420,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_nodejs">
 <a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
@@ -493,8 +428,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customimageplan_nodejs">
 <a href="#customimageplan_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Image<wbr>Plan</a>
@@ -502,8 +436,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadiskstorageinfo_nodejs">
 <a href="#datadiskstorageinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Storage<wbr>Info</a>
@@ -511,8 +444,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskstoragetypeinfo">Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info[]</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -520,8 +452,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isplanauthorized_nodejs">
 <a href="#isplanauthorized_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Plan<wbr>Authorized</a>
@@ -529,8 +460,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -538,8 +468,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedimageid_nodejs">
 <a href="#managedimageid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Image<wbr>Id</a>
@@ -547,8 +476,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managedsnapshotid_nodejs">
 <a href="#managedsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Snapshot<wbr>Id</a>
@@ -556,8 +484,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -565,8 +492,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -574,8 +500,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_nodejs">
 <a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
@@ -583,8 +508,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom</a></span>
     </dt>
-    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_nodejs">
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
@@ -592,14 +516,11 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
@@ -607,8 +528,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -616,8 +536,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="author_python">
 <a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
@@ -625,8 +544,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_image_plan_python">
 <a href="#custom_image_plan_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>image_<wbr>plan</a>
@@ -634,8 +552,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_disk_storage_info_python">
 <a href="#data_disk_storage_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>storage_<wbr>info</a>
@@ -643,8 +560,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskstoragetypeinfo">Sequence[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -652,8 +568,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_plan_authorized_python">
 <a href="#is_plan_authorized_python" style="color: inherit; text-decoration: inherit;">is_<wbr>plan_<wbr>authorized</a>
@@ -661,8 +576,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -670,8 +584,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_image_id_python">
 <a href="#managed_image_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>image_<wbr>id</a>
@@ -679,8 +592,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_snapshot_id_python">
 <a href="#managed_snapshot_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>snapshot_<wbr>id</a>
@@ -688,8 +600,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -697,8 +608,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -706,8 +616,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhd_python">
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
@@ -715,8 +624,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_python">
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
@@ -724,8 +632,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,9 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -746,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -755,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -764,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -773,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -782,14 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -797,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -806,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -815,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -824,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -833,14 +727,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -848,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -857,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -866,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -875,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -884,14 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -899,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the custom image.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -908,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -917,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -926,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -935,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -952,55 +831,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="customimageostype">Custom<wbr>Image<wbr>Os<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Custom<wbr>Image<wbr>Os<wbr>Type<wbr>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Custom<wbr>Image<wbr>Os<wbr>Type<wbr>Linux</dt>
-    <dd>Linux</dd>
-    <dt>Custom<wbr>Image<wbr>Os<wbr>Type<wbr>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Custom<wbr>Image<wbr>Os<wbr>Type<wbr>Windows</dt>
+    <dd>Windows</dd><dt>Custom<wbr>Image<wbr>Os<wbr>Type<wbr>Linux</dt>
+    <dd>Linux</dd><dt>Custom<wbr>Image<wbr>Os<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Windows</dt>
-    <dd>Windows</dd>
-    <dt>Linux</dt>
-    <dd>Linux</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Windows</dt>
+    <dd>Windows</dd><dt>Linux</dt>
+    <dd>Linux</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WINDOWS</dt>
-    <dd>Windows</dd>
-    <dt>LINUX</dt>
-    <dd>Linux</dd>
-    <dt>NONE</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>WINDOWS</dt>
+    <dd>Windows</dd><dt>LINUX</dt>
+    <dd>Linux</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1008,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#customimageostype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1017,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysprep_csharp">
 <a href="#sysprep_csharp" style="color: inherit; text-decoration: inherit;">Sys<wbr>Prep</a>
@@ -1026,14 +885,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1041,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#customimageostype">Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1050,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysprep_go">
 <a href="#sysprep_go" style="color: inherit; text-decoration: inherit;">Sys<wbr>Prep</a>
@@ -1059,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1074,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#customimageostype">Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1083,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysprep_nodejs">
 <a href="#sysprep_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Prep</a>
@@ -1092,14 +941,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1107,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#customimageostype">Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -1116,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sys_prep_python">
 <a href="#sys_prep_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>prep</a>
@@ -1125,16 +969,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customimagepropertiescustomresponse">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1142,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1151,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysprep_csharp">
 <a href="#sysprep_csharp" style="color: inherit; text-decoration: inherit;">Sys<wbr>Prep</a>
@@ -1160,14 +999,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1175,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1184,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysprep_go">
 <a href="#sysprep_go" style="color: inherit; text-decoration: inherit;">Sys<wbr>Prep</a>
@@ -1193,14 +1027,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1208,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1217,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sysprep_nodejs">
 <a href="#sysprep_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Prep</a>
@@ -1226,14 +1055,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1241,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -1250,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The image name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sys_prep_python">
 <a href="#sys_prep_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>prep</a>
@@ -1259,16 +1083,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1276,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1285,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1294,14 +1113,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1309,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1318,8 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1327,14 +1141,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1342,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1351,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1360,14 +1169,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1375,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1384,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1393,16 +1197,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customimagepropertiesfromplanresponse">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1410,8 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1419,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1428,14 +1227,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1443,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1452,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1461,14 +1255,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1476,8 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1485,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1494,14 +1283,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1509,8 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1518,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1527,16 +1311,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosinfo_csharp">
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
@@ -1544,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevmid_csharp">
 <a href="#sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -1553,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsosinfo_csharp">
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
@@ -1562,14 +1341,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosinfo_go">
 <a href="#linuxosinfo_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
@@ -1577,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevmid_go">
 <a href="#sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -1586,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsosinfo_go">
 <a href="#windowsosinfo_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
@@ -1595,14 +1369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosinfo_nodejs">
 <a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
@@ -1610,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevmid_nodejs">
 <a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
@@ -1619,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsosinfo_nodejs">
 <a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
@@ -1628,14 +1397,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_os_info_python">
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
@@ -1643,8 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_vm_id_python">
 <a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
@@ -1652,8 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_os_info_python">
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
@@ -1661,16 +1425,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customimagepropertiesfromvmresponse">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosinfo_csharp">
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
@@ -1678,8 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevmid_csharp">
 <a href="#sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -1687,8 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsosinfo_csharp">
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
@@ -1696,14 +1455,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosinfo_go">
 <a href="#linuxosinfo_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
@@ -1711,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevmid_go">
 <a href="#sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -1720,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsosinfo_go">
 <a href="#windowsosinfo_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
@@ -1729,14 +1483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosinfo_nodejs">
 <a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
@@ -1744,8 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevmid_nodejs">
 <a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
@@ -1753,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsosinfo_nodejs">
 <a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
@@ -1762,14 +1511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_os_info_python">
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
@@ -1777,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_vm_id_python">
 <a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
@@ -1786,8 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_os_info_python">
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
@@ -1795,16 +1539,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadiskstoragetypeinfo">Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1812,8 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1821,14 +1561,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1836,8 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1845,14 +1581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1860,8 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
@@ -1869,14 +1601,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1884,8 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
@@ -1893,16 +1621,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadiskstoragetypeinforesponse">Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1910,8 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1919,14 +1643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1934,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1943,14 +1663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1958,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
@@ -1967,14 +1683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1982,8 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk Lun{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
@@ -1991,16 +1703,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxosinfo">Linux<wbr>Os<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosstate_csharp">
 <a href="#linuxosstate_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
@@ -2008,14 +1717,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linuxosstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Linux<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosstate_go">
 <a href="#linuxosstate_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
@@ -2023,14 +1729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linuxosstate">Linux<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosstate_nodejs">
 <a href="#linuxosstate_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>State</a>
@@ -2038,14 +1741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#linuxosstate">Linux<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_os_state_python">
 <a href="#linux_os_state_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>state</a>
@@ -2053,16 +1753,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#linuxosstate">Linux<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosstate_csharp">
 <a href="#linuxosstate_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
@@ -2070,14 +1767,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosstate_go">
 <a href="#linuxosstate_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>State</a>
@@ -2085,14 +1779,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxosstate_nodejs">
 <a href="#linuxosstate_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>State</a>
@@ -2100,14 +1791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_os_state_python">
 <a href="#linux_os_state_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>state</a>
@@ -2115,108 +1803,73 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linuxosstate">Linux<wbr>Os<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Non<wbr>Deprovisioned</dt>
-    <dd>NonDeprovisioned</dd>
-    <dt>Deprovision<wbr>Requested</dt>
-    <dd>DeprovisionRequested</dd>
-    <dt>Deprovision<wbr>Applied</dt>
-    <dd>DeprovisionApplied</dd>
-</dl>
+<dl class="tabular"><dt>Non<wbr>Deprovisioned</dt>
+    <dd>NonDeprovisioned</dd><dt>Deprovision<wbr>Requested</dt>
+    <dd>DeprovisionRequested</dd><dt>Deprovision<wbr>Applied</dt>
+    <dd>DeprovisionApplied</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Linux<wbr>Os<wbr>State<wbr>Non<wbr>Deprovisioned</dt>
-    <dd>NonDeprovisioned</dd>
-    <dt>Linux<wbr>Os<wbr>State<wbr>Deprovision<wbr>Requested</dt>
-    <dd>DeprovisionRequested</dd>
-    <dt>Linux<wbr>Os<wbr>State<wbr>Deprovision<wbr>Applied</dt>
-    <dd>DeprovisionApplied</dd>
-</dl>
+<dl class="tabular"><dt>Linux<wbr>Os<wbr>State<wbr>Non<wbr>Deprovisioned</dt>
+    <dd>NonDeprovisioned</dd><dt>Linux<wbr>Os<wbr>State<wbr>Deprovision<wbr>Requested</dt>
+    <dd>DeprovisionRequested</dd><dt>Linux<wbr>Os<wbr>State<wbr>Deprovision<wbr>Applied</dt>
+    <dd>DeprovisionApplied</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Non<wbr>Deprovisioned</dt>
-    <dd>NonDeprovisioned</dd>
-    <dt>Deprovision<wbr>Requested</dt>
-    <dd>DeprovisionRequested</dd>
-    <dt>Deprovision<wbr>Applied</dt>
-    <dd>DeprovisionApplied</dd>
-</dl>
+<dl class="tabular"><dt>Non<wbr>Deprovisioned</dt>
+    <dd>NonDeprovisioned</dd><dt>Deprovision<wbr>Requested</dt>
+    <dd>DeprovisionRequested</dd><dt>Deprovision<wbr>Applied</dt>
+    <dd>DeprovisionApplied</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NON_DEPROVISIONED</dt>
-    <dd>NonDeprovisioned</dd>
-    <dt>DEPROVISION_REQUESTED</dt>
-    <dd>DeprovisionRequested</dd>
-    <dt>DEPROVISION_APPLIED</dt>
-    <dd>DeprovisionApplied</dd>
-</dl>
+<dl class="tabular"><dt>NON_DEPROVISIONED</dt>
+    <dd>NonDeprovisioned</dd><dt>DEPROVISION_REQUESTED</dt>
+    <dd>DeprovisionRequested</dd><dt>DEPROVISION_APPLIED</dt>
+    <dd>DeprovisionApplied</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storagetype">Storage<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Type<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Storage<wbr>Type<wbr>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Type<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Storage<wbr>Type<wbr>Premium</dt>
+    <dd>Premium</dd><dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium</dd>
-    <dt>STANDARD_SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>PREMIUM</dt>
+    <dd>Premium</dd><dt>STANDARD_SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsosinfo">Windows<wbr>Os<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowsosstate_csharp">
 <a href="#windowsosstate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
@@ -2224,14 +1877,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#windowsosstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Windows<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowsosstate_go">
 <a href="#windowsosstate_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
@@ -2239,14 +1889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#windowsosstate">Windows<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowsosstate_nodejs">
 <a href="#windowsosstate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>State</a>
@@ -2254,14 +1901,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#windowsosstate">Windows<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windows_os_state_python">
 <a href="#windows_os_state_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>state</a>
@@ -2269,16 +1913,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#windowsosstate">Windows<wbr>Os<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowsosstate_csharp">
 <a href="#windowsosstate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
@@ -2286,14 +1927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowsosstate_go">
 <a href="#windowsosstate_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>State</a>
@@ -2301,14 +1939,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowsosstate_nodejs">
 <a href="#windowsosstate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>State</a>
@@ -2316,14 +1951,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windows_os_state_python">
 <a href="#windows_os_state_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>state</a>
@@ -2331,54 +1963,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="windowsosstate">Windows<wbr>Os<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Non<wbr>Sysprepped</dt>
-    <dd>NonSysprepped</dd>
-    <dt>Sysprep<wbr>Requested</dt>
-    <dd>SysprepRequested</dd>
-    <dt>Sysprep<wbr>Applied</dt>
-    <dd>SysprepApplied</dd>
-</dl>
+<dl class="tabular"><dt>Non<wbr>Sysprepped</dt>
+    <dd>NonSysprepped</dd><dt>Sysprep<wbr>Requested</dt>
+    <dd>SysprepRequested</dd><dt>Sysprep<wbr>Applied</dt>
+    <dd>SysprepApplied</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Windows<wbr>Os<wbr>State<wbr>Non<wbr>Sysprepped</dt>
-    <dd>NonSysprepped</dd>
-    <dt>Windows<wbr>Os<wbr>State<wbr>Sysprep<wbr>Requested</dt>
-    <dd>SysprepRequested</dd>
-    <dt>Windows<wbr>Os<wbr>State<wbr>Sysprep<wbr>Applied</dt>
-    <dd>SysprepApplied</dd>
-</dl>
+<dl class="tabular"><dt>Windows<wbr>Os<wbr>State<wbr>Non<wbr>Sysprepped</dt>
+    <dd>NonSysprepped</dd><dt>Windows<wbr>Os<wbr>State<wbr>Sysprep<wbr>Requested</dt>
+    <dd>SysprepRequested</dd><dt>Windows<wbr>Os<wbr>State<wbr>Sysprep<wbr>Applied</dt>
+    <dd>SysprepApplied</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Non<wbr>Sysprepped</dt>
-    <dd>NonSysprepped</dd>
-    <dt>Sysprep<wbr>Requested</dt>
-    <dd>SysprepRequested</dd>
-    <dt>Sysprep<wbr>Applied</dt>
-    <dd>SysprepApplied</dd>
-</dl>
+<dl class="tabular"><dt>Non<wbr>Sysprepped</dt>
+    <dd>NonSysprepped</dd><dt>Sysprep<wbr>Requested</dt>
+    <dd>SysprepRequested</dd><dt>Sysprep<wbr>Applied</dt>
+    <dd>SysprepApplied</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NON_SYSPREPPED</dt>
-    <dd>NonSysprepped</dd>
-    <dt>SYSPREP_REQUESTED</dt>
-    <dd>SysprepRequested</dd>
-    <dt>SYSPREP_APPLIED</dt>
-    <dd>SysprepApplied</dd>
-</dl>
+<dl class="tabular"><dt>NON_SYSPREPPED</dt>
+    <dd>NonSysprepped</dd><dt>SYSPREP_REQUESTED</dt>
+    <dd>SysprepRequested</dd><dt>SYSPREP_APPLIED</dt>
+    <dd>SysprepApplied</dd></dl>
 {{% /choosable %}}
 
 

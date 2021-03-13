@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationname_csharp">
 <a href="#registrationname_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationname_go">
 <a href="#registrationname_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrationname_nodejs">
 <a href="#registrationname_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the product.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_name_python">
 <a href="#registration_name_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Product<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of products.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">[]Product<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of products.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -259,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">Product<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of products.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -274,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI to the next page.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productresponse">Sequence[Product<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of products.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of products.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -298,9 +262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompatible_csharp">
 <a href="#iscompatible_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compatible</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issues_csharp">
 <a href="#issues_csharp" style="color: inherit; text-decoration: inherit;">Issues</a>
@@ -326,8 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of all issues found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all issues found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -335,14 +294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompatible_go">
 <a href="#iscompatible_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compatible</a>
@@ -359,8 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issues_go">
 <a href="#issues_go" style="color: inherit; text-decoration: inherit;">Issues</a>
@@ -368,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of all issues found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all issues found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -377,14 +330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -392,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompatible_nodejs">
 <a href="#iscompatible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compatible</a>
@@ -401,8 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issues_nodejs">
 <a href="#issues_nodejs" style="color: inherit; text-decoration: inherit;">issues</a>
@@ -410,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of all issues found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all issues found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -419,14 +366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -434,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Full error message if any compatibility issues are found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_compatible_python">
 <a href="#is_compatible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compatible</a>
@@ -443,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tells if product is compatible with current device{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issues_python">
 <a href="#issues_python" style="color: inherit; text-decoration: inherit;">issues</a>
@@ -452,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of all issues found{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all issues found{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -461,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Short error message if any compatibility issues are found{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="iconurisresponse">Icon<wbr>Uris<wbr>Response</h4>
@@ -470,9 +410,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hero_csharp">
 <a href="#hero_csharp" style="color: inherit; text-decoration: inherit;">Hero</a>
@@ -480,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="large_csharp">
 <a href="#large_csharp" style="color: inherit; text-decoration: inherit;">Large</a>
@@ -489,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_csharp">
 <a href="#medium_csharp" style="color: inherit; text-decoration: inherit;">Medium</a>
@@ -498,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="small_csharp">
 <a href="#small_csharp" style="color: inherit; text-decoration: inherit;">Small</a>
@@ -507,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wide_csharp">
 <a href="#wide_csharp" style="color: inherit; text-decoration: inherit;">Wide</a>
@@ -516,14 +450,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hero_go">
 <a href="#hero_go" style="color: inherit; text-decoration: inherit;">Hero</a>
@@ -531,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="large_go">
 <a href="#large_go" style="color: inherit; text-decoration: inherit;">Large</a>
@@ -540,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_go">
 <a href="#medium_go" style="color: inherit; text-decoration: inherit;">Medium</a>
@@ -549,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="small_go">
 <a href="#small_go" style="color: inherit; text-decoration: inherit;">Small</a>
@@ -558,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wide_go">
 <a href="#wide_go" style="color: inherit; text-decoration: inherit;">Wide</a>
@@ -567,14 +494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hero_nodejs">
 <a href="#hero_nodejs" style="color: inherit; text-decoration: inherit;">hero</a>
@@ -582,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="large_nodejs">
 <a href="#large_nodejs" style="color: inherit; text-decoration: inherit;">large</a>
@@ -591,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_nodejs">
 <a href="#medium_nodejs" style="color: inherit; text-decoration: inherit;">medium</a>
@@ -600,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="small_nodejs">
 <a href="#small_nodejs" style="color: inherit; text-decoration: inherit;">small</a>
@@ -609,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wide_nodejs">
 <a href="#wide_nodejs" style="color: inherit; text-decoration: inherit;">wide</a>
@@ -618,14 +538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hero_python">
 <a href="#hero_python" style="color: inherit; text-decoration: inherit;">hero</a>
@@ -633,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to hero icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="large_python">
 <a href="#large_python" style="color: inherit; text-decoration: inherit;">large</a>
@@ -642,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to large icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_python">
 <a href="#medium_python" style="color: inherit; text-decoration: inherit;">medium</a>
@@ -651,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to medium icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="small_python">
 <a href="#small_python" style="color: inherit; text-decoration: inherit;">small</a>
@@ -660,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI to small icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wide_python">
 <a href="#wide_python" style="color: inherit; text-decoration: inherit;">wide</a>
@@ -669,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}URI to wide icon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productlinkresponse">Product<wbr>Link<wbr>Response</h4>
@@ -678,9 +590,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -688,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -697,14 +606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -712,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -721,14 +626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -736,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -745,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -760,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the link.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -769,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI corresponding to the link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productpropertiesresponse">Product<wbr>Properties<wbr>Response</h4>
@@ -778,9 +674,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -788,14 +682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -803,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -818,14 +706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -833,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="productresponse">Product<wbr>Response</h4>
@@ -842,9 +726,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -852,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -861,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -870,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingpartnumber_csharp">
 <a href="#billingpartnumber_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Part<wbr>Number</a>
@@ -879,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibility_csharp">
 <a href="#compatibility_csharp" style="color: inherit; text-decoration: inherit;">Compatibility</a>
@@ -888,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compatibilityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Compatibility<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -897,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -906,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -915,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryitemidentity_csharp">
 <a href="#galleryitemidentity_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Item<wbr>Identity</a>
@@ -924,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconuris_csharp">
 <a href="#iconuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Uris</a>
@@ -933,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iconurisresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Icon<wbr>Uris<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legalterms_csharp">
 <a href="#legalterms_csharp" style="color: inherit; text-decoration: inherit;">Legal<wbr>Terms</a>
@@ -942,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The legal terms.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The legal terms.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="links_csharp">
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -951,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Product<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -960,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerversion_csharp">
 <a href="#offerversion_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Version</a>
@@ -969,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadlength_csharp">
 <a href="#payloadlength_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Length</a>
@@ -978,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The length of product content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The length of product content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacypolicy_csharp">
 <a href="#privacypolicy_csharp" style="color: inherit; text-decoration: inherit;">Privacy<wbr>Policy</a>
@@ -987,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productkind_csharp">
 <a href="#productkind_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Kind</a>
@@ -996,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productproperties_csharp">
 <a href="#productproperties_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Properties</a>
@@ -1005,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack.<wbr>Inputs.<wbr>Product<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherdisplayname_csharp">
 <a href="#publisherdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Display<wbr>Name</a>
@@ -1014,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisheridentifier_csharp">
 <a href="#publisheridentifier_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Identifier</a>
@@ -1023,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1032,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmextensiontype_csharp">
 <a href="#vmextensiontype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extension<wbr>Type</a>
@@ -1041,14 +902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1056,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1065,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1074,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingpartnumber_go">
 <a href="#billingpartnumber_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Part<wbr>Number</a>
@@ -1083,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibility_go">
 <a href="#compatibility_go" style="color: inherit; text-decoration: inherit;">Compatibility</a>
@@ -1092,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compatibilityresponse">Compatibility<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1101,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1110,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1119,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryitemidentity_go">
 <a href="#galleryitemidentity_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Item<wbr>Identity</a>
@@ -1128,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconuris_go">
 <a href="#iconuris_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Uris</a>
@@ -1137,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iconurisresponse">Icon<wbr>Uris<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legalterms_go">
 <a href="#legalterms_go" style="color: inherit; text-decoration: inherit;">Legal<wbr>Terms</a>
@@ -1146,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The legal terms.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The legal terms.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="links_go">
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
@@ -1155,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlinkresponse">[]Product<wbr>Link<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -1164,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerversion_go">
 <a href="#offerversion_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Version</a>
@@ -1173,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadlength_go">
 <a href="#payloadlength_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Length</a>
@@ -1182,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The length of product content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The length of product content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacypolicy_go">
 <a href="#privacypolicy_go" style="color: inherit; text-decoration: inherit;">Privacy<wbr>Policy</a>
@@ -1191,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productkind_go">
 <a href="#productkind_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Kind</a>
@@ -1200,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productproperties_go">
 <a href="#productproperties_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Properties</a>
@@ -1209,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productpropertiesresponse">Product<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherdisplayname_go">
 <a href="#publisherdisplayname_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Display<wbr>Name</a>
@@ -1218,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisheridentifier_go">
 <a href="#publisheridentifier_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Identifier</a>
@@ -1227,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1236,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmextensiontype_go">
 <a href="#vmextensiontype_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extension<wbr>Type</a>
@@ -1245,14 +1082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1260,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1269,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1278,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingpartnumber_nodejs">
 <a href="#billingpartnumber_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Part<wbr>Number</a>
@@ -1287,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibility_nodejs">
 <a href="#compatibility_nodejs" style="color: inherit; text-decoration: inherit;">compatibility</a>
@@ -1296,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compatibilityresponse">Compatibility<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1305,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1314,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1323,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryitemidentity_nodejs">
 <a href="#galleryitemidentity_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Item<wbr>Identity</a>
@@ -1332,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconuris_nodejs">
 <a href="#iconuris_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Uris</a>
@@ -1341,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iconurisresponse">Icon<wbr>Uris<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legalterms_nodejs">
 <a href="#legalterms_nodejs" style="color: inherit; text-decoration: inherit;">legal<wbr>Terms</a>
@@ -1350,8 +1174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The legal terms.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The legal terms.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="links_nodejs">
 <a href="#links_nodejs" style="color: inherit; text-decoration: inherit;">links</a>
@@ -1359,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlinkresponse">Product<wbr>Link<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1368,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerversion_nodejs">
 <a href="#offerversion_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Version</a>
@@ -1377,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payloadlength_nodejs">
 <a href="#payloadlength_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Length</a>
@@ -1386,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The length of product content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The length of product content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacypolicy_nodejs">
 <a href="#privacypolicy_nodejs" style="color: inherit; text-decoration: inherit;">privacy<wbr>Policy</a>
@@ -1395,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productkind_nodejs">
 <a href="#productkind_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Kind</a>
@@ -1404,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productproperties_nodejs">
 <a href="#productproperties_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Properties</a>
@@ -1413,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productpropertiesresponse">Product<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherdisplayname_nodejs">
 <a href="#publisherdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Display<wbr>Name</a>
@@ -1422,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisheridentifier_nodejs">
 <a href="#publisheridentifier_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Identifier</a>
@@ -1431,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1440,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmextensiontype_nodejs">
 <a href="#vmextensiontype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Extension<wbr>Type</a>
@@ -1449,14 +1262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1464,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1473,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1482,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_part_number_python">
 <a href="#billing_part_number_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>part_<wbr>number</a>
@@ -1491,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The part number used for billing purposes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibility_python">
 <a href="#compatibility_python" style="color: inherit; text-decoration: inherit;">compatibility</a>
@@ -1500,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#compatibilityresponse">Compatibility<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Product compatibility with current device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1509,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1518,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name of the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1527,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The entity tag used for optimistic concurrency when modifying the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gallery_item_identity_python">
 <a href="#gallery_item_identity_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>item_<wbr>identity</a>
@@ -1536,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identifier of the gallery item corresponding to the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_uris_python">
 <a href="#icon_uris_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>uris</a>
@@ -1545,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iconurisresponse">Icon<wbr>Uris<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legal_terms_python">
 <a href="#legal_terms_python" style="color: inherit; text-decoration: inherit;">legal_<wbr>terms</a>
@@ -1554,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The legal terms.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The legal terms.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="links_python">
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
@@ -1563,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productlinkresponse">Sequence[Product<wbr>Link<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional links available for this product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -1572,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer representing the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_version_python">
 <a href="#offer_version_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>version</a>
@@ -1581,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The version of the product offer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payload_length_python">
 <a href="#payload_length_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>length</a>
@@ -1590,8 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The length of product content.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The length of product content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privacy_policy_python">
 <a href="#privacy_policy_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>policy</a>
@@ -1599,8 +1394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The privacy policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_kind_python">
 <a href="#product_kind_python" style="color: inherit; text-decoration: inherit;">product_<wbr>kind</a>
@@ -1608,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kind of the product (virtualMachine or virtualMachineExtension){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_properties_python">
 <a href="#product_properties_python" style="color: inherit; text-decoration: inherit;">product_<wbr>properties</a>
@@ -1617,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#productpropertiesresponse">Product<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional properties for the product.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_display_name_python">
 <a href="#publisher_display_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>display_<wbr>name</a>
@@ -1626,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The user-friendly name of the product publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_identifier_python">
 <a href="#publisher_identifier_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>identifier</a>
@@ -1635,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Publisher identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1644,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The product SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The product SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_extension_type_python">
 <a href="#vm_extension_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extension_<wbr>type</a>
@@ -1653,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the Virtual Machine Extension.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

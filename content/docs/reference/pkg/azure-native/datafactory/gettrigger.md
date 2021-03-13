@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_csharp">
 <a href="#triggername_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The trigger name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_go">
 <a href="#triggername_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The trigger name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_nodejs">
 <a href="#triggername_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The trigger name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The trigger name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_name_python">
 <a href="#trigger_name_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The trigger name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The trigger name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobeventstriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Blob<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#blobtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Blob<wbr>Trigger<wbr>Response</a> | <a href="#chainingtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Chaining<wbr>Trigger<wbr>Response</a> | <a href="#customeventstriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Custom<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#multiplepipelinetriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a> | <a href="#reruntumblingwindowtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a> | <a href="#scheduletriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Schedule<wbr>Trigger<wbr>Response</a> | <a href="#tumblingwindowtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Outputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobeventstriggerresponse">Blob<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#blobtriggerresponse">Blob<wbr>Trigger<wbr>Response</a> | <a href="#chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</a> | <a href="#customeventstriggerresponse">Custom<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a> | <a href="#reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a> | <a href="#scheduletriggerresponse">Schedule<wbr>Trigger<wbr>Response</a> | <a href="#tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobeventstriggerresponse">Blob<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#blobtriggerresponse">Blob<wbr>Trigger<wbr>Response</a> | <a href="#chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</a> | <a href="#customeventstriggerresponse">Custom<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a> | <a href="#reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a> | <a href="#scheduletriggerresponse">Schedule<wbr>Trigger<wbr>Response</a> | <a href="#tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -340,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag identifies change in the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -364,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobeventstriggerresponse">Blob<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#blobtriggerresponse">Blob<wbr>Trigger<wbr>Response</a> | <a href="#chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</a> | <a href="#customeventstriggerresponse">Custom<wbr>Events<wbr>Trigger<wbr>Response</a> | <a href="#multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</a> | <a href="#reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a> | <a href="#scheduletriggerresponse">Schedule<wbr>Trigger<wbr>Response</a> | <a href="#tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -416,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -425,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -434,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -443,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathbeginswith_csharp">
 <a href="#blobpathbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Begins<wbr>With</a>
@@ -452,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathendswith_csharp">
 <a href="#blobpathendswith_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Ends<wbr>With</a>
@@ -461,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -470,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreemptyblobs_csharp">
 <a href="#ignoreemptyblobs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Empty<wbr>Blobs</a>
@@ -479,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_csharp">
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -488,14 +430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -503,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -512,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -521,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathbeginswith_go">
 <a href="#blobpathbeginswith_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Begins<wbr>With</a>
@@ -539,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathendswith_go">
 <a href="#blobpathendswith_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Ends<wbr>With</a>
@@ -548,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -557,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreemptyblobs_go">
 <a href="#ignoreemptyblobs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Empty<wbr>Blobs</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_go">
 <a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -575,14 +506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -599,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -608,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -617,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathbeginswith_nodejs">
 <a href="#blobpathbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Begins<wbr>With</a>
@@ -626,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobpathendswith_nodejs">
 <a href="#blobpathendswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Ends<wbr>With</a>
@@ -635,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -644,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoreemptyblobs_nodejs">
 <a href="#ignoreemptyblobs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Empty<wbr>Blobs</a>
@@ -653,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_nodejs">
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -662,14 +582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -686,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_path_begins_with_python">
 <a href="#blob_path_begins_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>begins_<wbr>with</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_path_ends_with_python">
 <a href="#blob_path_ends_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>ends_<wbr>with</a>
@@ -722,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -731,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_empty_blobs_python">
 <a href="#ignore_empty_blobs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>empty_<wbr>blobs</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_python">
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="blobtriggerresponse">Blob<wbr>Trigger<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="folderpath_csharp">
 <a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkedservice_csharp">
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconcurrency_csharp">
 <a href="#maxconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
@@ -786,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -795,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -813,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_csharp">
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -822,14 +722,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="folderpath_go">
 <a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
@@ -837,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkedservice_go">
 <a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
@@ -846,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconcurrency_go">
 <a href="#maxconcurrency_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
@@ -855,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -864,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -873,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -882,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_go">
 <a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -891,14 +782,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="folderpath_nodejs">
 <a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
@@ -906,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkedservice_nodejs">
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
@@ -915,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconcurrency_nodejs">
 <a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
@@ -924,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -933,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -942,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -951,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_nodejs">
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -960,14 +842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="folder_path_python">
 <a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
@@ -975,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linked_service_python">
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
@@ -984,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_concurrency_python">
 <a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
@@ -993,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -1002,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_python">
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="chainingtriggerresponse">Chaining<wbr>Trigger<wbr>Response</h4>
@@ -1038,9 +910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1048,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_csharp">
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
@@ -1057,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rundimension_csharp">
 <a href="#rundimension_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Dimension</a>
@@ -1066,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -1075,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1084,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1093,14 +958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependson_go">
 <a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -1108,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">[]Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_go">
 <a href="#pipeline_go" style="color: inherit; text-decoration: inherit;">Pipeline</a>
@@ -1117,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rundimension_go">
 <a href="#rundimension_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Dimension</a>
@@ -1126,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -1135,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1144,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1153,14 +1010,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
@@ -1168,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_nodejs">
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
@@ -1177,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rundimension_nodejs">
 <a href="#rundimension_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Dimension</a>
@@ -1186,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -1195,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1204,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1213,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="depends_on_python">
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
@@ -1228,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_python">
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
@@ -1237,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_dimension_python">
 <a href="#run_dimension_python" style="color: inherit; text-decoration: inherit;">run_<wbr>dimension</a>
@@ -1246,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Run Dimension property that needs to be emitted by upstream pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -1255,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1264,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1273,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customeventstriggerresponse">Custom<wbr>Events<wbr>Trigger<wbr>Response</h4>
@@ -1282,9 +1122,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1292,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -1301,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1310,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1319,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1328,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_csharp">
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -1337,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectbeginswith_csharp">
 <a href="#subjectbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
@@ -1346,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectendswith_csharp">
 <a href="#subjectendswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
@@ -1355,14 +1186,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1370,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -1379,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1388,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1397,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1406,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_go">
 <a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -1415,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectbeginswith_go">
 <a href="#subjectbeginswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
@@ -1424,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectendswith_go">
 <a href="#subjectendswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
@@ -1433,14 +1254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1448,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -1457,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1466,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1475,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1484,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_nodejs">
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -1493,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectbeginswith_nodejs">
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
@@ -1502,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectendswith_nodejs">
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
@@ -1511,14 +1322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1526,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -1535,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1544,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1553,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1562,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_python">
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -1571,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_begins_with_python">
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
@@ -1580,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_ends_with_python">
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
@@ -1589,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</h4>
@@ -1598,9 +1398,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_csharp">
 <a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -1608,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1617,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1626,14 +1422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_go">
 <a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -1641,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1650,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1659,14 +1450,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_nodejs">
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -1674,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1683,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1692,14 +1478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reference_name_python">
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -1707,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1716,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1725,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multiplepipelinetriggerresponse">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Response</h4>
@@ -1734,9 +1514,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -1744,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1753,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1762,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_csharp">
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -1771,14 +1546,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -1786,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1795,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1804,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_go">
 <a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -1813,14 +1582,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -1828,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1837,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1846,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_nodejs">
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -1855,14 +1618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -1870,8 +1630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1879,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1888,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_python">
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -1897,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</h4>
@@ -1906,9 +1662,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_csharp">
 <a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -1916,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1925,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1934,14 +1686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_go">
 <a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -1949,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1958,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1967,14 +1714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_nodejs">
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -1982,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1991,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2000,14 +1742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reference_name_python">
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -2015,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference pipeline name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2024,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2033,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reference name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Reference name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response</h4>
@@ -2042,9 +1778,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2052,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_csharp">
 <a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -2061,14 +1794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2076,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_go">
 <a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
@@ -2085,14 +1814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2100,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_nodejs">
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -2109,14 +1834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2124,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="occurrence_python">
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
@@ -2133,8 +1854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</h4>
@@ -2142,9 +1862,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_csharp">
 <a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -2152,8 +1870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}The hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -2161,8 +1878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthdays_csharp">
 <a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -2170,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}The month days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_csharp">
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -2179,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -2188,14 +1902,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_go">
 <a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -2203,8 +1914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}The hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -2212,8 +1922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthdays_go">
 <a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
@@ -2221,8 +1930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}The month days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_go">
 <a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
@@ -2230,8 +1938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">[]Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
@@ -2239,14 +1946,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_nodejs">
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -2254,8 +1958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}The hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -2263,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthdays_nodejs">
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
@@ -2272,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}The month days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthlyoccurrences_nodejs">
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
@@ -2281,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
@@ -2290,14 +1990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_python">
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -2305,8 +2002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}The hours.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -2314,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="month_days_python">
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
@@ -2323,8 +2018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}The month days.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_occurrences_python">
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
@@ -2332,8 +2026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="week_days_python">
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
@@ -2341,8 +2034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reruntumblingwindowtriggerresponse">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Response</h4>
@@ -2350,9 +2042,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parenttrigger_csharp">
 <a href="#parenttrigger_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Trigger</a>
@@ -2360,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedendtime_csharp">
 <a href="#requestedendtime_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>End<wbr>Time</a>
@@ -2369,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedstarttime_csharp">
 <a href="#requestedstarttime_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Start<wbr>Time</a>
@@ -2378,8 +2066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rerunconcurrency_csharp">
 <a href="#rerunconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Rerun<wbr>Concurrency</a>
@@ -2387,8 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -2396,8 +2082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2405,8 +2090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2414,14 +2098,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parenttrigger_go">
 <a href="#parenttrigger_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Trigger</a>
@@ -2429,8 +2110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedendtime_go">
 <a href="#requestedendtime_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>End<wbr>Time</a>
@@ -2438,8 +2118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedstarttime_go">
 <a href="#requestedstarttime_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Start<wbr>Time</a>
@@ -2447,8 +2126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rerunconcurrency_go">
 <a href="#rerunconcurrency_go" style="color: inherit; text-decoration: inherit;">Rerun<wbr>Concurrency</a>
@@ -2456,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -2465,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -2474,8 +2150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2483,14 +2158,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parenttrigger_nodejs">
 <a href="#parenttrigger_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Trigger</a>
@@ -2498,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedendtime_nodejs">
 <a href="#requestedendtime_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>End<wbr>Time</a>
@@ -2507,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedstarttime_nodejs">
 <a href="#requestedstarttime_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Start<wbr>Time</a>
@@ -2516,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rerunconcurrency_nodejs">
 <a href="#rerunconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">rerun<wbr>Concurrency</a>
@@ -2525,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -2534,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2543,8 +2210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2552,14 +2218,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_trigger_python">
 <a href="#parent_trigger_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>trigger</a>
@@ -2567,8 +2230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The parent trigger reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requested_end_time_python">
 <a href="#requested_end_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>end_<wbr>time</a>
@@ -2576,8 +2238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requested_start_time_python">
 <a href="#requested_start_time_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>start_<wbr>time</a>
@@ -2585,8 +2246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start time for the time period for which restatement is initiated. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rerun_concurrency_python">
 <a href="#rerun_concurrency_python" style="color: inherit; text-decoration: inherit;">rerun_<wbr>concurrency</a>
@@ -2594,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a rerun is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -2603,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -2612,8 +2270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2621,8 +2278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="retrypolicyresponse">Retry<wbr>Policy<wbr>Response</h4>
@@ -2630,9 +2286,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2640,8 +2294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_csharp">
 <a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -2649,14 +2302,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2664,8 +2314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_go">
 <a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -2673,14 +2322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2688,8 +2334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="intervalinseconds_nodejs">
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
@@ -2697,14 +2342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2712,8 +2354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_in_seconds_python">
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
@@ -2721,8 +2362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</h4>
@@ -2730,9 +2370,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2740,8 +2378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -2749,8 +2386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -2758,8 +2394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -2767,8 +2402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2776,8 +2410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -2785,14 +2418,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2800,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -2809,8 +2438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -2818,8 +2446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -2827,8 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2836,8 +2462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -2845,14 +2470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2860,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -2869,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -2878,8 +2498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -2887,8 +2506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2896,8 +2514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -2905,14 +2522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2920,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -2929,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -2938,8 +2550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -2947,8 +2558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2956,8 +2566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -2965,8 +2574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduletriggerresponse">Schedule<wbr>Trigger<wbr>Response</h4>
@@ -2974,9 +2582,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_csharp">
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
@@ -2984,8 +2590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -2993,8 +2598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -3002,8 +2606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3011,8 +2614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_csharp">
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -3020,14 +2622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_go">
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
@@ -3035,8 +2634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -3044,8 +2642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -3053,8 +2650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3062,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_go">
 <a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
@@ -3071,14 +2666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_nodejs">
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
@@ -3086,8 +2678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -3095,8 +2686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -3104,8 +2694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3113,8 +2702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_nodejs">
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -3122,14 +2710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recurrence_python">
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
@@ -3137,8 +2722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -3146,8 +2730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -3155,8 +2738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3164,8 +2746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelines_python">
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
@@ -3173,8 +2754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="selfdependencytumblingwindowtriggerreferenceresponse">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response</h4>
@@ -3182,9 +2762,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offset_csharp">
 <a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -3192,8 +2770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3201,14 +2778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offset_go">
 <a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -3216,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3225,14 +2798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offset_nodejs">
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -3240,8 +2810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3249,14 +2818,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offset_python">
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -3264,8 +2830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3273,8 +2838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerdependencyreferenceresponse">Trigger<wbr>Dependency<wbr>Reference<wbr>Response</h4>
@@ -3282,9 +2846,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencetrigger_csharp">
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
@@ -3292,14 +2854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencetrigger_go">
 <a href="#referencetrigger_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
@@ -3307,14 +2866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencetrigger_nodejs">
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
@@ -3322,14 +2878,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reference_trigger_python">
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
@@ -3337,8 +2890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</h4>
@@ -3346,9 +2898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -3356,8 +2906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelinereference_csharp">
 <a href="#pipelinereference_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
@@ -3365,14 +2914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -3380,8 +2926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelinereference_go">
 <a href="#pipelinereference_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
@@ -3389,14 +2934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3404,8 +2946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelinereference_nodejs">
 <a href="#pipelinereference_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
@@ -3413,14 +2954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3428,8 +2966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Pipeline parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_reference_python">
 <a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
@@ -3437,8 +2974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</h4>
@@ -3446,9 +2982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_csharp">
 <a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -3456,8 +2990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3465,14 +2998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_go">
 <a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -3480,8 +3010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3489,14 +3018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencename_nodejs">
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -3504,8 +3030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3513,14 +3038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reference_name_python">
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -3528,8 +3050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reference trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3537,8 +3058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tumblingwindowtriggerdependencyreferenceresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response</h4>
@@ -3546,9 +3066,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencetrigger_csharp">
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
@@ -3556,8 +3074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_csharp">
 <a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -3565,8 +3082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3574,14 +3090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencetrigger_go">
 <a href="#referencetrigger_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
@@ -3589,8 +3102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_go">
 <a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -3598,8 +3110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -3607,14 +3118,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencetrigger_nodejs">
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
@@ -3622,8 +3130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_nodejs">
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -3631,8 +3138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3640,14 +3146,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reference_trigger_python">
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
@@ -3655,8 +3158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_python">
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -3664,8 +3166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -3673,8 +3174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tumblingwindowtriggerresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Response</h4>
@@ -3682,9 +3182,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -3692,8 +3190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -3701,8 +3198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconcurrency_csharp">
 <a href="#maxconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
@@ -3710,8 +3206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_csharp">
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
@@ -3719,8 +3214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_csharp">
 <a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -3728,8 +3222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3737,8 +3230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -3746,8 +3238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -3755,8 +3246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -3764,8 +3254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3773,8 +3262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -3782,8 +3270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -3791,14 +3278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -3806,8 +3290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -3815,8 +3298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconcurrency_go">
 <a href="#maxconcurrency_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
@@ -3824,8 +3306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_go">
 <a href="#pipeline_go" style="color: inherit; text-decoration: inherit;">Pipeline</a>
@@ -3833,8 +3314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_go">
 <a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
@@ -3842,8 +3322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -3851,8 +3330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -3860,8 +3338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -3869,8 +3346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
 <a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
@@ -3878,8 +3354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3887,8 +3362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -3896,8 +3370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -3905,14 +3378,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -3920,8 +3390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -3929,8 +3398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxconcurrency_nodejs">
 <a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
@@ -3938,8 +3406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_nodejs">
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
@@ -3947,8 +3414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtimestate_nodejs">
 <a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
@@ -3956,8 +3422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -3965,8 +3430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -3974,8 +3438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -3983,8 +3446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
@@ -3992,8 +3454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4001,8 +3462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -4010,8 +3470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -4019,14 +3478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -4034,8 +3490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency of the time windows.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -4043,8 +3498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The interval of the time windows. The minimum interval allowed is 15 Minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_concurrency_python">
 <a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
@@ -4052,8 +3506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The max number of parallel time windows (ready for execution) for which a new run is triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pipeline_python">
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
@@ -4061,8 +3514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runtime_state_python">
 <a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
@@ -4070,8 +3522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -4079,8 +3530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -4088,8 +3538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -4097,8 +3546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
@@ -4106,8 +3554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4115,8 +3562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -4124,8 +3570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -4133,8 +3578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

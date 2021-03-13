@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linkname_csharp">
 <a href="#linkname_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linkname_go">
 <a href="#linkname_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linkname_nodejs">
 <a href="#linkname_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="link_name_python">
 <a href="#link_name_python" style="color: inherit; text-decoration: inherit;">link_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name of the linked workspace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedworkspacepropsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Linked<wbr>Workspace<wbr>Props<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -229,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedworkspacepropsresponse">Linked<wbr>Workspace<wbr>Props<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -295,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedworkspacepropsresponse">Linked<wbr>Workspace<wbr>Props<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -313,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -328,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ResourceId of the link of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -337,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly name of the linked workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -346,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#linkedworkspacepropsresponse">Linked<wbr>Workspace<wbr>Props<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -355,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type of linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -370,9 +326,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linkedworkspaceresourceid_csharp">
 <a href="#linkedworkspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Workspace<wbr>Resource<wbr>Id</a>
@@ -380,8 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityresourceid_csharp">
 <a href="#userassignedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -389,14 +342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linkedworkspaceresourceid_go">
 <a href="#linkedworkspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Workspace<wbr>Resource<wbr>Id</a>
@@ -404,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityresourceid_go">
 <a href="#userassignedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -413,14 +362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linkedworkspaceresourceid_nodejs">
 <a href="#linkedworkspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Workspace<wbr>Resource<wbr>Id</a>
@@ -428,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentityresourceid_nodejs">
 <a href="#userassignedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Resource<wbr>Id</a>
@@ -437,14 +382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linked_workspace_resource_id_python">
 <a href="#linked_workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>workspace_<wbr>resource_<wbr>id</a>
@@ -452,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ResourceId of the link target of the linked workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identity_resource_id_python">
 <a href="#user_assigned_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>resource_<wbr>id</a>
@@ -461,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ResourceId of the user assigned identity for the linked workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
